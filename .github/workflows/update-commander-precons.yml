@@ -2,8 +2,8 @@ name: Update Commander Precons
 
 on:
   schedule:
-    - cron: '0 0 */2 * *'  # Cada 2 días a la medianoche UTC
-  workflow_dispatch:      # Permite ejecutarlo manualmente desde GitHub
+    - cron: '0 0 */2 * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -21,8 +21,11 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
+      - name: Compilar TypeScript
+        run: npm run build
+
       - name: Ejecutar scraper
-        run: npx ts-node src/index.ts
+        run: npm run scrape
 
       - name: Comprobar si hay cambios
         run: |
