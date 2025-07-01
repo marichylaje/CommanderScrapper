@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar scraper
-        run: npm run scrape
+        run: npx ts-node src/index.ts
 
       - name: Comprobar si hay cambios
         run: |
