@@ -5,6 +5,20 @@ import path from 'path';
 const SOURCE_URL = 'https://raw.githubusercontent.com/taw/magic-preconstructed-decks-data/master/decks_v2.json';
 const OUTPUT_PATH = path.resolve(__dirname, '../data/commander_precons.json');
 
+function groupCardsByName(cards: { name: string; count: number }[]) {
+  const grouped: Record<string, number> = {};
+
+  for (const card of cards) {
+    if (grouped[card.name]) {
+      grouped[card.name] += card.count;
+    } else {
+      grouped[card.name] = card.count;
+    }
+  }
+
+  return Object.entries(grouped).map(([name, count]) => ({ name, count }));
+}
+
 async function main() {
   try {
     console.log('Descargando archivo JSON...');
@@ -15,13 +29,12 @@ async function main() {
     const commanderDecks = Object.values(allDecks).filter((deck: any) => deck.commander?.length > 0);
 
     const simplified = commanderDecks.map((deck: any) => {
+      const groupedCards = groupCardsByName(deck.cards);
+
       return {
         name: deck.name,
         commander: deck.commander[0]?.name ?? 'Desconocido',
-        cards: deck.cards.map((card: any) => ({
-          name: card.name,
-          count: card.count
-        }))
+        cards: groupedCards
       };
     });
 
