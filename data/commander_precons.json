@@ -16461,19 +16461,7 @@
       },
       {
         "name": "Plains",
-        "count": 8
-      },
-      {
-        "name": "Plains",
-        "count": 8
-      },
-      {
-        "name": "Plains",
-        "count": 7
-      },
-      {
-        "name": "Plains",
-        "count": 7
+        "count": 30
       },
       {
         "name": "Righteous Valkyrie",
@@ -16915,47 +16903,19 @@
       },
       {
         "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
+        "count": 2
       },
       {
         "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Swamp",
@@ -17325,15 +17285,7 @@
       },
       {
         "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Island",
@@ -30917,15 +30869,7 @@
       },
       {
         "name": "Swamp",
-        "count": 10
-      },
-      {
-        "name": "Swamp",
-        "count": 10
-      },
-      {
-        "name": "Swamp",
-        "count": 10
+        "count": 30
       },
       {
         "name": "Imotekh the Stormlord",
@@ -31211,15 +31155,7 @@
       },
       {
         "name": "Swamp",
-        "count": 10
-      },
-      {
-        "name": "Swamp",
-        "count": 10
-      },
-      {
-        "name": "Swamp",
-        "count": 10
+        "count": 30
       },
       {
         "name": "Imotekh the Stormlord",
@@ -39055,19 +38991,11 @@
       },
       {
         "name": "Island",
-        "count": 6
-      },
-      {
-        "name": "Island",
-        "count": 5
+        "count": 11
       },
       {
         "name": "Forest",
-        "count": 8
-      },
-      {
-        "name": "Forest",
-        "count": 7
+        "count": 15
       }
     ]
   },
@@ -39405,27 +39333,15 @@
       },
       {
         "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Forest",
         "count": 4
       },
       {
         "name": "Forest",
-        "count": 4
+        "count": 8
       }
     ]
   },
@@ -39755,27 +39671,15 @@
       },
       {
         "name": "Plains",
+        "count": 9
+      },
+      {
+        "name": "Island",
         "count": 5
       },
       {
-        "name": "Plains",
-        "count": 4
-      },
-      {
-        "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
-      },
-      {
         "name": "Mountain",
-        "count": 3
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -40105,27 +40009,15 @@
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 3
+        "count": 6
       },
       {
         "name": "Swamp",
-        "count": 3
-      },
-      {
-        "name": "Swamp",
-        "count": 3
+        "count": 6
       },
       {
         "name": "Mountain",
-        "count": 4
-      },
-      {
-        "name": "Mountain",
-        "count": 3
+        "count": 7
       }
     ]
   },
@@ -40471,11 +40363,7 @@
       },
       {
         "name": "Wastes",
-        "count": 8
-      },
-      {
-        "name": "Wastes",
-        "count": 7
+        "count": 15
       }
     ]
   },
@@ -46771,27 +46659,15 @@
       },
       {
         "name": "Plains",
-        "count": 3
-      },
-      {
-        "name": "Plains",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Mountain",
-        "count": 3
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -47137,27 +47013,15 @@
       },
       {
         "name": "Swamp",
-        "count": 3
-      },
-      {
-        "name": "Swamp",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Forest",
-        "count": 3
-      },
-      {
-        "name": "Forest",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -47511,27 +47375,15 @@
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -47889,27 +47741,15 @@
       },
       {
         "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Forest",
-        "count": 2
-      },
-      {
-        "name": "Forest",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -48247,27 +48087,15 @@
       },
       {
         "name": "Plains",
-        "count": 3
-      },
-      {
-        "name": "Plains",
-        "count": 3
+        "count": 6
       },
       {
         "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Forest",
         "count": 4
       },
       {
         "name": "Forest",
-        "count": 3
+        "count": 7
       }
     ]
   },
@@ -48613,27 +48441,15 @@
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Swamp",
-        "count": 3
-      },
-      {
-        "name": "Swamp",
-        "count": 3
+        "count": 6
       },
       {
         "name": "Forest",
-        "count": 2
-      },
-      {
-        "name": "Forest",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -49007,27 +48823,15 @@
       },
       {
         "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Swamp",
         "count": 2
       },
       {
         "name": "Swamp",
+        "count": 4
+      },
+      {
+        "name": "Mountain",
         "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
       }
     ]
   },
@@ -49325,19 +49129,11 @@
       },
       {
         "name": "Island",
-        "count": 7
-      },
-      {
-        "name": "Island",
-        "count": 7
+        "count": 14
       },
       {
         "name": "Mountain",
-        "count": 7
-      },
-      {
-        "name": "Mountain",
-        "count": 6
+        "count": 13
       }
     ]
   },
@@ -49663,27 +49459,15 @@
       },
       {
         "name": "Plains",
-        "count": 5
-      },
-      {
-        "name": "Plains",
-        "count": 5
+        "count": 10
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Mountain",
-        "count": 3
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -50009,27 +49793,15 @@
       },
       {
         "name": "Plains",
-        "count": 5
-      },
-      {
-        "name": "Plains",
-        "count": 5
+        "count": 10
       },
       {
         "name": "Island",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 2
+        "count": 5
       },
       {
         "name": "Mountain",
-        "count": 3
-      },
-      {
-        "name": "Mountain",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -51191,27 +50963,15 @@
       },
       {
         "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Forest",
         "count": 3
       },
       {
         "name": "Forest",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -51569,27 +51329,15 @@
       },
       {
         "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 2
+        "count": 4
       },
       {
         "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Forest",
         "count": 3
       },
       {
         "name": "Forest",
-        "count": 2
+        "count": 5
       }
     ]
   },
@@ -51967,19 +51715,11 @@
       },
       {
         "name": "Island",
-        "count": 2
-      },
-      {
-        "name": "Island",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Forest",
-        "count": 2
-      },
-      {
-        "name": "Forest",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -52357,19 +52097,11 @@
       },
       {
         "name": "Island",
-        "count": 2
-      },
-      {
-        "name": "Island",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Forest",
-        "count": 2
-      },
-      {
-        "name": "Forest",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -58017,39 +57749,15 @@
       },
       {
         "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
+        "count": 3
       }
     ]
   },
@@ -58797,39 +58505,15 @@
       },
       {
         "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
+        "count": 3
       }
     ]
   },
@@ -59573,39 +59257,15 @@
       },
       {
         "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
+        "count": 4
       },
       {
         "name": "Swamp",
-        "count": 1
-      },
-      {
-        "name": "Swamp",
-        "count": 1
-      },
-      {
-        "name": "Swamp",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
-      },
-      {
-        "name": "Mountain",
-        "count": 1
+        "count": 3
       }
     ]
   },
@@ -60341,39 +60001,15 @@
       },
       {
         "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 1
+        "count": 3
       },
       {
         "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 1
-      },
-      {
-        "name": "Swamp",
-        "count": 1
+        "count": 4
       },
       {
         "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 1
+        "count": 4
       }
     ]
   },
