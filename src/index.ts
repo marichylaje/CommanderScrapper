@@ -26,7 +26,7 @@ async function main() {
     const allDecks = res.data;
 
     console.log('Filtrando mazos Commander...');
-    const commanderDecks = Object.values(allDecks).filter((deck: any) => deck.commander?.length > 0);
+    const commanderDecks = Object.values(allDecks).filter((deck: any) => deck.format === "commander");
 
     const simplified = commanderDecks.map((deck: any) => {
       const groupedCards = groupCardsByName(deck.cards);
@@ -34,6 +34,7 @@ async function main() {
       return {
         name: deck.name,
         commander: deck.commander[0]?.name ?? 'Desconocido',
+        expansion: deck.set_name,
         cards: groupedCards
       };
     });
