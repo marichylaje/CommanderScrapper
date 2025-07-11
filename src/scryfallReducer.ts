@@ -5,31 +5,65 @@ const BULK_META_URL = 'https://api.scryfall.com/bulk-data/default_cards';
 const REDUCED_JSON_FILE = './data/scryfall-reduced.json';
 const UPDATED_TRACKER = './data/last_updated.json';
 
-function fileExists(path) {
+interface ScryfallMeta {
+  updated_at: string;
+  download_uri: string;
+}
+
+interface CardFace {
+  name: string;
+}
+
+interface CardPart {
+  name: string;
+}
+
+interface Card {
+  name: string;
+  type: string;
+  mana_cost?: string;
+  cmc?: number;
+  type_line?: string;
+  oracle_text?: string;
+  power?: string;
+  toughness?: string;
+  colors?: string[];
+  keywords?: string[];
+  card_faces?: CardFace[];
+  all_parts?: CardPart[];
+  legalities?: {
+    commander?: string;
+  };
+  games?: string[];
+  set_name?: string;
+  rarity?: string;
+}
+
+function fileExists(path: string): boolean {
   return fs.existsSync(path);
 }
 
-function readJson(filePath) {
+function readJson<T = any>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-function writeJson(filePath, data) {
+function writeJson(filePath: string, data: any): void {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
-async function fetchScryfallMetadata() {
+async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
   const res = await fetch(BULK_META_URL);
   if (!res.ok) throw new Error('❌ Error al obtener metadata de Scryfall.');
   return await res.json();
 }
 
-async function fetchBulkJson(downloadUri) {
+async function fetchBulkJson(downloadUri: string): Promise<Card[]> {
   const res = await fetch(downloadUri);
   if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
   return await res.json();
 }
 
-function reduceCard(card) {
+function reduceCard(card: Card) {
   return {
     name: card.name,
     type: card.type,
@@ -41,12 +75,8 @@ function reduceCard(card) {
     toughness: card.toughness,
     colors: card.colors,
     keywords: card.keywords,
-    card_faces: card.card_faces?.map(face => ({
-      name: face.name,
-    })),
-    all_parts: card.all_parts?.map(part => ({
-      name: part.name,
-    })),
+    card_faces: card.card_faces?.map(face => ({ name: face.name })),
+    all_parts: card.all_parts?.map(part => ({ name: part.name })),
     legalities: {
       commander: card.legalities?.commander,
     },
@@ -56,21 +86,21 @@ function reduceCard(card) {
   };
 }
 
-async function main() {
+async function main(): Promise<void> {
   try {
     console.log('🔍 Consultando metadata de Scryfall...');
     const meta = await fetchScryfallMetadata();
     const remoteUpdated = meta.updated_at;
 
-    let localUpdated = null;
+    let localUpdated: string | null = null;
     if (fileExists(UPDATED_TRACKER)) {
-      localUpdated = readJson(UPDATED_TRACKER).updated_at;
+      localUpdated = readJson<{ updated_at: string }>(UPDATED_TRACKER).updated_at;
     }
 
-    /*if (remoteUpdated === localUpdated) {
+    if (remoteUpdated === localUpdated) {
       console.log('🟢 Ya tienes la última versión del bulk de Scryfall. Nada que hacer.');
       return;
-    }*/
+    }
 
     console.log('📥 Archivo actualizado. Descargando y procesando...');
     const rawData = await fetchBulkJson(meta.download_uri);
