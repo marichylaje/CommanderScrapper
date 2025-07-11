@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "scrape": "ts-node src/index.ts"
+    "scrape": "ts-node src/index.ts",
+    "reduce": "ts-node src/scryfallReducer.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "axios": "^1.10.0"
+    "axios": "^1.10.0",
+    "undici": "^6.21.3",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
