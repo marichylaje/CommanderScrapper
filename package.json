@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "scrape": "node dist/index.js",
-    "reduce": "node scryfallReducer.js"
+    "reduce": "ts-node src/scryfallReducer.js",
+    "scrape": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
