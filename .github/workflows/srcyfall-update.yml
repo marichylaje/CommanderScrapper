@@ -1,0 +1,36 @@
+name: Update Scryfall JSON
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run reducer script
+        run: node scryfallReducer.js
+
+      - name: Commit and push if changed
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config user.name "Automated Bot"
+          git config user.email "bot@example.com"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git add scryfall-reduced.json last_updated.json
+          git diff --cached --quiet || git commit -m "🔄 Update scryfall-reduced.json"
+          git push

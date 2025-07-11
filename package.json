@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "scrape": "node dist/index.js"
+    "scrape": "node dist/index.js",
+    "reduce": "node scryfallReducer.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "axios": "^1.10.0"
+    "axios": "^1.10.0",
+    "undici": "^6.21.3"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
