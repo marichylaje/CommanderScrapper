@@ -34,6 +34,7 @@ async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
   if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
   return await res.json() as ReducedCard[];
 }
+//TODO CLEAN TOKEN CREATURES with type_line "Token Creature — ..."
 
 function reduceCard(card: ReducedCard) {
   return ReducedCardSchema.parse({
@@ -47,7 +48,9 @@ function reduceCard(card: ReducedCard) {
     colors: card.colors,
     keywords: card.keywords,
     card_faces: card.card_faces?.map((f: { name: string }) => ({ name: f.name })),
-    all_parts: card.all_parts?.map((p: { name: string }) => ({ name: p.name })),
+    all_parts: card.type_line?.includes('Token')
+      ? []
+      : card.all_parts?.map((p: { name: string }) => ({ name: p.name })),
     legalities: {
       commander: card.legalities?.commander,
     },
