@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { fetch } from 'undici';
+import { ReducedCardSchema, ReducedCard } from './schemas/zodSchemas';
 
 const BULK_META_URL = 'https://api.scryfall.com/bulk-data/default_cards';
 const REDUCED_JSON_FILE = './data/scryfall-reduced.json';
@@ -8,35 +9,6 @@ const UPDATED_TRACKER = './data/last_updated.json';
 interface ScryfallMeta {
   updated_at: string;
   download_uri: string;
-}
-
-interface CardFace {
-  name: string;
-}
-
-interface CardPart {
-  name: string;
-}
-
-interface Card {
-  name: string;
-  type: string;
-  mana_cost?: string;
-  cmc?: number;
-  type_line?: string;
-  oracle_text?: string;
-  power?: string;
-  toughness?: string;
-  colors?: string[];
-  keywords?: string[];
-  card_faces?: CardFace[];
-  all_parts?: CardPart[];
-  legalities?: {
-    commander?: string;
-  };
-  games?: string[];
-  set_name?: string;
-  rarity?: string;
 }
 
 function fileExists(path: string): boolean {
@@ -54,36 +26,35 @@ function writeJson(filePath: string, data: any): void {
 async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
   const res = await fetch(BULK_META_URL);
   if (!res.ok) throw new Error('❌ Error al obtener metadata de Scryfall.');
-  return await res.json();
+  return await res.json() as ScryfallMeta;
 }
 
-async function fetchBulkJson(downloadUri: string): Promise<Card[]> {
+async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
   const res = await fetch(downloadUri);
   if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
-  return await res.json();
+  return await res.json() as ReducedCard[];
 }
 
-function reduceCard(card: Card) {
-  return {
+function reduceCard(card: ReducedCard) {
+  return ReducedCardSchema.parse({
     name: card.name,
-    type: card.type,
     mana_cost: card.mana_cost,
     cmc: card.cmc,
     type_line: card.type_line,
-    description: card.oracle_text,
+    oracle_text: card.oracle_text,
     power: card.power,
     toughness: card.toughness,
     colors: card.colors,
     keywords: card.keywords,
-    card_faces: card.card_faces?.map(face => ({ name: face.name })),
-    all_parts: card.all_parts?.map(part => ({ name: part.name })),
+    card_faces: card.card_faces?.map((f: { name: string }) => ({ name: f.name })),
+    all_parts: card.all_parts?.map((p: { name: string }) => ({ name: p.name })),
     legalities: {
       commander: card.legalities?.commander,
     },
     games: card.games,
     set_name: card.set_name,
     rarity: card.rarity,
-  };
+  });
 }
 
 async function main(): Promise<void> {
