@@ -7,11 +7,14 @@ loadEnv();
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY! });
-const index = pinecone.Index(process.env.PINECONE_INDEX!); // debe existir
+const index = pinecone.Index(process.env.PINECONE_INDEX!);
 
-const cards = JSON.parse(fs.readFileSync('./data/scryfall-reduced.json', 'utf-8')).cards;
+const REDUCED_FILE = './data/scryfall-reduced.json';
+const TRACKER_FILE = './data/uploaded_ids.json';
 
-// 🔤 Normaliza el texto a ASCII-safe y legible
+const cards = JSON.parse(fs.readFileSync(REDUCED_FILE, 'utf-8')).cards;
+let uploadedIds: string[] = [];
+
 function normalizeId(text: string): string {
   return text
     .normalize("NFKD")
@@ -23,36 +26,53 @@ function normalizeId(text: string): string {
 
 function generateUniqueId(card: any): string {
   const base = normalizeId(card.name);
-  const suffix = `${card.set ?? 'x'}_${card.collector_number ?? Math.random().toString(36).slice(2, 6)}`;
+  const suffix = `${card.set ?? 'x'}_${card.collector_number ?? '000'}`;
   return `${base}_${suffix}`;
 }
 
-// 📄 Construye el texto a embebar
 function getEmbeddingText(card: any): string {
   if (card.card_faces?.length > 0) {
-    return card.card_faces
-      .map((f: any) => `${f.name}: ${f.oracle_text ?? ''}`)
-      .join(' // ');
+    return card.card_faces.map((f: any) => `${f.name}: ${f.oracle_text ?? ''}`).join(' // ');
   } else {
     return `${card.name}: ${card.oracle_text ?? ''}`;
   }
 }
 
-// 🧹 Limpia metadata eliminando claves con undefined
 function cleanMetadata(obj: Record<string, any>) {
   return Object.fromEntries(Object.entries(obj).filter(([_, v]) => v !== undefined));
 }
 
+function loadUploadedIds(): string[] {
+  try {
+    if (!fs.existsSync(TRACKER_FILE)) return [];
+    return JSON.parse(fs.readFileSync(TRACKER_FILE, 'utf8'));
+  } catch {
+    return [];
+  }
+}
+
+function saveUploadedIds(ids: string[]) {
+  fs.writeFileSync(TRACKER_FILE, JSON.stringify(ids, null, 2));
+}
+
 async function processAndUpload() {
+  uploadedIds = loadUploadedIds();
+  const newUploadedIds = [...uploadedIds];
+
   for (const card of cards) {
+    const id = generateUniqueId(card);
+
+    if (uploadedIds.includes(id)) {
+      console.log(`⏩ Ya subida: ${card.name}`);
+      continue;
+    }
+
     try {
       const inputText = getEmbeddingText(card);
       const response = await openai.embeddings.create({
         model: 'text-embedding-3-small',
         input: inputText,
       });
-
-      const id = generateUniqueId(card);
 
       const metadata = cleanMetadata({
         name: card.name,
@@ -82,12 +102,16 @@ async function processAndUpload() {
 
       await index.upsert([vector]);
       console.log(`✅ Subida: ${card.name}`);
+
+      newUploadedIds.push(id);
+      saveUploadedIds(newUploadedIds);
+      console.log(`💾 Guardado en uploaded_ids.json: ${id}`);
     } catch (err) {
       console.error(`❌ Error al subir ${card.name}:`, err);
     }
   }
 
-  console.log('🚀 Todo subido a Pinecone.');
+  console.log('🚀 Todo actualizado en Pinecone.');
 }
 
 processAndUpload().catch(console.error);
