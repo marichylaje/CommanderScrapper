@@ -2,6 +2,14 @@ import { z } from 'zod';
 
 export const CardFaceSchema = z.object({
   name: z.string(),
+  oracle_text: z.string().optional(),
+  type_line: z.string().optional(),
+  mana_cost: z.string().optional().nullable(),
+  power: z.string().optional().nullable(),
+  toughness: z.string().optional().nullable(),
+  loyalty: z.string().optional().nullable(),
+  layout: z.string().optional().nullable(),
+  colors: z.array(z.string()).optional(),
 });
 
 export const CardPartSchema = z.object({
@@ -16,6 +24,8 @@ export const ReducedCardSchema = z.object({
   oracle_text: z.string().optional(),
   power: z.string().optional().nullable(),
   toughness: z.string().optional().nullable(),
+  loyalty: z.string().optional().nullable(),
+  layout: z.string().optional(),
   colors: z.array(z.string()).optional(),
   keywords: z.array(z.string()).optional(),
   card_faces: z.array(CardFaceSchema).optional(),
@@ -23,6 +33,12 @@ export const ReducedCardSchema = z.object({
   legalities: z
     .object({
       commander: z.union([
+        z.literal('legal'),
+        z.literal('not_legal'),
+        z.literal('restricted'),
+        z.literal('banned'),
+      ]).optional(),
+      standard: z.union([
         z.literal('legal'),
         z.literal('not_legal'),
         z.literal('restricted'),

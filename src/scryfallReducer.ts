@@ -34,7 +34,8 @@ async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
   if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
   return await res.json() as ReducedCard[];
 }
-//TODO CLEAN TOKEN CREATURES with type_line "Token Creature — ..."
+
+const avoidStringLines = ['On an Adventure', "City's Blessing", "Poison Counter"]
 
 function reduceCard(card: ReducedCard) {
   return ReducedCardSchema.parse({
@@ -46,19 +47,46 @@ function reduceCard(card: ReducedCard) {
     power: card.power,
     toughness: card.toughness,
     colors: card.colors,
+    loyalty: card.loyalty,
+    layout: card.layout,
     keywords: card.keywords,
-    card_faces: card.card_faces?.map((f: { name: string }) => ({ name: f.name })),
-    all_parts: card.type_line?.includes('Token')
+    card_faces: card.card_faces?.map((f: any) => ({
+      name: f.name,
+      oracle_text: f.oracle_text || undefined,
+      type_line: f.type_line || undefined,
+      mana_cost: f.mana_cost || undefined,
+      power: f.power ?? undefined,
+      toughness: f.toughness ?? undefined,
+      loyalty: f.loyalty ?? undefined,
+      layout: f.layout ?? undefined,
+      colors: f.colors || undefined,
+    })),
+    all_parts: card.type_line?.includes('Token') || avoidStringLines.includes(card.name)
       ? []
       : card.all_parts?.map((p: { name: string }) => ({ name: p.name })),
     legalities: {
       commander: card.legalities?.commander,
+      standard: card.legalities?.standard,
     },
     games: card.games,
     set_name: card.set_name,
     rarity: card.rarity,
   });
 }
+
+function cleanUndefined(obj: any): any {
+  if (Array.isArray(obj)) {
+    return obj.map(cleanUndefined);
+  } else if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj)
+        .filter(([_, v]) => v !== undefined)
+        .map(([k, v]) => [k, cleanUndefined(v)])
+    );
+  }
+  return obj;
+}
+
 
 async function main(): Promise<void> {
   try {
@@ -82,7 +110,7 @@ async function main(): Promise<void> {
 
     const output = {
       last_updated: remoteUpdated,
-      cards: reducedCards,
+      cards: reducedCards.map(cleanUndefined),
     };
 
     writeJson(REDUCED_JSON_FILE, output);
