@@ -13,7 +13,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@pinecone-database/pinecone": "^6.1.1",
     "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "openai": "^5.9.0",
     "undici": "^6.21.3",
     "zod": "^4.0.5"
   },
