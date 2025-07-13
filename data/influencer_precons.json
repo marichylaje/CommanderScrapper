@@ -8,7 +8,6 @@
         ],
         "deckDescription": "A mono-black devotion deck that turns life into a weapon. Pay life instead of mana, drain your opponents, and unleash unstoppable demons.",
         "cards": [
-            { "name": "K'rrik, Son of Yawgmoth", "count": 1 },
             { "name": "Sorin Markov", "count": 1 },
             { "name": "Archfiend of Depravity", "count": 1 },
             { "name": "Archfiend of Spite", "count": 1 },
@@ -92,7 +91,6 @@
   ],
   "deckDescription": "Speed, chaos, and domination — this Rakdos combo deck channels the spirit of Shadow the Hedgehog to blitz opponents with explosive mana, stack manipulation, and infernal loops. If you're not winning fast, you're not winning at all.",
   "cards": [
-    { "name": "Shadow the Hedgehog", "count": 1 },
     { "name": "Birgi, God of Storytelling", "count": 1 },
     { "name": "Dauthi Voidwalker", "count": 1 },
     { "name": "Dragon's Rage Channeler", "count": 1 },
@@ -201,7 +199,6 @@
   ],
   "deckDescription": "A breakfast-themed Abzan combo deck that uses food, halflings, and life-drain synergies to tempt your opponents and win with value loops. Sweet, deadly, and irresistibly hobbit-sized.",
   "cards": [
-    { "name": "Frodo, Adventurous Hobbit", "count": 1 },
     { "name": "Sam, Loyal Attendant", "count": 1 },
     { "name": "Academy Manufactor", "count": 1 },
     { "name": "Bennie Bracks, Zoologist", "count": 1 },
