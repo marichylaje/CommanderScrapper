@@ -6,7 +6,15 @@
         "socialNetworks": [
             { "instagram": "@mtgdummy", "tiktok": "@mtgdummy", "youtube": null }
         ],
-        "deckDescription": "A mono-black devotion deck that turns life into a weapon. Pay life instead of mana, drain your opponents, and unleash unstoppable demons.",
+"deckDescription": {
+  "en": "A mono-black devotion deck that turns life into a weapon. Pay life instead of mana, drain your opponents, and unleash unstoppable demons.",
+  "es": "Un mazo mononegro de devoción que convierte la vida en un arma. Paga vida en lugar de maná, drena a tus oponentes y desata demonios imparables.",
+  "it": "Un mazzo mononero a devozione che trasforma la vita in un'arma. Paga punti vita invece di mana, prosciuga gli avversari e scatena demoni inarrestabili.",
+  "de": "Ein mono-schwarzes Hingabe-Deck, das das Leben zur Waffe macht. Bezahle Leben statt Mana, erschöpfe deine Gegner und entfessle unaufhaltsame Dämonen.",
+  "ja": "命を武器に変えるモノブラックの信心デッキ。マナの代わりにライフを支払い、対戦相手を吸い尽くし、止められないデーモンを解き放て。",
+  "pt": "Um deck de devoção mono-preto que transforma vida em arma. Pague vida em vez de mana, drene seus oponentes e libere demônios imparáveis.",
+  "fr": "Un deck de dévotion mono-noir qui transforme la vie en arme. Payez des points de vie au lieu de mana, drainez vos adversaires et libérez des démons inarrêtables."
+},
         "cards": [
             { "name": "Sorin Markov", "count": 1 },
             { "name": "Archfiend of Depravity", "count": 1 },
@@ -89,7 +97,15 @@
   "socialNetworks": [
     { "instagram": "@eddy_mtg_", "tiktok": null, "youtube": null }
   ],
-  "deckDescription": "Speed, chaos, and domination — this Rakdos combo deck channels the spirit of Shadow the Hedgehog to blitz opponents with explosive mana, stack manipulation, and infernal loops. If you're not winning fast, you're not winning at all.",
+"deckDescription": {
+  "en": "Speed, chaos, and domination — this Rakdos combo deck channels the spirit of Shadow the Hedgehog to blitz opponents with explosive mana, stack manipulation, and infernal loops. If you're not winning fast, you're not winning at all.",
+  "es": "Velocidad, caos y dominación: este mazo combo Rakdos canaliza el espíritu de Shadow the Hedgehog para arrasar a los oponentes con maná explosivo, manipulación de la pila y bucles infernales. Si no ganas rápido, no estás ganando.",
+  "it": "Velocità, caos e dominio: questo mazzo combo Rakdos incarna lo spirito di Shadow the Hedgehog per travolgere gli avversari con mana esplosivo, manipolazione della pila e loop infernali. Se non stai vincendo in fretta, non stai vincendo affatto.",
+  "de": "Tempo, Chaos und Dominanz – dieses Rakdos-Kombo-Deck kanalisiert den Geist von Shadow the Hedgehog, um Gegner mit explosivem Mana, Stapelmanipulation und höllischen Schleifen zu überrennen. Wenn du nicht schnell gewinnst, gewinnst du gar nicht.",
+  "ja": "スピード、混沌、そして支配――このラクドスのコンボデッキは、シャドウ・ザ・ヘッジホッグの精神を宿し、爆発的なマナ、スタック操作、地獄のループで対戦相手を圧倒する。素早く勝てないなら、勝つことはできない。",
+  "pt": "Velocidade, caos e dominação — este deck combo Rakdos canaliza o espírito de Shadow the Hedgehog para atropelar os oponentes com mana explosiva, manipulação da pilha e loops infernais. Se você não está vencendo rápido, você não está vencendo.",
+  "fr": "Vitesse, chaos et domination — ce deck combo Rakdos canalise l'esprit de Shadow the Hedgehog pour foudroyer les adversaires avec du mana explosif, de la manipulation de pile et des boucles infernales. Si tu ne gagnes pas vite, tu ne gagnes pas du tout.",
+},
   "cards": [
     { "name": "Birgi, God of Storytelling", "count": 1 },
     { "name": "Dauthi Voidwalker", "count": 1 },
@@ -198,7 +214,15 @@
   "socialNetworks": [
     { "instagram": "@tranquility_mtg", "tiktok": null, "youtube": null }
   ],
-  "deckDescription": "A breakfast-themed Abzan combo deck that uses food, halflings, and life-drain synergies to tempt your opponents and win with value loops. Sweet, deadly, and irresistibly hobbit-sized.",
+"deckDescription": {
+  "en": "A breakfast-themed Abzan combo deck that uses food, halflings, and life-drain synergies to tempt your opponents and win with value loops. Sweet, deadly, and irresistibly hobbit-sized.",
+  "es": "Un mazo Abzan de combo con temática de desayuno que usa comida, medianos y sinergias de drenaje de vida para tentar a tus oponentes y ganar con bucles de valor. Dulce, letal e irresistiblemente tamaño hobbit.",
+  "it": "Un mazzo combo Abzan a tema colazione che utilizza cibo, halfling e sinergie di drenaggio vitale per tentare gli avversari e vincere con loop di valore. Dolce, letale e irresistibilmente formato hobbit.",
+  "de": "Ein Frühstücks-inspiriertes Abzan-Kombo-Deck, das Nahrung, Halblinge und Lebensentzug-Synergien nutzt, um Gegner zu verführen und mit Wertschleifen zu gewinnen. Süß, tödlich und unwiderstehlich hobbitgroß.",
+  "ja": "朝食をテーマにしたアブザンのコンボデッキ。食物、ハーフリング、ライフドレインのシナジーを活かして対戦相手を誘惑し、バリューループで勝利を目指す。甘く、致命的で、たまらなくホビットサイズ。",
+  "pt": "Um deck combo Abzan com tema de café da manhã que usa comida, halflings e sinergias de drenagem de vida para seduzir seus oponentes e vencer com loops de valor. Doce, mortal e irresistivelmente do tamanho de um hobbit.",
+  "fr": "Un deck combo Abzan sur le thème du petit-déjeuner qui utilise de la nourriture, des halfelins et des synergies de drainage de vie pour tenter vos adversaires et gagner grâce à des boucles de valeur. Doux, mortel et irrésistiblement à la taille d’un hobbit."
+},
   "cards": [
     { "name": "Academy Manufactor", "count": 1 },
     { "name": "Bennie Bracks, Zoologist", "count": 1 },
@@ -309,7 +333,15 @@
         "youtube": "https://m.youtube.com/@Caffrey_Mtg?fbclid=PAQ0xDSwLfi6NleHRuA2FlbQIxMAABpxX0bFK_E8BaOG1klkTeD51n8rW22Snh1kwshSFWKlB-kZnUsmkq6PhCou2X_aem_8j2F607IRQ3rw8-2yD6JWQ"
       }
     ],
-    "deckDescription": "Un mazo Simic de ramp y value centrado en aprovechar la habilidad de Aesi para generar una ventaja brutal con tierras y cartas. Utiliza múltiples sinergias de tokens, duplicación de permanentes y finalizadores como Craterhoof Behemoth para cerrar partidas.",
+"deckDescription": {
+  "en": "A Simic ramp and value deck focused on leveraging Aesi’s ability to generate overwhelming advantage through lands and cards. It uses multiple synergies with tokens, permanent duplication, and finishers like Craterhoof Behemoth to close out games.",
+  "es": "Un mazo Simic de ramp y value centrado en aprovechar la habilidad de Aesi para generar una ventaja brutal con tierras y cartas. Utiliza múltiples sinergias de tokens, duplicación de permanentes y finalizadores como Craterhoof Behemoth para cerrar partidas.",
+  "it": "Un mazzo Simic di ramp e valore focalizzato sull'abilità di Aesi di generare un vantaggio travolgente con terre e carte. Utilizza numerose sinergie con pedine, duplicazione di permanenti e finalizzatori come Craterhoof Behemoth per chiudere le partite.",
+  "de": "Ein Simic-Ramp-und-Value-Deck, das sich auf Aesis Fähigkeit konzentriert, durch Länder und Karten überwältigenden Vorteil zu erzeugen. Es nutzt mehrere Synergien mit Spielsteinen, permanente Verdopplung und Finisher wie Craterhoof Behemoth, um Spiele zu beenden.",
+  "ja": "Aesiの能力を活かして土地とカードから圧倒的なアドバンテージを得ることに特化したシミックのランプ＆バリューデッキ。トークンのシナジーやパーマネントの倍増、クレーターフーフ・ベヒーモスのようなフィニッシャーでゲームを締めくくる。",
+  "pt": "Um deck Simic de ramp e valor focado em aproveitar a habilidade de Aesi para gerar uma vantagem esmagadora com terrenos e cartas. Utiliza diversas sinergias com fichas, duplicação de permanentes e finalizadores como Craterhoof Behemoth para encerrar partidas.",
+  "fr": "Un deck Simic de ramp et de value axé sur la capacité d’Aesi à générer un avantage écrasant grâce aux terrains et aux cartes. Il utilise de nombreuses synergies avec les jetons, la duplication de permanents et des finishers comme Craterhoof Behemoth pour conclure les parties."
+},
     "cards": [
       { "name": "Alandra, Sky Dreamer", "count": 1 },
       { "name": "Ancient Greenwarden", "count": 1 },
@@ -410,7 +442,15 @@
         "youtube": "https://m.youtube.com/@Caffrey_Mtg?fbclid=PAQ0xDSwLfi6NleHRuA2FlbQIxMAABpxX0bFK_E8BaOG1klkTeD51n8rW22Snh1kwshSFWKlB-kZnUsmkq6PhCou2X_aem_8j2F607IRQ3rw8-2yD6JWQ"
       }
     ],
-    "deckDescription": "Un mazo centrado en Arna Kennerüd que combina equipo poderoso, control azul‑blanco y sinergias de equipo con finishers icónicos, buscando dominar el campo con protección y robo de cartas.",
+"deckDescription": {
+  "en": "A deck centered around Arna Kennerüd that combines powerful equipment, blue-white control, and equipment synergies with iconic finishers, aiming to dominate the battlefield through protection and card draw.",
+  "es": "Un mazo centrado en Arna Kennerüd que combina equipo poderoso, control azul‑blanco y sinergias de equipo con finishers icónicos, buscando dominar el campo con protección y robo de cartas.",
+  "it": "Un mazzo incentrato su Arna Kennerüd che combina potenti equipaggiamenti, controllo bianco-blu e sinergie con equipaggiamenti, concludendo con finisher iconici per dominare il campo con protezione e pescaggio.",
+  "de": "Ein Deck rund um Arna Kennerüd, das mächtige Ausrüstungen, blau-weiße Kontrolle und Ausrüstungs-Synergien mit ikonischen Finishern kombiniert, um das Spielfeld durch Schutz und Kartenziehen zu dominieren.",
+  "ja": "アルナ・ケネルードを中心としたデッキで、強力な装備品、青白のコントロール、装備品のシナジーを組み合わせ、象徴的なフィニッシャーで盤面を守りつつカードを引いて支配することを目指す。",
+  "pt": "Um deck centrado em Arna Kennerüd que combina equipamentos poderosos, controle azul-branco e sinergias com equipamentos, usando finalizadores icônicos para dominar o campo com proteção e compra de cartas.",
+  "fr": "Un deck centré sur Arna Kennerüd qui combine équipements puissants, contrôle bleu-blanc et synergies d'équipement avec des finishers emblématiques, visant à dominer le champ de bataille grâce à la protection et à la pioche."
+},
     "cards": [
       { "name": "Ardenn, Intrepid Archaeologist", "count": 1 },
       { "name": "Baleful Strix", "count": 1 },
@@ -514,7 +554,15 @@
         "youtube": "https://m.youtube.com/@Caffrey_Mtg?fbclid=PAQ0xDSwLfi6NleHRuA2FlbQIxMAABpxX0bFK_E8BaOG1klkTeD51n8rW22Snh1kwshSFWKlB-kZnUsmkq6PhCou2X_aem_8j2F607IRQ3rw8-2yD6JWQ"
       }
     ],
-    "deckDescription": "Un mazo agresivo y explosivo centrado en Etali, con una mezcla de aceleradores de maná, recursión de criaturas y hechizos de copia para generar loops de valor inmediatos. Ideal para grandes despliegues sorpresa y combos de replicación.",
+"deckDescription": {
+  "en": "An aggressive and explosive deck centered around Etali, featuring a mix of mana accelerants, creature recursion, and copy spells to generate immediate value loops. Ideal for surprise blowouts and replication combos.",
+  "es": "Un mazo agresivo y explosivo centrado en Etali, con una mezcla de aceleradores de maná, recursión de criaturas y hechizos de copia para generar loops de valor inmediatos. Ideal para grandes despliegues sorpresa y combos de replicación.",
+  "it": "Un mazzo aggressivo ed esplosivo incentrato su Etali, con una combinazione di acceleratori di mana, ricorsione di creature e magie di copia per generare loop di valore immediato. Ideale per colpi di scena e combo di replicazione.",
+  "de": "Ein aggressives und explosives Deck rund um Etali mit einer Mischung aus Mana-Beschleunigern, Kreaturen-Wiederbelebung und Kopierzaubern, um sofortige Wertschleifen zu erzeugen. Ideal für überraschende Durchbrüche und Replikations-Kombos.",
+  "ja": "エタリを中心とした攻撃的で爆発力のあるデッキ。マナ加速、生物の再利用、コピー呪文を組み合わせて即座に価値のループを生み出す。サプライズ展開や複製コンボに最適。",
+  "pt": "Um deck agressivo e explosivo centrado em Etali, com uma mistura de aceleradores de mana, recorrência de criaturas e feitiços de cópia para gerar loops de valor imediatos. Ideal para grandes reviravoltas e combos de replicação.",
+  "fr": "Un deck agressif et explosif centré sur Etali, avec un mélange d'accélérateurs de mana, de récurrence de créatures et de sorts de copie pour générer des boucles de valeur immédiates. Idéal pour des explosions surprises et des combos de réplication."
+},
     "cards": [
       { "name": "Birds of Paradise", "count": 1 },
       { "name": "Birgi, God of Storytelling", "count": 1 },
@@ -628,7 +676,15 @@
       "youtube": "https://m.youtube.com/@Caffrey_Mtg?fbclid=PAQ0xDSwLfi6NleHRuA2FlbQIxMAABpxX0bFK_E8BaOG1klkTeD51n8rW22Snh1kwshSFWKlB-kZnUsmkq6PhCou2X_aem_8j2F607IRQ3rw8-2yD6JWQ"
     }
   ],
-  "deckDescription": "Un mazo Simic de fichas y control centrado en Koma, con duplicadores de tokens como Parallel Lives y Doubling Season, además de ramp explosivo y protección para mantener el dominio del tablero.",
+"deckDescription": {
+  "en": "A Simic token and control deck centered around Koma, featuring token doublers like Parallel Lives and Doubling Season, along with explosive ramp and protection to maintain board dominance.",
+  "es": "Un mazo Simic de fichas y control centrado en Koma, con duplicadores de tokens como Parallel Lives y Doubling Season, además de ramp explosivo y protección para mantener el dominio del tablero.",
+  "it": "Un mazzo Simic di pedine e controllo incentrato su Koma, con raddoppiatori di pedine come Parallel Lives e Doubling Season, oltre a ramp esplosivo e protezione per mantenere il dominio del campo.",
+  "de": "Ein Simic-Token- und Kontrolldeck rund um Koma mit Token-Verdopplern wie Parallel Lives und Doubling Season sowie explosivem Ramp und Schutz zur Aufrechterhaltung der Spielfeldkontrolle.",
+  "ja": "Komaを中心としたシミックのトークン＆コントロールデッキ。Parallel LivesやDoubling Seasonなどのトークン倍増カードに加え、爆発的なランプと盤面支配を維持するための防御手段も搭載。",
+  "pt": "Um deck Simic de fichas e controle centrado em Koma, com duplicadores de fichas como Parallel Lives e Doubling Season, além de ramp explosivo e proteção para manter o domínio do campo.",
+  "fr": "Un deck Simic de jetons et de contrôle centré sur Koma, avec des doubleurs de jetons comme Parallel Lives et Doubling Season, ainsi qu'un ramp explosif et des protections pour maintenir la domination du champ de bataille."
+},
   "cards": [
     { "name": "Adrix and Nev, Twincasters", "count": 1 },
     { "name": "Aesi, Tyrant of Gyre Strait", "count": 1 },
@@ -731,7 +787,15 @@
       "youtube": "https://m.youtube.com/@Caffrey_Mtg?fbclid=PAQ0xDSwLfi6NleHRuA2FlbQIxMAABpxX0bFK_E8BaOG1klkTeD51n8rW22Snh1kwshSFWKlB-kZnUsmkq6PhCou2X_aem_8j2F607IRQ3rw8-2yD6JWQ"
     }
   ],
-  "deckDescription": "Un mazo tribal vampiro Rakdos con fuertes sinergias de drenaje de vida y generación de fichas de sangre. Con cartas como Exquisite Blood, Sorin y Sanguine Bond, este mazo acelera la presión con aristócratas y combos sangrientos.",
+"deckDescription": {
+  "en": "A Rakdos vampire tribal deck with strong life-drain and blood token synergies. Featuring cards like Exquisite Blood, Sorin, and Sanguine Bond, this deck ramps up pressure with aristocrats and bloody combos.",
+  "es": "Un mazo tribal vampiro Rakdos con fuertes sinergias de drenaje de vida y generación de fichas de sangre. Con cartas como Exquisite Blood, Sorin y Sanguine Bond, este mazo acelera la presión con aristócratas y combos sangrientos.",
+  "it": "Un mazzo tribale vampiro Rakdos con potenti sinergie di drenaggio vita e generazione di pedine sangue. Con carte come Exquisite Blood, Sorin e Sanguine Bond, aumenta la pressione con aristocratici e combo sanguinosi.",
+  "de": "Ein Rakdos-Vampirstamm-Deck mit starken Lebensentzug- und Blutmarken-Synergien. Mit Karten wie Exquisite Blood, Sorin und Sanguine Bond erhöht dieses Deck den Druck mit Aristokraten und blutigen Kombos.",
+  "ja": "ライフ吸収と血トークンの強力なシナジーを持つ、ラクドスの吸血鬼部族デッキ。Exquisite Blood、Sorin、Sanguine Bondなどを使い、アリストクラット戦略と血まみれのコンボで圧力をかけていく。",
+  "pt": "Um deck tribal de vampiros Rakdos com fortes sinergias de drenagem de vida e geração de fichas de sangue. Com cartas como Exquisite Blood, Sorin e Sanguine Bond, este deck aumenta a pressão com aristocratas e combos sangrentos.",
+  "fr": "Un deck tribal vampire Rakdos avec de fortes synergies de drainage de vie et de jetons de sang. Avec des cartes comme Exquisite Blood, Sorin et Sanguine Bond, ce deck augmente la pression avec des aristocrates et des combos sanglants."
+},
   "cards": [
     { "name": "Sorin, Imperious Bloodlord", "count": 1 },
     { "name": "Blood Artist", "count": 1 },
@@ -834,7 +898,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo esper de value y control, centrado en combos de flicker, generación de pistas y robos masivos. Cecily lidera una sinfonía de artefactos, criaturas ETB y sinergias de robo para dominar la mesa de forma implacable.",
+"deckDescription": {
+  "en": "An Esper value-control deck focused on flicker combos, clue generation, and massive card draw. Cecily leads a symphony of artifacts, ETB creatures, and draw synergies to relentlessly dominate the board.",
+  "es": "Un mazo esper de value y control, centrado en combos de flicker, generación de pistas y robos masivos. Cecily lidera una sinfonía de artefactos, criaturas ETB y sinergias de robo para dominar la mesa de forma implacable.",
+  "it": "Un mazzo Esper di value e controllo incentrato su combo di flicker, generazione di indizi e pescate massicce. Cecily guida una sinfonia di artefatti, creature con ETB e sinergie di pesca per dominare inesorabilmente il tavolo.",
+  "de": "Ein Esper-Deck für Value und Kontrolle, das sich auf Flicker-Kombos, Hinweismarken und massives Kartenziehen konzentriert. Cecily führt eine Symphonie aus Artefakten, ETB-Kreaturen und Zieh-Synergien an, um das Spielfeld unerbittlich zu dominieren.",
+  "ja": "フリッカーコンボ、手がかりの生成、大量ドローに特化したエスパーのバリュー＆コントロールデッキ。セシリーはアーティファクト、ETB持ちクリーチャー、ドローシナジーの交響曲を率いて、卓を容赦なく支配する。",
+  "pt": "Um deck Esper de valor e controle, focado em combos de flicker, geração de pistas e compras massivas. Cecily lidera uma sinfonia de artefatos, criaturas com ETB e sinergias de compra para dominar implacavelmente o campo.",
+  "fr": "Un deck Esper de value et de contrôle, axé sur les combos de clignotement, la génération d’indices et les pioches massives. Cecily mène une symphonie d’artefacts, de créatures avec ETB et de synergies de pioche pour dominer la table sans relâche."
+},
   "cards": [
     { "name": "Abuelo, Ancestral Echo", "count": 1 },
     { "name": "Academy Manufactor", "count": 1 },
@@ -943,7 +1015,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo tribal de ángeles mono blanco liderado por Giada, centrado en acelerar criaturas voladoras de alto impacto y ganar vida. Combina sinergias con clérigos, ángeles y efectos de proliferación para dominar el aire y resistir hasta en partidas largas.",
+"deckDescription": {
+  "en": "A mono-white angel tribal deck led by Giada, focused on accelerating high-impact flying creatures and gaining life. It combines synergies with clerics, angels, and proliferation effects to dominate the skies and endure long games.",
+  "es": "Un mazo tribal de ángeles mono blanco liderado por Giada, centrado en acelerar criaturas voladoras de alto impacto y ganar vida. Combina sinergias con clérigos, ángeles y efectos de proliferación para dominar el aire y resistir hasta en partidas largas.",
+  "it": "Un mazzo tribale di angeli mono-bianco guidato da Giada, incentrato sull'accelerazione di creature volanti ad alto impatto e sul guadagno di vita. Combina sinergie con chierici, angeli ed effetti di proliferazione per dominare i cieli e resistere a lungo.",
+  "de": "Ein mono-weißes Engel-Tribal-Deck unter der Führung von Giada, das sich auf die Beschleunigung von fliegenden Kreaturen mit hohem Einfluss und Lebensgewinn konzentriert. Es kombiniert Synergien mit Klerikern, Engeln und Proliferationseffekten, um den Luftraum zu dominieren und in langen Spielen zu bestehen.",
+  "ja": "ジャーダが率いる単色白の天使部族デッキで、高インパクトの飛行クリーチャーを加速させてライフを得ることに特化しています。聖職者、天使、増殖効果とのシナジーを活かして空を支配し、長期戦でも耐え抜きます。",
+  "pt": "Um deck tribal de anjos mono-branco liderado por Giada, focado em acelerar criaturas voadoras de alto impacto e ganhar vida. Combina sinergias com clérigos, anjos e efeitos de proliferação para dominar os céus e resistir em partidas longas.",
+  "fr": "Un deck tribal d’anges mono-blanc mené par Giada, axé sur l’accélération de créatures volantes puissantes et le gain de vie. Il combine des synergies avec les clercs, les anges et les effets de prolifération pour dominer les airs et tenir sur la durée."
+},
   "cards": [
     { "name": "Akroma, Vision of Ixidor", "count": 1 },
     { "name": "Angelic Overseer", "count": 1 },
@@ -1028,7 +1108,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo tribal de dragones liderado por Tiamat, diseñado para buscar rápidamente cinco dragones distintos al entrar en juego. Repleto de sinergias tribales, aceleración de maná y efectos espectaculares que explotan la fuerza y la diversidad de criaturas tipo dragón.",
+"deckDescription": {
+  "en": "A tribal dragon deck led by Tiamat, designed to quickly fetch five different dragons upon entering the battlefield. Packed with tribal synergies, mana acceleration, and spectacular effects that harness the power and diversity of Dragon-type creatures.",
+  "es": "Un mazo tribal de dragones liderado por Tiamat, diseñado para buscar rápidamente cinco dragones distintos al entrar en juego. Repleto de sinergias tribales, aceleración de maná y efectos espectaculares que explotan la fuerza y la diversidad de criaturas tipo dragón.",
+  "it": "Un mazzo tribale di draghi guidato da Tiamat, progettato per cercare rapidamente cinque draghi diversi quando entra in campo. Ricco di sinergie tribali, accelerazione di mana ed effetti spettacolari che sfruttano la potenza e la varietà delle creature di tipo drago.",
+  "de": "Ein Drachen-Tribal-Deck unter der Führung von Tiamat, das darauf ausgelegt ist, beim Betreten des Spielfelds schnell fünf verschiedene Drachen zu suchen. Vollgepackt mit Stammes-Synergien, Mana-Beschleunigung und spektakulären Effekten, die die Stärke und Vielfalt von Drachen-Kreaturen nutzen.",
+  "ja": "ティアマトが率いるドラゴン部族デッキで、戦場に出た際に異なる5体のドラゴンを素早く探す設計です。部族のシナジー、マナ加速、そしてドラゴンの力と多様性を活かす華やかな効果に満ちています。",
+  "pt": "Um deck tribal de dragões liderado por Tiamat, projetado para buscar rapidamente cinco dragões diferentes ao entrar no campo. Repleto de sinergias tribais, aceleração de mana e efeitos espetaculares que exploram a força e diversidade das criaturas do tipo dragão.",
+  "fr": "Un deck tribal de dragons mené par Tiamat, conçu pour chercher rapidement cinq dragons différents lorsqu’il arrive sur le champ de bataille. Rempli de synergies tribales, d’accélération de mana et d’effets spectaculaires exploitant la puissance et la diversité des créatures de type Dragon."
+},
   "cards": [
     { "name": "Sarkhan the Masterless", "count": 1 },
     { "name": "Amareth, the Lustrous", "count": 1 },
@@ -1137,7 +1225,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo mono blanco centrado en el arquetipo Voltron, aprovechando al máximo a Codsworth con equipos poderosos y sinergias de auras y tutores. Diseñado para convertir a Codsworth en una amenaza imparable rápidamente.",
+"deckDescription": {
+  "en": "A mono-white deck focused on the Voltron archetype, maximizing Codsworth with powerful equipment, aura synergies, and tutors. Designed to quickly turn Codsworth into an unstoppable threat.",
+  "es": "Un mazo mono blanco centrado en el arquetipo Voltron, aprovechando al máximo a Codsworth con equipos poderosos y sinergias de auras y tutores. Diseñado para convertir a Codsworth en una amenaza imparable rápidamente.",
+  "it": "Un mazzo mono-bianco incentrato sull'archetipo Voltron, che massimizza Codsworth con equipaggiamenti potenti, sinergie con aure e tutor. Progettato per rendere Codsworth rapidamente una minaccia inarrestabile.",
+  "de": "Ein mono-weißes Deck, das sich auf das Voltron-Archetyp konzentriert und Codsworth mit mächtigen Ausrüstungen, Aura-Synergien und Tutoren optimal nutzt. Entwickelt, um Codsworth schnell zu einer unaufhaltsamen Bedrohung zu machen.",
+  "ja": "コズワースを強力な装備品やオーラのシナジー、チューターで最大限に活用し、すぐに止められない脅威にすることを目的とした、Voltronアーキタイプに特化した白単色のデッキです。",
+  "pt": "Um deck mono-branco focado no arquétipo Voltron, maximizando Codsworth com equipamentos poderosos, sinergias de auras e tutores. Projetado para transformar Codsworth rapidamente em uma ameaça imparável.",
+  "fr": "Un deck mono-blanc axé sur l'archétype Voltron, optimisant Codsworth avec des équipements puissants, des synergies d'auras et des tuteurs. Conçu pour faire rapidement de Codsworth une menace imparable."
+},
   "cards": [
     { "name": "Ardenn, Intrepid Archaeologist", "count": 1 },
     { "name": "Armored Skyhunter", "count": 1 },
@@ -1223,7 +1319,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Una baraja Naya orientada a la generación masiva de tokens y criaturas agresivas. Duskana lidera una ofensiva de criaturas pequeñas que se benefician de duplicadores de fichas, sinergias con criaturas y spells de bajo coste. Incluye poderosas bombas como Doubling Season y Rhystic multiplicadores para escalar rápidamente.",
+"deckDescription": {
+  "en": "A Naya deck focused on massive token generation and aggressive creatures. Duskana leads an assault of small creatures supported by token doublers, creature synergies, and low-cost spells. Includes powerful bombs like Doubling Season and Rhystic multipliers to scale quickly.",
+  "es": "Una baraja Naya orientada a la generación masiva de tokens y criaturas agresivas. Duskana lidera una ofensiva de criaturas pequeñas que se benefician de duplicadores de fichas, sinergias con criaturas y spells de bajo coste. Incluye poderosas bombas como Doubling Season y Rhystic multiplicadores para escalar rápidamente.",
+  "it": "Un mazzo Naya incentrato sulla generazione massiccia di pedine e creature aggressive. Duskana guida un assalto di piccole creature supportate da duplicatori di pedine, sinergie con creature e magie a basso costo. Include bombe potenti come Doubling Season e moltiplicatori Rhystic per crescere rapidamente.",
+  "de": "Ein Naya-Deck, das sich auf massenhafte Token-Erzeugung und aggressive Kreaturen konzentriert. Duskana führt eine Offensive kleiner Kreaturen an, die von Token-Verdopplern, Kreaturen-Synergien und günstigen Zaubern profitieren. Enthält starke Bomben wie Doubling Season und Rhystic-Multiplikatoren für schnelles Wachstum.",
+  "ja": "大量のトークン生成と攻撃的なクリーチャーに特化したナヤのデッキです。ダスカナは小型クリーチャーの軍勢を率い、トークン倍増カードやクリーチャーシナジー、低コスト呪文で支援します。Doubling SeasonやRhysticのような強力な爆弾カードも含まれ、急速な展開が可能です。",
+  "pt": "Um deck Naya focado em geração massiva de fichas e criaturas agressivas. Duskana lidera uma ofensiva de criaturas pequenas apoiadas por duplicadores de fichas, sinergias com criaturas e mágicas de baixo custo. Inclui bombas poderosas como Doubling Season e multiplicadores Rhystic para escalar rapidamente.",
+  "fr": "Un deck Naya axé sur la génération massive de jetons et les créatures agressives. Duskana mène une offensive de petites créatures soutenues par des doubleurs de jetons, des synergies de créatures et des sorts à faible coût. Comprend des cartes puissantes comme Doubling Season et des multiplicateurs Rhystic pour une montée en puissance rapide."
+},
   "cards": [
     { "name": "Xenagos, the Reveler", "count": 1 },
     { "name": "Arbalest Engineers", "count": 1 },
@@ -1324,7 +1428,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo tribal de perros en colores Bant (verde, blanco, azul), liderado por Sophia. La estrategia se enfoca en criaturas de tipo Perro con sinergias de fichas, contadores +1/+1, y generación de valor a través de cartas como Academy Manufactor, Tireless Tracker y efectos de proliferación. Doubling Season y Parallel Lives maximizan el potencial de crecimiento exponencial.",
+"deckDescription": {
+  "en": "A Bant-colored tribal Dog deck led by Sophia. The strategy focuses on Dog-type creatures with token synergies, +1/+1 counters, and value generation through cards like Academy Manufactor, Tireless Tracker, and proliferation effects. Doubling Season and Parallel Lives maximize its exponential growth potential.",
+  "es": "Un mazo tribal de perros en colores Bant (verde, blanco, azul), liderado por Sophia. La estrategia se enfoca en criaturas de tipo Perro con sinergias de fichas, contadores +1/+1, y generación de valor a través de cartas como Academy Manufactor, Tireless Tracker y efectos de proliferación. Doubling Season y Parallel Lives maximizan el potencial de crecimiento exponencial.",
+  "it": "Un mazzo tribale di Cani nei colori Bant (verde, bianco, blu), guidato da Sophia. La strategia si concentra su creature di tipo Cane con sinergie di pedine, segnalini +1/+1 e generazione di valore tramite carte come Academy Manufactor, Tireless Tracker ed effetti di proliferazione. Doubling Season e Parallel Lives massimizzano il potenziale di crescita esponenziale.",
+  "de": "Ein Bant-farbenes Hunde-Tribal-Deck, angeführt von Sophia. Die Strategie konzentriert sich auf Hundekreaturen mit Token-Synergien, +1/+1-Marken und Wertgenerierung durch Karten wie Academy Manufactor, Tireless Tracker und Proliferationseffekte. Doubling Season und Parallel Lives maximieren das exponentielle Wachstumspotenzial.",
+  "ja": "ソフィアが率いるバント（緑、白、青）カラーの犬部族デッキです。犬タイプのクリーチャーを中心に、トークンとの相乗効果、+1/+1カウンター、Academy ManufactorやTireless Tracker、増殖効果によるバリュー生成を狙います。Doubling SeasonやParallel Livesがその指数的成長力を最大化します。",
+  "pt": "Um deck tribal de Cães nas cores Bant (verde, branco, azul), liderado por Sophia. A estratégia foca em criaturas do tipo Cão com sinergias de fichas, marcadores +1/+1 e geração de valor com cartas como Academy Manufactor, Tireless Tracker e efeitos de proliferação. Doubling Season e Parallel Lives maximizam o potencial de crescimento exponencial.",
+  "fr": "Un deck tribal de chiens aux couleurs Bant (vert, blanc, bleu), dirigé par Sophia. La stratégie se concentre sur des créatures de type Chien avec des synergies de jetons, des marqueurs +1/+1, et la génération de valeur via des cartes comme Academy Manufactor, Tireless Tracker et les effets de prolifération. Doubling Season et Parallel Lives maximisent son potentiel de croissance exponentielle."
+},
   "cards": [
     { "name": "Abzan Falconer", "count": 1 },
     { "name": "Academy Manufactor", "count": 1 },
@@ -1421,7 +1533,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo Boros basado en la generación de tokens y daño indirecto. Anim Pakal lidera esta lista que combina criaturas agresivas, efectos de impulso global, y sinergias con artefactos y fichas. Herramientas como Purphoros, Witty Roastmaster e Impact Tremors aseguran presión constante incluso sin atacar directamente.",
+"deckDescription": {
+  "en": "A Boros deck focused on token generation and indirect damage. Anim Pakal leads this list that blends aggressive creatures, global pump effects, and synergies with artifacts and tokens. Tools like Purphoros, Witty Roastmaster, and Impact Tremors ensure constant pressure even without attacking directly.",
+  "es": "Un mazo Boros basado en la generación de tokens y daño indirecto. Anim Pakal lidera esta lista que combina criaturas agresivas, efectos de impulso global, y sinergias con artefactos y fichas. Herramientas como Purphoros, Witty Roastmaster e Impact Tremors aseguran presión constante incluso sin atacar directamente.",
+  "it": "Un mazzo Boros incentrato sulla generazione di pedine e danni indiretti. Anim Pakal guida questa lista che combina creature aggressive, effetti di potenziamento globale e sinergie con artefatti e pedine. Strumenti come Purphoros, Witty Roastmaster e Impact Tremors garantiscono pressione costante anche senza attaccare direttamente.",
+  "de": "Ein Boros-Deck, das sich auf Token-Erzeugung und indirekten Schaden konzentriert. Anim Pakal führt diese Liste an, die aggressive Kreaturen, globale Verstärkungseffekte und Synergien mit Artefakten und Spielsteinen kombiniert. Werkzeuge wie Purphoros, Witty Roastmaster und Impact Tremors sorgen für konstanten Druck, selbst ohne direkten Angriff.",
+  "ja": "トークン生成と間接的なダメージに特化したボロスのデッキです。アニム・パカルがこのリストを率い、攻撃的なクリーチャー、全体強化効果、アーティファクトやトークンとのシナジーを組み合わせています。Purphoros、Witty Roastmaster、Impact Tremors などのカードが、攻撃せずとも常に圧力をかけ続けます。",
+  "pt": "Um deck Boros focado na geração de fichas e dano indireto. Anim Pakal lidera esta lista que combina criaturas agressivas, efeitos de fortalecimento global e sinergias com artefatos e fichas. Ferramentas como Purphoros, Witty Roastmaster e Impact Tremors garantem pressão constante mesmo sem atacar diretamente.",
+  "fr": "Un deck Boros axé sur la génération de jetons et les dégâts indirects. Anim Pakal dirige cette liste qui combine créatures agressives, effets de boost globaux et synergies avec les artefacts et les jetons. Des outils comme Purphoros, Witty Roastmaster et Impact Tremors assurent une pression constante, même sans attaquer directement."
+},
   "cards": [
     { "name": "Abzan Falconer", "count": 1 },
     { "name": "Adeline, Resplendent Cathar", "count": 1 },
@@ -1527,7 +1647,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Una lista Temur con criaturas grandes y sinergias de tempo, que aprovecha aceleración temprana para bajar amenazas como Etali, Ghalta o Zopandrel rápidamente. El mazo equilibra presión en mesa, robo de cartas y control ligero con instants y encantamientos como Garruk's Uprising y Warstorm Surge.",
+"deckDescription": {
+  "en": "A Temur list with big creatures and tempo synergies, leveraging early ramp to drop threats like Etali, Ghalta, or Zopandrel quickly. The deck balances board pressure, card draw, and light control through instants and enchantments like Garruk's Uprising and Warstorm Surge.",
+  "es": "Una lista Temur con criaturas grandes y sinergias de tempo, que aprovecha aceleración temprana para bajar amenazas como Etali, Ghalta o Zopandrel rápidamente. El mazo equilibra presión en mesa, robo de cartas y control ligero con instants y encantamientos como Garruk's Uprising y Warstorm Surge.",
+  "it": "Una lista Temur con creature imponenti e sinergie di tempo, che sfrutta la ramp iniziale per calare rapidamente minacce come Etali, Ghalta o Zopandrel. Il mazzo bilancia pressione sul campo, pescata di carte e controllo leggero tramite istantanei e incantesimi come Garruk's Uprising e Warstorm Surge.",
+  "de": "Eine Temur-Liste mit großen Kreaturen und Tempo-Synergien, die frühes Ramp nutzt, um Bedrohungen wie Etali, Ghalta oder Zopandrel schnell ins Spiel zu bringen. Das Deck balanciert Boarddruck, Kartenziehen und leichtes Kontrollspiel mit Spontanzaubern und Verzauberungen wie Garruk's Uprising und Warstorm Surge.",
+  "ja": "大型クリーチャーとテンポシナジーを活かしたティムールのリストで、早期のランプを活用してEtali、Ghalta、Zopandrelなどの脅威を素早く展開します。Garruk's UprisingやWarstorm Surgeのようなインスタントやエンチャントによって、盤面への圧力、カードドロー、軽めのコントロールをバランスよく行います。",
+  "pt": "Uma lista Temur com criaturas grandes e sinergias de tempo, aproveitando ramp inicial para colocar ameaças como Etali, Ghalta ou Zopandrel rapidamente em campo. O deck equilibra pressão de mesa, compra de cartas e controle leve com mágicas instantâneas e encantamentos como Garruk's Uprising e Warstorm Surge.",
+  "fr": "Une liste Temur avec de grosses créatures et des synergies de tempo, profitant de l'accélération pour poser rapidement des menaces comme Etali, Ghalta ou Zopandrel. Le deck équilibre pression sur le champ de bataille, pioche de cartes et contrôle léger avec des éphémères et des enchantements tels que Garruk's Uprising et Warstorm Surge."
+},
   "cards": [
     { "name": "Beast Whisperer", "count": 1 },
     { "name": "Elvish Mystic", "count": 1 },
@@ -1634,7 +1762,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Una lista competitiva de cEDH centrada en combos rápidos con Thrasios como motor de ventaja y acceso a colores múltiples para tutorías, interacción y ramp eficiente. Usa piezas como Lion's Eye Diamond, Thassa's Oracle y Consult para cerrar partidas temprano, con múltiples líneas de combo redundantes.",
+"deckDescription": {
+  "en": "A competitive cEDH list focused on fast combos, with Thrasios as a value engine and access to multiple colors for efficient ramp, tutors, and interaction. Utilizes pieces like Lion's Eye Diamond, Thassa's Oracle, and Consultation to end games early, with multiple redundant combo lines.",
+  "es": "Una lista competitiva de cEDH centrada en combos rápidos con Thrasios como motor de ventaja y acceso a colores múltiples para tutorías, interacción y ramp eficiente. Usa piezas como Lion's Eye Diamond, Thassa's Oracle y Consult para cerrar partidas temprano, con múltiples líneas de combo redundantes.",
+  "it": "Una lista cEDH competitiva focalizzata su combo veloci, con Thrasios come motore di valore e accesso a più colori per ramp efficiente, tutor e interazioni. Utilizza carte come Lion's Eye Diamond, Thassa's Oracle e Consult per concludere le partite rapidamente, con diverse linee combo ridondanti.",
+  "de": "Eine kompetitive cEDH-Liste mit Fokus auf schnelle Kombos, wobei Thrasios als Value-Engine dient und Zugang zu mehreren Farben für effizientes Ramp, Tutor-Effekte und Interaktionen bietet. Nutzt Karten wie Lion's Eye Diamond, Thassa's Oracle und Consultation, um Spiele frühzeitig zu beenden – mit mehreren redundanten Kombopfaden.",
+  "ja": "高速コンボに特化した競技志向のcEDHリストで、Thrasiosをアドバンテージエンジンとして利用し、多色による効率的なランプ、チューター、干渉手段にアクセスできます。Lion's Eye Diamond、Thassa's Oracle、Consultなどのパーツを使い、冗長な複数のコンボラインで早期決着を狙います。",
+  "pt": "Uma lista competitiva de cEDH focada em combos rápidos, com Thrasios como motor de valor e acesso a várias cores para ramp eficiente, tutores e interação. Usa cartas como Lion's Eye Diamond, Thassa's Oracle e Consultation para finalizar jogos cedo, com múltiplas linhas de combo redundantes.",
+  "fr": "Une liste cEDH compétitive axée sur des combos rapides, avec Thrasios comme moteur de valeur et un accès à plusieurs couleurs pour un ramp efficace, des tuteurs et des interactions. Utilise des cartes comme Lion's Eye Diamond, Thassa's Oracle et Consultation pour terminer les parties rapidement, avec plusieurs lignes de combo redondantes."
+},
   "cards": [
     { "name": "Teferi, Time Raveler", "count": 1 },
     { "name": "Auriok Salvagers", "count": 1 },
@@ -1747,7 +1883,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo mono-rojo explosivo que abusa de Ilharg para poner en juego criaturas enormes sin pagar su coste. Usa dragones, colosos y efectos duplicadores con artefactos potentes y value constante. Apunta a aplastar la mesa en pocos turnos.",
+"deckDescription": {
+  "en": "An explosive mono-red deck that abuses Ilharg to cheat massive creatures into play without paying their cost. It uses dragons, colossi, and doubling effects alongside powerful artifacts and steady value. Aims to crush the table in just a few turns.",
+  "es": "Un mazo mono-rojo explosivo que abusa de Ilharg para poner en juego criaturas enormes sin pagar su coste. Usa dragones, colosos y efectos duplicadores con artefactos potentes y value constante. Apunta a aplastar la mesa en pocos turnos.",
+  "it": "Un mazzo mono-rosso esplosivo che sfrutta Ilharg per mettere in campo creature enormi senza pagarne il costo. Usa draghi, colossi ed effetti duplicatori insieme ad artefatti potenti e vantaggio costante. Mira a schiacciare il tavolo in pochi turni.",
+  "de": "Ein explosives Mono-Rot-Deck, das Ilharg nutzt, um riesige Kreaturen kostenlos ins Spiel zu bringen. Es verwendet Drachen, Kolosse und Verdopplungseffekte zusammen mit mächtigen Artefakten und konstantem Kartenvorteil. Ziel ist es, den Tisch in wenigen Zügen zu überrollen.",
+  "ja": "Ilhargの力を利用して巨大クリーチャーをコストを払わずに出す、爆発力のある単赤デッキ。ドラゴンや巨人、倍増効果、強力なアーティファクトと安定したバリューを活かして、数ターンでテーブルを圧倒することを目指します。",
+  "pt": "Um deck mono-vermelho explosivo que abusa de Ilharg para colocar criaturas enormes em jogo sem pagar seu custo. Usa dragões, colossos e efeitos de duplicação junto com artefatos poderosos e geração constante de valor. O objetivo é esmagar a mesa em poucos turnos.",
+  "fr": "Un deck mono-rouge explosif qui abuse d'Ilharg pour mettre en jeu d'énormes créatures sans en payer le coût. Il utilise des dragons, des colosses et des effets de duplication, accompagnés d'artefacts puissants et d'une génération de valeur constante. Vise à écraser la table en quelques tours."
+},
   "cards": [
     { "name": "Ancient Copper Dragon", "count": 1 },
     { "name": "Anger", "count": 1 },
@@ -1839,7 +1983,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo midrange Jund centrado en value constante con tierras. Abusa de efectos de landfall, reciclaje de cementerio, y motores de draw. Con Windgrace como motor principal y finisher en forma de tokens, combos de tierra y Torment of Hailfire.",
+"deckDescription": {
+  "en": "A Jund midrange deck focused on constant value through lands. It abuses landfall effects, graveyard recursion, and draw engines. With Windgrace as the main engine and finishers like tokens, land combos, and Torment of Hailfire.",
+  "es": "Un mazo midrange Jund centrado en value constante con tierras. Abusa de efectos de landfall, reciclaje de cementerio, y motores de draw. Con Windgrace como motor principal y finisher en forma de tokens, combos de tierra y Torment of Hailfire.",
+  "it": "Un mazzo midrange Jund focalizzato sul valore costante tramite le terre. Sfrutta effetti di landfall, riciclo del cimitero e motori di pescata. Con Windgrace come motore principale e chiusure tramite pedine, combo di terre e Torment of Hailfire.",
+  "de": "Ein Jund-Midrange-Deck, das auf konstanten Kartenvorteil durch Länder setzt. Nutzt Landfall-Effekte, Friedhofs-Rekursion und Ziehmaschinen. Windgrace dient als Hauptmotor mit Abschlüssen durch Tokens, Land-Kombos und Torment of Hailfire.",
+  "ja": "土地を利用して継続的なアドバンテージを得る、Jundのミッドレンジデッキ。土地落下、墓地からの再利用、ドローエンジンを多用し、Windgraceを中心にトークン、土地コンボ、そしてTorment of Hailfireで決着を狙う。",
+  "pt": "Um deck midrange Jund focado em gerar valor constante com terrenos. Abusa de efeitos de landfall, recorrência de cemitério e motores de compra. Windgrace é o motor principal, com finalizações usando fichas, combos de terreno e Torment of Hailfire.",
+  "fr": "Un deck Jund midrange axé sur une génération de valeur constante grâce aux terrains. Il abuse des effets de landfall, de la récurrence du cimetière et des moteurs de pioche. Windgrace en est le moteur principal, avec des finishers comme les jetons, les combos de terrains et Torment of Hailfire."
+},
   "cards": [
     { "name": "Nissa, Vital Force", "count": 1 },
     { "name": "Wrenn and Six", "count": 1 },
@@ -1944,7 +2096,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Tribal de zombis Dimir que aprovecha sinergias de muerte, control y generación de tokens para dominar el tablero. The Scarab God permite revivir lo mejor del cementerio y drenar a los oponentes mientras se escala en ventaja.",
+"deckDescription": {
+  "en": "A Dimir zombie tribal deck that leverages death synergies, control, and token generation to dominate the board. The Scarab God allows you to revive the best from any graveyard and drain opponents while scaling in value.",
+  "es": "Tribal de zombis Dimir que aprovecha sinergias de muerte, control y generación de tokens para dominar el tablero. The Scarab God permite revivir lo mejor del cementerio y drenar a los oponentes mientras se escala en ventaja.",
+  "it": "Un mazzo tribale Dimir di zombie che sfrutta sinergie con la morte, controllo e generazione di pedine per dominare il campo. The Scarab God permette di rianimare il meglio dal cimitero e prosciugare gli avversari mentre si scala in vantaggio.",
+  "de": "Ein Dimir-Zombie-Tribal-Deck, das Todessynergien, Kontrolle und Token-Erzeugung nutzt, um das Spielfeld zu beherrschen. The Scarab God belebt die besten Karten aus dem Friedhof wieder und schwächt Gegner durch Lebensverlust, während der Vorteil wächst.",
+  "ja": "死、コントロール、トークン生成のシナジーを活かして盤面を支配するディミーアのゾンビ部族デッキ。The Scarab Godで墓地から強力なカードを蘇らせつつ、対戦相手のライフを吸い取りながらアドバンテージを稼ぐ。",
+  "pt": "Um deck tribal de zumbis Dimir que aproveita sinergias de morte, controle e geração de fichas para dominar o campo. The Scarab God permite reviver o melhor do cemitério e drenar os oponentes enquanto acumula vantagem.",
+  "fr": "Un deck tribal zombie Dimir qui exploite les synergies de mort, le contrôle et la génération de jetons pour dominer le champ de bataille. The Scarab God permet de ranimer le meilleur du cimetière et de drainer les adversaires tout en accumulant de la valeur."
+},
   "cards": [
     { "name": "Liliana, Dreadhorde General", "count": 1 },
     { "name": "Archghoul of Thraben", "count": 1 },
@@ -2034,7 +2194,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo Bant con fuerte enfoque en instantáneos, hechizos costosos y efectos de blink y value. Usa criaturas con efectos ETB y sinergias de cascada, adivinación y robo para mantener el flujo de hechizos. Incorpora batallas, sagas y un toque de spellslinger con control.",
+  "deckDescription": {
+  "en": "A Bant deck focused on instants, high-cost spells, and blink/value effects. It uses ETB creatures with synergies in cascade, scry, and draw to maintain spell flow. Includes battles, sagas, and a touch of spellslinger with control.",
+  "es": "Un mazo Bant con fuerte enfoque en instantáneos, hechizos costosos y efectos de blink y value. Usa criaturas con efectos ETB y sinergias de cascada, adivinación y robo para mantener el flujo de hechizos. Incorpora batallas, sagas y un toque de spellslinger con control.",
+  "it": "Un mazzo Bant incentrato su istantanei, magie costose e effetti di blink e value. Usa creature con effetti ETB e sinergie con cascata, scrutare e pescare per mantenere il flusso di magie. Include battaglie, saghe e un tocco di spellslinger con controllo.",
+  "de": "Ein Bant-Deck mit Fokus auf Spontanzauber, teure Zauber und Blink-/Value-Effekte. Es nutzt ETB-Kreaturen mit Synergien in Kaskade, Vorauswahl und Kartenziehen, um den Zauberfluss aufrechtzuerhalten. Enthält Battles, Sagas und eine Prise Spellslinger-Kontrolle.",
+  "ja": "インスタント、高コスト呪文、ブリンクやバリュー効果に特化したバントデッキ。ETB能力を持つクリーチャーと、滝登り、占術、ドローのシナジーで呪文の流れを維持。戦闘、英雄譚、コントロール寄りのスペルスリンガー要素も搭載。",
+  "pt": "Um deck Bant focado em instantâneos, mágicas de alto custo e efeitos de blink e value. Usa criaturas com ETB e sinergias de cascata, adivinhação e compra de cartas para manter o fluxo de mágicas. Inclui batalhas, sagas e um toque de spellslinger com controle.",
+  "fr": "Un deck Bant axé sur les éphémères, les sorts coûteux et les effets de blink et de value. Il utilise des créatures avec des effets d'arrivée en jeu (ETB) et des synergies avec la cascade, le scry et la pioche pour maintenir le rythme des sorts. Il intègre des batailles, des sagas et une touche de spellslinger avec du contrôle."
+},
   "cards": [
     { "name": "Chulane, Teller of Tales", "count": 1 },
     { "name": "Coiling Oracle", "count": 1 },
@@ -2139,7 +2307,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Una baraja Izzet centrada en la mecánica de 'draw & discard' y hechizos baratos para generar ventaja explosiva. Abusa de cartas como Archmage Emeritus, The Locust God y Storm-Kiln Artist para convertir cada hechizo en value. El comandante, Captain Howler, premia la agresividad y el descarte, convirtiendo la locura en una condición de victoria.",
+"deckDescription": {
+  "en": "An Izzet deck focused on 'draw & discard' mechanics and cheap spells to generate explosive value. It leverages cards like Archmage Emeritus, The Locust God, and Storm-Kiln Artist to turn every spell into advantage. The commander, Captain Howler, rewards aggression and discarding, turning madness into a win condition.",
+  "es": "Una baraja Izzet centrada en la mecánica de 'robar y descartar' y hechizos baratos para generar ventaja explosiva. Abusa de cartas como Archmage Emeritus, The Locust God y Storm-Kiln Artist para convertir cada hechizo en valor. El comandante, Captain Howler, premia la agresividad y el descarte, convirtiendo la locura en una condición de victoria.",
+  "it": "Un mazzo Izzet incentrato sulla meccanica di 'pesca e scarta' e su magie a basso costo per generare un vantaggio esplosivo. Sfrutta carte come Archmage Emeritus, The Locust God e Storm-Kiln Artist per trasformare ogni magia in valore. Il comandante, Captain Howler, premia l'aggressività e lo scarto, trasformando la follia in una condizione di vittoria.",
+  "de": "Ein Izzet-Deck, das sich auf die Mechanik 'ziehen und abwerfen' sowie günstige Zauber konzentriert, um explosiven Vorteil zu erzeugen. Es nutzt Karten wie Archmage Emeritus, The Locust God und Storm-Kiln Artist, um jeden Zauber in Wert zu verwandeln. Der Kommandeur, Captain Howler, belohnt Aggression und Abwurf und macht Wahnsinn zur Siegesbedingung.",
+  "ja": "ドロー＆ディスカードのメカニズムと軽量呪文に焦点を当てたイゼットのデッキで、爆発的なアドバンテージを生み出します。Archmage Emeritus、The Locust God、Storm-Kiln Artistなどのカードを駆使して、あらゆる呪文をバリューに変換。統率者Captain Howlerは攻撃性とディスカードを報酬とし、マッドネスを勝利条件へと変える。",
+  "pt": "Um deck Izzet focado na mecânica de 'comprar e descartar' e em feitiços baratos para gerar vantagem explosiva. Abusa de cartas como Archmage Emeritus, The Locust God e Storm-Kiln Artist para transformar cada feitiço em valor. O comandante, Captain Howler, recompensa a agressividade e o descarte, transformando a loucura em uma condição de vitória.",
+  "fr": "Un deck Izzet centré sur la mécanique de 'piocher et défausser' et sur les sorts bon marché pour générer une valeur explosive. Il exploite des cartes comme Archmage Emeritus, The Locust God et Storm-Kiln Artist pour transformer chaque sort en avantage. Le commandant, Captain Howler, récompense l’agressivité et la défausse, faisant de la folie une condition de victoire."
+},
   "cards": [
     { "name": "Dack Fayden", "count": 1 },
     { "name": "Teferi, Master of Time", "count": 1 },
@@ -2237,7 +2413,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo Sultai centrado en sinergias con el cementerio, reanimaciones y value a través de cartas permanentes permanentes que puedes jugar desde el cementerio con Muldrotha. Incluye tutores, interacciones y control medio a tardío, mezclando criaturas poderosas como Razaketh o Nyxbloom Ancient con efectos combo y de extracción de cartas.",
+"deckDescription": {
+  "en": "A Sultai deck focused on graveyard synergies, reanimation, and value through permanent spells you can cast from the graveyard with Muldrotha. It includes tutors, mid-to-late game interaction and control, mixing powerful creatures like Razaketh and Nyxbloom Ancient with combo and card advantage effects.",
+  "es": "Un mazo Sultai centrado en sinergias con el cementerio, reanimaciones y value a través de cartas permanentes que puedes jugar desde el cementerio con Muldrotha. Incluye tutores, interacciones y control medio a tardío, mezclando criaturas poderosas como Razaketh o Nyxbloom Ancient con efectos combo y de extracción de cartas.",
+  "it": "Un mazzo Sultai incentrato su sinergie con il cimitero, rianimazioni e valore tramite magie permanenti che puoi lanciare dal cimitero con Muldrotha. Include tutor, interazioni e controllo da metà a fine partita, combinando creature potenti come Razaketh e Nyxbloom Ancient con effetti combo e vantaggio carte.",
+  "de": "Ein Sultai-Deck, das sich auf Friedhofs-Synergien, Reanimation und Value durch permanente Zauber konzentriert, die mit Muldrotha aus dem Friedhof gespielt werden können. Es enthält Tutoren, Interaktionen und Kontrolle im mittleren bis späten Spielverlauf sowie mächtige Kreaturen wie Razaketh oder Nyxbloom Ancient mit Kombo- und Kartenvorteil-Effekten.",
+  "ja": "墓地とのシナジー、リアニメイト、そしてMuldrothaで墓地からプレイできるパーマネントによるバリューに焦点を当てたスルタイ・デッキです。チューター、ミッド〜レイトゲームのインタラクションやコントロール、RazakethやNyxbloom Ancientのような強力なクリーチャーとコンボやドロー効果が組み合わさっています。",
+  "pt": "Um deck Sultai focado em sinergias com o cemitério, reanimações e geração de valor através de permanentes que podem ser jogados do cemitério com Muldrotha. Inclui tutores, interação e controle do meio para o fim do jogo, misturando criaturas poderosas como Razaketh ou Nyxbloom Ancient com efeitos de combo e vantagem de cartas.",
+  "fr": "Un deck Sultaï axé sur les synergies avec le cimetière, la réanimation et la génération de valeur via des permanents que vous pouvez lancer depuis le cimetière grâce à Muldrotha. Il inclut des tuteurs, de l’interaction et du contrôle en milieu et fin de partie, en combinant des créatures puissantes comme Razaketh ou Nyxbloom Ancient avec des effets de combo et de pioche."
+},
   "cards": [
     { "name": "Ashiok, Dream Render", "count": 1 },
     { "name": "Oko, Thief of Crowns", "count": 1 },
@@ -2345,7 +2529,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo Boros centrado en equipos y ataques explosivos con Aurelia como comandante. Usa una variedad de espadas (como Sword of Feast and Famine, Sword of Hearth and Home, etc.), además de criaturas que se benefician de portar artefactos. El mazo combina velocidad, protección y presión agresiva, con cartas clave como Lightning Greaves, Helm of the Host, y Aggravated Assault para combos de ataque infinito.",
+"deckDescription": {
+  "en": "A Boros deck focused on equipment and explosive attacks with Aurelia as the commander. It uses a variety of swords (like Sword of Feast and Famine, Sword of Hearth and Home, etc.), along with creatures that benefit from being equipped. The deck combines speed, protection, and aggressive pressure, with key cards like Lightning Greaves, Helm of the Host, and Aggravated Assault for infinite attack combos.",
+  "es": "Un mazo Boros centrado en equipos y ataques explosivos con Aurelia como comandante. Usa una variedad de espadas (como Sword of Feast and Famine, Sword of Hearth and Home, etc.), además de criaturas que se benefician de portar artefactos. El mazo combina velocidad, protección y presión agresiva, con cartas clave como Lightning Greaves, Helm of the Host, y Aggravated Assault para combos de ataque infinito.",
+  "it": "Un mazzo Boros incentrato su equipaggiamenti e attacchi esplosivi con Aurelia come comandante. Utilizza una varietà di spade (come Sword of Feast and Famine, Sword of Hearth and Home, ecc.), insieme a creature che traggono beneficio dagli equipaggiamenti. Il mazzo combina velocità, protezione e pressione aggressiva, con carte chiave come Lightning Greaves, Helm of the Host e Aggravated Assault per combo di attacchi infiniti.",
+  "de": "Ein Boros-Deck, das sich auf Ausrüstung und explosive Angriffe mit Aurelia als Kommandeurin konzentriert. Es verwendet verschiedene Schwerter (wie Sword of Feast and Famine, Sword of Hearth and Home usw.) sowie Kreaturen, die von Ausrüstungen profitieren. Das Deck kombiniert Geschwindigkeit, Schutz und aggressive Präsenz mit Schlüssel-Karten wie Lightning Greaves, Helm of the Host und Aggravated Assault für unendliche Angriffskombos.",
+  "ja": "装備と爆発的な攻撃に焦点を当てたボロス・デッキで、指揮官はアウレリアです。Sword of Feast and FamineやSword of Hearth and Homeなどの多様な剣と、装備されることで恩恵を受けるクリーチャーを使用します。Lightning Greaves、Helm of the Host、Aggravated Assaultなどのキーカードによって、スピード、防御、攻撃的プレッシャー、そして無限攻撃コンボを兼ね備えています。",
+  "pt": "Um deck Boros focado em equipamentos e ataques explosivos com Aurelia como comandante. Utiliza uma variedade de espadas (como Sword of Feast and Famine, Sword of Hearth and Home, etc.), além de criaturas que se beneficiam de estarem equipadas. O deck combina velocidade, proteção e pressão agressiva, com cartas-chave como Lightning Greaves, Helm of the Host e Aggravated Assault para combos de ataque infinitos.",
+  "fr": "Un deck Boros axé sur les équipements et les attaques explosives avec Aurelia comme commandante. Il utilise une variété d'épées (comme Sword of Feast and Famine, Sword of Hearth and Home, etc.), ainsi que des créatures qui bénéficient des équipements. Le deck combine vitesse, protection et pression agressive, avec des cartes clés comme Lightning Greaves, Helm of the Host et Aggravated Assault pour des combos d’attaques infinies."
+},
   "cards": [
     { "name": "Archivist of Oghma", "count": 1 },
     { "name": "Cloud, Midgar Mercenary", "count": 1 },
@@ -2438,7 +2630,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Este mazo se basa en la mecánica de hacer que todos los jugadores roben muchas cartas, para luego castigar ese robo con efectos de daño directo como Nekusar, Underworld Dreams o Fate Unraveler. Usa ruedas (Wheel effects) como Windfall y Wheel of Misfortune, y combina cartas de control, aceleración de maná y encantamientos como Forced Fruition o Psychic Corrosion para agotar los recursos del oponente mientras se gana ventaja.",
+"deckDescription": {
+  "en": "This deck is built around the mechanic of forcing all players to draw many cards, then punishing that draw with direct damage effects like Nekusar, Underworld Dreams, or Fate Unraveler. It uses wheel effects like Windfall and Wheel of Misfortune, combining control, mana acceleration, and enchantments like Forced Fruition or Psychic Corrosion to drain opponents' resources while gaining advantage.",
+  "es": "Este mazo se basa en la mecánica de hacer que todos los jugadores roben muchas cartas, para luego castigar ese robo con efectos de daño directo como Nekusar, Underworld Dreams o Fate Unraveler. Usa ruedas (Wheel effects) como Windfall y Wheel of Misfortune, y combina cartas de control, aceleración de maná y encantamientos como Forced Fruition o Psychic Corrosion para agotar los recursos del oponente mientras se gana ventaja.",
+  "it": "Questo mazzo si basa sulla meccanica di far pescare molte carte a tutti i giocatori, per poi punirli con effetti di danno diretto come Nekusar, Underworld Dreams o Fate Unraveler. Utilizza effetti ruota (Wheel effects) come Windfall e Wheel of Misfortune, e combina controllo, accelerazione di mana e incantesimi come Forced Fruition o Psychic Corrosion per esaurire le risorse degli avversari guadagnando vantaggio.",
+  "de": "Dieses Deck basiert auf der Mechanik, alle Spieler viele Karten ziehen zu lassen, um diesen Kartenzug dann mit Direktschaden-Effekten wie Nekusar, Underworld Dreams oder Fate Unraveler zu bestrafen. Es nutzt Wheel-Effekte wie Windfall und Wheel of Misfortune und kombiniert Kontrolle, Mana-Beschleunigung und Verzauberungen wie Forced Fruition oder Psychic Corrosion, um die Ressourcen der Gegner zu erschöpfen und gleichzeitig Vorteile zu erlangen.",
+  "ja": "このデッキは、すべてのプレイヤーに大量のカードを引かせ、それをNekusar、Underworld Dreams、Fate Unravelerなどの直接ダメージ効果で罰することに基づいています。WindfallやWheel of Misfortuneなどのホイール効果を使用し、強制的にカードを引かせた後に強力なダメージを与えます。さらに、Forced FruitionやPsychic Corrosionのようなエンチャントで相手のリソースを枯渇させ、優位に立ちます。",
+  "pt": "Este deck é baseado na mecânica de fazer todos os jogadores comprarem muitas cartas, e depois punir essas compras com efeitos de dano direto como Nekusar, Underworld Dreams ou Fate Unraveler. Usa efeitos de roda (Wheel effects) como Windfall e Wheel of Misfortune, e combina cartas de controle, aceleração de mana e encantamentos como Forced Fruition ou Psychic Corrosion para esgotar os recursos do oponente enquanto gera vantagem.",
+  "fr": "Ce deck repose sur la mécanique de faire piocher beaucoup de cartes à tous les joueurs, puis de punir cette pioche avec des effets de dégâts directs comme Nekusar, Underworld Dreams ou Fate Unraveler. Il utilise des effets de roue (Wheel effects) comme Windfall et Wheel of Misfortune, et combine le contrôle, l'accélération de mana et des enchantements comme Forced Fruition ou Psychic Corrosion pour épuiser les ressources de l'adversaire tout en prenant l'avantage."
+},
   "cards": [
     { "name": "Archmage Emeritus", "count": 1 },
     { "name": "Chasm Skulker", "count": 1 },
@@ -2540,7 +2740,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo midrange centrado en zombis, cementerio y valor por repetición de criaturas. Teval ayuda a balancear el tempo entre sacos de ventaja como Sidisi, The Scarab God o Muldrotha, y finishers como Craterhoof. Utiliza múltiples formas de recurrencia y motores de value como Life from the Loam, Wilhelt o River Kelpie, con control puntual y ramp eficiente. Campo de batalla, cementerio y tierra están todos activos.",
+"deckDescription": {
+  "en": "A midrange deck focused on zombies, graveyard recursion, and repeatable value from creatures. Teval helps balance tempo between value engines like Sidisi, The Scarab God, or Muldrotha, and finishers like Craterhoof. It leverages multiple forms of recursion and value engines such as Life from the Loam, Wilhelt, or River Kelpie, with spot removal and efficient ramp. Battlefield, graveyard, and lands are all active zones.",
+  "es": "Un mazo midrange centrado en zombis, cementerio y valor por repetición de criaturas. Teval ayuda a balancear el tempo entre sacos de ventaja como Sidisi, The Scarab God o Muldrotha, y finishers como Craterhoof. Utiliza múltiples formas de recurrencia y motores de value como Life from the Loam, Wilhelt o River Kelpie, con control puntual y ramp eficiente. Campo de batalla, cementerio y tierra están todos activos.",
+  "it": "Un mazzo midrange incentrato su zombie, cimitero e valore ricorrente dalle creature. Teval aiuta a bilanciare il tempo tra motori di vantaggio come Sidisi, The Scarab God o Muldrotha, e chiusure come Craterhoof. Sfrutta molteplici forme di ricorsione e motori di valore come Life from the Loam, Wilhelt o River Kelpie, con rimozioni mirate e ramp efficiente. Campo di battaglia, cimitero e terre sono tutte zone attive.",
+  "de": "Ein Midrange-Deck, das sich auf Zombies, Friedhofsinteraktion und wiederholbaren Kreaturen-Value konzentriert. Teval hilft, das Tempo zwischen Value-Engines wie Sidisi, The Scarab God oder Muldrotha und Finishern wie Craterhoof auszubalancieren. Es nutzt mehrere Formen der Wiederverwertung und Value-Engines wie Life from the Loam, Wilhelt oder River Kelpie, mit gezielter Entfernung und effizientem Ramp. Spielfeld, Friedhof und Länder sind alle aktive Zonen.",
+  "ja": "ゾンビ、墓地、そして繰り返し得られるクリーチャーの価値に焦点を当てたミッドレンジデッキ。Teval は、Sidisi、The Scarab God、Muldrotha などのアドバンテージエンジンと Craterhoof のようなフィニッシャーの間でテンポをバランス良く調整します。Life from the Loam、Wilhelt、River Kelpie などのリカーシブなエンジンを使い、単体除去と効率的なランプを組み合わせます。戦場、墓地、土地すべてがアクティブゾーンとなります。",
+  "pt": "Um deck midrange focado em zumbis, cemitério e geração de valor recorrente com criaturas. Teval ajuda a equilibrar o tempo entre motores de valor como Sidisi, The Scarab God ou Muldrotha, e finalizadores como Craterhoof. Utiliza várias formas de recorrência e motores como Life from the Loam, Wilhelt ou River Kelpie, com remoções pontuais e aceleração de mana eficiente. Campo de batalha, cemitério e terrenos estão sempre ativos.",
+  "fr": "Un deck midrange centré sur les zombies, le cimetière et la génération de valeur répétée via les créatures. Teval aide à équilibrer le tempo entre moteurs de valeur comme Sidisi, The Scarab God ou Muldrotha, et finisseurs comme Craterhoof. Il exploite de nombreuses formes de récurrence et moteurs de value comme Life from the Loam, Wilhelt ou River Kelpie, avec du contrôle ciblé et du ramp efficace. Champ de bataille, cimetière et terrains sont tous des zones actives."
+},
   "cards": [
     { "name": "Breeding Pool", "count": 1 },
     { "name": "Bojuka Bog", "count": 1 },
@@ -2646,7 +2854,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo esper de artefactos centrado en la generación masiva de tokens constructo y sinergias con artefactos. Usa múltiples Urzas, Sai y Tezzeret como value engines, con combos posibles vía Time Sieve, Cyberdrive Awakener y Mechanized Production. Defensa robusta con indestructibilidad, evasión y contrahechizos. Potencial de victoria por volado masivo o puro value de artefactos pesados como Blightsteel o Cybermen.",
+"deckDescription": {
+  "en": "An Esper artifact deck focused on massive Construct token generation and artifact synergies. It features multiple Urzas, Sai, and Tezzeret as value engines, with combo potential via Time Sieve, Cyberdrive Awakener, and Mechanized Production. Strong defense through indestructibility, evasion, and counterspells. Win conditions include massive flying assaults or sheer artifact value from heavy hitters like Blightsteel or Cybermen.",
+  "es": "Un mazo esper de artefactos centrado en la generación masiva de tokens constructo y sinergias con artefactos. Usa múltiples Urzas, Sai y Tezzeret como value engines, con combos posibles vía Time Sieve, Cyberdrive Awakener y Mechanized Production. Defensa robusta con indestructibilidad, evasión y contrahechizos. Potencial de victoria por volado masivo o puro value de artefactos pesados como Blightsteel o Cybermen.",
+  "it": "Un mazzo artefatto Esper focalizzato sulla generazione massiccia di pedine Costrutto e sinergie con artefatti. Include vari Urza, Sai e Tezzeret come motori di vantaggio, con potenziale combo grazie a Time Sieve, Cyberdrive Awakener e Mechanized Production. Difesa solida con indistruttibilità, evasione e contromagie. Condizioni di vittoria tramite attacchi volanti massicci o puro valore da artefatti pesanti come Blightsteel o Cybermen.",
+  "de": "Ein Esper-Artefaktdeck mit Fokus auf massiver Konstrukt-Token-Erzeugung und Artefaktsynergien. Es verwendet mehrere Urzas, Sai und Tezzeret als Value-Engines, mit Kombopotenzial durch Time Sieve, Cyberdrive Awakener und Mechanized Production. Robuste Verteidigung dank Unzerstörbarkeit, Ausweichen und Gegenzaubern. Siegbedingungen durch massiven Luftangriff oder reinen Artefakt-Value mit Schwergewichten wie Blightsteel oder Cybermen.",
+  "ja": "アーティファクトのシナジーと大量の構築物トークン生成に焦点を当てたエスパーデッキ。Urza、Sai、Tezzeret を複数搭載し、Time Sieve、Cyberdrive Awakener、Mechanized Production によるコンボも可能。破壊不能、回避能力、打ち消し呪文による堅固な防御。Blightsteel や Cybermen のような重量級アーティファクトによる大打撃または飛行による勝利が狙える。",
+  "pt": "Um deck Esper de artefatos focado na geração massiva de fichas de Constructo e sinergias com artefatos. Conta com múltiplos Urzas, Sai e Tezzeret como motores de valor, com combos possíveis via Time Sieve, Cyberdrive Awakener e Mechanized Production. Defesa robusta com indestrutibilidade, evasão e anulações. Condições de vitória incluem ataques aéreos massivos ou puro valor com artefatos pesados como Blightsteel ou Cybermen.",
+  "fr": "Un deck artefact Esper axé sur la génération massive de jetons Construct et les synergies d'artefacts. Il utilise plusieurs Urza, Sai et Tezzeret comme moteurs de value, avec un potentiel de combo via Time Sieve, Cyberdrive Awakener et Mechanized Production. Défense solide grâce à l'indestructibilité, l'évasion et les contresorts. Conditions de victoire par envol massif ou pur value grâce à des artefacts lourds comme Blightsteel ou Cybermen."
+},
   "cards": [
     { "name": "Akroma's Will", "count": 1 },
     { "name": "Darksteel Forge", "count": 1 },
@@ -2750,7 +2966,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo cEDH Mardu centrado en combos explosivos con Krark, Tymna y hechizos duplicados. Alta eficiencia de maná, ramp de 0-1 coste, wincons vía Underworld Breach + Wheel + Krark. Protección con Silence, Orim's Chant y acceso a tutorías rápidas. Puede cerrar partidas en turno 2-3 con consistencia.",
+"deckDescription": {
+  "en": "A cEDH Mardu deck focused on explosive combos with Krark, Tymna, and duplicated spells. High mana efficiency, 0-1 cost ramp, win conditions via Underworld Breach + Wheel + Krark. Strong protection with Silence, Orim's Chant, and fast access to tutors. Capable of consistently closing games by turn 2-3.",
+  "es": "Un mazo cEDH Mardu centrado en combos explosivos con Krark, Tymna y hechizos duplicados. Alta eficiencia de maná, ramp de 0-1 coste, wincons vía Underworld Breach + Wheel + Krark. Protección con Silence, Orim's Chant y acceso a tutorías rápidas. Puede cerrar partidas en turno 2-3 con consistencia.",
+  "it": "Un mazzo cEDH Mardu focalizzato su combo esplosivi con Krark, Tymna e magie duplicate. Alta efficienza di mana, ramp a costo 0-1, condizioni di vittoria tramite Underworld Breach + Wheel + Krark. Protezione con Silence, Orim's Chant e accesso rapido a tutor. Può chiudere le partite già al turno 2-3 con costanza.",
+  "de": "Ein cEDH-Mardu-Deck mit Fokus auf explosive Kombos mit Krark, Tymna und duplizierten Zaubern. Hohe Mana-Effizienz, Ramp für 0-1 Mana, Win-Cons über Underworld Breach + Wheel + Krark. Starke Schutzmechanismen mit Silence, Orim's Chant und schnellem Zugriff auf Tutor-Effekte. Kann konstant in Zug 2-3 gewinnen.",
+  "ja": "Krark、Tymna、複製された呪文による爆発的なコンボに特化したcEDHのマルドゥデッキ。高いマナ効率、0〜1マナのランプ、Underworld Breach + Wheel + Krark による勝利コンボ。Silence、Orim's Chant による妨害と迅速なサーチ手段を完備。2〜3ターンで安定して勝利可能。",
+  "pt": "Um deck cEDH Mardu focado em combos explosivos com Krark, Tymna e mágicas duplicadas. Alta eficiência de mana, ramp de custo 0-1, condições de vitória com Underworld Breach + Wheel + Krark. Proteção com Silence, Orim's Chant e acesso rápido a tutores. Capaz de vencer consistentemente no turno 2-3.",
+  "fr": "Un deck cEDH Mardu axé sur des combos explosifs avec Krark, Tymna et des sorts dupliqués. Grande efficacité de mana, ramp à coût 0-1, conditions de victoire via Underworld Breach + Wheel + Krark. Forte protection avec Silence, Orim's Chant et accès rapide aux tuteurs. Peut conclure les parties au tour 2-3 de façon régulière."
+},
   "cards": [
     { "name": "Ashling, Flame Dancer", "count": 1 },
     { "name": "Birgi, God of Storytelling", "count": 1 },
@@ -2863,7 +3087,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Mazo Orzhov centrado en Squall como portador de espadas icónicas. Se apoya en equipos poderosos, motores de sacrificio y reanimación para controlar la mesa, generar valor y pegar con fuerza. Incluye múltiples 'Sword of X and Y' y sinergias con criaturas legendarias.",
+"deckDescription": {
+  "en": "An Orzhov deck focused on Squall as a wielder of iconic swords. It relies on powerful equipment, sacrifice engines, and reanimation to control the board, generate value, and strike hard. Includes multiple 'Sword of X and Y' cards and synergies with legendary creatures.",
+  "es": "Mazo Orzhov centrado en Squall como portador de espadas icónicas. Se apoya en equipos poderosos, motores de sacrificio y reanimación para controlar la mesa, generar valor y pegar con fuerza. Incluye múltiples 'Sword of X and Y' y sinergias con criaturas legendarias.",
+  "it": "Un mazzo Orzhov incentrato su Squall come portatore di spade iconiche. Si basa su equipaggiamenti potenti, motori di sacrificio e rianimazione per controllare il campo, generare vantaggio e colpire duramente. Include diverse 'Sword of X and Y' e sinergie con creature leggendarie.",
+  "de": "Ein Orzhov-Deck, das sich auf Squall als Träger ikonischer Schwerter konzentriert. Es nutzt mächtige Ausrüstungen, Opfer-Engines und Wiederbelebung, um das Spielfeld zu kontrollieren, Wert zu generieren und hart zuzuschlagen. Enthält mehrere 'Sword of X and Y'-Karten und Synergien mit legendären Kreaturen.",
+  "ja": "Squallを象徴的な剣の使い手として中心に据えたオルゾフのデッキ。強力な装備品、生け贄ギミック、リアニメイトによって盤面を制圧し、アドバンテージを稼ぎ、大ダメージを狙う。複数の『Sword of X and Y』と伝説のクリーチャーとのシナジーを活かす構成。",
+  "pt": "Um deck Orzhov focado em Squall como portador de espadas icônicas. Apoia-se em equipamentos poderosos, mecanismos de sacrifício e reanimação para controlar o campo, gerar valor e causar grande impacto. Inclui várias cartas 'Sword of X and Y' e sinergias com criaturas lendárias.",
+  "fr": "Un deck Orzhov centré sur Squall en tant que porteur d’épées emblématiques. Il repose sur des équipements puissants, des moteurs de sacrifice et de réanimation pour contrôler le champ de bataille, générer de la valeur et frapper fort. Comprend plusieurs 'Sword of X and Y' et des synergies avec des créatures légendaires."
+},
   "cards": [
     { "name": "Chthonian Nightmare", "count": 1 },
     { "name": "Glasswing Grace // Age-Graced Chapel", "count": 1 },
@@ -2973,7 +3205,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Mazo Jund centrado en contadores +1/+1 y sinergias explosivas con efectos como Doubling Season y All Will Be One. Usa criaturas de bajo coste y generadores de maná para escalar rápidamente, con planeswalkers y criaturas letales como Skithiryx o Heartless Hidetsugu para cerrar la partida.",
+"deckDescription": {
+  "en": "A Jund deck focused on +1/+1 counters and explosive synergies with effects like Doubling Season and All Will Be One. It uses low-cost creatures and mana generators to scale quickly, with planeswalkers and lethal threats like Skithiryx or Heartless Hidetsugu to close out the game.",
+  "es": "Mazo Jund centrado en contadores +1/+1 y sinergias explosivas con efectos como Doubling Season y All Will Be One. Usa criaturas de bajo coste y generadores de maná para escalar rápidamente, con planeswalkers y criaturas letales como Skithiryx o Heartless Hidetsugu para cerrar la partida.",
+  "it": "Un mazzo Jund incentrato su segnalini +1/+1 e sinergie esplosive con effetti come Doubling Season e All Will Be One. Utilizza creature a basso costo e generatori di mana per crescere rapidamente, con planeswalker e minacce letali come Skithiryx o Heartless Hidetsugu per chiudere la partita.",
+  "de": "Ein Jund-Deck, das sich auf +1/+1-Marken und explosive Synergien mit Effekten wie Doubling Season und All Will Be One konzentriert. Es nutzt günstige Kreaturen und Manaquellen, um schnell zu skalieren, mit Planeswalkern und tödlichen Bedrohungen wie Skithiryx oder Heartless Hidetsugu zum Spielabschluss.",
+  "ja": "Jundカラーのデッキで、+1/+1カウンターと《倍増の季節》《万物は一つに》のような爆発的なシナジーを中心に構築されている。低コストクリーチャーやマナ生成手段を使って高速展開し、《スキシリクス》や《情け知らずの秀徹》のような致命的なフィニッシャーで勝利を狙う。",
+  "pt": "Um deck Jund focado em marcadores +1/+1 e sinergias explosivas com efeitos como Doubling Season e All Will Be One. Utiliza criaturas de baixo custo e geradores de mana para escalar rapidamente, com planeswalkers e ameaças letais como Skithiryx ou Heartless Hidetsugu para finalizar o jogo.",
+  "fr": "Un deck Jund axé sur les marqueurs +1/+1 et les synergies explosives avec des effets comme Doubling Season et All Will Be One. Il utilise des créatures à faible coût et des générateurs de mana pour monter rapidement en puissance, avec des planeswalkers et des menaces létales comme Skithiryx ou Heartless Hidetsugu pour achever la partie."
+},
   "cards": [
     { "name": "Obosh, the Preypiercer", "count": 1 },
     { "name": "Aggravated Assault", "count": 1 },
@@ -3080,7 +3320,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo de valor incremental centrado en ramp, recursion y efectos de niebla. Usa a Omnath para generar ventaja constante y remates como Borborygmos Enraged o Enter the Infinite. Controla el ritmo con Settle the Wreckage, Farewell y Spore Frog, mientras cicla y reanima con múltiples efectos de graveyard.",
+"deckDescription": {
+  "en": "A deck focused on incremental value through ramp, recursion, and fog effects. It uses Omnath to generate steady advantage and finishers like Borborygmos Enraged or Enter the Infinite. It controls the pace with Settle the Wreckage, Farewell, and Spore Frog, while cycling and reanimating with various graveyard effects.",
+  "es": "Un mazo de valor incremental centrado en ramp, recursion y efectos de niebla. Usa a Omnath para generar ventaja constante y remates como Borborygmos Enraged o Enter the Infinite. Controla el ritmo con Settle the Wreckage, Farewell y Spore Frog, mientras cicla y reanima con múltiples efectos de graveyard.",
+  "it": "Un mazzo incentrato sul valore incrementale grazie a ramp, ricorsione ed effetti di nebbia. Usa Omnath per generare vantaggio costante e finisher come Borborygmos Enraged o Enter the Infinite. Controlla il ritmo con Settle the Wreckage, Farewell e Spore Frog, mentre cicla e rianima con vari effetti cimiteriali.",
+  "de": "Ein Deck, das auf schrittweisen Kartenvorteil durch Ramp, Wiederbelebung und Nebeleffekte setzt. Omnath sorgt für konstanten Vorteil, mit Finishern wie Borborygmos Enraged oder Enter the Infinite. Es kontrolliert das Spieltempo mit Settle the Wreckage, Farewell und Spore Frog, während es durch Friedhofseffekte zyklisch Karten nutzt und reanimiert.",
+  "ja": "ランプ、リアニメイト、霧効果を駆使して漸進的なアドバンテージを得ることに特化したデッキ。オムナスで継続的なリソースを確保し、《激憤のボロボリグモス》や《無限への突入》などでフィニッシュ。Spore Frog や Farewell、Settle the Wreckage などでテンポをコントロールしつつ、墓地利用で再展開を狙う。",
+  "pt": "Um deck focado em valor incremental através de ramp, recursão e efeitos de neblina. Utiliza Omnath para gerar vantagem constante e finalizadores como Borborygmos Enraged ou Enter the Infinite. Controla o ritmo com Settle the Wreckage, Farewell e Spore Frog, enquanto cicla e reanima com diversos efeitos de cemitério.",
+  "fr": "Un deck axé sur la valeur incrémentale via le ramp, la récursion et les effets de brouillard. Il utilise Omnath pour générer un avantage constant et des finishers comme Borborygmos Enraged ou Enter the Infinite. Il contrôle le rythme avec Settle the Wreckage, Farewell et Spore Frog, tout en recyclant et réanimant via divers effets de cimetière."
+},
   "cards": [
     { "name": "Omniscience", "count": 1 },
     { "name": "Abiding Grace", "count": 1 },
@@ -3183,7 +3431,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo temático de nieve y control, liderado por Jorn, God of Winter. Apuesta por la sinergia entre permanentes nevados, efectos de enderezar, y value recursivo con Muldrotha o Yarok. Usa removal como Dead of Winter, control de mesa con Blood on the Snow y finaliza con Torment of Hailfire o Colossification.",
+"deckDescription": {
+  "en": "A snow-themed control deck led by Jorn, God of Winter. It leverages synergies between snow permanents, untap effects, and recursive value with Muldrotha or Yarok. Uses removal like Dead of Winter, board control with Blood on the Snow, and finishes with Torment of Hailfire or Colossification.",
+  "es": "Un mazo temático de nieve y control, liderado por Jorn, God of Winter. Apuesta por la sinergia entre permanentes nevados, efectos de enderezar, y value recursivo con Muldrotha o Yarok. Usa removal como Dead of Winter, control de mesa con Blood on the Snow y finaliza con Torment of Hailfire o Colossification.",
+  "it": "Un mazzo a tema neve e controllo guidato da Jorn, God of Winter. Sfrutta sinergie tra permanenti innevati, effetti di stappo e valore ricorsivo con Muldrotha o Yarok. Usa rimozioni come Dead of Winter, controllo della board con Blood on the Snow e chiude con Torment of Hailfire o Colossification.",
+  "de": "Ein Schnee- und Kontroll-Deck, angeführt von Jorn, God of Winter. Setzt auf Synergien mit Schnee-Permanents, Enttapp-Effekte und wiederkehrenden Kartenvorteil durch Muldrotha oder Yarok. Nutzt Removal wie Dead of Winter, Boardkontrolle mit Blood on the Snow und finisht mit Torment of Hailfire oder Colossification.",
+  "ja": "Jorn, God of Winter を指揮官としたスノーとコントロールをテーマにしたデッキ。氷雪パーマネントのシナジー、アンタップ効果、そして Muldrotha や Yarok による再利用型のバリュー戦略を活用。《Dead of Winter》での除去、《Blood on the Snow》による全体除去、そして《Torment of Hailfire》や《Colossification》でゲームを決める。",
+  "pt": "Um deck de controle com tema de neve liderado por Jorn, God of Winter. Aproveita sinergias entre permanentes nevados, efeitos de desvirar e valor recursivo com Muldrotha ou Yarok. Usa remoções como Dead of Winter, controle de mesa com Blood on the Snow e finaliza com Torment of Hailfire ou Colossification.",
+  "fr": "Un deck de contrôle à thème neige dirigé par Jorn, God of Winter. Il exploite les synergies entre permanents neigeux, effets de dégagement et valeur récursive avec Muldrotha ou Yarok. Utilise des removals comme Dead of Winter, contrôle du champ de bataille avec Blood on the Snow, et termine avec Torment of Hailfire ou Colossification."
+},
   "cards": [
     { "name": "Moritte of the Frost", "count": 1 },
     { "name": "Hailstorm Valkyrie", "count": 1 },
@@ -3270,7 +3526,15 @@
       "youtube": null
     }
   ],
-  "deckDescription": "Un mazo competitivo centrado en estrategias de tierras y value engine con Lord Windgrace. Incluye combos de landfall, loops de sacrificio y control del campo, con cartas de alto poder como The Gitrog Monster, Ob Nixilis, Titania y un potente paquete de ramp y tutoría.",
+"deckDescription": {
+  "en": "A competitive deck focused on land-based strategies and value engines with Lord Windgrace. It features landfall combos, sacrifice loops, and board control, with powerhouse cards like The Gitrog Monster, Ob Nixilis, Titania, and a strong ramp and tutoring package.",
+  "es": "Un mazo competitivo centrado en estrategias de tierras y value engine con Lord Windgrace. Incluye combos de landfall, loops de sacrificio y control del campo, con cartas de alto poder como The Gitrog Monster, Ob Nixilis, Titania y un potente paquete de ramp y tutoría.",
+  "it": "Un mazzo competitivo incentrato su strategie basate sulle terre e motori di vantaggio con Lord Windgrace. Include combo di landfall, loop di sacrificio e controllo del campo con carte potenti come The Gitrog Monster, Ob Nixilis, Titania e un forte pacchetto di ramp e tutor.",
+  "de": "Ein kompetitives Deck, das sich auf Land-Strategien und Value-Engines mit Lord Windgrace konzentriert. Enthält Landfall-Kombos, Opfer-Schleifen und Board-Kontrolle mit starken Karten wie The Gitrog Monster, Ob Nixilis, Titania und einem starken Ramp- und Tutor-Paket.",
+  "ja": "Lord Windgrace を中心とした土地戦略とバリューエンジンに特化した競技向けデッキ。Landfall コンボ、サクリファイスループ、盤面コントロールを特徴とし、The Gitrog Monster、Ob Nixilis、Titania などの強力なカードと優れたランプ・チューターのパッケージを備える。",
+  "pt": "Um deck competitivo focado em estratégias com terrenos e mecanismos de valor com Lord Windgrace. Inclui combos de landfall, loops de sacrifício e controle de campo, com cartas poderosas como The Gitrog Monster, Ob Nixilis, Titania e um forte pacote de ramp e tutores.",
+  "fr": "Un deck compétitif centré sur les stratégies basées sur les terrains et les moteurs de valeur avec Lord Windgrace. Il inclut des combos de landfall, des boucles de sacrifice et du contrôle de plateau, avec des cartes puissantes comme The Gitrog Monster, Ob Nixilis, Titania, et un solide ensemble de ramp et de tuteurs."
+},
   "cards": [
     { "name": "Elvish Reclaimer", "count": 1 },
     { "name": "Ignoble Hierarch", "count": 1 },
