@@ -192,7 +192,8 @@
 },
 {
   "name": "A Tempting Breakfast",
-  "commander": ["Frodo, Adventurous Hobbit", "Sam, Loyal Attendant"],
+  "commander": "Frodo, Adventurous Hobbit",
+  "partner": "Sam, Loyal Attendant",
   "influencerName": "Mike",
   "socialNetworks": [
     { "instagram": "@tranquility_mtg", "tiktok": null, "youtube": null }
