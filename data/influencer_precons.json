@@ -104,7 +104,7 @@
   "de": "Tempo, Chaos und Dominanz – dieses Rakdos-Kombo-Deck kanalisiert den Geist von Shadow the Hedgehog, um Gegner mit explosivem Mana, Stapelmanipulation und höllischen Schleifen zu überrennen. Wenn du nicht schnell gewinnst, gewinnst du gar nicht.",
   "ja": "スピード、混沌、そして支配――このラクドスのコンボデッキは、シャドウ・ザ・ヘッジホッグの精神を宿し、爆発的なマナ、スタック操作、地獄のループで対戦相手を圧倒する。素早く勝てないなら、勝つことはできない。",
   "pt": "Velocidade, caos e dominação — este deck combo Rakdos canaliza o espírito de Shadow the Hedgehog para atropelar os oponentes com mana explosiva, manipulação da pilha e loops infernais. Se você não está vencendo rápido, você não está vencendo.",
-  "fr": "Vitesse, chaos et domination — ce deck combo Rakdos canalise l'esprit de Shadow the Hedgehog pour foudroyer les adversaires avec du mana explosif, de la manipulation de pile et des boucles infernales. Si tu ne gagnes pas vite, tu ne gagnes pas du tout.",
+  "fr": "Vitesse, chaos et domination — ce deck combo Rakdos canalise l'esprit de Shadow the Hedgehog pour foudroyer les adversaires avec du mana explosif, de la manipulation de pile et des boucles infernales. Si tu ne gagnes pas vite, tu ne gagnes pas du tout."
 },
   "cards": [
     { "name": "Birgi, God of Storytelling", "count": 1 },
@@ -2194,7 +2194,7 @@
       "youtube": null
     }
   ],
-  "deckDescription": {
+"deckDescription": {
   "en": "A Bant deck focused on instants, high-cost spells, and blink/value effects. It uses ETB creatures with synergies in cascade, scry, and draw to maintain spell flow. Includes battles, sagas, and a touch of spellslinger with control.",
   "es": "Un mazo Bant con fuerte enfoque en instantáneos, hechizos costosos y efectos de blink y value. Usa criaturas con efectos ETB y sinergias de cascada, adivinación y robo para mantener el flujo de hechizos. Incorpora batallas, sagas y un toque de spellslinger con control.",
   "it": "Un mazzo Bant incentrato su istantanei, magie costose e effetti di blink e value. Usa creature con effetti ETB e sinergie con cascata, scrutare e pescare per mantenere il flusso di magie. Include battaglie, saghe e un tocco di spellslinger con controllo.",
