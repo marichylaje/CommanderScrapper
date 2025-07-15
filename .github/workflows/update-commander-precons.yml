@@ -27,5 +27,8 @@ jobs:
       - name: Run reducer script
         run: npm run reduce
 
+      - name: Run prices script
+        run: npm run prices
+
       - name: Comprobar si hay cambios + commit to repo
         uses: stefanzweifel/git-auto-commit-action@v6
