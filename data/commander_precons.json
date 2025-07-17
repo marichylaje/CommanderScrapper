@@ -53606,5 +53606,735 @@
         "count": 1
       }
     ]
+  },
+  {
+    "name": "Counter Intelligence",
+    "commander": "Inspirit, Flagship Vessel",
+    "expansion": "Edge of Eternities Commander",
+    "cards": [
+      {
+        "name": "Kilo, Apogee Mind",
+        "count": 1
+      },
+      {
+        "name": "Patrolling Peacemaker",
+        "count": 1
+      },
+      {
+        "name": "Insight Engine",
+        "count": 1
+      },
+      {
+        "name": "Uthros Research Craft",
+        "count": 1
+      },
+      {
+        "name": "Depthshaker Titan",
+        "count": 1
+      },
+      {
+        "name": "Long-Range Sensor",
+        "count": 1
+      },
+      {
+        "name": "Moxite Refinery",
+        "count": 1
+      },
+      {
+        "name": "Solar Array",
+        "count": 1
+      },
+      {
+        "name": "Surge Conductor",
+        "count": 1
+      },
+      {
+        "name": "Glittering Massif",
+        "count": 1
+      },
+      {
+        "name": "Radiant Summit",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Chaos Warp",
+        "count": 1
+      },
+      {
+        "name": "Cloud Key",
+        "count": 1
+      },
+      {
+        "name": "Gavel of the Righteous",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Angel of the Ruins",
+        "count": 1
+      },
+      {
+        "name": "Fumigate",
+        "count": 1
+      },
+      {
+        "name": "Organic Extinction",
+        "count": 1
+      },
+      {
+        "name": "Resourceful Defense",
+        "count": 1
+      },
+      {
+        "name": "Chrome Host Seedshark",
+        "count": 1
+      },
+      {
+        "name": "Cyberdrive Awakener",
+        "count": 1
+      },
+      {
+        "name": "Deepglow Skate",
+        "count": 1
+      },
+      {
+        "name": "Emry, Lurker of the Loch",
+        "count": 1
+      },
+      {
+        "name": "Kappa Cannoneer",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Metamorph",
+        "count": 1
+      },
+      {
+        "name": "Pull from Tomorrow",
+        "count": 1
+      },
+      {
+        "name": "Ripples of Potential",
+        "count": 1
+      },
+      {
+        "name": "Tekuthal, Inquiry Dominus",
+        "count": 1
+      },
+      {
+        "name": "Thought Monitor",
+        "count": 1
+      },
+      {
+        "name": "Universal Surveillance",
+        "count": 1
+      },
+      {
+        "name": "Chain Reaction",
+        "count": 1
+      },
+      {
+        "name": "Alibou, Ancient Witness",
+        "count": 1
+      },
+      {
+        "name": "Jhoira, Weatherlight Captain",
+        "count": 1
+      },
+      {
+        "name": "Wake the Past",
+        "count": 1
+      },
+      {
+        "name": "Astral Cornucopia",
+        "count": 1
+      },
+      {
+        "name": "Crystalline Crawler",
+        "count": 1
+      },
+      {
+        "name": "Darksteel Reactor",
+        "count": 1
+      },
+      {
+        "name": "Empowered Autogenerator",
+        "count": 1
+      },
+      {
+        "name": "Hangarback Walker",
+        "count": 1
+      },
+      {
+        "name": "Lux Artillery",
+        "count": 1
+      },
+      {
+        "name": "Lux Cannon",
+        "count": 1
+      },
+      {
+        "name": "Steel Overseer",
+        "count": 1
+      },
+      {
+        "name": "Threefold Thunderhulk",
+        "count": 1
+      },
+      {
+        "name": "Titan Forge",
+        "count": 1
+      },
+      {
+        "name": "Adarkar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Cascade Bluffs",
+        "count": 1
+      },
+      {
+        "name": "Clifftop Retreat",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Karn's Bastion",
+        "count": 1
+      },
+      {
+        "name": "The Mycosynth Gardens",
+        "count": 1
+      },
+      {
+        "name": "Rugged Prairie",
+        "count": 1
+      },
+      {
+        "name": "Shivan Reef",
+        "count": 1
+      },
+      {
+        "name": "Skycloud Expanse",
+        "count": 1
+      },
+      {
+        "name": "Spire of Industry",
+        "count": 1
+      },
+      {
+        "name": "Sulfur Falls",
+        "count": 1
+      },
+      {
+        "name": "Temple of Enlightenment",
+        "count": 1
+      },
+      {
+        "name": "Temple of Epiphany",
+        "count": 1
+      },
+      {
+        "name": "Temple of Triumph",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Tezzeret's Gambit",
+        "count": 1
+      },
+      {
+        "name": "Thirst for Knowledge",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Pentad Prism",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dispatch",
+        "count": 1
+      },
+      {
+        "name": "Etherium Sculptor",
+        "count": 1
+      },
+      {
+        "name": "Experimental Augury",
+        "count": 1
+      },
+      {
+        "name": "Thrummingbird",
+        "count": 1
+      },
+      {
+        "name": "Enthusiastic Mechanaut",
+        "count": 1
+      },
+      {
+        "name": "Coretapper",
+        "count": 1
+      },
+      {
+        "name": "Etched Oracle",
+        "count": 1
+      },
+      {
+        "name": "Everflowing Chalice",
+        "count": 1
+      },
+      {
+        "name": "Golem Foundry",
+        "count": 1
+      },
+      {
+        "name": "Mindless Automaton",
+        "count": 1
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "count": 1
+      },
+      {
+        "name": "Ancient Den",
+        "count": 1
+      },
+      {
+        "name": "Buried Ruin",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Great Furnace",
+        "count": 1
+      },
+      {
+        "name": "Lonely Sandbar",
+        "count": 1
+      },
+      {
+        "name": "Mystic Monastery",
+        "count": 1
+      },
+      {
+        "name": "Razortide Bridge",
+        "count": 1
+      },
+      {
+        "name": "Rustvale Bridge",
+        "count": 1
+      },
+      {
+        "name": "Seat of the Synod",
+        "count": 1
+      },
+      {
+        "name": "Secluded Steppe",
+        "count": 1
+      },
+      {
+        "name": "Silverbluff Bridge",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 3
+      },
+      {
+        "name": "Island",
+        "count": 3
+      },
+      {
+        "name": "Mountain",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "name": "World Shaper",
+    "commander": "Hearthhull, the Worldseed",
+    "expansion": "Edge of Eternities Commander",
+    "cards": [
+      {
+        "name": "Szarel, Genesis Shepherd",
+        "count": 1
+      },
+      {
+        "name": "Eumidian Wastewaker",
+        "count": 1
+      },
+      {
+        "name": "Evendo Brushrazer",
+        "count": 1
+      },
+      {
+        "name": "Planetary Annihilation",
+        "count": 1
+      },
+      {
+        "name": "Baloth Prime",
+        "count": 1
+      },
+      {
+        "name": "Exploration Broodship",
+        "count": 1
+      },
+      {
+        "name": "Horizon Explorer",
+        "count": 1
+      },
+      {
+        "name": "Scouring Swarm",
+        "count": 1
+      },
+      {
+        "name": "Eumidian Hatchery",
+        "count": 1
+      },
+      {
+        "name": "Festering Thicket",
+        "count": 1
+      },
+      {
+        "name": "Vernal Fen",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Braids, Arisen Nightmare",
+        "count": 1
+      },
+      {
+        "name": "God-Eternal Bontu",
+        "count": 1
+      },
+      {
+        "name": "Blasphemous Act",
+        "count": 1
+      },
+      {
+        "name": "Hammer of Purphoros",
+        "count": 1
+      },
+      {
+        "name": "Moraug, Fury of Akoum",
+        "count": 1
+      },
+      {
+        "name": "Augur of Autumn",
+        "count": 1
+      },
+      {
+        "name": "Centaur Vinecrasher",
+        "count": 1
+      },
+      {
+        "name": "Formless Genesis",
+        "count": 1
+      },
+      {
+        "name": "Loamcrafter Faun",
+        "count": 1
+      },
+      {
+        "name": "Multani, Yavimaya's Avatar",
+        "count": 1
+      },
+      {
+        "name": "Oracle of Mul Daya",
+        "count": 1
+      },
+      {
+        "name": "Pest Infestation",
+        "count": 1
+      },
+      {
+        "name": "Rampaging Baloths",
+        "count": 1
+      },
+      {
+        "name": "Splendid Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Tireless Tracker",
+        "count": 1
+      },
+      {
+        "name": "Titania, Protector of Argoth",
+        "count": 1
+      },
+      {
+        "name": "World Breaker",
+        "count": 1
+      },
+      {
+        "name": "Escape to the Wilds",
+        "count": 1
+      },
+      {
+        "name": "Gaze of Granite",
+        "count": 1
+      },
+      {
+        "name": "The Gitrog Monster",
+        "count": 1
+      },
+      {
+        "name": "Korvold, Fae-Cursed King",
+        "count": 1
+      },
+      {
+        "name": "Mazirek, Kraul Death Priest",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of Rage",
+        "count": 1
+      },
+      {
+        "name": "Soul of Windgrace",
+        "count": 1
+      },
+      {
+        "name": "Windgrace's Judgment",
+        "count": 1
+      },
+      {
+        "name": "Worldsoul's Rage",
+        "count": 1
+      },
+      {
+        "name": "Canyon Slough",
+        "count": 1
+      },
+      {
+        "name": "Cinder Glade",
+        "count": 1
+      },
+      {
+        "name": "Karplusan Forest",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Sheltered Thicket",
+        "count": 1
+      },
+      {
+        "name": "Smoldering Marsh",
+        "count": 1
+      },
+      {
+        "name": "Sulfurous Springs",
+        "count": 1
+      },
+      {
+        "name": "Twilight Mire",
+        "count": 1
+      },
+      {
+        "name": "Viridescent Bog",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Springbloom Druid",
+        "count": 1
+      },
+      {
+        "name": "Binding the Old Gods",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Mountain Valley",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Infernal Grasp",
+        "count": 1
+      },
+      {
+        "name": "Night's Whisper",
+        "count": 1
+      },
+      {
+        "name": "Sprouting Goblin",
+        "count": 1
+      },
+      {
+        "name": "Aftermath Analyst",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Groundskeeper",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Roiling Regrowth",
+        "count": 1
+      },
+      {
+        "name": "Satyr Wayfinder",
+        "count": 1
+      },
+      {
+        "name": "Skyshroud Claim",
+        "count": 1
+      },
+      {
+        "name": "Tear Asunder",
+        "count": 1
+      },
+      {
+        "name": "Juri, Master of the Revue",
+        "count": 1
+      },
+      {
+        "name": "Mayhem Devil",
+        "count": 1
+      },
+      {
+        "name": "Putrefy",
+        "count": 1
+      },
+      {
+        "name": "Rakdos Charm",
+        "count": 1
+      },
+      {
+        "name": "Uurg, Spawn of Turg",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Cabaretti Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Dakmor Salvage",
+        "count": 1
+      },
+      {
+        "name": "Escape Tunnel",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Maestros Theater",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape",
+        "count": 1
+      },
+      {
+        "name": "Riveteers Overlook",
+        "count": 1
+      },
+      {
+        "name": "Rocky Tar Pit",
+        "count": 1
+      },
+      {
+        "name": "Wastes",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 5
+      },
+      {
+        "name": "Mountain",
+        "count": 3
+      },
+      {
+        "name": "Forest",
+        "count": 8
+      }
+    ]
   }
 ]
