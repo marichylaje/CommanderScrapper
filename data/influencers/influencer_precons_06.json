@@ -1,0 +1,1103 @@
+[
+  {
+    "name": "Omnath Midrange Value",
+    "commander": "Omnath, Locus of Creation",
+    "influencerName": "Alex Kessler",
+    "socialNetworks": [
+      {
+        "instagram": "@kesswylie",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A deck focused on incremental value through ramp, recursion, and fog effects. It uses Omnath to generate steady advantage and finishers like Borborygmos Enraged or Enter the Infinite. It controls the pace with Settle the Wreckage, Farewell, and Spore Frog, while cycling and reanimating with various graveyard effects.",
+      "es": "Un mazo de valor incremental centrado en ramp, recursion y efectos de niebla. Usa a Omnath para generar ventaja constante y remates como Borborygmos Enraged o Enter the Infinite. Controla el ritmo con Settle the Wreckage, Farewell y Spore Frog, mientras cicla y reanima con múltiples efectos de graveyard.",
+      "it": "Un mazzo incentrato sul valore incrementale grazie a ramp, ricorsione ed effetti di nebbia. Usa Omnath per generare vantaggio costante e finisher come Borborygmos Enraged o Enter the Infinite. Controlla il ritmo con Settle the Wreckage, Farewell e Spore Frog, mentre cicla e rianima con vari effetti cimiteriali.",
+      "de": "Ein Deck, das auf schrittweisen Kartenvorteil durch Ramp, Wiederbelebung und Nebeleffekte setzt. Omnath sorgt für konstanten Vorteil, mit Finishern wie Borborygmos Enraged oder Enter the Infinite. Es kontrolliert das Spieltempo mit Settle the Wreckage, Farewell und Spore Frog, während es durch Friedhofseffekte zyklisch Karten nutzt und reanimiert.",
+      "ja": "ランプ、リアニメイト、霧効果を駆使して漸進的なアドバンテージを得ることに特化したデッキ。オムナスで継続的なリソースを確保し、《激憤のボロボリグモス》や《無限への突入》などでフィニッシュ。Spore Frog や Farewell、Settle the Wreckage などでテンポをコントロールしつつ、墓地利用で再展開を狙う。",
+      "pt": "Um deck focado em valor incremental através de ramp, recursão e efeitos de neblina. Utiliza Omnath para gerar vantagem constante e finalizadores como Borborygmos Enraged ou Enter the Infinite. Controla o ritmo com Settle the Wreckage, Farewell e Spore Frog, enquanto cicla e reanima com diversos efeitos de cemitério.",
+      "fr": "Un deck axé sur la valeur incrémentale via le ramp, la récursion et les effets de brouillard. Il utilise Omnath pour générer un avantage constant et des finishers comme Borborygmos Enraged ou Enter the Infinite. Il contrôle le rythme avec Settle the Wreckage, Farewell et Spore Frog, tout en recyclant et réanimant via divers effets de cimetière."
+    },
+    "cards": [
+      {
+        "name": "Omniscience",
+        "count": 1
+      },
+      {
+        "name": "Abiding Grace",
+        "count": 1
+      },
+      {
+        "name": "Valakut Exploration",
+        "count": 1
+      },
+      {
+        "name": "Dictate of Kruphix",
+        "count": 1
+      },
+      {
+        "name": "Ayula's Influence",
+        "count": 1
+      },
+      {
+        "name": "Zendikar Resurgent",
+        "count": 1
+      },
+      {
+        "name": "Seismic Assault",
+        "count": 1
+      },
+      {
+        "name": "Wilderness Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Tamiyo, Field Researcher",
+        "count": 1
+      },
+      {
+        "name": "Tamiyo, Collector of Tales",
+        "count": 1
+      },
+      {
+        "name": "Jace Beleren",
+        "count": 1
+      },
+      {
+        "name": "Teferi, Master of Time",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Haze of Pollen",
+        "count": 1
+      },
+      {
+        "name": "Blue Sun's Zenith",
+        "count": 1
+      },
+      {
+        "name": "Pull from Tomorrow",
+        "count": 1
+      },
+      {
+        "name": "Expansion // Explosion",
+        "count": 1
+      },
+      {
+        "name": "Constant Mists",
+        "count": 1
+      },
+      {
+        "name": "Settle the Wreckage",
+        "count": 1
+      },
+      {
+        "name": "Sphinx's Revelation",
+        "count": 1
+      },
+      {
+        "name": "Valakut Awakening // Valakut Stoneforge",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Obscuring Haze",
+        "count": 1
+      },
+      {
+        "name": "Kodama of the East Tree",
+        "count": 1
+      },
+      {
+        "name": "Kami of False Hope",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Elder",
+        "count": 1
+      },
+      {
+        "name": "Snapcaster Mage",
+        "count": 1
+      },
+      {
+        "name": "Uro, Titan of Nature's Wrath",
+        "count": 1
+      },
+      {
+        "name": "Gisela, Blade of Goldnight",
+        "count": 1
+      },
+      {
+        "name": "Skullwinder",
+        "count": 1
+      },
+      {
+        "name": "Knight of the Reliquary",
+        "count": 1
+      },
+      {
+        "name": "Spore Frog",
+        "count": 1
+      },
+      {
+        "name": "Angel of Serenity",
+        "count": 1
+      },
+      {
+        "name": "Tireless Provisioner",
+        "count": 1
+      },
+      {
+        "name": "Timeless Witness",
+        "count": 1
+      },
+      {
+        "name": "Ramunap Excavator",
+        "count": 1
+      },
+      {
+        "name": "Haze Frog",
+        "count": 1
+      },
+      {
+        "name": "Colossal Skyturtle",
+        "count": 1
+      },
+      {
+        "name": "Temur Sabertooth",
+        "count": 1
+      },
+      {
+        "name": "Peacekeeper",
+        "count": 1
+      },
+      {
+        "name": "Eternal Witness",
+        "count": 1
+      },
+      {
+        "name": "Lier, Disciple of the Drowned",
+        "count": 1
+      },
+      {
+        "name": "Pramikon, Sky Rampart",
+        "count": 1
+      },
+      {
+        "name": "Dryad of the Ilysian Grove",
+        "count": 1
+      },
+      {
+        "name": "Borborygmos Enraged",
+        "count": 1
+      },
+      {
+        "name": "Kodama's Reach",
+        "count": 1
+      },
+      {
+        "name": "Farewell",
+        "count": 1
+      },
+      {
+        "name": "All Is Dust",
+        "count": 1
+      },
+      {
+        "name": "Jeska's Will",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Life from the Loam",
+        "count": 1
+      },
+      {
+        "name": "Collective Voyage",
+        "count": 1
+      },
+      {
+        "name": "Enter the Infinite",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Echo of Eons",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Nylea's Intervention",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Animist's Awakening",
+        "count": 1
+      },
+      {
+        "name": "Day's Undoing",
+        "count": 1
+      },
+      {
+        "name": "Kessig Wolf Run",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Tranquil Thicket",
+        "count": 1
+      },
+      {
+        "name": "Gruul Turf",
+        "count": 1
+      },
+      {
+        "name": "Stomping Ground",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 5
+      },
+      {
+        "name": "Plains",
+        "count": 3
+      },
+      {
+        "name": "Mountain",
+        "count": 3
+      },
+      {
+        "name": "Island",
+        "count": 4
+      },
+      {
+        "name": "Prismatic Vista",
+        "count": 1
+      },
+      {
+        "name": "Alchemist's Refuge",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Sheltered Thicket",
+        "count": 1
+      },
+      {
+        "name": "Reflecting Pool",
+        "count": 1
+      },
+      {
+        "name": "Temple Garden",
+        "count": 1
+      },
+      {
+        "name": "Forbidden Orchard",
+        "count": 1
+      },
+      {
+        "name": "Izzet Boilerworks",
+        "count": 1
+      },
+      {
+        "name": "Spara's Headquarters",
+        "count": 1
+      },
+      {
+        "name": "Drownyard Temple",
+        "count": 1
+      },
+      {
+        "name": "Gemstone Mine",
+        "count": 1
+      },
+      {
+        "name": "Selesnya Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Field of the Dead",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Winter's Coming",
+    "commander": "Jorn, God of Winter",
+    "influencerName": "Mark",
+    "socialNetworks": [
+      {
+        "instagram": "@xnicolbolasx",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A snow-themed control deck led by Jorn, God of Winter. It leverages synergies between snow permanents, untap effects, and recursive value with Muldrotha or Yarok. Uses removal like Dead of Winter, board control with Blood on the Snow, and finishes with Torment of Hailfire or Colossification.",
+      "es": "Un mazo temático de nieve y control, liderado por Jorn, God of Winter. Apuesta por la sinergia entre permanentes nevados, efectos de enderezar, y value recursivo con Muldrotha o Yarok. Usa removal como Dead of Winter, control de mesa con Blood on the Snow y finaliza con Torment of Hailfire o Colossification.",
+      "it": "Un mazzo a tema neve e controllo guidato da Jorn, God of Winter. Sfrutta sinergie tra permanenti innevati, effetti di stappo e valore ricorsivo con Muldrotha o Yarok. Usa rimozioni come Dead of Winter, controllo della board con Blood on the Snow e chiude con Torment of Hailfire o Colossification.",
+      "de": "Ein Schnee- und Kontroll-Deck, angeführt von Jorn, God of Winter. Setzt auf Synergien mit Schnee-Permanents, Enttapp-Effekte und wiederkehrenden Kartenvorteil durch Muldrotha oder Yarok. Nutzt Removal wie Dead of Winter, Boardkontrolle mit Blood on the Snow und finisht mit Torment of Hailfire oder Colossification.",
+      "ja": "Jorn, God of Winter を指揮官としたスノーとコントロールをテーマにしたデッキ。氷雪パーマネントのシナジー、アンタップ効果、そして Muldrotha や Yarok による再利用型のバリュー戦略を活用。《Dead of Winter》での除去、《Blood on the Snow》による全体除去、そして《Torment of Hailfire》や《Colossification》でゲームを決める。",
+      "pt": "Um deck de controle com tema de neve liderado por Jorn, God of Winter. Aproveita sinergias entre permanentes nevados, efeitos de desvirar e valor recursivo com Muldrotha ou Yarok. Usa remoções como Dead of Winter, controle de mesa com Blood on the Snow e finaliza com Torment of Hailfire ou Colossification.",
+      "fr": "Un deck de contrôle à thème neige dirigé par Jorn, God of Winter. Il exploite les synergies entre permanents neigeux, effets de dégagement et valeur récursive avec Muldrotha ou Yarok. Utilise des removals comme Dead of Winter, contrôle du champ de bataille avec Blood on the Snow, et termine avec Torment of Hailfire ou Colossification."
+    },
+    "cards": [
+      {
+        "name": "Moritte of the Frost",
+        "count": 1
+      },
+      {
+        "name": "Hailstorm Valkyrie",
+        "count": 1
+      },
+      {
+        "name": "Abominable Treefolk",
+        "count": 1
+      },
+      {
+        "name": "Narfi, Betrayer King",
+        "count": 1
+      },
+      {
+        "name": "Boreal Druid",
+        "count": 1
+      },
+      {
+        "name": "Draugr Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Avalanche Caller",
+        "count": 1
+      },
+      {
+        "name": "Muldrotha, the Gravetide",
+        "count": 1
+      },
+      {
+        "name": "Rimewind Taskmage",
+        "count": 1
+      },
+      {
+        "name": "Ohran Frostfang",
+        "count": 1
+      },
+      {
+        "name": "Ascendant Spirit",
+        "count": 1
+      },
+      {
+        "name": "Icebreaker Kraken",
+        "count": 1
+      },
+      {
+        "name": "Yarok, the Desecrated",
+        "count": 1
+      },
+      {
+        "name": "Heidar, Rimewind Master",
+        "count": 1
+      },
+      {
+        "name": "Vampire Hexmage",
+        "count": 1
+      },
+      {
+        "name": "Seedborn Muse",
+        "count": 1
+      },
+      {
+        "name": "Baleful Strix",
+        "count": 1
+      },
+      {
+        "name": "Ohran Viper",
+        "count": 1
+      },
+      {
+        "name": "Ice-Fang Coatl",
+        "count": 1
+      },
+      {
+        "name": "Rimefeather Owl",
+        "count": 1
+      },
+      {
+        "name": "Blizzard Specter",
+        "count": 1
+      },
+      {
+        "name": "Frost Augur",
+        "count": 1
+      },
+      {
+        "name": "Sculptor of Winter",
+        "count": 1
+      },
+      {
+        "name": "Kruphix, God of Horizons",
+        "count": 1
+      },
+      {
+        "name": "Glacial Revelation",
+        "count": 1
+      },
+      {
+        "name": "Torment of Hailfire",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Marit Lage's Slumber",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Sunstone",
+        "count": 1
+      },
+      {
+        "name": "Glittering Frost",
+        "count": 1
+      },
+      {
+        "name": "Mishra's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Fractal Harness",
+        "count": 1
+      },
+      {
+        "name": "Arcum's Astrolabe",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Dead of Winter",
+        "count": 1
+      },
+      {
+        "name": "Propaganda",
+        "count": 1
+      },
+      {
+        "name": "Blessing of Frost",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Villainous Wealth",
+        "count": 1
+      },
+      {
+        "name": "Blood on the Snow",
+        "count": 1
+      },
+      {
+        "name": "Mass Manipulation",
+        "count": 1
+      },
+      {
+        "name": "Colossification",
+        "count": 1
+      },
+      {
+        "name": "Circuitous Route",
+        "count": 1
+      },
+      {
+        "name": "Counterspell",
+        "count": 1
+      },
+      {
+        "name": "Overgrowth",
+        "count": 1
+      },
+      {
+        "name": "Crucible of Worlds",
+        "count": 1
+      },
+      {
+        "name": "Graven Lore",
+        "count": 1
+      },
+      {
+        "name": "Replicating Ring",
+        "count": 1
+      },
+      {
+        "name": "Sol Talisman",
+        "count": 1
+      },
+      {
+        "name": "Coldsteel Heart",
+        "count": 1
+      },
+      {
+        "name": "Rime Transfusion",
+        "count": 1
+      },
+      {
+        "name": "Into the North",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Horizon Stone",
+        "count": 1
+      },
+      {
+        "name": "Icebind Pillar",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Mythos of Brokkos",
+        "count": 1
+      },
+      {
+        "name": "Gelatinous Genesis",
+        "count": 1
+      },
+      {
+        "name": "Snow-Covered Swamp",
+        "count": 10
+      },
+      {
+        "name": "Snow-Covered Forest",
+        "count": 10
+      },
+      {
+        "name": "Snow-Covered Island",
+        "count": 10
+      },
+      {
+        "name": "Dark Depths",
+        "count": 1
+      },
+      {
+        "name": "Scrying Sheets",
+        "count": 1
+      },
+      {
+        "name": "Zagoth Triome",
+        "count": 1
+      },
+      {
+        "name": "Thespian's Stage",
+        "count": 1
+      },
+      {
+        "name": "Faceless Haven",
+        "count": 1
+      },
+      {
+        "name": "Woodland Chasm",
+        "count": 1
+      },
+      {
+        "name": "Rimewood Falls",
+        "count": 1
+      },
+      {
+        "name": "Shimmerdrift Vale",
+        "count": 1
+      },
+      {
+        "name": "Ice Tunnel",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Windgrace Lands",
+    "commander": "Lord Windgrace",
+    "influencerName": "UAhoornNL",
+    "socialNetworks": [
+      {
+        "instagram": "@gathering666",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A competitive deck focused on land-based strategies and value engines with Lord Windgrace. It features landfall combos, sacrifice loops, and board control, with powerhouse cards like The Gitrog Monster, Ob Nixilis, Titania, and a strong ramp and tutoring package.",
+      "es": "Un mazo competitivo centrado en estrategias de tierras y value engine con Lord Windgrace. Incluye combos de landfall, loops de sacrificio y control del campo, con cartas de alto poder como The Gitrog Monster, Ob Nixilis, Titania y un potente paquete de ramp y tutoría.",
+      "it": "Un mazzo competitivo incentrato su strategie basate sulle terre e motori di vantaggio con Lord Windgrace. Include combo di landfall, loop di sacrificio e controllo del campo con carte potenti come The Gitrog Monster, Ob Nixilis, Titania e un forte pacchetto di ramp e tutor.",
+      "de": "Ein kompetitives Deck, das sich auf Land-Strategien und Value-Engines mit Lord Windgrace konzentriert. Enthält Landfall-Kombos, Opfer-Schleifen und Board-Kontrolle mit starken Karten wie The Gitrog Monster, Ob Nixilis, Titania und einem starken Ramp- und Tutor-Paket.",
+      "ja": "Lord Windgrace を中心とした土地戦略とバリューエンジンに特化した競技向けデッキ。Landfall コンボ、サクリファイスループ、盤面コントロールを特徴とし、The Gitrog Monster、Ob Nixilis、Titania などの強力なカードと優れたランプ・チューターのパッケージを備える。",
+      "pt": "Um deck competitivo focado em estratégias com terrenos e mecanismos de valor com Lord Windgrace. Inclui combos de landfall, loops de sacrifício e controle de campo, com cartas poderosas como The Gitrog Monster, Ob Nixilis, Titania e um forte pacote de ramp e tutores.",
+      "fr": "Un deck compétitif centré sur les stratégies basées sur les terrains et les moteurs de valeur avec Lord Windgrace. Il inclut des combos de landfall, des boucles de sacrifice et du contrôle de plateau, avec des cartes puissantes comme The Gitrog Monster, Ob Nixilis, Titania, et un solide ensemble de ramp et de tuteurs."
+    },
+    "cards": [
+      {
+        "name": "Elvish Reclaimer",
+        "count": 1
+      },
+      {
+        "name": "Ignoble Hierarch",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Safekeeper",
+        "count": 1
+      },
+      {
+        "name": "Lotus Cobra",
+        "count": 1
+      },
+      {
+        "name": "Azusa, Lost but Seeking",
+        "count": 1
+      },
+      {
+        "name": "Courser of Kruphix",
+        "count": 1
+      },
+      {
+        "name": "Dryad of the Ilysian Grove",
+        "count": 1
+      },
+      {
+        "name": "Radha, Heart of Keld",
+        "count": 1
+      },
+      {
+        "name": "Ramunap Excavator",
+        "count": 1
+      },
+      {
+        "name": "Scute Swarm",
+        "count": 1
+      },
+      {
+        "name": "Tireless Tracker",
+        "count": 1
+      },
+      {
+        "name": "Wayward Swordtooth",
+        "count": 1
+      },
+      {
+        "name": "Dread Presence",
+        "count": 1
+      },
+      {
+        "name": "Mina and Denn, Wildborn",
+        "count": 1
+      },
+      {
+        "name": "Oracle of Mul Daya",
+        "count": 1
+      },
+      {
+        "name": "Korvold, Fae-Cursed King",
+        "count": 1
+      },
+      {
+        "name": "Ob Nixilis, the Fallen",
+        "count": 1
+      },
+      {
+        "name": "The Gitrog Monster",
+        "count": 1
+      },
+      {
+        "name": "Titania, Protector of Argoth",
+        "count": 1
+      },
+      {
+        "name": "Ancient Greenwarden",
+        "count": 1
+      },
+      {
+        "name": "Moraug, Fury of Akoum",
+        "count": 1
+      },
+      {
+        "name": "Rampaging Baloths",
+        "count": 1
+      },
+      {
+        "name": "Avenger of Zendikar",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of Rage",
+        "count": 1
+      },
+      {
+        "name": "Wrenn and Six",
+        "count": 1
+      },
+      {
+        "name": "Nissa, Vital Force",
+        "count": 1
+      },
+      {
+        "name": "Crop Rotation",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy",
+        "count": 1
+      },
+      {
+        "name": "Constant Mists",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Exsanguinate",
+        "count": 1
+      },
+      {
+        "name": "Life from the Loam",
+        "count": 1
+      },
+      {
+        "name": "Torment of Hailfire",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Genesis Wave",
+        "count": 1
+      },
+      {
+        "name": "Realms Uncharted",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Scapeshift",
+        "count": 1
+      },
+      {
+        "name": "Splendid Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Blasphemous Act",
+        "count": 1
+      },
+      {
+        "name": "Jeweled Lotus",
+        "count": 1
+      },
+      {
+        "name": "Mana Crypt",
+        "count": 1
+      },
+      {
+        "name": "Mox Diamond",
+        "count": 1
+      },
+      {
+        "name": "Sensei's Divining Top",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Crucible of Worlds",
+        "count": 1
+      },
+      {
+        "name": "Burgeoning",
+        "count": 1
+      },
+      {
+        "name": "Exploration",
+        "count": 1
+      },
+      {
+        "name": "Prismatic Omen",
+        "count": 1
+      },
+      {
+        "name": "Squandered Resources",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Library",
+        "count": 1
+      },
+      {
+        "name": "Valakut Exploration",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Badlands",
+        "count": 1
+      },
+      {
+        "name": "Bayou",
+        "count": 1
+      },
+      {
+        "name": "Blast Zone",
+        "count": 1
+      },
+      {
+        "name": "Blood Crypt",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Boseiju, Who Shelters All",
+        "count": 1
+      },
+      {
+        "name": "Cabal Coffers",
+        "count": 1
+      },
+      {
+        "name": "Command Beacon",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dark Depths",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Field of the Dead",
+        "count": 1
+      },
+      {
+        "name": "Gaea's Cradle",
+        "count": 1
+      },
+      {
+        "name": "Glacial Chasm",
+        "count": 1
+      },
+      {
+        "name": "Kessig Wolf Run",
+        "count": 1
+      },
+      {
+        "name": "Lotus Field",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Maze of Ith",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 1
+      },
+      {
+        "name": "Nurturing Peatland",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Prismatic Vista",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Snow-Covered Forest",
+        "count": 1
+      },
+      {
+        "name": "Snow-Covered Mountain",
+        "count": 1
+      },
+      {
+        "name": "Snow-Covered Swamp",
+        "count": 1
+      },
+      {
+        "name": "Stomping Ground",
+        "count": 1
+      },
+      {
+        "name": "Strip Mine",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Taiga",
+        "count": 1
+      },
+      {
+        "name": "Thespian's Stage",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth",
+        "count": 1
+      },
+      {
+        "name": "Valakut, the Molten Pinnacle",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Vesuva",
+        "count": 1
+      },
+      {
+        "name": "Volrath's Stronghold",
+        "count": 1
+      },
+      {
+        "name": "Wasteland",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      },
+      {
+        "name": "Wooded Foothills",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya, Cradle of Growth",
+        "count": 1
+      }
+    ]
+  }
+]
