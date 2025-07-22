@@ -7,7 +7,9 @@
     "build": "tsc",
     "scrape": "ts-node src/index.ts",
     "reduce": "ts-node src/scryfallReducer.ts",
-    "prices": "ts-node src/generatePrices.ts"
+    "prices": "ts-node src/generatePrices.ts",
+    "splitInfluencer": "ts-node src/splitInfluencerPrecons.ts",
+    "splitCommander": "ts-node src/splitCommanderPrecons.ts"
   },
   "keywords": [],
   "author": "",
