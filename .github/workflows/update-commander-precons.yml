@@ -23,6 +23,12 @@ jobs:
 
       - name: Ejecutar scraper
         run: npm run scrape
+        
+      - name: Dividir commanders en chunks pequeños
+        run: npm run splitCommander
+
+      - name: Dividir influencers en chunks pequeños
+        run: npm run splitInfluencer
 
       - name: Run reducer script
         run: npm run reduce
