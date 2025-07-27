@@ -34,7 +34,6 @@ async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
   if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
   return await res.json() as ReducedCard[];
 }
-//TODO CLEAN TOKEN CREATURES with type_line "Token Creature — ..."
 
 function reduceCard(card: ReducedCard) {
   return {
