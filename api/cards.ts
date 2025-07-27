@@ -11,34 +11,40 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
-function parseScryfallLikeQueryToTypesense(q: string): string {
-  return q
-    .replace(/AND/g, '&&')
-    .replace(/OR/g, '||')
-    .replace(/type:([^\s()]+)/g, 'type_line:$1')         // type:creature → type_line:creature
-    .replace(/oracle:([^\s()]+)/g, 'oracle_text:$1')     // oracle:foo → oracle_text:foo
-    .replace(/name:([^\s()]+)/g, 'name:$1')              // name:foo → name:foo (ya OK)
-    .replace(/\(\(([^)]+)\)\)/g, '($1)')                 // dobles paréntesis innecesarios
-    .replace(/\(([^()]*:[^()]+)\)/g, '$1')               // limpiar paréntesis simples
-    .replace(/"/g, '')                                   // quitar comillas
-    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
-    .replace(/cmc>=([0-9]+)/g, 'cmc:>=$1')
-    .replace(/rarity:([^\s()]+)/g, 'rarity:$1')
-    .replace(/identity=([WUBRG]+)/g, 'color_identity:$1'); // puede mejorarse aún más
-}
-
 function parseScryfallToFilterBy(query: string): string {
-  return query
-    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
-    .replace(/rarity:([a-z]+)/g, 'rarity:=$1')
-    .replace(/type:([a-z]+)/g, 'type_line:=$1')
-    .replace(/identity=([WUBRG]+)/g, 'color_identity:=$1')
-    .replace(/AND/g, '&&')
-    .replace(/OR/g, '||')
-    .replace(/"/g, '')
-    .trim();
+  const filters: string[] = [];
+
+  const cmcMatch = query.match(/cmc=([0-9]+)/);
+  if (cmcMatch) filters.push(`cmc:=${cmcMatch[1]}`);
+
+  const rarityMatch = query.match(/rarity=([a-zA-Z]+)/);
+  if (rarityMatch) filters.push(`rarity:=${rarityMatch[1]}`);
+
+  const typeMatch = query.match(/type:([a-zA-Z]+)/);
+  if (typeMatch) filters.push(`type_line:=${typeMatch[1]}`);
+
+  const identityMatches = [...query.matchAll(/identity=([WUBRG]+)/g)];
+  if (identityMatches.length > 0) {
+    const identities = identityMatches.map((m) => m[1]);
+    filters.push(`color_identity:=[${identities.join(',')}]`);
+  }
+
+  return filters.join(' && ');
 }
 
+function parseQueryTextualPart(query: string): string {
+  // Esto busca coincidencias en campos como name/oracle/type para el `q` textual
+  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
+  const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
+  const typeMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
+
+  const parts = [];
+  if (nameMatch) parts.push(nameMatch[1]);
+  if (oracleMatch) parts.push(oracleMatch[1]);
+  if (typeMatch) parts.push(typeMatch[1]);
+
+  return parts.join(' ').trim() || '*';
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
@@ -50,12 +56,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
           protocol: 'https',
         },
       ],
-      apiKey: 'typsensemasterkeyMariArri30123456789', // reemplázala si hace falta
+      apiKey: 'typsensemasterkeyMariArri30123456789', // reemplazala por un secret real
     });
 
-    const rawQuery = req.query.q?.toString() || '*';
-    const filter_by = parseScryfallToFilterBy(rawQuery); // función que vos definís
-    const q = parseScryfallLikeQueryToTypesense(rawQuery);
+    const rawQuery = req.query.q?.toString() || '';
+    const filter_by = parseScryfallToFilterBy(rawQuery);
+    const q = parseQueryTextualPart(rawQuery);
 
     const results = await client
       .collections('cards')
@@ -69,7 +75,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
 
     const unique = new Map();
     (results.hits ?? []).forEach((h: any) => {
-    unique.set(h.document.oracle_id, h.document);
+      unique.set(h.document.oracle_id, h.document);
     });
 
     return res.status(200).json(Array.from(unique.values()));
