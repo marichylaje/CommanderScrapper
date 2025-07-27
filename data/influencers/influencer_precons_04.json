@@ -1,7 +1,7 @@
 [
   {
     "name": "Brazen Bant Spellslinger",
-    "commander": "Tatyova, Benthic Druid",
+    "commander": "Brazen Borrower",
     "influencerName": "Flo",
     "socialNetworks": [
       {
@@ -101,7 +101,7 @@
         "count": 1
       },
       {
-        "name": "Brazen Borrower // Petty Theft",
+        "name": "Tatyova, Benthic Druid",
         "count": 1
       },
       {
@@ -744,7 +744,7 @@
     "socialNetworks": [
       {
         "instagram": "@balakay_mtg",
-        "tiktok": null,
+        "tiktok": "balakay_mtg",
         "youtube": null
       }
     ],
