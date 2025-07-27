@@ -12,21 +12,13 @@ primary_region = 'fra'
   MEILI_ENV = "production"
   MEILI_DB_PATH = "/meili_data"
 
-[[services]]
+[http_service]
   internal_port = 7700
-  protocol = "tcp"
-
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
-
-  [[services.tcp_checks]]
-    interval = "15s"
-    timeout = "2s"
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
 
 [mounts]
   source = "meili_data"
