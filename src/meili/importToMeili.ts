@@ -1,5 +1,5 @@
 import { MeiliSearch } from 'meilisearch';
-import fs from 'fs';
+import * as fs from 'fs';
 
 const client = new MeiliSearch({
   host: process.env.MEILI_HOST!,
