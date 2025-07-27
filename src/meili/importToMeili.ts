@@ -1,4 +1,5 @@
 import { MeiliSearch } from 'meilisearch';
+import 'dotenv/config'
 import * as fs from 'fs';
 
 const client = new MeiliSearch({
