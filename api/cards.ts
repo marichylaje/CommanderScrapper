@@ -1,8 +1,17 @@
 // api/cards.ts
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+type VercelRequest = IncomingMessage & {
+  query: { [key: string]: string | string[] };
+};
+
+type VercelResponse = ServerResponse & {
+  status: (code: number) => VercelResponse;
+  json: (body: any) => void;
+};
+
+export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const client = new Client({
       nodes: [
