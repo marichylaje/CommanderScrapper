@@ -9,7 +9,8 @@
     "reduce": "ts-node src/scryfallReducer.ts",
     "prices": "ts-node src/generatePrices.ts",
     "splitInfluencer": "ts-node src/splitInfluencerPrecons.ts",
-    "splitCommander": "ts-node src/splitCommanderPrecons.ts"
+    "splitCommander": "ts-node src/splitCommanderPrecons.ts",
+    "build:meili": "tsc src/meili/importToMeili.ts --target ES2022 --module CommonJS --lib ES2022 --moduleResolution node --esModuleInterop --outDir dist/meili"
   },
   "keywords": [],
   "author": "",
