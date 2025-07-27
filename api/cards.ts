@@ -29,22 +29,20 @@ function parseScryfallToFilterBy(query: string): string {
     filters.push(`color_identity:=[${identities.join(',')}]`);
   }
 
-  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
-    if (nameMatch) {
-    filters.push(`name:~${nameMatch[1]}`); // usa substring match
-    }
-
   return filters.join(' && ');
 }
 
 function parseQueryTextualPart(query: string): string {
-  // Esto busca coincidencias en campos como name/oracle/type para el `q` textual
-  const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
-  const typeMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
+  const parts: string[] = [];
 
-  const parts = [];
+  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
+  if (nameMatch) parts.push(nameMatch[1]);
+
+  const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
   if (oracleMatch) parts.push(oracleMatch[1]);
-  if (typeMatch) parts.push(typeMatch[1]);
+
+  const typeTextMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
+  if (typeTextMatch) parts.push(typeTextMatch[1]);
 
   return parts.join(' ').trim() || '*';
 }
@@ -63,23 +61,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     });
 
     const rawQuery = req.query.q?.toString() || '';
-    const filters = parseScryfallToFilterBy(rawQuery);
+    const filter_by = parseScryfallToFilterBy(rawQuery);
+    const q = parseQueryTextualPart(rawQuery);
 
-    // Buscar name:"traxa" como substring exacto dentro del nombre
-    const nameMatch = rawQuery.match(/name:"?([a-zA-Z0-9\s']+)"?/);
-    const q = nameMatch ? nameMatch[1].toLowerCase() : '*';
+    const searchParams: any = {
+      q,
+      query_by: 'name,type_line,oracle_text',
+      per_page: 50,
+    };
+
+    if (filter_by) {
+      searchParams.filter_by = filter_by;
+    }
+
+    // Si la query contiene name:"...", activamos búsqueda más precisa
+    if (/name:"/.test(rawQuery)) {
+      searchParams.prefix = 'middle';
+      searchParams.num_typos = 0;
+    }
 
     const results = await client
       .collections('cards')
       .documents()
-      .search({
-        q: `*${q}*`, // agrega wildcard explícito
-        query_by: 'name',
-        filter_by: filters,
-        per_page: 50,
-        prefix: 'middle',       // 🔑 Permite "traxa" ⊆ "Atraxa"
-        num_typos: 0            // 🔒 Coincidencia exacta, sin errores
-      });
+      .search(searchParams);
 
     const unique = new Map();
     (results.hits ?? []).forEach((h: any) => {
