@@ -1,3 +1,4 @@
+// api/cards.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
 
@@ -10,45 +11,59 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
-type Card = {
-  oracle_id: string;
-  cmc?: number;
-  color_identity?: string[];
-};
+// 👉 Esta función separa partes de la query que van en `q` y otras en `filter_by`
+function parseQuery(query: string): { q: string; filter_by: string } {
+  let qParts: string[] = [];
+  let filters: string[] = [];
 
-function deduplicateByOracleId(cards: Card[]): Card[] {
-  const seen = new Set<string>();
-  return cards.filter((card) => {
-    if (!card.oracle_id) return false;
-    if (seen.has(card.oracle_id)) return false;
-    seen.add(card.oracle_id);
-    return true;
-  });
+  // Remover comillas innecesarias para facilitar parsing
+  query = query.replace(/"/g, '');
+
+  // Separar por AND y OR preservando paréntesis
+  const tokens = query.match(/(\(|\)|AND|OR|[^()\s]+)/g) || [];
+
+  let currentExpr = '';
+
+  for (let token of tokens) {
+    if (token === 'AND' || token === 'OR' || token === '(' || token === ')') {
+      currentExpr += ` ${token} `;
+      continue;
+    }
+
+    // Match filtros conocidos
+    if (token.startsWith('type:')) {
+      const val = token.slice(5);
+      currentExpr += ` type_line:=${val} `;
+    } else if (token.startsWith('oracle:')) {
+      const val = token.slice(7);
+      qParts.push(val); // se buscará en oracle_text
+    } else if (token.startsWith('name:')) {
+      const val = token.slice(5);
+      qParts.push(val); // se buscará en name
+    } else if (token.startsWith('cmc=')) {
+      const val = token.slice(4);
+      currentExpr += ` cmc:=${val} `;
+    } else if (token.startsWith('cmc>=')) {
+      const val = token.slice(5);
+      currentExpr += ` cmc:>={val} `;
+    } else if (token.startsWith('rarity:')) {
+      const val = token.slice(7);
+      currentExpr += ` rarity:=${val} `;
+    } else if (token.startsWith('identity=')) {
+      const val = token.slice(9);
+      currentExpr += ` color_identity:=${val} `;
+    } else {
+      qParts.push(token);
+    }
+  }
+
+  return {
+    q: qParts.join(' ').trim() || '*',
+    filter_by: currentExpr.replace(/\s+/g, ' ').trim(),
+  };
 }
 
-function filterCards(cards: Card[], queryParams: Record<string, string>) {
-  const allowedIdentities = queryParams.identity
-    ? queryParams.identity.split(',').map((s) => s.trim().toUpperCase())
-    : [];
-
-  return cards.filter((card) => {
-    const passesCMC =
-      !queryParams.cmc || Number(card.cmc) === Number(queryParams.cmc);
-
-    const cardIdentity = (card.color_identity ?? []).join('').toUpperCase();
-
-    const passesIdentity =
-      allowedIdentities.length === 0 || allowedIdentities.includes(cardIdentity);
-
-    return passesCMC && passesIdentity;
-  });
-}
-
-
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
-): Promise<void> {
+export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const client = new Client({
       nodes: [
@@ -58,28 +73,25 @@ export default async function handler(
           protocol: 'https',
         },
       ],
-      apiKey: process.env.TYPESENSE_API_KEY!,
+      apiKey: 'typsensemasterkeyMariArri30123456789',
     });
 
-    const q = req.query.q?.toString() || '*';
+    const rawQuery = req.query.q?.toString() || '*';
+    const { q, filter_by } = parseQuery(rawQuery);
 
-    const searchResult = await client
+    const results = await client
       .collections('cards')
       .documents()
       .search({
         q,
-        query_by: 'name,type_line,oracle_text',
-        per_page: 100,
+        query_by: 'name,oracle_text',
+        per_page: 50,
+        filter_by,
       });
 
-    const rawCards = (searchResult.hits ?? []).map((h: any) => h.document);
-
-    const deduped = deduplicateByOracleId(rawCards);
-    const filtered = filterCards(deduped, req.query as Record<string, string>);
-
-    res.status(200).json(filtered);
+    return res.status(200).json((results.hits ?? []).map((h: any) => h.document));
   } catch (error: any) {
-    console.error('💥 ERROR:', error.message);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('💥 ERROR:', error.message, error.stack);
+    res.status(500).json({ error: 'Internal Server Error', details: error.message });
   }
 }
