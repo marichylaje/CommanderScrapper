@@ -10,7 +10,7 @@ const client = new Client({
       protocol: 'https',
     },
   ],
-  apiKey: process.env.TYPESENSE_API_KEY!,
+  apiKey: 'typsensemasterkeyMariArri30123456789',
 });
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
