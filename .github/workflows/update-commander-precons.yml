@@ -37,7 +37,7 @@ jobs:
         run: npm run prices
 
       - name: Compilar importador MeiliSearch
-        run: tsc src/meili/importToMeili.ts --outDir dist/meili
+        run: npm run build:meili
 
       - name: Instalar Fly.io CLI
         uses: superfly/flyctl-actions/setup-flyctl@master
