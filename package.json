@@ -10,7 +10,7 @@
     "prices": "ts-node src/generatePrices.ts",
     "splitInfluencer": "ts-node src/splitInfluencerPrecons.ts",
     "splitCommander": "ts-node src/splitCommanderPrecons.ts",
-    "build:meili": "tsc src/meili/importToMeili.ts --target ES2022 --module CommonJS --lib ES2022 --moduleResolution node --esModuleInterop --outDir dist/meili"
+    "typeSchema": "npx ts-node src/typesense/createTypesenseSchema.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "csv-parse": "^6.0.0",
     "dotenv": "^17.2.1",
     "meilisearch": "^0.51.0",
+    "typesense": "^2.0.3",
     "undici": "^6.21.3",
     "zod": "^4.0.5"
   },
