@@ -1,4 +1,3 @@
-// api/cards.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
 
@@ -11,24 +10,41 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
-function parseScryfallLikeQueryToTypesense(q: string): string {
-  return q
-    .replace(/AND/g, '&&')
-    .replace(/OR/g, '||')
-    .replace(/type:([^\s()]+)/g, 'type_line:$1')         // type:creature → type_line:creature
-    .replace(/oracle:([^\s()]+)/g, 'oracle_text:$1')     // oracle:foo → oracle_text:foo
-    .replace(/name:([^\s()]+)/g, 'name:$1')              // name:foo → name:foo (ya OK)
-    .replace(/\(\(([^)]+)\)\)/g, '($1)')                 // dobles paréntesis innecesarios
-    .replace(/\(([^()]*:[^()]+)\)/g, '$1')               // limpiar paréntesis simples
-    .replace(/"/g, '')                                   // quitar comillas
-    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
-    .replace(/cmc>=([0-9]+)/g, 'cmc:>=$1')
-    .replace(/rarity:([^\s()]+)/g, 'rarity:$1')
-    .replace(/identity=([WUBRG]+)/g, 'color_identity:$1'); // puede mejorarse aún más
+type Card = {
+  oracle_id: string;
+  cmc?: number;
+  color_identity?: string[];
+};
+
+function deduplicateByOracleId(cards: Card[]): Card[] {
+  const seen = new Set<string>();
+  return cards.filter((card) => {
+    if (!card.oracle_id) return false;
+    if (seen.has(card.oracle_id)) return false;
+    seen.add(card.oracle_id);
+    return true;
+  });
 }
 
+function filterCards(cards: Card[], queryParams: Record<string, string>) {
+  return cards.filter((card) => {
+    const passesCMC =
+      !queryParams.cmc || Number(card.cmc) === Number(queryParams.cmc);
 
-export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
+    const passesColor =
+      !queryParams.identity ||
+      queryParams.identity
+        .split(',')
+        .some((ci) => ci === (card.color_identity ?? []).join(''));
+
+    return passesCMC && passesColor;
+  });
+}
+
+export default async function handler(
+  req: VercelRequest,
+  res: VercelResponse
+): Promise<void> {
   try {
     const client = new Client({
       nodes: [
@@ -38,24 +54,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
           protocol: 'https',
         },
       ],
-      apiKey: 'typsensemasterkeyMariArri30123456789', // reemplázala si hace falta
+      apiKey: process.env.TYPESENSE_API_KEY!,
     });
 
-    const rawQuery = req.query.q?.toString() || '*';
-    const q = parseScryfallLikeQueryToTypesense(rawQuery);
+    const q = req.query.q?.toString() || '*';
 
-    const results = await client
+    const searchResult = await client
       .collections('cards')
       .documents()
       .search({
         q,
         query_by: 'name,type_line,oracle_text',
-        per_page: 50,
+        per_page: 100,
       });
 
-    return res.status(200).json((results.hits ?? []).map((h: any) => h.document));
+    const rawCards = (searchResult.hits ?? []).map((h: any) => h.document);
+
+    const deduped = deduplicateByOracleId(rawCards);
+    const filtered = filterCards(deduped, req.query as Record<string, string>);
+
+    res.status(200).json(filtered);
   } catch (error: any) {
-    console.error('💥 ERROR:', error.message, error.stack);
-    res.status(500).json({ error: 'Internal Server Error', details: error.message });
+    console.error('💥 ERROR:', error.message);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 }
