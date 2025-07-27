@@ -1,4 +1,3 @@
-// api/cards.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
 
@@ -11,42 +10,35 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
-function parseScryfallToFilterBy(query: string): string {
+// 🔧 Construye el filtro para Typesense
+function buildFilterFromParams(params: Record<string, string | string[]>): string {
   const filters: string[] = [];
 
-  const cmcMatch = query.match(/cmc=([0-9]+)/);
-  if (cmcMatch) filters.push(`cmc:=${cmcMatch[1]}`);
+  if (params.cmc) filters.push(`cmc:=${params.cmc}`);
+  if (params.rarity) filters.push(`rarity:=${params.rarity}`);
+  if (params.type) filters.push(`type_line:=${params.type}`);
 
-  const rarityMatch = query.match(/rarity=([a-zA-Z]+)/);
-  if (rarityMatch) filters.push(`rarity:=${rarityMatch[1]}`);
-
-  const typeMatch = query.match(/type:([a-zA-Z]+)/);
-  if (typeMatch) filters.push(`type_line:=${typeMatch[1]}`);
-
-const identityMatches = [...query.matchAll(/identity=([WUBRG]+)/g)];
-if (identityMatches.length > 0) {
-  for (const match of identityMatches) {
-    const colorLetters = match[1].split('').join(',');
-    filters.push(`color_identity:contains:[${colorLetters}]`);
+  const identity = params.identity;
+  if (identity) {
+    const identities = Array.isArray(identity) ? identity : [identity];
+    const colorLetters = [...new Set(identities.join('').split(''))]; // "GR" => ["G", "R"]
+    filters.push(`color_identity:contains:[${colorLetters.join(',')}]`);
   }
-}
 
-
+  if (params.name) {
+    filters.push(`name:~${params.name}`);
+  }
 
   return filters.join(' && ');
 }
 
-function parseQueryTextualPart(query: string): string {
+// 🔍 Construye el campo q para búsqueda textual
+function buildTextQuery(params: Record<string, string | string[]>): string {
   const parts: string[] = [];
 
-  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
-  if (nameMatch) parts.push(nameMatch[1]);
-
-  const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
-  if (oracleMatch) parts.push(oracleMatch[1]);
-
-  const typeTextMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
-  if (typeTextMatch) parts.push(typeTextMatch[1]);
+  if (typeof params.oracle === 'string') parts.push(params.oracle);
+  if (typeof params.type === 'string') parts.push(params.type);
+  if (typeof params.name === 'string') parts.push(params.name);
 
   return parts.join(' ').trim() || '*';
 }
@@ -64,9 +56,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       apiKey: 'typsensemasterkeyMariArri30123456789',
     });
 
-    const rawQuery = req.query.q?.toString() || '';
-    const filter_by = parseScryfallToFilterBy(rawQuery);
-    const q = parseQueryTextualPart(rawQuery);
+    const params = req.query as Record<string, string | string[]>;
+
+    const filter_by = buildFilterFromParams(params);
+    const q = buildTextQuery(params);
 
     const searchParams: any = {
       q,
@@ -78,8 +71,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       searchParams.filter_by = filter_by;
     }
 
-    // Si la query contiene name:"...", activamos búsqueda más precisa
-    if (/name:"/.test(rawQuery)) {
+    if (params.name) {
       searchParams.prefix = 'middle';
       searchParams.num_typos = 0;
     }
