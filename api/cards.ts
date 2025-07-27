@@ -34,7 +34,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         filter_by: filterBy.join(' && '),
       });
 
-    return res.status(200).json(results.hits.map((hit: any) => hit.document));
+    return res.status(200).json((results.hits ?? []).map((hit: any) => hit.document));
   } catch (error) {
     console.error('❌ Error buscando en Typesense:', error);
     return res.status(500).json({ error: 'Error al buscar cartas' });
