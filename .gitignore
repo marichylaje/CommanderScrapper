@@ -9,6 +9,8 @@ pids
 *.pid
 *.seed
 *.pid.lock
+data/scryfall-reduced.json
+dist/
 
 # Coverage directory used by tools like istanbul
 coverage/

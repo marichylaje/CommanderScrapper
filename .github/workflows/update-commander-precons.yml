@@ -36,5 +36,27 @@ jobs:
       - name: Run prices script
         run: npm run prices
 
+      - name: Compilar importador MeiliSearch
+        run: tsc src/meili/importToMeili.ts --outDir dist/meili
+
+      - name: Instalar Fly.io CLI
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Subir archivos a Fly.io
+        run: |
+          flyctl ssh console -a meili-commanderscrapper -C "mkdir -p /data"
+          flyctl ssh console -a meili-commanderscrapper --local-forward 10022:22 &
+          sleep 5
+          scp -P 10022 ./data/scryfall-reduced.json root@localhost:/data/scryfall-reduced.json
+          scp -P 10022 ./dist/meili/importToMeili.js root@localhost:/data/importToMeili.js
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+      - name: Ejecutar importToMeili.js en la VM
+        run: |
+          flyctl ssh console -a meili-commanderscrapper -C "node /data/importToMeili.js"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
       - name: Comprobar si hay cambios + commit to repo
         uses: stefanzweifel/git-auto-commit-action@v6
