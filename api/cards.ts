@@ -27,6 +27,18 @@ function parseScryfallLikeQueryToTypesense(q: string): string {
     .replace(/identity=([WUBRG]+)/g, 'color_identity:$1'); // puede mejorarse aún más
 }
 
+function parseScryfallToFilterBy(query: string): string {
+  return query
+    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
+    .replace(/rarity:([a-z]+)/g, 'rarity:=$1')
+    .replace(/type:([a-z]+)/g, 'type_line:=$1')
+    .replace(/identity=([WUBRG]+)/g, 'color_identity:=$1')
+    .replace(/AND/g, '&&')
+    .replace(/OR/g, '||')
+    .replace(/"/g, '')
+    .trim();
+}
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
@@ -42,6 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     });
 
     const rawQuery = req.query.q?.toString() || '*';
+    const filter_by = parseScryfallToFilterBy(rawQuery); // función que vos definís
     const q = parseScryfallLikeQueryToTypesense(rawQuery);
 
     const results = await client
@@ -50,6 +63,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       .search({
         q,
         query_by: 'name,type_line,oracle_text',
+        filter_by,
         per_page: 50,
       });
 
