@@ -73,7 +73,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       .collections('cards')
       .documents()
       .search({
-        q,
+        q: `*${q}*`, // agrega wildcard explícito
         query_by: 'name',
         filter_by: filters,
         per_page: 50,
