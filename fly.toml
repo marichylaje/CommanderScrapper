@@ -6,7 +6,7 @@ app = 'meili-commanderscrapper'
 primary_region = 'fra'
 
 [build]
-  image = "getmeili/meilisearch:v1.16.0"
+  image = "getmeili/meilisearch:v1.13.0"
 
 [env]
   MEILI_ENV = "production"
