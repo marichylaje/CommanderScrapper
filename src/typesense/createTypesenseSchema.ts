@@ -15,7 +15,7 @@ const schema = {
     { name: 'id', type: 'string' },
     { name: 'name', type: 'string' },
     { name: 'mana_cost', type: 'string', optional: true },
-    { name: 'cmc', type: 'float', optional: true },
+    { name: 'cmc', type: 'float' },
     { name: 'color_identity', type: 'string[]', optional: true },
     { name: 'colors', type: 'string[]', optional: true },
     { name: 'type_line', type: 'string' },
