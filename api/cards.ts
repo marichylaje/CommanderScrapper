@@ -23,11 +23,14 @@ function parseScryfallToFilterBy(query: string): string {
   const typeMatch = query.match(/type:([a-zA-Z]+)/);
   if (typeMatch) filters.push(`type_line:=${typeMatch[1]}`);
 
-  const identityMatches = [...query.matchAll(/identity=([WUBRG]+)/g)];
-  if (identityMatches.length > 0) {
-    const identities = identityMatches.map((m) => m[1]);
-    filters.push(`color_identity:=[${identities.join(',')}]`);
-  }
+    const identityMatches = [...query.matchAll(/identity=([WUBRG]+)/g)];
+    if (identityMatches.length > 0) {
+    const allColors = new Set<string>();
+    for (const match of identityMatches) {
+        match[1].split('').forEach((c) => allColors.add(c));
+    }
+    filters.push(`color_identity:=[${[...allColors].join(',')}]`);
+    }
 
   return filters.join(' && ');
 }
