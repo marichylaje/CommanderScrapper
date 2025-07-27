@@ -1,28 +1,15 @@
-// createTypesenseSchema.ts
-import { Client } from 'typesense';
-import type { CollectionCreateSchema } from 'typesense/lib/Typesense/Collections';
-import 'dotenv/config'; // 👈 Carga las variables automáticamente desde .env
+import { execFile } from 'child_process';
+import 'dotenv/config';
+import fs from 'fs';
 
 const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY;
+const TYPESENSE_HOST = 'https://typesense-commanderscrapper.fly.dev';
 
 if (!TYPESENSE_API_KEY) {
   throw new Error('❌ Falta la variable de entorno TYPESENSE_API_KEY');
 }
 
-const client = new Client({
-  nodes: [
-    {
-      host: 'typesense-commanderscrapper.fly.dev',
-      port: 443,
-      protocol: 'https',
-    },
-  ],
-  apiKey: TYPESENSE_API_KEY!,
-  connectionTimeoutSeconds: 10,
-});
-
-
-const schema: CollectionCreateSchema = {
+const schema = {
   name: 'cards',
   fields: [
     { name: 'id', type: 'string' },
@@ -39,21 +26,28 @@ const schema: CollectionCreateSchema = {
   default_sorting_field: 'cmc'
 };
 
+// Guardamos el schema en un archivo temporal
+const tempPath = 'temp-schema.json';
+fs.writeFileSync(tempPath, JSON.stringify(schema));
 
+const args = [
+  '-X', 'POST',
+  `${TYPESENSE_HOST}/collections`,
+  '-H', `X-TYPESENSE-API-KEY: ${TYPESENSE_API_KEY}`,
+  '-H', 'Content-Type: application/json',
+  '--data-binary', `@${tempPath}`
+];
 
-async function createSchema() {
-  try {
-    const exists = await client.collections('cards').retrieve().catch(() => null);
-    if (exists) {
-      console.log('🔁 La colección "cards" ya existe. Eliminando para recrear...');
-      await client.collections('cards').delete();
-    }
-
-    const created = await client.collections().create(schema);
-    console.log('✅ Colección creada en Typesense:', created);
-  } catch (err) {
-    console.error('❌ Error al crear la colección:', err);
+execFile('curl.exe', args, (error, stdout, stderr) => {
+  if (error) {
+    console.error('❌ Error al ejecutar curl:', error);
+    return;
   }
-}
 
-createSchema();
+  if (stderr) {
+    console.error('⚠️ Stderr:', stderr);
+  }
+
+  console.log('✅ Respuesta de Typesense:\n', stdout);
+  fs.unlinkSync(tempPath); // Limpieza del archivo temporal
+});
