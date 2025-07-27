@@ -10,7 +10,6 @@ primary_region = 'fra'
 
 [env]
   MEILI_ENV = "production"
-  MEILI_MASTER_KEY = ""
   MEILI_DB_PATH = "/meili_data"
 
 [[services]]
