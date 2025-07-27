@@ -1,30 +1,28 @@
-# fly.toml app configuration file generated for typesense-commanderscrapper on 2025-07-27T16:52:13+02:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'typesense-commanderscrapper'
-primary_region = 'fra'
+app = "typesense-commanderscrapper"
+primary_region = "fra"
 
 [build]
-  image = 'typesense/typesense:0.21.0'
+  image = "typesense/typesense:0.21.0"
 
 [env]
-  TYPESENSE_API_KEY = 'typsensemasterkeyMariArri30123456789'
-  TYPESENSE_DATA_DIR = '/typesense_data'
-
-[processes]
-  app = '/usr/bin/typesense-server --data-dir /typesense_data --api-port 8108 --listen-address 0.0.0.0'
-
-[[mounts]]
-  source = 'typesense_data'
-  destination = '/typesense_data'
+  TYPESENSE_DATA_DIR = "/data"
 
 [http_service]
   internal_port = 8108
   force_https = true
-  processes = ['app']
+  auto_start_machines = true
+  auto_stop_machines = false
+  min_machines_running = 1
+  processes = ["app"]
+
+[mounts]
+  source = "typesense_data"
+  destination = "/data"
 
 [[vm]]
-  memory = '1gb'
+  memory = "1gb"
+  cpu_kind = "shared"
   cpus = 1
+
+[processes]
+  app = "typesense-server --data-dir /data --api-key $TYPESENSE_API_KEY --enable-cors"
