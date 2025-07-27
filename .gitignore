@@ -9,10 +9,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
-data\scryfall-reduced.json
-data/scryfall-reduced.json
-.\data\scryfall-reduced.json
-./data/scryfall-reduced.json
 
 # Coverage directory used by tools like istanbul
 coverage/
