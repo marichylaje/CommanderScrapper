@@ -11,6 +11,23 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
+function parseScryfallLikeQueryToTypesense(q: string): string {
+  return q
+    .replace(/AND/g, '&&')
+    .replace(/OR/g, '||')
+    .replace(/type:([^\s()]+)/g, 'type_line:$1')         // type:creature → type_line:creature
+    .replace(/oracle:([^\s()]+)/g, 'oracle_text:$1')     // oracle:foo → oracle_text:foo
+    .replace(/name:([^\s()]+)/g, 'name:$1')              // name:foo → name:foo (ya OK)
+    .replace(/\(\(([^)]+)\)\)/g, '($1)')                 // dobles paréntesis innecesarios
+    .replace(/\(([^()]*:[^()]+)\)/g, '$1')               // limpiar paréntesis simples
+    .replace(/"/g, '')                                   // quitar comillas
+    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
+    .replace(/cmc>=([0-9]+)/g, 'cmc:>=$1')
+    .replace(/rarity:([^\s()]+)/g, 'rarity:$1')
+    .replace(/identity=([WUBRG]+)/g, 'color_identity:$1'); // puede mejorarse aún más
+}
+
+
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const client = new Client({
@@ -24,7 +41,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       apiKey: 'typsensemasterkeyMariArri30123456789', // reemplázala si hace falta
     });
 
-    const q = req.query.q?.toString() || '*';
+    const rawQuery = req.query.q?.toString() || '*';
+    const q = parseScryfallLikeQueryToTypesense(rawQuery);
 
     const results = await client
       .collections('cards')
@@ -32,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       .search({
         q,
         query_by: 'name,type_line,oracle_text',
-        per_page: 5,
+        per_page: 50,
       });
 
     return res.status(200).json((results.hits ?? []).map((h: any) => h.document));
