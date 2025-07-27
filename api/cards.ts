@@ -26,10 +26,11 @@ function parseScryfallToFilterBy(query: string): string {
 const identityMatches = [...query.matchAll(/identity=([WUBRG]+)/g)];
 if (identityMatches.length > 0) {
   for (const match of identityMatches) {
-    const colorArray = match[1].split('').join(',');
-    filters.push(`color_identity:contains:[${colorArray}]`);
+    const colors = match[1].split('').join(',');
+    filters.push(`color_identity:contains:[${colors}]`);
   }
 }
+
 
 
   return filters.join(' && ');
