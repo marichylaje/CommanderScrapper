@@ -11,57 +11,22 @@ type VercelResponse = ServerResponse & {
   json: (body: any) => void;
 };
 
-// 👉 Esta función separa partes de la query que van en `q` y otras en `filter_by`
-function parseQuery(query: string): { q: string; filter_by: string } {
-  let qParts: string[] = [];
-  let filters: string[] = [];
-
-  // Remover comillas innecesarias para facilitar parsing
-  query = query.replace(/"/g, '');
-
-  // Separar por AND y OR preservando paréntesis
-  const tokens = query.match(/(\(|\)|AND|OR|[^()\s]+)/g) || [];
-
-  let currentExpr = '';
-
-  for (let token of tokens) {
-    if (token === 'AND' || token === 'OR' || token === '(' || token === ')') {
-      currentExpr += ` ${token} `;
-      continue;
-    }
-
-    // Match filtros conocidos
-    if (token.startsWith('type:')) {
-      const val = token.slice(5);
-      currentExpr += ` type_line:=${val} `;
-    } else if (token.startsWith('oracle:')) {
-      const val = token.slice(7);
-      qParts.push(val); // se buscará en oracle_text
-    } else if (token.startsWith('name:')) {
-      const val = token.slice(5);
-      qParts.push(val); // se buscará en name
-    } else if (token.startsWith('cmc=')) {
-      const val = token.slice(4);
-      currentExpr += ` cmc:=${val} `;
-    } else if (token.startsWith('cmc>=')) {
-      const val = token.slice(5);
-      currentExpr += ` cmc:>={val} `;
-    } else if (token.startsWith('rarity:')) {
-      const val = token.slice(7);
-      currentExpr += ` rarity:=${val} `;
-    } else if (token.startsWith('identity=')) {
-      const val = token.slice(9);
-      currentExpr += ` color_identity:=${val} `;
-    } else {
-      qParts.push(token);
-    }
-  }
-
-  return {
-    q: qParts.join(' ').trim() || '*',
-    filter_by: currentExpr.replace(/\s+/g, ' ').trim(),
-  };
+function parseScryfallLikeQueryToTypesense(q: string): string {
+  return q
+    .replace(/AND/g, '&&')
+    .replace(/OR/g, '||')
+    .replace(/type:([^\s()]+)/g, 'type_line:$1')         // type:creature → type_line:creature
+    .replace(/oracle:([^\s()]+)/g, 'oracle_text:$1')     // oracle:foo → oracle_text:foo
+    .replace(/name:([^\s()]+)/g, 'name:$1')              // name:foo → name:foo (ya OK)
+    .replace(/\(\(([^)]+)\)\)/g, '($1)')                 // dobles paréntesis innecesarios
+    .replace(/\(([^()]*:[^()]+)\)/g, '$1')               // limpiar paréntesis simples
+    .replace(/"/g, '')                                   // quitar comillas
+    .replace(/cmc=([0-9]+)/g, 'cmc:=$1')
+    .replace(/cmc>=([0-9]+)/g, 'cmc:>=$1')
+    .replace(/rarity:([^\s()]+)/g, 'rarity:$1')
+    .replace(/identity=([WUBRG]+)/g, 'color_identity:$1'); // puede mejorarse aún más
 }
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
@@ -73,20 +38,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
           protocol: 'https',
         },
       ],
-      apiKey: 'typsensemasterkeyMariArri30123456789',
+      apiKey: 'typsensemasterkeyMariArri30123456789', // reemplázala si hace falta
     });
 
     const rawQuery = req.query.q?.toString() || '*';
-    const { q, filter_by } = parseQuery(rawQuery);
+    const q = parseScryfallLikeQueryToTypesense(rawQuery);
 
     const results = await client
       .collections('cards')
       .documents()
       .search({
         q,
-        query_by: 'name,oracle_text',
+        query_by: 'name,type_line,oracle_text',
         per_page: 50,
-        filter_by,
       });
 
     return res.status(200).json((results.hits ?? []).map((h: any) => h.document));
