@@ -29,17 +29,20 @@ function parseScryfallToFilterBy(query: string): string {
     filters.push(`color_identity:=[${identities.join(',')}]`);
   }
 
+  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
+    if (nameMatch) {
+    filters.push(`name:~${nameMatch[1]}`); // usa substring match
+    }
+
   return filters.join(' && ');
 }
 
 function parseQueryTextualPart(query: string): string {
   // Esto busca coincidencias en campos como name/oracle/type para el `q` textual
-  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
   const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
   const typeMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
 
   const parts = [];
-  if (nameMatch) parts.push(nameMatch[1]);
   if (oracleMatch) parts.push(oracleMatch[1]);
   if (typeMatch) parts.push(typeMatch[1]);
 
@@ -67,12 +70,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     .collections('cards')
     .documents()
     .search({
-        q,
+        q: '*',
         query_by: 'name,type_line,oracle_text',
         filter_by,
         per_page: 50,
-        num_typos: 0,
-        prefix: 'false',
     });
 
 
