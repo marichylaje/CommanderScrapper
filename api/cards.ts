@@ -29,17 +29,18 @@ function parseScryfallToFilterBy(query: string): string {
     filters.push(`color_identity:=[${identities.join(',')}]`);
   }
 
+    const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
+  if (nameMatch) filters.push(`name:="${nameMatch[1]}"`);
+
   return filters.join(' && ');
 }
 
 function parseQueryTextualPart(query: string): string {
   // Esto busca coincidencias en campos como name/oracle/type para el `q` textual
-  const nameMatch = query.match(/name:"?([a-zA-Z0-9\s']+)"?/);
   const oracleMatch = query.match(/oracle:"?([a-zA-Z0-9\s']+)"?/);
   const typeMatch = query.match(/type:"?([a-zA-Z0-9\s']+)"?/);
 
   const parts = [];
-  if (nameMatch) parts.push(nameMatch[1]);
   if (oracleMatch) parts.push(oracleMatch[1]);
   if (typeMatch) parts.push(typeMatch[1]);
 
