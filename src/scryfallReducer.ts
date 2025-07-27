@@ -37,28 +37,33 @@ async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
 //TODO CLEAN TOKEN CREATURES with type_line "Token Creature — ..."
 
 function reduceCard(card: ReducedCard) {
-  return ReducedCardSchema.parse({
+  return {
     name: card.name,
     mana_cost: card.mana_cost,
     cmc: card.cmc,
-    type_line: card.type_line,
-    oracle_text: card.oracle_text,
-    power: card.power,
-    toughness: card.toughness,
+    collector_number: card.collector_number,
+    color_identity: card.color_identity,
     colors: card.colors,
-    keywords: card.keywords,
-    card_faces: card.card_faces?.map((f: { name: string }) => ({ name: f.name })),
-    all_parts: card.type_line?.includes('Token')
-      ? []
-      : card.all_parts?.map((p: { name: string }) => ({ name: p.name })),
-    legalities: {
-      commander: card.legalities?.commander,
-    },
     games: card.games,
-    set_name: card.set_name,
+    id: card.id,
+    image_uris: card.image_uris,
+    keywords: card.keywords,
+    oracle_id: card.oracle_id,
+    oracle_text: card.oracle_text,
+    prices: card.prices,
+    purchase_uris: card.purchase_uris,
     rarity: card.rarity,
-  });
+    set: card.set,
+    type_line: card.type_line,
+    card_faces: card.card_faces?.map((face) => ({
+      name: face.name,
+      type_line: face.type_line,
+      mana_cost: face.mana_cost,
+      image_uris: face.image_uris,
+    })),
+  };
 }
+
 
 async function main(): Promise<void> {
   try {
@@ -78,8 +83,12 @@ async function main(): Promise<void> {
 
     console.log('📥 Archivo actualizado. Descargando y procesando...');
     const rawData = await fetchBulkJson(meta.download_uri);
-    const reducedCards = rawData.map(reduceCard);
+    const filteredData = rawData.filter(
+      (card) => !card.type_line?.startsWith('Token Creature'),
+    );
 
+    const reducedCards = filteredData.map(reduceCard);
+    
     const output = {
       last_updated: remoteUpdated,
       cards: reducedCards,
