@@ -13,18 +13,19 @@ const schema = {
   name: 'cards',
   fields: [
     { name: 'id', type: 'string' },
-    { name: 'name', type: 'string' },
+    { name: 'name', type: 'string', facet: true }, // ← ✅
     { name: 'mana_cost', type: 'string', optional: true },
-    { name: 'cmc', type: 'float' },
-    { name: 'color_identity', type: 'string[]', optional: true },
-    { name: 'colors', type: 'string[]', optional: true },
-    { name: 'type_line', type: 'string' },
-    { name: 'oracle_text', type: 'string', optional: true },
-    { name: 'rarity', type: 'string' },
+    { name: 'cmc', type: 'float', facet: true }, // ← ✅
+    { name: 'color_identity', type: 'string[]', optional: true, facet: true }, // ← ✅
+    { name: 'colors', type: 'string[]', optional: true, facet: true }, // ← ✅
+    { name: 'type_line', type: 'string', facet: true }, // ← ✅ si querés filtrar por tipo
+    { name: 'oracle_text', type: 'string', optional: true, facet: true }, // ← ✅ (opcional, solo si vas a filtrar por texto)
+    { name: 'rarity', type: 'string', facet: true }, // ← ✅
     { name: 'set', type: 'string' }
   ],
   default_sorting_field: 'cmc'
 };
+
 
 // Guardamos el schema en un archivo temporal
 const tempPath = 'temp-schema.json';
