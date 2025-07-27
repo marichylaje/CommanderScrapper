@@ -67,7 +67,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
         per_page: 50,
       });
 
-    return res.status(200).json((results.hits ?? []).map((h: any) => h.document));
+    const unique = new Map();
+    (results.hits ?? []).forEach((h: any) => {
+    unique.set(h.document.oracle_id, h.document);
+    });
+
+    return res.status(200).json(Array.from(unique.values()));
   } catch (error: any) {
     console.error('💥 ERROR:', error.message, error.stack);
     res.status(500).json({ error: 'Internal Server Error', details: error.message });
