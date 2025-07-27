@@ -1,45 +1,55 @@
 import { z } from 'zod';
 
-export const CardFaceSchema = z.object({
-  name: z.string(),
+const ImageUrisSchema = z.object({
+  art_crop: z.string().optional(),
+  large: z.string().optional(),
+  normal: z.string().optional(),
 });
 
-export const CardPartSchema = z.object({
+const CardFaceSchema = z.object({
   name: z.string(),
+  type_line: z.string(),
+  mana_cost: z.string().optional(),
+  image_uris: ImageUrisSchema.optional(),
 });
 
 export const ReducedCardSchema = z.object({
   name: z.string(),
-  mana_cost: z.string().optional().nullable(),
+  mana_cost: z.string().optional(),
   cmc: z.number().optional(),
-  type_line: z.string().optional(),
-  oracle_text: z.string().optional(),
-  power: z.string().optional().nullable(),
-  toughness: z.string().optional().nullable(),
+  collector_number: z.string(),
+  color_identity: z.array(z.string()).optional(),
   colors: z.array(z.string()).optional(),
+  games: z.array(z.enum(['arena', 'mtgo', 'paper'])),
+  id: z.string(),
+  image_uris: ImageUrisSchema.optional(),
   keywords: z.array(z.string()).optional(),
-  card_faces: z.array(CardFaceSchema).optional(),
-  all_parts: z.array(CardPartSchema).optional(),
-  legalities: z
+  oracle_id: z.string(),
+  oracle_text: z.string().optional(),
+  prices: z
     .object({
-      commander: z.union([
-        z.literal('legal'),
-        z.literal('not_legal'),
-        z.literal('restricted'),
-        z.literal('banned'),
-      ]).optional(),
+      eur: z.string().optional(),
+      eur_foil: z.string().optional(),
+      usd: z.string().optional(),
+      usd_etched: z.string().optional(),
+      usd_foil: z.string().optional(),
     })
     .optional(),
-  games: z.array(z.string()).optional(),
-  set_name: z.string().optional(),
-  rarity: z.union([
-    z.literal('common'),
-    z.literal('uncommon'),
-    z.literal('rare'),
-    z.literal('mythic'),
-    z.literal('special'),
-    z.literal('bonus'),
-  ]).optional(),
+  purchase_uris: z.object({
+    cardmarket: z.string(),
+    tcgplayer: z.string(),
+  }),
+  rarity: z.enum([
+    'common',
+    'uncommon',
+    'rare',
+    'mythic',
+    'special',
+    'bonus',
+  ]),
+  set: z.string(),
+  type_line: z.string(),
+  card_faces: z.array(CardFaceSchema).optional(),
 });
 
 export type ReducedCard = z.infer<typeof ReducedCardSchema>;

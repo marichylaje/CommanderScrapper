@@ -1,0 +1,39 @@
+# fly.toml app configuration file generated for meili-commanderscrapper
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+
+app = 'meili-commanderscrapper'
+primary_region = 'fra'
+
+[build]
+  image = 'getmeili/meilisearch:latest'
+
+[env]
+  MEILI_ENV = "production"
+  MEILI_MASTER_KEY = ""
+  MEILI_DB_PATH = "/meili_data"
+
+[[services]]
+  internal_port = 7700
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
+
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"
+
+[mounts]
+  source = "meili_data"
+  destination = "/meili_data"
+
+[[vm]]
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
