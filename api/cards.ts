@@ -27,19 +27,23 @@ function deduplicateByOracleId(cards: Card[]): Card[] {
 }
 
 function filterCards(cards: Card[], queryParams: Record<string, string>) {
+  const allowedIdentities = queryParams.identity
+    ? queryParams.identity.split(',').map((s) => s.trim().toUpperCase())
+    : [];
+
   return cards.filter((card) => {
     const passesCMC =
       !queryParams.cmc || Number(card.cmc) === Number(queryParams.cmc);
 
-    const passesColor =
-      !queryParams.identity ||
-      queryParams.identity
-        .split(',')
-        .some((ci) => ci === (card.color_identity ?? []).join(''));
+    const cardIdentity = (card.color_identity ?? []).join('').toUpperCase();
 
-    return passesCMC && passesColor;
+    const passesIdentity =
+      allowedIdentities.length === 0 || allowedIdentities.includes(cardIdentity);
+
+    return passesCMC && passesIdentity;
   });
 }
+
 
 export default async function handler(
   req: VercelRequest,
