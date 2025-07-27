@@ -59,23 +59,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
           protocol: 'https',
         },
       ],
-      apiKey: 'typsensemasterkeyMariArri30123456789', // reemplazala por un secret real
+      apiKey: 'typsensemasterkeyMariArri30123456789',
     });
 
     const rawQuery = req.query.q?.toString() || '';
-    const filter_by = parseScryfallToFilterBy(rawQuery);
-    const q = parseQueryTextualPart(rawQuery);
+    const filters = parseScryfallToFilterBy(rawQuery);
+
+    // Buscar name:"traxa" como substring exacto dentro del nombre
+    const nameMatch = rawQuery.match(/name:"?([a-zA-Z0-9\s']+)"?/);
+    const q = nameMatch ? nameMatch[1].toLowerCase() : '*';
 
     const results = await client
-    .collections('cards')
-    .documents()
-    .search({
-        q: '*',
-        query_by: 'name,type_line,oracle_text',
-        filter_by,
+      .collections('cards')
+      .documents()
+      .search({
+        q,
+        query_by: 'name',
+        filter_by: filters,
         per_page: 50,
-    });
-
+        prefix: 'middle',       // 🔑 Permite "traxa" ⊆ "Atraxa"
+        num_typos: 0            // 🔒 Coincidencia exacta, sin errores
+      });
 
     const unique = new Map();
     (results.hits ?? []).forEach((h: any) => {
