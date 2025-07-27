@@ -25,4 +25,4 @@ primary_region = "fra"
   cpus = 1
 
 [processes]
-  app = "typesense-server --data-dir /data --api-key $TYPESENSE_API_KEY --enable-cors"
+  app = "typesense-server --data-dir /data --api-key typsensemasterkeyMariArri30123456789 --enable-cors"

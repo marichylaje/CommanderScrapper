@@ -1,0 +1,16 @@
+{
+  "name": "cards",
+  "fields": [
+    { "name": "id", "type": "string" },
+    { "name": "name", "type": "string" },
+    { "name": "mana_cost", "type": "string", "optional": true },
+    { "name": "cmc", "type": "float", "optional": true },
+    { "name": "color_identity", "type": "string[]", "optional": true },
+    { "name": "colors", "type": "string[]", "optional": true },
+    { "name": "type_line", "type": "string" },
+    { "name": "oracle_text", "type": "string", "optional": true },
+    { "name": "rarity", "type": "string" },
+    { "name": "set", "type": "string" }
+  ],
+  "default_sorting_field": "cmc"
+}
