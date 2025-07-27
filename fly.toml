@@ -1,33 +1,26 @@
-# fly.toml app configuration file generated for meili-commanderscrapper
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-
-app = 'meili-commanderscrapper'
-primary_region = 'fra'
+app = "typesense-commanderscrapper"
+primary_region = "fra"
 
 [build]
-  image = "getmeili/meilisearch:v1.13.0"
+  image = "typesense/typesense:0.21.0"  # o la versión más actual
 
 [env]
-  MEILI_ENV = "production"
-  MEILI_DB_PATH = "/meili_data"
+  TYPESENSE_API_KEY = "tu_api_key_segura"
+  TYPESENSE_DATA_DIR = "/typesense_data"
+  # CORS, TLS, etc según documentación
 
 [http_service]
-  internal_port = 7700
+  internal_port = 8108
   force_https = true
-  auto_stop_machines = false
-  auto_start_machines = true
-  min_machines_running = 1
-  processes = ['app']
+  processes = ["app"]
 
 [mounts]
-  source = "meili_data"
-  destination = "/meili_data"
+  source = "typesense_data"
+  destination = "/typesense_data"
 
 [[vm]]
   memory = "1gb"
-  cpu_kind = "shared"
   cpus = 1
 
 [processes]
-  app = "/bin/meilisearch --http-addr '0.0.0.0:7700'"
+  app = "/usr/bin/typesense-server --data-dir /typesense_data --api-port 8108 --listen-address 0.0.0.0"
