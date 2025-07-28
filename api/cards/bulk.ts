@@ -39,7 +39,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       collection: 'cards',         // necesario para Typesense
     }));
 
-    const batchResults = await client.multiSearch.perform({
+    const batchResults: {
+      results: Array<{
+        hits?: Array<{ document: { name: string; oracle_id: string; [key: string]: any } }>;
+      }>;
+    } = await client.multiSearch.perform({
       searches,
     });
 
