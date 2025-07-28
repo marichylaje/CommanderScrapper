@@ -29,13 +29,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const chunkSize = 20;
   for (let i = 0; i < names.length; i += chunkSize) {
     const batch = names.slice(i, i + chunkSize);
+    console.log('🔍 Searching for:', batch);
 
     const searches = batch.map((name) => ({
       q: name,
       query_by: 'name',
       per_page: 1,
       num_typos: 0,
-      prefix: 'false',
+      prefix: 'none',
       exhaustive_search: true,
     }));
 
@@ -52,14 +53,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
     const seen = new Set();
     for (const hit of batchResults.results) {
-    const match = hit.hits?.find(
-        (h: any) => h.document.name.toLowerCase() === hit.query.toLowerCase()
-    );
-    if (match && !seen.has(match.document.oracle_id)) {
-        seen.add(match.document.oracle_id);
-        results.push(match.document);
+        const normalize = (str: string) => str.toLowerCase().replace(/[\u2019']/g, "'").trim();
+        const match = hit.hits?.find(
+            (h: any) => normalize(h.document.name) === normalize(hit.query)
+        );
+
+        if (match && !seen.has(match.document.oracle_id)) {
+            seen.add(match.document.oracle_id);
+            results.push(match.document);
+        }
     }
-    }
+    console.log('📦 Results:', JSON.stringify(batchResults, null, 2));
+
   }
 
   return res.status(200).json(results);
