@@ -1,3 +1,4 @@
+// api/cards.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
 
@@ -9,39 +10,6 @@ type VercelResponse = ServerResponse & {
   status: (code: number) => VercelResponse;
   json: (body: any) => void;
 };
-
-// 🔧 Construye el filtro para Typesense
-function buildFilterFromParams(params: Record<string, string | string[]>): string {
-  const filters: string[] = [];
-
-  if (params.cmc) filters.push(`cmc:=${params.cmc}`);
-  if (params.rarity) filters.push(`rarity:=${params.rarity}`);
-  if (params.type) filters.push(`type_line:=${params.type}`);
-
-  const identity = params.identity;
-  if (identity) {
-    const identities = Array.isArray(identity) ? identity : [identity];
-    const colorLetters = [...new Set(identities.join('').split(''))]; // "GR" => ["G", "R"]
-    filters.push(`color_identity:contains:[${colorLetters.join(',')}]`);
-  }
-
-  if (params.name) {
-    filters.push(`name:~${params.name}`);
-  }
-
-  return filters.join(' && ');
-}
-
-// 🔍 Construye el campo q para búsqueda textual
-function buildTextQuery(params: Record<string, string | string[]>): string {
-  const parts: string[] = [];
-
-  if (typeof params.oracle === 'string') parts.push(params.oracle);
-  if (typeof params.type === 'string') parts.push(params.type);
-  if (typeof params.name === 'string') parts.push(params.name);
-
-  return parts.join(' ').trim() || '*';
-}
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
@@ -56,37 +24,33 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       apiKey: 'typsensemasterkeyMariArri30123456789',
     });
 
-    const params = req.query as Record<string, string | string[]>;
+    const name = req.query.name?.toString().trim();
 
-    const filter_by = buildFilterFromParams(params);
-    const q = buildTextQuery(params);
-
-    const searchParams: any = {
-      q,
-      query_by: 'name,type_line,oracle_text',
-      per_page: 50,
-    };
-
-    if (filter_by) {
-      searchParams.filter_by = filter_by;
-    }
-
-    if (params.name) {
-      searchParams.prefix = 'middle';
-      searchParams.num_typos = 0;
+    if (!name) {
+      return res.status(400).json({ error: 'Missing "name" query parameter' });
     }
 
     const results = await client
       .collections('cards')
       .documents()
-      .search(searchParams);
+      .search({
+        q: name,
+        query_by: 'name',
+        per_page: 1,
+        num_typos: 0,
+        prefix: 'false',
+        exhaustive_search: true,
+      });
 
-    const unique = new Map();
-    (results.hits ?? []).forEach((h: any) => {
-      unique.set(h.document.oracle_id, h.document);
-    });
+    const exactMatch = results.hits?.find(
+      (hit: any) => hit.document.name.toLowerCase() === name.toLowerCase()
+    );
 
-    return res.status(200).json(Array.from(unique.values()));
+    if (!exactMatch) {
+      return res.status(404).json({ error: 'Card not found' });
+    }
+
+    return res.status(200).json([exactMatch.document]);
   } catch (error: any) {
     console.error('💥 ERROR:', error.message, error.stack);
     res.status(500).json({ error: 'Internal Server Error', details: error.message });
