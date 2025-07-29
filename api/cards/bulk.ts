@@ -8,7 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const names: string[] = req.body?.names;
   if (!Array.isArray(names) || names.length === 0) {
-    return res.status(400).json({ error: 'Invalid or missing "names" in request body' });
+    return res.status(400).json({ error: 'Invalid or missing "names" in request body"' });
   }
 
   const client = new Client({
@@ -23,6 +23,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   });
 
   const results: any[] = [];
+  const seen = new Set();
   const chunkSize = 20;
 
   const normalize = (str: string) =>
@@ -35,64 +36,62 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const searches = batch.map((name) => ({
       q: name,
       query_by: 'name',
-      per_page: 1,
+      per_page: 5, // más resultados para encontrar el match exacto
       num_typos: 0,
       prefix: 'false',
       exhaustive_search: true,
       collection: 'cards',
     }));
 
-    const batchResults: {
-      results: Array<{
-        hits?: Array<{ document: { name: string; oracle_id: string } }>;
-      }>;
-    } = await client.multiSearch.perform({ searches });
-
-    const seen = new Set();
+    const batchResults = await client.multiSearch.perform({ searches }) as {
+      results: Array<{ hits?: any[]; [key: string]: any }>;
+    };
 
     for (let j = 0; j < batchResults.results.length; j++) {
-      const hit = batchResults.results[j];
+      const hits = batchResults.results[j]?.hits || [];
       const originalName = batch[j];
 
-      const exactMatch = hit.hits?.find(
-        (h: any) => normalize(h.document.name) === normalize(originalName)
+      const exact = hits.find(
+        (hit: any) => normalize(hit.document.name) === normalize(originalName)
       );
 
-      if (exactMatch && !seen.has(exactMatch.document.oracle_id)) {
-        seen.add(exactMatch.document.oracle_id);
-        results.push(exactMatch.document);
-      } else {
-        // Fallback: buscar por face_name
-        try {
-          const fallback = await client
-            .collections('cards')
-            .documents()
-            .search({
-              q: originalName,
-              query_by: 'face_name',
-              per_page: 1,
-              num_typos: 0,
-              prefix: 'false',
-              exhaustive_search: true,
-            });
+      if (exact && !seen.has(exact.document.oracle_id)) {
+        seen.add(exact.document.oracle_id);
+        results.push(exact.document);
+        continue;
+      }
 
-          const faceMatch = fallback.hits?.find(
-            (h: any) => normalize(h.document.face_name) === normalize(originalName)
-          );
+      // 🔁 Fallback por face_name si no hubo match exacto
+      try {
+        const fallback = await client
+          .collections('cards')
+          .documents()
+          .search({
+            q: originalName,
+            query_by: 'face_name',
+            per_page: 3,
+            num_typos: 0,
+            prefix: 'false',
+            exhaustive_search: true,
+          });
 
-          if (
-            faceMatch &&
-            !seen.has((faceMatch.document as { oracle_id: string }).oracle_id)
-          ) {
-            seen.add((faceMatch.document as { oracle_id: string }).oracle_id);
-            results.push(faceMatch.document);
-            console.log(`🔁 Fallback por face_name exitoso para "${originalName}"`);
-          } else {
-            console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
-          }
-        } catch (e) {
-          console.error(`💥 Error en fallback de "${originalName}":`, e);
+        const faceHit = fallback.hits?.find(
+          (hit: any) =>
+            normalize(hit.document.face_name) === normalize(originalName)
+        );
+
+        if (
+          faceHit &&
+          !seen.has((faceHit.document as { oracle_id: string }).oracle_id)
+        ) {
+          seen.add((faceHit.document as { oracle_id: string }).oracle_id);
+          results.push(faceHit.document);
+          console.warn(`⚠️ Carta encontrada por face_name: "${originalName}"`);
+        } else {
+          console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
         }
+      } catch (e) {
+        console.error(`💥 Error en fallback de "${originalName}":`, e);
       }
     }
   }
