@@ -10,6 +10,7 @@ type VercelResponse = ServerResponse & {
   status: (code: number) => VercelResponse;
   json: (body: any) => void;
 };
+
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const client = new Client({
@@ -30,49 +31,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     }
 
     // 🔍 Buscar por "name"
-    const results = await client
-      .collections('cards')
-      .documents()
-      .search({
-        q: name,
-        query_by: 'name',
-        per_page: 1,
-        num_typos: 0,
-        prefix: 'false',
-        exhaustive_search: true,
-      });
+    const results = await client.collections('cards').documents().search({
+      q: name,
+      query_by: 'name',
+      per_page: 1,
+      num_typos: 0,
+      prefix: 'false',
+      exhaustive_search: true,
+    });
 
-    const normalize = (s: string) =>
-      s.toLowerCase().replace(/[\u2019’']/g, "'").trim();
-
-    const exactMatch = results.hits?.find(
-      (hit: any) => normalize(hit.document.name) === normalize(name)
-    );
-
-    if (exactMatch) {
-      return res.status(200).json([exactMatch.document]);
+    if (Array.isArray(results.hits) && results.hits.length > 0) {
+      return res.status(200).json([results.hits[0].document]);
     }
 
     // 🔁 Fallback por "face_name"
-    const fallbackResults = await client
-      .collections('cards')
-      .documents()
-      .search({
-        q: name,
-        query_by: 'face_name',
-        per_page: 1,
-        num_typos: 0,
-        prefix: 'false',
-        exhaustive_search: true,
-      });
+    const fallbackResults = await client.collections('cards').documents().search({
+      q: name,
+      query_by: 'face_name',
+      per_page: 1,
+      num_typos: 0,
+      prefix: 'false',
+      exhaustive_search: true,
+    });
 
-    const faceMatch = fallbackResults.hits?.find(
-      (hit: any) => normalize(hit.document.face_name) === normalize(name)
-    );
-
-    if (faceMatch) {
+    if ((fallbackResults.hits?.length ?? 0) > 0) {
       console.warn(`⚠️ Carta encontrada por face_name: "${name}"`);
-      return res.status(200).json([faceMatch.document]);
+      return res.status(200).json([fallbackResults.hits![0].document]);
     }
 
     console.error(`❌ Carta no encontrada en DB: "${name}"`);
