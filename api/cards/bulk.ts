@@ -65,7 +65,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         seen.add(match.document.oracle_id);
         results.push(match.document);
       } else if (!match) {
-        console.warn(`⚠️ No match found for "${originalName}"`);
+        console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
       }
     }
   }

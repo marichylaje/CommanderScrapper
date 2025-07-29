@@ -60,7 +60,7 @@ async function importChunk(chunkData: any[], index: number) {
 
 async function importAll() {
   console.log(`📦 Importando ${allCards.length} cartas en bloques de ${CHUNK_SIZE}...`);
-  const chunks = chunk(allCards, CHUNK_SIZE);
+  const chunks = chunk([...allCards].reverse(), CHUNK_SIZE);
 
   for (let i = 0; i < chunks.length; i++) {
     await importChunk(chunks[i], i + 1);

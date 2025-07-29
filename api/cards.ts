@@ -47,6 +47,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     );
 
     if (!exactMatch) {
+      console.error(`❌ Carta no encontrada en DB: "${name}"`);
       return res.status(404).json({ error: 'Card not found' });
     }
 
