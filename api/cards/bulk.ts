@@ -25,6 +25,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const results: any[] = [];
   const chunkSize = 20;
 
+  const normalize = (str: string) =>
+    str.toLowerCase().replace(/[\u2019’']/g, "'").trim();
+
   for (let i = 0; i < names.length; i += chunkSize) {
     const batch = names.slice(i, i + chunkSize);
     console.log('🔍 Searching for:', batch);
@@ -36,26 +39,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       num_typos: 0,
       prefix: 'false',
       exhaustive_search: true,
-      collection: 'cards',         // necesario para Typesense
+      collection: 'cards',
     }));
 
     const batchResults: {
       results: Array<{
         hits?: Array<{ document: { name: string; oracle_id: string; [key: string]: any } }>;
       }>;
-    } = await client.multiSearch.perform({
-      searches,
-    });
+    } = await client.multiSearch.perform({ searches });
 
     const seen = new Set();
 
-    // Recorrer cada resultado y usar el índice para asociarlo a su búsqueda original
     for (let j = 0; j < batchResults.results.length; j++) {
       const hit = batchResults.results[j];
-      const originalName = batch[j]; // obtener el nombre original
-
-      const normalize = (str: string) =>
-        str.toLowerCase().replace(/[\u2019’']/g, "'").trim();
+      const originalName = batch[j];
 
       const match = hit.hits?.find(
         (h: any) => normalize(h.document.name) === normalize(originalName)
@@ -64,8 +61,33 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       if (match && !seen.has(match.document.oracle_id)) {
         seen.add(match.document.oracle_id);
         results.push(match.document);
-      } else if (!match) {
-        console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
+      } else {
+        // Fallback: buscar por face_name si no hubo match exacto
+        try {
+          const fallback = await client
+            .collections('cards')
+            .documents()
+            .search({
+              q: originalName,
+              query_by: 'face_name',
+              per_page: 1,
+              num_typos: 0,
+              prefix: 'false',
+              exhaustive_search: true,
+            });
+
+          const fallbackHit = fallback.hits?.[0]?.document as { oracle_id: string; [key: string]: any } | undefined;
+
+          if (fallbackHit && !seen.has(fallbackHit.oracle_id)) {
+            seen.add(fallbackHit.oracle_id);
+            results.push(fallbackHit);
+            console.log(`🔁 Fallback por face_name exitoso para "${originalName}"`);
+          } else {
+            console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
+          }
+        } catch (e) {
+          console.error(`💥 Error en fallback de "${originalName}":`, e);
+        }
       }
     }
   }
