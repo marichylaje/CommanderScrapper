@@ -76,8 +76,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             (h: any) => normalize(h.document.face_name) === normalize(originalName)
           );
 
-          if (faceMatch && !seen.has(faceMatch.document.oracle_id)) {
-            seen.add(faceMatch.document.oracle_id);
+          if (
+            faceMatch &&
+            !seen.has((faceMatch.document as { oracle_id: string }).oracle_id)
+          ) {
+            seen.add((faceMatch.document as { oracle_id: string }).oracle_id);
             results.push(faceMatch.document);
             console.log(`🔁 Fallback por face_name exitoso para "${originalName}"`);
           } else {
