@@ -16,6 +16,7 @@ const CardFaceSchema = z.object({
 export const ReducedCardSchema = z.object({
   name: z.string(),
   mana_cost: z.string().optional(),
+  face_name: z.string().optional(),
   cmc: z.number().optional(),
   collector_number: z.string(),
   color_identity: z.array(z.string()).optional(),

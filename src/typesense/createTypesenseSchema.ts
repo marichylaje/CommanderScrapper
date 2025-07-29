@@ -14,6 +14,7 @@ const schema = {
   fields: [
     { name: 'id', type: 'string' },
     { name: 'name', type: 'string', facet: true }, // ← ✅
+    { name: 'face_name', type: 'string', optional: true, facet: true }, // 👈 NUEVO
     { name: 'mana_cost', type: 'string', optional: true },
     { name: 'cmc', type: 'float', facet: true }, // ← ✅
     { name: 'color_identity', type: 'string[]', optional: true, facet: true }, // ← ✅

@@ -36,8 +36,20 @@ async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
 }
 
 function reduceCard(card: ReducedCard) {
+  const faces = card.card_faces;
+  let face_name: string | undefined;
+
+  if (
+    Array.isArray(faces) &&
+    faces.length >= 2 &&
+    faces[0].name !== faces[1].name
+  ) {
+    face_name = faces[0].name;
+  }
+
   return {
     name: card.name,
+    face_name, // 👈 nuevo campo opcional
     mana_cost: card.mana_cost,
     cmc: card.cmc,
     collector_number: card.collector_number,
@@ -55,7 +67,7 @@ function reduceCard(card: ReducedCard) {
     set: card.set,
     type_line: card.type_line,
     released_at: card.released_at,
-    card_faces: card.card_faces?.map((face) => ({
+    card_faces: faces?.map((face) => ({
       name: face.name,
       type_line: face.type_line,
       mana_cost: face.mana_cost,
@@ -63,6 +75,7 @@ function reduceCard(card: ReducedCard) {
     })),
   };
 }
+
 
 
 async function main(): Promise<void> {
