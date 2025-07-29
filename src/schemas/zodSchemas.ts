@@ -49,6 +49,7 @@ export const ReducedCardSchema = z.object({
   ]),
   set: z.string(),
   type_line: z.string(),
+  released_at: z.string(),
   card_faces: z.array(CardFaceSchema).optional(),
 });
 

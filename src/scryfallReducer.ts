@@ -54,6 +54,7 @@ function reduceCard(card: ReducedCard) {
     rarity: card.rarity,
     set: card.set,
     type_line: card.type_line,
+    released_at: card.released_at,
     card_faces: card.card_faces?.map((face) => ({
       name: face.name,
       type_line: face.type_line,
@@ -86,8 +87,22 @@ async function main(): Promise<void> {
       (card) => !card.type_line?.startsWith('Token Creature'),
     );
 
-    const reducedCards = filteredData.map(reduceCard);
-    
+    // Reducimos las cartas
+    const reducedAll = filteredData.map(reduceCard);
+
+    // Elegimos solo la versión más nueva por oracle_id
+    const byNewestOracle: Record<string, ReturnType<typeof reduceCard>> = {};
+
+    for (const card of reducedAll) {
+      const existing = byNewestOracle[card.oracle_id];
+
+      if (!existing || (card.released_at && existing.released_at && card.released_at > existing.released_at)) {
+        byNewestOracle[card.oracle_id] = card;
+      }
+    }
+
+    const reducedCards = Object.values(byNewestOracle);
+        
     const output = {
       last_updated: remoteUpdated,
       cards: reducedCards,

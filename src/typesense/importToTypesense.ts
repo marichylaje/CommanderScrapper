@@ -16,7 +16,8 @@ const DATA_PATH = path.resolve('data/scryfall-reduced.json');
 
 const raw = fs.readFileSync(DATA_PATH, 'utf8');
 const parsed = JSON.parse(raw);
-const allCards = JSON.parse(raw).cards; // ✅ Esto es lo correcto
+const allCards = parsed.cards;
+
 console.log(Array.isArray(allCards), allCards.length);
 
 function chunk<T>(arr: T[], size: number): T[][] {
@@ -60,7 +61,11 @@ async function importChunk(chunkData: any[], index: number) {
 
 async function importAll() {
   console.log(`📦 Importando ${allCards.length} cartas en bloques de ${CHUNK_SIZE}...`);
-  const chunks = chunk([...allCards].reverse(), CHUNK_SIZE);
+
+  // 🔥 Eliminamos el campo `created_at` de cada carta
+  const cleanedCards = allCards.map(({ created_at, ...rest }) => rest);
+
+  const chunks = chunk(cleanedCards, CHUNK_SIZE);
 
   for (let i = 0; i < chunks.length; i++) {
     await importChunk(chunks[i], i + 1);
