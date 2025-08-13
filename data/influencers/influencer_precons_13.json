@@ -1,0 +1,1797 @@
+[
+  {
+    "name": "Gruul Landfall Swarm",
+    "commander": "Rulik Mons, Warren Chief",
+    "influencerName": "Pete - pwmagiccz",
+    "socialNetworks": [
+      {
+        "instagram": "@pwmagiccz",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Gruul landfall deck that floods the battlefield with tokens and aggressive creatures while dealing incremental damage through repeated land drops. Synergistic goblins, ramp spells, and landfall payoffs create constant pressure, while combat tricks and burn spells secure tempo and close games quickly.",
+      "es": "Mazo Gruul de landfall que inunda la mesa con fichas y criaturas agresivas, infligiendo daño incremental con repetidas entradas de tierras. Trasgos sinérgicos, ramp y recompensas de landfall ejercen presión constante, mientras que trucos de combate y chispas aseguran el tempo y cierran las partidas rápidamente.",
+      "it": "Mazzo Gruul landfall che riempie il campo con pedine e creature aggressive, infliggendo danni incrementali grazie a ripetute entrate di terre. Goblin sinergici, magie di ramp e payoff landfall creano pressione costante, mentre trucchi da combattimento e rimozioni rapide mantengono il ritmo e chiudono velocemente.",
+      "de": "Ein Gruul-Landfall-Deck, das das Spielfeld mit Tokens und aggressiven Kreaturen überflutet und durch wiederholte Landdrops stetigen Schaden verursacht. Synergistische Goblins, Ramp-Zauber und Landfall-Belohnungen sorgen für konstanten Druck, während Kampftricks und Burn-Zauber Tempo sichern und Spiele schnell beenden.",
+      "ja": "グルールのランドフォール・デッキ。繰り返しの土地プレイでトークンや攻撃的なクリーチャーを展開し、継続的なダメージを与える。シナジーのあるゴブリンやランプ呪文、ランドフォールの報酬で常に圧力をかけ、戦闘トリックや火力でテンポを維持し素早く勝負を決める。",
+      "pt": "Deck Gruul de landfall que enche o campo com fichas e criaturas agressivas, causando dano incremental com repetidas jogadas de terrenos. Goblins sinérgicos, ramp e recompensas de landfall geram pressão constante, enquanto truques de combate e queimadas asseguram o ritmo e encerram as partidas rapidamente.",
+      "fr": "Un deck Gruul landfall qui inonde le champ de bataille de jetons et de créatures agressives tout en infligeant des dégâts progressifs via des poses de terrains répétées. Des gobelins synergiques, du ramp et des récompenses de landfall maintiennent la pression, tandis que des tours de combat et des blasts assurent le tempo et concluent rapidement les parties."
+    },
+    "cards": [
+      {
+        "name": "Akoum Hellkite",
+        "count": 1
+      },
+      {
+        "name": "Bristly Bill, Spine Sower",
+        "count": 1
+      },
+      {
+        "name": "Canopy Baloth",
+        "count": 1
+      },
+      {
+        "name": "Cosi's Ravager",
+        "count": 1
+      },
+      {
+        "name": "Elfsworn Giant",
+        "count": 1
+      },
+      {
+        "name": "Elvish Regrower",
+        "count": 1
+      },
+      {
+        "name": "Elvish Visionary",
+        "count": 1
+      },
+      {
+        "name": "Evolution Sage",
+        "count": 1
+      },
+      {
+        "name": "Fang Guardian",
+        "count": 1
+      },
+      {
+        "name": "Flesh Burrower",
+        "count": 1
+      },
+      {
+        "name": "Goblin Anarchomancer",
+        "count": 1
+      },
+      {
+        "name": "Goblin Dark-Dwellers",
+        "count": 1
+      },
+      {
+        "name": "Goblin Rabblemaster",
+        "count": 1
+      },
+      {
+        "name": "Grazing Gladehart",
+        "count": 1
+      },
+      {
+        "name": "Grove Rumbler",
+        "count": 1
+      },
+      {
+        "name": "Hobgoblin Bandit Lord",
+        "count": 1
+      },
+      {
+        "name": "Jaddi Offshoot",
+        "count": 1
+      },
+      {
+        "name": "Kazandu Mammoth",
+        "count": 1
+      },
+      {
+        "name": "Krenko, Baron of Tin Street",
+        "count": 1
+      },
+      {
+        "name": "Krenko, Mob Boss",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of Rage",
+        "count": 1
+      },
+      {
+        "name": "Quilled Greatwurm",
+        "count": 1
+      },
+      {
+        "name": "Rampaging Baloths",
+        "count": 1
+      },
+      {
+        "name": "Relic Robber",
+        "count": 1
+      },
+      {
+        "name": "Screaming Nemesis",
+        "count": 1
+      },
+      {
+        "name": "Skoa, Embermage",
+        "count": 1
+      },
+      {
+        "name": "Soul of the Harvest",
+        "count": 1
+      },
+      {
+        "name": "Spikeshot Goblin",
+        "count": 1
+      },
+      {
+        "name": "Toggo, Goblin Weaponsmith",
+        "count": 1
+      },
+      {
+        "name": "Zada, Hedron Grinder",
+        "count": 1
+      },
+      {
+        "name": "Break Asunder",
+        "count": 1
+      },
+      {
+        "name": "Canopy Surge",
+        "count": 1
+      },
+      {
+        "name": "Dire-Strain Rampage",
+        "count": 1
+      },
+      {
+        "name": "Fossil Find",
+        "count": 1
+      },
+      {
+        "name": "Goblin Negotiation",
+        "count": 1
+      },
+      {
+        "name": "Grow from the Ashes",
+        "count": 1
+      },
+      {
+        "name": "Meteor Swarm",
+        "count": 1
+      },
+      {
+        "name": "Mizzium Mortars",
+        "count": 1
+      },
+      {
+        "name": "Phytoburst",
+        "count": 1
+      },
+      {
+        "name": "Rishkar's Expertise",
+        "count": 1
+      },
+      {
+        "name": "Skyshroud Claim",
+        "count": 1
+      },
+      {
+        "name": "Stump Stomp",
+        "count": 1
+      },
+      {
+        "name": "Trial of Agony",
+        "count": 1
+      },
+      {
+        "name": "Broken Wings",
+        "count": 1
+      },
+      {
+        "name": "Cathartic Pyre",
+        "count": 1
+      },
+      {
+        "name": "Fists of Flame",
+        "count": 1
+      },
+      {
+        "name": "Horrid Vigor",
+        "count": 1
+      },
+      {
+        "name": "Impossible Inferno",
+        "count": 1
+      },
+      {
+        "name": "Pawpatch Formation",
+        "count": 1
+      },
+      {
+        "name": "Savage Beating",
+        "count": 1
+      },
+      {
+        "name": "Shock",
+        "count": 1
+      },
+      {
+        "name": "Adventuring Gear",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Ecologist's Terrarium",
+        "count": 1
+      },
+      {
+        "name": "Fire Diamond",
+        "count": 1
+      },
+      {
+        "name": "Lantern of Revealing",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Spidersilk Net",
+        "count": 1
+      },
+      {
+        "name": "Tormod's Crypt",
+        "count": 1
+      },
+      {
+        "name": "Druid Class",
+        "count": 1
+      },
+      {
+        "name": "Frantic Strength",
+        "count": 1
+      },
+      {
+        "name": "Gruul War Chant",
+        "count": 1
+      },
+      {
+        "name": "Roaring Earth",
+        "count": 1
+      },
+      {
+        "name": "Zendikar's Roil",
+        "count": 1
+      },
+      {
+        "name": "Amonkhet Raceway",
+        "count": 1
+      },
+      {
+        "name": "Avishkar Raceway",
+        "count": 1
+      },
+      {
+        "name": "Bleeding Woods",
+        "count": 1
+      },
+      {
+        "name": "Bristling Backwoods",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 13
+      },
+      {
+        "name": "Gruul Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Guildmages' Forum",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 12
+      },
+      {
+        "name": "Muraganda Raceway",
+        "count": 1
+      },
+      {
+        "name": "Rugged Highlands",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Blinged-Out Braids",
+    "commander": "Braids, Arisen Nightmare",
+    "influencerName": "Drew Hart",
+    "socialNetworks": [
+      {
+        "instagram": "@second_seven.mtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A monoblack sacrifice engine leveraging death triggers, resource denial, and recursion to control the game. Sacrifice outlets and value creatures generate cards, mana, or life drain, while high-impact finishers like Torment of Hailfire and Rise of the Dark Realms close out stalled boards. Fast mana and tutors ensure consistency, with stax elements taxing opponents' development.",
+      "es": "Motor mononegro de sacrificio que aprovecha disparos de muerte, negación de recursos y recurrencia para controlar la partida. Sacrificadores y criaturas de valor generan cartas, maná o drenaje de vidas, mientras que finalizadores como Torment of Hailfire y Rise of the Dark Realms cierran en mesas estancadas. El maná rápido y los tutores aportan consistencia, con elementos stax que frenan el desarrollo rival.",
+      "it": "Motore mononero di sacrificio che sfrutta inneschi di morte, negazione delle risorse e ricorsione per controllare la partita. Sacrificatori e creature di valore producono carte, mana o drenaggio di vite, mentre finisher come Torment of Hailfire e Rise of the Dark Realms chiudono in situazioni bloccate. Mana veloce e tutor garantiscono consistenza, con elementi stax che rallentano gli avversari.",
+      "de": "Eine monoblack-Opfermaschine, die Todeseffekte, Ressourcenkontrolle und Wiederholung nutzt, um das Spiel zu dominieren. Opferquellen und Value-Kreaturen erzeugen Karten, Mana oder Lebensverlust, während Finisher wie Torment of Hailfire und Rise of the Dark Realms festgefahrene Bretter beenden. Schnelles Mana und Tutoren sichern Konstanz, während Stax-Elemente den Gegner ausbremsen.",
+      "ja": "単色黒の生け贄エンジン。死亡誘発、リソース妨害、再利用を駆使してゲームを支配する。生け贄手段とバリュークリーチャーでカード、マナ、ライフ吸収を生み出し、Torment of Hailfire や Rise of the Dark Realms のようなフィニッシャーで膠着盤面を締める。高速マナとチューターで安定性を確保し、スタックス要素で相手の展開を阻害する。",
+      "pt": "Motor monoblack de sacrifício que utiliza gatilhos de morte, negação de recursos e recorrência para controlar o jogo. Fontes de sacrifício e criaturas de valor geram cartas, mana ou drenagem de vida, enquanto finalizadores como Torment of Hailfire e Rise of the Dark Realms encerram mesas travadas. Mana rápido e tutores garantem consistência, com elementos de stax que atrasam o desenvolvimento dos oponentes.",
+      "fr": "Moteur de sacrifice mononoir exploitant les déclencheurs de mort, la privation de ressources et la récurrence pour contrôler la partie. Les sources de sacrifice et les créatures à valeur génèrent cartes, mana ou perte de vie, tandis que des finisseurs comme Torment of Hailfire et Rise of the Dark Realms concluent sur des plateaux figés. Le mana rapide et les tuteurs assurent la constance, avec des éléments stax qui ralentissent le développement adverse."
+    },
+    "cards": [
+      {
+        "name": "Abhorrent Overlord",
+        "count": 1
+      },
+      {
+        "name": "Ayara, First of Locthwain",
+        "count": 1
+      },
+      {
+        "name": "Bloodghast",
+        "count": 1
+      },
+      {
+        "name": "Bloodletter of Aclazotz",
+        "count": 1
+      },
+      {
+        "name": "Braids, Cabal Minion",
+        "count": 1
+      },
+      {
+        "name": "Crypt Ghast",
+        "count": 1
+      },
+      {
+        "name": "Dauthi Voidwalker",
+        "count": 1
+      },
+      {
+        "name": "Endless Cockroaches",
+        "count": 1
+      },
+      {
+        "name": "Endrek Sahr, Master Breeder",
+        "count": 1
+      },
+      {
+        "name": "Gravecrawler",
+        "count": 1
+      },
+      {
+        "name": "Gray Merchant of Asphodel",
+        "count": 1
+      },
+      {
+        "name": "Grim Servant",
+        "count": 1
+      },
+      {
+        "name": "Jadar, Ghoulcaller of Nephalia",
+        "count": 1
+      },
+      {
+        "name": "K'rrik, Son of Yawgmoth",
+        "count": 1
+      },
+      {
+        "name": "Kokusho, the Evening Star",
+        "count": 1
+      },
+      {
+        "name": "Massacre Wurm",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Bats",
+        "count": 1
+      },
+      {
+        "name": "Mutated Cultist",
+        "count": 1
+      },
+      {
+        "name": "Nether Traitor",
+        "count": 1
+      },
+      {
+        "name": "Nine-Lives Familiar",
+        "count": 1
+      },
+      {
+        "name": "Ophiomancer",
+        "count": 1
+      },
+      {
+        "name": "Pitiless Plunderer",
+        "count": 1
+      },
+      {
+        "name": "Smothering Abomination",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Species Specialist",
+        "count": 1
+      },
+      {
+        "name": "Warren Soultrader",
+        "count": 1
+      },
+      {
+        "name": "Yawgmoth, Thran Physician",
+        "count": 1
+      },
+      {
+        "name": "Ashnod's Altar",
+        "count": 1
+      },
+      {
+        "name": "Jet Medallion",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Mana Vault",
+        "count": 1
+      },
+      {
+        "name": "Mycosynth Wellspring",
+        "count": 1
+      },
+      {
+        "name": "Nyx Lotus",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Altar",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Animist",
+        "count": 1
+      },
+      {
+        "name": "Ugin's Nexus",
+        "count": 1
+      },
+      {
+        "name": "Cabal Ritual",
+        "count": 1
+      },
+      {
+        "name": "Culling the Weak",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Deadly Rollick",
+        "count": 1
+      },
+      {
+        "name": "Flare of Malice",
+        "count": 1
+      },
+      {
+        "name": "Imp's Mischief",
+        "count": 1
+      },
+      {
+        "name": "Malakir Rebirth // Malakir Mire",
+        "count": 1
+      },
+      {
+        "name": "Not Dead After All",
+        "count": 1
+      },
+      {
+        "name": "Null Elemental Blast",
+        "count": 1
+      },
+      {
+        "name": "Snuff Out",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Withering Torment",
+        "count": 1
+      },
+      {
+        "name": "Beseech the Mirror",
+        "count": 1
+      },
+      {
+        "name": "Blasphemous Edict",
+        "count": 1
+      },
+      {
+        "name": "Buried Alive",
+        "count": 1
+      },
+      {
+        "name": "Diabolic Intent",
+        "count": 1
+      },
+      {
+        "name": "Exsanguinate",
+        "count": 1
+      },
+      {
+        "name": "Feed the Swarm",
+        "count": 1
+      },
+      {
+        "name": "Persist",
+        "count": 1
+      },
+      {
+        "name": "Reanimate",
+        "count": 1
+      },
+      {
+        "name": "Rise of the Dark Realms",
+        "count": 1
+      },
+      {
+        "name": "Torment of Hailfire",
+        "count": 1
+      },
+      {
+        "name": "Victimize",
+        "count": 1
+      },
+      {
+        "name": "Attrition",
+        "count": 1
+      },
+      {
+        "name": "Gift of Doom",
+        "count": 1
+      },
+      {
+        "name": "Grave Pact",
+        "count": 1
+      },
+      {
+        "name": "Liliana's Contract",
+        "count": 1
+      },
+      {
+        "name": "Necropotence",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Cabal Coffers",
+        "count": 1
+      },
+      {
+        "name": "Deserted Temple",
+        "count": 1
+      },
+      {
+        "name": "Lake of the Dead",
+        "count": 1
+      },
+      {
+        "name": "Nykthos, Shrine to Nyx",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 19
+      },
+      {
+        "name": "Terrain Generator",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth",
+        "count": 1
+      },
+      {
+        "name": "Urza's Saga",
+        "count": 1
+      },
+      {
+        "name": "Volrath's Stronghold",
+        "count": 1
+      },
+      {
+        "name": "Witch's Cottage",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "All the world's a stage",
+    "commander": "Niv-Mizzet, Guildpact",
+    "influencerName": "Spange",
+    "socialNetworks": [
+      {
+        "instagram": "@mtg_dragon_mama",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A five-color spectacle where performance and chaos intertwine, using creatures, spells, and enchantments themed around theater and drama. Steals, copy effects, and staged combat tricks keep opponents off balance, while versatile removal and value engines ensure the show always goes on until the final act.",
+      "es": "Un espectáculo de cinco colores donde la interpretación y el caos se entrelazan, usando criaturas, conjuros y encantamientos con temática teatral. Robos, efectos de copia y trucos de combate escénicos desestabilizan a los oponentes, mientras que la eliminación versátil y los motores de valor mantienen el espectáculo hasta el acto final.",
+      "it": "Uno spettacolo a cinque colori in cui interpretazione e caos si intrecciano, usando creature, magie e incantesimi a tema teatrale. Rubare, copiare e trucchi scenici in combattimento destabilizzano gli avversari, mentre rimozioni versatili e motori di valore mantengono lo spettacolo fino all’atto finale.",
+      "de": "Ein Fünf-Farben-Spektakel, bei dem Theater und Chaos ineinandergreifen, mit Kreaturen, Zaubern und Verzauberungen im Theaterstil. Diebstahl-, Kopier- und Kampftheatertricks bringen Gegner aus dem Gleichgewicht, während vielseitige Removal und Wert-Engines die Show bis zum letzten Akt am Laufen halten.",
+      "ja": "5色のスペクタクル。演劇と混沌が絡み合い、舞台をテーマにしたクリーチャーや呪文、エンチャントを駆使する。コントロール奪取やコピー、舞台仕立ての戦闘トリックで相手を翻弄し、多用途除去とバリューエンジンでショーを最後の幕まで続ける。",
+      "pt": "Um espetáculo de cinco cores onde performance e caos se entrelaçam, usando criaturas, feitiços e encantamentos com temática teatral. Roubo, efeitos de cópia e truques de combate encenados desequilibram os oponentes, enquanto remoção versátil e motores de valor mantêm o show até o ato final.",
+      "fr": "Un spectacle cinq couleurs où performance et chaos s'entremêlent, utilisant créatures, sorts et enchantements à thème théâtral. Vols, effets de copie et astuces de combat mises en scène déstabilisent les adversaires, tandis que removals polyvalents et moteurs de valeur maintiennent le spectacle jusqu’à l’acte final."
+    },
+    "cards": [
+      {
+        "name": "Estrid, the Masked",
+        "count": 1
+      },
+      {
+        "name": "Oko, the Ringleader",
+        "count": 1
+      },
+      {
+        "name": "Acrobatic Cheerleader",
+        "count": 1
+      },
+      {
+        "name": "Agent of Masks",
+        "count": 1
+      },
+      {
+        "name": "Clockwork Percussionist",
+        "count": 1
+      },
+      {
+        "name": "Creepy Puppeteer",
+        "count": 1
+      },
+      {
+        "name": "Dramatist's Puppet",
+        "count": 1
+      },
+      {
+        "name": "Errant, Street Artist",
+        "count": 1
+      },
+      {
+        "name": "Escape Artist",
+        "count": 1
+      },
+      {
+        "name": "Fleetfoot Dancer",
+        "count": 1
+      },
+      {
+        "name": "Ghostly Dancers",
+        "count": 1
+      },
+      {
+        "name": "Gylwain, Casting Director",
+        "count": 1
+      },
+      {
+        "name": "Musician",
+        "count": 1
+      },
+      {
+        "name": "Oracle of Tragedy",
+        "count": 1
+      },
+      {
+        "name": "Puppeteer",
+        "count": 1
+      },
+      {
+        "name": "Pyrotechnic Performer",
+        "count": 1
+      },
+      {
+        "name": "Radiant Performer",
+        "count": 1
+      },
+      {
+        "name": "Sinew Dancer",
+        "count": 1
+      },
+      {
+        "name": "Sky Theater Strix",
+        "count": 1
+      },
+      {
+        "name": "Stirring Bard",
+        "count": 1
+      },
+      {
+        "name": "Strong, the Brutish Thespian",
+        "count": 1
+      },
+      {
+        "name": "Sword Dancer",
+        "count": 1
+      },
+      {
+        "name": "Thistledown Players",
+        "count": 1
+      },
+      {
+        "name": "Wakedancer",
+        "count": 1
+      },
+      {
+        "name": "Wary Thespian",
+        "count": 1
+      },
+      {
+        "name": "Act of Treason",
+        "count": 1
+      },
+      {
+        "name": "Command Performance",
+        "count": 1
+      },
+      {
+        "name": "Devil's Play",
+        "count": 1
+      },
+      {
+        "name": "Foul Play",
+        "count": 1
+      },
+      {
+        "name": "Harmonize",
+        "count": 1
+      },
+      {
+        "name": "Light Up the Stage",
+        "count": 1
+      },
+      {
+        "name": "Role Reversal",
+        "count": 1
+      },
+      {
+        "name": "Seize the Spotlight",
+        "count": 1
+      },
+      {
+        "name": "Telemin Performance",
+        "count": 1
+      },
+      {
+        "name": "Act of Heroism",
+        "count": 1
+      },
+      {
+        "name": "Artistic Refusal",
+        "count": 1
+      },
+      {
+        "name": "Behind the Mask",
+        "count": 1
+      },
+      {
+        "name": "Big Play",
+        "count": 1
+      },
+      {
+        "name": "Carnival // Carnage",
+        "count": 1
+      },
+      {
+        "name": "Clear the Stage",
+        "count": 1
+      },
+      {
+        "name": "Curtain of Light",
+        "count": 1
+      },
+      {
+        "name": "Curtains' Call",
+        "count": 1
+      },
+      {
+        "name": "Dramatic Entrance",
+        "count": 1
+      },
+      {
+        "name": "Dramatic Reversal",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Arena of the Ancients",
+        "count": 1
+      },
+      {
+        "name": "Glaring Spotlight",
+        "count": 1
+      },
+      {
+        "name": "Guild Globe",
+        "count": 1
+      },
+      {
+        "name": "Healer's Headdress",
+        "count": 1
+      },
+      {
+        "name": "Jester's Cap",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Act of Authority",
+        "count": 1
+      },
+      {
+        "name": "Artist's Talent",
+        "count": 1
+      },
+      {
+        "name": "Assemble the Players",
+        "count": 1
+      },
+      {
+        "name": "Cast Out",
+        "count": 1
+      },
+      {
+        "name": "Charred Foyer // Warped Space",
+        "count": 1
+      },
+      {
+        "name": "Dazzling Theater // Prop Room",
+        "count": 1
+      },
+      {
+        "name": "Dramatic Accusation",
+        "count": 1
+      },
+      {
+        "name": "Theater of Horrors",
+        "count": 1
+      },
+      {
+        "name": "Ticket Booth // Tunnel of Hate",
+        "count": 1
+      },
+      {
+        "name": "Abstergo Entertainment",
+        "count": 1
+      },
+      {
+        "name": "Ancient Amphitheater",
+        "count": 1
+      },
+      {
+        "name": "Arena of Glory",
+        "count": 1
+      },
+      {
+        "name": "Ballroom",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 6
+      },
+      {
+        "name": "Island",
+        "count": 8
+      },
+      {
+        "name": "Maestros Theater",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      },
+      {
+        "name": "Plains",
+        "count": 6
+      },
+      {
+        "name": "Raucous Carnival",
+        "count": 1
+      },
+      {
+        "name": "Raucous Theater",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 5
+      },
+      {
+        "name": "Thespian's Stage",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Alliance United",
+    "commander": "Tazri, Beacon of Unity",
+    "influencerName": "mtgcardcollector",
+    "socialNetworks": [
+      {
+        "instagram": "@mtgcardcollector",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A five-color Allies tribal deck built to swarm the battlefield with synergistic creatures that trigger powerful effects when entering the battlefield. Constant ally triggers provide removal, drain, lifegain, and combat boosts, while Tazri tutors key pieces to maintain pressure. Mana fixing through gates and ramp spells ensures smooth casting across all colors.",
+      "es": "Tribal de cinco colores de Aliados que inunda la mesa con criaturas sinérgicas que disparan poderosos efectos al entrar al campo. Los disparos constantes de aliados proporcionan eliminación, drenaje, ganancia de vidas y mejoras en combate, mientras Tazri busca piezas clave para mantener la presión. La fijación de maná mediante portones y aceleradores asegura lanzar hechizos de todos los colores sin problemas.",
+      "it": "Tribal di cinque colori incentrato sugli Alleati, che riempie il campo con creature sinergiche capaci di innescare potenti effetti all’ingresso in campo. Le attivazioni continue forniscono rimozioni, drenaggio, guadagni di vita e potenziamenti in combattimento, mentre Tazri cerca i pezzi chiave per mantenere la pressione. Fix di mana tramite porte e magie di ramp garantiscono un lancio fluido in tutti i colori.",
+      "de": "Ein fünffarbiges Allies-Tribal-Deck, das das Spielfeld mit synergistischen Kreaturen überflutet, die beim Betreten mächtige Effekte auslösen. Ständige Ally-Trigger bieten Removal, Lebensentzug, Lebensgewinn und Kampfbooster, während Tazri Schlüsselkarten sucht, um den Druck aufrechtzuerhalten. Manafixing über Tore und Rampzauber sorgt für reibungsloses Wirken aller Farben.",
+      "ja": "5色の同盟者部族デッキ。戦場を同盟者で埋め尽くし、戦場に出たときに強力な効果を誘発させる。継続的な同盟者誘発で除去、ライフ吸収、ライフゲイン、戦闘強化を行い、Tazriがキーカードを探して圧力を維持する。ゲートやランプ呪文によるマナ基盤で全色を安定して唱えられる。",
+      "pt": "Tribal de cinco cores de Aliados que enche o campo com criaturas sinérgicas que disparam efeitos poderosos ao entrar em jogo. Gatilhos constantes de aliados oferecem remoção, drenagem, ganho de vida e bônus de combate, enquanto Tazri busca peças-chave para manter a pressão. Fixação de mana via portões e ramp garante conjuração suave em todas as cores.",
+      "fr": "Un tribal Alliés cinq couleurs qui inonde le champ de bataille de créatures synergiques déclenchant de puissants effets à leur arrivée. Les déclenchements constants offrent retrait, drainage, gain de vie et bonus de combat, tandis que Tazri tutoie les pièces clés pour maintenir la pression. La fixation de mana via les portes et le ramp assure un lancement fluide dans toutes les couleurs."
+    },
+    "cards": [
+      {
+        "name": "Ally Encampment",
+        "count": 1
+      },
+      {
+        "name": "Azorius Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Black Dragon Gate",
+        "count": 1
+      },
+      {
+        "name": "Boros Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Branchloft Pathway // Boulderloft Pathway",
+        "count": 1
+      },
+      {
+        "name": "Citadel Gate",
+        "count": 1
+      },
+      {
+        "name": "Cliffgate",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dimir Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Forbidden Orchard",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 3
+      },
+      {
+        "name": "Gateway Plaza",
+        "count": 1
+      },
+      {
+        "name": "Golgari Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Gond Gate",
+        "count": 1
+      },
+      {
+        "name": "Gruul Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Heap Gate",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 2
+      },
+      {
+        "name": "Izzet Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Manor Gate",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 2
+      },
+      {
+        "name": "Orzhov Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Rakdos Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Savai Triome",
+        "count": 1
+      },
+      {
+        "name": "Sea Gate",
+        "count": 1
+      },
+      {
+        "name": "Selesnya Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Simic Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Thriving Bluff",
+        "count": 1
+      },
+      {
+        "name": "Thriving Grove",
+        "count": 1
+      },
+      {
+        "name": "Thriving Heath",
+        "count": 1
+      },
+      {
+        "name": "Thriving Isle",
+        "count": 1
+      },
+      {
+        "name": "Thriving Moor",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Captain's Claws",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Charitable Levy",
+        "count": 1
+      },
+      {
+        "name": "Retreat to Emeria",
+        "count": 1
+      },
+      {
+        "name": "Counterspell",
+        "count": 1
+      },
+      {
+        "name": "Hero's Downfall",
+        "count": 1
+      },
+      {
+        "name": "Join the Ranks",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "March from the Tomb",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Agadeem Occultist",
+        "count": 1
+      },
+      {
+        "name": "Akoum Battlesinger",
+        "count": 1
+      },
+      {
+        "name": "Angelic Captain",
+        "count": 1
+      },
+      {
+        "name": "Beastcaller Savant",
+        "count": 1
+      },
+      {
+        "name": "Chasm Guide",
+        "count": 1
+      },
+      {
+        "name": "Drana's Chosen",
+        "count": 1
+      },
+      {
+        "name": "Drana's Emissary",
+        "count": 1
+      },
+      {
+        "name": "Drana, Liberator of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Firemantle Mage",
+        "count": 1
+      },
+      {
+        "name": "General Tazri",
+        "count": 1
+      },
+      {
+        "name": "Graypelt Hunter",
+        "count": 1
+      },
+      {
+        "name": "Grovetender Druids",
+        "count": 1
+      },
+      {
+        "name": "Hada Freeblade",
+        "count": 1
+      },
+      {
+        "name": "Hagra Diabolist",
+        "count": 1
+      },
+      {
+        "name": "Halimar Excavator",
+        "count": 1
+      },
+      {
+        "name": "Harabaz Druid",
+        "count": 1
+      },
+      {
+        "name": "Hero of Goma Fada",
+        "count": 1
+      },
+      {
+        "name": "Highland Berserker",
+        "count": 1
+      },
+      {
+        "name": "Joraga Bard",
+        "count": 1
+      },
+      {
+        "name": "Jwari Shapeshifter",
+        "count": 1
+      },
+      {
+        "name": "Kabira Evangel",
+        "count": 1
+      },
+      {
+        "name": "Kalastria Healer",
+        "count": 1
+      },
+      {
+        "name": "Kazandu Blademaster",
+        "count": 1
+      },
+      {
+        "name": "Kazuul Warlord",
+        "count": 1
+      },
+      {
+        "name": "Kor Bladewhirl",
+        "count": 1
+      },
+      {
+        "name": "Kor Entanglers",
+        "count": 1
+      },
+      {
+        "name": "Lantern Scout",
+        "count": 1
+      },
+      {
+        "name": "Makindi Patrol",
+        "count": 1
+      },
+      {
+        "name": "Malakir Soothsayer",
+        "count": 1
+      },
+      {
+        "name": "Mina and Denn, Wildborn",
+        "count": 1
+      },
+      {
+        "name": "Munda's Vanguard",
+        "count": 1
+      },
+      {
+        "name": "Munda, Ambush Leader",
+        "count": 1
+      },
+      {
+        "name": "Murasa Pyromancer",
+        "count": 1
+      },
+      {
+        "name": "Ondu Champion",
+        "count": 1
+      },
+      {
+        "name": "Ondu Cleric",
+        "count": 1
+      },
+      {
+        "name": "Resolute Blademaster",
+        "count": 1
+      },
+      {
+        "name": "Sea Gate Loremaster",
+        "count": 1
+      },
+      {
+        "name": "Seascape Aerialist",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Advocate",
+        "count": 1
+      },
+      {
+        "name": "Tajuru Archer",
+        "count": 1
+      },
+      {
+        "name": "Tajuru Beastmaster",
+        "count": 1
+      },
+      {
+        "name": "Tajuru Warcaller",
+        "count": 1
+      },
+      {
+        "name": "Talus Paladin",
+        "count": 1
+      },
+      {
+        "name": "Tuktuk Scrapper",
+        "count": 1
+      },
+      {
+        "name": "Turntimber Ranger",
+        "count": 1
+      },
+      {
+        "name": "Vastwood Animist",
+        "count": 1
+      },
+      {
+        "name": "Veteran Warleader",
+        "count": 1
+      },
+      {
+        "name": "Zulaport Cutthroat",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "There Will Be Blood (Avatars)",
+    "commander": "Extus, Oriq Overlord",
+    "influencerName": "Thrill Of Possibility Deckboxes",
+    "socialNetworks": [
+      {
+        "instagram": "@thrillofpossibilityshop",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Mardu token-focused deck that floods the battlefield with an army of creatures, then leverages powerful sacrifice synergies and anthem effects to overwhelm opponents. Extus provides flexibility as a reanimation engine, while cards like Mondrak, Glory Dominus and Anointed Procession double token output. Sac outlets like Ashnod’s Altar fuel explosive turns, and Dictate of Erebos punishes opposing boards. Removal is plentiful, ensuring the token swarm can swing in for the win.",
+      "es": "Un mazo Mardu centrado en fichas que llena la mesa con un ejército de criaturas y aprovecha sinergias de sacrificio y efectos de antífona para abrumar a los oponentes. Extus ofrece flexibilidad como motor de reanimación, mientras que cartas como Mondrak, Dominus de la Gloria y Procesión Ungida duplican la producción de fichas. Salidas de sacrificio como el Altar de Ashnod impulsan turnos explosivos, y Dictado de Erebos castiga las mesas rivales. La abundante eliminación asegura que el enjambre de fichas pueda cerrar la partida.",
+      "it": "Un mazzo Mardu incentrato sulle pedine che riempie il campo con un esercito di creature, sfruttando sinergie di sacrificio e effetti di potenziamento per sopraffare gli avversari. Extus funge da motore di rianimazione, mentre carte come Mondrak, Dominus della Gloria e Processione Unita raddoppiano la produzione di pedine. Sac outlet come Altare di Ashnod alimentano turni esplosivi, e Dittato di Erebos punisce i board nemici. La rimozione abbondante garantisce che lo sciame possa concludere la partita.",
+      "de": "Ein Mardu-Token-Deck, das das Spielfeld mit einem Heer von Kreaturen überschwemmt und dann mächtige Opfersynergien sowie Anthem-Effekte nutzt, um Gegner zu überwältigen. Extus dient als flexibler Wiederbelebungsmotor, während Karten wie Mondrak, Herrlicher Dominus und Geweihte Prozession die Tokenproduktion verdoppeln. Opfer-Outlets wie Ashnods Altar ermöglichen explosive Züge, und Diktat von Erebos bestraft gegnerische Boards. Reichlich Removal sorgt dafür, dass der Schwarm den Sieg sichern kann.",
+      "ja": "マルドゥのトークン特化デッキ。大量のクリーチャーで戦場を埋め尽くし、強力な生け贄シナジーや全体強化効果で対戦相手を圧倒する。Extusはリアニメーションエンジンとして柔軟性を提供し、Mondrak, Glory DominusやAnointed Processionのようなカードがトークン生成を倍増させる。Ashnod's Altarのような生け贄手段が爆発的なターンを支え、Dictate of Erebosが相手の盤面を壊滅させる。豊富な除去でトークン軍団が勝利を狙える。",
+      "pt": "Um deck Mardu focado em fichas que inunda o campo com um exército de criaturas, aproveitando sinergias de sacrifício e efeitos de anthem para dominar os oponentes. Extus atua como um motor de reanimação versátil, enquanto cartas como Mondrak, Dominus da Glória e Procissão Ungida dobram a produção de fichas. Sac outlets como Altar de Ashnod alimentam turnos explosivos, e Ditado de Erebos pune os campos inimigos. A abundância de remoção garante que o enxame possa finalizar a partida.",
+      "fr": "Un deck Mardu axé sur les jetons qui inonde le champ de bataille d'une armée de créatures, puis exploite de puissantes synergies de sacrifice et des effets d’anthem pour submerger les adversaires. Extus sert de moteur de réanimation flexible, tandis que des cartes comme Mondrak, Dominus de la Gloire et Procession consacrée doublent la production de jetons. Des sorties de sacrifice comme l’Autel d’Ashnod alimentent des tours explosifs, et le Diktat d’Erebos punit les boards adverses. Le retrait abondant assure que l’essaim puisse conclure la partie."
+    },
+    "cards": [
+      {
+        "name": "Extus, Oriq Overlord",
+        "count": 1
+      },
+      {
+        "name": "Elspeth, Sun's Champion",
+        "count": 1
+      },
+      {
+        "name": "Kaya, Geist Hunter",
+        "count": 1
+      },
+      {
+        "name": "Kaya, Spirits' Justice",
+        "count": 1
+      },
+      {
+        "name": "Ainok Strike Leader",
+        "count": 1
+      },
+      {
+        "name": "Bone Devourer",
+        "count": 1
+      },
+      {
+        "name": "Chittering Witch",
+        "count": 1
+      },
+      {
+        "name": "Enduring Innocence",
+        "count": 1
+      },
+      {
+        "name": "Hero of Light",
+        "count": 1
+      },
+      {
+        "name": "Kambal, Profiteering Mayor",
+        "count": 1
+      },
+      {
+        "name": "Kefka Palazzo",
+        "count": 1
+      },
+      {
+        "name": "Mahadi, Emporium Master",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Bats",
+        "count": 1
+      },
+      {
+        "name": "Mondrak, Glory Dominus",
+        "count": 1
+      },
+      {
+        "name": "Pitiless Plunderer",
+        "count": 1
+      },
+      {
+        "name": "Priest of Forgotten Gods",
+        "count": 1
+      },
+      {
+        "name": "Sinkhole Surveyor",
+        "count": 1
+      },
+      {
+        "name": "Thalisse, Reverent Medium",
+        "count": 1
+      },
+      {
+        "name": "Voice of Victory",
+        "count": 1
+      },
+      {
+        "name": "Zurgo Stormrender",
+        "count": 1
+      },
+      {
+        "name": "Increasing Devotion",
+        "count": 1
+      },
+      {
+        "name": "Mob Rule",
+        "count": 1
+      },
+      {
+        "name": "Nomads' Assembly",
+        "count": 1
+      },
+      {
+        "name": "Ruinous Ultimatum",
+        "count": 1
+      },
+      {
+        "name": "Sram's Expertise",
+        "count": 1
+      },
+      {
+        "name": "Tempt with Vengeance",
+        "count": 1
+      },
+      {
+        "name": "Vindicate",
+        "count": 1
+      },
+      {
+        "name": "White Sun's Twilight",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking",
+        "count": 1
+      },
+      {
+        "name": "Benevolent Offering",
+        "count": 1
+      },
+      {
+        "name": "Call the Coppercoats",
+        "count": 1
+      },
+      {
+        "name": "Deadly Dispute",
+        "count": 1
+      },
+      {
+        "name": "Grand Crescendo",
+        "count": 1
+      },
+      {
+        "name": "Inkshield",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Razorgrass Ambush",
+        "count": 1
+      },
+      {
+        "name": "Secure the Wastes",
+        "count": 1
+      },
+      {
+        "name": "Stroke of Midnight",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Will of the Mardu",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Ashnod's Altar",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Lantern",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Altar",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Animist",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Conviction",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Indulgence",
+        "count": 1
+      },
+      {
+        "name": "Thran Dynamo",
+        "count": 1
+      },
+      {
+        "name": "Anointed Procession",
+        "count": 1
+      },
+      {
+        "name": "Barrensteppe Siege",
+        "count": 1
+      },
+      {
+        "name": "Bitterblossom",
+        "count": 1
+      },
+      {
+        "name": "Black Market Connections",
+        "count": 1
+      },
+      {
+        "name": "Caretaker's Talent",
+        "count": 1
+      },
+      {
+        "name": "Dictate of Erebos",
+        "count": 1
+      },
+      {
+        "name": "Dollmaker's Shop // Porcelain Gallery",
+        "count": 1
+      },
+      {
+        "name": "Funeral Room // Awakening Hall",
+        "count": 1
+      },
+      {
+        "name": "Goblin Bombardment",
+        "count": 1
+      },
+      {
+        "name": "Prosperous Partnership",
+        "count": 1
+      },
+      {
+        "name": "Skrelv's Hive",
+        "count": 1
+      },
+      {
+        "name": "Thunder of Unity",
+        "count": 1
+      },
+      {
+        "name": "Tocasia's Welcome",
+        "count": 1
+      },
+      {
+        "name": "Windcrag Siege",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Blackcleave Cliffs",
+        "count": 1
+      },
+      {
+        "name": "Blood Crypt",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Canyon Slough",
+        "count": 1
+      },
+      {
+        "name": "Castle Ardenvale",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Concealed Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Dalkovan Encampment",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fetid Heath",
+        "count": 1
+      },
+      {
+        "name": "Great Arashin City",
+        "count": 1
+      },
+      {
+        "name": "Minas Tirith",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 1
+      },
+      {
+        "name": "Nomad Outpost",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 3
+      },
+      {
+        "name": "Savai Triome",
+        "count": 1
+      },
+      {
+        "name": "Shattered Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Smoldering Marsh",
+        "count": 1
+      },
+      {
+        "name": "Spectator Seating",
+        "count": 1
+      },
+      {
+        "name": "Sulfurous Springs",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Temple of Silence",
+        "count": 1
+      },
+      {
+        "name": "Temple of Triumph",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions",
+        "count": 1
+      },
+      {
+        "name": "Vault of the Archangel",
+        "count": 1
+      },
+      {
+        "name": "Windbrisk Heights",
+        "count": 1
+      }
+    ]
+  }
+]

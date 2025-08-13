@@ -1,0 +1,1810 @@
+[
+  {
+    "name": "Hakebeil",
+    "commander": "Hakbal of the Surging Soul",
+    "influencerName": "Jule MTG",
+    "socialNetworks": [
+      {
+        "instagram": "@magie_craft_generator",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Simic Merfolk tribal deck built around Hakbal of the Surging Soul, focusing on swarm tactics, +1/+1 counter synergies, and card draw from combat damage. It leverages merfolk lords, unblockable threats, and ramp to flood the board while maintaining a steady stream of resources.",
+      "es": "Mazo tribal Simic de tritones centrado en Hakbal of the Surging Soul, que se enfoca en tácticas de enjambre, sinergias con contadores +1/+1 y robo de cartas por daño de combate. Aprovecha señores tritón, amenazas imbloqueables y aceleración para inundar la mesa mientras mantiene un flujo constante de recursos.",
+      "it": "Mazzo tribale Simic di tritoni incentrato su Hakbal of the Surging Soul, focalizzato su tattiche di sciame, sinergie con segnalini +1/+1 e pesca di carte tramite danni da combattimento. Sfrutta signori tritone, minacce imbloccabili e accelerazione per inondare il campo mantenendo un costante flusso di risorse.",
+      "de": "Ein Simic-Volksstamm-Deck um Hakbal of the Surging Soul, das auf Schwarmtaktiken, +1/+1-Marken-Synergien und Kartenziehen durch Kampfschaden setzt. Nutzt Meervolksherrscher, unblockbare Bedrohungen und Ramp, um das Feld zu fluten und stetig Ressourcen zu generieren.",
+      "ja": "《Hakbal of the Surging Soul》を中心としたシミックのマーフォーク部族デッキ。群れ戦術、+1/+1カウンターのシナジー、戦闘ダメージによるドローに重点を置く。マーフォークのロードやアンブロッカブルな脅威、ランプを活かし、盤面を埋め尽くしながら安定したリソースを確保する。",
+      "pt": "Deck tribal Simic de sereianos centrado em Hakbal of the Surging Soul, focado em táticas de enxame, sinergias com marcadores +1/+1 e compra de cartas a partir de dano de combate. Aproveita lordes sereianos, ameaças imbloqueáveis e ramp para inundar o campo mantendo um fluxo constante de recursos.",
+      "fr": "Deck tribal Simic de sirènes centré sur Hakbal of the Surging Soul, axé sur les tactiques d'essaim, les synergies avec les marqueurs +1/+1 et la pioche via les dégâts de combat. Il exploite les seigneurs triton, les menaces imblocables et l'accélération pour inonder le champ tout en conservant un flux constant de ressources."
+    },
+    "cards": [
+      {
+        "name": "Cold-Eyed Selkie",
+        "count": 1
+      },
+      {
+        "name": "Deepfathom Echo",
+        "count": 1
+      },
+      {
+        "name": "Deeproot Elite",
+        "count": 1
+      },
+      {
+        "name": "Emperor Mihail II",
+        "count": 1
+      },
+      {
+        "name": "Forerunner of the Heralds",
+        "count": 1
+      },
+      {
+        "name": "Harbinger of the Seas",
+        "count": 1
+      },
+      {
+        "name": "Herald of Secret Streams",
+        "count": 1
+      },
+      {
+        "name": "Jadelight Ranger",
+        "count": 1
+      },
+      {
+        "name": "Jadelight Spelunker",
+        "count": 1
+      },
+      {
+        "name": "Kopala, Warden of Waves",
+        "count": 1
+      },
+      {
+        "name": "Kumena, Tyrant of Orazca",
+        "count": 1
+      },
+      {
+        "name": "Lord of Atlantis",
+        "count": 1
+      },
+      {
+        "name": "Master of the Pearl Trident",
+        "count": 1
+      },
+      {
+        "name": "Merfolk Cave-Diver",
+        "count": 1
+      },
+      {
+        "name": "Merfolk Sovereign",
+        "count": 1
+      },
+      {
+        "name": "Merrow Harbinger",
+        "count": 1
+      },
+      {
+        "name": "Merrow Reejerey",
+        "count": 1
+      },
+      {
+        "name": "Mist-Cloaked Herald",
+        "count": 1
+      },
+      {
+        "name": "Mist Dancer",
+        "count": 1
+      },
+      {
+        "name": "Nicanzil, Current Conductor",
+        "count": 1
+      },
+      {
+        "name": "Prime Speaker Zegana",
+        "count": 1
+      },
+      {
+        "name": "Rishadan Dockhand",
+        "count": 1
+      },
+      {
+        "name": "River Sneak",
+        "count": 1
+      },
+      {
+        "name": "Sage of the Falls",
+        "count": 1
+      },
+      {
+        "name": "Seafloor Oracle",
+        "count": 1
+      },
+      {
+        "name": "Singer of Swift Rivers",
+        "count": 1
+      },
+      {
+        "name": "Stonybrook Banneret",
+        "count": 1
+      },
+      {
+        "name": "Streambed Aquitects",
+        "count": 1
+      },
+      {
+        "name": "Svyelun of Sea and Sky",
+        "count": 1
+      },
+      {
+        "name": "Tatyova, Benthic Druid",
+        "count": 1
+      },
+      {
+        "name": "Tide Shaper",
+        "count": 1
+      },
+      {
+        "name": "Tishana's Tidebinder",
+        "count": 1
+      },
+      {
+        "name": "Tishana, Voice of Thunder",
+        "count": 1
+      },
+      {
+        "name": "Vodalian Hexcatcher",
+        "count": 1
+      },
+      {
+        "name": "Vorel of the Hull Clade",
+        "count": 1
+      },
+      {
+        "name": "Wanderwine Prophets",
+        "count": 1
+      },
+      {
+        "name": "Wildgrowth Walker",
+        "count": 1
+      },
+      {
+        "name": "Zegana, Utopian Speaker",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Open the Gates",
+        "count": 1
+      },
+      {
+        "name": "Over the Edge",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Wave Goodbye",
+        "count": 1
+      },
+      {
+        "name": "Negate",
+        "count": 1
+      },
+      {
+        "name": "Staggering Size",
+        "count": 1
+      },
+      {
+        "name": "Stony Strength",
+        "count": 1
+      },
+      {
+        "name": "Titanic Brawl",
+        "count": 1
+      },
+      {
+        "name": "Tower Defense",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Bast's Blessing",
+        "count": 1
+      },
+      {
+        "name": "Branching Evolution",
+        "count": 1
+      },
+      {
+        "name": "Curiosity",
+        "count": 1
+      },
+      {
+        "name": "Deeproot Pilgrimage",
+        "count": 1
+      },
+      {
+        "name": "Frogify",
+        "count": 1
+      },
+      {
+        "name": "Growing Rites of Itlimoc",
+        "count": 1
+      },
+      {
+        "name": "Hadana's Climb",
+        "count": 1
+      },
+      {
+        "name": "Kindred Discovery",
+        "count": 1
+      },
+      {
+        "name": "Merrow Commerce",
+        "count": 1
+      },
+      {
+        "name": "Path of Discovery",
+        "count": 1
+      },
+      {
+        "name": "Twists and Turns",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 12
+      },
+      {
+        "name": "Island",
+        "count": 19
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "x-spells",
+    "commander": "Zaxara, the Exemplary",
+    "influencerName": "Jule MTG",
+    "socialNetworks": [
+      {
+        "instagram": "@magie_craft_generator",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Sultai Hydra tribal deck led by Zaxara, the Exemplary, focusing on massive X-spell creatures and scaling threats. It leverages Zaxara's mana generation to cast huge Hydras, doubling counters with cards like Doubling Season and Branching Evolution, and overwhelming opponents with exponential growth and value.",
+      "es": "Mazo tribal Sultai de hidras liderado por Zaxara, the Exemplary, centrado en criaturas y hechizos X de gran tamaño. Aprovecha la generación de maná de Zaxara para lanzar hidras enormes, duplicando contadores con cartas como Doubling Season y Branching Evolution, y superando a los oponentes con un crecimiento y valor exponenciales.",
+      "it": "Mazzo tribale Sultai di idre guidato da Zaxara, the Exemplary, focalizzato su creature e magie X gigantesche. Sfrutta la generazione di mana di Zaxara per lanciare idre enormi, raddoppiando i segnalini con carte come Doubling Season e Branching Evolution, e travolgendo gli avversari con crescita e valore esponenziali.",
+      "de": "Ein Sultai-Hydra-Tribal-Deck unter der Führung von Zaxara, the Exemplary, das sich auf massive X-Zauber-Kreaturen und skalierende Bedrohungen konzentriert. Nutzt Zaxaras Manaerzeugung, um riesige Hydras zu wirken, verdoppelt Marken mit Karten wie Doubling Season und Branching Evolution und überrennt Gegner mit exponentiellem Wachstum und Wert.",
+      "ja": "《Zaxara, the Exemplary》を指揮官とするスゥルタイのハイドラ部族デッキ。巨大なX呪文クリーチャーと成長する脅威に焦点を当てる。Zaxaraのマナ生成を活かして巨大なハイドラを展開し、《Doubling Season》や《Branching Evolution》でカウンターを倍増させ、指数関数的な成長とリソースで相手を圧倒する。",
+      "pt": "Deck tribal Sultai de hidras liderado por Zaxara, the Exemplary, focado em criaturas e mágicas X massivas. Aproveita a geração de mana de Zaxara para conjurar hidras enormes, dobrando marcadores com cartas como Doubling Season e Branching Evolution, e esmagando os oponentes com crescimento e valor exponenciais.",
+      "fr": "Deck tribal Sultaï d'hydres dirigé par Zaxara, the Exemplary, axé sur les créatures et sorts X massifs. Il exploite la génération de mana de Zaxara pour lancer d'énormes hydres, doublant les marqueurs avec des cartes comme Doubling Season et Branching Evolution, et submergeant les adversaires par une croissance et une valeur exponentielles."
+    },
+    "cards": [
+      {
+        "name": "Gargos, Vicious Watcher",
+        "count": 1
+      },
+      {
+        "name": "Genesis Hydra",
+        "count": 1
+      },
+      {
+        "name": "Goldvein Hydra",
+        "count": 1
+      },
+      {
+        "name": "Herald of Secret Streams",
+        "count": 1
+      },
+      {
+        "name": "Hungering Hydra",
+        "count": 1
+      },
+      {
+        "name": "Hydroid Krasis",
+        "count": 1
+      },
+      {
+        "name": "Ingenious Prodigy",
+        "count": 1
+      },
+      {
+        "name": "Iridescent Hornbeetle",
+        "count": 1
+      },
+      {
+        "name": "Lifeblood Hydra",
+        "count": 1
+      },
+      {
+        "name": "Mistcutter Hydra",
+        "count": 1
+      },
+      {
+        "name": "Nimbus Swimmer",
+        "count": 1
+      },
+      {
+        "name": "Ochre Jelly",
+        "count": 1
+      },
+      {
+        "name": "Primordial Hydra",
+        "count": 1
+      },
+      {
+        "name": "Protean Hydra",
+        "count": 1
+      },
+      {
+        "name": "Runadi, Behemoth Caller",
+        "count": 1
+      },
+      {
+        "name": "Tervigon",
+        "count": 1
+      },
+      {
+        "name": "The Goose Mother",
+        "count": 1
+      },
+      {
+        "name": "Troyan, Gutsy Explorer",
+        "count": 1
+      },
+      {
+        "name": "Vastwood Hydra",
+        "count": 1
+      },
+      {
+        "name": "Voracious Hydra",
+        "count": 1
+      },
+      {
+        "name": "Vorinclex, Monstrous Raider",
+        "count": 1
+      },
+      {
+        "name": "Walking Ballista",
+        "count": 1
+      },
+      {
+        "name": "Wren's Run Hydra",
+        "count": 1
+      },
+      {
+        "name": "Yarok, the Desecrated",
+        "count": 1
+      },
+      {
+        "name": "Animist's Awakening",
+        "count": 1
+      },
+      {
+        "name": "Awaken the Woods",
+        "count": 1
+      },
+      {
+        "name": "Blue Sun's Twilight",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Damnable Pact",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Exsanguinate",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Finale of Revelation",
+        "count": 1
+      },
+      {
+        "name": "Green Sun's Twilight",
+        "count": 1
+      },
+      {
+        "name": "Kodama's Reach",
+        "count": 1
+      },
+      {
+        "name": "Mind Grind",
+        "count": 1
+      },
+      {
+        "name": "Mind Spring",
+        "count": 1
+      },
+      {
+        "name": "Profane Command",
+        "count": 1
+      },
+      {
+        "name": "Psychic Drain",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Solve the Equation",
+        "count": 1
+      },
+      {
+        "name": "Torment of Hailfire",
+        "count": 1
+      },
+      {
+        "name": "Villainous Wealth",
+        "count": 1
+      },
+      {
+        "name": "Clash of Wills",
+        "count": 1
+      },
+      {
+        "name": "Syncopate",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Elementalist's Palette",
+        "count": 1
+      },
+      {
+        "name": "Mirror Shield",
+        "count": 1
+      },
+      {
+        "name": "Mox Opal",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Curiosity",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Resilience",
+        "count": 1
+      },
+      {
+        "name": "Branching Evolution",
+        "count": 1
+      },
+      {
+        "name": "Doubling Season",
+        "count": 1
+      },
+      {
+        "name": "Freed from the Real",
+        "count": 1
+      },
+      {
+        "name": "Garruk's Uprising",
+        "count": 1
+      },
+      {
+        "name": "Growing Rites of Itlimoc",
+        "count": 1
+      },
+      {
+        "name": "Parallel Lives",
+        "count": 1
+      },
+      {
+        "name": "Pemmin's Aura",
+        "count": 1
+      },
+      {
+        "name": "Unbound Flourishing",
+        "count": 1
+      },
+      {
+        "name": "Utopia Sprawl",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Castle Garenbrig",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls",
+        "count": 1
+      },
+      {
+        "name": "Clearwater Pathway",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Darkslick Shores",
+        "count": 1
+      },
+      {
+        "name": "Darkwater Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 8
+      },
+      {
+        "name": "Island",
+        "count": 5
+      },
+      {
+        "name": "Karn's Bastion",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Necroblossom Snarl",
+        "count": 1
+      },
+      {
+        "name": "Opulent Palace",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 5
+      },
+      {
+        "name": "Tainted Isle",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya Coast",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya, Cradle of Growth",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Omnath’s Landfall Legion",
+    "commander": "Omnath, Locus of Creation",
+    "influencerName": "Jule MTG",
+    "socialNetworks": [
+      {
+        "instagram": "@magie_craft_generator",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A four-color Landfall deck led by Omnath, Locus of Creation, designed to chain multiple land drops each turn for massive value. It ramps aggressively, replays lands from the graveyard, and triggers powerful synergies with creatures like Avenger of Zendikar, Rampaging Baloths, and Scute Swarm, turning the battlefield into an overwhelming army.",
+      "es": "Mazo Landfall de cuatro colores liderado por Omnath, Locus of Creation, diseñado para encadenar múltiples entradas de tierras por turno y generar un valor enorme. Acelera de forma agresiva, reutiliza tierras desde el cementerio y activa potentes sinergias con criaturas como Avenger of Zendikar, Rampaging Baloths y Scute Swarm, transformando el campo de batalla en un ejército abrumador.",
+      "it": "Mazzo Landfall a quattro colori guidato da Omnath, Locus of Creation, progettato per concatenare molteplici entrate di terre ogni turno e ottenere un valore immenso. Aumenta il mana in modo aggressivo, rigioca terre dal cimitero e attiva potenti sinergie con creature come Avenger of Zendikar, Rampaging Baloths e Scute Swarm, trasformando il campo di battaglia in un esercito schiacciante.",
+      "de": "Ein vierfarbiges Landfall-Deck unter der Führung von Omnath, Locus of Creation, das darauf ausgelegt ist, mehrere Landdrops pro Zug zu verketten und enormen Wert zu generieren. Es ramped aggressiv, spielt Länder aus dem Friedhof erneut und löst mächtige Synergien mit Kreaturen wie Avenger of Zendikar, Rampaging Baloths und Scute Swarm aus, um das Schlachtfeld in eine überwältigende Armee zu verwandeln.",
+      "ja": "《Omnath, Locus of Creation》を統率者とする4色の上陸デッキ。毎ターン複数の土地を戦場に出し続け、莫大なアドバンテージを得ることを狙う。土地を積極的に伸ばし、墓地から再利用し、《Avenger of Zendikar》や《Rampaging Baloths》, 《Scute Swarm》などの強力なシナジーを発動させ、戦場を圧倒的な軍勢に変える。",
+      "pt": "Deck Landfall de quatro cores liderado por Omnath, Locus of Creation, projetado para encadear várias entradas de terrenos por turno para gerar enorme valor. Faz ramp agressivo, reutiliza terrenos do cemitério e ativa sinergias poderosas com criaturas como Avenger of Zendikar, Rampaging Baloths e Scute Swarm, transformando o campo de batalha em um exército avassalador.",
+      "fr": "Deck Landfall quatre couleurs mené par Omnath, Locus of Creation, conçu pour enchaîner plusieurs arrivées de terrains par tour et générer une immense valeur. Il accélère agressivement, rejoue des terrains depuis le cimetière et déclenche de puissantes synergies avec des créatures comme Avenger of Zendikar, Rampaging Baloths et Scute Swarm, transformant le champ de bataille en une armée écrasante."
+    },
+    "cards": [
+      {
+        "name": "Aesi, Tyrant of Gyre Strait",
+        "count": 1
+      },
+      {
+        "name": "Ancient Greenwarden",
+        "count": 1
+      },
+      {
+        "name": "Animar, Soul of Elements",
+        "count": 1
+      },
+      {
+        "name": "Ashaya, Soul of the Wild",
+        "count": 1
+      },
+      {
+        "name": "Avenger of Zendikar",
+        "count": 1
+      },
+      {
+        "name": "Azusa, Lost but Seeking",
+        "count": 1
+      },
+      {
+        "name": "Bloom Tender",
+        "count": 1
+      },
+      {
+        "name": "Chandra's Incinerator",
+        "count": 1
+      },
+      {
+        "name": "Dryad of the Ilysian Grove",
+        "count": 1
+      },
+      {
+        "name": "Flamekin Harbinger",
+        "count": 1
+      },
+      {
+        "name": "Greensleeves, Maro-Sorcerer",
+        "count": 1
+      },
+      {
+        "name": "Living Twister",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Scout",
+        "count": 1
+      },
+      {
+        "name": "Lotus Cobra",
+        "count": 1
+      },
+      {
+        "name": "Mina and Denn, Wildborn",
+        "count": 1
+      },
+      {
+        "name": "Nissa, Vastwood Seer",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of Rage",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of the Roil",
+        "count": 1
+      },
+      {
+        "name": "Oracle of Mul Daya",
+        "count": 1
+      },
+      {
+        "name": "Rampaging Baloths",
+        "count": 1
+      },
+      {
+        "name": "Ramunap Excavator",
+        "count": 1
+      },
+      {
+        "name": "Risen Reef",
+        "count": 1
+      },
+      {
+        "name": "Roaming Throne",
+        "count": 1
+      },
+      {
+        "name": "Roil Elemental",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Scout",
+        "count": 1
+      },
+      {
+        "name": "Scute Swarm",
+        "count": 1
+      },
+      {
+        "name": "Springheart Nantuko",
+        "count": 1
+      },
+      {
+        "name": "Tatyova, Benthic Druid",
+        "count": 1
+      },
+      {
+        "name": "Undergrowth Champion",
+        "count": 1
+      },
+      {
+        "name": "Broken Bond",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Land Grant",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Scrying",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Time of Need",
+        "count": 1
+      },
+      {
+        "name": "Eladamri's Call",
+        "count": 1
+      },
+      {
+        "name": "Enlightened Tutor",
+        "count": 1
+      },
+      {
+        "name": "Ephemerate",
+        "count": 1
+      },
+      {
+        "name": "Obscuring Haze",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Realms Uncharted",
+        "count": 1
+      },
+      {
+        "name": "Worldly Tutor",
+        "count": 1
+      },
+      {
+        "name": "You Happen On a Glade",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Lantern",
+        "count": 1
+      },
+      {
+        "name": "Conduit of Worlds",
+        "count": 1
+      },
+      {
+        "name": "Crucible of Worlds",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Strionic Resonator",
+        "count": 1
+      },
+      {
+        "name": "Annie Joins Up",
+        "count": 1
+      },
+      {
+        "name": "Burgeoning",
+        "count": 1
+      },
+      {
+        "name": "Case of the Locked Hothouse",
+        "count": 1
+      },
+      {
+        "name": "Exploration",
+        "count": 1
+      },
+      {
+        "name": "Fiery Emancipation",
+        "count": 1
+      },
+      {
+        "name": "Retreat to Coralhelm",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Study",
+        "count": 1
+      },
+      {
+        "name": "Spelunking",
+        "count": 1
+      },
+      {
+        "name": "Trade Routes",
+        "count": 1
+      },
+      {
+        "name": "Undergrowth Recon",
+        "count": 1
+      },
+      {
+        "name": "Virtue of Knowledge // Vantress Visions",
+        "count": 1
+      },
+      {
+        "name": "Zendikar's Roil",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Boros Garrison",
+        "count": 1
+      },
+      {
+        "name": "Branchloft Pathway",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Brokers Hideout",
+        "count": 1
+      },
+      {
+        "name": "Bucklebury Ferry",
+        "count": 1
+      },
+      {
+        "name": "Cabaretti Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Deserted Beach",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 2
+      },
+      {
+        "name": "Ghost Quarter",
+        "count": 1
+      },
+      {
+        "name": "Ghost Town",
+        "count": 1
+      },
+      {
+        "name": "Gruul Turf",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 3
+      },
+      {
+        "name": "Jungle Shrine",
+        "count": 1
+      },
+      {
+        "name": "Ketria Triome",
+        "count": 1
+      },
+      {
+        "name": "Krosan Verge",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 1
+      },
+      {
+        "name": "Prismatic Vista",
+        "count": 1
+      },
+      {
+        "name": "Reflecting Pool",
+        "count": 1
+      },
+      {
+        "name": "Sacred Foundry",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Selesnya Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Shivan Reef",
+        "count": 1
+      },
+      {
+        "name": "Simic Growth Chamber",
+        "count": 1
+      },
+      {
+        "name": "Steam Vents",
+        "count": 1
+      },
+      {
+        "name": "Stomping Ground",
+        "count": 1
+      },
+      {
+        "name": "Sundown Pass",
+        "count": 1
+      },
+      {
+        "name": "Temple Garden",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Doggomaru (Pequi <3)",
+    "commander": "Tevesh Szat, Doom of Fools",
+    "partner": "Yoshimaru, Ever Faithful",
+    "influencerName": "Senpai MTG",
+    "socialNetworks": [
+      {
+        "instagram": "@senpai_mtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A synergistic Orzhov partner deck led by Tevesh Szat and Yoshimaru, blending planeswalker value, token generation, and legendary synergies. Yoshimaru grows into a formidable threat as legendary permanents enter the battlefield, while Tevesh Szat fuels card advantage and controls the board with sacrificial fodder. Packed with iconic legends, powerful artifacts, and removal, the deck balances aggressive pressure with resilient board presence.",
+      "es": "Un mazo Orzhov de compañeros liderado por Tevesh Szat y Yoshimaru, que combina valor de caminantes de planos, generación de fichas y sinergias legendarias. Yoshimaru crece hasta convertirse en una amenaza formidable a medida que entran permanentes legendarios al campo de batalla, mientras Tevesh Szat proporciona ventaja de cartas y controla la mesa con criaturas sacrificables. Repleto de leyendas icónicas, artefactos poderosos y removals, el mazo equilibra presión agresiva con una presencia de mesa resistente.",
+      "it": "Un mazzo Orzhov con partner guidato da Tevesh Szat e Yoshimaru, che unisce valore dai planeswalker, generazione di pedine e sinergie leggendarie. Yoshimaru diventa una minaccia formidabile man mano che permanenti leggendari entrano sul campo, mentre Tevesh Szat fornisce vantaggio carte e controlla il board con creature sacrificabili. Ricco di leggende iconiche, potenti artefatti e rimozioni, il mazzo bilancia pressione aggressiva e resilienza.",
+      "de": "Ein Orzhov-Partnerdeck unter der Führung von Tevesh Szat und Yoshimaru, das Planeswalker-Value, Spielstein-Generierung und legendäre Synergien kombiniert. Yoshimaru wächst zu einer gewaltigen Bedrohung heran, sobald legendäre Permanents ins Spiel kommen, während Tevesh Szat Kartenvorteil generiert und das Spielfeld mit Opfereffekten kontrolliert. Vollgepackt mit ikonischen Legenden, mächtigen Artefakten und Removal bietet das Deck aggressive Schlagkraft und beständige Präsenz.",
+      "ja": "《Tevesh Szat, Doom of Fools》と《Yoshimaru, Ever Faithful》が統率するオルゾフの相棒デッキ。プレインズウォーカーの価値、トークン生成、伝説のシナジーを組み合わせる。伝説のパーマネントが戦場に出るたびに《Yoshimaru》は脅威的に成長し、《Tevesh Szat》はカード・アドバンテージと生け贄要員で盤面を制御する。伝説級のカードや強力なアーティファクト、除去を豊富に備え、攻撃的な圧力としぶとい盤面維持を両立する。",
+      "pt": "Um deck Orzhov de parceiros liderado por Tevesh Szat e Yoshimaru, combinando valor de planeswalkers, geração de fichas e sinergias lendárias. Yoshimaru cresce em uma ameaça formidável à medida que permanentes lendários entram no campo de batalha, enquanto Tevesh Szat gera vantagem de cartas e controla a mesa com criaturas sacrificáveis. Repleto de lendas icônicas, artefatos poderosos e remoções, o deck equilibra pressão agressiva e presença resiliente.",
+      "fr": "Un deck partenaire Orzhov mené par Tevesh Szat et Yoshimaru, mêlant valeur des planeswalkers, génération de jetons et synergies légendaires. Yoshimaru devient une menace redoutable à mesure que des permanents légendaires arrivent sur le champ de bataille, tandis que Tevesh Szat offre un avantage de cartes et contrôle le board avec des créatures sacrificielles. Rempli de légendes emblématiques, d'artefacts puissants et de removals, le deck équilibre pression agressive et présence durable."
+    },
+    "cards": [
+      {
+        "name": "Liliana, Dreadhorde General",
+        "count": 1
+      },
+      {
+        "name": "Luka, the Traveling Sound",
+        "count": 1
+      },
+      {
+        "name": "Miku, Divine Diva",
+        "count": 1
+      },
+      {
+        "name": "Ayara, First of Locthwain",
+        "count": 1
+      },
+      {
+        "name": "Bartolomé del Presidio",
+        "count": 1
+      },
+      {
+        "name": "Boromir, Warden of the Tower",
+        "count": 1
+      },
+      {
+        "name": "Braids, Arisen Nightmare",
+        "count": 1
+      },
+      {
+        "name": "Butcher of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Codsworth, Handy Helper",
+        "count": 1
+      },
+      {
+        "name": "Dauthi Voidwalker",
+        "count": 1
+      },
+      {
+        "name": "Drana and Linvala",
+        "count": 1
+      },
+      {
+        "name": "Elesh Norn, Mother of Machines",
+        "count": 1
+      },
+      {
+        "name": "Hero of Light",
+        "count": 1
+      },
+      {
+        "name": "Jadar, Ghoulcaller of Nephalia",
+        "count": 1
+      },
+      {
+        "name": "Kambal, Profiteering Mayor",
+        "count": 1
+      },
+      {
+        "name": "Lae'zel, Vlaakith's Champion",
+        "count": 1
+      },
+      {
+        "name": "Loran of the Third Path",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff",
+        "count": 1
+      },
+      {
+        "name": "Midnight Reaper",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Bats",
+        "count": 1
+      },
+      {
+        "name": "Mondrak, Glory Dominus",
+        "count": 1
+      },
+      {
+        "name": "Ophiomancer",
+        "count": 1
+      },
+      {
+        "name": "Ratadrabik of Urborg",
+        "count": 1
+      },
+      {
+        "name": "Samwise the Stouthearted",
+        "count": 1
+      },
+      {
+        "name": "Sephiroth, Fabled SOLDIER",
+        "count": 1
+      },
+      {
+        "name": "Sheoldred",
+        "count": 1
+      },
+      {
+        "name": "Skrelv, Defector Mite",
+        "count": 1
+      },
+      {
+        "name": "Skyclave Apparition",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Sorin of House Markov",
+        "count": 1
+      },
+      {
+        "name": "Tomik, Wielder of Law",
+        "count": 1
+      },
+      {
+        "name": "Farewell",
+        "count": 1
+      },
+      {
+        "name": "Primevals' Glorious Rebirth",
+        "count": 1
+      },
+      {
+        "name": "Urza's Ruinous Blast",
+        "count": 1
+      },
+      {
+        "name": "Dawn's Truce",
+        "count": 1
+      },
+      {
+        "name": "Doom Blade",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Secure the Wastes",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Szat's Will",
+        "count": 1
+      },
+      {
+        "name": "Village Rites",
+        "count": 1
+      },
+      {
+        "name": "Adamantium Bonding Tank",
+        "count": 1
+      },
+      {
+        "name": "Akroma's Memorial",
+        "count": 1
+      },
+      {
+        "name": "Andúril, Flame of the West",
+        "count": 1
+      },
+      {
+        "name": "Andúril, Narsil Reforged",
+        "count": 1
+      },
+      {
+        "name": "Blackblade Reforged",
+        "count": 1
+      },
+      {
+        "name": "Caduceus, Staff of Hermes",
+        "count": 1
+      },
+      {
+        "name": "Herugrim, Sword of Rohan",
+        "count": 1
+      },
+      {
+        "name": "Luxior, Giada's Gift",
+        "count": 1
+      },
+      {
+        "name": "Mithril Coat",
+        "count": 1
+      },
+      {
+        "name": "Relic of Legends",
+        "count": 1
+      },
+      {
+        "name": "Ring of Barahir",
+        "count": 1
+      },
+      {
+        "name": "Shadowspear",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Sting, the Glinting Dagger",
+        "count": 1
+      },
+      {
+        "name": "Tarrian's Soulcleaver",
+        "count": 1
+      },
+      {
+        "name": "The One Ring",
+        "count": 1
+      },
+      {
+        "name": "Thousand Moons Smithy",
+        "count": 1
+      },
+      {
+        "name": "Bitterblossom",
+        "count": 1
+      },
+      {
+        "name": "Flowering of the White Tree",
+        "count": 1
+      },
+      {
+        "name": "Grave Pact",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Arena",
+        "count": 1
+      },
+      {
+        "name": "Abstergo Entertainment",
+        "count": 1
+      },
+      {
+        "name": "Barad-dûr",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Eiganjo, Seat of the Empire",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Meduseld, Golden Hall of Edoras",
+        "count": 1
+      },
+      {
+        "name": "Minas Tirith",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Basilica",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 7
+      },
+      {
+        "name": "Scrubland",
+        "count": 1
+      },
+      {
+        "name": "Shadowy Backstreet",
+        "count": 1
+      },
+      {
+        "name": "Shattered Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Shizo, Death's Storehouse",
+        "count": 1
+      },
+      {
+        "name": "Silent Clearing",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 7
+      },
+      {
+        "name": "Tainted Field",
+        "count": 1
+      },
+      {
+        "name": "Takenuma, Abandoned Mire",
+        "count": 1
+      },
+      {
+        "name": "The Grey Havens",
+        "count": 1
+      },
+      {
+        "name": "Tower of Cirith Ungol",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Tomb Raider extra steps",
+    "commander": "Lara Croft, Tomb Raider",
+    "influencerName": "Senpai MTG",
+    "socialNetworks": [
+      {
+        "instagram": "@senpai_mtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "An adventurous Temur deck led by Lara Croft, Tomb Raider, combining artifact synergies, treasure generation, and extra turns to outpace opponents. The strategy revolves around ramping quickly with mana rocks and dorks, tutoring key legendary artifacts, and using Lara's abilities to dig deeper into the deck. Packed with powerful relics, combat enablers, and value engines, it delivers explosive plays while keeping opponents guessing.",
+      "es": "Un mazo Temur aventurero liderado por Lara Croft, Tomb Raider, que combina sinergias con artefactos, generación de tesoros y turnos extra para superar a los oponentes. La estrategia se basa en acelerar con rocas de maná y aceleradores, buscar artefactos legendarios clave y aprovechar las habilidades de Lara para excavar más en el mazo. Con reliquias poderosas, habilitadores de combate y motores de valor, ofrece jugadas explosivas mientras mantiene a los rivales en vilo.",
+      "it": "Un mazzo Temur avventuroso guidato da Lara Croft, Tomb Raider, che unisce sinergie con artefatti, generazione di tesori e turni extra per superare gli avversari. La strategia ruota attorno all'accelerazione con pietre di mana e creature da ramp, alla ricerca di artefatti leggendari chiave e all'uso delle abilità di Lara per scavare più a fondo nel mazzo. Ricco di reliquie potenti, abilità da combattimento e motori di valore, offre giocate esplosive mantenendo gli avversari sulle spine.",
+      "de": "Ein abenteuerliches Temur-Deck, angeführt von Lara Croft, Tomb Raider, das Artefaktsynergien, Schatzgenerierung und zusätzliche Züge kombiniert, um Gegner zu überflügeln. Die Strategie basiert auf schnellem Rampen mit Mana-Steinen und Mana-Dorks, dem Suchen nach wichtigen legendären Artefakten und der Nutzung von Laras Fähigkeiten, um tiefer ins Deck zu graben. Vollgepackt mit mächtigen Relikten, Kampfbeschleunigern und Wertmaschinen sorgt es für explosive Spielzüge und hält die Gegner im Ungewissen.",
+      "ja": "《Lara Croft, Tomb Raider》が率いる冒険的なティムール・デッキ。アーティファクトのシナジー、宝物生成、追加ターンを組み合わせ、対戦相手を上回る。マナアーティファクトやマナクリーチャーで高速ランプし、重要な伝説のアーティファクトをサーチし、ララの能力でデッキを深く掘り進める。強力な遺物、戦闘補助、バリューエンジンを満載し、爆発的な動きを繰り出す。",
+      "pt": "Um deck Temur aventureiro liderado por Lara Croft, Tomb Raider, combinando sinergias de artefatos, geração de tesouros e turnos extras para superar os oponentes. A estratégia gira em torno de acelerar com pedras de mana e dorks, buscar artefatos lendários importantes e usar as habilidades de Lara para cavar mais fundo no deck. Cheio de relíquias poderosas, facilitadores de combate e motores de valor, oferece jogadas explosivas mantendo os oponentes na dúvida.",
+      "fr": "Un deck Temur aventureux mené par Lara Croft, Tomb Raider, combinant synergies d'artefacts, génération de trésors et tours supplémentaires pour dépasser les adversaires. La stratégie repose sur un ramp rapide avec des roches de mana et des créatures accélératrices, la recherche d'artefacts légendaires clés et l'utilisation des capacités de Lara pour creuser plus profondément dans le deck. Rempli de reliques puissantes, d'outils de combat et de moteurs de valeur, il offre des tours explosifs tout en gardant les adversaires dans l'incertitude."
+    },
+    "cards": [
+      {
+        "name": "Academy Manufactor",
+        "count": 1
+      },
+      {
+        "name": "Birds of Paradise",
+        "count": 1
+      },
+      {
+        "name": "Crime Novelist",
+        "count": 1
+      },
+      {
+        "name": "Emry, Lurker of the Loch",
+        "count": 1
+      },
+      {
+        "name": "Jolene, the Plunder Queen",
+        "count": 1
+      },
+      {
+        "name": "Professional Face-Breaker",
+        "count": 1
+      },
+      {
+        "name": "Rashmi and Ragavan",
+        "count": 1
+      },
+      {
+        "name": "Roaming Throne",
+        "count": 1
+      },
+      {
+        "name": "Rose, Cutthroat Raider",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Spark Double",
+        "count": 1
+      },
+      {
+        "name": "Titania, Voice of Gaea",
+        "count": 1
+      },
+      {
+        "name": "Beacon of Tomorrows",
+        "count": 1
+      },
+      {
+        "name": "Careful Study",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Hit the Mother Lode",
+        "count": 1
+      },
+      {
+        "name": "Life from the Loam",
+        "count": 1
+      },
+      {
+        "name": "Seize the Day",
+        "count": 1
+      },
+      {
+        "name": "Storms of Yamatai",
+        "count": 1
+      },
+      {
+        "name": "Temporal Manipulation",
+        "count": 1
+      },
+      {
+        "name": "Time Reversal",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Crop Rotation",
+        "count": 1
+      },
+      {
+        "name": "Cyclonic Rift",
+        "count": 1
+      },
+      {
+        "name": "Frantic Search",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Nexus of Fate",
+        "count": 1
+      },
+      {
+        "name": "Noxious Revival",
+        "count": 1
+      },
+      {
+        "name": "Rewind",
+        "count": 1
+      },
+      {
+        "name": "Time Stop",
+        "count": 1
+      },
+      {
+        "name": "Agatha's Soul Cauldron",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Blackblade Reforged",
+        "count": 1
+      },
+      {
+        "name": "Brass's Tunnel-Grinder",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Lantern",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Orrery",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Embercleave",
+        "count": 1
+      },
+      {
+        "name": "Excalibur, Sword of Eden",
+        "count": 1
+      },
+      {
+        "name": "Expedition Map",
+        "count": 1
+      },
+      {
+        "name": "Hammer of Nazahn",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Matzalantli, the Great Door",
+        "count": 1
+      },
+      {
+        "name": "Mithril Coat",
+        "count": 1
+      },
+      {
+        "name": "Ozolith, the Shattered Spire",
+        "count": 1
+      },
+      {
+        "name": "Phial of Galadriel",
+        "count": 1
+      },
+      {
+        "name": "Realmbreaker, the Invasion Tree",
+        "count": 1
+      },
+      {
+        "name": "RMS Titanic",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Sword of Truth and Justice",
+        "count": 1
+      },
+      {
+        "name": "Tarrian's Soulcleaver",
+        "count": 1
+      },
+      {
+        "name": "The Everflowing Well",
+        "count": 1
+      },
+      {
+        "name": "The Grim Whisper",
+        "count": 1
+      },
+      {
+        "name": "The Skullspore Nexus",
+        "count": 1
+      },
+      {
+        "name": "Thought Vessel",
+        "count": 1
+      },
+      {
+        "name": "Totec's Spear",
+        "count": 1
+      },
+      {
+        "name": "Treasure Map",
+        "count": 1
+      },
+      {
+        "name": "Whispersilk Cloak",
+        "count": 1
+      },
+      {
+        "name": "Aggravated Assault",
+        "count": 1
+      },
+      {
+        "name": "Brazen Cannonade",
+        "count": 1
+      },
+      {
+        "name": "Guardian Project",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Study",
+        "count": 1
+      },
+      {
+        "name": "Heart of the Explorer",
+        "count": 1
+      },
+      {
+        "name": "Storm the Vault",
+        "count": 1
+      },
+      {
+        "name": "Strong Back",
+        "count": 1
+      },
+      {
+        "name": "Argoth, Sanctum of Nature",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Bucklebury Ferry",
+        "count": 1
+      },
+      {
+        "name": "Croft Manor",
+        "count": 1
+      },
+      {
+        "name": "Dol Amroth",
+        "count": 1
+      },
+      {
+        "name": "Dreamroot Cascade",
+        "count": 1
+      },
+      {
+        "name": "Fangorn Forest",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 4
+      },
+      {
+        "name": "Gods' Eye, Gate to the Reikai",
+        "count": 1
+      },
+      {
+        "name": "Hall of the Bandit Lord",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 5
+      },
+      {
+        "name": "Karplusan Forest",
+        "count": 1
+      },
+      {
+        "name": "Kitezh, Sunken City",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 4
+      },
+      {
+        "name": "Okina, Temple to the Grandfathers",
+        "count": 1
+      },
+      {
+        "name": "Rivendell",
+        "count": 1
+      },
+      {
+        "name": "Steam Vents",
+        "count": 1
+      },
+      {
+        "name": "The Grey Havens",
+        "count": 1
+      },
+      {
+        "name": "The Shire",
+        "count": 1
+      },
+      {
+        "name": "Tolaria",
+        "count": 1
+      },
+      {
+        "name": "Trenzalore Clocktower",
+        "count": 1
+      },
+      {
+        "name": "Untaidake, the Cloud Keeper",
+        "count": 1
+      }
+    ]
+  }
+]

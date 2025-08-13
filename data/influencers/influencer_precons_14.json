@@ -1,0 +1,1894 @@
+[
+  {
+    "name": "A whisper in the marsh",
+    "commander": "Nethroi, Apex of Death",
+    "influencerName": "Chris",
+    "socialNetworks": [
+      {
+        "instagram": "@chrizzlymtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A mutation-heavy Abzan reanimator deck built around Nethroi, Apex of Death’s ability to return a huge suite of small-power creatures directly to the battlefield. Mutate creatures like Auspicious Starrix and Gemrazer grant value and board control, while graveyard enablers like Buried Alive and Satyr Wayfinder set up massive reanimation turns. Eerie Ultimatum and Karador, Ghost Chieftain provide backup recursion, and utility creatures like Faeburrow Elder and Ramunap Excavator ensure smooth ramp and resource advantage.",
+      "es": "Un mazo Abzan de reanimación centrado en mutación, construido en torno a la habilidad de Nethroi, Apex of Death para devolver al campo de batalla una gran cantidad de criaturas de bajo poder. Criaturas con mutación como Estrella Auspiciosa y Gemrazer aportan valor y control, mientras que cartas como Enterrado Vivo y Caminante de la Senda preparan turnos masivos de reanimación. Ultimátum Inquietante y Karador, Jefe Fantasma brindan reanimación adicional, y criaturas de utilidad como Anciano de Faeburrow y Excavadora de Ramunap aseguran aceleración y ventaja de recursos.",
+      "it": "Un mazzo rianimatore Abzan incentrato sulla mutazione, costruito attorno alla capacità di Nethroi, Apex of Death di riportare in campo una moltitudine di creature a bassa forza. Creature con mutazione come Auspicious Starrix e Gemrazer offrono valore e controllo del campo, mentre carte come Sepolto Vivo e Satyr Wayfinder preparano turni di rianimazione imponenti. Eerie Ultimatum e Karador, Ghost Chieftain forniscono ulteriore rianimazione, mentre creature di utilità come Faeburrow Elder e Ramunap Excavator garantiscono accelerazione e vantaggio di risorse.",
+      "de": "Ein auf Mutation basierendes Abzan-Wiederbelebungsdeck, das auf Nethroi, Apex of Death aufbaut, um eine Vielzahl von Kreaturen mit geringer Stärke direkt ins Spiel zurückzubringen. Mutationskreaturen wie Auspicious Starrix und Gemrazer liefern Wert und Kontrolle, während Friedhofsbeschleuniger wie Lebendig Begraben und Satyr Wayfinder massive Wiederbelebungszüge vorbereiten. Unheimliches Ultimatum und Karador, Geisterhäuptling bieten zusätzliche Reanimation, und Nutzenkreaturen wie Faeburrow Elder und Ramunap Excavator sorgen für Ramp und Ressourcenvorteil.",
+      "ja": "アブザンの変容リイニメイトデッキで、Nethroi, Apex of Deathの能力を活かし、小さなパワーのクリーチャーを大量に戦場へ戻す。Auspicious StarrixやGemrazerのような変容クリーチャーは価値と盤面制御を提供し、Buried AliveやSatyr Wayfinderのような墓地肥やしが大量リアニメイトを準備する。Eerie UltimatumやKarador, Ghost Chieftainが追加のリアニメイト手段を提供し、Faeburrow ElderやRamunap Excavatorのようなユーティリティクリーチャーがマナ加速とリソース面の優位を確保する。",
+      "pt": "Um deck reanimador Abzan focado em mutação, construído em torno da habilidade de Nethroi, Apex of Death de trazer de volta uma grande quantidade de criaturas de baixo poder diretamente para o campo. Criaturas com mutação como Auspicious Starrix e Gemrazer oferecem valor e controle, enquanto cartas como Enterrado Vivo e Satyr Wayfinder preparam turnos massivos de reanimação. Eerie Ultimatum e Karador, Ghost Chieftain fornecem mais recursos de retorno, e criaturas utilitárias como Faeburrow Elder e Ramunap Excavator garantem aceleração e vantagem de recursos.",
+      "fr": "Un deck réanimateur Abzan axé sur la mutation, construit autour de la capacité de Nethroi, Apex of Death à renvoyer sur le champ de bataille une multitude de créatures à faible force. Des créatures avec mutation comme Auspicious Starrix et Gemrazer offrent valeur et contrôle, tandis que des cartes comme Enterré Vivant et Satyr Wayfinder préparent des tours massifs de réanimation. Ultimatum Étrange et Karador, Chef fantôme fournissent un soutien supplémentaire, et des créatures utilitaires comme Faeburrow Elder et Ramunap Excavator assurent accélération et avantage de ressources."
+    },
+    "cards": [
+      {
+        "name": "Nethroi, Apex of Death",
+        "count": 1
+      },
+      {
+        "name": "Auspicious Starrix",
+        "count": 1
+      },
+      {
+        "name": "Bane of Progress",
+        "count": 1
+      },
+      {
+        "name": "Boneyard Lurker",
+        "count": 1
+      },
+      {
+        "name": "Chittering Harvester",
+        "count": 1
+      },
+      {
+        "name": "Cubwarden",
+        "count": 1
+      },
+      {
+        "name": "Dirge Bat",
+        "count": 1
+      },
+      {
+        "name": "Faeburrow Elder",
+        "count": 1
+      },
+      {
+        "name": "Fertilid",
+        "count": 1
+      },
+      {
+        "name": "Fiend Artisan",
+        "count": 1
+      },
+      {
+        "name": "Gemrazer",
+        "count": 1
+      },
+      {
+        "name": "Glowstone Recluse",
+        "count": 1
+      },
+      {
+        "name": "Hermit Druid",
+        "count": 1
+      },
+      {
+        "name": "Honest Rutstein",
+        "count": 1
+      },
+      {
+        "name": "Insatiable Hemophage",
+        "count": 1
+      },
+      {
+        "name": "Kaheera, the Orphanguard",
+        "count": 1
+      },
+      {
+        "name": "Karador, Ghost Chieftain",
+        "count": 1
+      },
+      {
+        "name": "Luminous Broodmoth",
+        "count": 1
+      },
+      {
+        "name": "Lurrus of the Dream-Den",
+        "count": 1
+      },
+      {
+        "name": "Migratory Greathorn",
+        "count": 1
+      },
+      {
+        "name": "Mindleecher",
+        "count": 1
+      },
+      {
+        "name": "Mogis's Marauder",
+        "count": 1
+      },
+      {
+        "name": "Necropanther",
+        "count": 1
+      },
+      {
+        "name": "Nyx Weaver",
+        "count": 1
+      },
+      {
+        "name": "Odric, Lunarch Marshal",
+        "count": 1
+      },
+      {
+        "name": "Phantom Nishoba",
+        "count": 1
+      },
+      {
+        "name": "Ramunap Excavator",
+        "count": 1
+      },
+      {
+        "name": "Satyr Wayfinder",
+        "count": 1
+      },
+      {
+        "name": "Sawtooth Thresher",
+        "count": 1
+      },
+      {
+        "name": "Scourge of the Skyclaves",
+        "count": 1
+      },
+      {
+        "name": "Sigarda, Host of Herons",
+        "count": 1
+      },
+      {
+        "name": "Stitcher's Supplier",
+        "count": 1
+      },
+      {
+        "name": "The Necrobloom",
+        "count": 1
+      },
+      {
+        "name": "Trostani, Three Whispers",
+        "count": 1
+      },
+      {
+        "name": "Vulpikeet",
+        "count": 1
+      },
+      {
+        "name": "World Shaper",
+        "count": 1
+      },
+      {
+        "name": "Zetalpa, Primal Dawn",
+        "count": 1
+      },
+      {
+        "name": "Buried Alive",
+        "count": 1
+      },
+      {
+        "name": "Call of the Death-Dweller",
+        "count": 1
+      },
+      {
+        "name": "Culling Ritual",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Damn",
+        "count": 1
+      },
+      {
+        "name": "Dirge of Dread",
+        "count": 1
+      },
+      {
+        "name": "Eerie Ultimatum",
+        "count": 1
+      },
+      {
+        "name": "Extinction Event",
+        "count": 1
+      },
+      {
+        "name": "Mulch",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Perennation",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Unearth",
+        "count": 1
+      },
+      {
+        "name": "Unmarked Grave",
+        "count": 1
+      },
+      {
+        "name": "Winding Way",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy",
+        "count": 1
+      },
+      {
+        "name": "Corpse Churn",
+        "count": 1
+      },
+      {
+        "name": "Grisly Salvage",
+        "count": 1
+      },
+      {
+        "name": "Mythos of Nethroi",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Indatha Crystal",
+        "count": 1
+      },
+      {
+        "name": "Perpetual Timepiece",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Deadbridge Chant",
+        "count": 1
+      },
+      {
+        "name": "Death's Oasis",
+        "count": 1
+      },
+      {
+        "name": "Pacifism",
+        "count": 1
+      },
+      {
+        "name": "Ripples of Undeath",
+        "count": 1
+      },
+      {
+        "name": "Blossoming Sands",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Concealed Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 5
+      },
+      {
+        "name": "Forlorn Flats",
+        "count": 1
+      },
+      {
+        "name": "Golgari Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Graypelt Refuge",
+        "count": 1
+      },
+      {
+        "name": "Indatha Triome",
+        "count": 1
+      },
+      {
+        "name": "Jungle Hollow",
+        "count": 1
+      },
+      {
+        "name": "Krosan Verge",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 3
+      },
+      {
+        "name": "Sandsteppe Citadel",
+        "count": 1
+      },
+      {
+        "name": "Scoured Barrens",
+        "count": 1
+      },
+      {
+        "name": "Shattered Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Shifting Woodland",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 6
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Thriving Heath",
+        "count": 1
+      },
+      {
+        "name": "Tranquil Expanse",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Kenrith, the Legend",
+    "commander": "Kenrith, the Returned King",
+    "influencerName": "Missing Triggers",
+    "socialNetworks": [
+      {
+        "instagram": "@missingtriggers",
+        "tiktok": null,
+        "youtube": "https://youtube.com/@missingtriggers?si=GAZfPLmELaJAlwNC"
+      }
+    ],
+    "deckDescription": {
+      "en": "A competitive 5-color Kenrith, the Returned King cEDH deck leveraging a toolbox strategy with fast mana, tutors, and silver-bullet creatures to adapt to any table. The deck includes stax pieces like Drannith Magistrate and Opposition Agent, quick combo lines with Thassa's Oracle and Tainted Pact, and explosive card advantage from Underworld Breach and Wheel of Fortune. Supported by premium interaction, fast mana rocks, and versatile creature tutors, it’s designed for high-level competitive play.",
+      "es": "Un mazo cEDH competitivo de cinco colores con Kenrith, el Rey Regresado, que emplea una estrategia tipo ‘caja de herramientas’ con maná rápido, tutores y criaturas especializadas para adaptarse a cualquier mesa. Incluye piezas de stax como Magistrado de Drannith y Agente de la Oposición, combinaciones rápidas con Oráculo de Thassa y Pacto Contaminado, y una ventaja de cartas explosiva con Infracción del Inframundo y Rueda de la Fortuna. Apoyado por interacción de élite, rocas de maná veloces y tutores versátiles, está diseñado para juego competitivo de alto nivel.",
+      "it": "Un mazzo cEDH competitivo a cinque colori con Kenrith, il Re Ritornato, che adotta una strategia toolbox con mana veloce, tutori e creature mirate per adattarsi a qualsiasi tavolo. Include pezzi stax come Drannith Magistrate e Opposition Agent, combo rapide con Oracolo di Thassa e Patto Contaminato, e vantaggio carte esplosivo con Breccia dell'Oltretomba e Ruota della Fortuna. Supportato da interazioni premium, pietre di mana rapide e tutori versatili, è progettato per il gioco competitivo di alto livello.",
+      "de": "Ein kompetitives 5-Farben-Kenrith, der Zurückgekehrte-König-cEDH-Deck, das eine Toolbox-Strategie mit schnellem Mana, Tutoren und speziellen Kreaturen einsetzt, um sich an jeden Tisch anzupassen. Enthält Stax-Elemente wie Drannith Magistrate und Opposition Agent, schnelle Kombos mit Thassas Orakel und Verseuchter Pakt sowie explosiven Kartenvorteil durch Unterweltdurchbruch und Rad des Schicksals. Unterstützt von Premium-Interaktion, schnellen Mana-Steinen und vielseitigen Kreaturen-Tutoren ist es für hochrangiges kompetitives Spiel ausgelegt.",
+      "ja": "5色のKenrith, the Returned Kingを使った競技的cEDHデッキで、ファストマナ、チューター、状況対応のクリーチャーを駆使したツールボックス戦略を採用。Drannith MagistrateやOpposition Agentといったスタックス要素、Thassa's OracleとTainted Pactの高速コンボ、Underworld BreachとWheel of Fortuneによる爆発的なアドバンテージ獲得が特徴。高性能インタラクション、迅速なマナ加速、多用途のクリーチャーチューターにより、ハイレベルな競技環境に対応。",
+      "pt": "Um deck cEDH competitivo de cinco cores com Kenrith, the Returned King, adotando uma estratégia de caixa de ferramentas com mana rápido, tutores e criaturas especializadas para se adaptar a qualquer mesa. Inclui peças de stax como Drannith Magistrate e Opposition Agent, combos rápidos com Thassa's Oracle e Pacto Maculado, e vantagem de cartas explosiva com Brecha do Submundo e Roda da Fortuna. Com interação premium, rochas de mana rápidas e tutores versáteis, é feito para o jogo competitivo de alto nível.",
+      "fr": "Un deck cEDH compétitif cinq couleurs avec Kenrith, le Roi revenu, utilisant une stratégie 'boîte à outils' avec du mana rapide, des tuteurs et des créatures ciblées pour s'adapter à toute table. Comprend des pièces de stax comme Magistrat de Drannith et Agent d'opposition, des combos rapides avec Oracle de Thassa et Pacte souillé, et un avantage explosif avec Brèche sous-marine et Roue de la Fortune. Soutenu par des interactions premium, des roches de mana rapides et des tuteurs polyvalents, il est conçu pour le jeu compétitif de haut niveau."
+    },
+    "cards": [
+      {
+        "name": "Kenrith, the Returned King",
+        "count": 1
+      },
+      {
+        "name": "Birds of Paradise",
+        "count": 1
+      },
+      {
+        "name": "Chatterfang, Squirrel General",
+        "count": 1
+      },
+      {
+        "name": "Deathrite Shaman",
+        "count": 1
+      },
+      {
+        "name": "Drannith Magistrate",
+        "count": 1
+      },
+      {
+        "name": "Elvish Spirit Guide",
+        "count": 1
+      },
+      {
+        "name": "Enduring Vitality",
+        "count": 1
+      },
+      {
+        "name": "Esper Sentinel",
+        "count": 1
+      },
+      {
+        "name": "Faerie Mastermind",
+        "count": 1
+      },
+      {
+        "name": "Grand Abolisher",
+        "count": 1
+      },
+      {
+        "name": "Ignoble Hierarch",
+        "count": 1
+      },
+      {
+        "name": "Ledger Shredder",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff",
+        "count": 1
+      },
+      {
+        "name": "Noble Hierarch",
+        "count": 1
+      },
+      {
+        "name": "Opposition Agent",
+        "count": 1
+      },
+      {
+        "name": "Orcish Bowmasters",
+        "count": 1
+      },
+      {
+        "name": "Ragavan, Nimble Pilferer",
+        "count": 1
+      },
+      {
+        "name": "Ranger-Captain of Eos",
+        "count": 1
+      },
+      {
+        "name": "Simian Spirit Guide",
+        "count": 1
+      },
+      {
+        "name": "Spellseeker",
+        "count": 1
+      },
+      {
+        "name": "Talion, the Kindly Lord",
+        "count": 1
+      },
+      {
+        "name": "Thassa's Oracle",
+        "count": 1
+      },
+      {
+        "name": "Warren Soultrader",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Diabolic Intent",
+        "count": 1
+      },
+      {
+        "name": "Eldritch Evolution",
+        "count": 1
+      },
+      {
+        "name": "Gamble",
+        "count": 1
+      },
+      {
+        "name": "Imperial Seal",
+        "count": 1
+      },
+      {
+        "name": "Neoform",
+        "count": 1
+      },
+      {
+        "name": "Sevinne's Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Wheel of Fortune",
+        "count": 1
+      },
+      {
+        "name": "Abrupt Decay",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Brain Freeze",
+        "count": 1
+      },
+      {
+        "name": "Cyclonic Rift",
+        "count": 1
+      },
+      {
+        "name": "Demonic Consultation",
+        "count": 1
+      },
+      {
+        "name": "Enlightened Tutor",
+        "count": 1
+      },
+      {
+        "name": "Flusterstorm",
+        "count": 1
+      },
+      {
+        "name": "Force of Negation",
+        "count": 1
+      },
+      {
+        "name": "Force of Will",
+        "count": 1
+      },
+      {
+        "name": "Gifts Ungiven",
+        "count": 1
+      },
+      {
+        "name": "Into the Flood Maw",
+        "count": 1
+      },
+      {
+        "name": "Intuition",
+        "count": 1
+      },
+      {
+        "name": "Mental Misstep",
+        "count": 1
+      },
+      {
+        "name": "Mindbreak Trap",
+        "count": 1
+      },
+      {
+        "name": "Mystical Tutor",
+        "count": 1
+      },
+      {
+        "name": "Pact of Negation",
+        "count": 1
+      },
+      {
+        "name": "Pyroblast",
+        "count": 1
+      },
+      {
+        "name": "Silence",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Tainted Pact",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Worldly Tutor",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Chrome Mox",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Lion's Eye Diamond",
+        "count": 1
+      },
+      {
+        "name": "Lotus Petal",
+        "count": 1
+      },
+      {
+        "name": "Mana Vault",
+        "count": 1
+      },
+      {
+        "name": "Mox Diamond",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "The One Ring",
+        "count": 1
+      },
+      {
+        "name": "Wishclaw Talisman",
+        "count": 1
+      },
+      {
+        "name": "Carpet of Flowers",
+        "count": 1
+      },
+      {
+        "name": "Mystic Remora",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Study",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe",
+        "count": 1
+      },
+      {
+        "name": "Survival of the Fittest",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Library",
+        "count": 1
+      },
+      {
+        "name": "Underworld Breach",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Badlands",
+        "count": 1
+      },
+      {
+        "name": "Bayou",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "City of Brass",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Forbidden Orchard",
+        "count": 1
+      },
+      {
+        "name": "Gemstone Caverns",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain",
+        "count": 1
+      },
+      {
+        "name": "Mana Confluence",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Savannah",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Scrubland",
+        "count": 1
+      },
+      {
+        "name": "Stomping Ground",
+        "count": 1
+      },
+      {
+        "name": "Taiga",
+        "count": 1
+      },
+      {
+        "name": "Tropical Island",
+        "count": 1
+      },
+      {
+        "name": "Tundra",
+        "count": 1
+      },
+      {
+        "name": "Underground Sea",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Volcanic Island",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Elf Party",
+    "commander": "Lathril, Blade of the Elves",
+    "influencerName": "Joshua Torres",
+    "socialNetworks": [
+      {
+        "instagram": "@rakdos_lord_of_riots_torres",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A synergistic Golgari Elfball deck led by Lathril, Blade of the Elves. Focused on creating a massive army of elves, generating exponential value with token doublers like Doubling Season and Primal Vigor, and pumping the team with anthem effects such as Coat of Arms and Imperious Perfect. The deck combines explosive mana generation from Circle of Dreams Druid and Elvish ramp with card advantage from Realmwalker and Vanquisher's Banner. Interaction is covered by Assassin's Trophy, Golgari Charm, and Witherbloom Command, ensuring the swarm can overrun opponents with lethal damage.",
+      "es": "Un mazo Golgari tipo 'Elfball' liderado por Lathril, Hoja de los Elfos. Se centra en crear un ejército masivo de elfos, generando valor exponencial con duplicadores de fichas como Temporada de Duplicación y Vigor Primordial, y potenciando al equipo con efectos de estandarte como Estandarte de los Vencedores y Perfecta Imperiosa. Combina generación explosiva de maná gracias a Druida del Círculo de los Sueños y el ramp de elfos con ventaja de cartas de Caminante de los Reinos y Estandarte de los Vencedores. La interacción está cubierta por Trofeo de Asesino, Encantamiento de Golgari y Comando de Marchitavida, asegurando que la horda pueda abrumar a los oponentes con daño letal.",
+      "it": "Un mazzo Golgari 'Elfball' guidato da Lathril, Lama degli Elfi. Si concentra sulla creazione di un esercito massiccio di elfi, generando valore esponenziale con raddoppiatori di pedine come Stagione del Raddoppio e Vigore Primordiale, e potenziando la squadra con effetti come Stendardo dei Vincitori e Perfetta Imperiosa. Combina una generazione esplosiva di mana grazie a Druido del Cerchio dei Sogni e il ramp elfico con vantaggio carte da Camminatore dei Reami e Stendardo dei Vincitori. L'interazione è garantita da Trofeo dell'Assassino, Incanto dei Golgari e Comando di Witherbloom, assicurando che l'orda possa sopraffare gli avversari con danni letali.",
+      "de": "Ein Golgari-‚Elfball‘-Deck, angeführt von Lathril, Klinge der Elfen. Konzentriert sich darauf, eine riesige Armee von Elfen zu erschaffen, exponentiellen Wert mit Token-Vervielfachern wie Verdopplungssaison und Ursprüngliche Kraft zu erzeugen und das Team mit Effekten wie Banner der Bezwinger und Vollkommene Perfekte zu verstärken. Kombiniert explosive Manaerzeugung durch Druide des Traumkreises und Elfen-Ramp mit Kartenvorteil durch Weltenwanderer und Banner der Bezwinger. Interaktion erfolgt über Assassinentrophäe, Golgari-Zauber und Witherbloom-Befehl, um sicherzustellen, dass der Schwarm Gegner mit tödlichem Schaden überrennt.",
+      "ja": "ラスリル, ブレード・オブ・ジ・エルブスを統率者とするゴルガリ・エルフボールデッキ。倍増の季節や原始の活力などのトークン倍増カードで指数的に価値を生み出し、征服者の旗印や完全なる完璧者で全軍を強化して大量のエルフ軍団を展開。夢の円環のドルイドやエルフランプによる爆発的マナ生成と、領界歩きや征服者の旗印によるカードアドバンテージを組み合わせる。暗殺者の戦利品、ゴルガリの魔除け、ウィザーブルームの命令などで妨害しつつ、圧倒的ダメージで勝利を狙う。",
+      "pt": "Um deck Golgari 'Elfball' liderado por Lathril, Blade of the Elves. Focado em criar um exército massivo de elfos, gerando valor exponencial com dobradores de fichas como Temporada da Duplicação e Vigor Primordial, e fortalecendo o time com efeitos como Estandarte dos Conquistadores e Perfeita Imperiosa. Combina geração explosiva de mana com Druida do Círculo dos Sonhos e ramp de elfos com vantagem de cartas de Andarilho dos Reinos e Estandarte dos Conquistadores. Interações como Troféu do Assassino, Amuleto Golgari e Comando de Witherbloom asseguram que o enxame possa esmagar os oponentes com dano letal.",
+      "fr": "Un deck Golgari 'Elfball' mené par Lathril, Lame des Elfes. Axé sur la création d'une armée massive d'elfes, générant une valeur exponentielle avec des doubleurs de jetons comme Saison de Doublement et Vigueur Primordiale, et renforçant l'équipe avec des effets comme Bannière des Vainqueurs et Parfaite Impérieuse. Combine une génération de mana explosive grâce au Druide du Cercle des Rêves et au ramp elfe avec l'avantage de cartes de Marcheur des Royaumes et Bannière des Vainqueurs. L'interaction est assurée par Trophée de l'Assassin, Charme golgari et Commandement flétrissable, garantissant que la horde submerge les adversaires avec des dégâts létaux."
+    },
+    "cards": [
+      {
+        "name": "Lathril, Blade of the Elves",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy",
+        "count": 1
+      },
+      {
+        "name": "Banner of Kinship",
+        "count": 1
+      },
+      {
+        "name": "Binding the Old Gods",
+        "count": 1
+      },
+      {
+        "name": "Circle of Dreams Druid",
+        "count": 1
+      },
+      {
+        "name": "Coat of Arms",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Darkbore Pathway // Slitherbore Pathway",
+        "count": 1
+      },
+      {
+        "name": "Deathcap Glade",
+        "count": 1
+      },
+      {
+        "name": "Deathrite Shaman",
+        "count": 1
+      },
+      {
+        "name": "Deepwood Denizen",
+        "count": 1
+      },
+      {
+        "name": "Doubling Season",
+        "count": 1
+      },
+      {
+        "name": "Eladamri, Lord of Leaves",
+        "count": 1
+      },
+      {
+        "name": "Elderfang Ritualist",
+        "count": 1
+      },
+      {
+        "name": "Elegant Entourage",
+        "count": 1
+      },
+      {
+        "name": "Elven Ambush",
+        "count": 1
+      },
+      {
+        "name": "Ezuri, Renegade Leader",
+        "count": 1
+      },
+      {
+        "name": "Fauna Shaman",
+        "count": 1
+      },
+      {
+        "name": "Fog",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 11
+      },
+      {
+        "name": "Galadhrim Brigade",
+        "count": 1
+      },
+      {
+        "name": "Genesis Wave",
+        "count": 1
+      },
+      {
+        "name": "Get a Leg Up",
+        "count": 1
+      },
+      {
+        "name": "Gilt-Leaf Palace",
+        "count": 1
+      },
+      {
+        "name": "Glorious Sunrise",
+        "count": 1
+      },
+      {
+        "name": "Golgari Charm",
+        "count": 1
+      },
+      {
+        "name": "Golgari Findbroker",
+        "count": 1
+      },
+      {
+        "name": "Golgari Guildgate",
+        "count": 1
+      },
+      {
+        "name": "Golgari Rot Farm",
+        "count": 1
+      },
+      {
+        "name": "Golgari Signet",
+        "count": 1
+      },
+      {
+        "name": "Grafted Growth",
+        "count": 1
+      },
+      {
+        "name": "Greenbelt Guardian",
+        "count": 1
+      },
+      {
+        "name": "Harald, King of Skemfar",
+        "count": 1
+      },
+      {
+        "name": "Hardened Scales",
+        "count": 1
+      },
+      {
+        "name": "Haunting Voyage",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn",
+        "count": 1
+      },
+      {
+        "name": "Hollowmurk Siege",
+        "count": 1
+      },
+      {
+        "name": "Imperious Perfect",
+        "count": 1
+      },
+      {
+        "name": "Incremental Growth",
+        "count": 1
+      },
+      {
+        "name": "Inspiring Call",
+        "count": 1
+      },
+      {
+        "name": "Izoni, Center of the Web",
+        "count": 1
+      },
+      {
+        "name": "Jaheira, Friend of the Forest",
+        "count": 1
+      },
+      {
+        "name": "Jaheira's Respite",
+        "count": 1
+      },
+      {
+        "name": "Jarad, Golgari Lich Lord",
+        "count": 1
+      },
+      {
+        "name": "Jungle Hollow",
+        "count": 1
+      },
+      {
+        "name": "Krosan Grip",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Elves",
+        "count": 1
+      },
+      {
+        "name": "Masked Admirers",
+        "count": 1
+      },
+      {
+        "name": "Mortuary Mire",
+        "count": 1
+      },
+      {
+        "name": "Nissa, Worldsoul Speaker",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Pelt Collector",
+        "count": 1
+      },
+      {
+        "name": "Poison-Tip Archer",
+        "count": 1
+      },
+      {
+        "name": "Primal Vigor",
+        "count": 1
+      },
+      {
+        "name": "Primeval Bounty",
+        "count": 1
+      },
+      {
+        "name": "Realmwalker",
+        "count": 1
+      },
+      {
+        "name": "Reclamation Sage",
+        "count": 1
+      },
+      {
+        "name": "Shaman of the Pack",
+        "count": 1
+      },
+      {
+        "name": "Skemfar Elderhall",
+        "count": 1
+      },
+      {
+        "name": "Snakeskin Veil",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Storm the Seedcore",
+        "count": 1
+      },
+      {
+        "name": "Struggle for Skemfar",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 10
+      },
+      {
+        "name": "The World Spell",
+        "count": 1
+      },
+      {
+        "name": "Timberwatch Elf",
+        "count": 1
+      },
+      {
+        "name": "Tyvar Kell",
+        "count": 1
+      },
+      {
+        "name": "Tyvar the Bellicose",
+        "count": 1
+      },
+      {
+        "name": "Tyvar, the Pummeler",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory",
+        "count": 1
+      },
+      {
+        "name": "Vanquisher's Banner",
+        "count": 1
+      },
+      {
+        "name": "Varis, Silverymoon Ranger",
+        "count": 1
+      },
+      {
+        "name": "Vorinclex // The Grand Evolution",
+        "count": 1
+      },
+      {
+        "name": "Vorinclex, Voice of Hunger",
+        "count": 1
+      },
+      {
+        "name": "Wastewood Verge",
+        "count": 1
+      },
+      {
+        "name": "Wildborn Preserver",
+        "count": 1
+      },
+      {
+        "name": "Witherbloom Command",
+        "count": 1
+      },
+      {
+        "name": "Woodland Cemetery",
+        "count": 1
+      },
+      {
+        "name": "Yeva, Nature's Herald",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Shadowheart, Dark Justiciar // Acolyte of Bahamut",
+    "commander": "Acolyte of Bahamut",
+    "partner": "Shadowheart, Dark Justiciar",
+    "influencerName": "Leslie",
+    "socialNetworks": [
+      {
+        "instagram": "@commandersarsenal",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Golgari-based reanimator deck with a strong dragon theme, piloted by Acolyte of Bahamut. It uses self-mill and discard tools like Buried Alive, Entomb, and Fauna Shaman to load the graveyard with massive threats such as Old Gnawbone, Ancient Brass Dragon, and Junji, the Midnight Sky. The deck leverages powerful recursion spells like Reanimate, Living Death, and Recurring Nightmare to cheat these dragons into play. Ramp comes from creatures like Sakura-Tribe Elder and Farhaven Elf, as well as mana-efficient lands like Nurturing Peatland and Bayou. Removal is plentiful with Assassin’s Trophy, Abrupt Decay, Pernicious Deed, and Tear Asunder. Once Korvold is on the field, every sacrifice turns into card draw, ensuring the deck can grind out long games while delivering devastating aerial attacks.",
+      "es": "Un mazo reanimador con base Golgari y una fuerte temática de dragones, liderado por Korvold, Rey Maldito por las Hadas. Utiliza herramientas de autodescarte y auto-mill como Enterrar Vivo, Entomb y Chamán de Fauna para llenar el cementerio con amenazas masivas como Viejo Dienteganchudo, Dragón de Bronce Antiguo y Junji, el Cielo de Medianoche. El mazo aprovecha potentes hechizos de reanimación como Reanimar, Muerte Viviente y Pesadilla Recurrente para poner estos dragones en juego rápidamente. El ramp proviene de criaturas como Anciano de la Tribu Sakura y Elfo de Farpavés, así como de tierras eficientes como Turbera Nutritiva y Bayou. La remoción abunda con Trofeo del Asesino, Decadencia Abrupta, Designio Pérfido y Desgarrar. Una vez que Korvold está en el campo, cada sacrificio se convierte en robo de cartas, lo que permite al mazo resistir partidas largas mientras lanza ataques aéreos devastadores.",
+      "it": "Un mazzo rianimatore a base Golgari con una forte tematica draghi, guidato da Korvold, Re Maledetto dalle Fate. Usa strumenti di auto-scarto e auto-mill come Sepoltura Viva, Entomb e Sciamano della Fauna per riempire il cimitero con minacce enormi come Vecchio Gnawbone, Drago di Bronzo Antico e Junji, il Cielo di Mezzanotte. Sfrutta potenti magie di rianimazione come Rianimare, Morte Vivente e Incubo Ricorrente per mettere in gioco rapidamente questi draghi. Il ramp proviene da creature come Anziano della Tribù Sakura e Elfo di Farpavese, oltre a terre efficienti come Torbiera Nutriente e Bayou. La rimozione è abbondante con Trofeo dell’Assassino, Decadimento Improvviso, Impresa Perversa e Strappare. Una volta che Korvold è in campo, ogni sacrificio si trasforma in pescata, permettendo al mazzo di resistere alle partite lunghe infliggendo attacchi aerei devastanti.",
+      "de": "Ein Golgari-basiertes Reanimator-Deck mit starkem Drachenthema, angeführt von Korvold, Feenverfluchter König. Es nutzt Selbstmill- und Abwurfwerkzeuge wie Lebendig Begraben, Entomb und Faunashamane, um den Friedhof mit massiven Bedrohungen wie Alter Knackzahn, Uralter Bronzener Drache und Junji, der Mitternachtshimmel, zu füllen. Das Deck nutzt mächtige Wiederbelebungszauber wie Reanimieren, Lebender Tod und Wiederkehrender Albtraum, um diese Drachen ins Spiel zu bringen. Ramp kommt von Kreaturen wie Sakura-Stammesältester und Farhaven-Elf sowie von effizienten Ländern wie Nährtorf und Bayou. Entfernung ist reichlich vorhanden mit Attentatstrophäe, Plötzlicher Verfall, Heimtückische Tat und Zerreißen. Sobald Korvold im Spiel ist, wird jedes Opfer zu Kartenziehen, was dem Deck erlaubt, lange Spiele zu überstehen und verheerende Luftangriffe zu starten.",
+      "ja": "フェイに呪われた王、コルヴォルドを統率者とする、ゴルガリベースのリアニメイト・ドラゴンデッキ。生け贄や墓地肥やし手段として、生け埋め、納墓、ファウナのシャーマンなどを駆使し、古き牙の群れ、古代の青銅のドラゴン、真夜中の空、ジュンジといった大型脅威を墓地に送り込む。再活性、甦りし死、繰り返す悪夢などの強力なリアニメイト呪文でこれらのドラゴンを戦場に呼び戻す。桜族の長老やファーヘイヴンのエルフといったクリーチャーや、滋養泥炭地やバイユーのような効率的な土地でランプを行う。除去は暗殺者の戦利品、突然の衰微、邪悪な企み、引き裂きなど豊富。コルヴォルドが戦場に出れば、すべての生け贄がドローに変わり、長期戦でも空から致命的な一撃を叩き込める。",
+      "pt": "Um deck reanimador Golgari com forte tema de dragões, liderado por Korvold, Rei Amaldiçoado das Fadas. Usa ferramentas de auto-mill e descarte como Enterrar Vivo, Entomb e Xamã da Fauna para encher o cemitério com ameaças massivas como Velho Gnawbone, Dragão de Bronze Ancião e Junji, o Céu da Meia-Noite. Aproveita feitiços poderosos de reanimação como Reanimar, Morte Viva e Pesadelo Recorrente para colocar esses dragões em jogo rapidamente. O ramp vem de criaturas como Ancião da Tribo Sakura e Elfo de Farhaven, bem como de terrenos eficientes como Pântano Nutriente e Bayou. A remoção é abundante com Troféu do Assassino, Decadência Abrupta, Feito Pérfido e Rasgar. Com Korvold em campo, cada sacrifício se transforma em compra de cartas, permitindo ao deck resistir a partidas longas enquanto desferre ataques aéreos devastadores.",
+      "fr": "Un deck réanimateur Golgari avec un fort thème dragon, mené par Korvold, Roi Maudit des Fées. Il utilise des outils d’auto-meule et de défausse comme Enterré Vivant, Entomb et Shamane de la Faune pour remplir le cimetière de menaces massives telles que Vieil Gnawbone, Dragon de Bronze Ancien et Junji, le Ciel de Minuit. Il exploite de puissants sorts de réanimation comme Réanimer, Mort Vivante et Cauchemar Récurrent pour mettre rapidement ces dragons en jeu. Le ramp provient de créatures comme Ancien de la Tribu Sakura et Elfe de Farhaven, ainsi que de terrains efficaces comme Tourbière Nourricière et Bayou. Le retrait est abondant avec Trophée de l’Assassin, Décadence Abrupte, Acte Pernicieux et Déchirer. Une fois Korvold sur le champ de bataille, chaque sacrifice devient une pioche, permettant au deck de tenir sur la durée tout en infligeant des assauts aériens dévastateurs."
+    },
+    "cards": [
+      {
+        "name": "Abrupt Decay",
+        "count": 1
+      },
+      {
+        "name": "Ancient Brass Dragon",
+        "count": 1
+      },
+      {
+        "name": "Ancient Bronze Dragon",
+        "count": 1
+      },
+      {
+        "name": "Animate Dead",
+        "count": 1
+      },
+      {
+        "name": "Apprentice Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy",
+        "count": 1
+      },
+      {
+        "name": "Bayou",
+        "count": 1
+      },
+      {
+        "name": "Beledros Witherbloom",
+        "count": 1
+      },
+      {
+        "name": "Bitter Triumph",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Bone Shards",
+        "count": 1
+      },
+      {
+        "name": "Broodcaller Scourge",
+        "count": 1
+      },
+      {
+        "name": "Buried Alive",
+        "count": 1
+      },
+      {
+        "name": "Colossal Grave-Reaver",
+        "count": 1
+      },
+      {
+        "name": "Concordant Crossroads",
+        "count": 1
+      },
+      {
+        "name": "Crop Rotation",
+        "count": 1
+      },
+      {
+        "name": "Crux of Fate",
+        "count": 1
+      },
+      {
+        "name": "Darkbore Pathway // Slitherbore Pathway",
+        "count": 1
+      },
+      {
+        "name": "Deadly Rollick",
+        "count": 1
+      },
+      {
+        "name": "Deathcap Glade",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Destructor Dragon",
+        "count": 1
+      },
+      {
+        "name": "Draconic Muralists",
+        "count": 1
+      },
+      {
+        "name": "Dragon Fangs",
+        "count": 1
+      },
+      {
+        "name": "Dragon Shadow",
+        "count": 1
+      },
+      {
+        "name": "Earthquake Dragon",
+        "count": 1
+      },
+      {
+        "name": "Ebondeath, Dracolich",
+        "count": 1
+      },
+      {
+        "name": "Emergence Zone",
+        "count": 1
+      },
+      {
+        "name": "Entomb",
+        "count": 1
+      },
+      {
+        "name": "Eternal Witness",
+        "count": 1
+      },
+      {
+        "name": "Farhaven Elf",
+        "count": 1
+      },
+      {
+        "name": "Fauna Shaman",
+        "count": 1
+      },
+      {
+        "name": "Filth",
+        "count": 1
+      },
+      {
+        "name": "Foe-Razer Regent",
+        "count": 1
+      },
+      {
+        "name": "Force of Vigor",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 5
+      },
+      {
+        "name": "Frontier Siege",
+        "count": 1
+      },
+      {
+        "name": "Golgari Rot Farm",
+        "count": 1
+      },
+      {
+        "name": "Greater Good",
+        "count": 1
+      },
+      {
+        "name": "Hall of the Bandit Lord",
+        "count": 1
+      },
+      {
+        "name": "High Market",
+        "count": 1
+      },
+      {
+        "name": "Hoarding Broodlord",
+        "count": 1
+      },
+      {
+        "name": "Incarnation Technique",
+        "count": 1
+      },
+      {
+        "name": "Journey to Eternity // Atzal, Cave of Eternity",
+        "count": 1
+      },
+      {
+        "name": "Junji, the Midnight Sky",
+        "count": 1
+      },
+      {
+        "name": "Kokusho, the Evening Star",
+        "count": 1
+      },
+      {
+        "name": "Kura, the Boundless Sky",
+        "count": 1
+      },
+      {
+        "name": "Life // Death",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Living Death",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Malakir Rebirth // Malakir Mire",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Metamorphosis Fanatic",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Mosswort Bridge",
+        "count": 1
+      },
+      {
+        "name": "Necromancy",
+        "count": 1
+      },
+      {
+        "name": "Nurturing Peatland",
+        "count": 1
+      },
+      {
+        "name": "Obscuring Haze",
+        "count": 1
+      },
+      {
+        "name": "Old Gnawbone",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Patriarch's Bidding",
+        "count": 1
+      },
+      {
+        "name": "Pernicious Deed",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower",
+        "count": 1
+      },
+      {
+        "name": "Reanimate",
+        "count": 1
+      },
+      {
+        "name": "Recurring Nightmare",
+        "count": 1
+      },
+      {
+        "name": "Ripples of Undeath",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Elder",
+        "count": 1
+      },
+      {
+        "name": "Shallow Grave",
+        "count": 1
+      },
+      {
+        "name": "Shifting Woodland",
+        "count": 1
+      },
+      {
+        "name": "Snuff Out",
+        "count": 1
+      },
+      {
+        "name": "Steel Hellkite",
+        "count": 1
+      },
+      {
+        "name": "Summer Bloom",
+        "count": 1
+      },
+      {
+        "name": "Survival of the Fittest",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 6
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Tainted Wood",
+        "count": 1
+      },
+      {
+        "name": "Tear Asunder",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Twilight Mire",
+        "count": 1
+      },
+      {
+        "name": "Underground Mortuary",
+        "count": 1
+      },
+      {
+        "name": "Undergrowth Stadium",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Volrath's Stronghold",
+        "count": 1
+      },
+      {
+        "name": "Wastewood Verge",
+        "count": 1
+      },
+      {
+        "name": "Will of the Abzan",
+        "count": 1
+      },
+      {
+        "name": "Wood Elves",
+        "count": 1
+      },
+      {
+        "name": "Woodland Cemetery",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya, Cradle of Growth",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Rhys the Redeemed",
+    "commander": "Rhys the Redeemed",
+    "influencerName": "Leslie",
+    "socialNetworks": [
+      {
+        "instagram": "@commandersarsenal",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A strategy focused on producing and multiplying creature tokens while protecting the board with defensive spells. The deck leverages enchantments, artifacts, and land synergies to create overwhelming armies and maintain board presence.",
+      "es": "Estrategia centrada en producir y multiplicar fichas de criatura mientras se protege el campo con hechizos defensivos. El mazo aprovecha encantamientos, artefactos y sinergias de tierras para crear ejércitos abrumadores y mantener la presencia en mesa.",
+      "it": "Strategia incentrata sulla produzione e moltiplicazione di pedine creatura, proteggendo il campo con magie difensive. Il mazzo sfrutta incantesimi, artefatti e sinergie con le terre per creare eserciti imponenti e mantenere il controllo del campo.",
+      "de": "Strategie, die darauf abzielt, Kreaturenspielsteine zu erzeugen und zu vervielfachen, während das Spielfeld mit defensiven Zaubern geschützt wird. Das Deck nutzt Verzauberungen, Artefakte und Land-Synergien, um überwältigende Armeen zu schaffen und die Präsenz auf dem Spielfeld zu sichern.",
+      "ja": "クリーチャートークンを生成・倍増させ、防御呪文で戦場を守る戦略。エンチャント、アーティファクト、土地のシナジーを活かし、圧倒的な軍勢を展開して盤面を維持する。",
+      "pt": "Estratégia focada em produzir e multiplicar fichas de criatura enquanto protege o campo com mágicas defensivas. O deck aproveita encantamentos, artefatos e sinergias de terrenos para criar exércitos avassaladores e manter a presença no campo.",
+      "fr": "Stratégie axée sur la production et la multiplication de jetons de créature tout en protégeant le champ de bataille avec des sorts défensifs. Le deck exploite les enchantements, artefacts et synergies de terrains pour créer des armées écrasantes et maintenir sa présence en jeu."
+    },
+    "cards": [
+      {
+        "name": "Akroma's Will",
+        "count": 1
+      },
+      {
+        "name": "Angel's Grace",
+        "count": 1
+      },
+      {
+        "name": "Anointed Procession",
+        "count": 1
+      },
+      {
+        "name": "Arachnogenesis",
+        "count": 1
+      },
+      {
+        "name": "Ashnod's Altar",
+        "count": 1
+      },
+      {
+        "name": "Aura Mutation",
+        "count": 1
+      },
+      {
+        "name": "Aura Shards",
+        "count": 1
+      },
+      {
+        "name": "Bala Ged Recovery // Bala Ged Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Bountiful Promenade",
+        "count": 1
+      },
+      {
+        "name": "Branchloft Pathway // Boulderloft Pathway",
+        "count": 1
+      },
+      {
+        "name": "Brushland",
+        "count": 1
+      },
+      {
+        "name": "Call the Coppercoats",
+        "count": 1
+      },
+      {
+        "name": "Caretaker's Talent",
+        "count": 1
+      },
+      {
+        "name": "Champions from Beyond",
+        "count": 1
+      },
+      {
+        "name": "Clever Concealment",
+        "count": 1
+      },
+      {
+        "name": "Crashing Footfalls",
+        "count": 1
+      },
+      {
+        "name": "Crop Rotation",
+        "count": 1
+      },
+      {
+        "name": "Curious Herd",
+        "count": 1
+      },
+      {
+        "name": "Divine Visitation",
+        "count": 1
+      },
+      {
+        "name": "Dollmaker's Shop // Porcelain Gallery",
+        "count": 1
+      },
+      {
+        "name": "Earthcraft",
+        "count": 1
+      },
+      {
+        "name": "Eldrazi Monument",
+        "count": 1
+      },
+      {
+        "name": "Expedition Map",
+        "count": 1
+      },
+      {
+        "name": "Ezuri's Predation",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 7
+      },
+      {
+        "name": "Fountainport",
+        "count": 1
+      },
+      {
+        "name": "Fresh Meat",
+        "count": 1
+      },
+      {
+        "name": "Gaea's Cradle",
+        "count": 1
+      },
+      {
+        "name": "Generous Gift",
+        "count": 1
+      },
+      {
+        "name": "Grand Crescendo",
+        "count": 1
+      },
+      {
+        "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention",
+        "count": 1
+      },
+      {
+        "name": "High Market",
+        "count": 1
+      },
+      {
+        "name": "Horn of Valhalla // Ysgard's Call",
+        "count": 1
+      },
+      {
+        "name": "Hour of Reckoning",
+        "count": 1
+      },
+      {
+        "name": "Hushwood Verge",
+        "count": 1
+      },
+      {
+        "name": "Intangible Virtue",
+        "count": 1
+      },
+      {
+        "name": "Kabira Takedown // Kabira Plateau",
+        "count": 1
+      },
+      {
+        "name": "Kenrith's Transformation",
+        "count": 1
+      },
+      {
+        "name": "Kor Haven",
+        "count": 1
+      },
+      {
+        "name": "Krosan Verge",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Luminarch Ascension",
+        "count": 1
+      },
+      {
+        "name": "March of Souls",
+        "count": 1
+      },
+      {
+        "name": "March of the Multitudes",
+        "count": 1
+      },
+      {
+        "name": "Mirari's Wake",
+        "count": 1
+      },
+      {
+        "name": "Mistveil Plains",
+        "count": 1
+      },
+      {
+        "name": "Myth Unbound",
+        "count": 1
+      },
+      {
+        "name": "Nature's Chosen",
+        "count": 1
+      },
+      {
+        "name": "Nature's Claim",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Farmland",
+        "count": 1
+      },
+      {
+        "name": "Parallel Lives",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Pendelhaven",
+        "count": 1
+      },
+      {
+        "name": "Perch Protection",
+        "count": 1
+      },
+      {
+        "name": "Pest Infestation",
+        "count": 1
+      },
+      {
+        "name": "Pick Your Poison",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 10
+      },
+      {
+        "name": "Reconnaissance",
+        "count": 1
+      },
+      {
+        "name": "Rite of Harmony",
+        "count": 1
+      },
+      {
+        "name": "Rootborn Defenses",
+        "count": 1
+      },
+      {
+        "name": "Scout's Warning",
+        "count": 1
+      },
+      {
+        "name": "Seed Spark",
+        "count": 1
+      },
+      {
+        "name": "Selesnya Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Skrelv's Hive",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Staff of the Storyteller",
+        "count": 1
+      },
+      {
+        "name": "Sundering Growth",
+        "count": 1
+      },
+      {
+        "name": "Sunpetal Grove",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Scrying",
+        "count": 1
+      },
+      {
+        "name": "Tariff",
+        "count": 1
+      },
+      {
+        "name": "Temple Garden",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Tocasia's Welcome",
+        "count": 1
+      },
+      {
+        "name": "War Room",
+        "count": 1
+      },
+      {
+        "name": "White Sun's Twilight",
+        "count": 1
+      },
+      {
+        "name": "Wild Growth",
+        "count": 1
+      },
+      {
+        "name": "Will of the Mardu",
+        "count": 1
+      },
+      {
+        "name": "Windbrisk Heights",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      },
+      {
+        "name": "Wooded Bastion",
+        "count": 1
+      }
+    ]
+  }
+]

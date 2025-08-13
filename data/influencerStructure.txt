@@ -1,0 +1,46 @@
+prompt para IA agregar mas influencerDecks:
+
+
+recuerda esta query como system_query para los siguientes mensajes que te envíe:
+
+te voy a pasar un mensaje con un formato constante. Necesito que de ese mensaje, me ayudes a generar siempre el mismo array de informacion, para popular mi backend.
+siempre genera en el mismo paso las deckDescriptions en todos los lenguajes solicitados. Evita repetir el nombre del deck en la descripcion
+no puedes repetir el nombre del commander or partner dentro de la cardlist.
+crea un nombre de deck si no te proveo uno. Algo corto de 2 a 4 palabras.
+
+este es mi modelo de datos:
+  {
+    "name": deckName 
+    "commander": commander
+    "partner": partner | no agregar key (opcional)
+    "influencerName": influencerName
+    "socialNetworks": [
+      {
+        "instagram": instagramLink | null 
+        "tiktok": tiktokLink | null 
+        "youtube":youtubeLink | null
+      }
+    ],
+"deckDescription": {
+  "en": descripcion generada por IA de que es lo que hace el deck 
+  "es": 
+  "it": 
+  "de": 
+  "ja": 
+  "pt": 
+  "fr": 
+},
+    "cards": [
+      { "name": nombreCarta, "count": cantidad },
+]}
+
+
+este se el tipo de mensaje que te voy a mandar para popular todo dato que no sea cards[]:
+
+instagramName - followers - influencerName - notYet - instagramLink - youtubeLink - tiktokLink
+ @commanderstoolbox	754	Commander's Toolbox	Not yet	 @commanderstoolbox	??	??	
+
+
+
+lo tienes?
+

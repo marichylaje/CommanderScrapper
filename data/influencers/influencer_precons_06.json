@@ -1099,5 +1099,808 @@
         "count": 1
       }
     ]
+  },
+  {
+    "name": "Tymna & Kraum",
+    "commander": "Tymna the Weaver",
+    "partner": "Kraum, Ludevic's Opus",
+    "influencerName": "Commander's Toolbox",
+    "socialNetworks": [
+      {
+        "instagram": "@commanderstoolbox",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A high-speed, four-color turbo combo deck that combines low-cost interaction, efficient tutors, and fast mana to win quickly. Centered around Ad Nauseam, Thassa's Oracle, and Underworld Breach, it controls the stack with layers of protection like Force of Will and Silence, while chaining spells with wheels, rituals, and tutors.",
+      "es": "Un mazo turbo combo de cuatro colores diseñado para ganar rápidamente, combinando interacción de bajo coste, tutores eficientes y maná rápido. Se centra en Ad Nauseam, Thassa's Oracle y Underworld Breach, con herramientas como Force of Will y Silence para proteger la pila y cadenas de hechizos con ruedas, rituales y tutores.",
+      "it": "Un mazzo turbo combo a quattro colori che punta a chiudere rapidamente usando interazioni a basso costo, tutori efficienti e mana veloce. Ruota attorno a Ad Nauseam, Thassa's Oracle e Underworld Breach, controllando la pila con protezioni come Force of Will e Silence e creando catene di magie con ruote, rituali e tutori.",
+      "de": "Ein vierfarbiges Turbo-Combo-Deck mit dem Ziel, das Spiel früh zu gewinnen. Nutzt günstige Interaktion, effiziente Tutoren und schnelles Mana. Ad Nauseam, Thassa's Oracle und Underworld Breach stehen im Zentrum, geschützt durch Karten wie Force of Will und Silence sowie Kombo-Ketten mit Wheels, Ritualen und Tutoren.",
+      "ja": "低コストの妨害、優秀なチューター、高速マナを駆使して素早く勝利を狙う4色ターボコンボ。Ad Nauseam、Thassa's Oracle、Underworld Breachを中心に、Force of WillやSilenceでスタックを守りつつ、ホイール、儀式、チューターを連鎖させて勝利を目指す。",
+      "pt": "Um deck turbo combo de quatro cores que busca vencer rapidamente, combinando interações baratas, tutores eficientes e aceleração de mana. Baseado em Ad Nauseam, Thassa's Oracle e Underworld Breach, protege sua pilha com cartas como Force of Will e Silence, enquanto encadeia mágicas com rodas, rituais e tutores.",
+      "fr": "Un deck turbo combo quatre couleurs qui vise une victoire rapide grâce à une interaction peu coûteuse, des tuteurs efficaces et du mana accéléré. Ad Nauseam, Thassa's Oracle et Underworld Breach en sont les piliers, avec des protections comme Force of Will et Silence, enchaînant les sorts avec des roues, rituels et tuteurs."
+    },
+    "cards": [
+      {
+        "name": "Dack Fayden",
+        "count": 1
+      },
+      {
+        "name": "Teferi, Time Raveler",
+        "count": 1
+      },
+      {
+        "name": "Aragorn, King of Gondor",
+        "count": 1
+      },
+      {
+        "name": "Birgi, God of Storytelling",
+        "count": 1
+      },
+      {
+        "name": "Dragon's Rage Channeler",
+        "count": 1
+      },
+      {
+        "name": "Esper Sentinel",
+        "count": 1
+      },
+      {
+        "name": "Grand Abolisher",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff",
+        "count": 1
+      },
+      {
+        "name": "Orcish Bowmasters",
+        "count": 1
+      },
+      {
+        "name": "Professional Face-Breaker",
+        "count": 1
+      },
+      {
+        "name": "Ranger-Captain of Eos",
+        "count": 1
+      },
+      {
+        "name": "Simian Spirit Guide",
+        "count": 1
+      },
+      {
+        "name": "Thassa's Oracle",
+        "count": 1
+      },
+      {
+        "name": "Valley Floodcaller",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Diabolic Intent",
+        "count": 1
+      },
+      {
+        "name": "Gamble",
+        "count": 1
+      },
+      {
+        "name": "Imperial Seal",
+        "count": 1
+      },
+      {
+        "name": "Mnemonic Betrayal",
+        "count": 1
+      },
+      {
+        "name": "Rite of Flame",
+        "count": 1
+      },
+      {
+        "name": "Sevinne's Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Storm's Will",
+        "count": 1
+      },
+      {
+        "name": "Wheel of Fortune",
+        "count": 1
+      },
+      {
+        "name": "Windfall",
+        "count": 1
+      },
+      {
+        "name": "Ad Nauseam",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Borne Upon a Wind",
+        "count": 1
+      },
+      {
+        "name": "Brain Freeze",
+        "count": 1
+      },
+      {
+        "name": "Cabal Ritual",
+        "count": 1
+      },
+      {
+        "name": "Chain of Vapor",
+        "count": 1
+      },
+      {
+        "name": "Culling the Weak",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Deflecting Swat",
+        "count": 1
+      },
+      {
+        "name": "Demonic Consultation",
+        "count": 1
+      },
+      {
+        "name": "Enlightened Tutor",
+        "count": 1
+      },
+      {
+        "name": "Fierce Guardianship",
+        "count": 1
+      },
+      {
+        "name": "Final Fortune",
+        "count": 1
+      },
+      {
+        "name": "Flare of Duplication",
+        "count": 1
+      },
+      {
+        "name": "Flusterstorm",
+        "count": 1
+      },
+      {
+        "name": "Force of Negation",
+        "count": 1
+      },
+      {
+        "name": "Force of Will",
+        "count": 1
+      },
+      {
+        "name": "Into the Flood Maw",
+        "count": 1
+      },
+      {
+        "name": "Intuition",
+        "count": 1
+      },
+      {
+        "name": "March of Swirling Mist",
+        "count": 1
+      },
+      {
+        "name": "Mental Misstep",
+        "count": 1
+      },
+      {
+        "name": "Mindbreak Trap",
+        "count": 1
+      },
+      {
+        "name": "Mystical Tutor",
+        "count": 1
+      },
+      {
+        "name": "Pact of Negation",
+        "count": 1
+      },
+      {
+        "name": "Pyroblast",
+        "count": 1
+      },
+      {
+        "name": "Rain of Filth",
+        "count": 1
+      },
+      {
+        "name": "Silence",
+        "count": 1
+      },
+      {
+        "name": "Snapback",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Tainted Pact",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Chrome Mox",
+        "count": 1
+      },
+      {
+        "name": "Lion's Eye Diamond",
+        "count": 1
+      },
+      {
+        "name": "Lotus Petal",
+        "count": 1
+      },
+      {
+        "name": "Mana Vault",
+        "count": 1
+      },
+      {
+        "name": "Mox Diamond",
+        "count": 1
+      },
+      {
+        "name": "Mox Opal",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "The Ball",
+        "count": 1
+      },
+      {
+        "name": "The One Ring",
+        "count": 1
+      },
+      {
+        "name": "Wishclaw Talisman",
+        "count": 1
+      },
+      {
+        "name": "Mystic Remora",
+        "count": 1
+      },
+      {
+        "name": "Necropotence",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe",
+        "count": 1
+      },
+      {
+        "name": "Underworld Breach",
+        "count": 1
+      },
+      {
+        "name": "Unstable Harmonics",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Badlands",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls",
+        "count": 1
+      },
+      {
+        "name": "City of Brass",
+        "count": 1
+      },
+      {
+        "name": "Cybertron",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Glittering Caves of Aglarond",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain",
+        "count": 1
+      },
+      {
+        "name": "Mana Confluence",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City",
+        "count": 1
+      },
+      {
+        "name": "Plateau",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Scrubland",
+        "count": 1
+      },
+      {
+        "name": "Spire of Industry",
+        "count": 1
+      },
+      {
+        "name": "Tarnished Citadel",
+        "count": 1
+      },
+      {
+        "name": "Tundra",
+        "count": 1
+      },
+      {
+        "name": "Underground Sea",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Volcanic Island",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Carmen",
+    "commander": "Carmen, Cruel Skymarcher",
+    "influencerName": "LALUNA",
+    "socialNetworks": [
+      {
+        "instagram": "@laluna.premia",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A mono-black aristocrats deck with a strong sacrifice theme, leveraging death triggers and token synergy to drain opponents and control the board. It uses recursive threats, blood artist effects, and mass edicts to generate value and pressure, aiming to finish with cards like Revel in Riches or Exquisite Blood.",
+      "es": "Un mazo monocolor negro centrado en la estrategia aristócrata, con fuerte enfoque en sacrificios, desencadenantes por muerte y sinergia con fichas. Controla la mesa y drena a los oponentes usando amenazas recursivas, efectos de sanguijuela y edictos masivos, rematando con cartas como Revel in Riches o Exquisite Blood.",
+      "it": "Un mazzo aristocratico mononero focalizzato sui sacrifici, inneschi di morte e sinergie con pedine. Controlla il campo e consuma gli avversari con minacce ricorsive, effetti alla Blood Artist e editti di massa, puntando a chiudere con carte come Revel in Riches o Exquisite Blood.",
+      "de": "Ein monoblack-Aristokraten-Deck mit Fokus auf Opfermechaniken, Todessynergien und Spielsteine. Nutzt wiederkehrende Bedrohungen, Blutsauger-Effekte und Massenedikte, um Gegner zu kontrollieren und auszubluten, mit Abschlüssen wie Revel in Riches oder Exquisite Blood.",
+      "ja": "犠牲シナジーと死亡誘発に特化した単色黒のアリストクラッツ構成。トークンとの連携や血の芸術家系の効果で盤面を掌握しつつ、Revel in RichesやExquisite Bloodといったフィニッシャーで勝利を狙う。",
+      "pt": "Um deck monoblack aristocrata com forte ênfase em sacrifícios, sinergias com fichas e gatilhos de morte. Controla o campo e drena os oponentes com ameaças recursivas, efeitos à la Blood Artist e edictos em massa, finalizando com cartas como Revel in Riches ou Exquisite Blood.",
+      "fr": "Un deck mono-noir aristocrate axé sur les sacrifices, les synergies avec les jetons et les déclencheurs de mort. Il contrôle le champ de bataille tout en drainant les adversaires grâce à des menaces récurrentes, des effets de type Blood Artist et des édits de masse, concluant avec des cartes comme Revel in Riches ou Exquisite Blood."
+    },
+    "cards": [
+      {
+        "name": "Accursed Marauder",
+        "count": 1
+      },
+      {
+        "name": "Avenger of the Fallen",
+        "count": 1
+      },
+      {
+        "name": "Braids, Arisen Nightmare",
+        "count": 1
+      },
+      {
+        "name": "Braids, Cabal Minion",
+        "count": 1
+      },
+      {
+        "name": "Charismatic Conqueror",
+        "count": 1
+      },
+      {
+        "name": "Demon's Disciple",
+        "count": 1
+      },
+      {
+        "name": "Doomed Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Dusk Legion Sergeant",
+        "count": 1
+      },
+      {
+        "name": "Elenda's Hierophant",
+        "count": 1
+      },
+      {
+        "name": "Elenda, the Dusk Rose",
+        "count": 1
+      },
+      {
+        "name": "Fleshbag Marauder",
+        "count": 1
+      },
+      {
+        "name": "Gravelighter",
+        "count": 1
+      },
+      {
+        "name": "Grief",
+        "count": 1
+      },
+      {
+        "name": "Grim Hireling",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff",
+        "count": 1
+      },
+      {
+        "name": "Massacre Wurm",
+        "count": 1
+      },
+      {
+        "name": "Master of Dark Rites",
+        "count": 1
+      },
+      {
+        "name": "Merciless Executioner",
+        "count": 1
+      },
+      {
+        "name": "Michiko Konda, Truth Seeker",
+        "count": 1
+      },
+      {
+        "name": "Plaguecrafter",
+        "count": 1
+      },
+      {
+        "name": "Priest of Forgotten Gods",
+        "count": 1
+      },
+      {
+        "name": "Rankle, Master of Pranks",
+        "count": 1
+      },
+      {
+        "name": "Redemption Choir",
+        "count": 1
+      },
+      {
+        "name": "Roaming Throne",
+        "count": 1
+      },
+      {
+        "name": "Sephiroth, Fabled SOLDIER",
+        "count": 1
+      },
+      {
+        "name": "Shadow, Mysterious Assassin",
+        "count": 1
+      },
+      {
+        "name": "Sidisi, Regent of the Mire",
+        "count": 1
+      },
+      {
+        "name": "Tergrid, God of Fright",
+        "count": 1
+      },
+      {
+        "name": "Vincent Valentine",
+        "count": 1
+      },
+      {
+        "name": "Viscera Seer",
+        "count": 1
+      },
+      {
+        "name": "Vito, Fanatic of Aclazotz",
+        "count": 1
+      },
+      {
+        "name": "Voice of Victory",
+        "count": 1
+      },
+      {
+        "name": "Welcoming Vampire",
+        "count": 1
+      },
+      {
+        "name": "World Queller",
+        "count": 1
+      },
+      {
+        "name": "Yahenni, Undying Partisan",
+        "count": 1
+      },
+      {
+        "name": "Zulaport Cutthroat",
+        "count": 1
+      },
+      {
+        "name": "Danse Macabre",
+        "count": 1
+      },
+      {
+        "name": "Eaten Alive",
+        "count": 1
+      },
+      {
+        "name": "Reanimate",
+        "count": 1
+      },
+      {
+        "name": "Shantotto's Coercion",
+        "count": 1
+      },
+      {
+        "name": "Single Combat",
+        "count": 1
+      },
+      {
+        "name": "Tragic Arrogance",
+        "count": 1
+      },
+      {
+        "name": "Victimize",
+        "count": 1
+      },
+      {
+        "name": "Culling the Weak",
+        "count": 1
+      },
+      {
+        "name": "Darkness of Eternity",
+        "count": 1
+      },
+      {
+        "name": "Deadly Rollick",
+        "count": 1
+      },
+      {
+        "name": "Flare of Malice",
+        "count": 1
+      },
+      {
+        "name": "Hellish Rebuke",
+        "count": 1
+      },
+      {
+        "name": "Songs of the Damned",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Village Rites",
+        "count": 1
+      },
+      {
+        "name": "Wake the Dead",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Ashnod's Altar",
+        "count": 1
+      },
+      {
+        "name": "Blade of the Bloodchief",
+        "count": 1
+      },
+      {
+        "name": "Bontu's Monument",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Lotus Petal",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Altar",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "The Masamune",
+        "count": 1
+      },
+      {
+        "name": "Wedding Invitation",
+        "count": 1
+      },
+      {
+        "name": "Doom Foretold",
+        "count": 1
+      },
+      {
+        "name": "Exquisite Blood",
+        "count": 1
+      },
+      {
+        "name": "Grave Pact",
+        "count": 1
+      },
+      {
+        "name": "Land Tax",
+        "count": 1
+      },
+      {
+        "name": "Revel in Riches",
+        "count": 1
+      },
+      {
+        "name": "Sadistic Glee",
+        "count": 1
+      },
+      {
+        "name": "The Meathook Massacre",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Ebon Stronghold",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine",
+        "count": 1
+      },
+      {
+        "name": "Henneth Annûn",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Midgar, City of Mako // Reactor Raid",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Shattered Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Shizo, Death's Storehouse",
+        "count": 1
+      },
+      {
+        "name": "Silent Clearing",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 6
+      },
+      {
+        "name": "Tainted Field",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions",
+        "count": 1
+      },
+      {
+        "name": "Vault of the Archangel",
+        "count": 1
+      },
+      {
+        "name": "Witch's Clinic",
+        "count": 1
+      }
+    ]
   }
 ]

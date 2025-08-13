@@ -1,0 +1,2029 @@
+[
+  {
+    "name": "Prismatic Conflux",
+    "commander": "Niv-Mizzet Reborn",
+    "influencerName": "Kevin Lepage",
+    "socialNetworks": [
+      {
+        "instagram": "@kevin_altered_mtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A five-color value deck leveraging multicolored cards to maximize Niv-Mizzet Reborn's ability. It features a diverse set of removal, card draw, and utility spells that provide flexibility and explosive card advantage when the commander enters the battlefield.",
+      "es": "Un mazo de cinco colores que aprovecha cartas multicolor para sacar el máximo partido a la habilidad de Niv-Mizzet Reborn. Incluye una variedad de removals, robo de cartas y hechizos utilitarios que ofrecen flexibilidad y ventaja explosiva al lanzar al comandante.",
+      "it": "Un mazzo a cinque colori che sfrutta carte multicolore per massimizzare l'abilità di Niv-Mizzet Reborn. Presenta una varietà di rimozioni, pescate e magie versatili che offrono flessibilità e vantaggio esplosivo quando il comandante entra in gioco.",
+      "de": "Ein Fünf-Farben-Deck, das mehrfarbige Karten nutzt, um Niv-Mizzet Reborns Fähigkeit voll auszuschöpfen. Es enthält vielseitige Removal-, Kartenzieh- und Utility-Zauber für maximale Flexibilität und Kartenvorteil.",
+      "ja": "Niv-Mizzet Rebornの能力を最大限に活かすため、多色カードを活用する5色のバリューデッキです。除去、ドロー、ユーティリティ呪文をバランスよく搭載し、指揮官の着地で爆発的なアドバンテージを得られます。",
+      "pt": "Um deck de cinco cores que usa cartas multicoloridas para maximizar a habilidade de Niv-Mizzet Reborn. Inclui várias remoções, compras de cartas e mágicas utilitárias, oferecendo flexibilidade e vantagem explosiva ao entrar em campo.",
+      "fr": "Un deck cinq couleurs exploitant des cartes multicolores pour optimiser la capacité de Niv-Mizzet Reborn. Il propose des sorts variés de retrait, pioche et utilité, permettant une flexibilité et un avantage de cartes explosif à l'arrivée du commandant."
+    },
+    "cards": [
+      {
+        "name": "Drawn from Dreams",
+        "count": 1
+      },
+      {
+        "name": "Convert to Slime",
+        "count": 1
+      },
+      {
+        "name": "Aesi, Tyrant of Gyre Strait",
+        "count": 1
+      },
+      {
+        "name": "The Gitrog Monster",
+        "count": 1
+      },
+      {
+        "name": "Sire of Stagnation",
+        "count": 1
+      },
+      {
+        "name": "Planar Genesis",
+        "count": 1
+      },
+      {
+        "name": "Yasharn, Implacable Earth",
+        "count": 1
+      },
+      {
+        "name": "Bedevil",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Elder",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking",
+        "count": 1
+      },
+      {
+        "name": "Dragonlord Atarka",
+        "count": 1
+      },
+      {
+        "name": "Azor, the Lawbringer",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Bayou",
+        "count": 1
+      },
+      {
+        "name": "Deathsprout",
+        "count": 1
+      },
+      {
+        "name": "Scrubland",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Dream Trawler",
+        "count": 1
+      },
+      {
+        "name": "Wooded Foothills",
+        "count": 1
+      },
+      {
+        "name": "Lunar Hatchling",
+        "count": 1
+      },
+      {
+        "name": "Identity Crisis",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Tropical Island",
+        "count": 1
+      },
+      {
+        "name": "Utter End",
+        "count": 1
+      },
+      {
+        "name": "Debt to the Deathless",
+        "count": 1
+      },
+      {
+        "name": "Dragonlord Dromoka",
+        "count": 1
+      },
+      {
+        "name": "Talion, the Kindly Lord",
+        "count": 1
+      },
+      {
+        "name": "Badlands",
+        "count": 1
+      },
+      {
+        "name": "Binding the Old Gods",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Merciless Eviction",
+        "count": 1
+      },
+      {
+        "name": "Flower / Flourish",
+        "count": 1
+      },
+      {
+        "name": "Sacred Foundry",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 2
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Harmonize",
+        "count": 1
+      },
+      {
+        "name": "Temple Garden",
+        "count": 1
+      },
+      {
+        "name": "Windgrace's Judgment",
+        "count": 1
+      },
+      {
+        "name": "Wash Out",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Lantern",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Underground Sea",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 2
+      },
+      {
+        "name": "Ertai Resurrected",
+        "count": 1
+      },
+      {
+        "name": "Uro, Titan of Nature's Wrath",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Plateau",
+        "count": 1
+      },
+      {
+        "name": "Death Grasp",
+        "count": 1
+      },
+      {
+        "name": "Ignis Scientia",
+        "count": 1
+      },
+      {
+        "name": "Reinterpret",
+        "count": 1
+      },
+      {
+        "name": "Maelstrom Pulse",
+        "count": 1
+      },
+      {
+        "name": "Putrefy",
+        "count": 1
+      },
+      {
+        "name": "Absolute Virtue",
+        "count": 1
+      },
+      {
+        "name": "Safewright Quest",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Rakdos's Return",
+        "count": 1
+      },
+      {
+        "name": "Memory Deluge",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Dire-Strain Rampage",
+        "count": 1
+      },
+      {
+        "name": "Savannah",
+        "count": 1
+      },
+      {
+        "name": "Spring / Mind",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Despark",
+        "count": 1
+      },
+      {
+        "name": "Taiga",
+        "count": 1
+      },
+      {
+        "name": "Terminate",
+        "count": 1
+      },
+      {
+        "name": "Stomping Ground",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb",
+        "count": 1
+      },
+      {
+        "name": "Tundra",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy",
+        "count": 1
+      },
+      {
+        "name": "Rakdos, Patron of Chaos",
+        "count": 1
+      },
+      {
+        "name": "Thought Vessel",
+        "count": 1
+      },
+      {
+        "name": "Grave Upheaval",
+        "count": 1
+      },
+      {
+        "name": "Supreme Verdict",
+        "count": 1
+      },
+      {
+        "name": "Blink",
+        "count": 1
+      },
+      {
+        "name": "Search for Tomorrow",
+        "count": 1
+      },
+      {
+        "name": "Escape to the Wilds",
+        "count": 1
+      },
+      {
+        "name": "Urban Evolution",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 2
+      },
+      {
+        "name": "Volcanic Island",
+        "count": 1
+      },
+      {
+        "name": "Alpha Deathclaw",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Buried Dominion",
+    "commander": "Dihada, Binder of Wills",
+    "influencerName": "Quickened Spellslinger",
+    "socialNetworks": [
+      {
+        "instagram": "@quicken.magic",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Mardu reanimator deck focused on cheating massive threats into play through discard and recursion. It blends classic entomb effects, looting spells, and legendary synergy with a toolbox of powerful creatures and finishers like Griselbrand, Goldspan Dragon, and Sneak Attack.",
+      "es": "Un mazo reanimator Mardu centrado en poner grandes amenazas en juego usando descarte y recursión. Combina efectos de entierro, looting y sinergia legendaria con un repertorio de criaturas poderosas y rematadores como Griselbrand, Goldspan Dragon y Sneak Attack.",
+      "it": "Un mazzo Mardu reanimator che punta a mettere in campo minacce gigantesche tramite scarto e rianimazione. Unisce effetti di sepoltura, magie di scarto e sinergie leggendarie con creature potenti e chiusure come Griselbrand, Goldspan Dragon e Sneak Attack.",
+      "de": "Ein Mardu-Reanimator-Deck, das große Bedrohungen mithilfe von Abwurf und Wiederbelebung ins Spiel bringt. Es kombiniert Entomb-Effekte, Loot-Zauber und legendäre Synergien mit mächtigen Kreaturen und Finishern wie Griselbrand, Goldspan Dragon und Sneak Attack.",
+      "ja": "捨てる手段とリアニメイトによって大型クリーチャーを踏み倒すことに特化したマルドゥのリアニメイターデッキです。GriselbrandやGoldspan Dragon、Sneak Attackなどのフィニッシャーと共に、墓地活用と伝説の相乗効果を活かします。",
+      "pt": "Um deck reanimator Mardu focado em colocar ameaças enormes no campo através de descarte e recursão. Combina efeitos de enterramento, magias de loot e sinergia com lendas, usando criaturas poderosas como Griselbrand, Goldspan Dragon e Sneak Attack.",
+      "fr": "Un deck réanimateur Mardu qui met en jeu de grosses menaces grâce au défausse et à la récursion. Il combine des effets d'enterrement, des sorts de pioche et une synergie légendaire avec des créatures puissantes et des finishers comme Griselbrand, Goldspan Dragon et Sneak Attack."
+    },
+    "cards": [
+      {
+        "name": "Liliana of the Veil",
+        "count": 1
+      },
+      {
+        "name": "Abdel Adrian, Gorion's Ward",
+        "count": 1
+      },
+      {
+        "name": "Angel of Despair",
+        "count": 1
+      },
+      {
+        "name": "Angel of the Ruins",
+        "count": 1
+      },
+      {
+        "name": "Anger",
+        "count": 1
+      },
+      {
+        "name": "Apprentice Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Archon of Cruelty",
+        "count": 1
+      },
+      {
+        "name": "Ashen Rider",
+        "count": 1
+      },
+      {
+        "name": "Chaos Defiler",
+        "count": 1
+      },
+      {
+        "name": "Doomed Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Elesh Norn, Grand Cenobite",
+        "count": 1
+      },
+      {
+        "name": "Fury",
+        "count": 1
+      },
+      {
+        "name": "Goldspan Dragon",
+        "count": 1
+      },
+      {
+        "name": "Griselbrand",
+        "count": 1
+      },
+      {
+        "name": "Inferno Titan",
+        "count": 1
+      },
+      {
+        "name": "Insolent Neonate",
+        "count": 1
+      },
+      {
+        "name": "Iona, Shield of Emeria",
+        "count": 1
+      },
+      {
+        "name": "Karmic Guide",
+        "count": 1
+      },
+      {
+        "name": "Kroxa, Titan of Death's Hunger",
+        "count": 1
+      },
+      {
+        "name": "Magister of Worth",
+        "count": 1
+      },
+      {
+        "name": "Massacre Wurm",
+        "count": 1
+      },
+      {
+        "name": "Overlord of the Balemurk",
+        "count": 1
+      },
+      {
+        "name": "Priest of Fell Rites",
+        "count": 1
+      },
+      {
+        "name": "Rune-Scarred Demon",
+        "count": 1
+      },
+      {
+        "name": "Solitude",
+        "count": 1
+      },
+      {
+        "name": "Souls of the Lost",
+        "count": 1
+      },
+      {
+        "name": "Stitcher's Supplier",
+        "count": 1
+      },
+      {
+        "name": "Sun Titan",
+        "count": 1
+      },
+      {
+        "name": "The Jolly Balloon Man",
+        "count": 1
+      },
+      {
+        "name": "Valgavoth's Faithful",
+        "count": 1
+      },
+      {
+        "name": "Valgavoth, Terror Eater",
+        "count": 1
+      },
+      {
+        "name": "Bone Shards",
+        "count": 1
+      },
+      {
+        "name": "Buried Alive",
+        "count": 1
+      },
+      {
+        "name": "Collective Brutality",
+        "count": 1
+      },
+      {
+        "name": "Council's Judgment",
+        "count": 1
+      },
+      {
+        "name": "Damn",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Exhume",
+        "count": 1
+      },
+      {
+        "name": "Faithless Looting",
+        "count": 1
+      },
+      {
+        "name": "Persist",
+        "count": 1
+      },
+      {
+        "name": "Reanimate",
+        "count": 1
+      },
+      {
+        "name": "Sevinne's Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Stitch Together",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Unburial Rites",
+        "count": 1
+      },
+      {
+        "name": "Unmarked Grave",
+        "count": 1
+      },
+      {
+        "name": "Bitter Triumph",
+        "count": 1
+      },
+      {
+        "name": "Cathartic Pyre",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Demand Answers",
+        "count": 1
+      },
+      {
+        "name": "Ephemerate",
+        "count": 1
+      },
+      {
+        "name": "Kaya's Guile",
+        "count": 1
+      },
+      {
+        "name": "Kolaghan's Command",
+        "count": 1
+      },
+      {
+        "name": "Lightning Axe",
+        "count": 1
+      },
+      {
+        "name": "Lightning Bolt",
+        "count": 1
+      },
+      {
+        "name": "Shallow Grave",
+        "count": 1
+      },
+      {
+        "name": "Sheoldred's Edict",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Vat of Rebirth",
+        "count": 1
+      },
+      {
+        "name": "Animate Dead",
+        "count": 1
+      },
+      {
+        "name": "Dance of the Dead",
+        "count": 1
+      },
+      {
+        "name": "Necromancy",
+        "count": 1
+      },
+      {
+        "name": "Sneak Attack",
+        "count": 1
+      },
+      {
+        "name": "Arid Mesa",
+        "count": 1
+      },
+      {
+        "name": "Blood Crypt",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Castle Locthwain",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos",
+        "count": 1
+      },
+      {
+        "name": "City of Brass",
+        "count": 1
+      },
+      {
+        "name": "Clifftop Retreat",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Concealed Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Dragonskull Summit",
+        "count": 1
+      },
+      {
+        "name": "Elegant Parlor",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Geier Reach Sanitarium",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine",
+        "count": 1
+      },
+      {
+        "name": "Hall of Heliod's Generosity",
+        "count": 1
+      },
+      {
+        "name": "Haunted Ridge",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Raucous Theater",
+        "count": 1
+      },
+      {
+        "name": "Reflecting Pool",
+        "count": 1
+      },
+      {
+        "name": "Sacred Foundry",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Sulfurous Springs",
+        "count": 1
+      },
+      {
+        "name": "Sundown Pass",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Tainted Field",
+        "count": 1
+      },
+      {
+        "name": "Takenuma, Abandoned Mire",
+        "count": 1
+      },
+      {
+        "name": "Tomb Fortress",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      },
+      {
+        "name": "Wooded Foothills",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Polymath Bloom",
+    "commander": "Ms. Bumbleflower",
+    "influencerName": "Jordan Vance",
+    "socialNetworks": [
+      {
+        "instagram": "@theteabeard",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Bant value engine that thrives on drawing cards, casting instants, and growing threats through synergies like counters, flash, and ramp. It leverages Ms. Bumbleflower's unique abilities to keep resources flowing and opponents guessing.",
+      "es": "Un motor de valor Bant que se nutre de robar cartas, lanzar instantáneos y hacer crecer amenazas mediante sinergias con contadores, flash y aceleración. Aprovecha las habilidades únicas de Ms. Bumbleflower para mantener el flujo de recursos y sorprender a los oponentes.",
+      "it": "Un engine di valore Bant che prospera pescando carte, lanciando istantanei e potenziando le minacce tramite sinergie con segnalini, flash e rampe. Sfrutta le abilità uniche di Ms. Bumbleflower per mantenere il vantaggio e destabilizzare gli avversari.",
+      "de": "Ein Bant-Value-Deck, das durch Kartenziehen, Spontanzauber und wachsende Bedrohungen mit Marken, Flash und Ramp glänzt. Nutzt Ms. Bumbleflowers Fähigkeiten, um konstant Ressourcen zu generieren und Gegner zu überrumpeln.",
+      "ja": "カードドロー、インスタント呪文、カウンターやランプのシナジーによって脅威を成長させるバントのバリューデッキです。Ms. Bumbleflowerのユニークな能力でリソースを回し続け、相手を翻弄します。",
+      "pt": "Um deck de valor Bant que prospera com compra de cartas, mágicas instantâneas e ameaças crescentes via sinergias com marcadores, flash e aceleração. Usa as habilidades únicas da Ms. Bumbleflower para manter os recursos fluindo e surpreender os oponentes.",
+      "fr": "Un deck Bant axé sur la valeur, qui brille par la pioche, les éphémères et les menaces croissantes grâce à des synergies avec les marqueurs, le flash et le ramp. Ms. Bumbleflower permet de garder les ressources actives et de déstabiliser l'adversaire."
+    },
+    "cards": [
+      {
+        "name": "Archivist of Oghma",
+        "count": 1
+      },
+      {
+        "name": "Birds of Paradise",
+        "count": 1
+      },
+      {
+        "name": "Bloom Tender",
+        "count": 1
+      },
+      {
+        "name": "Brazen Borrower // Petty Theft",
+        "count": 1
+      },
+      {
+        "name": "Chasm Skulker",
+        "count": 1
+      },
+      {
+        "name": "Delighted Halfling",
+        "count": 1
+      },
+      {
+        "name": "Esper Sentinel",
+        "count": 1
+      },
+      {
+        "name": "Faeburrow Elder",
+        "count": 1
+      },
+      {
+        "name": "Faerie Mastermind",
+        "count": 1
+      },
+      {
+        "name": "Forgotten Ancient",
+        "count": 1
+      },
+      {
+        "name": "Hardbristle Bandit",
+        "count": 1
+      },
+      {
+        "name": "Jolrael, Mwonvuli Recluse",
+        "count": 1
+      },
+      {
+        "name": "Kodama of the West Tree",
+        "count": 1
+      },
+      {
+        "name": "Ledger Shredder",
+        "count": 1
+      },
+      {
+        "name": "Loran of the Third Path",
+        "count": 1
+      },
+      {
+        "name": "Managorger Hydra",
+        "count": 1
+      },
+      {
+        "name": "Mystic Snake",
+        "count": 1
+      },
+      {
+        "name": "Nimble Obstructionist",
+        "count": 1
+      },
+      {
+        "name": "Noble Hierarch",
+        "count": 1
+      },
+      {
+        "name": "Pollywog Prodigy",
+        "count": 1
+      },
+      {
+        "name": "Snapcaster Mage",
+        "count": 1
+      },
+      {
+        "name": "Tamiyo, Inquisitive Student",
+        "count": 1
+      },
+      {
+        "name": "Tishana's Tidebinder",
+        "count": 1
+      },
+      {
+        "name": "Torrential Gearhulk",
+        "count": 1
+      },
+      {
+        "name": "Uro, Titan of Nature's Wrath",
+        "count": 1
+      },
+      {
+        "name": "Valley Floodcaller",
+        "count": 1
+      },
+      {
+        "name": "Whitemane Lion",
+        "count": 1
+      },
+      {
+        "name": "Farewell",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Rishkar's Expertise",
+        "count": 1
+      },
+      {
+        "name": "Consider",
+        "count": 1
+      },
+      {
+        "name": "Counterspell",
+        "count": 1
+      },
+      {
+        "name": "Cyclonic Rift",
+        "count": 1
+      },
+      {
+        "name": "Enlightened Tutor",
+        "count": 1
+      },
+      {
+        "name": "Fierce Guardianship",
+        "count": 1
+      },
+      {
+        "name": "Frantic Search",
+        "count": 1
+      },
+      {
+        "name": "Generous Gift",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention",
+        "count": 1
+      },
+      {
+        "name": "Mystical Tutor",
+        "count": 1
+      },
+      {
+        "name": "Noxious Revival",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Peerless Recycling",
+        "count": 1
+      },
+      {
+        "name": "Perch Protection",
+        "count": 1
+      },
+      {
+        "name": "Snap",
+        "count": 1
+      },
+      {
+        "name": "Strix Serenade",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Teferi's Protection",
+        "count": 1
+      },
+      {
+        "name": "This Town Ain't Big Enough",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Loxodon Warhammer",
+        "count": 1
+      },
+      {
+        "name": "Mishra's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Sword of Feast and Famine",
+        "count": 1
+      },
+      {
+        "name": "Urza's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Wedding Ring",
+        "count": 1
+      },
+      {
+        "name": "Burgeoning",
+        "count": 1
+      },
+      {
+        "name": "Hardened Scales",
+        "count": 1
+      },
+      {
+        "name": "Proft's Eidetic Memory",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Study",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe",
+        "count": 1
+      },
+      {
+        "name": "Trouble in Pairs",
+        "count": 1
+      },
+      {
+        "name": "Wilderness Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Wizard Class",
+        "count": 1
+      },
+      {
+        "name": "Barkchannel Pathway",
+        "count": 1
+      },
+      {
+        "name": "Boseiju, Who Endures",
+        "count": 1
+      },
+      {
+        "name": "Bountiful Promenade",
+        "count": 1
+      },
+      {
+        "name": "Branchloft Pathway",
+        "count": 1
+      },
+      {
+        "name": "Breeding Pool",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Deserted Beach",
+        "count": 1
+      },
+      {
+        "name": "Dreamroot Cascade",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 3
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 3
+      },
+      {
+        "name": "Misty Rainforest",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Rejuvenating Springs",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Sea of Clouds",
+        "count": 1
+      },
+      {
+        "name": "Spara's Headquarters",
+        "count": 1
+      },
+      {
+        "name": "Sunpetal Grove",
+        "count": 1
+      },
+      {
+        "name": "Temple Garden",
+        "count": 1
+      },
+      {
+        "name": "Windswept Heath",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya, Cradle of Growth",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Silent Saboteurs",
+    "commander": "Yuriko, the Tiger's Shadow",
+    "influencerName": "Jordan Vance",
+    "socialNetworks": [
+      {
+        "instagram": "@theteabeard",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "A Dimir ninjutsu deck that exploits unblockable creatures and cheap evasive threats to repeatedly trigger ninjas and high-impact top-deck spells with Yuriko. It combines tempo, card advantage, and explosive damage through clever manipulation of the deck's top cards.",
+      "es": "Un mazo Dimir de ninjutsu que aprovecha criaturas imbloqueables y amenazas evasivas para activar ninjas y hechizos de alto impacto con Yuriko. Combina tempo, ventaja de cartas y daño explosivo manipulando con astucia la parte superior del mazo.",
+      "it": "Un mazzo ninjutsu Dimir che sfrutta creature inbloccabili e minacce evasive a basso costo per attivare ripetutamente i ninja e magie ad alto impatto con Yuriko. Unisce tempo, vantaggio carte e danni esplosivi con una gestione intelligente della cima del mazzo.",
+      "de": "Ein Dimir-Ninjutsu-Deck, das unblockbare Kreaturen und günstige Ausweich-Bedrohungen nutzt, um mit Yuriko wiederholt Ninjas und starke Zauber vom Deck auszulösen. Es kombiniert Tempo, Kartenvorteil und explosiven Schaden durch geschickte Manipulation der Bibliotheksspitze.",
+      "ja": "ブロックされないクリーチャーや軽量な回避能力を活かして、忍者とトップデッキ呪文を繰り返し誘発させるディミーアの忍術デッキです。テンポ、カードアドバンテージ、そして爆発的なダメージをデッキトップの操作によって実現します。",
+      "pt": "Um deck Dimir de ninjutsu que explora criaturas imbloqueáveis e ameaças evasivas baratas para acionar ninjas e mágicas de alto impacto com Yuriko. Combina tempo, vantagem de cartas e dano explosivo com manipulação inteligente do topo do deck.",
+      "fr": "Un deck Dimir de ninjutsu qui mise sur des créatures imblocables et des menaces évasives pour déclencher à répétition les ninjas et sorts puissants avec Yuriko. Il combine tempo, avantage de cartes et dégâts explosifs en manipulant habilement le dessus du deck."
+    },
+    "cards": [
+      {
+        "name": "Baleful Strix",
+        "count": 1
+      },
+      {
+        "name": "Brazen Borrower // Petty Theft",
+        "count": 1
+      },
+      {
+        "name": "Changeling Outcast",
+        "count": 1
+      },
+      {
+        "name": "Departed Deckhand",
+        "count": 1
+      },
+      {
+        "name": "Dokuchi Silencer",
+        "count": 1
+      },
+      {
+        "name": "Faerie Seer",
+        "count": 1
+      },
+      {
+        "name": "Fallen Shinobi",
+        "count": 1
+      },
+      {
+        "name": "Ghostly Pilferer",
+        "count": 1
+      },
+      {
+        "name": "Gingerbrute",
+        "count": 1
+      },
+      {
+        "name": "Hydroelectric Specimen",
+        "count": 1
+      },
+      {
+        "name": "Ingenious Infiltrator",
+        "count": 1
+      },
+      {
+        "name": "Ingenious Prodigy",
+        "count": 1
+      },
+      {
+        "name": "Memnite",
+        "count": 1
+      },
+      {
+        "name": "Mist-Cloaked Herald",
+        "count": 1
+      },
+      {
+        "name": "Mist-Syndicate Naga",
+        "count": 1
+      },
+      {
+        "name": "Moon-Circuit Hacker",
+        "count": 1
+      },
+      {
+        "name": "Moonsnare Specialist",
+        "count": 1
+      },
+      {
+        "name": "Mothdust Changeling",
+        "count": 1
+      },
+      {
+        "name": "Nashi, Moon Sage's Scion",
+        "count": 1
+      },
+      {
+        "name": "Ninja of the Deep Hours",
+        "count": 1
+      },
+      {
+        "name": "Ornithopter",
+        "count": 1
+      },
+      {
+        "name": "Prosperous Thief",
+        "count": 1
+      },
+      {
+        "name": "Satoru, the Infiltrator",
+        "count": 1
+      },
+      {
+        "name": "Shadow of Mortality",
+        "count": 1
+      },
+      {
+        "name": "Silver-Fur Master",
+        "count": 1
+      },
+      {
+        "name": "Slither Blade",
+        "count": 1
+      },
+      {
+        "name": "Spectral Sailor",
+        "count": 1
+      },
+      {
+        "name": "Spellstutter Sprite",
+        "count": 1
+      },
+      {
+        "name": "Street Wraith",
+        "count": 1
+      },
+      {
+        "name": "Tetsuko Umezawa, Fugitive",
+        "count": 1
+      },
+      {
+        "name": "Thassa's Oracle",
+        "count": 1
+      },
+      {
+        "name": "Thousand-Faced Shadow",
+        "count": 1
+      },
+      {
+        "name": "Tinybones, the Pickpocket",
+        "count": 1
+      },
+      {
+        "name": "Tormented Soul",
+        "count": 1
+      },
+      {
+        "name": "Universal Automaton",
+        "count": 1
+      },
+      {
+        "name": "Walker of Secret Ways",
+        "count": 1
+      },
+      {
+        "name": "Wonder",
+        "count": 1
+      },
+      {
+        "name": "Agadeem's Awakening",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Lórien Revealed",
+        "count": 1
+      },
+      {
+        "name": "Never // Return",
+        "count": 1
+      },
+      {
+        "name": "Ponder",
+        "count": 1
+      },
+      {
+        "name": "Scheming Symmetry",
+        "count": 1
+      },
+      {
+        "name": "Temporal Mastery",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Commit // Memory",
+        "count": 1
+      },
+      {
+        "name": "Consign // Oblivion",
+        "count": 1
+      },
+      {
+        "name": "Counterspell",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Dig Through Time",
+        "count": 1
+      },
+      {
+        "name": "Dismember",
+        "count": 1
+      },
+      {
+        "name": "Fell the Profane",
+        "count": 1
+      },
+      {
+        "name": "Fierce Guardianship",
+        "count": 1
+      },
+      {
+        "name": "Force of Will",
+        "count": 1
+      },
+      {
+        "name": "Lim-Dûl's Vault",
+        "count": 1
+      },
+      {
+        "name": "Misdirection",
+        "count": 1
+      },
+      {
+        "name": "Mystical Tutor",
+        "count": 1
+      },
+      {
+        "name": "Nexus of Fate",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Aether Vial",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Chrome Mox",
+        "count": 1
+      },
+      {
+        "name": "Dimir Signet",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Scroll Rack",
+        "count": 1
+      },
+      {
+        "name": "Sensei's Divining Top",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Mystic Remora",
+        "count": 1
+      },
+      {
+        "name": "Necropotence",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Castle Locthwain",
+        "count": 1
+      },
+      {
+        "name": "Clearwater Pathway",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Darkslick Shores",
+        "count": 1
+      },
+      {
+        "name": "Drowned Catacomb",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 4
+      },
+      {
+        "name": "Mana Confluence",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool",
+        "count": 1
+      },
+      {
+        "name": "Mutavault",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Rivendell",
+        "count": 1
+      },
+      {
+        "name": "Shipwreck Marsh",
+        "count": 1
+      },
+      {
+        "name": "Shizo, Death's Storehouse",
+        "count": 1
+      },
+      {
+        "name": "Swamp",
+        "count": 4
+      },
+      {
+        "name": "Underground River",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Storm Requisition",
+    "commander": "Marneus Calgar",
+    "influencerName": "Wild (Sleeves & Dweebs)",
+    "socialNetworks": [
+      {
+        "instagram": "@sleeves_dweebs",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "An Esper combo-control deck that leverages draw triggers, death loops, and tutoring to assemble powerful win conditions. It uses Calgar’s token engine with sacrifice outlets, fast mana, and stack interaction to build inevitability and dominate the long game.",
+      "es": "Un mazo combo-control Esper que aprovecha disparadores de robo, bucles de sacrificio y tutores para ensamblar condiciones de victoria poderosas. Usa la generación de fichas de Calgar con outlets de sacrificio, maná rápido e interacción en la pila para dominar las partidas largas.",
+      "it": "Un mazzo combo-control Esper che sfrutta inneschi di pesca, loop di sacrificio e tutor per assemblare condizioni di vittoria potenti. Usa il motore di pedine di Calgar con mana veloce e interazione istantanea per dominare nel lungo termine.",
+      "de": "Ein Esper-Kombo-Kontroll-Deck, das Kartenzieh-Auslöser, Opfer-Schleifen und Tutor-Effekte nutzt, um starke Win-Cons zusammenzustellen. Mit Calgars Token-Engine, schnellen Manaquellen und Interaktion auf dem Stack zielt es auf langfristige Kontrolle ab.",
+      "ja": "ドロー誘発、死亡ループ、チューターを活用して強力な勝利手段を組み立てるエスパーのコンボ・コントロールデッキ。カルガーのトークン生成と生け贄エンジン、高速マナ、打ち消し呪文によって長期戦を制します。",
+      "pt": "Um deck combo-control Esper que utiliza gatilhos de compra, loops de sacrifício e tutores para montar condições de vitória poderosas. Com a engine de fichas de Calgar, aceleração de mana e interação na pilha, controla o jogo com inevitabilidade.",
+      "fr": "Un deck combo-contrôle Esper qui exploite les déclencheurs de pioche, les boucles de sacrifice et les tuteurs pour assembler des conditions de victoire puissantes. Il combine la génération de jetons de Calgar avec du mana rapide et de l'interaction sur la pile pour contrôler le long terme."
+    },
+    "cards": [
+      {
+        "name": "Teferi, Time Raveler",
+        "count": 1
+      },
+      {
+        "name": "Abdel Adrian, Gorion's Ward",
+        "count": 1
+      },
+      {
+        "name": "Auriok Salvagers",
+        "count": 1
+      },
+      {
+        "name": "Dauthi Voidwalker",
+        "count": 1
+      },
+      {
+        "name": "Displacer Kitten",
+        "count": 1
+      },
+      {
+        "name": "Drannith Magistrate",
+        "count": 1
+      },
+      {
+        "name": "Esper Sentinel",
+        "count": 1
+      },
+      {
+        "name": "Faerie Mastermind",
+        "count": 1
+      },
+      {
+        "name": "Grand Abolisher",
+        "count": 1
+      },
+      {
+        "name": "High Fae Trickster",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff",
+        "count": 1
+      },
+      {
+        "name": "Lurrus of the Dream-Den",
+        "count": 1
+      },
+      {
+        "name": "Mockingbird",
+        "count": 1
+      },
+      {
+        "name": "Orcish Bowmasters",
+        "count": 1
+      },
+      {
+        "name": "Psychic Frog",
+        "count": 1
+      },
+      {
+        "name": "Ranger-Captain of Eos",
+        "count": 1
+      },
+      {
+        "name": "Tataru Taru",
+        "count": 1
+      },
+      {
+        "name": "Thassa's Oracle",
+        "count": 1
+      },
+      {
+        "name": "Voice of Victory",
+        "count": 1
+      },
+      {
+        "name": "Volatile Stormdrake",
+        "count": 1
+      },
+      {
+        "name": "Warren Soultrader",
+        "count": 1
+      },
+      {
+        "name": "Beseech the Mirror",
+        "count": 1
+      },
+      {
+        "name": "Buried Alive",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor",
+        "count": 1
+      },
+      {
+        "name": "Diabolic Intent",
+        "count": 1
+      },
+      {
+        "name": "Imperial Seal",
+        "count": 1
+      },
+      {
+        "name": "Sevinne's Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Vanquish the Horde",
+        "count": 1
+      },
+      {
+        "name": "Windfall",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Cabal Ritual",
+        "count": 1
+      },
+      {
+        "name": "Cyclonic Rift",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual",
+        "count": 1
+      },
+      {
+        "name": "Enlightened Tutor",
+        "count": 1
+      },
+      {
+        "name": "Entomb",
+        "count": 1
+      },
+      {
+        "name": "Flusterstorm",
+        "count": 1
+      },
+      {
+        "name": "Force of Will",
+        "count": 1
+      },
+      {
+        "name": "Gifts Ungiven",
+        "count": 1
+      },
+      {
+        "name": "Into the Flood Maw",
+        "count": 1
+      },
+      {
+        "name": "Mana Drain",
+        "count": 1
+      },
+      {
+        "name": "March of Swirling Mist",
+        "count": 1
+      },
+      {
+        "name": "Mental Misstep",
+        "count": 1
+      },
+      {
+        "name": "Mindbreak Trap",
+        "count": 1
+      },
+      {
+        "name": "Pact of Negation",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Silence",
+        "count": 1
+      },
+      {
+        "name": "Sink into Stupor",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Tainted Pact",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Chrome Mox",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Lion's Eye Diamond",
+        "count": 1
+      },
+      {
+        "name": "Lotus Petal",
+        "count": 1
+      },
+      {
+        "name": "Mana Vault",
+        "count": 1
+      },
+      {
+        "name": "Mox Diamond",
+        "count": 1
+      },
+      {
+        "name": "Mox Opal",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "The One Ring",
+        "count": 1
+      },
+      {
+        "name": "Wishclaw Talisman",
+        "count": 1
+      },
+      {
+        "name": "Amphibian Downpour",
+        "count": 1
+      },
+      {
+        "name": "Animate Dead",
+        "count": 1
+      },
+      {
+        "name": "Dance of the Dead",
+        "count": 1
+      },
+      {
+        "name": "Mystic Remora",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe",
+        "count": 1
+      },
+      {
+        "name": "Steal Enchantment",
+        "count": 1
+      },
+      {
+        "name": "Unstable Harmonics",
+        "count": 1
+      },
+      {
+        "name": "Ancient Tomb",
+        "count": 1
+      },
+      {
+        "name": "Bloodstained Mire",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls",
+        "count": 1
+      },
+      {
+        "name": "Cephalid Coliseum",
+        "count": 1
+      },
+      {
+        "name": "City of Brass",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand",
+        "count": 1
+      },
+      {
+        "name": "Gemstone Caverns",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 1
+      },
+      {
+        "name": "Mana Confluence",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats",
+        "count": 1
+      },
+      {
+        "name": "Meticulous Archive",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower",
+        "count": 1
+      },
+      {
+        "name": "Polluted Delta",
+        "count": 1
+      },
+      {
+        "name": "Scalding Tarn",
+        "count": 1
+      },
+      {
+        "name": "Scrubland",
+        "count": 1
+      },
+      {
+        "name": "Sea of Clouds",
+        "count": 1
+      },
+      {
+        "name": "Tundra",
+        "count": 1
+      },
+      {
+        "name": "Underground Sea",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave",
+        "count": 1
+      }
+    ]
+  }
+]
