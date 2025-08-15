@@ -3,7 +3,7 @@ import path from 'path';
 import { execFile } from 'child_process';
 import 'dotenv/config';
 
-const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY;
+const TYPESENSE_API_KEY = 'typsensemasterkeyMariArri30123456789';
 const TYPESENSE_HOST = 'https://typesense-commanderscrapper.fly.dev';
 
 if (!TYPESENSE_API_KEY) {

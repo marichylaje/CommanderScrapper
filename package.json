@@ -12,9 +12,9 @@
     "splitCommander": "npx tsx src/splitCommanderPrecons.ts",
     "typeSchema": "npx tsx src/typesense/createTypesenseSchema.ts",
     "typeExport": "npx tsx src/typesense/importToTypesense.ts",
-    "deleteCollection": "npx tsx src/typesense/deleteCollection.ts",
+    "deleteCollection": "npx tsx src/typesense/deleteCollections.ts",
     "importToTypesense": "npx tsx src/typesense/importToTypesense.ts",
-    "restartFly": "npx tsx scripts/restartFly.ts",
+    "restartFly": "npx tsx src/restartFly.ts",
     "dev": "vercel dev"
   },
   "keywords": [],

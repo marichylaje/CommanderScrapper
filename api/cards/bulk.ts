@@ -12,22 +12,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const client = new Client({
-    nodes: [
-      {
-        host: 'typesense-commanderscrapper.fly.dev',
-        port: 443,
-        protocol: 'https',
-      },
-    ],
+    nodes: [{ host: 'typesense-commanderscrapper.fly.dev', port: 443, protocol: 'https' }],
     apiKey: 'typsensemasterkeyMariArri30123456789',
   });
 
   const results: any[] = [];
-  const seen = new Set();
+  // ⬇️ ahora deduplicamos por (oracle_id + flavor_name_normalizado)
+  const seen = new Set<string>();
   const chunkSize = 20;
 
   const normalize = (str: string) =>
-    str.toLowerCase().replace(/[\u2019’']/g, "'").trim();
+    (str ?? '').toLowerCase().replace(/[\u2019’']/g, "'").normalize('NFKC').trim();
+
+  const seenKey = (doc: any) => `${doc.oracle_id}|${normalize(doc.flavor_name ?? '')}`;
 
   for (let i = 0; i < names.length; i += chunkSize) {
     const batch = names.slice(i, i + chunkSize);
@@ -36,10 +33,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const searches = batch.map((name) => ({
       q: name,
       query_by: 'name',
-      per_page: 5, // más resultados para encontrar el match exacto
+      per_page: 5,
       num_typos: 0,
       prefix: 'false',
       exhaustive_search: true,
+      // sort_by: 'released_at:desc', // opcional: resultado determinista
       collection: 'cards',
     }));
 
@@ -51,47 +49,77 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const hits = batchResults.results[j]?.hits || [];
       const originalName = batch[j];
 
+      // 1) name
       const exact = hits.find(
         (hit: any) => normalize(hit.document.name) === normalize(originalName)
       );
 
-      if (exact && !seen.has(exact.document.oracle_id)) {
-        seen.add(exact.document.oracle_id);
-        results.push(exact.document);
+      if (exact) {
+        const key = seenKey(exact.document);
+        if (!seen.has(key)) {
+          seen.add(key);
+          results.push(exact.document);
+        }
         continue;
       }
 
-      // 🔁 Fallback por face_name si no hubo match exacto
+      // 2) face_name (fallback)
       try {
-        const fallback = await client
-          .collections('cards')
-          .documents()
-          .search({
-            q: originalName,
-            query_by: 'face_name',
-            per_page: 3,
-            num_typos: 0,
-            prefix: 'false',
-            exhaustive_search: true,
-          });
+        const fallback = await client.collections('cards').documents().search({
+          q: originalName,
+          query_by: 'face_name',
+          per_page: 3,
+          num_typos: 0,
+          prefix: 'false',
+          exhaustive_search: true,
+          // sort_by: 'released_at:desc',
+        });
 
         const faceHit = fallback.hits?.find(
-          (hit: any) =>
-            normalize(hit.document.face_name) === normalize(originalName)
+          (hit: any) => normalize(hit.document.face_name ?? '') === normalize(originalName)
         );
 
-        if (
-          faceHit &&
-          !seen.has((faceHit.document as { oracle_id: string }).oracle_id)
-        ) {
-          seen.add((faceHit.document as { oracle_id: string }).oracle_id);
-          results.push(faceHit.document);
-          console.warn(`⚠️ Carta encontrada por face_name: "${originalName}"`);
+        if (faceHit) {
+          const key = seenKey(faceHit.document);
+          if (!seen.has(key)) {
+            seen.add(key);
+            results.push(faceHit.document);
+            console.warn(`⚠️ Carta encontrada por face_name: "${originalName}"`);
+          }
+          continue;
+        }
+      } catch (e) {
+        console.error(`💥 Error en fallback face_name de "${originalName}":`, e);
+      }
+
+      // 3) flavor_name (fallback final SOLO por flavor_name)
+      try {
+        const flavorRes = await client.collections('cards').documents().search({
+          q: originalName,
+          query_by: 'flavor_name',
+          per_page: 3,
+          num_typos: 0,
+          prefix: 'false',
+          exhaustive_search: true,
+          // sort_by: 'released_at:desc',
+        });
+
+        const flavorHit = flavorRes.hits?.find(
+          (hit: any) => normalize(hit.document.flavor_name ?? '') === normalize(originalName)
+        );
+
+        if (flavorHit) {
+          const key = seenKey(flavorHit.document);
+          if (!seen.has(key)) {
+            seen.add(key);
+            results.push(flavorHit.document);
+            console.warn(`⚠️ Carta encontrada por flavor_name: "${originalName}"`);
+          }
         } else {
           console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
         }
       } catch (e) {
-        console.error(`💥 Error en fallback de "${originalName}":`, e);
+        console.error(`💥 Error en fallback flavor_name de "${originalName}":`, e);
       }
     }
   }

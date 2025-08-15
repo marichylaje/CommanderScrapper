@@ -10,6 +10,7 @@ type VercelResponse = ServerResponse & {
   status: (code: number) => VercelResponse;
   json: (body: any) => void;
 };
+
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const client = new Client({
@@ -20,7 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
           protocol: 'https',
         },
       ],
-      apiKey: 'typsensemasterkeyMariArri30123456789',
+      apiKey: 'typsensemasterkeyMariArri30123456789', // TODO: mover a secrets
     });
 
     const name = req.query.name?.toString().trim();
@@ -29,21 +30,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       return res.status(400).json({ error: 'Missing "name" query parameter' });
     }
 
-    // 🔍 Buscar por "name"
-    const results = await client
-      .collections('cards')
-      .documents()
-      .search({
-        q: name,
-        query_by: 'name',
-        per_page: 1,
-        num_typos: 0,
-        prefix: 'false',
-        exhaustive_search: true,
-      });
-
     const normalize = (s: string) =>
-      s.toLowerCase().replace(/[\u2019’']/g, "'").trim();
+      (s ?? '').toLowerCase().replace(/[\u2019’']/g, "'").normalize('NFKC').trim();
+
+    // 1) Buscar por "name"
+    const results = await client.collections('cards').documents().search({
+      q: name,
+      query_by: 'name',
+      per_page: 1,
+      num_typos: 0,
+      prefix: 'false',
+      exhaustive_search: true,
+      // sort_by: 'released_at:desc', // opcional: hace determinista la versión elegida
+    });
 
     const exactMatch = results.hits?.find(
       (hit: any) => normalize(hit.document.name) === normalize(name)
@@ -53,26 +52,44 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       return res.status(200).json([exactMatch.document]);
     }
 
-    // 🔁 Fallback por "face_name"
-    const fallbackResults = await client
-      .collections('cards')
-      .documents()
-      .search({
-        q: name,
-        query_by: 'face_name',
-        per_page: 1,
-        num_typos: 0,
-        prefix: 'false',
-        exhaustive_search: true,
-      });
+    // 2) Fallback por "face_name"
+    const fallbackResults = await client.collections('cards').documents().search({
+      q: name,
+      query_by: 'face_name',
+      per_page: 1,
+      num_typos: 0,
+      prefix: 'false',
+      exhaustive_search: true,
+      // sort_by: 'released_at:desc',
+    });
 
     const faceMatch = fallbackResults.hits?.find(
-      (hit: any) => normalize(hit.document.face_name) === normalize(name)
+      (hit: any) => normalize(hit.document.face_name ?? '') === normalize(name)
     );
 
     if (faceMatch) {
       console.warn(`⚠️ Carta encontrada por face_name: "${name}"`);
       return res.status(200).json([faceMatch.document]);
+    }
+
+    // 3) Fallback final por "flavor_name" (solo ese campo)
+    const flavorResults = await client.collections('cards').documents().search({
+      q: name,
+      query_by: 'flavor_name',
+      per_page: 1,
+      num_typos: 0,
+      prefix: 'false',
+      exhaustive_search: true,
+      // sort_by: 'released_at:desc',
+    });
+
+    const flavorMatch = flavorResults.hits?.find(
+      (hit: any) => normalize(hit.document.flavor_name ?? '') === normalize(name)
+    );
+
+    if (flavorMatch) {
+      console.warn(`⚠️ Carta encontrada por flavor_name: "${name}"`);
+      return res.status(200).json([flavorMatch.document]);
     }
 
     console.error(`❌ Carta no encontrada en DB: "${name}"`);

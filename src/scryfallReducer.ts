@@ -49,6 +49,7 @@ function reduceCard(card: ReducedCard) {
 
   return {
     name: card.name,
+    flavor_name: card.flavor_name,
     face_name, // 👈 nuevo campo opcional
     mana_cost: card.mana_cost,
     cmc: card.cmc,

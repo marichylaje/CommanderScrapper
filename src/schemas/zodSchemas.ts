@@ -15,6 +15,7 @@ const CardFaceSchema = z.object({
 
 export const ReducedCardSchema = z.object({
   name: z.string(),
+  flavor_name: z.string().optional(),
   mana_cost: z.string().optional(),
   face_name: z.string().optional(),
   cmc: z.number().optional(),
