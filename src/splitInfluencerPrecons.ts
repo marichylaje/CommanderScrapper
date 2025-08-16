@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import 'dotenv/config';
 
 const INPUT_FILE = './data/influencer_precons.json'; // archivo de entrada
 const OUTPUT_DIR = './data/influencers/'; // carpeta de salida

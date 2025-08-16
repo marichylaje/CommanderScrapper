@@ -11,10 +11,10 @@
     "splitInfluencer": "npx tsx src/splitInfluencerPrecons.ts",
     "splitCommander": "npx tsx src/splitCommanderPrecons.ts",
     "typeSchema": "npx tsx src/typesense/createTypesenseSchema.ts",
-    "typeExport": "npx tsx src/typesense/importToTypesense.ts",
     "deleteCollection": "npx tsx src/typesense/deleteCollections.ts",
-    "importToTypesense": "npx tsx src/typesense/importToTypesense.ts",
+    "importCollection": "npx tsx src/typesense/importToTypesense.ts",
     "restartFly": "npx tsx src/restartFly.ts",
+    "tryGetCard": "npx tsx src/tryGetCard.ts",
     "dev": "vercel dev"
   },
   "keywords": [],

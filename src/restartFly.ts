@@ -1,4 +1,5 @@
 import { execSync } from 'child_process';
+import 'dotenv/config';
 
 const appName = 'typesense-commanderscrapper';
 const token = process.env.FLY_API_TOKEN;

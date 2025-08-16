@@ -1,4 +1,5 @@
 import { request } from 'undici';
+import 'dotenv/config';
 
 const API_KEY = process.env.TYPESENSE_API_KEY;
 const COLLECTION = 'cards';
