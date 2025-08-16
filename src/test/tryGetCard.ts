@@ -2,7 +2,7 @@
 import { Client } from 'typesense';
 import 'dotenv/config';
 
-const TYPESENSE_HOST = 'https://typesense-commanderscrapper.fly.dev';
+const CARD_NAME = 'Heart of the Explorer'
 const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY;
 if (!TYPESENSE_API_KEY) {
   console.error('❌ Falta TYPESENSE_API_KEY en .env');
@@ -27,7 +27,7 @@ async function searchByField(client: Client, q: string, field: 'name' | 'face_na
 }
 
 async function main() {
-  const toFind = process.argv[2] || 'Barrow-Downs';
+  const toFind = process.argv[2] || CARD_NAME;
   const client = new Client({
     nodes: [{ host: 'typesense-commanderscrapper.fly.dev', port: 443, protocol: 'https' }],
     apiKey: TYPESENSE_API_KEY!,

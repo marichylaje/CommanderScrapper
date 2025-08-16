@@ -121,6 +121,37 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       } catch (e) {
         console.error(`💥 Error en fallback flavor_name de "${originalName}":`, e);
       }
+      
+      // 4) face_flavor_names (fallback final)
+      try {
+        const flavorFaceRes = await client.collections('cards').documents().search({
+          q: originalName,
+          query_by: 'face_flavor_names',
+          per_page: 3,
+          num_typos: 0,
+          prefix: 'false',
+          exhaustive_search: true,
+        });
+
+        const ffHit = flavorFaceRes.hits?.find((hit: any) => {
+          const arr = hit.document.face_flavor_names ?? [];
+          return Array.isArray(arr) && arr.some((s: string) => normalize(s) === normalize(originalName));
+        });
+
+        if (ffHit) {
+          const key = seenKey(ffHit.document);
+          if (!seen.has(key)) {
+            seen.add(key);
+            results.push(ffHit.document);
+            console.warn(`⚠️ Carta encontrada por face_flavor_names: "${originalName}"`);
+          }
+        } else {
+          console.error(`❌ Carta no encontrada en DB (bulk): "${originalName}"`);
+        }
+      } catch (e) {
+        console.error(`💥 Error en fallback face_flavor_names de "${originalName}":`, e);
+      }
+
     }
   }
 

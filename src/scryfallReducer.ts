@@ -48,9 +48,17 @@ function reduceCard(card: ReducedCard) {
     face_name = faces[0].name;
   }
 
+  const face_flavor_names =
+    Array.isArray(faces)
+      ? faces.map(f => f.flavor_name).filter((s): s is string => !!s && s.trim().length > 0)
+      : [];
+
+  // NUEVO: si no hay flavor_name raíz y la cara frontal tiene, copiarlo
+  const root_flavor_name = card.flavor_name ?? (face_flavor_names[0] ?? undefined);
+
   return {
     name: card.name,
-    flavor_name: (card as any).flavor_name, // puede venir a nivel de carta
+    flavor_name: root_flavor_name, // puede venir a nivel de carta
     face_name, // campo opcional
     mana_cost: card.mana_cost,
     cmc: card.cmc,
@@ -72,6 +80,7 @@ function reduceCard(card: ReducedCard) {
     card_faces: faces?.map((face) => ({
       name: face.name,
       type_line: face.type_line,
+      flavor_name: face.flavor_name ?? undefined,  // 👈 incluirlo
       mana_cost: face.mana_cost,
       image_uris: face.image_uris,
     })),

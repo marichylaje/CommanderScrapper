@@ -92,6 +92,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       return res.status(200).json([flavorMatch.document]);
     }
 
+    // 🔁 Fallback final por "face_flavor_names"
+    const faceFlavorResults = await client
+      .collections('cards')
+      .documents()
+      .search({
+        q: name,
+        query_by: 'face_flavor_names',
+        per_page: 1,
+        num_typos: 0,
+        prefix: 'false',
+        exhaustive_search: true,
+      });
+
+    const ffMatch = faceFlavorResults.hits?.find(
+      (hit: any) => normalize((hit.document.face_flavor_names ?? []).join('|')).split('|')
+                        .includes(normalize(name))
+    );
+
+    if (ffMatch) {
+      console.warn(`⚠️ Carta encontrada por face_flavor_names: "${name}"`);
+      return res.status(200).json([ffMatch.document]);
+    }
+
     console.error(`❌ Carta no encontrada en DB: "${name}"`);
     return res.status(404).json({ error: 'Card not found' });
 

@@ -8,6 +8,7 @@ const ImageUrisSchema = z.object({
 
 const CardFaceSchema = z.object({
   name: z.string(),
+  flavor_name: z.string().optional(),
   type_line: z.string(),
   mana_cost: z.string().optional(),
   image_uris: ImageUrisSchema.optional(),
