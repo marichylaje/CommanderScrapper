@@ -362,7 +362,7 @@
       },
       {
         "name": "Swamp",
-        "count": 6
+        "count": 5
       },
       {
         "name": "Terramorphic Expanse",
@@ -1084,7 +1084,7 @@
       },
       {
         "name": "Swamp",
-        "count": 10
+        "count": 9
       },
       {
         "name": "The World Spell",
@@ -1150,8 +1150,8 @@
   },
   {
     "name": "Shadowheart, Dark Justiciar // Acolyte of Bahamut",
-    "commander": "Acolyte of Bahamut",
-    "partner": "Shadowheart, Dark Justiciar",
+    "commander": "Shadowheart, Dark Justiciar",
+    "partner": "Acolyte of Bahamut",
     "influencerName": "Leslie",
     "socialNetworks": [
       {
@@ -1468,7 +1468,7 @@
       },
       {
         "name": "Swamp",
-        "count": 6
+        "count": 4
       },
       {
         "name": "Swiftfoot Boots",
