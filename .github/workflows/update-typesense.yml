@@ -24,17 +24,7 @@ jobs:
       - name: Ejecutar reducer para generar JSON actualizado
         run: npm run reduce
 
-      - name: Eliminar colección anterior en Typesense
-        run: npm run deleteCollection
-        env:
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
-
       - name: Importar nuevas cartas a Typesense
         run: npm run importToTypesense
         env:
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
-
-      - name: Reiniciar instancia Fly.io
-        run: npm run restartFly
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
