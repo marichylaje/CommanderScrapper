@@ -1,13 +1,51 @@
-name: Update Commander Precons
+name: CI & Data Pipeline
 
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   schedule:
-    - cron: "0 0 */2 * *" # Cada 2 días a la medianoche UTC
+    # Cada 2 días a medianoche UTC
+    - cron: "0 0 */2 * *"
   workflow_dispatch:
 
 jobs:
-  scrape:
+  # ===========================
+  #  Job 1: CI (build del repo)
+  # ===========================
+  ci:
+    # Solo en push / PR, no en cron ni manual
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Usa tu .nvmrc; si no existe, podríais poner "18.x"
+          node-version-file: ".nvmrc"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Build (TypeScript)
+        run: npm run build
+
+  # =========================================
+  #  Job 2: Data pipeline + Typesense + Fly
+  # =========================================
+  data-pipeline:
+    # Solo en cron o ejecución manual
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    env:
+      TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
     steps:
       - name: Checkout código
@@ -21,42 +59,60 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Ejecutar scraper
+      # -------------------------
+      # Fase A: Fetch + reducir
+      # -------------------------
+      - name: 1) Descargar datos de Scryfall (scrape)
         run: npm run scrape
-        
-      - name: Dividir commanders en chunks pequeños
-        run: npm run splitCommander
 
-      - name: Dividir influencers en chunks pequeños
-        run: npm run splitInfluencer
-
-      - name: Run reducer script
+      - name: 2) Reducir datos (reduce)
         run: npm run reduce
 
-      #- name: Run prices script
-      #  run: npm run prices
+      - name: 3) Añadir precios (prices)
+        run: npm run prices
 
-      - name: Compilar importador MeiliSearch
-        run: npm run build:meili
+      # ------------------------------------
+      # Fase B: Precons (commander + influencers)
+      # ------------------------------------
+      - name: 4) Dividir precons de commanders
+        run: npm run splitCommander
 
-      - name: Instalar Fly.io CLI
-        uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: 5) Dividir precons de influencers
+        run: npm run splitInfluencer
 
-      - name: Subir archivos a Fly.io
+      # -----------------------------
+      # Fase C: Typesense + Fly.io
+      # -----------------------------
+      - name: 6) Borrar colección antigua en Typesense (opcional)
+        run: npm run deleteCollection
+
+      - name: 7) Crear schema en Typesense
+        run: npm run typeSchema
+
+      - name: 8) Importar datos a Typesense
+        run: npm run importCollection
+
+      - name: 9) Reiniciar app en Fly.io
+        run: npm run restartFly
+
+      # -----------------------------
+      # Limpieza de archivo gigante
+      # -----------------------------
+      - name: 10) Eliminar commander_precons.json (no commitear archivo grande)
+        if: always()
         run: |
-          flyctl ssh console -a meili-commanderscrapper -C "mkdir -p /data"
-          flyctl ssh console -a meili-commanderscrapper --local-forward 10022:22 &
-          sleep 5
-          scp -P 10022 ./data/scryfall-reduced.json root@localhost:/data/scryfall-reduced.json
-          scp -P 10022 ./dist/meili/importToMeili.js root@localhost:/data/importToMeili.js
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          echo "Eliminando data/commander_precons.json para evitar que acabe en el repo..."
+          rm -f data/commander_precons.json
 
-      - name: Ejecutar importToMeili.js en la VM
-        run: |
-          flyctl ssh console -a meili-commanderscrapper -C "node /data/importToMeili.js"
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-
-      - name: Comprobar si hay cambios + commit to repo
+      # -----------------------------
+      # Auto-commit de datos generados
+      # -----------------------------
+      - name: 11) Auto-commit de archivos de datos
         uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore: update commander data"
+          branch: main
+          commit_user_name: "commander-bot"
+          commit_user_email: "commander-bot@users.noreply.github.com"
+          # Solo JSON dentro de data/, excluyendo el que acabamos de borrar
+          file_pattern: "data/**/*.json"
