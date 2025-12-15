@@ -2,7 +2,7 @@
 import { Client } from 'typesense';
 import 'dotenv/config';
 
-const CARD_NAME = 'Spring // Mind'
+const CARD_NAME = 'Fire Lord Azula'
 const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY;
 if (!TYPESENSE_API_KEY) {
   console.error('❌ Falta TYPESENSE_API_KEY en .env');

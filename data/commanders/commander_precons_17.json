@@ -1282,18 +1282,6 @@
         "count": 1
       },
       {
-        "name": "Mountain",
-        "count": 5
-      },
-      {
-        "name": "Plains",
-        "count": 6
-      },
-      {
-        "name": "Swamp",
-        "count": 5
-      },
-      {
         "name": "Shanid, Sleepers' Scourge",
         "count": 1
       },
@@ -1328,6 +1316,18 @@
       {
         "name": "The Reaver Cleaver",
         "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      },
+      {
+        "name": "Plains",
+        "count": 6
+      },
+      {
+        "name": "Swamp",
+        "count": 5
       }
     ]
   },
@@ -1653,26 +1653,6 @@
         "count": 1
       },
       {
-        "name": "Forest",
-        "count": 3
-      },
-      {
-        "name": "Mountain",
-        "count": 2
-      },
-      {
-        "name": "Island",
-        "count": 2
-      },
-      {
-        "name": "Plains",
-        "count": 2
-      },
-      {
-        "name": "Swamp",
-        "count": 2
-      },
-      {
         "name": "Jenson Carthalion, Druid Exile",
         "count": 1
       },
@@ -1707,6 +1687,26 @@
       {
         "name": "Obsidian Obelisk",
         "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 3
+      },
+      {
+        "name": "Mountain",
+        "count": 2
+      },
+      {
+        "name": "Island",
+        "count": 2
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Swamp",
+        "count": 2
       }
     ]
   }

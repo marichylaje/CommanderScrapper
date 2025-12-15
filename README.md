@@ -25,16 +25,18 @@ node index.js
 
 ## Configuración
 
-Actualiza el archivo de configuración para especificar tus objetivos de scraping y parámetros.
+🔁 Flujos recomendados
+🔄 Actualizar todo desde cero
+npm run scrape
+npm run reduce
+npm run prices
+npm run deleteCollection
+npm run typeSchema
+npm run importCollection
+npm run restartFly
 
-## Contribuir
-
-1. Haz un fork del repositorio
-2. Crea una rama de características
-3. Confirma tus cambios
-4. Empuja a la rama
-5. Crea un Pull Request
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT.
+🧱 Cambiar el schema
+npm run deleteCollection
+npm run typeSchema
+npm run importCollection
+npm run restartFly

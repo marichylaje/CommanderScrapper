@@ -1,7 +1,10 @@
 import axios from 'axios';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import path from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const SOURCE_URL = 'https://raw.githubusercontent.com/taw/magic-preconstructed-decks-data/master/decks_v2.json';
 const OUTPUT_PATH = path.resolve(__dirname, '../data/commander_precons.json');
 

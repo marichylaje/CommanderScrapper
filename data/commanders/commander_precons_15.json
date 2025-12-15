@@ -635,6 +635,10 @@
     "expansion": "Neon Dynasty Commander",
     "cards": [
       {
+        "name": "Shorikai, Genesis Engine",
+        "count": 1
+      },
+      {
         "name": "Jace, Architect of Thought",
         "count": 1
       },
@@ -795,10 +799,6 @@
         "count": 1
       },
       {
-        "name": "Shorikai, Genesis Engine",
-        "count": 1
-      },
-      {
         "name": "Aerial Surveyor",
         "count": 1
       },
@@ -926,11 +926,11 @@
     "expansion": "Neon Dynasty Commander",
     "cards": [
       {
-        "name": "Ox of Agonas",
+        "name": "Kaima, the Fractured Calm",
         "count": 1
       },
       {
-        "name": "Kaima, the Fractured Calm",
+        "name": "Ox of Agonas",
         "count": 1
       },
       {
@@ -1229,6 +1229,10 @@
     "expansion": "New Capenna Commander",
     "cards": [
       {
+        "name": "Kros, Defense Contractor",
+        "count": 1
+      },
+      {
         "name": "Ajani Unyielding",
         "count": 1
       },
@@ -1286,10 +1290,6 @@
       },
       {
         "name": "Jenara, Asura of War",
-        "count": 1
-      },
-      {
-        "name": "Kros, Defense Contractor",
         "count": 1
       },
       {

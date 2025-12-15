@@ -5,6 +5,10 @@
     "expansion": "New Capenna Commander",
     "cards": [
       {
+        "name": "Phabine, Boss's Confidant",
+        "count": 1
+      },
+      {
         "name": "Leafkin Druid",
         "count": 1
       },
@@ -82,10 +86,6 @@
       },
       {
         "name": "Kazuul, Tyrant of the Cliffs",
-        "count": 1
-      },
-      {
-        "name": "Phabine, Boss's Confidant",
         "count": 1
       },
       {
@@ -356,6 +356,10 @@
     "expansion": "New Capenna Commander",
     "cards": [
       {
+        "name": "Parnesse, the Subtle Brush",
+        "count": 1
+      },
+      {
         "name": "Bloodsoaked Champion",
         "count": 1
       },
@@ -373,10 +377,6 @@
       },
       {
         "name": "Kess, Dissident Mage",
-        "count": 1
-      },
-      {
-        "name": "Parnesse, the Subtle Brush",
         "count": 1
       },
       {
