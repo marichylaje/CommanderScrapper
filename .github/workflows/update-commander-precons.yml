@@ -59,6 +59,13 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Debug: confirmar qué index.ts se está ejecutando
+        run: |
+          node -v
+          echo "GITHUB_SHA=$GITHUB_SHA"
+          echo "Mostrando src/index.ts (primeras 30 líneas):"
+          sed -n '1,30p' src/index.ts
+
       # -------------------------
       # Fase A: Fetch + reducir
       # -------------------------
