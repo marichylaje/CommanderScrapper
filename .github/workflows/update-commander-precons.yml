@@ -59,7 +59,7 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Debug: confirmar qué index.ts se está ejecutando
+      - name: confirmar qué index.ts se está ejecutando
         run: |
           node -v
           echo "GITHUB_SHA=$GITHUB_SHA"
