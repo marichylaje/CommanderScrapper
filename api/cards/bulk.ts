@@ -45,7 +45,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const results: any[] = [];
   const seen = new Set<string>();
-  const seenKey = (doc: any) => `${doc.oracle_id}|${normalize(doc.flavor_name ?? '')}`;
+  const seenKey = (doc: any) => doc.id;
 
   // Aumentar el tamaño del bloque a 100 para procesamiento paralelo masivo
   const chunkSize = 100;
@@ -171,7 +171,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           const scryfallData = (await scryfallRes.json()) as { data: any[] };
           if (scryfallData?.data) {
             for (const doc of scryfallData.data) {
-              if (doc) {
+              if (doc && doc.id && doc.object !== 'error') {
                 const key = seenKey(doc);
                 if (!seen.has(key)) {
                   seen.add(key);

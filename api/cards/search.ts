@@ -14,45 +14,83 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const set = req.query.set?.toString().trim();
     const cn = req.query.cn?.toString().trim();
 
-    const client = new Client({
-      nodes: [{ host: 'typesense-commanderscrapper.fly.dev', port: 443, protocol: 'https' }],
-      apiKey: 'typsensemasterkeyMariArri30123456789',
-    });
+    let hits: any[] = [];
+    let found = 0;
+    let hasMore = false;
 
-    const filters: string[] = [];
-
+    // 1. Usar Typesense local si y sólo si se busca un comandante específico (optimización extrema)
     if (isCommander) {
-      filters.push('type_line:Legendary AND (type_line:Creature OR type_line:Planeswalker)');
+      try {
+        const client = new Client({
+          nodes: [{ host: 'typesense-commanderscrapper.fly.dev', port: 443, protocol: 'https' }],
+          apiKey: 'typsensemasterkeyMariArri30123456789',
+        });
+
+        const filters: string[] = [];
+        filters.push('type_line:Legendary AND (type_line:Creature OR type_line:Planeswalker)');
+        if (set) {
+          filters.push(`set:${set.toLowerCase()}`);
+        }
+
+        const searchParams: any = {
+          q,
+          query_by: 'name,face_name,flavor_name',
+          per_page: perPage,
+          page,
+          num_typos: 1,
+          prefix: 'true',
+        };
+
+        if (filters.length > 0) {
+          searchParams.filter_by = filters.join(' AND ');
+        }
+
+        const results = await client.collections('cards').documents().search(searchParams);
+        hits = results.hits?.map((hit: any) => hit.document) || [];
+
+        if (cn) {
+          hits = hits.filter((doc: any) => doc.collector_number === cn);
+        }
+
+        found = results.found ?? 0;
+        hasMore = (page * perPage) < found;
+      } catch (err: any) {
+        console.warn('⚠️ Typesense local search failed, falling back to Scryfall:', err.message);
+      }
     }
 
-    if (set) {
-      filters.push(`set:${set.toLowerCase()}`);
+    // 2. Si no es comandante, o si no dio resultados en Typesense, consultar Scryfall de forma directa
+    if (hits.length === 0) {
+      try {
+        let scryfallQuery = q;
+        if (isCommander) {
+          scryfallQuery = `is:commander ${q}`;
+        }
+        if (set) {
+          scryfallQuery = `set:${set} ${scryfallQuery}`;
+        }
+        
+        const scryfallRes = await fetch(
+          `https://api.scryfall.com/cards/search?q=${encodeURIComponent(scryfallQuery)}&page=${page}`
+        );
+
+        if (scryfallRes.ok) {
+          const scryfallData = (await scryfallRes.json()) as { data: any[]; has_more?: boolean; total_cards?: number };
+          if (scryfallData?.data) {
+            hits = scryfallData.data.filter(
+              (doc: any) => doc && doc.id && doc.object !== 'error'
+            );
+            if (cn) {
+              hits = hits.filter((doc: any) => doc.collector_number === cn);
+            }
+            found = scryfallData.total_cards ?? hits.length;
+            hasMore = scryfallData.has_more ?? false;
+          }
+        }
+      } catch (err: any) {
+        console.error('❌ Scryfall search query failed:', err.message);
+      }
     }
-
-    const searchParams: any = {
-      q,
-      query_by: 'name,face_name,flavor_name',
-      per_page: perPage,
-      page,
-      num_typos: 1,
-      prefix: 'true',
-    };
-
-    if (filters.length > 0) {
-      searchParams.filter_by = filters.join(' AND ');
-    }
-
-    const results = await client.collections('cards').documents().search(searchParams);
-
-    let hits = results.hits?.map((hit: any) => hit.document) || [];
-
-    // Si viene collector number, filtramos en JS ya que no es un campo indexado en el schema de Typesense
-    if (cn) {
-      hits = hits.filter((doc: any) => doc.collector_number === cn);
-    }
-
-    const found = results.found ?? 0;
-    const hasMore = (page * perPage) < found;
 
     const nextUrlParams = new URLSearchParams();
     nextUrlParams.append('q', q);
