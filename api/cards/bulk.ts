@@ -88,8 +88,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           }
         }
 
-        // 2) Si no hay coincidencia exacta de set/cn o no se solicitó una versión específica, buscar por orden de prioridad
-        if (!resolvedDoc) {
+        // 2) Si no se solicitó una versión específica, buscar por coincidencia de nombre general en Typesense
+        if (!resolvedDoc && !(query.set && query.cn)) {
           // Coincidencia exacta de nombre
           const nameMatch = hits.find(
             (hit: any) => normalize(hit.document.name) === normalize(query.cleanName)
