@@ -1,4 +1,5 @@
 import Busboy from 'busboy';
+import { findPrintings } from '../../src/visual/localPrintingLookup';
 import { rankCandidatePrintings } from '../../src/visual/printingMatcher';
 const normalize = (value) => (value ?? '')
     .toLowerCase()
@@ -9,6 +10,14 @@ function firstFaceImage(card, key) {
     return card?.card_faces?.find((face) => face?.image_uris?.[key])?.image_uris?.[key];
 }
 async function fetchPrints({ oracleId, name }) {
+    if (!oracleId && !name) {
+        throw new Error('Missing oracleId or name for visual match.');
+    }
+    const localResults = await findPrintings({ name, oracleId });
+    if (localResults.length > 0) {
+        return localResults;
+    }
+    console.warn(`⚠️ No local printings found for oracleId=${oracleId}, name="${name}". Falling back to Scryfall API.`);
     const query = oracleId
         ? `oracle_id:${oracleId} unique:prints`
         : name

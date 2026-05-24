@@ -52,7 +52,7 @@ function normalizeCrop(crop?: Partial<NormalizedCrop> | null): NormalizedCrop | 
 }
 
 async function ensureRgbImage(buffer: Buffer) {
-  return sharp(buffer).rotate().removeAlpha().toColourspace('rgb');
+  return sharp(buffer).rotate().removeAlpha();
 }
 
 function normalizedRegionToPixels(

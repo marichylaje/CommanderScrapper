@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Busboy from 'busboy';
 
+import { findPrintings } from '../../src/visual/localPrintingLookup';
 import { rankCandidatePrintings } from '../../src/visual/printingMatcher';
 
 type UploadPayload = {
@@ -25,6 +26,18 @@ function firstFaceImage(card: any, key: 'art_crop' | 'normal') {
 }
 
 async function fetchPrints({ oracleId, name }: { name?: string; oracleId?: string }) {
+  if (!oracleId && !name) {
+    throw new Error('Missing oracleId or name for visual match.');
+  }
+
+  const localResults = await findPrintings({ name, oracleId });
+  
+  if (localResults.length > 0) {
+    return localResults;
+  }
+
+  console.warn(`⚠️ No local printings found for oracleId=${oracleId}, name="${name}". Falling back to Scryfall API.`);
+  
   const query = oracleId
     ? `oracle_id:${oracleId} unique:prints`
     : name

@@ -31,7 +31,7 @@ function normalizeCrop(crop) {
     };
 }
 async function ensureRgbImage(buffer) {
-    return sharp(buffer).rotate().removeAlpha().toColourspace('rgb');
+    return sharp(buffer).rotate().removeAlpha();
 }
 function normalizedRegionToPixels(width, height, region) {
     const left = Math.max(0, Math.round(region.x * width));
