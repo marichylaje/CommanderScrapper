@@ -1,0 +1,194 @@
+import { fetch } from 'undici';
+import sharp from 'sharp';
+const DEFAULT_HASH_SIZE = 16;
+const HISTOGRAM_BINS_PER_CHANNEL = 4;
+const ART_REGION = {
+    height: 0.37,
+    width: 0.84,
+    x: 0.08,
+    y: 0.12,
+};
+const remoteFingerprintCache = new Map();
+function clamp01(value) {
+    if (!Number.isFinite(value))
+        return 0;
+    return Math.min(1, Math.max(0, value));
+}
+function normalizeCrop(crop) {
+    if (!crop)
+        return null;
+    const x = clamp01(Number(crop.x));
+    const y = clamp01(Number(crop.y));
+    const width = clamp01(Number(crop.width));
+    const height = clamp01(Number(crop.height));
+    if (width <= 0 || height <= 0)
+        return null;
+    return {
+        height: Math.min(height, 1 - y),
+        width: Math.min(width, 1 - x),
+        x,
+        y,
+    };
+}
+async function ensureRgbImage(buffer) {
+    return sharp(buffer).rotate().removeAlpha().toColourspace('rgb');
+}
+function normalizedRegionToPixels(width, height, region) {
+    const left = Math.max(0, Math.round(region.x * width));
+    const top = Math.max(0, Math.round(region.y * height));
+    const extractWidth = Math.max(1, Math.min(width - left, Math.round(region.width * width)));
+    const extractHeight = Math.max(1, Math.min(height - top, Math.round(region.height * height)));
+    return { height: extractHeight, left, top, width: extractWidth };
+}
+async function extractRegion(buffer, region) {
+    const image = await ensureRgbImage(buffer);
+    const metadata = await image.metadata();
+    const width = metadata.width ?? 0;
+    const height = metadata.height ?? 0;
+    if (width <= 0 || height <= 0) {
+        throw new Error('Unable to determine image dimensions for crop.');
+    }
+    return image.extract(normalizedRegionToPixels(width, height, region)).jpeg().toBuffer();
+}
+async function computeDHash(buffer, size = DEFAULT_HASH_SIZE) {
+    const { data, info } = await sharp(buffer)
+        .rotate()
+        .greyscale()
+        .resize(size + 1, size, { fit: 'fill' })
+        .raw()
+        .toBuffer({ resolveWithObject: true });
+    const bits = [];
+    for (let y = 0; y < info.height; y++) {
+        for (let x = 0; x < info.width - 1; x++) {
+            const leftPixel = data[y * info.width + x];
+            const rightPixel = data[y * info.width + x + 1];
+            bits.push(leftPixel > rightPixel ? '1' : '0');
+        }
+    }
+    let hash = '';
+    for (let index = 0; index < bits.length; index += 4) {
+        hash += Number.parseInt(bits.slice(index, index + 4).join(''), 2).toString(16);
+    }
+    return hash;
+}
+async function computeHistogram(buffer) {
+    const bins = HISTOGRAM_BINS_PER_CHANNEL;
+    const histogram = new Array(bins * bins * bins).fill(0);
+    const { data } = await sharp(buffer)
+        .rotate()
+        .resize(48, 48, { fit: 'cover' })
+        .removeAlpha()
+        .raw()
+        .toBuffer({ resolveWithObject: true });
+    for (let index = 0; index < data.length; index += 3) {
+        const r = Math.min(bins - 1, Math.floor((data[index] / 256) * bins));
+        const g = Math.min(bins - 1, Math.floor((data[index + 1] / 256) * bins));
+        const b = Math.min(bins - 1, Math.floor((data[index + 2] / 256) * bins));
+        const bucket = r * bins * bins + g * bins + b;
+        histogram[bucket] += 1;
+    }
+    const total = histogram.reduce((sum, bucket) => sum + bucket, 0) || 1;
+    return histogram.map((bucket) => bucket / total);
+}
+function hammingDistance(left, right) {
+    const maxLength = Math.max(left.length, right.length);
+    let distance = 0;
+    for (let index = 0; index < maxLength; index++) {
+        const leftNibble = Number.parseInt(left[index] ?? '0', 16);
+        const rightNibble = Number.parseInt(right[index] ?? '0', 16);
+        distance += ((leftNibble ^ rightNibble).toString(2).match(/1/g) || []).length;
+    }
+    return distance;
+}
+function histogramDistance(left, right) {
+    const maxLength = Math.max(left.length, right.length);
+    let sum = 0;
+    for (let index = 0; index < maxLength; index++) {
+        sum += Math.abs((left[index] ?? 0) - (right[index] ?? 0));
+    }
+    return sum / 2;
+}
+export function scoreFingerprints(source, candidate) {
+    const maxHashBits = DEFAULT_HASH_SIZE * DEFAULT_HASH_SIZE;
+    const fullHashDistance = hammingDistance(source.fullHash, candidate.fullHash);
+    const artHashDistance = hammingDistance(source.artHash, candidate.artHash);
+    const colorDistance = histogramDistance(source.histogram, candidate.histogram);
+    const normalizedFull = fullHashDistance / maxHashBits;
+    const normalizedArt = artHashDistance / maxHashBits;
+    const weightedDistance = normalizedFull * 0.45 + normalizedArt * 0.4 + colorDistance * 0.15;
+    const confidence = Math.max(0, Math.min(1, 1 - weightedDistance));
+    return {
+        artHashDistance,
+        colorDistance,
+        confidence,
+        distance: weightedDistance,
+        fullHashDistance,
+    };
+}
+export async function buildFingerprintFromBuffer(sourceBuffer, crop) {
+    const croppedSource = normalizeCrop(crop)
+        ? await extractRegion(sourceBuffer, normalizeCrop(crop))
+        : await sharp(sourceBuffer).rotate().jpeg().toBuffer();
+    const artSource = await extractRegion(croppedSource, ART_REGION);
+    return {
+        artHash: await computeDHash(artSource),
+        fullHash: await computeDHash(croppedSource),
+        histogram: await computeHistogram(croppedSource),
+    };
+}
+async function fetchRemoteBuffer(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch remote image: ${response.status} ${response.statusText}`);
+    }
+    return Buffer.from(await response.arrayBuffer());
+}
+export async function buildFingerprintFromRemoteImages(fullImageUrl, artImageUrl) {
+    if (!fullImageUrl && !artImageUrl) {
+        return null;
+    }
+    const cacheKey = `${fullImageUrl ?? ''}|${artImageUrl ?? ''}`;
+    const cached = remoteFingerprintCache.get(cacheKey);
+    if (cached) {
+        return cached;
+    }
+    const promise = (async () => {
+        try {
+            const fullBuffer = fullImageUrl
+                ? await fetchRemoteBuffer(fullImageUrl)
+                : artImageUrl
+                    ? await fetchRemoteBuffer(artImageUrl)
+                    : null;
+            if (!fullBuffer)
+                return null;
+            const artBuffer = artImageUrl
+                ? await fetchRemoteBuffer(artImageUrl)
+                : await extractRegion(fullBuffer, ART_REGION);
+            return {
+                artHash: await computeDHash(artBuffer),
+                fullHash: await computeDHash(fullBuffer),
+                histogram: await computeHistogram(fullBuffer),
+            };
+        }
+        catch (error) {
+            console.warn('⚠️ Failed to compute remote fingerprint:', cacheKey, error);
+            return null;
+        }
+    })();
+    remoteFingerprintCache.set(cacheKey, promise);
+    return promise;
+}
+export async function rankCandidatePrintings(sourceBuffer, candidates, crop) {
+    const sourceFingerprint = await buildFingerprintFromBuffer(sourceBuffer, crop);
+    const ranked = [];
+    for (const candidate of candidates) {
+        const candidateFingerprint = await buildFingerprintFromRemoteImages(candidate.fullImageUrl, candidate.artImageUrl);
+        if (!candidateFingerprint)
+            continue;
+        ranked.push({
+            ...scoreFingerprints(sourceFingerprint, candidateFingerprint),
+            card: candidate.card,
+        });
+    }
+    return ranked.sort((left, right) => right.confidence - left.confidence);
+}
