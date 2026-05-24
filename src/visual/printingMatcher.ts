@@ -168,9 +168,23 @@ export function scoreFingerprints(
 
   const normalizedFull = fullHashDistance / maxHashBits;
   const normalizedArt = artHashDistance / maxHashBits;
+  
+  // Dynamic weighting: when art matches very closely, prioritize it heavily
+  // This helps alternate arts beat default printings when the captured card matches them
+  const artWeight = normalizedArt < 0.05 ? 0.55 : normalizedArt < 0.15 ? 0.45 : 0.35;
+  const fullWeight = normalizedArt < 0.05 ? 0.30 : normalizedArt < 0.15 ? 0.40 : 0.50;
+  const colorWeight = 1.0 - artWeight - fullWeight;
+  
   const weightedDistance =
-    normalizedFull * 0.45 + normalizedArt * 0.4 + colorDistance * 0.15;
-  const confidence = Math.max(0, Math.min(1, 1 - weightedDistance));
+    normalizedFull * fullWeight + normalizedArt * artWeight + colorDistance * colorWeight;
+  
+  // Apply confidence boost for near-perfect art matches (likely exact printing match)
+  // This gives alternate arts an edge when they're the actual scanned card
+  let confidence = Math.max(0, Math.min(1, 1 - weightedDistance));
+  if (normalizedArt < 0.03 && colorDistance < 0.1) {
+    // Very close art match + similar colors = likely exact printing
+    confidence = Math.min(1, confidence * 1.1); // 10% confidence boost
+  }
 
   return {
     artHashDistance,
