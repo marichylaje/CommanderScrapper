@@ -1,0 +1,70 @@
+name: Update Fingerprint Index
+
+on:
+  schedule:
+    # Every 2 days at 03:00 UTC
+    - cron: '0 3 */2 * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force rebuild even if Scryfall has no updates'
+        required: false
+        default: 'false'
+
+jobs:
+  check-and-update:
+    name: Check Scryfall freshness and rebuild if needed
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check if Scryfall has new data
+        id: freshness
+        run: node scripts/checkFreshness.mjs
+        env:
+          FINGERPRINT_INDEX_URL: ${{ secrets.FINGERPRINT_INDEX_URL }}
+          FORCE_REBUILD: ${{ github.event.inputs.force }}
+
+      - name: Download Scryfall bulk data
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run scrape
+
+      - name: Reduce to fingerprint-ready dataset
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run reduce
+
+      - name: Build fingerprint index
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run buildIndex
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
+      - name: Upload index to Vercel Blob
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: node scripts/uploadToBlob.mjs
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+
+      - name: Redeploy Vercel project to pick up new index
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npx vercel@latest deploy --prod --token "$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Log no-op
+        if: steps.freshness.outputs.needs_update == 'false'
+        run: echo "✅ Scryfall data unchanged — no rebuild needed."
