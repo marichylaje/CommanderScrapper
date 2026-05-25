@@ -13,6 +13,8 @@
     "typeSchema": "npx tsx src/typesense/createTypesenseSchema.ts",
     "deleteCollection": "npx tsx src/typesense/deleteCollections.ts",
     "importCollection": "npx tsx src/typesense/importToTypesense.ts",
+    "uploadBlob": "node scripts/uploadToBlob.mjs",
+    "uploadReduced": "node scripts/uploadScryfallReduced.mjs",
     "buildIndex": "npx tsx src/buildFingerprintIndex.ts",
     "uploadBlob": "node scripts/uploadToBlob.mjs",
     "uploadReduced": "node scripts/uploadScryfallReduced.mjs",
