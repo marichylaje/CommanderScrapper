@@ -13,9 +13,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Busboy from 'busboy';
 
-import { findCardById } from '../../src/visual/localPrintingLookup';
-import { buildFingerprintFromBuffer } from '../../src/visual/printingMatcher';
-import { findBestVisualMatch } from '../../src/visual/fingerprintIndex';
+import { findCardById } from '../../src/visual/localPrintingLookup.js';
+import { buildFingerprintFromBuffer } from '../../src/visual/printingMatcher.js';
+import { findBestVisualMatch } from '../../src/visual/fingerprintIndex.js';
 
 const MIN_CONFIDENCE = 0.4;
 const TOP_K = 5;
