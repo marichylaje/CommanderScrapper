@@ -59,6 +59,11 @@ function parseMultipartForm(req: VercelRequest): Promise<UploadPayload> {
   });
 }
 
+function headerValue(value: string | string[] | undefined) {
+  if (Array.isArray(value)) return value[0];
+  return value;
+}
+
 export const config = {
   api: {
     bodyParser: false,
@@ -71,6 +76,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
+
+  const requestId =
+    headerValue(req.headers['x-vercel-id']) ||
+    headerValue(req.headers['x-request-id']) ||
+    'unknown';
 
   try {
     const payload = await parseMultipartForm(req);
@@ -86,11 +96,40 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       y: payload.cropY ?? 0,
     };
 
+    console.log('📷 visual-match-direct: request', {
+      requestId,
+      crop,
+      bytes: payload.photoBuffer.length,
+    });
+
     // Compute fingerprint of the uploaded image
     const fingerprint = await buildFingerprintFromBuffer(payload.photoBuffer, crop);
 
+    console.log('🧬 visual-match-direct: fingerprint', {
+      requestId,
+      artHash: fingerprint.artHash.slice(0, 8),
+      fullHash: fingerprint.fullHash.slice(0, 8),
+      histogramSize: fingerprint.histogram.length,
+    });
+
     // Find nearest neighbors in the pre-computed index
     const topMatches = await findBestVisualMatch(fingerprint, TOP_K);
+
+    const matchSummary = topMatches.slice(0, 3).map((match) => ({
+      id: match.entry.id,
+      name: match.entry.name,
+      set: match.entry.set,
+      confidence: Number(match.confidence.toFixed(4)),
+      artHashDistance: match.artHashDistance,
+      fullHashDistance: match.fullHashDistance,
+      colorDistance: Number(match.colorDistance.toFixed(4)),
+    }));
+
+    console.log('🎯 visual-match-direct: matches', {
+      requestId,
+      total: topMatches.length,
+      top: matchSummary,
+    });
 
     if (topMatches.length === 0 || (topMatches[0]?.confidence ?? 0) < MIN_CONFIDENCE) {
       return res.status(200).json({
@@ -126,7 +165,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/visual-match-direct:', error?.message, error?.stack);
+    console.error('💥 ERROR in /api/cards/visual-match-direct:', requestId, error?.message, error?.stack);
     return res.status(500).json({
       error: 'Internal Server Error',
       details: error?.message ?? String(error),
