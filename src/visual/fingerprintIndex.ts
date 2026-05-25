@@ -9,12 +9,13 @@
  *   const matches = await findBestVisualMatch(fingerprint, 5);
  */
 
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const INDEX_PATH = join(process.cwd(), 'data', 'fingerprint-index.json');
 const INDEX_URL =
   process.env.FINGERPRINT_INDEX_URL || process.env.BLOB_FINGERPRINT_URL;
+const IS_VERCEL = Boolean(process.env.VERCEL);
 
 export type FingerprintEntry = {
   artHash: string;
@@ -66,18 +67,30 @@ async function loadIndex(): Promise<FingerprintEntry[]> {
         );
       } catch (error) {
         console.warn(
-          `⚠️ Failed to fetch fingerprint index from URL, falling back to local file: ${INDEX_URL}`,
+          `⚠️ Failed to fetch fingerprint index from URL (hasUrl=${Boolean(INDEX_URL)}). Falling back to local file.`,
           error,
         );
       }
+    } else {
+      console.warn(
+        `⚠️ FINGERPRINT_INDEX_URL is not set (isVercel=${IS_VERCEL}). Falling back to local file.`,
+      );
     }
 
     if (!data) {
-      const raw = await readFile(INDEX_PATH, 'utf-8');
-      data = JSON.parse(raw) as FingerprintIndex;
-      console.log(
-        `✅ Fingerprint index loaded from file: ${data.total} cards (generated: ${data.generated_at})`,
-      );
+      try {
+        await access(INDEX_PATH);
+        const raw = await readFile(INDEX_PATH, 'utf-8');
+        data = JSON.parse(raw) as FingerprintIndex;
+        console.log(
+          `✅ Fingerprint index loaded from file: ${data.total} cards (generated: ${data.generated_at})`,
+        );
+      } catch (error) {
+        const reason = INDEX_URL
+          ? 'URL fetch failed and local file is missing'
+          : 'FINGERPRINT_INDEX_URL is missing and local file is missing';
+        throw new Error(`Fingerprint index unavailable: ${reason}.`);
+      }
     }
 
     indexCache = data.entries;
