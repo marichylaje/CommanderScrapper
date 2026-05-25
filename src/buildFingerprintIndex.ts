@@ -20,6 +20,7 @@ const CONCURRENCY = 20;
 const HASH_SIZE = 16;
 const HISTOGRAM_BINS = 4;
 const ART_REGION = { height: 0.37, width: 0.84, x: 0.08, y: 0.12 };
+const TITLE_REGION = { height: 0.12, width: 0.9, x: 0.05, y: 0.02 };
 
 type CardData = {
   card_faces?: Array<{ image_uris?: { art_crop?: string; normal?: string } }>;
@@ -40,6 +41,7 @@ type FingerprintEntry = {
   name: string;
   oracle_id: string;
   set: string;
+  titleHash: string;
 };
 
 type ReducedDataset = { cards: CardData[]; last_updated: string };
@@ -114,10 +116,25 @@ async function extractArtRegion(buffer: Buffer): Promise<Buffer> {
   return img.extract({ height, left, top, width }).jpeg().toBuffer();
 }
 
+async function extractTitleRegion(buffer: Buffer): Promise<Buffer> {
+  const img = sharp(buffer).rotate().removeAlpha();
+  const meta = await img.metadata();
+  const w = meta.width ?? 0;
+  const h = meta.height ?? 0;
+  if (w <= 0 || h <= 0) return buffer;
+
+  const left = Math.round(TITLE_REGION.x * w);
+  const top = Math.round(TITLE_REGION.y * h);
+  const width = Math.max(1, Math.min(w - left, Math.round(TITLE_REGION.width * w)));
+  const height = Math.max(1, Math.min(h - top, Math.round(TITLE_REGION.height * h)));
+
+  return img.extract({ height, left, top, width }).jpeg().toBuffer();
+}
+
 async function computeFingerprint(
   fullBuffer: Buffer,
   artBuffer?: Buffer | null,
-): Promise<{ artHash: string; fullHash: string; histogram: number[] }> {
+): Promise<{ artHash: string; fullHash: string; histogram: number[]; titleHash: string }> {
   const normalizedFull = await sharp(fullBuffer)
     .rotate()
     .removeAlpha()
@@ -128,11 +145,13 @@ async function computeFingerprint(
   const artSource = artBuffer
     ? await sharp(artBuffer).rotate().removeAlpha().jpeg().toBuffer()
     : await extractArtRegion(normalizedFull);
+  const titleSource = await extractTitleRegion(normalizedFull);
 
   return {
     artHash: await computeDHash(artSource),
     fullHash: await computeDHash(normalizedFull),
     histogram: await computeHistogram(normalizedFull),
+    titleHash: await computeDHash(titleSource),
   };
 }
 

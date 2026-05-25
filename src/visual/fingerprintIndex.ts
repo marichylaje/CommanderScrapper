@@ -26,6 +26,7 @@ export type FingerprintEntry = {
   name: string;
   oracle_id: string;
   set: string;
+  titleHash?: string;
 };
 
 export type VisualMatchResult = {
@@ -127,16 +128,21 @@ function histogramDistance(left: number[], right: number[]): number {
 }
 
 function scoreEntry(
-  query: { artHash: string; fullHash: string; histogram: number[] },
+  query: { artHash: string; fullHash: string; histogram: number[]; titleHash: string },
   candidate: FingerprintEntry,
 ): Omit<VisualMatchResult, 'entry'> {
   const maxHashBits = 16 * 16; // HASH_SIZE^2
   const artHashDistance = hammingDistance(query.artHash, candidate.artHash);
   const fullHashDistance = hammingDistance(query.fullHash, candidate.fullHash);
   const colorDistance = histogramDistance(query.histogram, candidate.histogram);
+  const hasTitle = Boolean(candidate.titleHash && query.titleHash);
+  const titleHashDistance = hasTitle
+    ? hammingDistance(query.titleHash, candidate.titleHash!)
+    : 0;
 
   const normalizedArt = artHashDistance / maxHashBits;
   const normalizedFull = fullHashDistance / maxHashBits;
+  const normalizedTitle = hasTitle ? titleHashDistance / maxHashBits : 0;
 
   // Dynamic weighting: prioritize art when it matches very closely
   const artWeight = normalizedArt < 0.05 ? 0.55 : normalizedArt < 0.15 ? 0.45 : 0.35;
@@ -148,8 +154,17 @@ function scoreEntry(
     normalizedArt * artWeight +
     colorDistance * colorWeight;
 
-  let confidence = Math.max(0, Math.min(1, 1 - weightedDistance));
-  // Boost near-perfect art matches
+  let titleWeight = 0;
+  if (hasTitle && normalizedArt >= 0.05) {
+    titleWeight = normalizedArt < 0.15 ? 0.12 : 0.08;
+  }
+
+  const weightedWithTitle =
+    titleWeight > 0
+      ? weightedDistance * (1 - titleWeight) + normalizedTitle * titleWeight
+      : weightedDistance;
+
+  let confidence = Math.max(0, Math.min(1, 1 - weightedWithTitle));
   if (normalizedArt < 0.03 && colorDistance < 0.1) {
     confidence = Math.min(1, confidence * 1.1);
   }
@@ -164,7 +179,7 @@ function scoreEntry(
  * @returns Sorted array of matches, best first
  */
 export async function findBestVisualMatch(
-  query: { artHash: string; fullHash: string; histogram: number[] },
+  query: { artHash: string; fullHash: string; histogram: number[]; titleHash: string },
   topK = 5,
 ): Promise<VisualMatchResult[]> {
   const entries = await loadIndex();

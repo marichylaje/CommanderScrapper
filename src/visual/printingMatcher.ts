@@ -9,6 +9,12 @@ const ART_REGION = {
   x: 0.08,
   y: 0.12,
 };
+const TITLE_REGION = {
+  height: 0.12,
+  width: 0.9,
+  x: 0.05,
+  y: 0.02,
+};
 
 type NormalizedCrop = {
   height: number;
@@ -21,6 +27,7 @@ export type VisualFingerprint = {
   artHash: string;
   fullHash: string;
   histogram: number[];
+  titleHash: string;
 };
 
 export type CandidatePrinting = {
@@ -306,6 +313,7 @@ export function scoreFingerprints(
   const maxHashBits = DEFAULT_HASH_SIZE * DEFAULT_HASH_SIZE;
   const fullHashDistance = hammingDistance(source.fullHash, candidate.fullHash);
   const artHashDistance = hammingDistance(source.artHash, candidate.artHash);
+  const titleHashDistance = hammingDistance(source.titleHash, candidate.titleHash);
   const colorDistance = histogramDistance(
     source.histogram,
     candidate.histogram,
@@ -313,6 +321,7 @@ export function scoreFingerprints(
 
   const normalizedFull = fullHashDistance / maxHashBits;
   const normalizedArt = artHashDistance / maxHashBits;
+  const normalizedTitle = titleHashDistance / maxHashBits;
 
   // Dynamic weighting: when art matches very closely, prioritize it heavily
   // This helps alternate arts beat default printings when the captured card matches them
@@ -327,9 +336,19 @@ export function scoreFingerprints(
     normalizedArt * artWeight +
     colorDistance * colorWeight;
 
+  let titleWeight = 0;
+  if (normalizedArt >= 0.05) {
+    titleWeight = normalizedArt < 0.15 ? 0.12 : 0.08;
+  }
+
+  const weightedWithTitle =
+    titleWeight > 0
+      ? weightedDistance * (1 - titleWeight) + normalizedTitle * titleWeight
+      : weightedDistance;
+
   // Apply confidence boost for near-perfect art matches (likely exact printing match)
   // This gives alternate arts an edge when they're the actual scanned card
-  let confidence = Math.max(0, Math.min(1, 1 - weightedDistance));
+  let confidence = Math.max(0, Math.min(1, 1 - weightedWithTitle));
   if (normalizedArt < 0.03 && colorDistance < 0.1) {
     // Very close art match + similar colors = likely exact printing
     confidence = Math.min(1, confidence * 1.1); // 10% confidence boost
@@ -339,7 +358,7 @@ export function scoreFingerprints(
     artHashDistance,
     colorDistance,
     confidence,
-    distance: weightedDistance,
+    distance: weightedWithTitle,
     fullHashDistance,
   };
 }
@@ -353,11 +372,13 @@ export async function buildFingerprintFromBuffer(
     crop,
   );
   const artSource = await extractRegion(normalizedSource, ART_REGION);
+  const titleSource = await extractRegion(normalizedSource, TITLE_REGION);
 
   return {
     artHash: await computeDHash(artSource),
     fullHash: await computeDHash(normalizedSource),
     histogram: await computeHistogram(normalizedSource),
+    titleHash: await computeDHash(titleSource),
   };
 }
 
@@ -394,14 +415,23 @@ export async function buildFingerprintFromRemoteImages(
           : null;
       if (!fullBuffer) return null;
 
+      const normalizedFull = await sharp(fullBuffer)
+        .rotate()
+        .removeAlpha()
+        .resize(488, 680, { fit: "fill" })
+        .jpeg()
+        .toBuffer();
+
       const artBuffer = artImageUrl
         ? await fetchRemoteBuffer(artImageUrl)
-        : await extractRegion(fullBuffer, ART_REGION);
+        : await extractRegion(normalizedFull, ART_REGION);
+      const titleBuffer = await extractRegion(normalizedFull, TITLE_REGION);
 
       return {
         artHash: await computeDHash(artBuffer),
-        fullHash: await computeDHash(fullBuffer),
-        histogram: await computeHistogram(fullBuffer),
+        fullHash: await computeDHash(normalizedFull),
+        histogram: await computeHistogram(normalizedFull),
+        titleHash: await computeDHash(titleBuffer),
       };
     } catch (error) {
       console.warn("⚠️ Failed to compute remote fingerprint:", cacheKey, error);
