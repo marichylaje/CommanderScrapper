@@ -135,7 +135,9 @@ function scoreEntry(
   const artHashDistance = hammingDistance(query.artHash, candidate.artHash);
   const fullHashDistance = hammingDistance(query.fullHash, candidate.fullHash);
   const colorDistance = histogramDistance(query.histogram, candidate.histogram);
-  const hasTitle = Boolean(candidate.titleHash && query.titleHash);
+  const hasTitle =
+    Boolean(candidate.titleHash && query.titleHash) &&
+    candidate.titleHash!.length === query.titleHash.length;
   const titleHashDistance = hasTitle
     ? hammingDistance(query.titleHash, candidate.titleHash!)
     : 0;
@@ -154,9 +156,14 @@ function scoreEntry(
     normalizedArt * artWeight +
     colorDistance * colorWeight;
 
+  const ambiguousVisuals = normalizedArt >= 0.08 || colorDistance >= 0.35;
   let titleWeight = 0;
   if (hasTitle && normalizedArt >= 0.05) {
-    titleWeight = normalizedArt < 0.15 ? 0.12 : 0.08;
+    if (normalizedTitle < 0.25 && ambiguousVisuals) {
+      titleWeight = 0.2;
+    } else {
+      titleWeight = normalizedArt < 0.15 ? 0.14 : 0.1;
+    }
   }
 
   const weightedWithTitle =

@@ -2,6 +2,7 @@ import { fetch } from "undici";
 import sharp from "sharp";
 
 const DEFAULT_HASH_SIZE = 16;
+const TITLE_HASH_SIZE = 24;
 const HISTOGRAM_BINS_PER_CHANNEL = 4;
 const ART_REGION = {
   height: 0.37,
@@ -261,6 +262,34 @@ async function computeDHash(buffer: Buffer, size = DEFAULT_HASH_SIZE) {
   return hash;
 }
 
+async function computeTitleHash(buffer: Buffer) {
+  const { data, info } = await sharp(buffer)
+    .rotate()
+    .greyscale()
+    .normalize()
+    .sharpen()
+    .resize(TITLE_HASH_SIZE + 1, TITLE_HASH_SIZE, { fit: "fill" })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const bits: string[] = [];
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width - 1; x++) {
+      const leftPixel = data[y * info.width + x];
+      const rightPixel = data[y * info.width + x + 1];
+      bits.push(leftPixel > rightPixel ? "1" : "0");
+    }
+  }
+
+  let hash = "";
+  for (let index = 0; index < bits.length; index += 4) {
+    hash += Number.parseInt(bits.slice(index, index + 4).join(""), 2).toString(
+      16,
+    );
+  }
+  return hash;
+}
+
 async function computeHistogram(buffer: Buffer) {
   const bins = HISTOGRAM_BINS_PER_CHANNEL;
   const histogram = new Array(bins * bins * bins).fill(0);
@@ -336,9 +365,14 @@ export function scoreFingerprints(
     normalizedArt * artWeight +
     colorDistance * colorWeight;
 
+  const ambiguousVisuals = normalizedArt >= 0.08 || colorDistance >= 0.35;
   let titleWeight = 0;
   if (normalizedArt >= 0.05) {
-    titleWeight = normalizedArt < 0.15 ? 0.12 : 0.08;
+    if (normalizedTitle < 0.25 && ambiguousVisuals) {
+      titleWeight = 0.2;
+    } else {
+      titleWeight = normalizedArt < 0.15 ? 0.14 : 0.1;
+    }
   }
 
   const weightedWithTitle =
@@ -378,7 +412,7 @@ export async function buildFingerprintFromBuffer(
     artHash: await computeDHash(artSource),
     fullHash: await computeDHash(normalizedSource),
     histogram: await computeHistogram(normalizedSource),
-    titleHash: await computeDHash(titleSource),
+    titleHash: await computeTitleHash(titleSource),
   };
 }
 
@@ -431,7 +465,7 @@ export async function buildFingerprintFromRemoteImages(
         artHash: await computeDHash(artBuffer),
         fullHash: await computeDHash(normalizedFull),
         histogram: await computeHistogram(normalizedFull),
-        titleHash: await computeDHash(titleBuffer),
+        titleHash: await computeTitleHash(titleBuffer),
       };
     } catch (error) {
       console.warn("⚠️ Failed to compute remote fingerprint:", cacheKey, error);

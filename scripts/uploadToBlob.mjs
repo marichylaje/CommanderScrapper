@@ -11,7 +11,7 @@
  *   BLOB_READ_WRITE_TOKEN   RW token for the Vercel Blob store
  */
 
-import { createReadStream, statSync } from 'node:fs';
+import { readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { put } from '@vercel/blob';
 
@@ -28,7 +28,7 @@ async function main() {
   const sizeMb = (sizeBytes / 1024 / 1024).toFixed(1);
   console.log(`📤 Uploading fingerprint-index.json (${sizeMb} MB) to Vercel Blob…`);
 
-  const stream = createReadStream(FILE_PATH);
+  const stream = readFileSync(FILE_PATH);
 
   const blob = await put('fingerprint-index.json', stream, {
     access: 'public',

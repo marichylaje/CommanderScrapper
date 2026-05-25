@@ -18,6 +18,7 @@ const DATA_PATH = join(process.cwd(), 'data', 'scryfall-reduced.json');
 const OUTPUT_PATH = join(process.cwd(), 'data', 'fingerprint-index.json');
 const CONCURRENCY = 20;
 const HASH_SIZE = 16;
+const TITLE_HASH_SIZE = 24;
 const HISTOGRAM_BINS = 4;
 const ART_REGION = { height: 0.37, width: 0.84, x: 0.08, y: 0.12 };
 const TITLE_REGION = { height: 0.12, width: 0.9, x: 0.05, y: 0.02 };
@@ -56,11 +57,37 @@ async function fetchBuffer(url: string): Promise<Buffer | null> {
   }
 }
 
-async function computeDHash(buffer: Buffer): Promise<string> {
+async function computeDHash(buffer: Buffer, size = HASH_SIZE): Promise<string> {
   const { data, info } = await sharp(buffer)
     .rotate()
     .greyscale()
-    .resize(HASH_SIZE + 1, HASH_SIZE, { fit: 'fill' })
+    .resize(size + 1, size, { fit: 'fill' })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const bits: string[] = [];
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width - 1; x++) {
+      const left = data[y * info.width + x] ?? 0;
+      const right = data[y * info.width + x + 1] ?? 0;
+      bits.push(left > right ? '1' : '0');
+    }
+  }
+
+  let hash = '';
+  for (let i = 0; i < bits.length; i += 4) {
+    hash += Number.parseInt(bits.slice(i, i + 4).join(''), 2).toString(16);
+  }
+  return hash;
+}
+
+async function computeTitleHash(buffer: Buffer): Promise<string> {
+  const { data, info } = await sharp(buffer)
+    .rotate()
+    .greyscale()
+    .normalize()
+    .sharpen()
+    .resize(TITLE_HASH_SIZE + 1, TITLE_HASH_SIZE, { fit: 'fill' })
     .raw()
     .toBuffer({ resolveWithObject: true });
 
@@ -151,7 +178,7 @@ async function computeFingerprint(
     artHash: await computeDHash(artSource),
     fullHash: await computeDHash(normalizedFull),
     histogram: await computeHistogram(normalizedFull),
-    titleHash: await computeDHash(titleSource),
+    titleHash: await computeTitleHash(titleSource),
   };
 }
 
