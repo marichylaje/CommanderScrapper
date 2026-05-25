@@ -9,5 +9,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["api", "src"]
+  "include": ["api", "src/visual", "src/schemas"]
 }
