@@ -139,13 +139,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // Enrich top matches with full card data from the local dataset
+    // Enrich top matches with full card data from the dataset (graceful fallback to entry data)
     const enrichedMatches = await Promise.all(
       topMatches.map(async (match) => {
-        const card = await findCardById(match.entry.id);
+        let card: object = match.entry;
+        try {
+          const found = await findCardById(match.entry.id);
+          if (found) card = found;
+        } catch {
+          // Dataset unavailable — use fingerprint entry data as fallback
+        }
         return {
           artHashDistance: match.artHashDistance,
-          card: card ?? match.entry,
+          card,
           colorDistance: Number(match.colorDistance.toFixed(4)),
           confidence: Number(match.confidence.toFixed(4)),
           fullHashDistance: match.fullHashDistance,

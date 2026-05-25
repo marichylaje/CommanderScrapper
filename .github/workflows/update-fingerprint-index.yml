@@ -45,6 +45,12 @@ jobs:
         if: steps.freshness.outputs.needs_update == 'true'
         run: npm run reduce
 
+      - name: Upload scryfall-reduced.json to Vercel Blob
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: node scripts/uploadScryfallReduced.mjs
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+
       - name: Build fingerprint index
         if: steps.freshness.outputs.needs_update == 'true'
         run: npm run buildIndex

@@ -1,9 +1,12 @@
-import fs from 'fs';
-import { fetch } from 'undici';
-import type { ReducedCard } from './schemas/zodSchemas';
+import fs from 'node:fs';
+import https from 'node:https';
+import http from 'node:http';
+import { join } from 'node:path';
+import type { ReducedCard } from './schemas/zodSchemas.js';
 
 const BULK_META_URL = 'https://api.scryfall.com/bulk-data/default_cards';
 const REDUCED_JSON_FILE = './data/scryfall-reduced.json';
+const TEMP_BULK_FILE = join(process.cwd(), 'data', '_bulk_temp.json');
 const UPDATED_TRACKER = './data/last_updated.json';
 
 interface ScryfallMeta {
@@ -15,11 +18,11 @@ function fileExists(path: string): boolean {
   return fs.existsSync(path);
 }
 
-function readJson<T = any>(filePath: string): T {
-  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+function readJson<T = unknown>(filePath: string): T {
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
 }
 
-function writeJson(filePath: string, data: any): void {
+function writeJson(filePath: string, data: unknown): void {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
@@ -29,10 +32,131 @@ async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
   return (await res.json()) as ScryfallMeta;
 }
 
-async function fetchBulkJson(downloadUri: string): Promise<ReducedCard[]> {
-  const res = await fetch(downloadUri);
-  if (!res.ok) throw new Error('❌ Error al descargar bulk JSON.');
-  return (await res.json()) as ReducedCard[];
+/**
+ * Downloads a URL to a local file, following redirects.
+ * Uses Node's built-in https/http to avoid undici string-length limits.
+ */
+function downloadFile(url: string, destPath: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    let totalBytes = 0;
+    let lastLog = 0;
+
+    function doGet(targetUrl: string): void {
+      const mod = targetUrl.startsWith('https://') ? https : http;
+      mod.get(targetUrl, (res) => {
+        if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location) {
+          doGet(res.headers.location);
+          return;
+        }
+        if (res.statusCode !== 200) {
+          reject(new Error(`HTTP ${res.statusCode} downloading bulk data`));
+          return;
+        }
+        const total = Number(res.headers['content-length'] ?? 0);
+        const dest = fs.createWriteStream(destPath);
+
+        res.on('data', (chunk: Buffer) => {
+          totalBytes += chunk.length;
+          const now = Date.now();
+          if (now - lastLog > 5000) {
+            const mb = (totalBytes / 1024 / 1024).toFixed(0);
+            const pct = total ? ` (${((totalBytes / total) * 100).toFixed(0)}%)` : '';
+            process.stdout.write(`   ↓ ${mb} MB descargados${pct}...\n`);
+            lastLog = now;
+          }
+        });
+
+        res.pipe(dest);
+        dest.on('finish', () => dest.close(() => resolve()));
+        dest.on('error', reject);
+        res.on('error', reject);
+      }).on('error', reject);
+    }
+    doGet(url);
+  });
+}
+
+/**
+ * Stream-parses a large JSON array from a file, calling onItem for each element.
+ * Never loads the full file into memory — works even for 500 MB+ files.
+ */
+function streamJsonArray(filePath: string, onItem: (item: unknown) => void): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const readStream = fs.createReadStream(filePath, {
+      encoding: 'utf-8',
+      highWaterMark: 1024 * 1024, // 1 MB chunks
+    });
+
+    let depth = 0;
+    let inString = false;
+    let escapeNext = false;
+    let inArray = false;
+    let objectParts: string[] = [];
+    let objectChunkStart = -1;
+    let processed = 0;
+    let lastLog = Date.now();
+
+    readStream.on('data', (chunk: string) => {
+      for (let i = 0; i < chunk.length; i++) {
+        const ch = chunk[i];
+
+        if (escapeNext) {
+          escapeNext = false;
+          continue;
+        }
+        if (ch === '\\' && inString) {
+          escapeNext = true;
+          continue;
+        }
+        if (ch === '"') {
+          inString = !inString;
+          continue;
+        }
+        if (inString) continue;
+
+        if (!inArray) {
+          if (ch === '[') inArray = true;
+          continue;
+        }
+
+        if (ch === '{') {
+          if (depth === 0) {
+            objectChunkStart = i;
+            objectParts = [];
+          }
+          depth++;
+        } else if (ch === '}') {
+          depth--;
+          if (depth === 0) {
+            objectParts.push(chunk.slice(objectChunkStart, i + 1));
+            try {
+              onItem(JSON.parse(objectParts.join('')));
+              processed++;
+              const now = Date.now();
+              if (now - lastLog > 5000) {
+                process.stdout.write(`   ⚙️  Procesadas ${processed.toLocaleString()} cartas...\n`);
+                lastLog = now;
+              }
+            } catch { /* skip malformed entries */ }
+            objectParts = [];
+            objectChunkStart = -1;
+          }
+        }
+      }
+
+      // If we're mid-object at end of chunk, save the tail for the next chunk
+      if (depth > 0 && objectChunkStart >= 0) {
+        objectParts.push(chunk.slice(objectChunkStart));
+        objectChunkStart = 0; // next chunk continues from its start
+      }
+    });
+
+    readStream.on('end', () => {
+      process.stdout.write(`   ✅ Parseadas ${processed.toLocaleString()} cartas en total\n`);
+      resolve();
+    });
+    readStream.on('error', reject);
+  });
 }
 
 function reduceCard(card: ReducedCard) {
@@ -80,7 +204,7 @@ function reduceCard(card: ReducedCard) {
     card_faces: faces?.map((face) => ({
       name: face.name,
       type_line: face.type_line,
-      flavor_name: face.flavor_name ?? undefined,  // 👈 incluirlo
+      flavor_name: face.flavor_name ?? undefined,
       mana_cost: face.mana_cost,
       image_uris: face.image_uris,
     })),
@@ -91,7 +215,7 @@ function reduceCard(card: ReducedCard) {
 const normalize = (s?: string) =>
   (s ?? '')
     .toLowerCase()
-    .replace(/[\u2019’']/g, "'")
+    .replace(/[\u2019'']/g, "'")
     .normalize('NFKC')
     .trim();
 
@@ -114,11 +238,21 @@ async function main(): Promise<void> {
       return;
     }
 
-    console.log('📥 Archivo actualizado. Descargando y procesando...');
-    const rawData = await fetchBulkJson(meta.download_uri);
+    console.log('📥 Archivo actualizado. Descargando bulk data...');
+    await downloadFile(meta.download_uri, TEMP_BULK_FILE);
+    console.log('✅ Descarga completada. Procesando cartas...');
+
+    // Stream-parse the bulk file and collect reduced cards
+    const rawCards: ReducedCard[] = [];
+    await streamJsonArray(TEMP_BULK_FILE, (item) => {
+      rawCards.push(item as ReducedCard);
+    });
+
+    // Clean up the temp file
+    try { fs.unlinkSync(TEMP_BULK_FILE); } catch { /* ignore */ }
 
     // Filtramos tokens de criatura (ajusta si quieres excluir otros tipos)
-    const filteredData = rawData.filter(
+    const filteredData = rawCards.filter(
       (card) => !card.type_line?.startsWith('Token Creature'),
     );
 
