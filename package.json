@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.build.json",
     "scrape": "npx tsx src/index.ts",
     "reduce": "npx tsx src/scryfallReducer.ts",
     "prices": "npx tsx src/generatePrices.ts",

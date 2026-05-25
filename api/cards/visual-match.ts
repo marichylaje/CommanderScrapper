@@ -1,8 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Busboy from 'busboy';
 
-import { findPrintings } from '../../src/visual/localPrintingLookup';
-import { rankCandidatePrintings } from '../../src/visual/printingMatcher';
+import { findPrintings } from '../../src/visual/localPrintingLookup.js';
+import { rankCandidatePrintings } from '../../src/visual/printingMatcher.js';
 
 type UploadPayload = {
   cropHeight?: number;
