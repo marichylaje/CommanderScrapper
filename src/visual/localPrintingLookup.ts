@@ -79,3 +79,8 @@ export async function findPrintings({
 
   return [];
 }
+
+export async function findCardById(id: string): Promise<CardData | null> {
+  const dataset = await loadLocalDataset();
+  return dataset.cards.find((card) => card.id === id) ?? null;
+}

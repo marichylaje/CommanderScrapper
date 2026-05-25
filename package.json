@@ -13,6 +13,7 @@
     "typeSchema": "npx tsx src/typesense/createTypesenseSchema.ts",
     "deleteCollection": "npx tsx src/typesense/deleteCollections.ts",
     "importCollection": "npx tsx src/typesense/importToTypesense.ts",
+    "buildIndex": "npx tsx src/buildFingerprintIndex.ts",
     "restartFly": "npx tsx src/restartFly.ts",
     "tryGetCard": "npx tsx src/test/tryGetCard.ts",
     "testBulk": "npx tsx src/test/testBulk.ts",
