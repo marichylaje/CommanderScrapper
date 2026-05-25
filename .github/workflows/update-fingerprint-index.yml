@@ -58,6 +58,17 @@ jobs:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
       - name: Redeploy Vercel project to pick up new index
+        run: |
+          npx vercel@latest blob put "data/fingerprint-index.json" \
+            --access public \
+            --pathname "fingerprint-index.json" \
+            --content-type "application/json" \
+            --allow-overwrite \
+            --rw-token "$BLOB_READ_WRITE_TOKEN"
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+
+      - name: Redeploy Vercel project
         if: steps.freshness.outputs.needs_update == 'true'
         run: npx vercel@latest deploy --prod --token "$VERCEL_TOKEN"
         env:
