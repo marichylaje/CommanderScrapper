@@ -16,6 +16,8 @@
     "uploadBlob": "node scripts/uploadToBlob.mjs",
     "uploadReduced": "node scripts/uploadScryfallReduced.mjs",
     "buildIndex": "npx tsx src/buildFingerprintIndex.ts",
+    "buildOfflineDb": "npx tsx src/offline/buildOfflineDb.ts",
+    "uploadOfflineDb": "node scripts/uploadOfflineDb.mjs",
     "uploadBlob": "node scripts/uploadToBlob.mjs",
     "uploadReduced": "node scripts/uploadScryfallReduced.mjs",
     "restartFly": "npx tsx src/restartFly.ts",
