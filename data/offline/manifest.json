@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "generated_at": "2026-05-27T08:33:10.814Z",
+  "source_updated": "2026-05-25T09:08:43.421+00:00",
+  "version": "20260527",
+  "buckets": {
+    "W": {
+      "count": 4999,
+      "file": "cards-W.bin.gz"
+    },
+    "U": {
+      "count": 4921,
+      "file": "cards-U.bin.gz"
+    },
+    "B": {
+      "count": 5002,
+      "file": "cards-B.bin.gz"
+    },
+    "R": {
+      "count": 4976,
+      "file": "cards-R.bin.gz"
+    },
+    "G": {
+      "count": 4863,
+      "file": "cards-G.bin.gz"
+    },
+    "C": {
+      "count": 6251,
+      "file": "cards-C.bin.gz"
+    },
+    "M": {
+      "count": 5987,
+      "file": "cards-M.bin.gz"
+    }
+  }
+}
