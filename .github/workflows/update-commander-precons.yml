@@ -26,7 +26,6 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          # Usa tu .nvmrc; si no existe, podríais poner "18.x"
           node-version-file: ".nvmrc"
 
       - name: Instalar dependencias
@@ -98,9 +97,6 @@ jobs:
 
       - name: 8) Importar datos a Typesense
         run: npm run importCollection
-
-      - name: Instalar flyctl
-        uses: superfly/flyctl-actions/setup-flyctl@master
 
       - name: 9) Reiniciar app en Fly.io
         run: npm run restartFly
