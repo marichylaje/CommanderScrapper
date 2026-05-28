@@ -99,6 +99,9 @@ jobs:
       - name: 8) Importar datos a Typesense
         run: npm run importCollection
 
+      - name: Instalar flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
       - name: 9) Reiniciar app en Fly.io
         run: npm run restartFly
 
