@@ -3,8 +3,9 @@ import path from 'path';
 import { execFile } from 'child_process';
 import 'dotenv/config';
 
-const TYPESENSE_API_KEY = 'typsensemasterkeyMariArri30123456789';
+const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY ?? 'typsensemasterkeyMariArri30123456789';
 const TYPESENSE_HOST = 'https://typesense-commanderscrapper.fly.dev';
+const CURL = process.platform === 'win32' ? 'curl.exe' : 'curl';
 
 if (!TYPESENSE_API_KEY) {
   throw new Error('❌ Falta la variable de entorno TYPESENSE_API_KEY');
@@ -42,7 +43,7 @@ async function importChunk(chunkData: any[], index: number) {
   ];
 
   return new Promise<void>((resolve, reject) => {
-    execFile('curl.exe', args, (err, stdout, stderr) => {
+    execFile(CURL, args, (err, stdout, stderr) => {
       fs.unlinkSync(tempFile);
       if (err) {
         console.error(`❌ Error en el chunk ${index}:`, err);
@@ -62,8 +63,7 @@ async function importChunk(chunkData: any[], index: number) {
 async function importAll() {
   console.log(`📦 Importando ${allCards.length} cartas en bloques de ${CHUNK_SIZE}...`);
 
-  // 🔥 Eliminamos el campo `created_at` de cada carta
-  const cleanedCards = allCards.map(({ created_at, ...rest }) => rest);
+  const cleanedCards = allCards.map(({ created_at, ...rest }: any) => rest);
 
   const chunks = chunk(cleanedCards, CHUNK_SIZE);
 
@@ -76,4 +76,5 @@ async function importAll() {
 
 importAll().catch(err => {
   console.error('💥 Falló la importación:', err);
+  process.exit(1);
 });
