@@ -99,9 +99,7 @@ jobs:
         run: npm run importCollection
 
       - name: 9) Reiniciar app en Fly.io
-        run: |
-          curl -L https://fly.io/install.sh | FLYCTL_INSTALL=/usr/local sh
-          flyctl machines restart --app typesense-commanderscrapper
+        run: npm run restartFly
 
       # -----------------------------
       # Limpieza de archivo gigante
