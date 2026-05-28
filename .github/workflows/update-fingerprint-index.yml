@@ -1,4 +1,4 @@
-name: Update Fingerprint Index
+name: Update Fingerprint Index & Offline DB
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
   check-and-update:
     name: Check Scryfall freshness and rebuild if needed
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 180
 
     steps:
       - name: Checkout repo
@@ -51,26 +51,27 @@ jobs:
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
+      - name: Build offline DB (color-bucketed binary pHash DB)
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run buildOfflineDb
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
+      - name: Upload offline DB to Vercel Blob
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run uploadOfflineDb
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+
       - name: Build fingerprint index
         if: steps.freshness.outputs.needs_update == 'true'
         run: npm run buildIndex
         env:
           NODE_OPTIONS: '--max-old-space-size=4096'
 
-      - name: Upload index to Vercel Blob
+      - name: Upload fingerprint index to Vercel Blob
         if: steps.freshness.outputs.needs_update == 'true'
         run: node scripts/uploadToBlob.mjs
-        env:
-          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
-
-      - name: Redeploy Vercel project to pick up new index
-        run: |
-          npx vercel@latest blob put "data/fingerprint-index.json" \
-            --access public \
-            --pathname "fingerprint-index.json" \
-            --content-type "application/json" \
-            --allow-overwrite \
-            --rw-token "$BLOB_READ_WRITE_TOKEN"
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 

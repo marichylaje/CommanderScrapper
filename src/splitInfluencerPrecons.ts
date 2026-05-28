@@ -8,6 +8,13 @@ const CHUNK_SIZE = 5;
 
 function main() {
   const fullPath = path.resolve(INPUT_FILE);
+
+  if (!fs.existsSync(fullPath)) {
+    console.log(`⚠️  ${INPUT_FILE} not found — skipping influencer precon split.`);
+    console.log('   (This file is manually managed and not committed to the repo.)');
+    process.exit(0);
+  }
+
   const raw = fs.readFileSync(fullPath, 'utf-8');
   const decks = JSON.parse(raw);
 
