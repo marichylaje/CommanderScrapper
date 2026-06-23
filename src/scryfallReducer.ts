@@ -27,8 +27,11 @@ function writeJson(filePath: string, data: unknown): void {
 }
 
 async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
-  const res = await fetch(BULK_META_URL);
-  if (!res.ok) throw new Error('❌ Error al obtener metadata de Scryfall.');
+  const res = await fetch(BULK_META_URL, {
+    headers: { 'User-Agent': 'CommanderScrapper/1.0 (MTG Commander Deck Builder app; contact via GitHub)' },
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) throw new Error(`❌ Error al obtener metadata de Scryfall (HTTP ${res.status}).`);
   return (await res.json()) as ScryfallMeta;
 }
 
@@ -320,6 +323,7 @@ async function main(): Promise<void> {
     console.log(`ℹ️ Cartas totales: ${reducedCards.length} (alias añadidos: ${aliasDocsAdded})`);
   } catch (error) {
     console.error('❌ Error:', error);
+    process.exit(1);
   }
 }
 

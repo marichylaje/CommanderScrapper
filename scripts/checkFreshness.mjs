@@ -28,8 +28,15 @@ function setOutput(name, value) {
   console.log(`  → ${name}=${value}`);
 }
 
+const SCRYFALL_USER_AGENT = 'CommanderScrapper/1.0 (MTG Commander Deck Builder app; contact via GitHub)';
+
 async function fetchJson(url, opts = {}) {
-  const res = await fetch(url, { signal: AbortSignal.timeout(30_000), ...opts });
+  const { headers: extraHeaders, ...restOpts } = opts;
+  const res = await fetch(url, {
+    signal: AbortSignal.timeout(30_000),
+    headers: { 'User-Agent': SCRYFALL_USER_AGENT, ...extraHeaders },
+    ...restOpts,
+  });
   if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
   return res.json();
 }
@@ -39,7 +46,7 @@ async function fetchIndexHeader(url) {
   // The header fields (generated_at, source_updated, total) appear in the
   // first few hundred bytes of the JSON.
   const res = await fetch(url, {
-    headers: { Range: 'bytes=0-511' },
+    headers: { Range: 'bytes=0-511', 'User-Agent': SCRYFALL_USER_AGENT },
     signal: AbortSignal.timeout(15_000),
   });
 
