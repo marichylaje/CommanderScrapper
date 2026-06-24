@@ -1,21 +1,19 @@
+// generatePrices.ts
 import fs from 'fs';
+import path from 'path';
 import { fetch } from 'undici';
-import { parse } from 'csv-parse/sync';
 
-const PRICES_CSV_URL = 'https://mtgjson.com/api/v5/csv/cardPrices.csv';
-const IDENTIFIERS_CSV_URL = 'https://mtgjson.com/api/v5/csv/cardIdentifiers.csv';
+const SCRYFALL_BULK_INFO_URL = 'https://api.scryfall.com/bulk-data';
 const OUTPUT_FILE = './data/reduced-prices.json';
 
-interface PriceRow {
-  uuid: string;
-  priceProvider: string;
-  currency: string;
-  price: string;
-}
-
-interface IdentifierRow {
-  uuid: string;
-  scryfallOracleId: string;
+interface ScryfallCard {
+  oracle_id: string;
+  prices: {
+    usd: string | null;
+    eur: string | null;
+    usd_foil?: string | null;
+    eur_foil?: string | null;
+  };
 }
 
 interface ReducedPrice {
@@ -24,67 +22,61 @@ interface ReducedPrice {
   eur: number | null;
 }
 
-async function fetchAndParseCSV(url: string) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`❌ Error al descargar CSV: ${url} (${res.status})`);
-  const csvText = await res.text();
-  return parse(csvText, { columns: true, skip_empty_lines: true });
+async function getBulkDownloadUrl(): Promise<string> {
+  const res = await fetch(SCRYFALL_BULK_INFO_URL);
+  if (!res.ok) throw new Error(`❌ No se pudo obtener la metadata de Scryfall Bulk: ${res.status}`);
+  
+  const body = (await res.json()) as { data: Array<{ type: string; download_uri: string }> };
+  // "oracle_cards" contiene una fila por cada carta única por nombre (evita duplicados de reimpresiones)
+  const oracleCardsBulk = body.data.find((item) => item.type === 'oracle_cards');
+  
+  if (!oracleCardsBulk) throw new Error('❌ No se encontró el tipo de datos "oracle_cards" en Scryfall');
+  return oracleCardsBulk.download_uri;
 }
 
 async function main() {
   try {
-    console.log('📥 Descargando CSVs...');
-    const [priceRowsRaw, identifierRowsRaw] = await Promise.all([
-      fetchAndParseCSV(PRICES_CSV_URL),
-      fetchAndParseCSV(IDENTIFIERS_CSV_URL),
-    ]);
-
-    const priceRows = priceRowsRaw as PriceRow[];
-    const identifierRows = identifierRowsRaw as IdentifierRow[];
-
-    // Crear mapa uuid → scryfallOracleId
-    const uuidToOracleId = new Map<string, string>();
-    for (const row of identifierRows) {
-      if (row.uuid && row.scryfallOracleId) {
-        uuidToOracleId.set(row.uuid, row.scryfallOracleId);
-      }
-    }
-
-    // Crear mapa oracleId → { usd, eur }
-    const pricesMap = new Map<string, ReducedPrice>();
-
-    for (const row of priceRows) {
-      const uuid = row.uuid;
-      const oracleId = uuidToOracleId.get(uuid);
-      if (!oracleId) continue;
-
-      const price = parseFloat(row.price);
-      if (isNaN(price)) continue;
-
-      const existing = pricesMap.get(oracleId) ?? { id: oracleId, usd: null, eur: null };
-
-      if (row.priceProvider === 'tcgplayer' && row.currency === 'USD') {
-        existing.usd = price;
-      }
-
-      if (row.priceProvider === 'cardmarket' && row.currency === 'EUR') {
-        existing.eur = price;
-      }
-
-      pricesMap.set(oracleId, existing);
-    }
-
-    const reduced = Array.from(pricesMap.values()).filter(
-      (entry) => entry.usd !== null || entry.eur !== null
-    );
+    console.log('🔍 Solicitando URL del último Bulk Data a Scryfall...');
+    const downloadUrl = await getBulkDownloadUrl();
     
-    fs.mkdirSync('./data', { recursive: true });
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(reduced, null, 2), 'utf8');
+    console.log(`📥 Descargando e interpretando Bulk Data desde: ${downloadUrl}`);
+    const res = await fetch(downloadUrl);
+    if (!res.ok) throw new Error(`❌ Error al descargar el archivo bulk: ${res.status}`);
 
-    console.log(`✅ ${reduced.length} precios procesados.`);
-    console.log(`💾 Archivo guardado en: ${OUTPUT_FILE}`);
+    // Parseamos el JSON masivo de Scryfall
+    const cards = (await res.json()) as ScryfallCard[];
+    console.log(`⚙️ Procesando ${cards.length} cartas de Scryfall...`);
+
+    const reducedPrices: ReducedPrice[] = [];
+
+    for (const card of cards) {
+      if (!card.oracle_id) continue;
+
+      // Scryfall nos da los precios directamente en strings o nulls
+      // Priorizamos precios normales, pero si no existen, podrías usar foil como fallback opcional.
+      const usdPrice = card.prices.usd ? parseFloat(card.prices.usd) : null;
+      const eurPrice = card.prices.eur ? parseFloat(card.prices.eur) : null;
+
+      // Solo guardamos cartas que tengan al menos un precio válido mapeado
+      if (usdPrice !== null || eurPrice !== null) {
+        reducedPrices.push({
+          id: card.oracle_id,
+          usd: usdPrice,
+          eur: eurPrice,
+        });
+      }
+    }
+
+    // Asegurar directorio de salida
+    fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(reducedPrices, null, 2), 'utf8');
+
+    console.log(`\n✅ Proceso completado con éxito.`);
+    console.log(`📊 Total de cartas con precios reales: ${reducedPrices.length}`);
+    console.log(`💾 Archivo actualizado listo para el Frontend en: ${OUTPUT_FILE}`);
   } catch (err) {
-    console.error('❌ Error procesando datos:', err);
+    console.error('❌ Error catastrófico procesando precios de Scryfall:', err);
+    process.exit(1);
   }
 }
 

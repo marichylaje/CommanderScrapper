@@ -6,19 +6,53 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    # Cada 2 días a medianoche UTC
-    - cron: "0 0 */2 * *"
+    # 🌟 Cron 1: Los precios se actualizan DIARIAMENTE a la 1:00 AM UTC
+    - cron: "0 10 * * *"
+    # ⚙️ Cron 2: El pipeline completo corre cada 2 días a las 3:00 AM UTC
+    - cron: "0 3 */2 * *"
   workflow_dispatch:
 
 jobs:
-  # ===========================
+  # =========================================
+  # 🌟 NUEVO JOB: Actualización diaria de precios
+  # =========================================
+  daily-prices:
+    # Se ejecuta de forma diaria (Cron 1), manual, o por push
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'schedule' && github.event.schedule == '0 1 * * *')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar actualización de precios de Scryfall
+        run: npm run prices
+
+      - name: Auto-commit solo del archivo de precios
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore(prices): update daily scryfall card prices"
+          branch: main
+          commit_user_name: "commander-bot"
+          commit_user_email: "commander-bot@users.noreply.github.com"
+          file_pattern: "data/reduced-prices.json"
+
+  # =========================================
   #  Job 1: CI (build del repo)
-  # ===========================
+  # =========================================
   ci:
-    # Solo en push / PR, no en cron ni manual
     if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
@@ -38,8 +72,10 @@ jobs:
   #  Job 2: Data pipeline + Typesense + Fly
   # =========================================
   data-pipeline:
-    # Solo en cron o ejecución manual
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    # Solo corre de forma manual o en el Cron 2 (cada 2 días)
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'schedule' && github.event.schedule == '0 3 */2 * *')
     runs-on: ubuntu-latest
 
     env:
@@ -120,5 +156,4 @@ jobs:
           branch: main
           commit_user_name: "commander-bot"
           commit_user_email: "commander-bot@users.noreply.github.com"
-          # Solo JSON dentro de data/, excluyendo el que acabamos de borrar
           file_pattern: "data/**/*.json"
