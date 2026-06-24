@@ -16,8 +16,10 @@ jobs:
   # =========================================
   # 🌟 NUEVO JOB: Actualización diaria de precios
   # =========================================
+# =========================================
+  # 🌟 NUEVO JOB: Actualización diaria de precios
+  # =========================================
   daily-prices:
-    # Se ejecuta de forma diaria (Cron 1), manual, o por push
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'push' ||
@@ -26,6 +28,10 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        with:
+          # 1. Traemos todo el historial y permitimos persistir las credenciales para el pull
+          fetch-depth: 0 
+          persist-credentials: true
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -46,6 +52,8 @@ jobs:
           commit_user_name: "commander-bot"
           commit_user_email: "commander-bot@users.noreply.github.com"
           file_pattern: "data/reduced-prices.json"
+          # 2. 🌟 ESTA ES LA CLAVE: Si hay commits nuevos en remoto, los integra primero en el historial
+          push_options: '--force-with-lease'
 
   # =========================================
   #  Job 1: CI (build del repo)
