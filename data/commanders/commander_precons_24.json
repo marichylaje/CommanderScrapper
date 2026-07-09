@@ -1,336 +1,5 @@
 [
   {
-    "name": "Explorers of the Deep",
-    "commander": "Hakbal of the Surging Soul",
-    "expansion": "The Lost Caverns of Ixalan Commander",
-    "cards": [
-      {
-        "name": "Xolatoyac, the Smiling Flood",
-        "count": 1
-      },
-      {
-        "name": "Mist Dancer",
-        "count": 1
-      },
-      {
-        "name": "Ripples of Potential",
-        "count": 1
-      },
-      {
-        "name": "Wave Goodbye",
-        "count": 1
-      },
-      {
-        "name": "Bygone Marvels",
-        "count": 1
-      },
-      {
-        "name": "Deeproot Historian",
-        "count": 1
-      },
-      {
-        "name": "Topography Tracker",
-        "count": 1
-      },
-      {
-        "name": "Tributary Instructor",
-        "count": 1
-      },
-      {
-        "name": "Singer of Swift Rivers",
-        "count": 1
-      },
-      {
-        "name": "Benthic Biomancer",
-        "count": 1
-      },
-      {
-        "name": "Commit // Memory",
-        "count": 1
-      },
-      {
-        "name": "Coralhelm Commander",
-        "count": 1
-      },
-      {
-        "name": "Curse of the Swine",
-        "count": 1
-      },
-      {
-        "name": "Emperor Mihail II",
-        "count": 1
-      },
-      {
-        "name": "Herald of Secret Streams",
-        "count": 1
-      },
-      {
-        "name": "Kindred Discovery",
-        "count": 1
-      },
-      {
-        "name": "Kopala, Warden of Waves",
-        "count": 1
-      },
-      {
-        "name": "Master of the Pearl Trident",
-        "count": 1
-      },
-      {
-        "name": "Merfolk Sovereign",
-        "count": 1
-      },
-      {
-        "name": "Reflections of Littjara",
-        "count": 1
-      },
-      {
-        "name": "Seafloor Oracle",
-        "count": 1
-      },
-      {
-        "name": "Surgespanner",
-        "count": 1
-      },
-      {
-        "name": "Svyelun of Sea and Sky",
-        "count": 1
-      },
-      {
-        "name": "Thassa, God of the Sea",
-        "count": 1
-      },
-      {
-        "name": "Thieving Skydiver",
-        "count": 1
-      },
-      {
-        "name": "Branching Evolution",
-        "count": 1
-      },
-      {
-        "name": "Deeproot Elite",
-        "count": 1
-      },
-      {
-        "name": "Hardened Scales",
-        "count": 1
-      },
-      {
-        "name": "Realmwalker",
-        "count": 1
-      },
-      {
-        "name": "Ruinous Intrusion",
-        "count": 1
-      },
-      {
-        "name": "Cold-Eyed Selkie",
-        "count": 1
-      },
-      {
-        "name": "Kumena, Tyrant of Orazca",
-        "count": 1
-      },
-      {
-        "name": "Prime Speaker Zegana",
-        "count": 1
-      },
-      {
-        "name": "Quandrix Command",
-        "count": 1
-      },
-      {
-        "name": "Simic Ascendancy",
-        "count": 1
-      },
-      {
-        "name": "Tishana, Voice of Thunder",
-        "count": 1
-      },
-      {
-        "name": "Vorel of the Hull Clade",
-        "count": 1
-      },
-      {
-        "name": "Zegana, Utopian Speaker",
-        "count": 1
-      },
-      {
-        "name": "Metallic Mimic",
-        "count": 1
-      },
-      {
-        "name": "Alchemist's Refuge",
-        "count": 1
-      },
-      {
-        "name": "Hinterland Harbor",
-        "count": 1
-      },
-      {
-        "name": "Karn's Bastion",
-        "count": 1
-      },
-      {
-        "name": "Mosswort Bridge",
-        "count": 1
-      },
-      {
-        "name": "Temple of Mystery",
-        "count": 1
-      },
-      {
-        "name": "Vineglimmer Snarl",
-        "count": 1
-      },
-      {
-        "name": "Merfolk Cave-Diver",
-        "count": 1
-      },
-      {
-        "name": "Aetherize",
-        "count": 1
-      },
-      {
-        "name": "Deeproot Waters",
-        "count": 1
-      },
-      {
-        "name": "Merrow Reejerey",
-        "count": 1
-      },
-      {
-        "name": "Rapid Hybridization",
-        "count": 1
-      },
-      {
-        "name": "Ravenform",
-        "count": 1
-      },
-      {
-        "name": "Sage of Fables",
-        "count": 1
-      },
-      {
-        "name": "Stonybrook Banneret",
-        "count": 1
-      },
-      {
-        "name": "Beast Within",
-        "count": 1
-      },
-      {
-        "name": "Nicanzil, Current Conductor",
-        "count": 1
-      },
-      {
-        "name": "Evolution Sage",
-        "count": 1
-      },
-      {
-        "name": "Explore",
-        "count": 1
-      },
-      {
-        "name": "Inspiring Call",
-        "count": 1
-      },
-      {
-        "name": "Kodama's Reach",
-        "count": 1
-      },
-      {
-        "name": "Growth Spiral",
-        "count": 1
-      },
-      {
-        "name": "Kiora's Follower",
-        "count": 1
-      },
-      {
-        "name": "Merfolk Mistbinder",
-        "count": 1
-      },
-      {
-        "name": "Merfolk Skydiver",
-        "count": 1
-      },
-      {
-        "name": "Tatyova, Benthic Druid",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Commander's Sphere",
-        "count": 1
-      },
-      {
-        "name": "Simic Signet",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Swiftfoot Boots",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Llanowar Reborn",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape",
-        "count": 1
-      },
-      {
-        "name": "Path of Ancestry",
-        "count": 1
-      },
-      {
-        "name": "Reliquary Tower",
-        "count": 1
-      },
-      {
-        "name": "Rogue's Passage",
-        "count": 1
-      },
-      {
-        "name": "Secluded Courtyard",
-        "count": 1
-      },
-      {
-        "name": "Simic Growth Chamber",
-        "count": 1
-      },
-      {
-        "name": "Temple of the False God",
-        "count": 1
-      },
-      {
-        "name": "Unclaimed Territory",
-        "count": 1
-      },
-      {
-        "name": "Forest",
-        "count": 7
-      },
-      {
-        "name": "Island",
-        "count": 13
-      }
-    ]
-  },
-  {
     "name": "Veloci-Ramp-Tor",
     "commander": "Pantlaza, Sun-Favored",
     "expansion": "The Lost Caverns of Ixalan Commander",
@@ -1755,6 +1424,345 @@
       {
         "name": "Forest",
         "count": 5
+      }
+    ]
+  },
+  {
+    "name": "Revenant Recon",
+    "commander": "Mirko, Obsessive Theorist",
+    "expansion": "Murders at Karlov Manor Commander",
+    "cards": [
+      {
+        "name": "Marvo, Deep Operative",
+        "count": 1
+      },
+      {
+        "name": "Case of the Shifting Visage",
+        "count": 1
+      },
+      {
+        "name": "Copy Catchers",
+        "count": 1
+      },
+      {
+        "name": "Final-Word Phantom",
+        "count": 1
+      },
+      {
+        "name": "Watcher of Hours",
+        "count": 1
+      },
+      {
+        "name": "Charnel Serenade",
+        "count": 1
+      },
+      {
+        "name": "Eye of Duskmantle",
+        "count": 1
+      },
+      {
+        "name": "Foreboding Steamboat",
+        "count": 1
+      },
+      {
+        "name": "Unshakable Tail",
+        "count": 1
+      },
+      {
+        "name": "Counterpoint",
+        "count": 1
+      },
+      {
+        "name": "Ransom Note",
+        "count": 1
+      },
+      {
+        "name": "Amphin Mutineer",
+        "count": 1
+      },
+      {
+        "name": "Dream Eater",
+        "count": 1
+      },
+      {
+        "name": "Mission Briefing",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Metamorph",
+        "count": 1
+      },
+      {
+        "name": "Sphinx of the Second Sun",
+        "count": 1
+      },
+      {
+        "name": "Vizier of Many Faces",
+        "count": 1
+      },
+      {
+        "name": "Black Sun's Zenith",
+        "count": 1
+      },
+      {
+        "name": "Dogged Detective",
+        "count": 1
+      },
+      {
+        "name": "Doom Whisperer",
+        "count": 1
+      },
+      {
+        "name": "Grave Titan",
+        "count": 1
+      },
+      {
+        "name": "Massacre Wurm",
+        "count": 1
+      },
+      {
+        "name": "Overseer of the Damned",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Arena",
+        "count": 1
+      },
+      {
+        "name": "Pile On",
+        "count": 1
+      },
+      {
+        "name": "Reanimate",
+        "count": 1
+      },
+      {
+        "name": "Rise of the Dark Realms",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Twilight Prophet",
+        "count": 1
+      },
+      {
+        "name": "Baleful Strix",
+        "count": 1
+      },
+      {
+        "name": "Connive // Concoct",
+        "count": 1
+      },
+      {
+        "name": "Lazav, the Multifarious",
+        "count": 1
+      },
+      {
+        "name": "Master of Death",
+        "count": 1
+      },
+      {
+        "name": "Choked Estuary",
+        "count": 1
+      },
+      {
+        "name": "Darkwater Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Drownyard Temple",
+        "count": 1
+      },
+      {
+        "name": "Fetid Pools",
+        "count": 1
+      },
+      {
+        "name": "Hostile Desert",
+        "count": 1
+      },
+      {
+        "name": "River of Tears",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Consider",
+        "count": 1
+      },
+      {
+        "name": "Curate",
+        "count": 1
+      },
+      {
+        "name": "Deep Analysis",
+        "count": 1
+      },
+      {
+        "name": "Enhanced Surveillance",
+        "count": 1
+      },
+      {
+        "name": "Ephara's Dispersal",
+        "count": 1
+      },
+      {
+        "name": "Mulldrifter",
+        "count": 1
+      },
+      {
+        "name": "Nightveil Sprite",
+        "count": 1
+      },
+      {
+        "name": "Otherworldly Gaze",
+        "count": 1
+      },
+      {
+        "name": "Thoughtbound Phantasm",
+        "count": 1
+      },
+      {
+        "name": "Animate Dead",
+        "count": 1
+      },
+      {
+        "name": "Necromancy",
+        "count": 1
+      },
+      {
+        "name": "Price of Fame",
+        "count": 1
+      },
+      {
+        "name": "Ravenous Chupacabra",
+        "count": 1
+      },
+      {
+        "name": "Shriekmaw",
+        "count": 1
+      },
+      {
+        "name": "Sinister Starfish",
+        "count": 1
+      },
+      {
+        "name": "Syr Konrad, the Grim",
+        "count": 1
+      },
+      {
+        "name": "Whispering Snitch",
+        "count": 1
+      },
+      {
+        "name": "Dimir Spybug",
+        "count": 1
+      },
+      {
+        "name": "Discovery // Dispersal",
+        "count": 1
+      },
+      {
+        "name": "Disinformation Campaign",
+        "count": 1
+      },
+      {
+        "name": "Notion Rain",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Dimir Signet",
+        "count": 1
+      },
+      {
+        "name": "Everflowing Chalice",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance",
+        "count": 1
+      },
+      {
+        "name": "Thought Vessel",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dimir Aqueduct",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape",
+        "count": 1
+      },
+      {
+        "name": "Mystic Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Port of Karfell",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Tainted Isle",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God",
+        "count": 1
+      },
+      {
+        "name": "Tocasia's Dig Site",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 9
+      },
+      {
+        "name": "Swamp",
+        "count": 9
       }
     ]
   }
