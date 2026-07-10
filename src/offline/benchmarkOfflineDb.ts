@@ -9,7 +9,6 @@ import { decodeOfflineDb, type OfflineEntry } from './binaryDb.js';
 const OFFLINE_DIR = join(process.cwd(), 'data', 'offline');
 const DEFAULT_DATASET = join(OFFLINE_DIR, 'benchmark-dataset.example.json');
 
-
 type BenchmarkSample = {
   bucket?: string;
   expectedId?: string;
@@ -144,11 +143,11 @@ async function main() {
       .sort((left, right) => right.confidence - left.confidence);
 
     const best = scored[0];
-    const expectedId = sample.expectedOracleId ?? sample.expectedId ?? '';
-    const hit = Boolean(best) && (best.entry.oracle_id === expectedId || best.entry.id === expectedId);
+    const expectedOracleId = sample.expectedOracleId ?? sample.expectedId ?? '';
+    const hit = Boolean(best) && best.entry.oracle_id === expectedOracleId;
 
     results.push({
-      expected: expectedId,
+      expected: expectedOracleId,
       hit,
       latencyMs: Date.now() - startedAt,
       topConfidence: best?.confidence ?? 0,
