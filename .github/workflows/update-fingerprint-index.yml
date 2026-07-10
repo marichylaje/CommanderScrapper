@@ -57,6 +57,12 @@ jobs:
         env:
           NODE_OPTIONS: '--max-old-space-size=4096'
 
+      - name: Benchmark offline DB
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: npm run benchmarkOfflineDb
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
       - name: Upload offline DB to Vercel Blob
         if: steps.freshness.outputs.needs_update == 'true'
         run: npm run uploadOfflineDb
