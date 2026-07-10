@@ -1,117 +1,186 @@
+const MAGIC = 'TCGDB1';
+const DEFAULT_VERSION = 1;
+const V2_VERSION = 2;
+
 export type OfflineEntry = {
-  artUrl?: string | null;
-  collectorNumber: string;
-  id: string;
-  lang: string;
+  cn: string;
   name: string;
-  oracleId: string;
-  phash: string; // 64-bit hex string
+  oracle_id: string;
+  phash: string;
+  phashAlt?: string;
   set: string;
 };
 
-type EncodedEntry = {
-  artUrlIndex: number;
-  collectorNumberIndex: number;
-  idIndex: number;
-  langIndex: number;
-  nameIndex: number;
-  oracleIndex: number;
-  phashHi: number;
-  phashLo: number;
-  setIndex: number;
+export type EncodedOfflineDb = {
+  buffer: Buffer;
+  version: number;
 };
 
-const MAGIC = 'TCGDB1';
-const VERSION = 1;
-
 function splitHash(hex: string) {
-  const normalized = hex.padStart(16, '0').slice(-16);
-  const hi = Number.parseInt(normalized.slice(0, 8), 16);
-  const lo = Number.parseInt(normalized.slice(8), 16);
-  return { hi: hi >>> 0, lo: lo >>> 0 };
+  const normalized = hex.replace(/[^0-9a-f]/gi, '').padStart(16, '0').slice(-16);
+  return {
+    hi: Number.parseInt(normalized.slice(0, 8), 16) >>> 0,
+    lo: Number.parseInt(normalized.slice(8, 16), 16) >>> 0,
+  };
 }
 
-export function encodeOfflineDb(entries: OfflineEntry[]) {
-  const stringIndex = new Map<string, number>();
-  const strings: string[] = [];
+function joinHash(hi: number, lo: number) {
+  return hi.toString(16).padStart(8, '0') + lo.toString(16).padStart(8, '0');
+}
 
-  const intern = (value: string | null | undefined) => {
-    const key = value ?? '';
-    const existing = stringIndex.get(key);
-    if (existing !== undefined) return existing;
-    const index = strings.length;
-    strings.push(key);
-    stringIndex.set(key, index);
-    return index;
+function writeStringTable(entries: OfflineEntry[]) {
+  const strings = new Map<string, number>();
+  const ordered: string[] = [];
+
+  const remember = (value: string) => {
+    if (!strings.has(value)) {
+      strings.set(value, ordered.length);
+      ordered.push(value);
+    }
   };
 
-  const encodedEntries: EncodedEntry[] = entries.map((entry) => {
-    const { hi, lo } = splitHash(entry.phash);
-    return {
-      artUrlIndex: intern(entry.artUrl ?? ''),
-      collectorNumberIndex: intern(entry.collectorNumber),
-      idIndex: intern(entry.id),
-      langIndex: intern(entry.lang ?? 'en'),
-      nameIndex: intern(entry.name),
-      oracleIndex: intern(entry.oracleId),
-      phashHi: hi,
-      phashLo: lo,
-      setIndex: intern(entry.set),
-    };
-  });
-
-  const encoder = new TextEncoder();
-  const stringOffsets: number[] = [];
-  let stringsSize = 0;
-  for (const value of strings) {
-    const bytes = encoder.encode(value);
-    stringOffsets.push(stringsSize);
-    stringsSize += 2 + bytes.length;
+  for (const entry of entries) {
+    remember(entry.set);
+    remember(entry.cn);
+    remember(entry.name);
+    remember(entry.oracle_id);
   }
 
-  const headerSize = MAGIC.length + 2 + 4 + 4 + 4 + 4;
-  const entrySize = 4 * 9;
-  const entriesOffset = headerSize;
-  const stringsOffset = entriesOffset + encodedEntries.length * entrySize;
-  const totalSize = stringsOffset + stringsSize;
+  const encoded = ordered.map((value) => Buffer.from(value, 'utf8'));
+  const size = encoded.reduce((total, chunk) => total + 4 + chunk.length, 0);
+  const buffer = Buffer.allocUnsafe(size);
 
-  const buffer = Buffer.alloc(totalSize);
   let offset = 0;
+  for (const chunk of encoded) {
+    buffer.writeUInt32LE(chunk.length, offset);
+    offset += 4;
+    chunk.copy(buffer, offset);
+    offset += chunk.length;
+  }
 
-  buffer.write(MAGIC, offset, 'ascii');
-  offset += MAGIC.length;
-  buffer.writeUInt16LE(VERSION, offset);
+  return { buffer, index: strings };
+}
+
+export function encodeOfflineDb(entries: OfflineEntry[]): EncodedOfflineDb {
+  const version = entries.some((entry) => Boolean(entry.phashAlt))
+    ? V2_VERSION
+    : DEFAULT_VERSION;
+
+  const { buffer: stringTable, index } = writeStringTable(entries);
+  const entrySize = version >= V2_VERSION ? 44 : 36;
+  const headerSize = 6 + 2 + 4 + 4;
+  const buffer = Buffer.allocUnsafe(
+    headerSize + entries.length * entrySize + stringTable.length,
+  );
+
+  let offset = 0;
+  buffer.write(MAGIC, offset, 'utf8');
+  offset += 6;
+  buffer.writeUInt16LE(version, offset);
   offset += 2;
-  buffer.writeUInt32LE(encodedEntries.length, offset);
+  buffer.writeUInt32LE(entries.length, offset);
   offset += 4;
-  buffer.writeUInt32LE(strings.length, offset);
-  offset += 4;
-  buffer.writeUInt32LE(entriesOffset, offset);
-  offset += 4;
-  buffer.writeUInt32LE(stringsOffset, offset);
+  buffer.writeUInt32LE(stringTable.length, offset);
   offset += 4;
 
-  offset = entriesOffset;
-  for (const entry of encodedEntries) {
-    buffer.writeUInt32LE(entry.idIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.oracleIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.nameIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.setIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.collectorNumberIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.langIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.artUrlIndex, offset); offset += 4;
-    buffer.writeUInt32LE(entry.phashHi, offset); offset += 4;
-    buffer.writeUInt32LE(entry.phashLo, offset); offset += 4;
+  for (const entry of entries) {
+    const setIndex = index.get(entry.set);
+    const cnIndex = index.get(entry.cn);
+    const nameIndex = index.get(entry.name);
+    const oracleIndex = index.get(entry.oracle_id);
+
+    if (
+      setIndex === undefined ||
+      cnIndex === undefined ||
+      nameIndex === undefined ||
+      oracleIndex === undefined
+    ) {
+      throw new Error('Unable to encode offline db string table.');
+    }
+
+    const primary = splitHash(entry.phash);
+    const alternate = splitHash(entry.phashAlt ?? entry.phash);
+
+    buffer.writeUInt32LE(setIndex, offset);
+    buffer.writeUInt32LE(cnIndex, offset + 4);
+    buffer.writeUInt32LE(nameIndex, offset + 8);
+    buffer.writeUInt32LE(oracleIndex, offset + 12);
+    buffer.writeUInt32LE(primary.hi, offset + 16);
+    buffer.writeUInt32LE(primary.lo, offset + 20);
+
+    if (version >= V2_VERSION) {
+      buffer.writeUInt32LE(alternate.hi, offset + 24);
+      buffer.writeUInt32LE(alternate.lo, offset + 28);
+      buffer.writeUInt32LE(0, offset + 32);
+      buffer.writeUInt32LE(0, offset + 36);
+      buffer.writeUInt32LE(0, offset + 40);
+    }
+
+    offset += entrySize;
   }
 
-  offset = stringsOffset;
-  for (const value of strings) {
-    const bytes = Buffer.from(encoder.encode(value));
-    buffer.writeUInt16LE(bytes.length, offset);
-    offset += 2;
-    bytes.copy(buffer, offset);
-    offset += bytes.length;
+  stringTable.copy(buffer, offset);
+  return { buffer, version };
+}
+
+export function decodeOfflineDb(input: Buffer | Uint8Array) {
+  const buffer = Buffer.isBuffer(input) ? input : Buffer.from(input);
+  const magic = buffer.toString('utf8', 0, 6);
+  if (magic !== MAGIC) {
+    throw new Error('Invalid offline DB magic header.');
   }
 
-  return buffer;
+  const version = buffer.readUInt16LE(6);
+  if (version !== DEFAULT_VERSION && version !== V2_VERSION) {
+    throw new Error(`Unsupported offline DB version: ${version}`);
+  }
+
+  const entryCount = buffer.readUInt32LE(8);
+  const stringTableLength = buffer.readUInt32LE(12);
+  const entrySize = version >= V2_VERSION ? 44 : 36;
+  const entriesOffset = 16;
+  const stringTableOffset = entriesOffset + entryCount * entrySize;
+
+  const strings = new Map<number, string>();
+  let cursor = stringTableOffset;
+  let stringIndex = 0;
+  while (cursor < stringTableOffset + stringTableLength) {
+    const length = buffer.readUInt32LE(cursor);
+    cursor += 4;
+    const value = buffer.toString('utf8', cursor, cursor + length);
+    cursor += length;
+    strings.set(stringIndex, value);
+    stringIndex += 1;
+  }
+
+  const entries: OfflineEntry[] = [];
+  for (let index = 0; index < entryCount; index += 1) {
+    const base = entriesOffset + index * entrySize;
+    const set = strings.get(buffer.readUInt32LE(base)) ?? '';
+    const cn = strings.get(buffer.readUInt32LE(base + 4)) ?? '';
+    const name = strings.get(buffer.readUInt32LE(base + 8)) ?? '';
+    const oracle_id = strings.get(buffer.readUInt32LE(base + 12)) ?? '';
+    const primary = joinHash(
+      buffer.readUInt32LE(base + 16),
+      buffer.readUInt32LE(base + 20),
+    );
+    const alternate =
+      version >= V2_VERSION
+        ? joinHash(buffer.readUInt32LE(base + 24), buffer.readUInt32LE(base + 28))
+        : primary;
+
+    entries.push({
+      cn,
+      name,
+      oracle_id,
+      phash: primary,
+      phashAlt: alternate,
+      set,
+    });
+  }
+
+  return {
+    entries,
+    version,
+  };
 }
