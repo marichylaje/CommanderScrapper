@@ -7,7 +7,7 @@ on:
     branches: [main]
   schedule:
     # 🌟 Cron 1: Los precios se actualizan DIARIAMENTE a la 1:00 AM UTC
-    - cron: "0 10 * * *"
+    - cron: "0 1 * * *"
     # ⚙️ Cron 2: El pipeline completo corre cada 2 días a las 3:00 AM UTC
     - cron: "0 3 */2 * *"
   workflow_dispatch:
