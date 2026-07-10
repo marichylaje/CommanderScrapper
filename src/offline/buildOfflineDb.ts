@@ -177,6 +177,7 @@ async function main() {
 
   await mkdir(OUTPUT_DIR, { recursive: true });
 
+  let entryVersion = 1;
   const manifest: Manifest = {
     schema: MANIFEST_VERSION,
     generated_at: new Date().toISOString(),
@@ -184,7 +185,7 @@ async function main() {
     version: new Date().toISOString().slice(0, 10).replace(/-/g, ''),
     generator: {
       crop_hashes: ['art_crop', 'normal'],
-      entry_version: 2,
+      entry_version: entryVersion,
       visual_buckets: true,
     },
     buckets: {
@@ -199,12 +200,15 @@ async function main() {
   };
 
   for (const bucket of Object.keys(buckets) as ColorBucket[]) {
-    const buffer = encodeOfflineDb(buckets[bucket]);
-    const gzipped = gzipSync(buffer, { level: 9 });
+    const encoded = encodeOfflineDb(buckets[bucket]);
+    entryVersion = Math.max(entryVersion, encoded.version);
+    const gzipped = gzipSync(encoded.buffer, { level: 9 });
     const outputPath = join(OUTPUT_DIR, manifest.buckets[bucket].file);
     await writeFile(outputPath, gzipped);
     console.log(`✅ Wrote ${bucket} bucket (${buckets[bucket].length} cards)`);
   }
+
+  manifest.generator.entry_version = entryVersion;
 
   const manifestJson = JSON.stringify(manifest, null, 2);
   await writeFile(join(OUTPUT_DIR, 'manifest.json'), manifestJson);
