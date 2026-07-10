@@ -199,3 +199,140 @@ export async function findBestVisualMatch(
   scored.sort((a, b) => b.confidence - a.confidence);
   return scored.slice(0, topK);
 }
+
+// ── OCR-Aware Search ──────────────────────────────────────────────────────────
+
+type SearchIndices = {
+  byNameKey: Map<string, FingerprintEntry[]>;
+  bySetCn: Map<string, FingerprintEntry[]>;
+  entries: FingerprintEntry[];
+};
+
+let searchIndices: SearchIndices | null = null;
+
+function normalizeKey(value?: string): string {
+  return (value ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function buildSearchIndices(entries: FingerprintEntry[]): SearchIndices {
+  const byNameKey = new Map<string, FingerprintEntry[]>();
+  const bySetCn = new Map<string, FingerprintEntry[]>();
+
+  for (const entry of entries) {
+    const nk = normalizeKey(entry.name);
+    if (nk) {
+      const arr = byNameKey.get(nk) ?? [];
+      arr.push(entry);
+      byNameKey.set(nk, arr);
+    }
+    const s = normalizeKey(entry.set);
+    const c = normalizeKey(entry.cn);
+    if (s && c) {
+      const key = `${s}|${c}`;
+      const arr = bySetCn.get(key) ?? [];
+      arr.push(entry);
+      bySetCn.set(key, arr);
+    }
+  }
+
+  console.log(
+    `📑 Built search indices: ${byNameKey.size} name keys, ${bySetCn.size} set+cn pairs`,
+  );
+  return { byNameKey, bySetCn, entries };
+}
+
+export type OcrHint = {
+  collectorNumber?: string;
+  name?: string;
+  setCode?: string;
+};
+
+/**
+ * Advanced visual search with OCR pre-filtering and optional oracle ID restriction.
+ *
+ * - If `oracleIds` is provided, restricts the search to those oracle IDs only.
+ *   This is the reranking mode: mobile finds top-K oracle IDs offline (64-bit pHash),
+ *   server re-scores them with 256-bit dHash for higher precision.
+ *
+ * - If `ocr` is provided, pre-filters by set+cn or name before computing Hamming
+ *   distances — reduces O(70K) to O(10–200) for most queries, dramatically
+ *   improving both speed and accuracy.
+ */
+export async function findBestVisualMatchAdvanced(
+  query: { artHash: string; fullHash: string; histogram: number[]; titleHash: string },
+  topK = 5,
+  ocr?: OcrHint | null,
+  oracleIds?: string[] | null,
+): Promise<VisualMatchResult[]> {
+  const entries = await loadIndex();
+
+  // Rebuild indices if the index has been reloaded
+  if (!searchIndices || searchIndices.entries !== entries) {
+    searchIndices = buildSearchIndices(entries);
+  }
+
+  const { byNameKey, bySetCn } = searchIndices;
+
+  // Stage 1: Oracle restriction (reranking mode — restrict to known oracle IDs)
+  let candidates: FingerprintEntry[] =
+    oracleIds && oracleIds.length > 0
+      ? entries.filter((e) => oracleIds.includes(e.oracle_id))
+      : entries;
+
+  // Stage 2: OCR pre-filter within candidate pool
+  let ocrPool: FingerprintEntry[] | null = null;
+
+  if (ocr) {
+    const s = normalizeKey(ocr.setCode);
+    const c = normalizeKey(ocr.collectorNumber);
+    const n = normalizeKey(ocr.name);
+
+    if (s && c) {
+      const exact = bySetCn.get(`${s}|${c}`) ?? [];
+      if (exact.length > 0) {
+        ocrPool = oracleIds?.length
+          ? exact.filter((e) => oracleIds.includes(e.oracle_id))
+          : exact;
+      }
+    }
+
+    if (!ocrPool && n.length >= 3) {
+      const byName = byNameKey.get(n) ?? [];
+      if (byName.length > 0 && byName.length <= 300) {
+        ocrPool = oracleIds?.length
+          ? byName.filter((e) => oracleIds.includes(e.oracle_id))
+          : byName;
+      }
+    }
+  }
+
+  // Use OCR-narrowed pool when it meaningfully reduces the search space
+  const pool =
+    ocrPool && ocrPool.length > 0 && ocrPool.length <= 200
+      ? ocrPool
+      : candidates;
+
+  const scored: VisualMatchResult[] = pool.map((entry) => ({
+    ...scoreEntry(query, entry),
+    entry,
+  }));
+
+  scored.sort((a, b) => b.confidence - a.confidence);
+
+  // If the OCR-filtered pool gave weak results, fall back to full candidate set
+  if (
+    ocrPool &&
+    pool === ocrPool &&
+    (scored[0]?.confidence ?? 0) < 0.45 &&
+    candidates.length > ocrPool.length
+  ) {
+    const fallback: VisualMatchResult[] = candidates.map((entry) => ({
+      ...scoreEntry(query, entry),
+      entry,
+    }));
+    fallback.sort((a, b) => b.confidence - a.confidence);
+    return fallback.slice(0, topK);
+  }
+
+  return scored.slice(0, topK);
+}

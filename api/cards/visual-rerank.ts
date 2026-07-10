@@ -1,13 +1,31 @@
 /**
- * api/cards/visual-match-direct.ts
+ * api/cards/visual-rerank.ts
  *
- * POST /api/cards/visual-match-direct
+ * POST /api/cards/visual-rerank
  *
- * Pure visual card matching without requiring a card name or oracle ID.
- * Uses a pre-computed fingerprint index for fast nearest-neighbor search.
+ * Professional reranking endpoint for ambiguous scan cases.
  *
- * Run `npx tsx src/buildFingerprintIndex.ts` to generate data/fingerprint-index.json
- * before deploying.
+ * Designed as the second stage of a hybrid offline/online pipeline:
+ *   1. Mobile matches offline via 64-bit pHash → top-K oracle IDs
+ *   2. Mobile uploads image + oracle IDs + accumulated OCR to this endpoint
+ *   3. Server re-scores using 256-bit dHash (4× more discriminating) and OCR filtering
+ *   4. Returns ranked candidates with full confidence breakdown
+ *
+ * Input (multipart/form-data):
+ *   - photo:       image file (JPEG)
+ *   - cropX/Y/Width/Height: normalized crop region (0–1)
+ *   - ocrName:     accumulated OCR card name (optional)
+ *   - ocrSet:      accumulated OCR set code (optional)
+ *   - ocrCn:       accumulated OCR collector number (optional)
+ *   - oracleIds:   comma-separated oracle IDs from offline match (optional)
+ *
+ * Output:
+ *   {
+ *     bestMatch: ScryfallCard | null,
+ *     confidence: number,
+ *     matches: [{ card, confidence, artHashDistance, fullHashDistance, colorDistance }],
+ *     meta: { stage, ambiguous, ocrContribution, topConfidence, secondBestConfidence }
+ *   }
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
@@ -20,8 +38,8 @@ import {
   type OcrHint,
 } from '../../src/visual/fingerprintIndex.js';
 
-const MIN_CONFIDENCE = 0.4;
-const TOP_K = 5;
+const MIN_CONFIDENCE = 0.35;
+const TOP_K = 8;
 
 type UploadPayload = {
   cropHeight?: number;
@@ -31,6 +49,7 @@ type UploadPayload = {
   ocrCn?: string;
   ocrName?: string;
   ocrSet?: string;
+  oracleIds?: string;
   photoBuffer?: Buffer;
 };
 
@@ -40,20 +59,21 @@ function parseMultipartForm(req: VercelRequest): Promise<UploadPayload> {
     const payload: UploadPayload = {};
     const chunks: Buffer[] = [];
 
-    busboy.on('file', (_fieldName: string, file: NodeJS.ReadableStream) => {
+    busboy.on('file', (_: string, file: NodeJS.ReadableStream) => {
       file.on('data', (chunk: Buffer) => chunks.push(chunk));
       file.on('limit', () => reject(new Error('Uploaded image is too large.')));
     });
 
-    busboy.on('field', (fieldName: string, value: string) => {
-      switch (fieldName) {
-        case 'cropHeight': payload.cropHeight = Number(value); break;
-        case 'cropWidth':  payload.cropWidth  = Number(value); break;
-        case 'cropX':      payload.cropX      = Number(value); break;
-        case 'cropY':      payload.cropY      = Number(value); break;
-        case 'ocrName':    payload.ocrName    = value;         break;
-        case 'ocrSet':     payload.ocrSet     = value;         break;
-        case 'ocrCn':      payload.ocrCn      = value;         break;
+    busboy.on('field', (name: string, value: string) => {
+      switch (name) {
+        case 'cropHeight':  payload.cropHeight = Number(value); break;
+        case 'cropWidth':   payload.cropWidth  = Number(value); break;
+        case 'cropX':       payload.cropX      = Number(value); break;
+        case 'cropY':       payload.cropY      = Number(value); break;
+        case 'ocrName':     payload.ocrName    = value;         break;
+        case 'ocrSet':      payload.ocrSet     = value;         break;
+        case 'ocrCn':       payload.ocrCn      = value;         break;
+        case 'oracleIds':   payload.oracleIds  = value;         break;
         default: break;
       }
     });
@@ -74,11 +94,7 @@ function headerValue(value: string | string[] | undefined) {
 }
 
 export const config = {
-  api: {
-    bodyParser: false,
-    // 4MB max body for camera snapshots
-    sizeLimit: '4mb',
-  },
+  api: { bodyParser: false, sizeLimit: '4mb' },
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -105,23 +121,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       y: payload.cropY ?? 0,
     };
 
-    console.log('📷 visual-match-direct: request', {
-      requestId,
-      crop,
-      bytes: payload.photoBuffer.length,
-    });
+    const oracleIds: string[] | null = payload.oracleIds
+      ? payload.oracleIds.split(',').map((s) => s.trim()).filter(Boolean)
+      : null;
 
-    // Compute fingerprint of the uploaded image
-    const fingerprint = await buildFingerprintFromBuffer(payload.photoBuffer, crop);
-
-    console.log('🧬 visual-match-direct: fingerprint', {
-      requestId,
-      artHash: fingerprint.artHash.slice(0, 8),
-      fullHash: fingerprint.fullHash.slice(0, 8),
-      histogramSize: fingerprint.histogram.length,
-    });
-
-    // Build OCR hint from form fields — pre-filters index before Hamming scan
     const ocr: OcrHint | null = (payload.ocrName || payload.ocrSet || payload.ocrCn)
       ? {
           collectorNumber: payload.ocrCn,
@@ -130,38 +133,64 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
       : null;
 
-    if (ocr) {
-      console.log('🔤 visual-match-direct: ocr hint', { requestId, ocr });
-    }
+    const stage = oracleIds?.length ? 'rerank' : 'global';
 
-    // Find nearest neighbors — OCR pre-filtering reduces O(70K) to O(10–200)
-    const topMatches = await findBestVisualMatchAdvanced(fingerprint, TOP_K, ocr);
+    console.log('🔀 visual-rerank: request', {
+      requestId,
+      crop,
+      oracleIdCount: oracleIds?.length ?? 0,
+      hasOcr: Boolean(ocr),
+      bytes: payload.photoBuffer.length,
+      stage,
+    });
 
-    const matchSummary = topMatches.slice(0, 3).map((match) => ({
-      id: match.entry.id,
-      name: match.entry.name,
-      set: match.entry.set,
-      confidence: Number(match.confidence.toFixed(4)),
-      artHashDistance: match.artHashDistance,
-      fullHashDistance: match.fullHashDistance,
-      colorDistance: Number(match.colorDistance.toFixed(4)),
+    const fingerprint = await buildFingerprintFromBuffer(payload.photoBuffer, crop);
+
+    console.log('🧬 visual-rerank: fingerprint', {
+      requestId,
+      artHash: fingerprint.artHash.slice(0, 8),
+      fullHash: fingerprint.fullHash.slice(0, 8),
+    });
+
+    const topMatches = await findBestVisualMatchAdvanced(
+      fingerprint,
+      TOP_K,
+      ocr,
+      oracleIds,
+    );
+
+    const matchSummary = topMatches.slice(0, 3).map((m) => ({
+      id: m.entry.id,
+      name: m.entry.name,
+      set: m.entry.set,
+      confidence: Number(m.confidence.toFixed(4)),
+      artHashDistance: m.artHashDistance,
     }));
 
-    console.log('🎯 visual-match-direct: matches', {
+    console.log('🎯 visual-rerank: matches', {
       requestId,
       total: topMatches.length,
+      stage,
       top: matchSummary,
     });
 
     if (topMatches.length === 0 || (topMatches[0]?.confidence ?? 0) < MIN_CONFIDENCE) {
       return res.status(200).json({
         bestMatch: null,
+        confidence: topMatches[0]?.confidence ?? 0,
         matches: [],
-        meta: { confidence: topMatches[0]?.confidence ?? 0, reason: 'below_threshold' },
+        meta: {
+          ambiguous: false,
+          ocrContribution: Boolean(ocr),
+          reason: 'below_threshold',
+          secondBestConfidence: 0,
+          stage,
+          topConfidence: topMatches[0]?.confidence ?? 0,
+        },
       });
     }
 
-    // Enrich top matches with full card data from the dataset (graceful fallback to entry data)
+    // Enrich top matches with full card data
     const enrichedMatches = await Promise.all(
       topMatches.map(async (match) => {
         let card: object = match.entry;
@@ -186,19 +215,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       (m) => (m.card as any).oracle_id !== (best.card as any).oracle_id,
     );
 
+    const ambiguous =
+      secondBest != null && best.confidence - secondBest.confidence < 0.05;
+
     return res.status(200).json({
       bestMatch: best.card,
       confidence: best.confidence,
       matches: enrichedMatches,
       meta: {
+        ambiguous,
         ocrContribution: Boolean(ocr),
         secondBestConfidence: secondBest?.confidence ?? 0,
+        stage,
         topConfidence: best.confidence,
-        totalIndexed: topMatches.length,
       },
     });
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/visual-match-direct:', requestId, error?.message, error?.stack);
+    console.error(
+      '💥 ERROR in /api/cards/visual-rerank:',
+      requestId,
+      error?.message,
+      error?.stack,
+    );
     return res.status(500).json({
       error: 'Internal Server Error',
       details: error?.message ?? String(error),
