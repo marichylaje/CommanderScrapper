@@ -76,6 +76,10 @@ function getImageUrls(card: CardData): { artUrl?: string; normalUrl?: string } {
   return {};
 }
 
+function normalizeMetadataString(value: unknown) {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
 async function normalizeArtCrop(buffer: Buffer) {
   return sharp(buffer)
     .rotate()
@@ -91,6 +95,22 @@ async function processCard(
   const { artUrl, normalUrl } = getImageUrls(card);
   const sourceUrl = artUrl ?? normalUrl;
   if (!sourceUrl) return null;
+
+  const collectorNumber = normalizeMetadataString(card.collector_number);
+  const name = normalizeMetadataString(card.name);
+  const oracleId = normalizeMetadataString(card.oracle_id);
+  const set = normalizeMetadataString(card.set);
+
+  if (!collectorNumber || !name || !oracleId || !set) {
+    console.warn('⚠️ Skipping card with incomplete offline DB metadata:', {
+      collectorNumber,
+      id: card.id,
+      name,
+      oracleId,
+      set,
+    });
+    return null;
+  }
 
   const [primaryBuffer, artBuffer, normalBuffer] = await Promise.all([
     fetchBuffer(sourceUrl),
@@ -110,12 +130,12 @@ async function processCard(
   return {
     bucket: bucketFromCard(card),
     entry: {
-      cn: card.collector_number,
-      name: card.name,
-      oracle_id: card.oracle_id,
+      cn: collectorNumber,
+      name,
+      oracle_id: oracleId,
       phash,
       phashAlt,
-      set: card.set,
+      set,
     },
   };
 }
