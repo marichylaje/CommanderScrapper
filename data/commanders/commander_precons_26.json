@@ -1,352 +1,5 @@
 [
   {
-    "name": "Desert Bloom",
-    "commander": "Yuma, Proud Protector",
-    "expansion": "Outlaws of Thunder Junction Commander",
-    "cards": [
-      {
-        "name": "Kirri, Talented Sprout",
-        "count": 1
-      },
-      {
-        "name": "Scavenger Grounds",
-        "count": 1
-      },
-      {
-        "name": "Sun Titan",
-        "count": 1
-      },
-      {
-        "name": "Omnath, Locus of Rage",
-        "count": 1
-      },
-      {
-        "name": "Descend upon the Sinful",
-        "count": 1
-      },
-      {
-        "name": "Chromatic Lantern",
-        "count": 1
-      },
-      {
-        "name": "Marshal's Anthem",
-        "count": 1
-      },
-      {
-        "name": "Sheltered Thicket",
-        "count": 1
-      },
-      {
-        "name": "Scute Swarm",
-        "count": 1
-      },
-      {
-        "name": "Hour of Promise",
-        "count": 1
-      },
-      {
-        "name": "Oracle of Mul Daya",
-        "count": 1
-      },
-      {
-        "name": "Ramunap Excavator",
-        "count": 1
-      },
-      {
-        "name": "Scattered Groves",
-        "count": 1
-      },
-      {
-        "name": "World Shaper",
-        "count": 1
-      },
-      {
-        "name": "Nesting Dragon",
-        "count": 1
-      },
-      {
-        "name": "Turntimber Sower",
-        "count": 1
-      },
-      {
-        "name": "Sevinne's Reclamation",
-        "count": 1
-      },
-      {
-        "name": "Ancient Greenwarden",
-        "count": 1
-      },
-      {
-        "name": "Titania, Protector of Argoth",
-        "count": 1
-      },
-      {
-        "name": "Return of the Wildspeaker",
-        "count": 1
-      },
-      {
-        "name": "Perennial Behemoth",
-        "count": 1
-      },
-      {
-        "name": "Avenger of Zendikar",
-        "count": 1
-      },
-      {
-        "name": "Hazezon, Shaper of Sand",
-        "count": 1
-      },
-      {
-        "name": "Escape to the Wilds",
-        "count": 1
-      },
-      {
-        "name": "Heaven // Earth",
-        "count": 1
-      },
-      {
-        "name": "Genesis Hydra",
-        "count": 1
-      },
-      {
-        "name": "Sunscorched Divide",
-        "count": 1
-      },
-      {
-        "name": "The Mending of Dominaria",
-        "count": 1
-      },
-      {
-        "name": "Decimate",
-        "count": 1
-      },
-      {
-        "name": "Sand Scout",
-        "count": 1
-      },
-      {
-        "name": "Embrace the Unknown",
-        "count": 1
-      },
-      {
-        "name": "Dune Chanter",
-        "count": 1
-      },
-      {
-        "name": "Cataclysmic Prospecting",
-        "count": 1
-      },
-      {
-        "name": "Vengeful Regrowth",
-        "count": 1
-      },
-      {
-        "name": "Angel of Indemnity",
-        "count": 1
-      },
-      {
-        "name": "Cactus Preserve",
-        "count": 1
-      },
-      {
-        "name": "Rumbleweed",
-        "count": 1
-      },
-      {
-        "name": "Terramorphic Expanse",
-        "count": 1
-      },
-      {
-        "name": "Evolving Wilds",
-        "count": 1
-      },
-      {
-        "name": "Swiftfoot Boots",
-        "count": 1
-      },
-      {
-        "name": "Explore",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Satyr Wayfinder",
-        "count": 1
-      },
-      {
-        "name": "Perpetual Timepiece",
-        "count": 1
-      },
-      {
-        "name": "Crawling Sensation",
-        "count": 1
-      },
-      {
-        "name": "Painted Bluffs",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Magmatic Insight",
-        "count": 1
-      },
-      {
-        "name": "Krosan Verge",
-        "count": 1
-      },
-      {
-        "name": "Desert of the True",
-        "count": 1
-      },
-      {
-        "name": "Skullwinder",
-        "count": 1
-      },
-      {
-        "name": "Desert of the Indomitable",
-        "count": 1
-      },
-      {
-        "name": "Jungle Shrine",
-        "count": 1
-      },
-      {
-        "name": "Bitter Reunion",
-        "count": 1
-      },
-      {
-        "name": "Desert of the Fervent",
-        "count": 1
-      },
-      {
-        "name": "Valorous Stance",
-        "count": 1
-      },
-      {
-        "name": "Dunes of the Dead",
-        "count": 1
-      },
-      {
-        "name": "Shefet Dunes",
-        "count": 1
-      },
-      {
-        "name": "Hashep Oasis",
-        "count": 1
-      },
-      {
-        "name": "Elvish Rejuvenator",
-        "count": 1
-      },
-      {
-        "name": "Winding Way",
-        "count": 1
-      },
-      {
-        "name": "Springbloom Druid",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Unholy Heat",
-        "count": 1
-      },
-      {
-        "name": "Thrilling Discovery",
-        "count": 1
-      },
-      {
-        "name": "Electric Revelation",
-        "count": 1
-      },
-      {
-        "name": "Eccentric Farmer",
-        "count": 1
-      },
-      {
-        "name": "Harrow",
-        "count": 1
-      },
-      {
-        "name": "Ramunap Ruins",
-        "count": 1
-      },
-      {
-        "name": "Path to Exile",
-        "count": 1
-      },
-      {
-        "name": "Requisition Raid",
-        "count": 1
-      },
-      {
-        "name": "Bovine Intervention",
-        "count": 1
-      },
-      {
-        "name": "Map the Frontier",
-        "count": 1
-      },
-      {
-        "name": "Conduit Pylons",
-        "count": 1
-      },
-      {
-        "name": "Mirage Mesa",
-        "count": 1
-      },
-      {
-        "name": "Wreck and Rebuild",
-        "count": 1
-      },
-      {
-        "name": "Angel of the Ruins",
-        "count": 1
-      },
-      {
-        "name": "Bristling Backwoods",
-        "count": 1
-      },
-      {
-        "name": "Creosote Heath",
-        "count": 1
-      },
-      {
-        "name": "Abraded Bluffs",
-        "count": 1
-      },
-      {
-        "name": "Scaretiller",
-        "count": 1
-      },
-      {
-        "name": "Nantuko Cultivator",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 6
-      },
-      {
-        "name": "Mountain",
-        "count": 4
-      },
-      {
-        "name": "Forest",
-        "count": 7
-      }
-    ]
-  },
-  {
     "name": "Grand Larceny",
     "commander": "Gonti, Canny Acquisitor",
     "expansion": "Outlaws of Thunder Junction Commander",
@@ -1389,6 +1042,341 @@
   },
   {
     "name": "Creative Energy",
+    "commander": "Satya, Aetherflux Genius",
+    "expansion": "Modern Horizons 3 Commander",
+    "cards": [
+      {
+        "name": "Cayth, Famed Mechanist",
+        "count": 1
+      },
+      {
+        "name": "Sphinx of the Revelation",
+        "count": 1
+      },
+      {
+        "name": "Filigree Racer",
+        "count": 1
+      },
+      {
+        "name": "Localized Destruction",
+        "count": 1
+      },
+      {
+        "name": "Aether Refinery",
+        "count": 1
+      },
+      {
+        "name": "Hourglass of the Lost",
+        "count": 1
+      },
+      {
+        "name": "Salvation Colossus",
+        "count": 1
+      },
+      {
+        "name": "Blaster Hulk",
+        "count": 1
+      },
+      {
+        "name": "Razorfield Ripper",
+        "count": 1
+      },
+      {
+        "name": "Silverquill Lecturer",
+        "count": 1
+      },
+      {
+        "name": "Overclocked Electromancer",
+        "count": 1
+      },
+      {
+        "name": "Stone Idol Generator",
+        "count": 1
+      },
+      {
+        "name": "Aurora Shifter",
+        "count": 1
+      },
+      {
+        "name": "Conversion Apparatus",
+        "count": 1
+      },
+      {
+        "name": "Gonti's Aether Heart",
+        "count": 1
+      },
+      {
+        "name": "Lightning Runner",
+        "count": 1
+      },
+      {
+        "name": "Aethertide Whale",
+        "count": 1
+      },
+      {
+        "name": "Aethergeode Miner",
+        "count": 1
+      },
+      {
+        "name": "Aethersphere Harvester",
+        "count": 1
+      },
+      {
+        "name": "Bident of Thassa",
+        "count": 1
+      },
+      {
+        "name": "Temple of Enlightenment",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Myr Battlesphere",
+        "count": 1
+      },
+      {
+        "name": "Grenzo, Havoc Raiser",
+        "count": 1
+      },
+      {
+        "name": "Brudiclad, Telchor Engineer",
+        "count": 1
+      },
+      {
+        "name": "Coveted Jewel",
+        "count": 1
+      },
+      {
+        "name": "Goldspan Dragon",
+        "count": 1
+      },
+      {
+        "name": "Legion Loyalty",
+        "count": 1
+      },
+      {
+        "name": "Mystic Gate",
+        "count": 1
+      },
+      {
+        "name": "Akroma's Will",
+        "count": 1
+      },
+      {
+        "name": "Adarkar Wastes",
+        "count": 1
+      },
+      {
+        "name": "Shivan Reef",
+        "count": 1
+      },
+      {
+        "name": "Coalition Relic",
+        "count": 1
+      },
+      {
+        "name": "Combustible Gearhulk",
+        "count": 1
+      },
+      {
+        "name": "Aetherworks Marvel",
+        "count": 1
+      },
+      {
+        "name": "Angel of Invention",
+        "count": 1
+      },
+      {
+        "name": "Confiscation Coup",
+        "count": 1
+      },
+      {
+        "name": "Aetherstorm Roc",
+        "count": 1
+      },
+      {
+        "name": "Aethersquall Ancient",
+        "count": 1
+      },
+      {
+        "name": "Frostboil Snarl",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Furycalm Snarl",
+        "count": 1
+      },
+      {
+        "name": "Midnight Clock",
+        "count": 1
+      },
+      {
+        "name": "Professional Face-Breaker",
+        "count": 1
+      },
+      {
+        "name": "Farewell",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Temple of Triumph",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Temple of Epiphany",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Skyclave Apparition",
+        "count": 1
+      },
+      {
+        "name": "Castle Vantress",
+        "count": 1
+      },
+      {
+        "name": "Jolted Awake",
+        "count": 1
+      },
+      {
+        "name": "Bespoke Battlewagon",
+        "count": 1
+      },
+      {
+        "name": "Roil Cartographer",
+        "count": 1
+      },
+      {
+        "name": "Unstable Amulet",
+        "count": 1
+      },
+      {
+        "name": "Amped Raptor",
+        "count": 1
+      },
+      {
+        "name": "Solar Transformer",
+        "count": 1
+      },
+      {
+        "name": "Scurry of Gremlins",
+        "count": 1
+      },
+      {
+        "name": "Izzet Generatorium",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Conviction",
+        "count": 1
+      },
+      {
+        "name": "Tezzeret's Gambit",
+        "count": 1
+      },
+      {
+        "name": "Izzet Boilerworks",
+        "count": 1
+      },
+      {
+        "name": "Azorius Chancery",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Progress",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Burnished Hart",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Era of Innovation",
+        "count": 1
+      },
+      {
+        "name": "Aether Hub",
+        "count": 1
+      },
+      {
+        "name": "Decoction Module",
+        "count": 1
+      },
+      {
+        "name": "Glimmer of Genius",
+        "count": 1
+      },
+      {
+        "name": "Whirler Virtuoso",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Creativity",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Demolition Field",
+        "count": 1
+      },
+      {
+        "name": "Mystic Monastery",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 10
+      },
+      {
+        "name": "Island",
+        "count": 5
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "Creative Energy Collector's Edition",
     "commander": "Satya, Aetherflux Genius",
     "expansion": "Modern Horizons 3 Commander",
     "cards": [

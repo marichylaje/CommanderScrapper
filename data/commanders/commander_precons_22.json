@@ -1,344 +1,5 @@
 [
   {
-    "name": "Riders of Rohan",
-    "commander": "Éowyn, Shieldmaiden",
-    "expansion": "Tales of Middle-earth Commander",
-    "cards": [
-      {
-        "name": "Aragorn, King of Gondor",
-        "count": 1
-      },
-      {
-        "name": "Beregond of the Guard",
-        "count": 1
-      },
-      {
-        "name": "Champions of Minas Tirith",
-        "count": 1
-      },
-      {
-        "name": "Gilraen, Dúnedain Protector",
-        "count": 1
-      },
-      {
-        "name": "Grey Host Reinforcements",
-        "count": 1
-      },
-      {
-        "name": "Lossarnach Captain",
-        "count": 1
-      },
-      {
-        "name": "Archivist of Gondor",
-        "count": 1
-      },
-      {
-        "name": "Denethor, Stone Seer",
-        "count": 1
-      },
-      {
-        "name": "Fealty to the Realm",
-        "count": 1
-      },
-      {
-        "name": "Call for Aid",
-        "count": 1
-      },
-      {
-        "name": "Gimli of the Glittering Caves",
-        "count": 1
-      },
-      {
-        "name": "Boromir, Gondor's Hope",
-        "count": 1
-      },
-      {
-        "name": "Éomer, King of Rohan",
-        "count": 1
-      },
-      {
-        "name": "Faramir, Steward of Gondor",
-        "count": 1
-      },
-      {
-        "name": "Forth Eorlingas!",
-        "count": 1
-      },
-      {
-        "name": "Oath of Eorl",
-        "count": 1
-      },
-      {
-        "name": "Riders of Rohan",
-        "count": 1
-      },
-      {
-        "name": "Taunt from the Rampart",
-        "count": 1
-      },
-      {
-        "name": "Crown of Gondor",
-        "count": 1
-      },
-      {
-        "name": "Bastion Protector",
-        "count": 1
-      },
-      {
-        "name": "Dearly Departed",
-        "count": 1
-      },
-      {
-        "name": "Frontline Medic",
-        "count": 1
-      },
-      {
-        "name": "Increasing Devotion",
-        "count": 1
-      },
-      {
-        "name": "Marshal's Anthem",
-        "count": 1
-      },
-      {
-        "name": "Selfless Squire",
-        "count": 1
-      },
-      {
-        "name": "Unbreakable Formation",
-        "count": 1
-      },
-      {
-        "name": "Verge Rangers",
-        "count": 1
-      },
-      {
-        "name": "Visions of Glory",
-        "count": 1
-      },
-      {
-        "name": "Weathered Wayfarer",
-        "count": 1
-      },
-      {
-        "name": "Combat Celebrant",
-        "count": 1
-      },
-      {
-        "name": "Court of Ire",
-        "count": 1
-      },
-      {
-        "name": "Earthquake",
-        "count": 1
-      },
-      {
-        "name": "Flamerush Rider",
-        "count": 1
-      },
-      {
-        "name": "Frontier Warmonger",
-        "count": 1
-      },
-      {
-        "name": "Harsh Mentor",
-        "count": 1
-      },
-      {
-        "name": "Shared Animosity",
-        "count": 1
-      },
-      {
-        "name": "Zealous Conscripts",
-        "count": 1
-      },
-      {
-        "name": "Supreme Verdict",
-        "count": 1
-      },
-      {
-        "name": "Door of Destinies",
-        "count": 1
-      },
-      {
-        "name": "Vanquisher's Banner",
-        "count": 1
-      },
-      {
-        "name": "Battlefield Forge",
-        "count": 1
-      },
-      {
-        "name": "Clifftop Retreat",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard",
-        "count": 1
-      },
-      {
-        "name": "Furycalm Snarl",
-        "count": 1
-      },
-      {
-        "name": "Glacial Fortress",
-        "count": 1
-      },
-      {
-        "name": "Port Town",
-        "count": 1
-      },
-      {
-        "name": "Prairie Stream",
-        "count": 1
-      },
-      {
-        "name": "Sulfur Falls",
-        "count": 1
-      },
-      {
-        "name": "Throne of the High City",
-        "count": 1
-      },
-      {
-        "name": "Windbrisk Heights",
-        "count": 1
-      },
-      {
-        "name": "Lost to Legend",
-        "count": 1
-      },
-      {
-        "name": "Erkenbrand, Lord of Westfold",
-        "count": 1
-      },
-      {
-        "name": "Banishing Light",
-        "count": 1
-      },
-      {
-        "name": "Fiend Hunter",
-        "count": 1
-      },
-      {
-        "name": "Palace Jailer",
-        "count": 1
-      },
-      {
-        "name": "Path to Exile",
-        "count": 1
-      },
-      {
-        "name": "Sunset Revelry",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares",
-        "count": 1
-      },
-      {
-        "name": "Village Bell-Ringer",
-        "count": 1
-      },
-      {
-        "name": "Prince Imrahil the Fair",
-        "count": 1
-      },
-      {
-        "name": "Humble Defector",
-        "count": 1
-      },
-      {
-        "name": "Théoden, King of Rohan",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Commander's Sphere",
-        "count": 1
-      },
-      {
-        "name": "Heirloom Blade",
-        "count": 1
-      },
-      {
-        "name": "Herald's Horn",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Conviction",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Progress",
-        "count": 1
-      },
-      {
-        "name": "Thought Vessel",
-        "count": 1
-      },
-      {
-        "name": "Wayfarer's Bauble",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Evolving Wilds",
-        "count": 1
-      },
-      {
-        "name": "Field of Ruin",
-        "count": 1
-      },
-      {
-        "name": "Path of Ancestry",
-        "count": 1
-      },
-      {
-        "name": "Rogue's Passage",
-        "count": 1
-      },
-      {
-        "name": "Secluded Courtyard",
-        "count": 1
-      },
-      {
-        "name": "Terramorphic Expanse",
-        "count": 1
-      },
-      {
-        "name": "Tranquil Cove",
-        "count": 1
-      },
-      {
-        "name": "Wind-Scarred Crag",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 9
-      },
-      {
-        "name": "Island",
-        "count": 5
-      },
-      {
-        "name": "Mountain",
-        "count": 5
-      }
-    ]
-  },
-  {
     "name": "The Hosts of Mordor",
     "commander": "Sauron, Lord of the Rings",
     "expansion": "Tales of Middle-earth Commander",
@@ -1703,6 +1364,385 @@
       {
         "name": "Plains",
         "count": 7
+      }
+    ]
+  },
+  {
+    "name": "Sliver Swarm",
+    "commander": "Sliver Gravemother",
+    "expansion": "Commander Masters",
+    "cards": [
+      {
+        "name": "Rukarumel, Biologist",
+        "count": 1
+      },
+      {
+        "name": "Regal Sliver",
+        "count": 1
+      },
+      {
+        "name": "Taunting Sliver",
+        "count": 1
+      },
+      {
+        "name": "Titan of Littjara",
+        "count": 1
+      },
+      {
+        "name": "Lazotep Sliver",
+        "count": 1
+      },
+      {
+        "name": "Capricious Sliver",
+        "count": 1
+      },
+      {
+        "name": "Descendants' Fury",
+        "count": 1
+      },
+      {
+        "name": "For the Ancestors",
+        "count": 1
+      },
+      {
+        "name": "Hatchery Sliver",
+        "count": 1
+      },
+      {
+        "name": "Bonescythe Sliver",
+        "count": 1
+      },
+      {
+        "name": "Cleansing Nova",
+        "count": 1
+      },
+      {
+        "name": "Harsh Mercy",
+        "count": 1
+      },
+      {
+        "name": "Galerider Sliver",
+        "count": 1
+      },
+      {
+        "name": "Synapse Sliver",
+        "count": 1
+      },
+      {
+        "name": "Crippling Fear",
+        "count": 1
+      },
+      {
+        "name": "Syphon Sliver",
+        "count": 1
+      },
+      {
+        "name": "Spiteful Sliver",
+        "count": 1
+      },
+      {
+        "name": "Brood Sliver",
+        "count": 1
+      },
+      {
+        "name": "Megantic Sliver",
+        "count": 1
+      },
+      {
+        "name": "Realmwalker",
+        "count": 1
+      },
+      {
+        "name": "Cloudshredder Sliver",
+        "count": 1
+      },
+      {
+        "name": "Decimate",
+        "count": 1
+      },
+      {
+        "name": "Sliver Hivelord",
+        "count": 1
+      },
+      {
+        "name": "Icon of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Vanquisher's Banner",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Cinder Glade",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Scattered Groves",
+        "count": 1
+      },
+      {
+        "name": "Sheltered Thicket",
+        "count": 1
+      },
+      {
+        "name": "Smoldering Marsh",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Constricting Sliver",
+        "count": 1
+      },
+      {
+        "name": "Sentinel Sliver",
+        "count": 1
+      },
+      {
+        "name": "Sinew Sliver",
+        "count": 1
+      },
+      {
+        "name": "Diffusion Sliver",
+        "count": 1
+      },
+      {
+        "name": "Distant Melody",
+        "count": 1
+      },
+      {
+        "name": "Shifting Sliver",
+        "count": 1
+      },
+      {
+        "name": "Windfall",
+        "count": 1
+      },
+      {
+        "name": "Winged Sliver",
+        "count": 1
+      },
+      {
+        "name": "Clot Sliver",
+        "count": 1
+      },
+      {
+        "name": "Crypt Sliver",
+        "count": 1
+      },
+      {
+        "name": "Blade Sliver",
+        "count": 1
+      },
+      {
+        "name": "Blur Sliver",
+        "count": 1
+      },
+      {
+        "name": "Bonesplitter Sliver",
+        "count": 1
+      },
+      {
+        "name": "Cleaving Sliver",
+        "count": 1
+      },
+      {
+        "name": "Hollowhead Sliver",
+        "count": 1
+      },
+      {
+        "name": "Striking Sliver",
+        "count": 1
+      },
+      {
+        "name": "Two-Headed Sliver",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Gemhide Sliver",
+        "count": 1
+      },
+      {
+        "name": "Manaweft Sliver",
+        "count": 1
+      },
+      {
+        "name": "Might Sliver",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Quick Sliver",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Venom Sliver",
+        "count": 1
+      },
+      {
+        "name": "Crystalline Sliver",
+        "count": 1
+      },
+      {
+        "name": "Firewake Sliver",
+        "count": 1
+      },
+      {
+        "name": "Harmonic Sliver",
+        "count": 1
+      },
+      {
+        "name": "Hibernation Sliver",
+        "count": 1
+      },
+      {
+        "name": "Lavabelly Sliver",
+        "count": 1
+      },
+      {
+        "name": "Necrotic Sliver",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn",
+        "count": 1
+      },
+      {
+        "name": "Pillar of Origins",
+        "count": 1
+      },
+      {
+        "name": "Flood Plain",
+        "count": 1
+      },
+      {
+        "name": "Frontier Bivouac",
+        "count": 1
+      },
+      {
+        "name": "Grasslands",
+        "count": 1
+      },
+      {
+        "name": "Jungle Shrine",
+        "count": 1
+      },
+      {
+        "name": "Mountain Valley",
+        "count": 1
+      },
+      {
+        "name": "Mystic Monastery",
+        "count": 1
+      },
+      {
+        "name": "Nomad Outpost",
+        "count": 1
+      },
+      {
+        "name": "Opulent Palace",
+        "count": 1
+      },
+      {
+        "name": "Rocky Tar Pit",
+        "count": 1
+      },
+      {
+        "name": "Sandsteppe Citadel",
+        "count": 1
+      },
+      {
+        "name": "Savage Lands",
+        "count": 1
+      },
+      {
+        "name": "Seaside Citadel",
+        "count": 1
+      },
+      {
+        "name": "Secluded Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Island",
+        "count": 2
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Mountain",
+        "count": 2
+      },
+      {
+        "name": "Forest",
+        "count": 3
       }
     ]
   }
