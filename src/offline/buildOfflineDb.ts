@@ -11,6 +11,7 @@ import { computePHash } from './phash.js';
 const DATA_PATH = join(process.cwd(), 'data', 'scryfall-reduced.json');
 const OUTPUT_DIR = join(process.cwd(), 'data', 'offline');
 const CONCURRENCY = 16;
+const MANIFEST_VERSION = 2;
 
 type CardData = {
   card_faces?: Array<{ image_uris?: { art_crop?: string; normal?: string } }>;
@@ -31,11 +32,16 @@ type ReducedDataset = {
 };
 
 type Manifest = {
-  schema: number;
+  buckets: Record<ColorBucket, { count: number; file: string; url?: string }>;
   generated_at: string;
+  generator: {
+    crop_hashes: string[];
+    entry_version: number;
+    visual_buckets: boolean;
+  };
+  schema: number;
   source_updated: string;
   version: string;
-  buckets: Record<ColorBucket, { count: number; file: string; url?: string }>;
 };
 
 async function fetchBuffer(url: string) {
@@ -58,6 +64,7 @@ function getImageUrls(card: CardData): { artUrl?: string; normalUrl?: string } {
   if (card.image_uris) {
     return { artUrl: card.image_uris.art_crop, normalUrl: card.image_uris.normal };
   }
+
   const firstFace = card.card_faces?.[0];
   if (firstFace?.image_uris) {
     return {
@@ -65,34 +72,49 @@ function getImageUrls(card: CardData): { artUrl?: string; normalUrl?: string } {
       normalUrl: firstFace.image_uris.normal,
     };
   }
+
   return {};
 }
 
 async function normalizeArtCrop(buffer: Buffer) {
-  return sharp(buffer).rotate().removeAlpha().resize(320, 230, { fit: 'fill' }).jpeg().toBuffer();
+  return sharp(buffer)
+    .rotate()
+    .removeAlpha()
+    .resize(320, 230, { fit: 'fill' })
+    .jpeg()
+    .toBuffer();
 }
 
-async function processCard(card: CardData): Promise<{ bucket: ColorBucket; entry: OfflineEntry } | null> {
+async function processCard(
+  card: CardData,
+): Promise<{ bucket: ColorBucket; entry: OfflineEntry } | null> {
   const { artUrl, normalUrl } = getImageUrls(card);
   const sourceUrl = artUrl ?? normalUrl;
   if (!sourceUrl) return null;
 
-  const imageBuffer = await fetchBuffer(sourceUrl);
-  if (!imageBuffer) return null;
+  const [primaryBuffer, artBuffer, normalBuffer] = await Promise.all([
+    fetchBuffer(sourceUrl),
+    artUrl && artUrl !== sourceUrl ? fetchBuffer(artUrl) : Promise.resolve(null),
+    normalUrl && normalUrl !== sourceUrl ? fetchBuffer(normalUrl) : Promise.resolve(null),
+  ]);
 
-  const artBuffer = await normalizeArtCrop(imageBuffer);
-  const phash = await computePHash(artBuffer);
+  const resolvedPrimary = primaryBuffer ?? artBuffer ?? normalBuffer;
+  if (!resolvedPrimary) return null;
+
+  const resolvedArt = artBuffer ?? resolvedPrimary;
+  const resolvedNormal = normalBuffer ?? resolvedPrimary;
+
+  const phash = await computePHash(await normalizeArtCrop(resolvedArt));
+  const phashAlt = await computePHash(resolvedNormal);
 
   return {
     bucket: bucketFromCard(card),
     entry: {
-      artUrl: artUrl ?? null,
-      collectorNumber: card.collector_number,
-      id: card.id,
-      lang: card.lang ?? 'en',
+      cn: card.collector_number,
       name: card.name,
-      oracleId: card.oracle_id,
+      oracle_id: card.oracle_id,
       phash,
+      phashAlt,
       set: card.set,
     },
   };
@@ -136,7 +158,7 @@ async function main() {
   let skipped = 0;
   const start = Date.now();
 
-  const results = await runWithConcurrency(dataset.cards, CONCURRENCY, async (card, index) => {
+  const results = await runWithConcurrency(dataset.cards, CONCURRENCY, async (card) => {
     const result = await processCard(card);
     done += 1;
     if (!result) skipped += 1;
@@ -156,10 +178,15 @@ async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true });
 
   const manifest: Manifest = {
-    schema: 1,
+    schema: MANIFEST_VERSION,
     generated_at: new Date().toISOString(),
     source_updated: dataset.last_updated,
     version: new Date().toISOString().slice(0, 10).replace(/-/g, ''),
+    generator: {
+      crop_hashes: ['art_crop', 'normal'],
+      entry_version: 2,
+      visual_buckets: true,
+    },
     buckets: {
       W: { count: buckets.W.length, file: 'cards-W.bin.gz' },
       U: { count: buckets.U.length, file: 'cards-U.bin.gz' },
@@ -179,11 +206,10 @@ async function main() {
     console.log(`✅ Wrote ${bucket} bucket (${buckets[bucket].length} cards)`);
   }
 
-  await writeFile(
-    join(OUTPUT_DIR, 'manifest.json'),
-    JSON.stringify(manifest, null, 2),
-  );
-  console.log('✅ Manifest written to data/offline/manifest.json');
+  const manifestJson = JSON.stringify(manifest, null, 2);
+  await writeFile(join(OUTPUT_DIR, 'manifest.json'), manifestJson);
+  await writeFile(join(OUTPUT_DIR, 'manifest.v2.json'), manifestJson);
+  console.log('✅ Manifest written to data/offline/manifest.json and manifest.v2.json');
 }
 
 main().catch((err) => {
