@@ -69,8 +69,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   );
 
   const blob = await put(fileName, payload, {
-    access: 'private',
-    allowOverwrite: true,
+    access: 'public',
     contentType: 'application/json',
     token: BLOB_READ_WRITE_TOKEN,
   });
