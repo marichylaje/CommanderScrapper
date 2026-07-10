@@ -40,3 +40,10 @@ npm run deleteCollection
 npm run typeSchema
 npm run importCollection
 npm run restartFly
+
+🧪 Scanner pro backend
+npm run buildOfflineDb
+npm run benchmarkOfflineDb
+npm run uploadOfflineDb
+
+La telemetría del scanner se expone en `POST /api/scanner/telemetry` y el manifest offline ahora sirve `manifest.v2.json` con fallback a `manifest.json`.
