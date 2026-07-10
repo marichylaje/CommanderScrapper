@@ -10,9 +10,22 @@ if (!BLOB_READ_WRITE_TOKEN) {
   process.exit(1);
 }
 
-const manifestPath = join(OFFLINE_DIR, 'manifest.json');
-const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+const manifestCandidates = ['manifest.v2.json', 'manifest.json'];
+const manifestFileName = manifestCandidates.find((fileName) => {
+  try {
+    return Boolean(readFileSync(join(OFFLINE_DIR, fileName)));
+  } catch {
+    return false;
+  }
+});
 
+if (!manifestFileName) {
+  console.error('❌ Offline manifest not found in data/offline');
+  process.exit(1);
+}
+
+const manifestPath = join(OFFLINE_DIR, manifestFileName);
+const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
 const version = manifest.version || new Date().toISOString().slice(0, 10).replace(/-/g, '');
 const prefix = `offline-db/${version}`;
 
@@ -31,14 +44,23 @@ for (const [bucket, info] of buckets) {
   manifest.buckets[bucket].url = blob.url;
 }
 
-const manifestBlob = await put(`${prefix}/manifest.json`, JSON.stringify(manifest, null, 2), {
+const manifestJson = JSON.stringify(manifest, null, 2);
+
+const manifestBlob = await put(`${prefix}/manifest.json`, manifestJson, {
   access: 'public',
   allowOverwrite: true,
   contentType: 'application/json',
   token: BLOB_READ_WRITE_TOKEN,
 });
 
-await put(`offline-db/latest.json`, JSON.stringify(manifest, null, 2), {
+await put(`${prefix}/manifest.v2.json`, manifestJson, {
+  access: 'public',
+  allowOverwrite: true,
+  contentType: 'application/json',
+  token: BLOB_READ_WRITE_TOKEN,
+});
+
+await put(`offline-db/latest.json`, manifestJson, {
   access: 'public',
   allowOverwrite: true,
   contentType: 'application/json',
