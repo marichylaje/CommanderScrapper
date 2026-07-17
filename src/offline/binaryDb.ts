@@ -16,6 +16,10 @@ export type EncodedOfflineDb = {
   version: number;
 };
 
+function normalizeEntryString(value: unknown) {
+  return typeof value === 'string' ? value : '';
+}
+
 function splitHash(hex: string) {
   const normalized = hex.replace(/[^0-9a-f]/gi, '').padStart(16, '0').slice(-16);
   return {
@@ -32,10 +36,11 @@ function writeStringTable(entries: OfflineEntry[]) {
   const strings = new Map<string, number>();
   const ordered: string[] = [];
 
-  const remember = (value: string) => {
-    if (!strings.has(value)) {
-      strings.set(value, ordered.length);
-      ordered.push(value);
+  const remember = (value: unknown) => {
+    const normalized = normalizeEntryString(value);
+    if (!strings.has(normalized)) {
+      strings.set(normalized, ordered.length);
+      ordered.push(normalized);
     }
   };
 
@@ -84,10 +89,15 @@ export function encodeOfflineDb(entries: OfflineEntry[]): EncodedOfflineDb {
   offset += 4;
 
   for (const entry of entries) {
-    const setIndex = index.get(entry.set);
-    const cnIndex = index.get(entry.cn);
-    const nameIndex = index.get(entry.name);
-    const oracleIndex = index.get(entry.oracle_id);
+    const set = normalizeEntryString(entry.set);
+    const cn = normalizeEntryString(entry.cn);
+    const name = normalizeEntryString(entry.name);
+    const oracleId = normalizeEntryString(entry.oracle_id);
+
+    const setIndex = index.get(set);
+    const cnIndex = index.get(cn);
+    const nameIndex = index.get(name);
+    const oracleIndex = index.get(oracleId);
 
     if (
       setIndex === undefined ||
