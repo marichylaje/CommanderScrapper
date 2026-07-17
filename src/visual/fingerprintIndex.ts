@@ -211,7 +211,11 @@ type SearchIndices = {
 let searchIndices: SearchIndices | null = null;
 
 function normalizeKey(value?: string): string {
-  return (value ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  return (value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '');
 }
 
 function buildSearchIndices(entries: FingerprintEntry[]): SearchIndices {
