@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import https from 'node:https';
 import http from 'node:http';
 import { join } from 'node:path';
+import zlib from 'node:zlib';
+import readline from 'node:readline';
 import type { ReducedCard } from './schemas/zodSchemas.js';
 
 const BULK_META_URL = 'https://api.scryfall.com/bulk-data/default_cards';
@@ -11,8 +13,14 @@ const UPDATED_TRACKER = './data/last_updated.json';
 
 interface ScryfallMeta {
   updated_at: string;
-  download_uri: string;
+  download_uri?: string | null;
+  jsonl_download_uri?: string | null;
 }
+
+const SCRYFALL_HEADERS = {
+  'User-Agent': 'CommanderScrapper/1.0 (MTG Commander Deck Builder app; contact via GitHub)',
+  Accept: 'application/json',
+};
 
 function fileExists(path: string): boolean {
   return fs.existsSync(path);
@@ -27,12 +35,31 @@ function writeJson(filePath: string, data: unknown): void {
 }
 
 async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
-  const res = await fetch(BULK_META_URL, {
-    headers: { 'User-Agent': 'CommanderScrapper/1.0 (MTG Commander Deck Builder app; contact via GitHub)' },
-    signal: AbortSignal.timeout(30_000),
-  });
-  if (!res.ok) throw new Error(`❌ Error al obtener metadata de Scryfall (HTTP ${res.status}).`);
-  return (await res.json()) as ScryfallMeta;
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(BULK_META_URL, {
+        headers: SCRYFALL_HEADERS,
+        signal: AbortSignal.timeout(30_000),
+      });
+      if (!res.ok) throw new Error(`❌ Error al obtener metadata de Scryfall (HTTP ${res.status}).`);
+      return (await res.json()) as ScryfallMeta;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 2_000));
+      }
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error('❌ Error desconocido al obtener metadata de Scryfall.');
+}
+
+function pickBulkUrl(meta: ScryfallMeta): string {
+  const candidate = meta.jsonl_download_uri ?? meta.download_uri;
+  if (!candidate || typeof candidate !== 'string') {
+    throw new Error('❌ Metadata de Scryfall sin URL de descarga utilizable (download_uri/jsonl_download_uri).');
+  }
+  return candidate;
 }
 
 /**
@@ -41,12 +68,17 @@ async function fetchScryfallMetadata(): Promise<ScryfallMeta> {
  */
 function downloadFile(url: string, destPath: string): Promise<void> {
   return new Promise((resolve, reject) => {
+    if (!url || typeof url !== 'string') {
+      reject(new Error('URL de descarga inválida o vacía.'));
+      return;
+    }
+
     let totalBytes = 0;
     let lastLog = 0;
 
     function doGet(targetUrl: string): void {
       const mod = targetUrl.startsWith('https://') ? https : http;
-      mod.get(targetUrl, (res) => {
+      mod.get(targetUrl, { headers: SCRYFALL_HEADERS }, (res) => {
         if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location) {
           doGet(res.headers.location);
           return;
@@ -80,6 +112,57 @@ function downloadFile(url: string, destPath: string): Promise<void> {
 }
 
 /**
+ * Stream-parses a JSONL (one JSON per line) file, calling onItem for each card.
+ */
+function streamJsonLines(filePath: string, onItem: (item: unknown) => void): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const input = fs.createReadStream(filePath, { encoding: 'utf8' });
+    const rl = readline.createInterface({ input, crlfDelay: Infinity });
+
+    let processed = 0;
+    let lastLog = Date.now();
+
+    rl.on('line', (line: string) => {
+      if (!line || !line.trim()) return;
+      try {
+        onItem(JSON.parse(line));
+        processed++;
+        const now = Date.now();
+        if (now - lastLog > 5000) {
+          process.stdout.write(`   ⚙️  Procesadas ${processed.toLocaleString()} cartas (JSONL)...\n`);
+          lastLog = now;
+        }
+      } catch {
+        // Ignoramos líneas puntualmente corruptas
+      }
+    });
+
+    rl.on('close', () => {
+      process.stdout.write(`   ✅ Parseadas ${processed.toLocaleString()} cartas en total\n`);
+      resolve();
+    });
+
+    rl.on('error', reject);
+    input.on('error', reject);
+  });
+}
+
+function decompressGzipFile(sourcePath: string, targetPath: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const source = fs.createReadStream(sourcePath);
+    const target = fs.createWriteStream(targetPath);
+    const gunzip = zlib.createGunzip();
+
+    source.on('error', reject);
+    target.on('error', reject);
+    gunzip.on('error', reject);
+    target.on('finish', () => resolve());
+
+    source.pipe(gunzip).pipe(target);
+  });
+}
+
+/**
  * Stream-parses a large JSON array from a file, calling onItem for each element.
  * Never loads the full file into memory — works even for 500 MB+ files.
  */
@@ -99,9 +182,11 @@ function streamJsonArray(filePath: string, onItem: (item: unknown) => void): Pro
     let processed = 0;
     let lastLog = Date.now();
 
-    readStream.on('data', (chunk: string) => {
-      for (let i = 0; i < chunk.length; i++) {
-        const ch = chunk[i];
+    readStream.on('data', (chunk: string | Buffer) => {
+      const textChunk = typeof chunk === 'string' ? chunk : chunk.toString('utf8');
+
+      for (let i = 0; i < textChunk.length; i++) {
+        const ch = textChunk[i];
 
         if (escapeNext) {
           escapeNext = false;
@@ -131,7 +216,7 @@ function streamJsonArray(filePath: string, onItem: (item: unknown) => void): Pro
         } else if (ch === '}') {
           depth--;
           if (depth === 0) {
-            objectParts.push(chunk.slice(objectChunkStart, i + 1));
+            objectParts.push(textChunk.slice(objectChunkStart, i + 1));
             try {
               onItem(JSON.parse(objectParts.join('')));
               processed++;
@@ -149,7 +234,7 @@ function streamJsonArray(filePath: string, onItem: (item: unknown) => void): Pro
 
       // If we're mid-object at end of chunk, save the tail for the next chunk
       if (depth > 0 && objectChunkStart >= 0) {
-        objectParts.push(chunk.slice(objectChunkStart));
+        objectParts.push(textChunk.slice(objectChunkStart));
         objectChunkStart = 0; // next chunk continues from its start
       }
     });
@@ -241,15 +326,31 @@ async function main(): Promise<void> {
       return;
     }
 
+    const bulkUrl = pickBulkUrl(meta);
+
     console.log('📥 Archivo actualizado. Descargando bulk data...');
-    await downloadFile(meta.download_uri, TEMP_BULK_FILE);
+    await downloadFile(bulkUrl, TEMP_BULK_FILE);
     console.log('✅ Descarga completada. Procesando cartas...');
 
     // Stream-parse the bulk file and collect reduced cards
     const rawCards: ReducedCard[] = [];
-    await streamJsonArray(TEMP_BULK_FILE, (item) => {
-      rawCards.push(item as ReducedCard);
-    });
+    if (bulkUrl.endsWith('.jsonl.gz')) {
+      const decompressedPath = TEMP_BULK_FILE.replace(/\.json$/, '.jsonl');
+      console.log('🧩 Formato detectado: JSONL comprimido. Descomprimiendo...');
+      await decompressGzipFile(TEMP_BULK_FILE, decompressedPath);
+
+      console.log('🧩 Parseando JSONL por stream...');
+      await streamJsonLines(decompressedPath, (item) => {
+        rawCards.push(item as ReducedCard);
+      });
+
+      try { fs.unlinkSync(decompressedPath); } catch { /* ignore */ }
+    } else {
+      console.log('🧩 Formato detectado: JSON array clásico. Parseando por stream...');
+      await streamJsonArray(TEMP_BULK_FILE, (item) => {
+        rawCards.push(item as ReducedCard);
+      });
+    }
 
     // Clean up the temp file
     try { fs.unlinkSync(TEMP_BULK_FILE); } catch { /* ignore */ }

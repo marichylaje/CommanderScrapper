@@ -11,6 +11,10 @@ on:
         required: false
         default: 'false'
 
+concurrency:
+  group: fingerprint-offline-db-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   check-and-update:
     name: Check Scryfall freshness and rebuild if needed
@@ -37,13 +41,31 @@ jobs:
           FINGERPRINT_INDEX_URL: ${{ secrets.FINGERPRINT_INDEX_URL }}
           FORCE_REBUILD: ${{ github.event.inputs.force }}
 
+      - name: Preflight Scryfall metadata (default_cards)
+        if: steps.freshness.outputs.needs_update == 'true'
+        run: |
+          node -e "(async () => { const res = await fetch('https://api.scryfall.com/bulk-data/default_cards', { headers: { 'User-Agent': 'CommanderScrapper/1.0 (CI preflight)', 'Accept': 'application/json' } }); if (!res.ok) throw new Error('Scryfall metadata HTTP ' + res.status); const meta = await res.json(); const url = meta?.jsonl_download_uri || meta?.download_uri; if (!url) throw new Error('No jsonl_download_uri/download_uri for default_cards'); console.log('Scryfall default_cards URL OK:', url); })().catch((e) => { console.error(e); process.exit(1); });"
+
       - name: Download Scryfall bulk data
         if: steps.freshness.outputs.needs_update == 'true'
         run: npm run scrape
 
       - name: Reduce to fingerprint-ready dataset
         if: steps.freshness.outputs.needs_update == 'true'
-        run: npm run reduce
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "Intento $attempt/3: npm run reduce"
+            if npm run reduce; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "Reintentando en 20s por fallo transitorio..."
+              sleep 20
+            fi
+          done
+          echo "Fallo definitivo en npm run reduce tras 3 intentos"
+          exit 1
 
       - name: Upload scryfall-reduced.json to Vercel Blob
         if: steps.freshness.outputs.needs_update == 'true'

@@ -12,6 +12,10 @@ on:
     - cron: "0 3 */2 * *"
   workflow_dispatch:
 
+concurrency:
+  group: commander-data-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   # =========================================
   # 🌟 NUEVO JOB: Actualización diaria de precios
@@ -41,8 +45,25 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Preflight Scryfall metadata (oracle_cards)
+        run: |
+          node -e "(async () => { const res = await fetch('https://api.scryfall.com/bulk-data', { headers: { 'User-Agent': 'CommanderScrapper/1.0 (CI preflight)', 'Accept': 'application/json' } }); if (!res.ok) throw new Error('Scryfall metadata HTTP ' + res.status); const body = await res.json(); const oracle = (body.data || []).find((x) => x.type === 'oracle_cards'); const url = oracle?.jsonl_download_uri || oracle?.download_uri; if (!url) throw new Error('No jsonl_download_uri/download_uri for oracle_cards'); console.log('Scryfall oracle_cards URL OK:', url); })().catch((e) => { console.error(e); process.exit(1); });"
+
       - name: Ejecutar actualización de precios de Scryfall
-        run: npm run prices
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "Intento $attempt/3: npm run prices"
+            if npm run prices; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "Reintentando en 15s por fallo transitorio..."
+              sleep 15
+            fi
+          done
+          echo "Fallo definitivo en npm run prices tras 3 intentos"
+          exit 1
 
       - name: Auto-commit solo del archivo de precios
         uses: stefanzweifel/git-auto-commit-action@v6
