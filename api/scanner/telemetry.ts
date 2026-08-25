@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { randomUUID } from 'node:crypto';
 import { put } from '@vercel/blob';
@@ -39,6 +40,8 @@ function collectEvents(body: unknown): TelemetryEvent[] | null {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
@@ -76,3 +79,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   return res.status(202).json({ ok: true, stored: events.length, url: blob.url });
 }
+
+
+

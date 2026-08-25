@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { access, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -40,6 +41,8 @@ async function readLocalManifest() {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Only GET allowed' });
   }
@@ -59,7 +62,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(500).json({ error: 'Manifest unavailable' });
   } catch (error: any) {
-    console.error('💥 Failed to serve offline manifest:', error?.message);
+    console.error('ðŸ’¥ Failed to serve offline manifest:', error?.message);
     return res.status(500).json({ error: 'Manifest unavailable' });
   }
 }
+
+
+

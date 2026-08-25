@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
 /**
  * api/cards/visual-rerank.ts
  *
@@ -6,14 +7,14 @@
  * Professional reranking endpoint for ambiguous scan cases.
  *
  * Designed as the second stage of a hybrid offline/online pipeline:
- *   1. Mobile matches offline via 64-bit pHash → top-K oracle IDs
+ *   1. Mobile matches offline via 64-bit pHash â†’ top-K oracle IDs
  *   2. Mobile uploads image + oracle IDs + accumulated OCR to this endpoint
- *   3. Server re-scores using 256-bit dHash (4× more discriminating) and OCR filtering
+ *   3. Server re-scores using 256-bit dHash (4Ã— more discriminating) and OCR filtering
  *   4. Returns ranked candidates with full confidence breakdown
  *
  * Input (multipart/form-data):
  *   - photo:       image file (JPEG)
- *   - cropX/Y/Width/Height: normalized crop region (0–1)
+ *   - cropX/Y/Width/Height: normalized crop region (0â€“1)
  *   - ocrName:     accumulated OCR card name (optional)
  *   - ocrSet:      accumulated OCR set code (optional)
  *   - ocrCn:       accumulated OCR collector number (optional)
@@ -98,6 +99,8 @@ export const config = {
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
@@ -135,7 +138,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const stage = oracleIds?.length ? 'rerank' : 'global';
 
-    console.log('🔀 visual-rerank: request', {
+    console.log('ðŸ”€ visual-rerank: request', {
       requestId,
       crop,
       oracleIdCount: oracleIds?.length ?? 0,
@@ -146,7 +149,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const fingerprint = await buildFingerprintFromBuffer(payload.photoBuffer, crop);
 
-    console.log('🧬 visual-rerank: fingerprint', {
+    console.log('ðŸ§¬ visual-rerank: fingerprint', {
       requestId,
       artHash: fingerprint.artHash.slice(0, 8),
       fullHash: fingerprint.fullHash.slice(0, 8),
@@ -167,7 +170,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       artHashDistance: m.artHashDistance,
     }));
 
-    console.log('🎯 visual-rerank: matches', {
+    console.log('ðŸŽ¯ visual-rerank: matches', {
       requestId,
       total: topMatches.length,
       stage,
@@ -198,7 +201,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           const found = await findCardById(match.entry.id);
           if (found) card = found;
         } catch {
-          // Dataset unavailable — use fingerprint entry data as fallback
+          // Dataset unavailable â€” use fingerprint entry data as fallback
         }
         return {
           artHashDistance: match.artHashDistance,
@@ -232,7 +235,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   } catch (error: any) {
     console.error(
-      '💥 ERROR in /api/cards/visual-rerank:',
+      'ðŸ’¥ ERROR in /api/cards/visual-rerank:',
       requestId,
       error?.message,
       error?.stack,
@@ -243,3 +246,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 }
+
+
+

@@ -1,5 +1,7 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+﻿import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Client } from 'typesense';
+import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
+
 
 interface ParsedQuery {
   original: string;
@@ -9,6 +11,8 @@ interface ParsedQuery {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
@@ -24,7 +28,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   });
 
   const normalize = (str: string) =>
-    (str ?? '').toLowerCase().replace(/[\u2019’']/g, "'").normalize('NFKC').trim();
+    (str ?? '').toLowerCase().replace(/[\u2019â€™']/g, "'").normalize('NFKC').trim();
 
   // Parsear las consultas entrantes
   const parsedQueries: ParsedQuery[] = rawNames.map((name) => {
@@ -47,17 +51,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const seen = new Set<string>();
   const seenKey = (doc: any) => doc.id;
 
-  // Aumentar el tamaño del bloque a 100 para procesamiento paralelo masivo
+  // Aumentar el tamaÃ±o del bloque a 100 para procesamiento paralelo masivo
   const chunkSize = 100;
   const unresolvedQueries: ParsedQuery[] = [];
 
   for (let i = 0; i < parsedQueries.length; i += chunkSize) {
     const batch = parsedQueries.slice(i, i + chunkSize);
 
-    // Preparar peticiones de búsqueda paralela en Typesense
+    // Preparar peticiones de bÃºsqueda paralela en Typesense
     const searches = batch.map((item) => ({
       q: item.cleanName,
-      query_by: 'name,face_name,flavor_name', // Buscar en todos los campos relevantes de forma simultánea
+      query_by: 'name,face_name,flavor_name', // Buscar en todos los campos relevantes de forma simultÃ¡nea
       per_page: 10,
       num_typos: 0,
       prefix: 'false',
@@ -75,7 +79,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const hits = batchResults.results[j]?.hits || [];
         let resolvedDoc: any = null;
 
-        // 1) Si se solicita un set y collector number específico, buscar coincidencia exacta
+        // 1) Si se solicita un set y collector number especÃ­fico, buscar coincidencia exacta
         if (query.set && query.cn) {
           const exactPrint = hits.find(
             (hit: any) =>
@@ -88,7 +92,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           }
         }
 
-        // 2) Si no se solicitó una versión específica, buscar por coincidencia de nombre general en Typesense
+        // 2) Si no se solicitÃ³ una versiÃ³n especÃ­fica, buscar por coincidencia de nombre general en Typesense
         if (!resolvedDoc && !(query.set && query.cn)) {
           // Coincidencia exacta de nombre
           const nameMatch = hits.find(
@@ -135,12 +139,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             results.push(resolvedDoc);
           }
         } else {
-          // Si no se resolvió con Typesense local, guardar para fallback grupal de Scryfall
+          // Si no se resolviÃ³ con Typesense local, guardar para fallback grupal de Scryfall
           unresolvedQueries.push(query);
         }
       }
     } catch (err: any) {
-      console.error('💥 Error performing Typesense multiSearch batch:', err.message);
+      console.error('ðŸ’¥ Error performing Typesense multiSearch batch:', err.message);
       // En caso de error general en el lote de Typesense, marcar todo el lote como unresolved
       unresolvedQueries.push(...batch);
     }
@@ -148,7 +152,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // Fallback grupal de Scryfall de alto rendimiento
   if (unresolvedQueries.length > 0) {
-    console.log(`🔎 Resolviendo ${unresolvedQueries.length} cartas en Scryfall desde el backend...`);
+    console.log(`ðŸ”Ž Resolviendo ${unresolvedQueries.length} cartas en Scryfall desde el backend...`);
     const scryfallChunkSize = 75;
 
     for (let i = 0; i < unresolvedQueries.length; i += scryfallChunkSize) {
@@ -182,13 +186,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           }
         } else {
           const errText = await scryfallRes.text();
-          console.error(`❌ Scryfall fallback failed for batch:`, errText);
+          console.error(`âŒ Scryfall fallback failed for batch:`, errText);
         }
       } catch (err: any) {
-        console.error(`❌ Error in Scryfall fallback batch fetch:`, err.message);
+        console.error(`âŒ Error in Scryfall fallback batch fetch:`, err.message);
       }
 
-      // Pequeño retardo si hay más de un lote de Scryfall para respetar los límites de tasa de Scryfall
+      // PequeÃ±o retardo si hay mÃ¡s de un lote de Scryfall para respetar los lÃ­mites de tasa de Scryfall
       if (i + scryfallChunkSize < unresolvedQueries.length) {
         await new Promise((r) => setTimeout(r, 100));
       }
@@ -197,3 +201,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   return res.status(200).json(results);
 }
+
+
+

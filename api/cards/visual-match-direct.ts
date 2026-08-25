@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
 /**
  * api/cards/visual-match-direct.ts
  *
@@ -82,6 +83,8 @@ export const config = {
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
@@ -105,7 +108,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       y: payload.cropY ?? 0,
     };
 
-    console.log('📷 visual-match-direct: request', {
+    console.log('ðŸ“· visual-match-direct: request', {
       requestId,
       crop,
       bytes: payload.photoBuffer.length,
@@ -114,14 +117,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Compute fingerprint of the uploaded image
     const fingerprint = await buildFingerprintFromBuffer(payload.photoBuffer, crop);
 
-    console.log('🧬 visual-match-direct: fingerprint', {
+    console.log('ðŸ§¬ visual-match-direct: fingerprint', {
       requestId,
       artHash: fingerprint.artHash.slice(0, 8),
       fullHash: fingerprint.fullHash.slice(0, 8),
       histogramSize: fingerprint.histogram.length,
     });
 
-    // Build OCR hint from form fields — pre-filters index before Hamming scan
+    // Build OCR hint from form fields â€” pre-filters index before Hamming scan
     const ocr: OcrHint | null = (payload.ocrName || payload.ocrSet || payload.ocrCn)
       ? {
           collectorNumber: payload.ocrCn,
@@ -131,10 +134,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       : null;
 
     if (ocr) {
-      console.log('🔤 visual-match-direct: ocr hint', { requestId, ocr });
+      console.log('ðŸ”¤ visual-match-direct: ocr hint', { requestId, ocr });
     }
 
-    // Find nearest neighbors — OCR pre-filtering reduces O(70K) to O(10–200)
+    // Find nearest neighbors â€” OCR pre-filtering reduces O(70K) to O(10â€“200)
     const topMatches = await findBestVisualMatchAdvanced(fingerprint, TOP_K, ocr);
 
     const matchSummary = topMatches.slice(0, 3).map((match) => ({
@@ -147,7 +150,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       colorDistance: Number(match.colorDistance.toFixed(4)),
     }));
 
-    console.log('🎯 visual-match-direct: matches', {
+    console.log('ðŸŽ¯ visual-match-direct: matches', {
       requestId,
       total: topMatches.length,
       top: matchSummary,
@@ -169,7 +172,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           const found = await findCardById(match.entry.id);
           if (found) card = found;
         } catch {
-          // Dataset unavailable — use fingerprint entry data as fallback
+          // Dataset unavailable â€” use fingerprint entry data as fallback
         }
         return {
           artHashDistance: match.artHashDistance,
@@ -198,10 +201,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/visual-match-direct:', requestId, error?.message, error?.stack);
+    console.error('ðŸ’¥ ERROR in /api/cards/visual-match-direct:', requestId, error?.message, error?.stack);
     return res.status(500).json({
       error: 'Internal Server Error',
       details: error?.message ?? String(error),
     });
   }
 }
+
+
+

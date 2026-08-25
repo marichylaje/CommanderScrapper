@@ -1,6 +1,10 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+﻿import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   try {
     const oracleId = req.query.oracle_id?.toString().trim();
     const name = req.query.name?.toString().trim();
@@ -16,12 +20,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       scryfallUrl += encodeURIComponent(`!"${name}" unique:prints`);
     }
 
-    console.log(`📡 Fetching prints from Scryfall: ${scryfallUrl}`);
+    console.log(`ðŸ“¡ Fetching prints from Scryfall: ${scryfallUrl}`);
     const response = await fetch(scryfallUrl);
 
     if (!response.ok) {
       const text = await response.text();
-      console.warn(`⚠️ Scryfall prints search failed:`, text);
+      console.warn(`âš ï¸ Scryfall prints search failed:`, text);
       return res.status(response.status).send(text);
     }
 
@@ -36,7 +40,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json(prints);
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/prints:', error.message, error.stack);
+    console.error('ðŸ’¥ ERROR in /api/cards/prints:', error.message, error.stack);
     return res.status(500).json({ error: 'Internal Server Error', details: error.message });
   }
 }
+
+
+

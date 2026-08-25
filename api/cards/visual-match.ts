@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Busboy from 'busboy';
 
@@ -17,7 +18,7 @@ type UploadPayload = {
 const normalize = (value?: string) =>
   (value ?? '')
     .toLowerCase()
-    .replace(/[\u2019’']/g, "'")
+    .replace(/[\u2019â€™']/g, "'")
     .normalize('NFKC')
     .trim();
 
@@ -36,7 +37,7 @@ async function fetchPrints({ oracleId, name }: { name?: string; oracleId?: strin
     return localResults;
   }
 
-  console.warn(`⚠️ No local printings found for oracleId=${oracleId}, name="${name}". Falling back to Scryfall API.`);
+  console.warn(`âš ï¸ No local printings found for oracleId=${oracleId}, name="${name}". Falling back to Scryfall API.`);
   
   const query = oracleId
     ? `oracle_id:${oracleId} unique:prints`
@@ -114,6 +115,8 @@ export const config = {
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
   }
@@ -173,9 +176,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/visual-match:', error?.message, error?.stack);
+    console.error('ðŸ’¥ ERROR in /api/cards/visual-match:', error?.message, error?.stack);
     return res
       .status(500)
       .json({ error: 'Internal Server Error', details: error?.message ?? String(error) });
   }
 }
+
+
+

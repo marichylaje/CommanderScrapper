@@ -1,3 +1,4 @@
+﻿import { applyCors, handleCorsPreflight } from './_lib/cors.js';
 // api/cards.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { Client } from 'typesense';
@@ -12,6 +13,8 @@ type VercelResponse = ServerResponse & {
 };
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   try {
     const client = new Client({
       nodes: [
@@ -31,7 +34,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     }
 
     const normalize = (s: string) =>
-      (s ?? '').toLowerCase().replace(/[\u2019’']/g, "'").normalize('NFKC').trim();
+      (s ?? '').toLowerCase().replace(/[\u2019â€™']/g, "'").normalize('NFKC').trim();
 
     // 1) Buscar por "name"
     const results = await client.collections('cards').documents().search({
@@ -41,7 +44,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       num_typos: 0,
       prefix: 'false',
       exhaustive_search: true,
-      // sort_by: 'released_at:desc', // opcional: hace determinista la versión elegida
+      // sort_by: 'released_at:desc', // opcional: hace determinista la versiÃ³n elegida
     });
 
     const exactMatch = results.hits?.find(
@@ -68,7 +71,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     );
 
     if (faceMatch) {
-      console.warn(`⚠️ Carta encontrada por face_name: "${name}"`);
+      console.warn(`âš ï¸ Carta encontrada por face_name: "${name}"`);
       return res.status(200).json([faceMatch.document]);
     }
 
@@ -88,11 +91,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     );
 
     if (flavorMatch) {
-      console.warn(`⚠️ Carta encontrada por flavor_name: "${name}"`);
+      console.warn(`âš ï¸ Carta encontrada por flavor_name: "${name}"`);
       return res.status(200).json([flavorMatch.document]);
     }
 
-    // 🔁 Fallback final por "face_flavor_names"
+    // ðŸ” Fallback final por "face_flavor_names"
     const faceFlavorResults = await client
       .collections('cards')
       .documents()
@@ -111,15 +114,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     );
 
     if (ffMatch) {
-      console.warn(`⚠️ Carta encontrada por face_flavor_names: "${name}"`);
+      console.warn(`âš ï¸ Carta encontrada por face_flavor_names: "${name}"`);
       return res.status(200).json([ffMatch.document]);
     }
 
-    console.error(`❌ Carta no encontrada en DB: "${name}"`);
+    console.error(`âŒ Carta no encontrada en DB: "${name}"`);
     return res.status(404).json({ error: 'Card not found' });
 
   } catch (error: any) {
-    console.error('💥 ERROR:', error.message, error.stack);
+    console.error('ðŸ’¥ ERROR:', error.message, error.stack);
     res.status(500).json({ error: 'Internal Server Error', details: error.message });
   }
 }
+
+
+
