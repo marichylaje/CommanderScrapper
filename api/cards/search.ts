@@ -1,7 +1,11 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+﻿import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Client } from 'typesense';
+import { applyCors, handleCorsPreflight } from '../_lib/cors.js';
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  applyCors(req, res);
+  if (handleCorsPreflight(req, res)) return;
   try {
     const q = req.query.q?.toString().trim();
     if (!q) {
@@ -18,7 +22,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     let found = 0;
     let hasMore = false;
 
-    // 1. Usar Typesense local si y sólo si se busca un comandante específico (optimización extrema)
+    // 1. Usar Typesense local si y sÃ³lo si se busca un comandante especÃ­fico (optimizaciÃ³n extrema)
     if (isCommander) {
       try {
         const client = new Client({
@@ -55,7 +59,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         found = results.found ?? 0;
         hasMore = (page * perPage) < found;
       } catch (err: any) {
-        console.warn('⚠️ Typesense local search failed, falling back to Scryfall:', err.message);
+        console.warn('âš ï¸ Typesense local search failed, falling back to Scryfall:', err.message);
       }
     }
 
@@ -88,7 +92,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           }
         }
       } catch (err: any) {
-        console.error('❌ Scryfall search query failed:', err.message);
+        console.error('âŒ Scryfall search query failed:', err.message);
       }
     }
 
@@ -108,7 +112,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       next_page,
     });
   } catch (error: any) {
-    console.error('💥 ERROR in /api/cards/search:', error.message, error.stack);
+    console.error('ðŸ’¥ ERROR in /api/cards/search:', error.message, error.stack);
     return res.status(500).json({ error: 'Internal Server Error', details: error.message });
   }
 }
+
+
+
