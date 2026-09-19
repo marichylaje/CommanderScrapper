@@ -1,5 +1,356 @@
 [
   {
+    "name": "Legends' Legacy",
+    "commander": "Dihada, Binder of Wills",
+    "expansion": "Dominaria United Commander",
+    "cards": [
+      {
+        "name": "Adriana, Captain of the Guard",
+        "count": 1
+      },
+      {
+        "name": "Alesha, Who Smiles at Death",
+        "count": 1
+      },
+      {
+        "name": "Anafenza, Kin-Tree Spirit",
+        "count": 1
+      },
+      {
+        "name": "Arvad the Cursed",
+        "count": 1
+      },
+      {
+        "name": "Ashling the Pilgrim",
+        "count": 1
+      },
+      {
+        "name": "Bell Borca, Spectral Sergeant",
+        "count": 1
+      },
+      {
+        "name": "Captain Lannery Storm",
+        "count": 1
+      },
+      {
+        "name": "Kothophed, Soul Hoarder",
+        "count": 1
+      },
+      {
+        "name": "Drana, Liberator of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Etali, Primal Storm",
+        "count": 1
+      },
+      {
+        "name": "Garna, the Bloodflame",
+        "count": 1
+      },
+      {
+        "name": "Jazal Goldmane",
+        "count": 1
+      },
+      {
+        "name": "Josu Vess, Lich Knight",
+        "count": 1
+      },
+      {
+        "name": "Kari Zev, Skyship Raider",
+        "count": 1
+      },
+      {
+        "name": "Krenko, Tin Street Kingpin",
+        "count": 1
+      },
+      {
+        "name": "Neheb, Dreadhorde Champion",
+        "count": 1
+      },
+      {
+        "name": "Odric, Lunarch Marshal",
+        "count": 1
+      },
+      {
+        "name": "Tajic, Blade of the Legion",
+        "count": 1
+      },
+      {
+        "name": "Teshar, Ancestor's Apostle",
+        "count": 1
+      },
+      {
+        "name": "Traxos, Scourge of Kroog",
+        "count": 1
+      },
+      {
+        "name": "Zetalpa, Primal Dawn",
+        "count": 1
+      },
+      {
+        "name": "Primevals' Glorious Rebirth",
+        "count": 1
+      },
+      {
+        "name": "Urza's Ruinous Blast",
+        "count": 1
+      },
+      {
+        "name": "Faithless Looting",
+        "count": 1
+      },
+      {
+        "name": "Kaya's Wrath",
+        "count": 1
+      },
+      {
+        "name": "Night's Whisper",
+        "count": 1
+      },
+      {
+        "name": "Read the Bones",
+        "count": 1
+      },
+      {
+        "name": "Ambition's Cost",
+        "count": 1
+      },
+      {
+        "name": "Bedevil",
+        "count": 1
+      },
+      {
+        "name": "Generous Gift",
+        "count": 1
+      },
+      {
+        "name": "Hero's Downfall",
+        "count": 1
+      },
+      {
+        "name": "Mortify",
+        "count": 1
+      },
+      {
+        "name": "Thrill of Possibility",
+        "count": 1
+      },
+      {
+        "name": "Unbreakable Formation",
+        "count": 1
+      },
+      {
+        "name": "Wear // Tear",
+        "count": 1
+      },
+      {
+        "name": "Blackblade Reforged",
+        "count": 1
+      },
+      {
+        "name": "Bontu's Monument",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Hazoret's Monument",
+        "count": 1
+      },
+      {
+        "name": "Hedron Archive",
+        "count": 1
+      },
+      {
+        "name": "Hero's Blade",
+        "count": 1
+      },
+      {
+        "name": "Heroes' Podium",
+        "count": 1
+      },
+      {
+        "name": "Honor-Worn Shaku",
+        "count": 1
+      },
+      {
+        "name": "Oketra's Monument",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Chosen",
+        "count": 1
+      },
+      {
+        "name": "Tenza, Godo's Maul",
+        "count": 1
+      },
+      {
+        "name": "The Circle of Loyalty",
+        "count": 1
+      },
+      {
+        "name": "Day of Destiny",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Boros Garrison",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Dragonskull Summit",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Foreboding Ruins",
+        "count": 1
+      },
+      {
+        "name": "Geier Reach Sanitarium",
+        "count": 1
+      },
+      {
+        "name": "Mikokoro, Center of the Sea",
+        "count": 1
+      },
+      {
+        "name": "Mobilized District",
+        "count": 1
+      },
+      {
+        "name": "Nomad Outpost",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Basilica",
+        "count": 1
+      },
+      {
+        "name": "Rakdos Carnarium",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Shivan Gorge",
+        "count": 1
+      },
+      {
+        "name": "Shizo, Death's Storehouse",
+        "count": 1
+      },
+      {
+        "name": "Smoldering Marsh",
+        "count": 1
+      },
+      {
+        "name": "Temple of Malice",
+        "count": 1
+      },
+      {
+        "name": "Temple of Silence",
+        "count": 1
+      },
+      {
+        "name": "Temple of Triumph",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Tyrite Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos",
+        "count": 1
+      },
+      {
+        "name": "Shanid, Sleepers' Scourge",
+        "count": 1
+      },
+      {
+        "name": "Zeriam, Golden Wind",
+        "count": 1
+      },
+      {
+        "name": "Bladewing, Deathless Tyrant",
+        "count": 1
+      },
+      {
+        "name": "Cadric, Soul Kindler",
+        "count": 1
+      },
+      {
+        "name": "Gerrard's Hourglass Pendant",
+        "count": 1
+      },
+      {
+        "name": "Moira, Urborg Haunt",
+        "count": 1
+      },
+      {
+        "name": "The Peregrine Dynamo",
+        "count": 1
+      },
+      {
+        "name": "Verrak, Warped Sengir",
+        "count": 1
+      },
+      {
+        "name": "The Reaver Cleaver",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      },
+      {
+        "name": "Plains",
+        "count": 6
+      },
+      {
+        "name": "Swamp",
+        "count": 5
+      }
+    ]
+  },
+  {
     "name": "Painbow",
     "commander": "Jared Carthalion",
     "expansion": "Dominaria United Commander",
@@ -1050,293 +1401,6 @@
   },
   {
     "name": "Necron Dynasties",
-    "commander": "Szarekh, the Silent King",
-    "expansion": "Warhammer 40,000 Commander",
-    "cards": [
-      {
-        "name": "Beacon of Unrest",
-        "count": 1
-      },
-      {
-        "name": "Living Death",
-        "count": 1
-      },
-      {
-        "name": "Mutilate",
-        "count": 1
-      },
-      {
-        "name": "Dread Return",
-        "count": 1
-      },
-      {
-        "name": "Defile",
-        "count": 1
-      },
-      {
-        "name": "Darkness",
-        "count": 1
-      },
-      {
-        "name": "Go for the Throat",
-        "count": 1
-      },
-      {
-        "name": "Caged Sun",
-        "count": 1
-      },
-      {
-        "name": "Endless Atlas",
-        "count": 1
-      },
-      {
-        "name": "Gilded Lotus",
-        "count": 1
-      },
-      {
-        "name": "Mystic Forge",
-        "count": 1
-      },
-      {
-        "name": "Sculpting Steel",
-        "count": 1
-      },
-      {
-        "name": "Cranial Plating",
-        "count": 1
-      },
-      {
-        "name": "Hedron Archive",
-        "count": 1
-      },
-      {
-        "name": "Mask of Memory",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Commander's Sphere",
-        "count": 1
-      },
-      {
-        "name": "Mind Stone",
-        "count": 1
-      },
-      {
-        "name": "Thought Vessel",
-        "count": 1
-      },
-      {
-        "name": "Unstable Obelisk",
-        "count": 1
-      },
-      {
-        "name": "Wayfarer's Bauble",
-        "count": 1
-      },
-      {
-        "name": "Barren Moor",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape",
-        "count": 1
-      },
-      {
-        "name": "Reliquary Tower",
-        "count": 1
-      },
-      {
-        "name": "Desert of the Glorified",
-        "count": 1
-      },
-      {
-        "name": "Polluted Mire",
-        "count": 1
-      },
-      {
-        "name": "Vault of Whispers",
-        "count": 1
-      },
-      {
-        "name": "Swamp",
-        "count": 30
-      },
-      {
-        "name": "Imotekh the Stormlord",
-        "count": 1
-      },
-      {
-        "name": "Anrakyr the Traveller",
-        "count": 1
-      },
-      {
-        "name": "Biotransference",
-        "count": 1
-      },
-      {
-        "name": "Chronomancer",
-        "count": 1
-      },
-      {
-        "name": "Cryptek",
-        "count": 1
-      },
-      {
-        "name": "Illuminor Szeras",
-        "count": 1
-      },
-      {
-        "name": "Lokhust Heavy Destroyer",
-        "count": 1
-      },
-      {
-        "name": "Lychguard",
-        "count": 1
-      },
-      {
-        "name": "Necron Deathmark",
-        "count": 1
-      },
-      {
-        "name": "Necron Overlord",
-        "count": 1
-      },
-      {
-        "name": "Out of the Tombs",
-        "count": 1
-      },
-      {
-        "name": "Royal Warden",
-        "count": 1
-      },
-      {
-        "name": "Shard of the Nightbringer",
-        "count": 1
-      },
-      {
-        "name": "Shard of the Void Dragon",
-        "count": 1
-      },
-      {
-        "name": "Skorpekh Lord",
-        "count": 1
-      },
-      {
-        "name": "Technomancer",
-        "count": 1
-      },
-      {
-        "name": "Their Name Is Death",
-        "count": 1
-      },
-      {
-        "name": "Their Number Is Legion",
-        "count": 1
-      },
-      {
-        "name": "Tomb Blade",
-        "count": 1
-      },
-      {
-        "name": "Trazyn the Infinite",
-        "count": 1
-      },
-      {
-        "name": "Triarch Stalker",
-        "count": 1
-      },
-      {
-        "name": "The War in Heaven",
-        "count": 1
-      },
-      {
-        "name": "Canoptek Scarab Swarm",
-        "count": 1
-      },
-      {
-        "name": "Canoptek Spyder",
-        "count": 1
-      },
-      {
-        "name": "Canoptek Tomb Sentinel",
-        "count": 1
-      },
-      {
-        "name": "Canoptek Wraith",
-        "count": 1
-      },
-      {
-        "name": "Convergence of Dominion",
-        "count": 1
-      },
-      {
-        "name": "Cryptothrall",
-        "count": 1
-      },
-      {
-        "name": "Ghost Ark",
-        "count": 1
-      },
-      {
-        "name": "Necron Monolith",
-        "count": 1
-      },
-      {
-        "name": "Resurrection Orb",
-        "count": 1
-      },
-      {
-        "name": "Sceptre of Eternal Glory",
-        "count": 1
-      },
-      {
-        "name": "Tomb Fortress",
-        "count": 1
-      },
-      {
-        "name": "Flayed One",
-        "count": 1
-      },
-      {
-        "name": "Hexmark Destroyer",
-        "count": 1
-      },
-      {
-        "name": "Plasmancer",
-        "count": 1
-      },
-      {
-        "name": "Psychomancer",
-        "count": 1
-      },
-      {
-        "name": "Sautekh Immortal",
-        "count": 1
-      },
-      {
-        "name": "Skorpekh Destroyer",
-        "count": 1
-      },
-      {
-        "name": "Triarch Praetorian",
-        "count": 1
-      },
-      {
-        "name": "Night Scythe",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "Necron Dynasties Collector's Edition",
     "commander": "Szarekh, the Silent King",
     "expansion": "Warhammer 40,000 Commander",
     "cards": [

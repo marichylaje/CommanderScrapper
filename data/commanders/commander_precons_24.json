@@ -1,5 +1,332 @@
 [
   {
+    "name": "Blood Rites",
+    "commander": "Clavileño, First of the Blessed",
+    "expansion": "The Lost Caverns of Ixalan Commander",
+    "cards": [
+      {
+        "name": "Carmen, Cruel Skymarcher",
+        "count": 1
+      },
+      {
+        "name": "Charismatic Conqueror",
+        "count": 1
+      },
+      {
+        "name": "Elenda's Hierophant",
+        "count": 1
+      },
+      {
+        "name": "March of the Canonized",
+        "count": 1
+      },
+      {
+        "name": "Redemption Choir",
+        "count": 1
+      },
+      {
+        "name": "Dusk Legion Sergeant",
+        "count": 1
+      },
+      {
+        "name": "Master of Dark Rites",
+        "count": 1
+      },
+      {
+        "name": "Promise of Aclazotz // Foul Rebirth",
+        "count": 1
+      },
+      {
+        "name": "Order of Sacred Dusk",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Kindred Boon",
+        "count": 1
+      },
+      {
+        "name": "Mavren Fein, Dusk Apostle",
+        "count": 1
+      },
+      {
+        "name": "Radiant Destiny",
+        "count": 1
+      },
+      {
+        "name": "Welcoming Vampire",
+        "count": 1
+      },
+      {
+        "name": "Bloodghast",
+        "count": 1
+      },
+      {
+        "name": "Bloodtracker",
+        "count": 1
+      },
+      {
+        "name": "Butcher of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Champion of Dusk",
+        "count": 1
+      },
+      {
+        "name": "Cordial Vampire",
+        "count": 1
+      },
+      {
+        "name": "Crossway Troublemakers",
+        "count": 1
+      },
+      {
+        "name": "Damn",
+        "count": 1
+      },
+      {
+        "name": "Drana, Liberator of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Exquisite Blood",
+        "count": 1
+      },
+      {
+        "name": "Glass-Cast Heart",
+        "count": 1
+      },
+      {
+        "name": "New Blood",
+        "count": 1
+      },
+      {
+        "name": "Nighthawk Scavenger",
+        "count": 1
+      },
+      {
+        "name": "Olivia's Wrath",
+        "count": 1
+      },
+      {
+        "name": "Pact of the Serpent",
+        "count": 1
+      },
+      {
+        "name": "Patron of the Vein",
+        "count": 1
+      },
+      {
+        "name": "Sanctum Seeker",
+        "count": 1
+      },
+      {
+        "name": "Timothar, Baron of Bats",
+        "count": 1
+      },
+      {
+        "name": "Twilight Prophet",
+        "count": 1
+      },
+      {
+        "name": "Yahenni, Undying Partisan",
+        "count": 1
+      },
+      {
+        "name": "Elenda, the Dusk Rose",
+        "count": 1
+      },
+      {
+        "name": "Sorin, Lord of Innistrad",
+        "count": 1
+      },
+      {
+        "name": "Utter End",
+        "count": 1
+      },
+      {
+        "name": "Vona, Butcher of Magan",
+        "count": 1
+      },
+      {
+        "name": "Blade of the Bloodchief",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Temple of Silence",
+        "count": 1
+      },
+      {
+        "name": "Vault of the Archangel",
+        "count": 1
+      },
+      {
+        "name": "Voldaren Estate",
+        "count": 1
+      },
+      {
+        "name": "Windbrisk Heights",
+        "count": 1
+      },
+      {
+        "name": "Martyr of Dusk",
+        "count": 1
+      },
+      {
+        "name": "Return to Dust",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Blood Artist",
+        "count": 1
+      },
+      {
+        "name": "Bloodline Necromancer",
+        "count": 1
+      },
+      {
+        "name": "Dusk Legion Zealot",
+        "count": 1
+      },
+      {
+        "name": "Falkenrath Noble",
+        "count": 1
+      },
+      {
+        "name": "Indulgent Aristocrat",
+        "count": 1
+      },
+      {
+        "name": "Oathsworn Vampire",
+        "count": 1
+      },
+      {
+        "name": "Village Rites",
+        "count": 1
+      },
+      {
+        "name": "Viscera Seer",
+        "count": 1
+      },
+      {
+        "name": "Bartolomé del Presidio",
+        "count": 1
+      },
+      {
+        "name": "Cruel Celebrant",
+        "count": 1
+      },
+      {
+        "name": "Etchings of the Chosen",
+        "count": 1
+      },
+      {
+        "name": "Legion Lieutenant",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Heirloom Blade",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Basilica",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Secluded Courtyard",
+        "count": 1
+      },
+      {
+        "name": "Tainted Field",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 8
+      },
+      {
+        "name": "Swamp",
+        "count": 13
+      }
+    ]
+  },
+  {
     "name": "Explorers of the Deep",
     "commander": "Hakbal of the Surging Soul",
     "expansion": "The Lost Caverns of Ixalan Commander",
@@ -1396,365 +1723,6 @@
       {
         "name": "Forest",
         "count": 4
-      }
-    ]
-  },
-  {
-    "name": "Deep Clue Sea",
-    "commander": "Morska, Undersea Sleuth",
-    "expansion": "Murders at Karlov Manor Commander",
-    "cards": [
-      {
-        "name": "Sophia, Dogged Detective",
-        "count": 1
-      },
-      {
-        "name": "Armed with Proof",
-        "count": 1
-      },
-      {
-        "name": "Merchant of Truth",
-        "count": 1
-      },
-      {
-        "name": "Serene Sleuth",
-        "count": 1
-      },
-      {
-        "name": "Detective of the Month",
-        "count": 1
-      },
-      {
-        "name": "Follow the Bodies",
-        "count": 1
-      },
-      {
-        "name": "Tangletrove Kelp",
-        "count": 1
-      },
-      {
-        "name": "Innocuous Researcher",
-        "count": 1
-      },
-      {
-        "name": "On the Trail",
-        "count": 1
-      },
-      {
-        "name": "Knowledge Is Power",
-        "count": 1
-      },
-      {
-        "name": "Ransom Note",
-        "count": 1
-      },
-      {
-        "name": "Aerial Extortionist",
-        "count": 1
-      },
-      {
-        "name": "Bennie Bracks, Zoologist",
-        "count": 1
-      },
-      {
-        "name": "Farewell",
-        "count": 1
-      },
-      {
-        "name": "Fumigate",
-        "count": 1
-      },
-      {
-        "name": "Organic Extinction",
-        "count": 1
-      },
-      {
-        "name": "Search the Premises",
-        "count": 1
-      },
-      {
-        "name": "Alandra, Sky Dreamer",
-        "count": 1
-      },
-      {
-        "name": "Confirm Suspicions",
-        "count": 1
-      },
-      {
-        "name": "Ethereal Investigator",
-        "count": 1
-      },
-      {
-        "name": "Finale of Revelation",
-        "count": 1
-      },
-      {
-        "name": "Kappa Cannoneer",
-        "count": 1
-      },
-      {
-        "name": "Mechanized Production",
-        "count": 1
-      },
-      {
-        "name": "Nadir Kraken",
-        "count": 1
-      },
-      {
-        "name": "Shimmer Dragon",
-        "count": 1
-      },
-      {
-        "name": "Teferi's Ageless Insight",
-        "count": 1
-      },
-      {
-        "name": "Tezzeret, Betrayer of Flesh",
-        "count": 1
-      },
-      {
-        "name": "Thought Monitor",
-        "count": 1
-      },
-      {
-        "name": "Hornet Queen",
-        "count": 1
-      },
-      {
-        "name": "Jolrael, Mwonvuli Recluse",
-        "count": 1
-      },
-      {
-        "name": "Killer Service",
-        "count": 1
-      },
-      {
-        "name": "Tireless Tracker",
-        "count": 1
-      },
-      {
-        "name": "Adrix and Nev, Twincasters",
-        "count": 1
-      },
-      {
-        "name": "Chulane, Teller of Tales",
-        "count": 1
-      },
-      {
-        "name": "Disorder in the Court",
-        "count": 1
-      },
-      {
-        "name": "Esix, Fractal Bloom",
-        "count": 1
-      },
-      {
-        "name": "Hydroid Krasis",
-        "count": 1
-      },
-      {
-        "name": "Koma, Cosmos Serpent",
-        "count": 1
-      },
-      {
-        "name": "Lonis, Cryptozoologist",
-        "count": 1
-      },
-      {
-        "name": "Selvala, Explorer Returned",
-        "count": 1
-      },
-      {
-        "name": "Academy Manufactor",
-        "count": 1
-      },
-      {
-        "name": "Idol of Oblivion",
-        "count": 1
-      },
-      {
-        "name": "Inspiring Statuary",
-        "count": 1
-      },
-      {
-        "name": "Nettlecyst",
-        "count": 1
-      },
-      {
-        "name": "Psychosis Crawler",
-        "count": 1
-      },
-      {
-        "name": "Canopy Vista",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard",
-        "count": 1
-      },
-      {
-        "name": "Irrigated Farmland",
-        "count": 1
-      },
-      {
-        "name": "Prairie Stream",
-        "count": 1
-      },
-      {
-        "name": "Scattered Groves",
-        "count": 1
-      },
-      {
-        "name": "Skycloud Expanse",
-        "count": 1
-      },
-      {
-        "name": "Spire of Industry",
-        "count": 1
-      },
-      {
-        "name": "Sungrass Prairie",
-        "count": 1
-      },
-      {
-        "name": "Temple of Enlightenment",
-        "count": 1
-      },
-      {
-        "name": "Temple of Mystery",
-        "count": 1
-      },
-      {
-        "name": "Temple of Plenty",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares",
-        "count": 1
-      },
-      {
-        "name": "Erdwal Illuminator",
-        "count": 1
-      },
-      {
-        "name": "Junk Winder",
-        "count": 1
-      },
-      {
-        "name": "Ongoing Investigation",
-        "count": 1
-      },
-      {
-        "name": "Whirler Rogue",
-        "count": 1
-      },
-      {
-        "name": "Graf Mole",
-        "count": 1
-      },
-      {
-        "name": "Ulvenwald Mysteries",
-        "count": 1
-      },
-      {
-        "name": "Wilderness Reclamation",
-        "count": 1
-      },
-      {
-        "name": "Wavesifter",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Azorius Signet",
-        "count": 1
-      },
-      {
-        "name": "Simic Signet",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Curiosity",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Progress",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Unity",
-        "count": 1
-      },
-      {
-        "name": "Azorius Chancery",
-        "count": 1
-      },
-      {
-        "name": "Magnifying Glass",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Krosan Verge",
-        "count": 1
-      },
-      {
-        "name": "Lonely Sandbar",
-        "count": 1
-      },
-      {
-        "name": "Path of Ancestry",
-        "count": 1
-      },
-      {
-        "name": "Reliquary Tower",
-        "count": 1
-      },
-      {
-        "name": "Seaside Citadel",
-        "count": 1
-      },
-      {
-        "name": "Secluded Steppe",
-        "count": 1
-      },
-      {
-        "name": "Selesnya Sanctuary",
-        "count": 1
-      },
-      {
-        "name": "Simic Growth Chamber",
-        "count": 1
-      },
-      {
-        "name": "Temple of the False God",
-        "count": 1
-      },
-      {
-        "name": "Tranquil Thicket",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 3
-      },
-      {
-        "name": "Island",
-        "count": 6
-      },
-      {
-        "name": "Forest",
-        "count": 5
       }
     ]
   }

@@ -1,5 +1,348 @@
 [
   {
+    "name": "Arcane Maelstrom",
+    "commander": "Kalamax, the Stormsire",
+    "expansion": "Commander 2020",
+    "cards": [
+      {
+        "name": "Jace, Architect of Thought",
+        "count": 1
+      },
+      {
+        "name": "Xyris, the Writhing Storm",
+        "count": 1
+      },
+      {
+        "name": "Haldan, Avid Arcanist",
+        "count": 1
+      },
+      {
+        "name": "Pako, Arcane Retriever",
+        "count": 1
+      },
+      {
+        "name": "Eon Frolicker",
+        "count": 1
+      },
+      {
+        "name": "Nascent Metamorph",
+        "count": 1
+      },
+      {
+        "name": "Glademuse",
+        "count": 1
+      },
+      {
+        "name": "Ravenous Gigantotherium",
+        "count": 1
+      },
+      {
+        "name": "Lunar Mystic",
+        "count": 1
+      },
+      {
+        "name": "Niblis of Frost",
+        "count": 1
+      },
+      {
+        "name": "Talrand, Sky Summoner",
+        "count": 1
+      },
+      {
+        "name": "Charmbreaker Devils",
+        "count": 1
+      },
+      {
+        "name": "Dualcaster Mage",
+        "count": 1
+      },
+      {
+        "name": "Etali, Primal Storm",
+        "count": 1
+      },
+      {
+        "name": "Goblin Dark-Dwellers",
+        "count": 1
+      },
+      {
+        "name": "Djinn Illuminatus",
+        "count": 1
+      },
+      {
+        "name": "Melek, Izzet Paragon",
+        "count": 1
+      },
+      {
+        "name": "Rashmi, Eternities Crafter",
+        "count": 1
+      },
+      {
+        "name": "Wort, the Raidmother",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Murmuring Mystic",
+        "count": 1
+      },
+      {
+        "name": "Crackling Drake",
+        "count": 1
+      },
+      {
+        "name": "Surreal Memoir",
+        "count": 1
+      },
+      {
+        "name": "Decoy Gambit",
+        "count": 1
+      },
+      {
+        "name": "Deflecting Swat",
+        "count": 1
+      },
+      {
+        "name": "Curious Herd",
+        "count": 1
+      },
+      {
+        "name": "Chaos Warp",
+        "count": 1
+      },
+      {
+        "name": "Comet Storm",
+        "count": 1
+      },
+      {
+        "name": "Commune with Lava",
+        "count": 1
+      },
+      {
+        "name": "Starstorm",
+        "count": 1
+      },
+      {
+        "name": "Strength of the Tajuru",
+        "count": 1
+      },
+      {
+        "name": "Artifact Mutation",
+        "count": 1
+      },
+      {
+        "name": "Prophetic Bolt",
+        "count": 1
+      },
+      {
+        "name": "Clash of Titans",
+        "count": 1
+      },
+      {
+        "name": "Channeled Force",
+        "count": 1
+      },
+      {
+        "name": "Chemister's Insight",
+        "count": 1
+      },
+      {
+        "name": "Frantic Search",
+        "count": 1
+      },
+      {
+        "name": "Whiplash Trap",
+        "count": 1
+      },
+      {
+        "name": "Crop Rotation",
+        "count": 1
+      },
+      {
+        "name": "Evolution Charm",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Hunter's Insight",
+        "count": 1
+      },
+      {
+        "name": "Hunting Pack",
+        "count": 1
+      },
+      {
+        "name": "Natural Connection",
+        "count": 1
+      },
+      {
+        "name": "Slice in Twain",
+        "count": 1
+      },
+      {
+        "name": "Tribute to the Wild",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Temur Charm",
+        "count": 1
+      },
+      {
+        "name": "Lavabrink Floodgates",
+        "count": 1
+      },
+      {
+        "name": "Twinning Staff",
+        "count": 1
+      },
+      {
+        "name": "Bonder's Ornament",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swarm Intelligence",
+        "count": 1
+      },
+      {
+        "name": "Primal Empathy",
+        "count": 1
+      },
+      {
+        "name": "Psychic Impetus",
+        "count": 1
+      },
+      {
+        "name": "Shiny Impetus",
+        "count": 1
+      },
+      {
+        "name": "Predatory Impetus",
+        "count": 1
+      },
+      {
+        "name": "Wilderness Reclamation",
+        "count": 1
+      },
+      {
+        "name": "Cinder Glade",
+        "count": 1
+      },
+      {
+        "name": "Desolate Lighthouse",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Kessig Wolf Run",
+        "count": 1
+      },
+      {
+        "name": "Mossfire Valley",
+        "count": 1
+      },
+      {
+        "name": "Mosswort Bridge",
+        "count": 1
+      },
+      {
+        "name": "Oran-Rief, the Vastwood",
+        "count": 1
+      },
+      {
+        "name": "Scavenger Grounds",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya Coast",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Frontier Bivouac",
+        "count": 1
+      },
+      {
+        "name": "Gruul Turf",
+        "count": 1
+      },
+      {
+        "name": "Halimar Depths",
+        "count": 1
+      },
+      {
+        "name": "Izzet Boilerworks",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape",
+        "count": 1
+      },
+      {
+        "name": "Rupture Spire",
+        "count": 1
+      },
+      {
+        "name": "Simic Growth Chamber",
+        "count": 1
+      },
+      {
+        "name": "Rugged Highlands",
+        "count": 1
+      },
+      {
+        "name": "Swiftwater Cliffs",
+        "count": 1
+      },
+      {
+        "name": "Thornwood Falls",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 8
+      },
+      {
+        "name": "Island",
+        "count": 5
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      }
+    ]
+  },
+  {
     "name": "Enhanced Evolution",
     "commander": "Otrimi, the Ever-Playful",
     "expansion": "Commander 2020",
@@ -1388,337 +1731,6 @@
       {
         "name": "Plains",
         "count": 4
-      }
-    ]
-  },
-  {
-    "name": "Land's Wrath",
-    "commander": "Obuun, Mul Daya Ancestor",
-    "expansion": "Zendikar Rising Commander",
-    "cards": [
-      {
-        "name": "Admonition Angel",
-        "count": 1
-      },
-      {
-        "name": "Trove Warden",
-        "count": 1
-      },
-      {
-        "name": "Geode Rager",
-        "count": 1
-      },
-      {
-        "name": "Emeria Angel",
-        "count": 1
-      },
-      {
-        "name": "Emeria Shepherd",
-        "count": 1
-      },
-      {
-        "name": "Sun Titan",
-        "count": 1
-      },
-      {
-        "name": "Multani, Yavimaya's Avatar",
-        "count": 1
-      },
-      {
-        "name": "Rampaging Baloths",
-        "count": 1
-      },
-      {
-        "name": "Sylvan Advocate",
-        "count": 1
-      },
-      {
-        "name": "Waker of the Wilds",
-        "count": 1
-      },
-      {
-        "name": "Living Twister",
-        "count": 1
-      },
-      {
-        "name": "Mina and Denn, Wildborn",
-        "count": 1
-      },
-      {
-        "name": "Omnath, Locus of Rage",
-        "count": 1
-      },
-      {
-        "name": "Abzan Falconer",
-        "count": 1
-      },
-      {
-        "name": "Elite Scaleguard",
-        "count": 1
-      },
-      {
-        "name": "Kor Cartographer",
-        "count": 1
-      },
-      {
-        "name": "Acidic Slime",
-        "count": 1
-      },
-      {
-        "name": "Armorcraft Judge",
-        "count": 1
-      },
-      {
-        "name": "Elvish Rejuvenator",
-        "count": 1
-      },
-      {
-        "name": "Embodiment of Insight",
-        "count": 1
-      },
-      {
-        "name": "Evolution Sage",
-        "count": 1
-      },
-      {
-        "name": "Fertilid",
-        "count": 1
-      },
-      {
-        "name": "Keeper of Fables",
-        "count": 1
-      },
-      {
-        "name": "Satyr Wayfinder",
-        "count": 1
-      },
-      {
-        "name": "Sporemound",
-        "count": 1
-      },
-      {
-        "name": "Springbloom Druid",
-        "count": 1
-      },
-      {
-        "name": "Tuskguard Captain",
-        "count": 1
-      },
-      {
-        "name": "Yavimaya Elder",
-        "count": 1
-      },
-      {
-        "name": "Sandstone Oracle",
-        "count": 1
-      },
-      {
-        "name": "Scaretiller",
-        "count": 1
-      },
-      {
-        "name": "Murasa Rootgrazer",
-        "count": 1
-      },
-      {
-        "name": "Hour of Revelation",
-        "count": 1
-      },
-      {
-        "name": "Planar Outburst",
-        "count": 1
-      },
-      {
-        "name": "Nissa's Renewal",
-        "count": 1
-      },
-      {
-        "name": "Beanstalk Giant // Fertile Footsteps",
-        "count": 1
-      },
-      {
-        "name": "Circuitous Route",
-        "count": 1
-      },
-      {
-        "name": "Far Wanderings",
-        "count": 1
-      },
-      {
-        "name": "Harmonize",
-        "count": 1
-      },
-      {
-        "name": "Kodama's Reach",
-        "count": 1
-      },
-      {
-        "name": "Ground Assault",
-        "count": 1
-      },
-      {
-        "name": "Treacherous Terrain",
-        "count": 1
-      },
-      {
-        "name": "Return of the Wildspeaker",
-        "count": 1
-      },
-      {
-        "name": "Condemn",
-        "count": 1
-      },
-      {
-        "name": "Crush Contraband",
-        "count": 1
-      },
-      {
-        "name": "Harrow",
-        "count": 1
-      },
-      {
-        "name": "Inspiring Call",
-        "count": 1
-      },
-      {
-        "name": "Naya Charm",
-        "count": 1
-      },
-      {
-        "name": "Sylvan Reclamation",
-        "count": 1
-      },
-      {
-        "name": "Roiling Regrowth",
-        "count": 1
-      },
-      {
-        "name": "Seer's Sundial",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Together Forever",
-        "count": 1
-      },
-      {
-        "name": "Abundance",
-        "count": 1
-      },
-      {
-        "name": "The Mending of Dominaria",
-        "count": 1
-      },
-      {
-        "name": "Rites of Flourishing",
-        "count": 1
-      },
-      {
-        "name": "Banishing Light",
-        "count": 1
-      },
-      {
-        "name": "Retreat to Emeria",
-        "count": 1
-      },
-      {
-        "name": "Khalni Heart Expedition",
-        "count": 1
-      },
-      {
-        "name": "Retreat to Kazandu",
-        "count": 1
-      },
-      {
-        "name": "Zendikar's Roil",
-        "count": 1
-      },
-      {
-        "name": "Needle Spires",
-        "count": 1
-      },
-      {
-        "name": "Blighted Woodland",
-        "count": 1
-      },
-      {
-        "name": "Boros Garrison",
-        "count": 1
-      },
-      {
-        "name": "Boros Guildgate",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Cryptic Caves",
-        "count": 1
-      },
-      {
-        "name": "Evolving Wilds",
-        "count": 1
-      },
-      {
-        "name": "Gruul Guildgate",
-        "count": 1
-      },
-      {
-        "name": "Gruul Turf",
-        "count": 1
-      },
-      {
-        "name": "Jungle Shrine",
-        "count": 1
-      },
-      {
-        "name": "Krosan Verge",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape",
-        "count": 1
-      },
-      {
-        "name": "Naya Panorama",
-        "count": 1
-      },
-      {
-        "name": "Selesnya Guildgate",
-        "count": 1
-      },
-      {
-        "name": "Selesnya Sanctuary",
-        "count": 1
-      },
-      {
-        "name": "Terramorphic Expanse",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 7
-      },
-      {
-        "name": "Mountain",
-        "count": 4
-      },
-      {
-        "name": "Forest",
-        "count": 10
-      },
-      {
-        "name": "Struggle // Survive",
-        "count": 1
       }
     ]
   }
