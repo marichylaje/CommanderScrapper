@@ -1,0 +1,377 @@
+[
+  {
+    "name": "Multiverse Reforged",
+    "commander": "Jace, Multiverse Architect",
+    "expansion": "Reality Fracture Commander",
+    "cards": [
+      {
+        "name": "Nissa, Leyline Tamer",
+        "count": 1
+      },
+      {
+        "name": "Omnath, Locus of the Void",
+        "count": 1
+      },
+      {
+        "name": "Dack Fayden, Helping Hand",
+        "count": 1
+      },
+      {
+        "name": "Ob Nixilis, the Ascended",
+        "count": 1
+      },
+      {
+        "name": "Teferi's Reproach",
+        "count": 1
+      },
+      {
+        "name": "Avacyn, Angel of Horror",
+        "count": 1
+      },
+      {
+        "name": "Jhoira, Weatherlight Corsair",
+        "count": 1
+      },
+      {
+        "name": "Venser, Fervent Forger",
+        "count": 1
+      },
+      {
+        "name": "Niv-Mizzet, Ghost Counsel",
+        "count": 1
+      },
+      {
+        "name": "Tamiyo, Upriser Crowned",
+        "count": 1
+      },
+      {
+        "name": "The Ur-Sphinx",
+        "count": 1
+      },
+      {
+        "name": "Darksteel Angel",
+        "count": 1
+      },
+      {
+        "name": "Ginger, Queen of Sweets",
+        "count": 1
+      },
+      {
+        "name": "Memnarch, the Warden",
+        "count": 1
+      },
+      {
+        "name": "Turbulent Crater",
+        "count": 1
+      },
+      {
+        "name": "Turbulent Shore",
+        "count": 1
+      },
+      {
+        "name": "Turbulent Wetlands",
+        "count": 1
+      },
+      {
+        "name": "Akroma, Angel of Fury",
+        "count": 1
+      },
+      {
+        "name": "Reflecting Pool",
+        "count": 1
+      },
+      {
+        "name": "Elspeth, Sun's Champion",
+        "count": 1
+      },
+      {
+        "name": "Flawless Maneuver",
+        "count": 1
+      },
+      {
+        "name": "Grand Crescendo",
+        "count": 1
+      },
+      {
+        "name": "Martial Coup",
+        "count": 1
+      },
+      {
+        "name": "Overlord of the Mistmoors",
+        "count": 1
+      },
+      {
+        "name": "Secure the Wastes",
+        "count": 1
+      },
+      {
+        "name": "Serra's Emissary",
+        "count": 1
+      },
+      {
+        "name": "Skrelv's Hive",
+        "count": 1
+      },
+      {
+        "name": "Staff of the Storyteller",
+        "count": 1
+      },
+      {
+        "name": "Sunfall",
+        "count": 1
+      },
+      {
+        "name": "White Sun's Twilight",
+        "count": 1
+      },
+      {
+        "name": "Mass Polymorph",
+        "count": 1
+      },
+      {
+        "name": "Occult Epiphany",
+        "count": 1
+      },
+      {
+        "name": "Shark Typhoon",
+        "count": 1
+      },
+      {
+        "name": "Synthetic Destiny",
+        "count": 1
+      },
+      {
+        "name": "Archfiend of Despair",
+        "count": 1
+      },
+      {
+        "name": "Archon of Cruelty",
+        "count": 1
+      },
+      {
+        "name": "Dreadhorde Invasion",
+        "count": 1
+      },
+      {
+        "name": "Cursed Mirror",
+        "count": 1
+      },
+      {
+        "name": "Whirlwind of Thought",
+        "count": 1
+      },
+      {
+        "name": "Windcrag Siege",
+        "count": 1
+      },
+      {
+        "name": "Chromatic Lantern",
+        "count": 1
+      },
+      {
+        "name": "Currency Converter",
+        "count": 1
+      },
+      {
+        "name": "Proteus Staff",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos",
+        "count": 1
+      },
+      {
+        "name": "Clifftop Retreat",
+        "count": 1
+      },
+      {
+        "name": "Drowned Catacomb",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Fetid Heath",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Kher Keep",
+        "count": 1
+      },
+      {
+        "name": "Mystic Gate",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Radiant Summit",
+        "count": 1
+      },
+      {
+        "name": "Restless Anchorage",
+        "count": 1
+      },
+      {
+        "name": "Restless Spire",
+        "count": 1
+      },
+      {
+        "name": "Shivan Reef",
+        "count": 1
+      },
+      {
+        "name": "Sulfur Falls",
+        "count": 1
+      },
+      {
+        "name": "Sulfurous Springs",
+        "count": 1
+      },
+      {
+        "name": "Sunken Ruins",
+        "count": 1
+      },
+      {
+        "name": "Underground River",
+        "count": 1
+      },
+      {
+        "name": "Plan for All Outcomes",
+        "count": 1
+      },
+      {
+        "name": "Fatehold Charm",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Lingering Souls",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Stroke of Midnight",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Brainsurge",
+        "count": 1
+      },
+      {
+        "name": "Fact or Fiction",
+        "count": 1
+      },
+      {
+        "name": "Despark",
+        "count": 1
+      },
+      {
+        "name": "Azorius Signet",
+        "count": 1
+      },
+      {
+        "name": "Dimir Signet",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Izzet Signet",
+        "count": 1
+      },
+      {
+        "name": "Rakdos Signet",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Creativity",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Indulgence",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Progress",
+        "count": 1
+      },
+      {
+        "name": "Contaminated Landscape",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Perilous Landscape",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Island",
+        "count": 3
+      },
+      {
+        "name": "Swamp",
+        "count": 2
+      },
+      {
+        "name": "Mountain",
+        "count": 2
+      }
+    ]
+  }
+]
