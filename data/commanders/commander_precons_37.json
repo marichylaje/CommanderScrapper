@@ -1,5 +1,320 @@
 [
   {
+    "name": "Wakanda Forever Collector's Edition",
+    "commander": "T'Challa, the Black Panther",
+    "expansion": "Marvel Super Heroes Commander",
+    "cards": [
+      {
+        "name": "Dora Milaje Elite",
+        "count": 1
+      },
+      {
+        "name": "Everett K. Ross, Hapless Attaché",
+        "count": 1
+      },
+      {
+        "name": "Hatut Zeraze Strike Force",
+        "count": 1
+      },
+      {
+        "name": "King Solomon's Frogs",
+        "count": 1
+      },
+      {
+        "name": "Midnight Angel Armor",
+        "count": 1
+      },
+      {
+        "name": "Queen Mother Ramonda",
+        "count": 1
+      },
+      {
+        "name": "Royal Talon Fighter Jet",
+        "count": 1
+      },
+      {
+        "name": "The Spear of Bashenga",
+        "count": 1
+      },
+      {
+        "name": "Ancestral Communion",
+        "count": 1
+      },
+      {
+        "name": "Fight for the Throne",
+        "count": 1
+      },
+      {
+        "name": "M'Baku, Jabari Chieftain",
+        "count": 1
+      },
+      {
+        "name": "Nakia, Wakandan Operative",
+        "count": 1
+      },
+      {
+        "name": "W'Kabi, Shield of the Nation",
+        "count": 1
+      },
+      {
+        "name": "Wakanda Forever!",
+        "count": 1
+      },
+      {
+        "name": "Zuri, Warrior of Wakanda",
+        "count": 1
+      },
+      {
+        "name": "Bast, Panther Goddess",
+        "count": 1
+      },
+      {
+        "name": "Okoye, Mighty and Adored",
+        "count": 1
+      },
+      {
+        "name": "Shuri, the Black Panther",
+        "count": 1
+      },
+      {
+        "name": "Storm, Queen of Wakanda",
+        "count": 1
+      },
+      {
+        "name": "T'Chaka, Venerable King",
+        "count": 1
+      },
+      {
+        "name": "Heart-Shaped Herb",
+        "count": 1
+      },
+      {
+        "name": "Kimoyo Beads",
+        "count": 1
+      },
+      {
+        "name": "N'Yami-Class Mother Ship",
+        "count": 1
+      },
+      {
+        "name": "Panther Habit",
+        "count": 1
+      },
+      {
+        "name": "Panther Robot",
+        "count": 1
+      },
+      {
+        "name": "Shuri's Fabricator",
+        "count": 1
+      },
+      {
+        "name": "Vibranium Mining Mech",
+        "count": 1
+      },
+      {
+        "name": "Vibranium Strike Gauntlets",
+        "count": 1
+      },
+      {
+        "name": "The Great Mound",
+        "count": 1
+      },
+      {
+        "name": "Divine Visitation",
+        "count": 1
+      },
+      {
+        "name": "Loyal Retainers",
+        "count": 1
+      },
+      {
+        "name": "Martial Coup",
+        "count": 1
+      },
+      {
+        "name": "Vanquish the Horde",
+        "count": 1
+      },
+      {
+        "name": "Birds of Paradise",
+        "count": 1
+      },
+      {
+        "name": "Conduit of Worlds",
+        "count": 1
+      },
+      {
+        "name": "Greater Good",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Overwhelming Stampede",
+        "count": 1
+      },
+      {
+        "name": "Coveted Jewel",
+        "count": 1
+      },
+      {
+        "name": "Gilded Lotus",
+        "count": 1
+      },
+      {
+        "name": "Helm of the Host",
+        "count": 1
+      },
+      {
+        "name": "Metalwork Colossus",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum",
+        "count": 1
+      },
+      {
+        "name": "Trading Post",
+        "count": 1
+      },
+      {
+        "name": "Bountiful Promenade",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Fortified Village",
+        "count": 1
+      },
+      {
+        "name": "Razorverge Thicket",
+        "count": 1
+      },
+      {
+        "name": "Scattered Groves",
+        "count": 1
+      },
+      {
+        "name": "Scavenger Grounds",
+        "count": 1
+      },
+      {
+        "name": "Sungrass Prairie",
+        "count": 1
+      },
+      {
+        "name": "Sunpetal Grove",
+        "count": 1
+      },
+      {
+        "name": "Throne of the High City",
+        "count": 1
+      },
+      {
+        "name": "Scourglass",
+        "count": 1
+      },
+      {
+        "name": "Fleecemane Lion",
+        "count": 1
+      },
+      {
+        "name": "Hammer of Nazahn",
+        "count": 1
+      },
+      {
+        "name": "Mind's Eye",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Animist",
+        "count": 1
+      },
+      {
+        "name": "Thran Dynamo",
+        "count": 1
+      },
+      {
+        "name": "Dispatch",
+        "count": 1
+      },
+      {
+        "name": "Generous Gift",
+        "count": 1
+      },
+      {
+        "name": "Ingenious Smith",
+        "count": 1
+      },
+      {
+        "name": "Palace Jailer",
+        "count": 1
+      },
+      {
+        "name": "Valorous Stance",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Harmonize",
+        "count": 1
+      },
+      {
+        "name": "Loyal Guardian",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Meteor Golem",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Whispersilk Cloak",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 12
+      },
+      {
+        "name": "Forest",
+        "count": 12
+      }
+    ]
+  },
+  {
     "name": "Multiverse Reforged",
     "commander": "Jace, Multiverse Architect",
     "expansion": "Reality Fracture Commander",

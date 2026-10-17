@@ -1,5 +1,376 @@
 [
   {
+    "name": "Deadly Disguise",
+    "commander": "Kaust, Eyes of the Glade",
+    "expansion": "Murders at Karlov Manor Commander",
+    "cards": [
+      {
+        "name": "Duskana, the Rage Mother",
+        "count": 1
+      },
+      {
+        "name": "True Identity",
+        "count": 1
+      },
+      {
+        "name": "Unexplained Absence",
+        "count": 1
+      },
+      {
+        "name": "Veiled Ascension",
+        "count": 1
+      },
+      {
+        "name": "Boltbender",
+        "count": 1
+      },
+      {
+        "name": "Showstopping Surprise",
+        "count": 1
+      },
+      {
+        "name": "Tesak, Judith's Hellhound",
+        "count": 1
+      },
+      {
+        "name": "Experiment Twelve",
+        "count": 1
+      },
+      {
+        "name": "Printlifter Ooze",
+        "count": 1
+      },
+      {
+        "name": "Panoptic Projektor",
+        "count": 1
+      },
+      {
+        "name": "Ransom Note",
+        "count": 1
+      },
+      {
+        "name": "Ugin's Mastery",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Dusk // Dawn",
+        "count": 1
+      },
+      {
+        "name": "Exalted Angel",
+        "count": 1
+      },
+      {
+        "name": "Fell the Mighty",
+        "count": 1
+      },
+      {
+        "name": "Hidden Dragonslayer",
+        "count": 1
+      },
+      {
+        "name": "Master of Pearls",
+        "count": 1
+      },
+      {
+        "name": "Mastery of the Unseen",
+        "count": 1
+      },
+      {
+        "name": "Mirror Entity",
+        "count": 1
+      },
+      {
+        "name": "Welcoming Vampire",
+        "count": 1
+      },
+      {
+        "name": "Akroma, Angel of Fury",
+        "count": 1
+      },
+      {
+        "name": "Ashcloud Phoenix",
+        "count": 1
+      },
+      {
+        "name": "Chaos Warp",
+        "count": 1
+      },
+      {
+        "name": "Imperial Hellkite",
+        "count": 1
+      },
+      {
+        "name": "Jeska's Will",
+        "count": 1
+      },
+      {
+        "name": "Neheb, the Eternal",
+        "count": 1
+      },
+      {
+        "name": "Scourge of the Throne",
+        "count": 1
+      },
+      {
+        "name": "Beast Whisperer",
+        "count": 1
+      },
+      {
+        "name": "Deathmist Raptor",
+        "count": 1
+      },
+      {
+        "name": "Den Protector",
+        "count": 1
+      },
+      {
+        "name": "Hooded Hydra",
+        "count": 1
+      },
+      {
+        "name": "Krosan Cloudscraper",
+        "count": 1
+      },
+      {
+        "name": "Krosan Colossus",
+        "count": 1
+      },
+      {
+        "name": "Obscuring Aether",
+        "count": 1
+      },
+      {
+        "name": "Ohran Frostfang",
+        "count": 1
+      },
+      {
+        "name": "Return of the Wildspeaker",
+        "count": 1
+      },
+      {
+        "name": "Root Elemental",
+        "count": 1
+      },
+      {
+        "name": "Saryth, the Viper's Fang",
+        "count": 1
+      },
+      {
+        "name": "Seedborn Muse",
+        "count": 1
+      },
+      {
+        "name": "Temur War Shaman",
+        "count": 1
+      },
+      {
+        "name": "Thelonite Hermit",
+        "count": 1
+      },
+      {
+        "name": "Toski, Bearer of Secrets",
+        "count": 1
+      },
+      {
+        "name": "Trail of Mystery",
+        "count": 1
+      },
+      {
+        "name": "Whisperwood Elemental",
+        "count": 1
+      },
+      {
+        "name": "Yedora, Grave Gardener",
+        "count": 1
+      },
+      {
+        "name": "Decimate",
+        "count": 1
+      },
+      {
+        "name": "Sidar Kondo of Jamuraa",
+        "count": 1
+      },
+      {
+        "name": "Lifecrafter's Bestiary",
+        "count": 1
+      },
+      {
+        "name": "Scroll of Fate",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Cinder Glade",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fortified Village",
+        "count": 1
+      },
+      {
+        "name": "Furycalm Snarl",
+        "count": 1
+      },
+      {
+        "name": "Game Trail",
+        "count": 1
+      },
+      {
+        "name": "Kessig Wolf Run",
+        "count": 1
+      },
+      {
+        "name": "Mossfire Valley",
+        "count": 1
+      },
+      {
+        "name": "Mosswort Bridge",
+        "count": 1
+      },
+      {
+        "name": "Scattered Groves",
+        "count": 1
+      },
+      {
+        "name": "Sheltered Thicket",
+        "count": 1
+      },
+      {
+        "name": "Shrine of the Forsaken Gods",
+        "count": 1
+      },
+      {
+        "name": "Sungrass Prairie",
+        "count": 1
+      },
+      {
+        "name": "Temple of Abandon",
+        "count": 1
+      },
+      {
+        "name": "Temple of Plenty",
+        "count": 1
+      },
+      {
+        "name": "Temple of Triumph",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Ainok Survivalist",
+        "count": 1
+      },
+      {
+        "name": "Broodhatch Nantuko",
+        "count": 1
+      },
+      {
+        "name": "Nervous Gardener",
+        "count": 1
+      },
+      {
+        "name": "Nantuko Vigilante",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Elder",
+        "count": 1
+      },
+      {
+        "name": "Salt Road Ambushers",
+        "count": 1
+      },
+      {
+        "name": "Three Visits",
+        "count": 1
+      },
+      {
+        "name": "Wild Growth",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Boros Garrison",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Branch of Vitu-Ghazi",
+        "count": 1
+      },
+      {
+        "name": "Gruul Turf",
+        "count": 1
+      },
+      {
+        "name": "Jungle Shrine",
+        "count": 1
+      },
+      {
+        "name": "Krosan Verge",
+        "count": 1
+      },
+      {
+        "name": "Sacred Peaks",
+        "count": 1
+      },
+      {
+        "name": "Selesnya Sanctuary",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God",
+        "count": 1
+      },
+      {
+        "name": "Zoetic Cavern",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Mountain",
+        "count": 3
+      },
+      {
+        "name": "Forest",
+        "count": 4
+      }
+    ]
+  },
+  {
     "name": "Deep Clue Sea",
     "commander": "Morska, Undersea Sleuth",
     "expansion": "Murders at Karlov Manor Commander",
@@ -1408,369 +1779,6 @@
       {
         "name": "Island",
         "count": 5
-      }
-    ]
-  },
-  {
-    "name": "Science!",
-    "commander": "Dr. Madison Li",
-    "expansion": "Fallout",
-    "cards": [
-      {
-        "name": "Liberty Prime, Recharged",
-        "count": 1
-      },
-      {
-        "name": "Automated Assembly Line",
-        "count": 1
-      },
-      {
-        "name": "Brotherhood Scribe",
-        "count": 1
-      },
-      {
-        "name": "Overencumbered",
-        "count": 1
-      },
-      {
-        "name": "The Prydwen, Steel Flagship",
-        "count": 1
-      },
-      {
-        "name": "Sentry Bot",
-        "count": 1
-      },
-      {
-        "name": "Vault 13: Dweller's Journey",
-        "count": 1
-      },
-      {
-        "name": "Curie, Emergent Intelligence",
-        "count": 1
-      },
-      {
-        "name": "James, Wandering Dad // Follow Him",
-        "count": 1
-      },
-      {
-        "name": "Nick Valentine, Private Eye",
-        "count": 1
-      },
-      {
-        "name": "Synth Infiltrator",
-        "count": 1
-      },
-      {
-        "name": "Assaultron Dominator",
-        "count": 1
-      },
-      {
-        "name": "The Motherlode, Excavator",
-        "count": 1
-      },
-      {
-        "name": "Plasma Caster",
-        "count": 1
-      },
-      {
-        "name": "Synth Eradicator",
-        "count": 1
-      },
-      {
-        "name": "Arcade Gannon",
-        "count": 1
-      },
-      {
-        "name": "Electrosiphon",
-        "count": 1
-      },
-      {
-        "name": "Red Death, Shipwrecker",
-        "count": 1
-      },
-      {
-        "name": "Rex, Cyber-Hound",
-        "count": 1
-      },
-      {
-        "name": "Sentinel Sarah Lyons",
-        "count": 1
-      },
-      {
-        "name": "Shaun, Father of Synths",
-        "count": 1
-      },
-      {
-        "name": "Vault 112: Sadistic Simulation",
-        "count": 1
-      },
-      {
-        "name": "Brotherhood Vertibird",
-        "count": 1
-      },
-      {
-        "name": "T-45 Power Armor",
-        "count": 1
-      },
-      {
-        "name": "Ferrous Lake",
-        "count": 1
-      },
-      {
-        "name": "HELIOS One",
-        "count": 1
-      },
-      {
-        "name": "Austere Command",
-        "count": 1
-      },
-      {
-        "name": "Open the Vaults",
-        "count": 1
-      },
-      {
-        "name": "Mechanized Production",
-        "count": 1
-      },
-      {
-        "name": "One with the Machine",
-        "count": 1
-      },
-      {
-        "name": "Wake the Past",
-        "count": 1
-      },
-      {
-        "name": "Mystic Forge",
-        "count": 1
-      },
-      {
-        "name": "Panharmonicon",
-        "count": 1
-      },
-      {
-        "name": "Solemn Simulacrum",
-        "count": 1
-      },
-      {
-        "name": "Steel Overseer",
-        "count": 1
-      },
-      {
-        "name": "Clifftop Retreat",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard",
-        "count": 1
-      },
-      {
-        "name": "Glacial Fortress",
-        "count": 1
-      },
-      {
-        "name": "Irrigated Farmland",
-        "count": 1
-      },
-      {
-        "name": "Prairie Stream",
-        "count": 1
-      },
-      {
-        "name": "Skycloud Expanse",
-        "count": 1
-      },
-      {
-        "name": "Spire of Industry",
-        "count": 1
-      },
-      {
-        "name": "Sulfur Falls",
-        "count": 1
-      },
-      {
-        "name": "Temple of Enlightenment",
-        "count": 1
-      },
-      {
-        "name": "Temple of Epiphany",
-        "count": 1
-      },
-      {
-        "name": "Treasure Vault",
-        "count": 1
-      },
-      {
-        "name": "Paladin Danse, Steel Maverick",
-        "count": 1
-      },
-      {
-        "name": "Nerd Rage",
-        "count": 1
-      },
-      {
-        "name": "Robobrain War Mind",
-        "count": 1
-      },
-      {
-        "name": "Bottle-Cap Blast",
-        "count": 1
-      },
-      {
-        "name": "Elder Owyn Lyons",
-        "count": 1
-      },
-      {
-        "name": "Behemoth of Vault 0",
-        "count": 1
-      },
-      {
-        "name": "C.A.M.P.",
-        "count": 1
-      },
-      {
-        "name": "Endurance Bobblehead",
-        "count": 1
-      },
-      {
-        "name": "Expert-Level Safe",
-        "count": 1
-      },
-      {
-        "name": "Intelligence Bobblehead",
-        "count": 1
-      },
-      {
-        "name": "Nuka-Cola Vending Machine",
-        "count": 1
-      },
-      {
-        "name": "Crush Contraband",
-        "count": 1
-      },
-      {
-        "name": "Dispatch",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares",
-        "count": 1
-      },
-      {
-        "name": "Glimmer of Genius",
-        "count": 1
-      },
-      {
-        "name": "Thirst for Knowledge",
-        "count": 1
-      },
-      {
-        "name": "Whirler Rogue",
-        "count": 1
-      },
-      {
-        "name": "Loyal Apprentice",
-        "count": 1
-      },
-      {
-        "name": "Unexpected Windfall",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Everflowing Chalice",
-        "count": 1
-      },
-      {
-        "name": "Lightning Greaves",
-        "count": 1
-      },
-      {
-        "name": "Mind Stone",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Conviction",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Creativity",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Progress",
-        "count": 1
-      },
-      {
-        "name": "Thought Vessel",
-        "count": 1
-      },
-      {
-        "name": "Wayfarer's Bauble",
-        "count": 1
-      },
-      {
-        "name": "Ash Barrens",
-        "count": 1
-      },
-      {
-        "name": "Buried Ruin",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Evolving Wilds",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape",
-        "count": 1
-      },
-      {
-        "name": "Mystic Monastery",
-        "count": 1
-      },
-      {
-        "name": "Path of Ancestry",
-        "count": 1
-      },
-      {
-        "name": "Razortide Bridge",
-        "count": 1
-      },
-      {
-        "name": "Rustvale Bridge",
-        "count": 1
-      },
-      {
-        "name": "Silverbluff Bridge",
-        "count": 1
-      },
-      {
-        "name": "Terramorphic Expanse",
-        "count": 1
-      },
-      {
-        "name": "Island",
-        "count": 5
-      },
-      {
-        "name": "Mountain",
-        "count": 4
-      },
-      {
-        "name": "Plains",
-        "count": 4
       }
     ]
   }

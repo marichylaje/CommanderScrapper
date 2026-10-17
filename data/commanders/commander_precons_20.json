@@ -1,5 +1,332 @@
 [
   {
+    "name": "Tyranid Swarm Collector's Edition",
+    "commander": "The Swarmlord",
+    "expansion": "Warhammer 40,000 Commander",
+    "cards": [
+      {
+        "name": "Hull Breach",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Explore",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Starstorm",
+        "count": 1
+      },
+      {
+        "name": "Aetherize",
+        "count": 1
+      },
+      {
+        "name": "Inspiring Call",
+        "count": 1
+      },
+      {
+        "name": "Harrow",
+        "count": 1
+      },
+      {
+        "name": "Icon of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Abundance",
+        "count": 1
+      },
+      {
+        "name": "Death's Presence",
+        "count": 1
+      },
+      {
+        "name": "Hardened Scales",
+        "count": 1
+      },
+      {
+        "name": "Bred for the Hunt",
+        "count": 1
+      },
+      {
+        "name": "New Horizons",
+        "count": 1
+      },
+      {
+        "name": "Overgrowth",
+        "count": 1
+      },
+      {
+        "name": "Cinder Glade",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Game Trail",
+        "count": 1
+      },
+      {
+        "name": "Temple of Abandon",
+        "count": 1
+      },
+      {
+        "name": "Temple of Epiphany",
+        "count": 1
+      },
+      {
+        "name": "Temple of Mystery",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Frontier Bivouac",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory",
+        "count": 1
+      },
+      {
+        "name": "Cave of Temptation",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Opal Palace",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rugged Highlands",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Thornwood Falls",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 7
+      },
+      {
+        "name": "Island",
+        "count": 7
+      },
+      {
+        "name": "Forest",
+        "count": 8
+      },
+      {
+        "name": "Magus Lucea Kane",
+        "count": 1
+      },
+      {
+        "name": "Genestealer Patriarch",
+        "count": 1
+      },
+      {
+        "name": "Exocrine",
+        "count": 1
+      },
+      {
+        "name": "The Red Terror",
+        "count": 1
+      },
+      {
+        "name": "Screamer-Killer",
+        "count": 1
+      },
+      {
+        "name": "Biophagus",
+        "count": 1
+      },
+      {
+        "name": "Bone Sabres",
+        "count": 1
+      },
+      {
+        "name": "Broodlord",
+        "count": 1
+      },
+      {
+        "name": "Clamavus",
+        "count": 1
+      },
+      {
+        "name": "Haruspex",
+        "count": 1
+      },
+      {
+        "name": "Hierophant Bio-Titan",
+        "count": 1
+      },
+      {
+        "name": "Hormagaunt Horde",
+        "count": 1
+      },
+      {
+        "name": "Lictor",
+        "count": 1
+      },
+      {
+        "name": "Nexos",
+        "count": 1
+      },
+      {
+        "name": "Old One Eye",
+        "count": 1
+      },
+      {
+        "name": "Sporocyst",
+        "count": 1
+      },
+      {
+        "name": "Termagant Swarm",
+        "count": 1
+      },
+      {
+        "name": "Tervigon",
+        "count": 1
+      },
+      {
+        "name": "Toxicrene",
+        "count": 1
+      },
+      {
+        "name": "Tyrant Guard",
+        "count": 1
+      },
+      {
+        "name": "Atalan Jackal",
+        "count": 1
+      },
+      {
+        "name": "Deathleaper, Terror Weapon",
+        "count": 1
+      },
+      {
+        "name": "The First Tyrannic War",
+        "count": 1
+      },
+      {
+        "name": "Gargoyle Flock",
+        "count": 1
+      },
+      {
+        "name": "Ghyrson Starn, Kelermorph",
+        "count": 1
+      },
+      {
+        "name": "Malanthrope",
+        "count": 1
+      },
+      {
+        "name": "Mawloc",
+        "count": 1
+      },
+      {
+        "name": "Ravener",
+        "count": 1
+      },
+      {
+        "name": "Shadow in the Warp",
+        "count": 1
+      },
+      {
+        "name": "Tyranid Harridan",
+        "count": 1
+      },
+      {
+        "name": "Tyranid Prime",
+        "count": 1
+      },
+      {
+        "name": "Winged Hive Tyrant",
+        "count": 1
+      },
+      {
+        "name": "Zoanthrope",
+        "count": 1
+      },
+      {
+        "name": "Genestealer Locus",
+        "count": 1
+      },
+      {
+        "name": "Acolyte Hybrid",
+        "count": 1
+      },
+      {
+        "name": "Aberrant",
+        "count": 1
+      },
+      {
+        "name": "Purestrain Genestealer",
+        "count": 1
+      },
+      {
+        "name": "Tyranid Invasion",
+        "count": 1
+      },
+      {
+        "name": "Trygon Prime",
+        "count": 1
+      },
+      {
+        "name": "Venomthrope",
+        "count": 1
+      },
+      {
+        "name": "Goliath Truck",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "Mishra's Burnished Banner",
     "commander": "Mishra, Eminent One",
     "expansion": "The Brothers' War Commander",
@@ -1316,297 +1643,6 @@
       {
         "name": "Forest",
         "count": 12
-      }
-    ]
-  },
-  {
-    "name": "First Flight",
-    "commander": "Isperia, Supreme Judge",
-    "expansion": "Starter Commander Decks",
-    "cards": [
-      {
-        "name": "Archon of Redemption",
-        "count": 1
-      },
-      {
-        "name": "Cartographer's Hawk",
-        "count": 1
-      },
-      {
-        "name": "Cleansing Nova",
-        "count": 1
-      },
-      {
-        "name": "Emeria Angel",
-        "count": 1
-      },
-      {
-        "name": "Gideon Jura",
-        "count": 1
-      },
-      {
-        "name": "Hanged Executioner",
-        "count": 1
-      },
-      {
-        "name": "Remorseful Cleric",
-        "count": 1
-      },
-      {
-        "name": "Sephara, Sky's Blade",
-        "count": 1
-      },
-      {
-        "name": "Steel-Plume Marshal",
-        "count": 1
-      },
-      {
-        "name": "Storm Herd",
-        "count": 1
-      },
-      {
-        "name": "True Conviction",
-        "count": 1
-      },
-      {
-        "name": "Angler Turtle",
-        "count": 1
-      },
-      {
-        "name": "Bident of Thassa",
-        "count": 1
-      },
-      {
-        "name": "Diluvian Primordial",
-        "count": 1
-      },
-      {
-        "name": "Ever-Watching Threshold",
-        "count": 1
-      },
-      {
-        "name": "Faerie Formation",
-        "count": 1
-      },
-      {
-        "name": "Gravitational Shift",
-        "count": 1
-      },
-      {
-        "name": "Inspired Sphinx",
-        "count": 1
-      },
-      {
-        "name": "Sharding Sphinx",
-        "count": 1
-      },
-      {
-        "name": "Sphinx of Enlightenment",
-        "count": 1
-      },
-      {
-        "name": "Windreader Sphinx",
-        "count": 1
-      },
-      {
-        "name": "Absorb",
-        "count": 1
-      },
-      {
-        "name": "Skycat Sovereign",
-        "count": 1
-      },
-      {
-        "name": "Sphinx's Revelation",
-        "count": 1
-      },
-      {
-        "name": "Time Wipe",
-        "count": 1
-      },
-      {
-        "name": "Moorland Haunt",
-        "count": 1
-      },
-      {
-        "name": "Port Town",
-        "count": 1
-      },
-      {
-        "name": "Prairie Stream",
-        "count": 1
-      },
-      {
-        "name": "Temple of Enlightenment",
-        "count": 1
-      },
-      {
-        "name": "Aven Gagglemaster",
-        "count": 1
-      },
-      {
-        "name": "Banishing Light",
-        "count": 1
-      },
-      {
-        "name": "Condemn",
-        "count": 1
-      },
-      {
-        "name": "Crush Contraband",
-        "count": 1
-      },
-      {
-        "name": "Disenchant",
-        "count": 1
-      },
-      {
-        "name": "Generous Gift",
-        "count": 1
-      },
-      {
-        "name": "Kangee's Lieutenant",
-        "count": 1
-      },
-      {
-        "name": "Rally of Wings",
-        "count": 1
-      },
-      {
-        "name": "Soul Snare",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares",
-        "count": 1
-      },
-      {
-        "name": "Vow of Duty",
-        "count": 1
-      },
-      {
-        "name": "Aetherize",
-        "count": 1
-      },
-      {
-        "name": "Counterspell",
-        "count": 1
-      },
-      {
-        "name": "Favorable Winds",
-        "count": 1
-      },
-      {
-        "name": "Negate",
-        "count": 1
-      },
-      {
-        "name": "Tide Skimmer",
-        "count": 1
-      },
-      {
-        "name": "Warden of Evos Isle",
-        "count": 1
-      },
-      {
-        "name": "Winged Words",
-        "count": 1
-      },
-      {
-        "name": "Cloudblazer",
-        "count": 1
-      },
-      {
-        "name": "Empyrean Eagle",
-        "count": 1
-      },
-      {
-        "name": "Jubilant Skybonder",
-        "count": 1
-      },
-      {
-        "name": "Kangee, Sky Warden",
-        "count": 1
-      },
-      {
-        "name": "Migratory Route",
-        "count": 1
-      },
-      {
-        "name": "Staggering Insight",
-        "count": 1
-      },
-      {
-        "name": "Thunderclap Wyvern",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Azorius Signet",
-        "count": 1
-      },
-      {
-        "name": "Commander's Sphere",
-        "count": 1
-      },
-      {
-        "name": "Hedron Archive",
-        "count": 1
-      },
-      {
-        "name": "Pilgrim's Eye",
-        "count": 1
-      },
-      {
-        "name": "Sky Diamond",
-        "count": 1
-      },
-      {
-        "name": "Skyscanner",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Progress",
-        "count": 1
-      },
-      {
-        "name": "Thought Vessel",
-        "count": 1
-      },
-      {
-        "name": "Coastal Tower",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Meandering River",
-        "count": 1
-      },
-      {
-        "name": "Sejiri Refuge",
-        "count": 1
-      },
-      {
-        "name": "Tranquil Cove",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 15
-      },
-      {
-        "name": "Island",
-        "count": 15
       }
     ]
   }

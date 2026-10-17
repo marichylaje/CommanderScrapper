@@ -1,5 +1,352 @@
 [
   {
+    "name": "Obscura Operation",
+    "commander": "Kamiz, Obscura Oculus",
+    "expansion": "New Capenna Commander",
+    "cards": [
+      {
+        "name": "Tivit, Seller of Secrets",
+        "count": 1
+      },
+      {
+        "name": "Aerial Extortionist",
+        "count": 1
+      },
+      {
+        "name": "Cephalid Facetaker",
+        "count": 1
+      },
+      {
+        "name": "Skyway Robber",
+        "count": 1
+      },
+      {
+        "name": "Misfortune Teller",
+        "count": 1
+      },
+      {
+        "name": "Oskar, Rubbish Reclaimer",
+        "count": 1
+      },
+      {
+        "name": "Silent-Blade Oni",
+        "count": 1
+      },
+      {
+        "name": "Wrexial, the Risen Deep",
+        "count": 1
+      },
+      {
+        "name": "Alela, Artful Provocateur",
+        "count": 1
+      },
+      {
+        "name": "Fallen Shinobi",
+        "count": 1
+      },
+      {
+        "name": "Drana, Liberator of Malakir",
+        "count": 1
+      },
+      {
+        "name": "Archon of Coronation",
+        "count": 1
+      },
+      {
+        "name": "Sun Titan",
+        "count": 1
+      },
+      {
+        "name": "Champion of Wits",
+        "count": 1
+      },
+      {
+        "name": "Chasm Skulker",
+        "count": 1
+      },
+      {
+        "name": "Ghostly Pilferer",
+        "count": 1
+      },
+      {
+        "name": "Identity Thief",
+        "count": 1
+      },
+      {
+        "name": "Nadir Kraken",
+        "count": 1
+      },
+      {
+        "name": "Custodi Lich",
+        "count": 1
+      },
+      {
+        "name": "Graveblade Marauder",
+        "count": 1
+      },
+      {
+        "name": "Daxos of Meletis",
+        "count": 1
+      },
+      {
+        "name": "Dragonlord Ojutai",
+        "count": 1
+      },
+      {
+        "name": "Shadowmage Infiltrator",
+        "count": 1
+      },
+      {
+        "name": "Thief of Sanity",
+        "count": 1
+      },
+      {
+        "name": "Daring Saboteur",
+        "count": 1
+      },
+      {
+        "name": "Looter il-Kor",
+        "count": 1
+      },
+      {
+        "name": "Whirler Rogue",
+        "count": 1
+      },
+      {
+        "name": "Inkfathom Witch",
+        "count": 1
+      },
+      {
+        "name": "Jailbreak",
+        "count": 1
+      },
+      {
+        "name": "Writ of Return",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Dusk // Dawn",
+        "count": 1
+      },
+      {
+        "name": "Stolen Identity",
+        "count": 1
+      },
+      {
+        "name": "Nightmare Unmaking",
+        "count": 1
+      },
+      {
+        "name": "Profane Command",
+        "count": 1
+      },
+      {
+        "name": "Treasure Cruise",
+        "count": 1
+      },
+      {
+        "name": "An Offer You Can't Refuse",
+        "count": 1
+      },
+      {
+        "name": "Change of Plans",
+        "count": 1
+      },
+      {
+        "name": "Lethal Scheme",
+        "count": 1
+      },
+      {
+        "name": "Obscura Charm",
+        "count": 1
+      },
+      {
+        "name": "Obscura Confluence",
+        "count": 1
+      },
+      {
+        "name": "Commit // Memory",
+        "count": 1
+      },
+      {
+        "name": "Utter End",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares",
+        "count": 1
+      },
+      {
+        "name": "In Too Deep",
+        "count": 1
+      },
+      {
+        "name": "Life Insurance",
+        "count": 1
+      },
+      {
+        "name": "Smuggler's Share",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Azorius Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Currency Converter",
+        "count": 1
+      },
+      {
+        "name": "Dimir Signet",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone",
+        "count": 1
+      },
+      {
+        "name": "Mask of Riddles",
+        "count": 1
+      },
+      {
+        "name": "Mask of the Schemer",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Signet",
+        "count": 1
+      },
+      {
+        "name": "Quietus Spike",
+        "count": 1
+      },
+      {
+        "name": "Strionic Resonator",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Fetid Heath",
+        "count": 1
+      },
+      {
+        "name": "Creeping Tar Pit",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Choked Estuary",
+        "count": 1
+      },
+      {
+        "name": "Arcane Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Darkwater Catacombs",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Skycloud Expanse",
+        "count": 1
+      },
+      {
+        "name": "Temple of Silence",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Esper Panorama",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape",
+        "count": 1
+      },
+      {
+        "name": "Obscura Storefront",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Thriving Heath",
+        "count": 1
+      },
+      {
+        "name": "Thriving Isle",
+        "count": 1
+      },
+      {
+        "name": "Thriving Moor",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 5
+      },
+      {
+        "name": "Island",
+        "count": 6
+      },
+      {
+        "name": "Swamp",
+        "count": 6
+      }
+    ]
+  },
+  {
     "name": "Riveteers Rampage",
     "commander": "Henzie \"Toolbox\" Torre",
     "expansion": "New Capenna Commander",
@@ -1315,337 +1662,6 @@
       },
       {
         "name": "Uchuulon",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "Party Time",
-    "commander": "Nalia de'Arnise",
-    "expansion": "Commander Legends: Battle for Baldur's Gate",
-    "cards": [
-      {
-        "name": "Archpriest of Iona",
-        "count": 1
-      },
-      {
-        "name": "Bygone Bishop",
-        "count": 1
-      },
-      {
-        "name": "Eight-and-a-Half-Tails",
-        "count": 1
-      },
-      {
-        "name": "Frontline Medic",
-        "count": 1
-      },
-      {
-        "name": "Galepowder Mage",
-        "count": 1
-      },
-      {
-        "name": "Glorious Protector",
-        "count": 1
-      },
-      {
-        "name": "Jazal Goldmane",
-        "count": 1
-      },
-      {
-        "name": "Magus of the Balance",
-        "count": 1
-      },
-      {
-        "name": "Mikaeus, the Lunarch",
-        "count": 1
-      },
-      {
-        "name": "Mirror Entity",
-        "count": 1
-      },
-      {
-        "name": "Order of Whiteclay",
-        "count": 1
-      },
-      {
-        "name": "Selfless Spirit",
-        "count": 1
-      },
-      {
-        "name": "Solemn Recruit",
-        "count": 1
-      },
-      {
-        "name": "Squad Commander",
-        "count": 1
-      },
-      {
-        "name": "Bloodsoaked Champion",
-        "count": 1
-      },
-      {
-        "name": "Butcher of Malakir",
-        "count": 1
-      },
-      {
-        "name": "Calculating Lich",
-        "count": 1
-      },
-      {
-        "name": "Dire Fleet Ravager",
-        "count": 1
-      },
-      {
-        "name": "Gonti, Lord of Luxury",
-        "count": 1
-      },
-      {
-        "name": "Grim Haruspex",
-        "count": 1
-      },
-      {
-        "name": "Grim Hireling",
-        "count": 1
-      },
-      {
-        "name": "Mardu Strike Leader",
-        "count": 1
-      },
-      {
-        "name": "Mindblade Render",
-        "count": 1
-      },
-      {
-        "name": "Nighthawk Scavenger",
-        "count": 1
-      },
-      {
-        "name": "Pontiff of Blight",
-        "count": 1
-      },
-      {
-        "name": "Puppeteer Clique",
-        "count": 1
-      },
-      {
-        "name": "Felisa, Fang of Silverquill",
-        "count": 1
-      },
-      {
-        "name": "High Priest of Penance",
-        "count": 1
-      },
-      {
-        "name": "Aven Mindcensor",
-        "count": 1
-      },
-      {
-        "name": "Irregular Cohort",
-        "count": 1
-      },
-      {
-        "name": "Mage's Attendant",
-        "count": 1
-      },
-      {
-        "name": "Mother of Runes",
-        "count": 1
-      },
-      {
-        "name": "Priest of Ancient Lore",
-        "count": 1
-      },
-      {
-        "name": "Rumor Gatherer",
-        "count": 1
-      },
-      {
-        "name": "Valiant Changeling",
-        "count": 1
-      },
-      {
-        "name": "Changeling Outcast",
-        "count": 1
-      },
-      {
-        "name": "Corpse Augur",
-        "count": 1
-      },
-      {
-        "name": "Malakir Blood-Priest",
-        "count": 1
-      },
-      {
-        "name": "Zulaport Cutthroat",
-        "count": 1
-      },
-      {
-        "name": "Austere Command",
-        "count": 1
-      },
-      {
-        "name": "Dusk // Dawn",
-        "count": 1
-      },
-      {
-        "name": "Sevinne's Reclamation",
-        "count": 1
-      },
-      {
-        "name": "Thwart the Grave",
-        "count": 1
-      },
-      {
-        "name": "Unbreakable Formation",
-        "count": 1
-      },
-      {
-        "name": "Despark",
-        "count": 1
-      },
-      {
-        "name": "Maskwood Nexus",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Orzhov Signet",
-        "count": 1
-      },
-      {
-        "name": "Skullclamp",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Hierarchy",
-        "count": 1
-      },
-      {
-        "name": "Firja's Retribution",
-        "count": 1
-      },
-      {
-        "name": "Castle Locthwain",
-        "count": 1
-      },
-      {
-        "name": "Mutavault",
-        "count": 1
-      },
-      {
-        "name": "Shambling Vent",
-        "count": 1
-      },
-      {
-        "name": "Temple of Silence",
-        "count": 1
-      },
-      {
-        "name": "Vault of the Archangel",
-        "count": 1
-      },
-      {
-        "name": "War Room",
-        "count": 1
-      },
-      {
-        "name": "Windbrisk Heights",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Ash Barrens",
-        "count": 1
-      },
-      {
-        "name": "Bojuka Bog",
-        "count": 1
-      },
-      {
-        "name": "Mortuary Mire",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape",
-        "count": 1
-      },
-      {
-        "name": "Orzhov Basilica",
-        "count": 1
-      },
-      {
-        "name": "Path of Ancestry",
-        "count": 1
-      },
-      {
-        "name": "Snowfield Sinkhole",
-        "count": 1
-      },
-      {
-        "name": "Starlit Sanctum",
-        "count": 1
-      },
-      {
-        "name": "Tainted Field",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 10
-      },
-      {
-        "name": "Swamp",
-        "count": 10
-      },
-      {
-        "name": "Burakos, Party Leader",
-        "count": 1
-      },
-      {
-        "name": "Folk Hero",
-        "count": 1
-      },
-      {
-        "name": "Deep Gnome Terramancer",
-        "count": 1
-      },
-      {
-        "name": "Harper Recruiter",
-        "count": 1
-      },
-      {
-        "name": "Seasoned Dungeoneer",
-        "count": 1
-      },
-      {
-        "name": "Stick Together",
-        "count": 1
-      },
-      {
-        "name": "Black Market Connections",
-        "count": 1
-      },
-      {
-        "name": "Solemn Doomguide",
-        "count": 1
-      },
-      {
-        "name": "Multiclass Baldric",
-        "count": 1
-      },
-      {
-        "name": "Crib Swap",
         "count": 1
       }
     ]

@@ -1,5 +1,312 @@
 [
   {
+    "name": "Elven Council",
+    "commander": "Galadriel, Elven-Queen",
+    "expansion": "Tales of Middle-earth Commander",
+    "cards": [
+      {
+        "name": "Gandalf, Westward Voyager",
+        "count": 1
+      },
+      {
+        "name": "Raise the Palisade",
+        "count": 1
+      },
+      {
+        "name": "Trap the Trespassers",
+        "count": 1
+      },
+      {
+        "name": "Arwen, Weaver of Hope",
+        "count": 1
+      },
+      {
+        "name": "Galadhrim Ambush",
+        "count": 1
+      },
+      {
+        "name": "Haldir, Lórien Lieutenant",
+        "count": 1
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Elk",
+        "count": 1
+      },
+      {
+        "name": "Travel Through Caradhras",
+        "count": 1
+      },
+      {
+        "name": "Windswift Slice",
+        "count": 1
+      },
+      {
+        "name": "Círdan the Shipwright",
+        "count": 1
+      },
+      {
+        "name": "Elrond of the White Council",
+        "count": 1
+      },
+      {
+        "name": "Erestor of the Council",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Trapper",
+        "count": 1
+      },
+      {
+        "name": "Radagast, Wizard of Wilds",
+        "count": 1
+      },
+      {
+        "name": "Sail into the West",
+        "count": 1
+      },
+      {
+        "name": "Song of Eärendil",
+        "count": 1
+      },
+      {
+        "name": "Lothlórien Blade",
+        "count": 1
+      },
+      {
+        "name": "Model of Unity",
+        "count": 1
+      },
+      {
+        "name": "Colossal Whale",
+        "count": 1
+      },
+      {
+        "name": "Devastation Tide",
+        "count": 1
+      },
+      {
+        "name": "Mystic Confluence",
+        "count": 1
+      },
+      {
+        "name": "Plea for Power",
+        "count": 1
+      },
+      {
+        "name": "Swan Song",
+        "count": 1
+      },
+      {
+        "name": "Asceticism",
+        "count": 1
+      },
+      {
+        "name": "Elvish Archdruid",
+        "count": 1
+      },
+      {
+        "name": "Elvish Piper",
+        "count": 1
+      },
+      {
+        "name": "Elvish Warmaster",
+        "count": 1
+      },
+      {
+        "name": "Genesis Wave",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention",
+        "count": 1
+      },
+      {
+        "name": "Hornet Queen",
+        "count": 1
+      },
+      {
+        "name": "Inscription of Abundance",
+        "count": 1
+      },
+      {
+        "name": "Overwhelming Stampede",
+        "count": 1
+      },
+      {
+        "name": "Realm Seekers",
+        "count": 1
+      },
+      {
+        "name": "Seeds of Renewal",
+        "count": 1
+      },
+      {
+        "name": "Sylvan Offering",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Flooded Grove",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor",
+        "count": 1
+      },
+      {
+        "name": "Rejuvenating Springs",
+        "count": 1
+      },
+      {
+        "name": "Vineglimmer Snarl",
+        "count": 1
+      },
+      {
+        "name": "Lórien Revealed",
+        "count": 1
+      },
+      {
+        "name": "Celeborn the Wise",
+        "count": 1
+      },
+      {
+        "name": "Elven Farsight",
+        "count": 1
+      },
+      {
+        "name": "Wose Pathfinder",
+        "count": 1
+      },
+      {
+        "name": "Learn from the Past",
+        "count": 1
+      },
+      {
+        "name": "Opt",
+        "count": 1
+      },
+      {
+        "name": "Preordain",
+        "count": 1
+      },
+      {
+        "name": "Arbor Elf",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Elvish Mystic",
+        "count": 1
+      },
+      {
+        "name": "Elvish Visionary",
+        "count": 1
+      },
+      {
+        "name": "Farhaven Elf",
+        "count": 1
+      },
+      {
+        "name": "Mirror of Galadriel",
+        "count": 1
+      },
+      {
+        "name": "Lignify",
+        "count": 1
+      },
+      {
+        "name": "Paradise Druid",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Reclamation Sage",
+        "count": 1
+      },
+      {
+        "name": "Wood Elves",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Whispersilk Cloak",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Field of Ruin",
+        "count": 1
+      },
+      {
+        "name": "Lonely Sandbar",
+        "count": 1
+      },
+      {
+        "name": "Thornwood Falls",
+        "count": 1
+      },
+      {
+        "name": "Tranquil Thicket",
+        "count": 1
+      },
+      {
+        "name": "Woodland Stream",
+        "count": 1
+      },
+      {
+        "name": "Island",
+        "count": 11
+      },
+      {
+        "name": "Forest",
+        "count": 15
+      }
+    ]
+  },
+  {
     "name": "Food and Fellowship",
     "commander": "Frodo, Adventurous Hobbit",
     "expansion": "Tales of Middle-earth Commander",
@@ -1368,345 +1675,6 @@
       {
         "name": "Wastes",
         "count": 15
-      }
-    ]
-  },
-  {
-    "name": "Enduring Enchantments",
-    "commander": "Anikthea, Hand of Erebos",
-    "expansion": "Commander Masters",
-    "cards": [
-      {
-        "name": "Narci, Fable Singer",
-        "count": 1
-      },
-      {
-        "name": "Battle at the Helvault",
-        "count": 1
-      },
-      {
-        "name": "Boon of the Spirit Realm",
-        "count": 1
-      },
-      {
-        "name": "Ondu Spiritdancer",
-        "count": 1
-      },
-      {
-        "name": "Cacophony Unleashed",
-        "count": 1
-      },
-      {
-        "name": "Demon of Fate's Design",
-        "count": 1
-      },
-      {
-        "name": "Ghoulish Impetus",
-        "count": 1
-      },
-      {
-        "name": "Composer of Spring",
-        "count": 1
-      },
-      {
-        "name": "Nyxborn Behemoth",
-        "count": 1
-      },
-      {
-        "name": "Archon of Sun's Grace",
-        "count": 1
-      },
-      {
-        "name": "Felidar Retreat",
-        "count": 1
-      },
-      {
-        "name": "Grasp of Fate",
-        "count": 1
-      },
-      {
-        "name": "Heliod, God of the Sun",
-        "count": 1
-      },
-      {
-        "name": "Mesa Enchantress",
-        "count": 1
-      },
-      {
-        "name": "Sigil of the Empty Throne",
-        "count": 1
-      },
-      {
-        "name": "Starfield Mystic",
-        "count": 1
-      },
-      {
-        "name": "Starfield of Nyx",
-        "count": 1
-      },
-      {
-        "name": "Cunning Rhetoric",
-        "count": 1
-      },
-      {
-        "name": "Doomwake Giant",
-        "count": 1
-      },
-      {
-        "name": "Dreadhorde Invasion",
-        "count": 1
-      },
-      {
-        "name": "Erebos, Bleak-Hearted",
-        "count": 1
-      },
-      {
-        "name": "Abundance",
-        "count": 1
-      },
-      {
-        "name": "Arasta of the Endless Web",
-        "count": 1
-      },
-      {
-        "name": "Courser of Kruphix",
-        "count": 1
-      },
-      {
-        "name": "Dryad of the Ilysian Grove",
-        "count": 1
-      },
-      {
-        "name": "Eidolon of Blossoms",
-        "count": 1
-      },
-      {
-        "name": "Enchantress's Presence",
-        "count": 1
-      },
-      {
-        "name": "Herald of the Pantheon",
-        "count": 1
-      },
-      {
-        "name": "The Mending of Dominaria",
-        "count": 1
-      },
-      {
-        "name": "Sanctum Weaver",
-        "count": 1
-      },
-      {
-        "name": "Sandwurm Convergence",
-        "count": 1
-      },
-      {
-        "name": "Setessan Champion",
-        "count": 1
-      },
-      {
-        "name": "Verduran Enchantress",
-        "count": 1
-      },
-      {
-        "name": "Battle for Bretagard",
-        "count": 1
-      },
-      {
-        "name": "Calix, Destiny's Hand",
-        "count": 1
-      },
-      {
-        "name": "Culling Ritual",
-        "count": 1
-      },
-      {
-        "name": "Mirari's Wake",
-        "count": 1
-      },
-      {
-        "name": "Sythis, Harvest's Hand",
-        "count": 1
-      },
-      {
-        "name": "Canopy Vista",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard",
-        "count": 1
-      },
-      {
-        "name": "Fortified Village",
-        "count": 1
-      },
-      {
-        "name": "Necroblossom Snarl",
-        "count": 1
-      },
-      {
-        "name": "Shineshadow Snarl",
-        "count": 1
-      },
-      {
-        "name": "Sungrass Prairie",
-        "count": 1
-      },
-      {
-        "name": "Temple of Malady",
-        "count": 1
-      },
-      {
-        "name": "Temple of Plenty",
-        "count": 1
-      },
-      {
-        "name": "Temple of Silence",
-        "count": 1
-      },
-      {
-        "name": "Path to Exile",
-        "count": 1
-      },
-      {
-        "name": "Extinguish All Hope",
-        "count": 1
-      },
-      {
-        "name": "Kodama's Reach",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "Ash Barrens",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Cast Out",
-        "count": 1
-      },
-      {
-        "name": "Love Song of Night and Day",
-        "count": 1
-      },
-      {
-        "name": "Omen of the Sun",
-        "count": 1
-      },
-      {
-        "name": "Spirited Companion",
-        "count": 1
-      },
-      {
-        "name": "The Eldest Reborn",
-        "count": 1
-      },
-      {
-        "name": "Mindwrack Harpy",
-        "count": 1
-      },
-      {
-        "name": "The Binding of the Titans",
-        "count": 1
-      },
-      {
-        "name": "Destiny Spinner",
-        "count": 1
-      },
-      {
-        "name": "Farseek",
-        "count": 1
-      },
-      {
-        "name": "Font of Fertility",
-        "count": 1
-      },
-      {
-        "name": "Greater Tanuki",
-        "count": 1
-      },
-      {
-        "name": "Khalni Heart Expedition",
-        "count": 1
-      },
-      {
-        "name": "Nessian Wanderer",
-        "count": 1
-      },
-      {
-        "name": "Omen of the Hunt",
-        "count": 1
-      },
-      {
-        "name": "Rampant Growth",
-        "count": 1
-      },
-      {
-        "name": "Binding the Old Gods",
-        "count": 1
-      },
-      {
-        "name": "Jukai Naturalist",
-        "count": 1
-      },
-      {
-        "name": "Nyx Weaver",
-        "count": 1
-      },
-      {
-        "name": "Satyr Enchanter",
-        "count": 1
-      },
-      {
-        "name": "Golgari Rot Farm",
-        "count": 1
-      },
-      {
-        "name": "Krosan Verge",
-        "count": 1
-      },
-      {
-        "name": "Orzhov Basilica",
-        "count": 1
-      },
-      {
-        "name": "Sandsteppe Citadel",
-        "count": 1
-      },
-      {
-        "name": "Selesnya Sanctuary",
-        "count": 1
-      },
-      {
-        "name": "Tainted Field",
-        "count": 1
-      },
-      {
-        "name": "Tainted Wood",
-        "count": 1
-      },
-      {
-        "name": "Plains",
-        "count": 6
-      },
-      {
-        "name": "Swamp",
-        "count": 5
-      },
-      {
-        "name": "Forest",
-        "count": 8
       }
     ]
   }
