@@ -1,0 +1,1857 @@
+[
+  {
+    "name": "Klingon Fury Collector's Edition",
+    "commander": "Worf, Defiant Commander",
+    "expansion": "Star Trek Commander",
+    "cards": [
+      {
+        "name": "Kor, Cause of Vengeance",
+        "count": 1
+      },
+      {
+        "name": "Ambassador K'Ehleyr",
+        "count": 1
+      },
+      {
+        "name": "Imperial Hullbreachers",
+        "count": 1
+      },
+      {
+        "name": "Indelicate Healer",
+        "count": 1
+      },
+      {
+        "name": "Korok, Liberated Rage",
+        "count": 1
+      },
+      {
+        "name": "Martok, Hero of the Empire",
+        "count": 1
+      },
+      {
+        "name": "Merciful Mandate",
+        "count": 1
+      },
+      {
+        "name": "Right of Vengeance",
+        "count": 1
+      },
+      {
+        "name": "Blood-Sport Champion",
+        "count": 1
+      },
+      {
+        "name": "Kurn, Son of Mogh",
+        "count": 1
+      },
+      {
+        "name": "The Promise of Kahless",
+        "count": 1
+      },
+      {
+        "name": "Voq, Torchbearer",
+        "count": 1
+      },
+      {
+        "name": "The Beacon of Kahless",
+        "count": 1
+      },
+      {
+        "name": "Ferocious Colonist",
+        "count": 1
+      },
+      {
+        "name": "Gagh Slinger",
+        "count": 1
+      },
+      {
+        "name": "Galvanizing Tenor",
+        "count": 1
+      },
+      {
+        "name": "Glory to the Empire!",
+        "count": 1
+      },
+      {
+        "name": "Gnarling Targ",
+        "count": 1
+      },
+      {
+        "name": "Grilka, Widowed Warrior",
+        "count": 1
+      },
+      {
+        "name": "Kang, Suspicious Captain",
+        "count": 1
+      },
+      {
+        "name": "Koloth, Tribble Hunter",
+        "count": 1
+      },
+      {
+        "name": "Own the Day",
+        "count": 1
+      },
+      {
+        "name": "Qo'noS Quartermaster",
+        "count": 1
+      },
+      {
+        "name": "Alexander, Ship's Fool",
+        "count": 1
+      },
+      {
+        "name": "Chancellor Gorkon",
+        "count": 1
+      },
+      {
+        "name": "Curzon Dax, Bound by Blood",
+        "count": 1
+      },
+      {
+        "name": "Rite of Ascension",
+        "count": 1
+      },
+      {
+        "name": "Sins of the Father",
+        "count": 1
+      },
+      {
+        "name": "I.K.S. Negh'Var, Imperial Flagship",
+        "count": 1
+      },
+      {
+        "name": "K't'inga-Class Battle Cruiser",
+        "count": 1
+      },
+      {
+        "name": "K'Vort-Class Raider",
+        "count": 1
+      },
+      {
+        "name": "The Sword of Kahless",
+        "count": 1
+      },
+      {
+        "name": "Concerted Effort",
+        "count": 1
+      },
+      {
+        "name": "Duelist's Heritage",
+        "count": 1
+      },
+      {
+        "name": "Vanquish the Horde",
+        "count": 1
+      },
+      {
+        "name": "Painful Truths",
+        "count": 1
+      },
+      {
+        "name": "Combat Celebrant",
+        "count": 1
+      },
+      {
+        "name": "Disrupt Decorum",
+        "count": 1
+      },
+      {
+        "name": "Professional Face-Breaker",
+        "count": 1
+      },
+      {
+        "name": "Shared Animosity",
+        "count": 1
+      },
+      {
+        "name": "World at War",
+        "count": 1
+      },
+      {
+        "name": "Pest Control",
+        "count": 1
+      },
+      {
+        "name": "Ruinous Ultimatum",
+        "count": 1
+      },
+      {
+        "name": "Vindicate",
+        "count": 1
+      },
+      {
+        "name": "Warleader's Call",
+        "count": 1
+      },
+      {
+        "name": "Sword of Light and Shadow",
+        "count": 1
+      },
+      {
+        "name": "Battlefield Forge",
+        "count": 1
+      },
+      {
+        "name": "Canyon Slough",
+        "count": 1
+      },
+      {
+        "name": "Clifftop Retreat",
+        "count": 1
+      },
+      {
+        "name": "Dragonskull Summit",
+        "count": 1
+      },
+      {
+        "name": "Eclipsed Steppe",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Foreboding Ruins",
+        "count": 1
+      },
+      {
+        "name": "Furycalm Snarl",
+        "count": 1
+      },
+      {
+        "name": "Glittering Massif",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Radiant Summit",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Smoldering Marsh",
+        "count": 1
+      },
+      {
+        "name": "Temple of Malice",
+        "count": 1
+      },
+      {
+        "name": "Umbral Expanse",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions",
+        "count": 1
+      },
+      {
+        "name": "Cha'DIch Investigator",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Return to Dust",
+        "count": 1
+      },
+      {
+        "name": "Valorous Stance",
+        "count": 1
+      },
+      {
+        "name": "Night's Whisper",
+        "count": 1
+      },
+      {
+        "name": "Rite of Oblivion",
+        "count": 1
+      },
+      {
+        "name": "Terminate",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Conviction",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Indulgence",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Nomad Outpost",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Shattered Landscape",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Mountain",
+        "count": 5
+      },
+      {
+        "name": "Plains",
+        "count": 5
+      },
+      {
+        "name": "Swamp",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "Landing Party",
+    "commander": "Commander Spock",
+    "expansion": "Star Trek Commander",
+    "cards": [
+      {
+        "name": "Captain Kirk, Boldly Going",
+        "count": 1
+      },
+      {
+        "name": "Balance of Terror",
+        "count": 1
+      },
+      {
+        "name": "Merciful Mandate",
+        "count": 1
+      },
+      {
+        "name": "M'Ress, Crew Coordinator",
+        "count": 1
+      },
+      {
+        "name": "Shuttlecraft Galileo",
+        "count": 1
+      },
+      {
+        "name": "Tribble Cluster",
+        "count": 1
+      },
+      {
+        "name": "Colossal Clone Master",
+        "count": 1
+      },
+      {
+        "name": "Fleet Captain Christopher Pike",
+        "count": 1
+      },
+      {
+        "name": "Giant Space Amoeba",
+        "count": 1
+      },
+      {
+        "name": "Lieutenant Nyota Uhura",
+        "count": 1
+      },
+      {
+        "name": "Sam Kirk, Xenoanthropologist",
+        "count": 1
+      },
+      {
+        "name": "Temporal Tribulation",
+        "count": 1
+      },
+      {
+        "name": "Amanda Grayson, Logic's Link",
+        "count": 1
+      },
+      {
+        "name": "Christine Chapel, Combat Medic",
+        "count": 1
+      },
+      {
+        "name": "Janice Rand, Essential Aide",
+        "count": 1
+      },
+      {
+        "name": "Lieutenant Hikaru Sulu",
+        "count": 1
+      },
+      {
+        "name": "Chief Kyle, Transporter Tech",
+        "count": 1
+      },
+      {
+        "name": "Chief Montgomery Scott",
+        "count": 1
+      },
+      {
+        "name": "Lt. Arex, Ever-Adapting",
+        "count": 1
+      },
+      {
+        "name": "McCoy, Not a Bricklayer",
+        "count": 1
+      },
+      {
+        "name": "Pavel Chekov, First Posting",
+        "count": 1
+      },
+      {
+        "name": "T'Pring, Never Parted",
+        "count": 1
+      },
+      {
+        "name": "Command Chair",
+        "count": 1
+      },
+      {
+        "name": "The Guardian of Forever",
+        "count": 1
+      },
+      {
+        "name": "Jefferies Tube",
+        "count": 1
+      },
+      {
+        "name": "Planet Killer",
+        "count": 1
+      },
+      {
+        "name": "S.S. Botany Bay",
+        "count": 1
+      },
+      {
+        "name": "Starfleet Communicator",
+        "count": 1
+      },
+      {
+        "name": "Starship Enterprise",
+        "count": 1
+      },
+      {
+        "name": "U.S.S. Defiant, Mirror Migrant",
+        "count": 1
+      },
+      {
+        "name": "U.S.S. Farragut, Bold Explorer",
+        "count": 1
+      },
+      {
+        "name": "Shore Leave Planet",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Sun Titan",
+        "count": 1
+      },
+      {
+        "name": "Wrath of God",
+        "count": 1
+      },
+      {
+        "name": "Echo of Eons",
+        "count": 1
+      },
+      {
+        "name": "Ancient Greenwarden",
+        "count": 1
+      },
+      {
+        "name": "Augur of Autumn",
+        "count": 1
+      },
+      {
+        "name": "Exploration",
+        "count": 1
+      },
+      {
+        "name": "Guardian Project",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention",
+        "count": 1
+      },
+      {
+        "name": "Lotus Cobra",
+        "count": 1
+      },
+      {
+        "name": "Scute Swarm",
+        "count": 1
+      },
+      {
+        "name": "Tireless Tracker",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Fortified Village",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Mosswort Bridge",
+        "count": 1
+      },
+      {
+        "name": "Mutavault",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Rain-Slicked Copse",
+        "count": 1
+      },
+      {
+        "name": "Scattered Groves",
+        "count": 1
+      },
+      {
+        "name": "Sea of Clouds",
+        "count": 1
+      },
+      {
+        "name": "Sodden Verdure",
+        "count": 1
+      },
+      {
+        "name": "Sunpetal Grove",
+        "count": 1
+      },
+      {
+        "name": "Temple of Enlightenment",
+        "count": 1
+      },
+      {
+        "name": "Temple of Mystery",
+        "count": 1
+      },
+      {
+        "name": "Temple of Plenty",
+        "count": 1
+      },
+      {
+        "name": "Vineglimmer Snarl",
+        "count": 1
+      },
+      {
+        "name": "Cold-Blooded Crew",
+        "count": 1
+      },
+      {
+        "name": "Syndicate Liquidators",
+        "count": 1
+      },
+      {
+        "name": "Earth, Sector 001",
+        "count": 1
+      },
+      {
+        "name": "Risa",
+        "count": 1
+      },
+      {
+        "name": "Vulcan",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Ponder",
+        "count": 1
+      },
+      {
+        "name": "Reality Shift",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Harmonize",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Satyr Wayfinder",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Seaside Citadel",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Tranquil Landscape",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 4
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Island",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "Landing Party Collector's Edition",
+    "commander": "Commander Spock",
+    "expansion": "Star Trek Commander",
+    "cards": [
+      {
+        "name": "Captain Kirk, Boldly Going",
+        "count": 1
+      },
+      {
+        "name": "Balance of Terror",
+        "count": 1
+      },
+      {
+        "name": "Merciful Mandate",
+        "count": 1
+      },
+      {
+        "name": "M'Ress, Crew Coordinator",
+        "count": 1
+      },
+      {
+        "name": "Shuttlecraft Galileo",
+        "count": 1
+      },
+      {
+        "name": "Tribble Cluster",
+        "count": 1
+      },
+      {
+        "name": "Colossal Clone Master",
+        "count": 1
+      },
+      {
+        "name": "Fleet Captain Christopher Pike",
+        "count": 1
+      },
+      {
+        "name": "Giant Space Amoeba",
+        "count": 1
+      },
+      {
+        "name": "Lieutenant Nyota Uhura",
+        "count": 1
+      },
+      {
+        "name": "Sam Kirk, Xenoanthropologist",
+        "count": 1
+      },
+      {
+        "name": "Temporal Tribulation",
+        "count": 1
+      },
+      {
+        "name": "Amanda Grayson, Logic's Link",
+        "count": 1
+      },
+      {
+        "name": "Christine Chapel, Combat Medic",
+        "count": 1
+      },
+      {
+        "name": "Janice Rand, Essential Aide",
+        "count": 1
+      },
+      {
+        "name": "Lieutenant Hikaru Sulu",
+        "count": 1
+      },
+      {
+        "name": "Chief Kyle, Transporter Tech",
+        "count": 1
+      },
+      {
+        "name": "Chief Montgomery Scott",
+        "count": 1
+      },
+      {
+        "name": "Lt. Arex, Ever-Adapting",
+        "count": 1
+      },
+      {
+        "name": "McCoy, Not a Bricklayer",
+        "count": 1
+      },
+      {
+        "name": "Pavel Chekov, First Posting",
+        "count": 1
+      },
+      {
+        "name": "T'Pring, Never Parted",
+        "count": 1
+      },
+      {
+        "name": "Command Chair",
+        "count": 1
+      },
+      {
+        "name": "The Guardian of Forever",
+        "count": 1
+      },
+      {
+        "name": "Jefferies Tube",
+        "count": 1
+      },
+      {
+        "name": "Planet Killer",
+        "count": 1
+      },
+      {
+        "name": "S.S. Botany Bay",
+        "count": 1
+      },
+      {
+        "name": "Starfleet Communicator",
+        "count": 1
+      },
+      {
+        "name": "Starship Enterprise",
+        "count": 1
+      },
+      {
+        "name": "U.S.S. Defiant, Mirror Migrant",
+        "count": 1
+      },
+      {
+        "name": "U.S.S. Farragut, Bold Explorer",
+        "count": 1
+      },
+      {
+        "name": "Shore Leave Planet",
+        "count": 1
+      },
+      {
+        "name": "Austere Command",
+        "count": 1
+      },
+      {
+        "name": "Sun Titan",
+        "count": 1
+      },
+      {
+        "name": "Wrath of God",
+        "count": 1
+      },
+      {
+        "name": "Echo of Eons",
+        "count": 1
+      },
+      {
+        "name": "Ancient Greenwarden",
+        "count": 1
+      },
+      {
+        "name": "Augur of Autumn",
+        "count": 1
+      },
+      {
+        "name": "Exploration",
+        "count": 1
+      },
+      {
+        "name": "Guardian Project",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention",
+        "count": 1
+      },
+      {
+        "name": "Lotus Cobra",
+        "count": 1
+      },
+      {
+        "name": "Scute Swarm",
+        "count": 1
+      },
+      {
+        "name": "Tireless Tracker",
+        "count": 1
+      },
+      {
+        "name": "Canopy Vista",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fabled Passage",
+        "count": 1
+      },
+      {
+        "name": "Fortified Village",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Mosswort Bridge",
+        "count": 1
+      },
+      {
+        "name": "Mutavault",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Rain-Slicked Copse",
+        "count": 1
+      },
+      {
+        "name": "Scattered Groves",
+        "count": 1
+      },
+      {
+        "name": "Sea of Clouds",
+        "count": 1
+      },
+      {
+        "name": "Sodden Verdure",
+        "count": 1
+      },
+      {
+        "name": "Sunpetal Grove",
+        "count": 1
+      },
+      {
+        "name": "Temple of Enlightenment",
+        "count": 1
+      },
+      {
+        "name": "Temple of Mystery",
+        "count": 1
+      },
+      {
+        "name": "Temple of Plenty",
+        "count": 1
+      },
+      {
+        "name": "Vineglimmer Snarl",
+        "count": 1
+      },
+      {
+        "name": "Cold-Blooded Crew",
+        "count": 1
+      },
+      {
+        "name": "Syndicate Liquidators",
+        "count": 1
+      },
+      {
+        "name": "Earth, Sector 001",
+        "count": 1
+      },
+      {
+        "name": "Risa",
+        "count": 1
+      },
+      {
+        "name": "Vulcan",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile",
+        "count": 1
+      },
+      {
+        "name": "Brainstorm",
+        "count": 1
+      },
+      {
+        "name": "Ponder",
+        "count": 1
+      },
+      {
+        "name": "Reality Shift",
+        "count": 1
+      },
+      {
+        "name": "Beast Within",
+        "count": 1
+      },
+      {
+        "name": "Cultivate",
+        "count": 1
+      },
+      {
+        "name": "Farseek",
+        "count": 1
+      },
+      {
+        "name": "Harmonize",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth",
+        "count": 1
+      },
+      {
+        "name": "Satyr Wayfinder",
+        "count": 1
+      },
+      {
+        "name": "Growth Spiral",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower",
+        "count": 1
+      },
+      {
+        "name": "Seaside Citadel",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Tranquil Landscape",
+        "count": 1
+      },
+      {
+        "name": "Forest",
+        "count": 4
+      },
+      {
+        "name": "Plains",
+        "count": 2
+      },
+      {
+        "name": "Island",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "We Are the Borg",
+    "commander": "The Borg Queen",
+    "expansion": "Star Trek Commander",
+    "cards": [
+      {
+        "name": "Locutus of Borg",
+        "count": 1
+      },
+      {
+        "name": "Borg Incursion",
+        "count": 1
+      },
+      {
+        "name": "Emergency Regeneration",
+        "count": 1
+      },
+      {
+        "name": "Join the Collective",
+        "count": 1
+      },
+      {
+        "name": "Korok, Liberated Rage",
+        "count": 1
+      },
+      {
+        "name": "Maturation Chamber",
+        "count": 1
+      },
+      {
+        "name": "Stratagem Emulator",
+        "count": 1
+      },
+      {
+        "name": "Supplementation Node",
+        "count": 1
+      },
+      {
+        "name": "Type-03 Borg Vessel",
+        "count": 1
+      },
+      {
+        "name": "Ambulatory Reactor",
+        "count": 1
+      },
+      {
+        "name": "Borg Scout Sphere",
+        "count": 1
+      },
+      {
+        "name": "Co-Option Adjutant",
+        "count": 1
+      },
+      {
+        "name": "Gift of Perfection",
+        "count": 1
+      },
+      {
+        "name": "Optimization Annex",
+        "count": 1
+      },
+      {
+        "name": "Seven of Nine, Tertiary Adjunct",
+        "count": 1
+      },
+      {
+        "name": "Transwarp Hub",
+        "count": 1
+      },
+      {
+        "name": "Võx, Child of the Collective",
+        "count": 1
+      },
+      {
+        "name": "Assimilate the Wounded",
+        "count": 1
+      },
+      {
+        "name": "Assimilation Assessor",
+        "count": 1
+      },
+      {
+        "name": "Battle of Wolf 359",
+        "count": 1
+      },
+      {
+        "name": "Extraction Integrant",
+        "count": 1
+      },
+      {
+        "name": "Reclamation Specialist",
+        "count": 1
+      },
+      {
+        "name": "The Best of Both Worlds",
+        "count": 1
+      },
+      {
+        "name": "Collective Override",
+        "count": 1
+      },
+      {
+        "name": "Deliver from Chaos",
+        "count": 1
+      },
+      {
+        "name": "Hugh, First of Many",
+        "count": 1
+      },
+      {
+        "name": "Jurati, Cordial Queen",
+        "count": 1
+      },
+      {
+        "name": "One, Borg Evolved",
+        "count": 1
+      },
+      {
+        "name": "Class-4 Tactical Cube",
+        "count": 1
+      },
+      {
+        "name": "Queen's Diamond",
+        "count": 1
+      },
+      {
+        "name": "Reconnaissance Partition",
+        "count": 1
+      },
+      {
+        "name": "Shore Leave Planet",
+        "count": 1
+      },
+      {
+        "name": "Tempered Steel",
+        "count": 1
+      },
+      {
+        "name": "Disallow",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking",
+        "count": 1
+      },
+      {
+        "name": "Astral Cornucopia",
+        "count": 1
+      },
+      {
+        "name": "Darksteel Plate",
+        "count": 1
+      },
+      {
+        "name": "Door of Destinies",
+        "count": 1
+      },
+      {
+        "name": "Forsaken Monument",
+        "count": 1
+      },
+      {
+        "name": "The Immortal Sun",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Unwinding Clock",
+        "count": 1
+      },
+      {
+        "name": "Academy Ruins",
+        "count": 1
+      },
+      {
+        "name": "Choked Estuary",
+        "count": 1
+      },
+      {
+        "name": "Drowned Catacomb",
+        "count": 1
+      },
+      {
+        "name": "Eclipsed Steppe",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fetid Pools",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Skycloud Expanse",
+        "count": 1
+      },
+      {
+        "name": "Spire of Industry",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Umbral Expanse",
+        "count": 1
+      },
+      {
+        "name": "Underground River",
+        "count": 1
+      },
+      {
+        "name": "Command Subadjunct",
+        "count": 1
+      },
+      {
+        "name": "Conquest Mission",
+        "count": 1
+      },
+      {
+        "name": "Hive Mind Coprocessor",
+        "count": 1
+      },
+      {
+        "name": "Locutus, the One Who Speaks",
+        "count": 1
+      },
+      {
+        "name": "Dispatch",
+        "count": 1
+      },
+      {
+        "name": "Return to Dust",
+        "count": 1
+      },
+      {
+        "name": "Thirst for Knowledge",
+        "count": 1
+      },
+      {
+        "name": "Thoughtcast",
+        "count": 1
+      },
+      {
+        "name": "Bitter Triumph",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Everflowing Chalice",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Stonespeaker Crystal",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Progress",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Arcane Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Contaminated Landscape",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Island",
+        "count": 4
+      },
+      {
+        "name": "Swamp",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "name": "We Are the Borg Collector's Edition",
+    "commander": "The Borg Queen",
+    "expansion": "Star Trek Commander",
+    "cards": [
+      {
+        "name": "Locutus of Borg",
+        "count": 1
+      },
+      {
+        "name": "Borg Incursion",
+        "count": 1
+      },
+      {
+        "name": "Emergency Regeneration",
+        "count": 1
+      },
+      {
+        "name": "Join the Collective",
+        "count": 1
+      },
+      {
+        "name": "Korok, Liberated Rage",
+        "count": 1
+      },
+      {
+        "name": "Maturation Chamber",
+        "count": 1
+      },
+      {
+        "name": "Stratagem Emulator",
+        "count": 1
+      },
+      {
+        "name": "Supplementation Node",
+        "count": 1
+      },
+      {
+        "name": "Type-03 Borg Vessel",
+        "count": 1
+      },
+      {
+        "name": "Ambulatory Reactor",
+        "count": 1
+      },
+      {
+        "name": "Borg Scout Sphere",
+        "count": 1
+      },
+      {
+        "name": "Co-Option Adjutant",
+        "count": 1
+      },
+      {
+        "name": "Gift of Perfection",
+        "count": 1
+      },
+      {
+        "name": "Optimization Annex",
+        "count": 1
+      },
+      {
+        "name": "Seven of Nine, Tertiary Adjunct",
+        "count": 1
+      },
+      {
+        "name": "Transwarp Hub",
+        "count": 1
+      },
+      {
+        "name": "Võx, Child of the Collective",
+        "count": 1
+      },
+      {
+        "name": "Assimilate the Wounded",
+        "count": 1
+      },
+      {
+        "name": "Assimilation Assessor",
+        "count": 1
+      },
+      {
+        "name": "Battle of Wolf 359",
+        "count": 1
+      },
+      {
+        "name": "Extraction Integrant",
+        "count": 1
+      },
+      {
+        "name": "Reclamation Specialist",
+        "count": 1
+      },
+      {
+        "name": "The Best of Both Worlds",
+        "count": 1
+      },
+      {
+        "name": "Collective Override",
+        "count": 1
+      },
+      {
+        "name": "Deliver from Chaos",
+        "count": 1
+      },
+      {
+        "name": "Hugh, First of Many",
+        "count": 1
+      },
+      {
+        "name": "Jurati, Cordial Queen",
+        "count": 1
+      },
+      {
+        "name": "One, Borg Evolved",
+        "count": 1
+      },
+      {
+        "name": "Class-4 Tactical Cube",
+        "count": 1
+      },
+      {
+        "name": "Queen's Diamond",
+        "count": 1
+      },
+      {
+        "name": "Reconnaissance Partition",
+        "count": 1
+      },
+      {
+        "name": "Shore Leave Planet",
+        "count": 1
+      },
+      {
+        "name": "Tempered Steel",
+        "count": 1
+      },
+      {
+        "name": "Disallow",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking",
+        "count": 1
+      },
+      {
+        "name": "Astral Cornucopia",
+        "count": 1
+      },
+      {
+        "name": "Darksteel Plate",
+        "count": 1
+      },
+      {
+        "name": "Door of Destinies",
+        "count": 1
+      },
+      {
+        "name": "Forsaken Monument",
+        "count": 1
+      },
+      {
+        "name": "The Immortal Sun",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp",
+        "count": 1
+      },
+      {
+        "name": "Unwinding Clock",
+        "count": 1
+      },
+      {
+        "name": "Academy Ruins",
+        "count": 1
+      },
+      {
+        "name": "Choked Estuary",
+        "count": 1
+      },
+      {
+        "name": "Drowned Catacomb",
+        "count": 1
+      },
+      {
+        "name": "Eclipsed Steppe",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard",
+        "count": 1
+      },
+      {
+        "name": "Fetid Pools",
+        "count": 1
+      },
+      {
+        "name": "Glacial Fortress",
+        "count": 1
+      },
+      {
+        "name": "Irrigated Farmland",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool",
+        "count": 1
+      },
+      {
+        "name": "Port Town",
+        "count": 1
+      },
+      {
+        "name": "Prairie Stream",
+        "count": 1
+      },
+      {
+        "name": "Shineshadow Snarl",
+        "count": 1
+      },
+      {
+        "name": "Skycloud Expanse",
+        "count": 1
+      },
+      {
+        "name": "Spire of Industry",
+        "count": 1
+      },
+      {
+        "name": "Sunken Hollow",
+        "count": 1
+      },
+      {
+        "name": "Umbral Expanse",
+        "count": 1
+      },
+      {
+        "name": "Underground River",
+        "count": 1
+      },
+      {
+        "name": "Command Subadjunct",
+        "count": 1
+      },
+      {
+        "name": "Conquest Mission",
+        "count": 1
+      },
+      {
+        "name": "Hive Mind Coprocessor",
+        "count": 1
+      },
+      {
+        "name": "Locutus, the One Who Speaks",
+        "count": 1
+      },
+      {
+        "name": "Dispatch",
+        "count": 1
+      },
+      {
+        "name": "Return to Dust",
+        "count": 1
+      },
+      {
+        "name": "Thirst for Knowledge",
+        "count": 1
+      },
+      {
+        "name": "Thoughtcast",
+        "count": 1
+      },
+      {
+        "name": "Bitter Triumph",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere",
+        "count": 1
+      },
+      {
+        "name": "Everflowing Chalice",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring",
+        "count": 1
+      },
+      {
+        "name": "Stonespeaker Crystal",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Progress",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble",
+        "count": 1
+      },
+      {
+        "name": "Arcane Sanctum",
+        "count": 1
+      },
+      {
+        "name": "Command Tower",
+        "count": 1
+      },
+      {
+        "name": "Contaminated Landscape",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse",
+        "count": 1
+      },
+      {
+        "name": "Plains",
+        "count": 4
+      },
+      {
+        "name": "Island",
+        "count": 4
+      },
+      {
+        "name": "Swamp",
+        "count": 4
+      }
+    ]
+  }
+]
