@@ -1,1796 +1,1599 @@
 [
   {
-    "name": "Toxic Bloom",
-    "commander": "Fynn, the Fangbearer",
-    "influencerName": "Commander MTGang",
+    "name": "violent nature i prevail",
+    "commander": "Black Waltz No. 3 (FIN) 478",
+    "influencerName": "Mana_forge",
     "socialNetworks": [
       {
-        "instagram": "https://instagram.com/commander_mtgang",
-        "tiktok": null,
-        "youtube": null
+        "instagram": "@mana_forge",
+        "tiktok": "@mana_forge",
+        "youtube": "https://www.youtube.com/channel/UCIN7gTYJoztg8oPUJSz7-Nw/videos"
       }
     ],
     "deckDescription": {
-      "en": "This mono-green poison deck focuses on delivering infect damage and proliferating poison counters to win quickly. With a solid base of deathtouch creatures and combat tricks, it pressures opponents early while scaling with ramp, draw, and recursion tools. Proliferate effects and evasion turn minor damage into lethal threats.",
-      "es": "Este mazo mono verde de veneno se centra en infligir daño de infectar y proliferar contadores de veneno para ganar rápidamente. Con una sólida base de criaturas con toque mortal y trucos de combate, ejerce presión desde el principio mientras escala con aceleradores, robo y recurrencia. Los efectos de proliferar y evasión convierten el daño leve en una amenaza letal.",
-      "it": "Questo mazzo mono-verde veleno punta a infliggere danni da infettare e proliferare segnalini veleno per vincere rapidamente. Con creature deathtouch e trucchi da combattimento, mette pressione sin da subito, supportato da ramp, pescate e recursion. La proliferazione e l'evasione trasformano piccoli danni in minacce letali.",
-      "de": "Dieses mono-grüne Giftdeck setzt auf Infect-Schaden und das Proliferieren von Giftmarken, um schnell zu gewinnen. Mit vielen Todesberührungs-Kreaturen und Kampftricks setzt es früh Druck auf und skaliert durch Ramp, Kartenziehen und Wiederverwertung. Proliferate und Ausweichfähigkeit machen aus kleinem Schaden tödliche Bedrohungen.",
-      "ja": "この単緑の毒デッキは感染ダメージと毒カウンターの増殖によって素早く勝利を目指します。接死持ちクリーチャーと戦闘トリックで序盤から圧力をかけ、ランプ、ドロー、再利用で中盤以降も展開力を維持。増殖と回避により、わずかなダメージを致命的な脅威へと変える。",
-      "pt": "Este deck monoverde de veneno foca em causar dano com infectar e proliferar marcadores de veneno para vencer rapidamente. Com criaturas com toque mortífero e truques de combate, pressiona cedo e cresce com ramp, compra de cartas e recursion. Proliferação e evasão tornam danos pequenos em ameaças fatais.",
-      "fr": "Ce deck mono-vert poison se concentre sur l'infection et la prolifération de marqueurs poison pour une victoire rapide. Grâce à des créatures avec contact mortel et des astuces de combat, il met la pression tôt tout en profitant de l'accélération, de la pioche et de la récurrence. Les effets de prolifération et l'évasion transforment les petits dégâts en menaces létales."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
-        "name": "Access Tunnel",
+        "name": "Accorder's Shield (M14) 204",
         "count": 1
       },
       {
-        "name": "Acidic Slime",
+        "name": "Aether Revolt (MH3) 113",
         "count": 1
       },
       {
-        "name": "Allosaurus Shepherd",
+        "name": "Aetherflux Reservoir (BRR) 2",
         "count": 1
       },
       {
-        "name": "Ambush Viper",
+        "name": "Ancient Tomb (PLST) TMP-315",
         "count": 1
       },
       {
-        "name": "Arbor Elf",
+        "name": "Arid Mesa (MH2) 436",
         "count": 1
       },
       {
-        "name": "Arcane Signet",
+        "name": "Ash Barrens (PLST) CM2-235",
         "count": 1
       },
       {
-        "name": "Bala Ged Recovery // Bala Ged Sanctuary",
+        "name": "Basilisk Collar (MM3) 216",
         "count": 1
       },
       {
-        "name": "Beast Whisperer",
+        "name": "Blackcleave Cliffs (ONE) 248",
         "count": 1
       },
       {
-        "name": "Beast Within",
+        "name": "Blazemire Verge (DSK) 256",
         "count": 1
       },
       {
-        "name": "Bite Down",
+        "name": "Blightstep Pathway // Searstep Pathway (KHM) 252",
         "count": 1
       },
       {
-        "name": "Bloated Contaminator",
+        "name": "Blood Crypt (RVR) 273",
         "count": 1
       },
       {
-        "name": "Bloodroot Apothecary",
+        "name": "Bloodstained Mire (MH3) 216",
         "count": 1
       },
       {
-        "name": "Cankerbloom",
+        "name": "Bojuka Bog (PLST) C18-238",
         "count": 1
       },
       {
-        "name": "Carnivorous Canopy",
+        "name": "Bolas's Citadel (PWAR) 79p",
         "count": 1
       },
       {
-        "name": "Chord of Calling",
+        "name": "Bone Saw (OGW) 161",
         "count": 1
       },
       {
-        "name": "Command Beacon",
+        "name": "Cabal Coffers (MB2) 106",
         "count": 1
       },
       {
-        "name": "Command Tower",
+        "name": "Cathar's Shield (EMN) 192",
         "count": 1
       },
       {
-        "name": "Contagion Clasp",
+        "name": "Chaos Warp (C20) 146",
         "count": 1
       },
       {
-        "name": "Contaminant Grafter",
+        "name": "Claws of Gix (TSB) 107",
         "count": 1
       },
       {
-        "name": "Crashing Drawbridge",
+        "name": "Commander's Sphere (C20) 240",
         "count": 1
       },
       {
-        "name": "Cultivate",
+        "name": "Coruscation Mage (BLB) 131",
         "count": 1
       },
       {
-        "name": "Deadly Recluse",
+        "name": "Cruel Tutor (PLST) POR-87",
         "count": 1
       },
       {
-        "name": "Deathbloom Gardener",
+        "name": "Damnation (MM3) 63",
         "count": 1
       },
       {
-        "name": "Dragon Sniper",
+        "name": "Dark Ritual (5ED) 153",
         "count": 1
       },
       {
-        "name": "Emerald Medallion",
+        "name": "Dark Sphere (DRK) 100",
         "count": 1
       },
       {
-        "name": "Evolution Sage",
+        "name": "Darksteel Relic (NPH) 134",
         "count": 1
       },
       {
-        "name": "Fang of Shigeki",
+        "name": "Demonic Collusion (TSP) 103",
         "count": 1
       },
       {
-        "name": "Fog",
+        "name": "Demonic Tutor (PLST) DDC-49",
         "count": 1
       },
       {
-        "name": "Forest",
-        "count": 24
+        "name": "Dictate of the Twin Gods (SCD) 131",
+        "count": 1
+      },
+      {
+        "name": "Dragonskull Summit (PIP) 261",
+        "count": 1
+      },
+      {
+        "name": "Evolving Wilds (M20) 246",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard (C19) 242",
+        "count": 1
+      },
+      {
+        "name": "Faithless Looting (PLST) CM2-96",
+        "count": 1
+      },
+      {
+        "name": "Firebrand Archer (PLST) HOU-92",
+        "count": 1
+      },
+      {
+        "name": "Foreboding Ruins (40K) 279",
+        "count": 1
+      },
+      {
+        "name": "Fountain of Youth (CHR) 98",
+        "count": 1
+      },
+      {
+        "name": "Furnace of Rath (TMP) 177",
+        "count": 1
       },
       {
-        "name": "Gnarlwood Dryad",
+        "name": "Gemstone Caverns (TSR) 280",
         "count": 1
       },
       {
-        "name": "Guardian Project",
+        "name": "Grafted Exoskeleton (SOM) 162",
         "count": 1
       },
       {
-        "name": "Harmonize",
+        "name": "Grapeshot (PLST) DDS-16",
         "count": 1
       },
       {
-        "name": "Heroic Intervention",
+        "name": "Graven Cairns (FIC) 401",
         "count": 1
       },
       {
-        "name": "Hornet Nest",
+        "name": "Gustha's Scepter (ALL) 120",
         "count": 1
       },
       {
-        "name": "Hornet Queen",
+        "name": "Gut Shot (PLST) MM2-117",
         "count": 1
       },
       {
-        "name": "Ichorspit Basilisk",
+        "name": "Harmonic Prodigy (MH2) 132",
         "count": 1
       },
       {
-        "name": "Infectious Bite",
+        "name": "Haunted Ridge (WHO) 286",
         "count": 1
       },
       {
-        "name": "Inkmoth Nexus",
+        "name": "Insatiable Avarice (OTJ) 91",
         "count": 1
       },
       {
-        "name": "Innkeeper's Talent",
+        "name": "Jeska's Will (CMR) 187",
         "count": 1
       },
       {
-        "name": "Kappa Tech-Wrecker",
+        "name": "Jet Medallion (MH3) 292",
         "count": 1
       },
       {
-        "name": "Karn's Bastion",
+        "name": "Jeweled Amulet (ICE) 326",
         "count": 1
       },
       {
-        "name": "Lightning Greaves",
+        "name": "Judith, Carnage Connoisseur (MKM) 210",
         "count": 1
       },
       {
-        "name": "Master's Rebuke",
+        "name": "Kaya's Ghostform (WAR) 94",
         "count": 1
       },
       {
-        "name": "Mirrex",
+        "name": "Krark-Clan Ironworks (MB2) 224",
         "count": 1
       },
       {
-        "name": "Moss Viper",
+        "name": "Lightning Bolt (MM2) 122",
         "count": 1
       },
       {
-        "name": "Nightshade Dryad",
+        "name": "Lightning Greaves (PLST) C19-217",
         "count": 1
       },
       {
-        "name": "Oakhame Adversary",
+        "name": "Lodestone Bauble (ALL) 122",
         "count": 1
       },
       {
-        "name": "Ohran Frostfang",
+        "name": "Lotus Petal (PLST) TMP-294",
         "count": 1
       },
       {
-        "name": "Phyrexian Swarmlord",
+        "name": "Luxury Suite (BBD) 82",
         "count": 1
       },
       {
-        "name": "Planewide Celebration",
+        "name": "Mana Geyser (CNS) 147",
         "count": 1
       },
       {
-        "name": "Questing Beast",
+        "name": "Midgar, City of Mako // Reactor Raid (FIN) 286",
         "count": 1
       },
       {
-        "name": "Ram Through",
+        "name": "Mishra's Bauble (BRR) 34",
         "count": 1
       },
       {
-        "name": "Rampant Growth",
+        "name": "Mountain (OTJ) 283",
+        "count": 4
+      },
+      {
+        "name": "Mysidian Elder (FIN) 145",
+        "count": 1
+      },
+      {
+        "name": "Ojer Axonil, Deepest Might // Temple of Power (LCI) 317",
+        "count": 1
+      },
+      {
+        "name": "Paradise Mantle (5DN) 142",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Arena (PLST) CN2-144",
+        "count": 1
+      },
+      {
+        "name": "Rakdos Charm (SCD) 239",
+        "count": 1
+      },
+      {
+        "name": "Raucous Theater (MKM) 266",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower (PLST) M19-254",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Tutor (PCY) 77",
         "count": 1
       },
       {
-        "name": "Rancor",
+        "name": "Salvaging Station (5DN) 148",
         "count": 1
       },
       {
-        "name": "Return to Nature",
+        "name": "Scheming Symmetry (M20) 113",
         "count": 1
       },
       {
-        "name": "Roaming Throne",
+        "name": "Sensei's Divining Top (EMA) 232",
         "count": 1
       },
       {
-        "name": "Rogue's Passage",
+        "name": "Sign in Blood (M10) 112",
         "count": 1
       },
       {
-        "name": "Saryth, the Viper's Fang",
+        "name": "Smoldering Marsh (C20) 314",
         "count": 1
       },
       {
-        "name": "Smell Fear",
+        "name": "Sol Ring (PLST) C18-222",
         "count": 1
       },
       {
-        "name": "Sol Ring",
+        "name": "Solemn Simulacrum (PLST) DDU-62",
         "count": 1
       },
       {
-        "name": "Staff of Compleation",
+        "name": "Solphim, Mayhem Dominus (ONE) 312",
         "count": 1
       },
       {
-        "name": "Swiftfoot Boots",
+        "name": "Spellbook (10E) 343",
         "count": 1
       },
       {
-        "name": "Sylvan Anthem",
+        "name": "Sulfurous Mire (KHM) 270",
         "count": 1
       },
       {
-        "name": "Thirsting Roots",
+        "name": "Sulfurous Springs (FIC) 427",
         "count": 1
+      },
+      {
+        "name": "Swamp (MKM) 281",
+        "count": 4
       },
       {
-        "name": "Toski, Bearer of Secrets",
+        "name": "Swiftfoot Boots (CM2) 223",
         "count": 1
       },
       {
-        "name": "Tower Winder",
+        "name": "Tainted Peak (OTC) 327",
         "count": 1
       },
       {
-        "name": "Tyrranax Rex",
+        "name": "Talisman of Indulgence (FIC) 366",
         "count": 1
       },
       {
-        "name": "Tyvar's Stand",
+        "name": "The Darkness Crystal (FIN) 96",
         "count": 1
       },
       {
-        "name": "Unnatural Restoration",
+        "name": "Torbran, Thane of Red Fell (PELD) 147p",
         "count": 1
       },
       {
-        "name": "Venerated Rotpriest",
+        "name": "Tormod's Crypt (M13) 219",
         "count": 1
       },
       {
-        "name": "Venomous Brutalizer",
+        "name": "Urborg, Tomb of Yawgmoth (UMA) 254",
         "count": 1
       },
       {
-        "name": "Vivien, Arkbow Ranger",
+        "name": "Urza's Bauble (5ED) 406",
         "count": 1
       },
       {
-        "name": "Vorinclex, Monstrous Raider",
+        "name": "Vampiric Tutor (CMR) 156",
         "count": 1
       },
       {
-        "name": "Wild Growth",
+        "name": "Welding Jar (MRD) 274",
         "count": 1
       },
       {
-        "name": "Worldly Tutor",
+        "name": "Wishclaw Talisman (FDN) 617",
         "count": 1
       },
       {
-        "name": "Yavimaya, Cradle of Growth",
+        "name": "Zuran Orb (MH2) 300",
         "count": 1
       }
     ]
   },
   {
-    "name": "TNT Dynamite",
-    "commander": "Thrasios, Triton Hero",
-    "partner": "Tymna the Weaver",
-    "influencerName": "KingsWay Collectibles",
+    "name": "Atraxa final",
+    "commander": "Atraxa, Praetors' Voice (PF26) 10 *F*",
+    "influencerName": "Deck Builder",
     "socialNetworks": [
       {
-        "instagram": "https://instagram.com/kingswaycollects",
+        "instagram": "@mtgcommanderdeckbuilder",
         "tiktok": null,
         "youtube": null
       }
     ],
     "deckDescription": {
-      "en": "A high-powered competitive deck focused on fast mana, card advantage, and powerful tutor chains. It leverages compact win conditions like Thassa's Oracle and consult effects, with a robust counterspell suite to protect its lines. Strong dorks and value engines ensure consistency and explosive starts.",
-      "es": "Un mazo competitivo de alto poder enfocado en maná rápido, ventaja de cartas y cadenas de tutores explosivos. Utiliza condiciones de victoria compactas como Thassa's Oracle y efectos de consulta, con una suite sólida de contrahechizos para proteger sus líneas. Aceleradores y motores de valor garantizan consistencia y arranques explosivos.",
-      "it": "Un mazzo competitivo ad alta potenza incentrato su mana veloce, vantaggio carte e tutor line devastanti. Sfrutta condizioni di vittoria compatte come Thassa's Oracle e consultazioni, supportate da un set di counter affidabili. I mana dorks e i motori di valore assicurano consistenza e partenze esplosive.",
-      "de": "Ein hochkompetitives Deck mit Fokus auf schnelles Mana, Kartenvorteil und mächtigen Tutorketten. Es setzt auf kompakte Gewinnbedingungen wie Thassa's Oracle und Konsult-Effekte, unterstützt durch eine starke Auswahl an Gegenzaubern. Mana-Kreaturen und Value-Engines sorgen für Konsistenz und explosive Starts.",
-      "ja": "高速マナ、アドバンテージ獲得、強力なチューター連鎖に特化した高出力な競技用デッキ。Thassa's Oracleやコンサルト系カードによるコンパクトな勝利手段を備え、カウンター呪文でコンボを守る。マナクリとバリューエンジンにより安定感と爆発力を両立。",
-      "pt": "Um deck competitivo de alto nível focado em mana acelerado, vantagem de cartas e tutores poderosos. Utiliza condições de vitória compactas como Thassa's Oracle e efeitos de consulta, com uma sólida linha de anulações para proteger suas jogadas. Criaturas de aceleração e motores de valor garantem consistência e explosividade.",
-      "fr": "Un deck compétitif de haut niveau axé sur le mana rapide, l’avantage de cartes et des chaînes de tuteurs puissantes. Il utilise des conditions de victoire compactes comme Thassa's Oracle et des effets de consultation, avec un ensemble solide de contres pour protéger ses combos. Des dorks et moteurs de valeur assurent constance et explosivité."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
-        "name": "Tyvar, Jubilant Brawler",
-        "count": 1
-      },
-      {
-        "name": "Archivist of Oghma",
-        "count": 1
-      },
-      {
-        "name": "Birds of Paradise",
-        "count": 1
-      },
-      {
-        "name": "Bloom Tender",
-        "count": 1
-      },
-      {
-        "name": "Deathrite Shaman",
-        "count": 1
-      },
-      {
-        "name": "Devoted Druid",
-        "count": 1
-      },
-      {
-        "name": "Drannith Magistrate",
-        "count": 1
-      },
-      {
-        "name": "Elvish Spirit Guide",
-        "count": 1
-      },
-      {
-        "name": "Esper Sentinel",
-        "count": 1
-      },
-      {
-        "name": "Faeburrow Elder",
-        "count": 1
-      },
-      {
-        "name": "Grand Abolisher",
-        "count": 1
-      },
-      {
-        "name": "Hazel's Brewmaster",
-        "count": 1
-      },
-      {
-        "name": "Kinnan, Bonder Prodigy",
-        "count": 1
-      },
-      {
-        "name": "Kutzil, Malamet Exemplar",
-        "count": 1
-      },
-      {
-        "name": "Lotho, Corrupt Shirriff",
-        "count": 1
-      },
-      {
-        "name": "Noble Hierarch",
-        "count": 1
-      },
-      {
-        "name": "Opposition Agent",
-        "count": 1
-      },
-      {
-        "name": "Orcish Bowmasters",
-        "count": 1
-      },
-      {
-        "name": "Ranger-Captain of Eos",
-        "count": 1
-      },
-      {
-        "name": "Seedborn Muse",
-        "count": 1
-      },
-      {
-        "name": "Spellseeker",
-        "count": 1
-      },
-      {
-        "name": "Thassa's Oracle",
-        "count": 1
-      },
-      {
-        "name": "Voice of Victory",
-        "count": 1
-      },
-      {
-        "name": "Culling Ritual",
-        "count": 1
-      },
-      {
-        "name": "Demonic Tutor",
-        "count": 1
-      },
-      {
-        "name": "Diabolic Intent",
-        "count": 1
-      },
-      {
-        "name": "Eldritch Evolution",
-        "count": 1
-      },
-      {
-        "name": "Finale of Devastation",
-        "count": 1
-      },
-      {
-        "name": "Mnemonic Betrayal",
-        "count": 1
-      },
-      {
-        "name": "Nature's Rhythm",
-        "count": 1
-      },
-      {
-        "name": "Ad Nauseam",
-        "count": 1
-      },
-      {
-        "name": "Borne Upon a Wind",
-        "count": 1
-      },
-      {
-        "name": "Chain Stasis",
-        "count": 1
-      },
-      {
-        "name": "Chord of Calling",
-        "count": 1
-      },
-      {
-        "name": "Cyclonic Rift",
-        "count": 1
-      },
-      {
-        "name": "Dark Ritual",
-        "count": 1
-      },
-      {
-        "name": "Demonic Consultation",
-        "count": 1
-      },
-      {
-        "name": "Enlightened Tutor",
-        "count": 1
-      },
-      {
-        "name": "Fierce Guardianship",
-        "count": 1
-      },
-      {
-        "name": "Flusterstorm",
-        "count": 1
-      },
-      {
-        "name": "Force of Negation",
-        "count": 1
-      },
-      {
-        "name": "Force of Will",
-        "count": 1
-      },
-      {
-        "name": "Into the Flood Maw",
-        "count": 1
-      },
-      {
-        "name": "Legolas's Quick Reflexes",
-        "count": 1
-      },
-      {
-        "name": "Mana Drain",
-        "count": 1
-      },
-      {
-        "name": "Mental Misstep",
-        "count": 1
-      },
-      {
-        "name": "Mindbreak Trap",
-        "count": 1
-      },
-      {
-        "name": "Pact of Negation",
-        "count": 1
-      },
-      {
-        "name": "Retraction Helix",
-        "count": 1
-      },
-      {
-        "name": "Silence",
-        "count": 1
-      },
-      {
-        "name": "Swan Song",
-        "count": 1
-      },
-      {
-        "name": "Tainted Pact",
-        "count": 1
-      },
-      {
-        "name": "Vampiric Tutor",
-        "count": 1
-      },
-      {
-        "name": "Worldly Tutor",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet",
-        "count": 1
-      },
-      {
-        "name": "Basalt Monolith",
-        "count": 1
-      },
-      {
-        "name": "Chrome Mox",
-        "count": 1
-      },
-      {
-        "name": "Lotus Petal",
-        "count": 1
-      },
-      {
-        "name": "Mana Vault",
-        "count": 1
-      },
-      {
-        "name": "Mox Amber",
-        "count": 1
-      },
-      {
-        "name": "Mox Diamond",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring",
-        "count": 1
-      },
-      {
-        "name": "The One Ring",
-        "count": 1
-      },
-      {
-        "name": "Wishclaw Talisman",
-        "count": 1
-      },
-      {
-        "name": "Carpet of Flowers",
-        "count": 1
-      },
-      {
-        "name": "Freed from the Real",
-        "count": 1
-      },
-      {
-        "name": "Mystic Remora",
-        "count": 1
-      },
-      {
-        "name": "Rhystic Study",
-        "count": 1
-      },
-      {
-        "name": "Smothering Tithe",
-        "count": 1
-      },
-      {
-        "name": "Survival of the Fittest",
-        "count": 1
-      },
-      {
-        "name": "Swift Reconfiguration",
-        "count": 1
-      },
-      {
-        "name": "Ancient Tomb",
-        "count": 1
-      },
-      {
-        "name": "Bayou",
-        "count": 1
-      },
-      {
-        "name": "Boseiju, Who Endures",
-        "count": 1
-      },
-      {
-        "name": "Breeding Pool",
-        "count": 1
-      },
-      {
-        "name": "Cavern of Souls",
-        "count": 1
-      },
-      {
-        "name": "City of Brass",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard",
-        "count": 1
-      },
-      {
-        "name": "Flooded Strand",
-        "count": 1
-      },
-      {
-        "name": "Gaea's Cradle",
-        "count": 1
-      },
-      {
-        "name": "Gemstone Caverns",
-        "count": 1
-      },
-      {
-        "name": "Mana Confluence",
-        "count": 1
-      },
-      {
-        "name": "Marsh Flats",
-        "count": 1
-      },
-      {
-        "name": "Misty Rainforest",
-        "count": 1
-      },
-      {
-        "name": "Otawara, Soaring City",
-        "count": 1
-      },
-      {
-        "name": "Polluted Delta",
-        "count": 1
-      },
-      {
-        "name": "Savannah",
-        "count": 1
-      },
-      {
-        "name": "Scalding Tarn",
-        "count": 1
-      },
-      {
-        "name": "Scrubland",
-        "count": 1
-      },
-      {
-        "name": "Tarnished Citadel",
-        "count": 1
-      },
-      {
-        "name": "Tropical Island",
-        "count": 1
-      },
-      {
-        "name": "Tundra",
-        "count": 1
-      },
-      {
-        "name": "Underground Sea",
-        "count": 1
-      },
-      {
-        "name": "Verdant Catacombs",
-        "count": 1
-      },
-      {
-        "name": "Watery Grave",
-        "count": 1
-      },
-      {
-        "name": "Windswept Heath",
-        "count": 1
-      },
-      {
-        "name": "Wooded Foothills",
+        "name": "Atraxa, Praetors' Voice (PF26) 10 *F*",
         "count": 1
       }
     ]
   },
   {
-    "name": "Goblada padre",
-    "commander": "Krenko, Mob Boss",
-    "influencerName": "Mr. Mulligan",
+    "name": "Sultai Zombies",
+    "commander": "Teval, the Balanced Scale (TDC) 8",
+    "influencerName": "Jeoren",
     "socialNetworks": [
       {
-        "instagram": "@mr.mulliganmtg",
+        "instagram": "@urzas_magic",
         "tiktok": null,
         "youtube": null
       }
     ],
     "deckDescription": {
-      "en": "A go-wide Goblin tribal that floods the board with tokens and turns them into lethal damage. Tutors and lords assemble key pieces, while sacrifice and ETB ping effects convert numbers into inevitability. Fast mana and cost reducers accelerate the plan; draw engines keep the hand full; and a few protective tools help the swarm survive sweepers and close games in one explosive turn.",
-      "es": "Tribal de trasgos que se expande a lo ancho, llenando la mesa de fichas y convirtiéndolas en daño letal. Los tutores y señores ensamblan piezas clave, y los efectos de sacrificio y de entrada al campo convierten la cantidad en inevitabilidad. El maná rápido y los reductores de coste aceleran el plan; los motores de robo sostienen la mano; y algunas protecciones permiten que la horda sobreviva a limpiezas y remate en un turno explosivo.",
-      "it": "Tribale Goblin orientato al go-wide: riempie il campo di pedine e le trasforma in danni letali. Tutor e lord assemblano le combo chiave, mentre sacrifici ed effetti ETB convertiscono il numero in inevitabilità. Mana veloce e riduttori di costo accelerano il piano; il pescaggio mantiene risorse; qualche protezione consente allo sciame di superare le rimozioni globali e chiudere in un turno esplosivo.",
-      "de": "Ein Goblin-Tribal-Deck, das breit geht, das Feld mit Tokens überflutet und diese in tödlichen Schaden ummünzt. Tutoren und Lords fügen Schlüsselteile zusammen, während Opfer- und ETB-Pingeffects die Masse in Unvermeidbarkeit verwandeln. Schnelles Mana und Kostensenker beschleunigen, Kartenzieher halten den Nachschub, und etwas Schutz lässt den Schwarm Sweeper überstehen und in einem explosiven Zug abschließen.",
-      "ja": "横展開のゴブリン部族。大量のトークンで盤面を埋め、誘発や生け贄で着実にダメージへ変換する。チューターとロードで必要パーツを揃え、速いマナとコスト軽減で展開を加速。ドローで手札を維持し、少量の防御手段で全体除去をしのいで、一気に勝負を決める爆発力を狙う。",
-      "pt": "Tribal de Goblins focado em ir largo: enche a mesa de fichas e as converte em dano letal. Tutores e lords montam peças-chave, enquanto sacrifícios e efeitos de ETB transformam volume em inevitabilidade. Mana rápido e redutores de custo aceleram; motores de compra sustentam; e algumas proteções permitem ao enxame sobreviver a limpezas e finalizar em um turno explosivo.",
-      "fr": "Un tribal Gobelin orienté large : on inonde le champ de jetons puis on les convertit en dégâts létaux. Tuteurs et lords assemblent les pièces clés, tandis que sacrifices et déclenchements à l’arrivée en jeu transforment la masse en inévitabilité. Le mana rapide et les réducteurs de coût accélèrent le plan, la pioche maintient les ressources, et quelques protections aident la horde à survivre aux balayages pour conclure d’un tour explosif."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
-        "name": "Conspicuous Snoop",
+        "name": "Afterlife from the Loam (TDC) 25",
         "count": 1
       },
       {
-        "name": "Foundry Street Denizen",
+        "name": "Aftermath Analyst (MKM) 148",
         "count": 1
       },
       {
-        "name": "Frenzied Goblin",
+        "name": "Altar of Dementia (TMP) 276",
         "count": 1
       },
       {
-        "name": "Gempalm Incinerator",
+        "name": "Arachnogenesis (DSC) 169",
         "count": 1
       },
       {
-        "name": "General Kreat, the Boltbringer",
+        "name": "Assassin's Trophy (MKM) 187",
         "count": 1
       },
       {
-        "name": "Goblin Chieftain",
+        "name": "Avenger of Zendikar (TDC) 247",
         "count": 1
       },
       {
-        "name": "Goblin Chirurgeon",
+        "name": "Awaken the Honored Dead (TDM) 170",
         "count": 1
       },
       {
-        "name": "Goblin Instigator",
+        "name": "Baleful Strix (OTC) 215",
         "count": 1
       },
       {
-        "name": "Goblin King",
+        "name": "Beast Within (TDC) 249",
         "count": 1
       },
       {
-        "name": "Goblin Lackey",
+        "name": "Bojuka Bog (WWK) 132",
         "count": 1
       },
       {
-        "name": "Goblin Matron",
+        "name": "Breeding Pool (RVR) 275",
         "count": 1
       },
       {
-        "name": "Goblin Recruiter",
+        "name": "Cephalid Coliseum (TDC) 349",
         "count": 1
       },
       {
-        "name": "Goblin Sledder",
+        "name": "Colossal Grave-Reaver (TDC) 50",
         "count": 1
       },
       {
-        "name": "Goblin Trashmaster",
+        "name": "Command Beacon (TDC) 352",
         "count": 1
       },
       {
-        "name": "Goblin Warchief",
+        "name": "Command Tower (TDC) 107",
         "count": 1
       },
       {
-        "name": "Goblin Wardriver",
+        "name": "Conduit of Worlds (TDC) 251",
         "count": 1
       },
       {
-        "name": "Grenzo, Havoc Raiser",
+        "name": "Craterhoof Behemoth (TDM) 346",
         "count": 1
       },
       {
-        "name": "Hobgoblin Bandit Lord",
+        "name": "Crypt of Agadeem (TDC) 354",
         "count": 1
       },
       {
-        "name": "Howlsquad Heavy",
+        "name": "Deathcap Glade (INR) 275",
         "count": 1
       },
       {
-        "name": "Kiki-Jiki, Mirror Breaker",
+        "name": "Dreamroot Cascade (TDC) 358",
         "count": 1
       },
       {
-        "name": "Krenko, Tin Street Kingpin",
+        "name": "Drownyard Temple (TDC) 359",
         "count": 1
       },
       {
-        "name": "Marvin, Murderous Mimic",
+        "name": "Exotic Orchard (TDC) 360",
         "count": 1
       },
       {
-        "name": "Mogg War Marshal",
+        "name": "Fabled Passage (BLB) 252",
         "count": 1
       },
       {
-        "name": "Pashalik Mons",
+        "name": "Field of the Dead (M20) 247",
         "count": 1
       },
       {
-        "name": "Rundvelt Hordemaster",
+        "name": "Foreboding Landscape (TDC) 365",
         "count": 1
       },
       {
-        "name": "Searslicer Goblin",
+        "name": "Forest (TDM) 285",
+        "count": 4
+      },
+      {
+        "name": "Ghost Quarter (PLST) DIS-173",
+        "count": 1
+      },
+      {
+        "name": "Golgari Rot Farm (TDC) 368",
+        "count": 1
+      },
+      {
+        "name": "Grapple with the Past (TDC) 257",
+        "count": 1
+      },
+      {
+        "name": "Gravecrawler (TDC) 93",
+        "count": 1
+      },
+      {
+        "name": "Grisly Salvage (TDC) 290",
+        "count": 1
+      },
+      {
+        "name": "Harrow (TDC) 258",
+        "count": 1
+      },
+      {
+        "name": "Haunted Mire (TDC) 369",
+        "count": 1
+      },
+      {
+        "name": "Hedge Shredder (DSK) 183",
+        "count": 1
+      },
+      {
+        "name": "Hedron Crab (TDC) 155",
+        "count": 1
+      },
+      {
+        "name": "Hinterland Harbor (TDC) 371",
+        "count": 1
+      },
+      {
+        "name": "Insidious Roots (MKM) 208",
+        "count": 1
+      },
+      {
+        "name": "Island (TDM) 279",
+        "count": 3
+      },
+      {
+        "name": "Kheru Goldkeeper (TDM) 199",
+        "count": 1
+      },
+      {
+        "name": "Kishla Skimmer (TDM) 201",
+        "count": 1
+      },
+      {
+        "name": "Kotis, Sibsig Champion (TDC) 5",
+        "count": 1
+      },
+      {
+        "name": "Ledger Shredder (SNC) 46",
+        "count": 1
+      },
+      {
+        "name": "Lethal Scheme (TDC) 184",
+        "count": 1
+      },
+      {
+        "name": "Life from the Loam (TDC) 96",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves (TDC) 102",
+        "count": 1
+      },
+      {
+        "name": "Living Death (TDC) 185",
         "count": 1
       },
       {
-        "name": "Siege-Gang Commander",
+        "name": "Llanowar Wastes (TDC) 376",
         "count": 1
       },
       {
-        "name": "Skirk Prospector",
+        "name": "Lost Monarch of Ifnir (DRC) 11",
         "count": 1
       },
       {
-        "name": "Squee, Dubious Monarch",
+        "name": "Memorial to Folly (TDC) 377",
         "count": 1
       },
       {
-        "name": "Torch Courier",
+        "name": "Meren of Clan Nel Toth (TDC) 297",
         "count": 1
       },
       {
-        "name": "Treasure Nabber",
+        "name": "Muldrotha, the Gravetide (FDN) 243",
         "count": 1
       },
       {
-        "name": "Volley Veteran",
+        "name": "Myriad Landscape (TDC) 380",
         "count": 1
       },
       {
-        "name": "Dragon Fodder",
+        "name": "Nature's Lore (ICE) 255",
         "count": 1
       },
       {
-        "name": "Gamble",
+        "name": "Nyx Weaver (TDC) 298",
         "count": 1
       },
       {
-        "name": "Goblin War Strike",
+        "name": "Ob Nixilis, the Fallen (TDC) 192",
         "count": 1
       },
       {
-        "name": "Jeska's Will",
+        "name": "Opulent Palace (TDM) 264",
         "count": 1
       },
       {
-        "name": "Abrade",
+        "name": "Overgrown Tomb (RVR) 283",
         "count": 1
       },
       {
-        "name": "Chaos Warp",
+        "name": "Phyrexian Reclamation (TDC) 194",
         "count": 1
       },
       {
-        "name": "Deflecting Swat",
+        "name": "Pile On (MKC) 134",
         "count": 1
       },
       {
-        "name": "Massive Raid",
+        "name": "Psychic Frog (MH3) 199",
         "count": 1
       },
       {
-        "name": "Outnumber",
+        "name": "Putrefy (TDC) 300",
         "count": 1
       },
       {
-        "name": "Thrill of Possibility",
+        "name": "Reanimate (TMP) 151",
         "count": 1
       },
       {
-        "name": "Banner of Kinship",
+        "name": "Ripples of Undeath (MH3) 107",
         "count": 1
       },
       {
-        "name": "Eldrazi Monument",
+        "name": "River Kelpie (TDC) 166",
         "count": 1
       },
       {
-        "name": "Heraldic Banner",
+        "name": "Sakura-Tribe Elder (TDC) 266",
         "count": 1
       },
       {
-        "name": "Herald's Horn",
+        "name": "Seedborn Muse (TDC) 268",
         "count": 1
       },
       {
-        "name": "Patriar's Seal",
+        "name": "Shigeki, Jukai Visionary (TDC) 270",
         "count": 1
       },
       {
-        "name": "Ruby Medallion",
+        "name": "Sidisi, Brood Tyrant (CMM) 355",
         "count": 1
       },
       {
-        "name": "Skullclamp",
+        "name": "Six (MH3) 169",
         "count": 1
       },
       {
-        "name": "Sol Ring",
+        "name": "Skull Prophet (TDC) 304",
         "count": 1
       },
       {
-        "name": "Staff of Domination",
+        "name": "Springbloom Druid (TDC) 271",
         "count": 1
       },
       {
-        "name": "Sting, the Glinting Dagger",
+        "name": "Stitcher's Supplier (TDC) 196",
         "count": 1
       },
       {
-        "name": "Swiftfoot Boots",
+        "name": "Sunken Hollow (TDC) 398",
         "count": 1
       },
       {
-        "name": "Thornbite Staff",
+        "name": "Swamp (TDM) 282",
+        "count": 4
+      },
+      {
+        "name": "Tear Asunder (TDC) 273",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse (TDC) 408",
+        "count": 1
+      },
+      {
+        "name": "Teval's Judgment (TDC) 28",
         "count": 1
       },
       {
-        "name": "Thousand-Year Elixir",
+        "name": "The Gitrog Monster (INR) 238",
         "count": 1
       },
       {
-        "name": "Throne of the God-Pharaoh",
+        "name": "The Scarab God (DRC) 120",
         "count": 1
       },
       {
-        "name": "Blood Moon",
+        "name": "Three Visits (OTC) 209",
         "count": 1
       },
       {
-        "name": "Boggart Shenanigans",
+        "name": "Timeless Witness (TDC) 274",
         "count": 1
       },
       {
-        "name": "Goblin Bombardment",
+        "name": "Titans' Nest (IKO) 212",
         "count": 1
       },
       {
-        "name": "Impact Tremors",
+        "name": "Tortured Existence (PLST) STH-74",
         "count": 1
       },
       {
-        "name": "Quest for the Goblin Lord",
+        "name": "Toxic Deluge (MH3) 277",
         "count": 1
       },
       {
-        "name": "Rising of the Day",
+        "name": "Undergrowth Stadium (CMM) 435",
         "count": 1
       },
       {
-        "name": "Shared Animosity",
+        "name": "Victimize (TDC) 198",
         "count": 1
       },
       {
-        "name": "Castle Embereth",
+        "name": "Welcome the Dead (TDC) 30",
         "count": 1
       },
       {
-        "name": "Forgotten Cave",
+        "name": "Wight of the Reliquary (MH3) 207",
         "count": 1
       },
       {
-        "name": "Mountain",
-        "count": 32
+        "name": "Wilhelt, the Rotcleaver (MIC) 2",
+        "count": 1
       },
       {
-        "name": "Three Tree City",
+        "name": "Will of the Sultai (TDC) 49",
         "count": 1
       },
       {
-        "name": "Urza's Cave",
+        "name": "Woodland Cemetery (TDC) 412",
         "count": 1
       }
     ]
   },
   {
-    "name": "Slimefoot shredding his Sap-Friends",
-    "commander": "Slimefoot, the Stowaway",
-    "influencerName": "Amisia MtG - Ostfriesland",
+    "name": "Urza V2",
+    "commander": "Urza, Chief Artificer (BRC) 2",
+    "influencerName": "Jeoren",
     "socialNetworks": [
       {
-        "instagram": "@amisia_mtg",
+        "instagram": "@urzas_magic",
         "tiktok": null,
         "youtube": null
       }
     ],
     "deckDescription": {
-      "en": "A Golgari token engine built around saprolings, draining opponents through death triggers and overwhelming the board with value. Ramp and cost reduction speed up the swarm, while recursion and sacrifice outlets convert tokens into cards, mana, or life drain. Parallel Lives effects double the production, and finishers like The Meathook Massacre close the game in waves of attrition.",
-      "es": "Motor de fichas Golgari centrado en saprolines, drenando a los oponentes con disparos de muerte y saturando la mesa con valor. El ramp y la reducción de costes aceleran la horda, mientras que la recurrencia y los sacrificios convierten fichas en cartas, maná o drenaje de vidas. Efectos como Parallel Lives duplican la producción y finalizadores como The Meathook Massacre cierran la partida con oleadas de desgaste.",
-      "it": "Motore di pedine Golgari incentrato sui saprolingi, che prosciuga gli avversari con inneschi di morte e riempie il campo di valore. Rampe e riduzioni di costo accelerano l’orda, mentre ricorsione e sacrifici trasformano le pedine in carte, mana o perdita di vita. Effetti come Parallel Lives raddoppiano la produzione e chiusure come The Meathook Massacre portano a termine la partita con ondate di logoramento.",
-      "de": "Ein Golgari-Token-Motor um Saprolinge, der Gegner mit Todesauslösern auslaugt und das Feld mit Wert überflutet. Ramp und Kostensenkung beschleunigen den Schwarm, während Wiederholung und Opferstellen Tokens in Karten, Mana oder Lebensverlust umwandeln. Effekte wie Parallel Lives verdoppeln die Produktion, und Finisher wie The Meathook Massacre beenden das Spiel in Wellen der Erschöpfung.",
-      "ja": "ゴルガリのサプロリング・トークン・エンジン。死亡誘発で相手を削りつつ、盤面を価値で埋め尽くす。ランプやコスト軽減で展開を加速し、再利用や生け贄手段でトークンをカード、マナ、ライフ吸収へ変換。Parallel Lives のような効果で生成量を倍増させ、The Meathook Massacre などのフィニッシャーで消耗戦を制する。",
-      "pt": "Motor de fichas Golgari focado em saprófitas, drenando oponentes com gatilhos de morte e saturando a mesa com valor. Ramp e redução de custo aceleram o enxame, enquanto recorrência e sacrifício transformam fichas em cartas, mana ou drenagem de vida. Efeitos como Parallel Lives duplicam a produção, e finalizadores como The Meathook Massacre encerram em ondas de desgaste.",
-      "fr": "Moteur de jetons Golgari centré sur les saprobiontes, drainant les adversaires via des déclencheurs de mort et saturant le champ de valeur. Accélération et réduction de coûts précipitent l’essaim, tandis que récurrence et sacrifices transforment les jetons en cartes, mana ou perte de vie. Des effets comme Parallel Lives doublent la production, et des finisseurs comme The Meathook Massacre concluent dans des vagues d’attrition."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
-        "name": "Blood Artist",
+        "name": "Academy Ruins (DRC) 58",
         "count": 1
       },
       {
-        "name": "Brightcap Badger // Fungus Frolic",
+        "name": "Adarkar Wastes (TDC) 338",
         "count": 1
       },
       {
-        "name": "Chatterfang, Squirrel General",
+        "name": "Akroma's Will (LCC) 125",
         "count": 1
       },
       {
-        "name": "Elves of Deep Shadow",
+        "name": "Ancient Den (BRC) 172",
         "count": 1
       },
       {
-        "name": "Elvish Mystic",
+        "name": "Arcane Sanctum (BRC) 173",
         "count": 1
       },
       {
-        "name": "Enduring Vitality",
+        "name": "Arcane Signet (BRC) 132",
         "count": 1
       },
       {
-        "name": "Fyndhorn Elves",
+        "name": "Baleful Strix (BRC) 120",
         "count": 1
       },
       {
-        "name": "Jade Mage",
+        "name": "Biotransference (40K) 30",
         "count": 1
       },
       {
-        "name": "Krav, the Unredeemed",
+        "name": "Blightsteel Colossus (PLST) 2XM-235",
         "count": 1
       },
       {
-        "name": "Liliana's Standard Bearer",
+        "name": "Bojuka Bog (TDC) 341",
         "count": 1
       },
       {
-        "name": "Llanowar Elves",
+        "name": "Bronze Guardian (BRC) 70",
         "count": 1
       },
       {
-        "name": "Marionette Apprentice",
+        "name": "Command Tower (BRC) 178",
         "count": 1
       },
       {
-        "name": "Mirkwood Bats",
+        "name": "Counterspell (TMP) 57",
         "count": 1
       },
       {
-        "name": "Oracle of Mul Daya",
+        "name": "Cyberdrive Awakener (NEC) 12",
         "count": 1
       },
       {
-        "name": "Pitiless Plunderer",
+        "name": "Cyberman Patrol (WHO) 174",
         "count": 1
       },
       {
-        "name": "Sakura-Tribe Elder",
+        "name": "Cybermen Squadron (WHO) 176",
         "count": 1
       },
       {
-        "name": "Seedborn Muse",
+        "name": "Cyclonic Rift (RTR) 35",
         "count": 1
       },
       {
-        "name": "Smothering Abomination",
+        "name": "Dance of the Manse (NEC) 136",
         "count": 1
       },
       {
-        "name": "Species Specialist",
+        "name": "Darksteel Citadel (BRC) 180",
         "count": 1
       },
       {
-        "name": "Tendershoot Dryad",
+        "name": "Darksteel Forge (2XM) 248",
         "count": 1
       },
       {
-        "name": "Umbral Collar Zealot",
+        "name": "Deserted Beach (INR) 276",
         "count": 1
       },
       {
-        "name": "Utopia Mycon",
+        "name": "Despark (BRC) 124",
         "count": 1
       },
       {
-        "name": "Vengeful Bloodwitch",
+        "name": "Dispatch (NEC) 83",
         "count": 1
       },
       {
-        "name": "Viscera Seer",
+        "name": "Diversion Unit (DFT) 41",
         "count": 1
       },
       {
-        "name": "Warren Soultrader",
+        "name": "Eldrazi Monument (ZEN) 199",
         "count": 1
       },
       {
-        "name": "Wight of the Reliquary",
+        "name": "Emry, Lurker of the Loch (ELD) 43",
         "count": 1
       },
       {
-        "name": "Zulaport Cutthroat",
+        "name": "Esper Sentinel (MH2) 12",
         "count": 1
       },
       {
-        "name": "Blasphemous Edict",
+        "name": "Etherium Sculptor (BRC) 82",
         "count": 1
       },
       {
-        "name": "Caravan Vigil",
+        "name": "Etherium Spinner (MH2) 40",
         "count": 1
       },
       {
-        "name": "Culling Ritual",
+        "name": "Ethersworn Canonist (ALA) 10",
         "count": 1
       },
       {
-        "name": "Damnation",
+        "name": "Exalted Sunborn (EOE) 15",
         "count": 1
       },
       {
-        "name": "Farseek",
+        "name": "Exotic Orchard (BRC) 185",
         "count": 1
       },
       {
-        "name": "Feed the Swarm",
+        "name": "Fabricate (M10) 52",
         "count": 1
       },
       {
-        "name": "Lich-Knights' Conquest",
+        "name": "Fellwar Stone (CMM) 382",
         "count": 1
       },
       {
-        "name": "Nature's Lore",
+        "name": "Foundry Inspector (BRR) 16",
         "count": 1
       },
       {
-        "name": "Pick Your Poison",
+        "name": "Glacial Fortress (M10) 226",
         "count": 1
       },
       {
-        "name": "Rampant Growth",
+        "name": "Godless Shrine (RVR) 277",
         "count": 1
       },
       {
-        "name": "Three Visits",
+        "name": "Gold Myr (MRD) 180",
         "count": 1
       },
       {
-        "name": "Assassin's Trophy",
+        "name": "Goldmire Bridge (BRC) 186",
         "count": 1
       },
       {
-        "name": "Deadly Dispute",
+        "name": "Indomitable Archangel (BRC) 72",
         "count": 1
       },
       {
-        "name": "Golgari Charm",
+        "name": "Intangible Virtue (ISD) 19",
         "count": 1
       },
       {
-        "name": "Heroic Intervention",
+        "name": "Island (BRC) 32",
+        "count": 4
+      },
+      {
+        "name": "Karn, Scion of Urza (DOM) 1",
+        "count": 1
+      },
+      {
+        "name": "Leaden Myr (MRD) 191",
         "count": 1
       },
       {
-        "name": "Plumb the Forbidden",
+        "name": "Lightning Greaves (TDC) 102",
         "count": 1
       },
       {
-        "name": "Putrefy",
+        "name": "Losheel, Clockwork Scholar (BRC) 73",
         "count": 1
       },
       {
-        "name": "Search for the Frozen Esper",
+        "name": "Master Transmuter (BRC) 87",
         "count": 1
       },
       {
-        "name": "Arcane Signet",
+        "name": "Mechanized Production (PIP) 178",
         "count": 1
       },
       {
-        "name": "Ashnod's Altar",
+        "name": "Mirrodin Besieged (PLST) MH1-57",
         "count": 1
       },
       {
-        "name": "Bolas's Citadel",
+        "name": "Mondrak, Glory Dominus (ONE) 23",
         "count": 1
       },
       {
-        "name": "Ghost Vacuum",
+        "name": "Organic Extinction (MKC) 76",
         "count": 1
       },
       {
-        "name": "Skullclamp",
+        "name": "Ornithopter of Paradise (J25) 153",
         "count": 1
       },
       {
-        "name": "Sol Ring",
+        "name": "Padeem, Consul of Innovation (KLR) 60",
         "count": 1
       },
       {
-        "name": "Cryptolith Rite",
+        "name": "Path of Ancestry (BRC) 192",
         "count": 1
       },
       {
-        "name": "Deathreap Ritual",
+        "name": "Path to Exile (CON) 15",
         "count": 1
       },
       {
-        "name": "Druids' Repository",
+        "name": "Plains (BRC) 30",
+        "count": 5
+      },
+      {
+        "name": "Prairie Stream (BRC) 193",
         "count": 1
       },
       {
-        "name": "Fungal Plots",
+        "name": "Sai, Master Thopterist (BRC) 93",
         "count": 1
       },
       {
-        "name": "Growing Rites of Itlimoc",
+        "name": "Salvation Colossus (M3C) 95",
         "count": 1
       },
       {
-        "name": "Keen Sense",
+        "name": "Seat of the Synod (BRC) 198",
         "count": 1
       },
       {
-        "name": "Moldervine Reclamation",
+        "name": "Shipwreck Marsh (INR) 284 *F*",
         "count": 1
       },
       {
-        "name": "Necrogenesis",
+        "name": "Sicarian Infiltrator (40K) 25",
         "count": 1
       },
       {
-        "name": "Parallel Lives",
+        "name": "Silver Myr (MRD) 241",
         "count": 1
       },
       {
-        "name": "Saproling Burst",
+        "name": "Skycloud Expanse (BRC) 201",
         "count": 1
       },
       {
-        "name": "Snake Umbra",
+        "name": "Smothering Tithe (CMM) 57",
         "count": 1
       },
       {
-        "name": "The Meathook Massacre",
+        "name": "Sol Ring (TDC) 106",
         "count": 1
       },
       {
-        "name": "Verdant Embrace",
+        "name": "Solemn Simulacrum (BRC) 161",
         "count": 1
       },
       {
-        "name": "Bayou",
+        "name": "Spire of Industry (BRC) 203",
         "count": 1
       },
       {
-        "name": "Blooming Marsh",
+        "name": "Stock Up (DFT) 67",
         "count": 1
       },
       {
-        "name": "Bojuka Bog",
+        "name": "Stridehangar Automaton (DRC) 19",
         "count": 1
       },
       {
-        "name": "Cabal Coffers",
+        "name": "Sunken Hollow (BRC) 204",
         "count": 1
+      },
+      {
+        "name": "Swamp (BRC) 33",
+        "count": 4
       },
       {
-        "name": "Command Tower",
+        "name": "Swords to Plowshares (BRC) 75",
         "count": 1
       },
       {
-        "name": "Darkbore Pathway",
+        "name": "Teferi's Protection (PLST) C17-8",
         "count": 1
       },
       {
-        "name": "Dracula's Tomb",
+        "name": "Tezzeret, Master of the Bridge (WAR) 275 *F*",
         "count": 1
       },
       {
-        "name": "Forest",
-        "count": 9
+        "name": "The Flesh Is Weak (40K) 122",
+        "count": 1
       },
       {
-        "name": "Gemstone Caverns",
+        "name": "Thopter Spy Network (BRC) 97",
         "count": 1
       },
       {
-        "name": "Llanowar Wastes",
+        "name": "Thought Monitor (BRC) 98",
         "count": 1
       },
       {
-        "name": "Reflecting Pool",
+        "name": "Thought Vessel (BRC) 167",
         "count": 1
       },
       {
-        "name": "Reliquary Tower",
+        "name": "Thran Dynamo (UDS) 139",
         "count": 1
       },
       {
-        "name": "Spymaster's Vault",
+        "name": "Time Sieve (PLST) ARB-31",
         "count": 1
       },
       {
-        "name": "Swamp",
-        "count": 7
+        "name": "Unbreakable Formation (BRC) 78",
+        "count": 1
       },
       {
-        "name": "Underground Mortuary",
+        "name": "Underground River (DRC) 181",
         "count": 1
       },
       {
-        "name": "Undergrowth Stadium",
+        "name": "Unwinding Clock (NPH) 164",
         "count": 1
       },
       {
-        "name": "Urborg, Tomb of Yawgmoth",
+        "name": "Urza, Lord High Artificer (DMR) 71 *F*",
         "count": 1
       },
       {
-        "name": "Verdant Catacombs",
+        "name": "Urza, Prince of Kroog (BRO) 226",
         "count": 1
       },
       {
-        "name": "Wastewood Verge",
+        "name": "Urza's Saga (MH2) 259",
         "count": 1
       },
       {
-        "name": "Woodland Cemetery",
+        "name": "Uthros, Titanic Godcore (EOE) 285",
         "count": 1
       },
       {
-        "name": "Yavimaya, Cradle of Growth",
+        "name": "Vault of Whispers (BRC) 211",
         "count": 1
       }
     ]
   },
   {
-    "name": "Ramp City",
-    "commander": "Lord Windgrace",
-    "influencerName": "Mike",
+    "name": "Squall Seed Mercenary",
+    "commander": "Squall, SeeD Mercenary (FIN) 547 *F*",
+    "influencerName": "Alex Kessler",
     "socialNetworks": [
       {
-        "instagram": "@themikemtg",
-        "tiktok": "@themikemtg",
-        "youtube": null
+        "instagram": "@kesswylie",
+        "tiktok": "@kesswylie",
+        "youtube": "https://youtube.com/@kesswylie?si=SsnViTZgcvObol-S"
       }
     ],
     "deckDescription": {
-      "en": "A landfall-focused ramp deck that accelerates mana production to explosive levels, turning extra land drops into an army of creatures and massive finishers. Recursion brings lands back for repeated triggers, while powerful payoffs like Avenger of Zendikar, Moraug, and Rampaging Baloths turn the battlefield into a lethal force. Flexible removal and protection keep the plan online until a game-ending swing.",
-      "es": "Mazo de aceleración centrado en landfall que lleva la producción de maná a niveles explosivos, convirtiendo las tierras extra en un ejército y grandes finalizadores. La recurrencia devuelve tierras para repetir disparos, mientras que cartas como Avenger of Zendikar, Moraug y Rampaging Baloths convierten el campo en una fuerza letal. La eliminación flexible y la protección mantienen el plan hasta un ataque definitivo.",
-      "it": "Mazzo di ramp incentrato su landfall, che accelera la produzione di mana a livelli esplosivi e trasforma le terre extra in un esercito e grandi finisher. La ricorsione riporta terre per inneschi ripetuti, mentre carte come Avenger of Zendikar, Moraug e Rampaging Baloths trasformano il campo in una forza letale. Rimozioni flessibili e protezioni mantengono il piano fino a un attacco risolutivo.",
-      "de": "Ein Ramp-Deck mit Landfall-Fokus, das die Manaproduktion auf explosive Höhen beschleunigt und zusätzliche Länder in eine Armee und mächtige Finisher verwandelt. Wiederholung bringt Länder für wiederholte Auslöser zurück, während Karten wie Avenger of Zendikar, Moraug und Rampaging Baloths das Spielfeld in eine tödliche Streitmacht verwandeln. Flexible Antworten und Schutz halten den Plan am Laufen bis zum entscheidenden Schlag.",
-      "ja": "ランデフォーカスのランプデッキ。マナ加速を爆発的に伸ばし、追加の土地を軍勢や強力なフィニッシャーへ変換する。再利用で土地を戻し誘発を繰り返し、Avenger of Zendikar、Moraug、Rampaging Baloths などが盤面を致命的な力へ変える。柔軟な除去と防御で勝負を決める一撃までプランを維持する。",
-      "pt": "Deck de ramp focado em landfall, acelerando a produção de mana a níveis explosivos e transformando terrenos extras em um exército e grandes finalizadores. Recorrência traz terrenos de volta para gatilhos repetidos, enquanto cartas como Avenger of Zendikar, Moraug e Rampaging Baloths transformam o campo em força letal. Remoção flexível e proteção mantêm o plano até o golpe final.",
-      "fr": "Deck de ramp centré sur le landfall, accélérant la production de mana à des niveaux explosifs et transformant les terrains supplémentaires en armée et puissants finisseurs. La récurrence ramène les terrains pour des déclenchements répétés, tandis que des cartes comme Avenger of Zendikar, Moraug et Rampaging Baloths transforment le champ de bataille en force létale. Des réponses flexibles et des protections maintiennent le plan jusqu’à l’attaque décisive."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
-        "name": "Nissa of Shadowed Boughs",
+        "name": "Access Tunnel (TDC) 337",
         "count": 1
       },
       {
-        "name": "Ancient Greenwarden",
+        "name": "Accursed Marauder (MH3) 80",
         "count": 1
       },
       {
-        "name": "Ashaya, Soul of the Wild",
+        "name": "Ancient Den (BRC) 172",
         "count": 1
       },
       {
-        "name": "Avenger of Zendikar",
+        "name": "Animate Dead (PD3) 16 *F*",
         "count": 1
       },
       {
-        "name": "Azusa, Lost but Seeking",
+        "name": "Arcane Signet (FIC) 334",
         "count": 1
       },
       {
-        "name": "Beanstalk Giant // Fertile Footsteps",
+        "name": "Arid Mesa (MH2) 244",
         "count": 1
       },
       {
-        "name": "Budoka Gardener",
+        "name": "Ashnod's Altar (CMM) 368",
         "count": 1
       },
       {
-        "name": "Crash of Rhino Beetles",
+        "name": "Bleachbone Verge (DFT) 250",
         "count": 1
       },
       {
-        "name": "Cultivator Colossus",
+        "name": "Bloodstained Mire (MH3) 216",
         "count": 1
       },
       {
-        "name": "Dryad of the Ilysian Grove",
+        "name": "Brightclimb Pathway // Grimclimb Pathway (PLST) ZNR-259",
         "count": 1
       },
       {
-        "name": "Fyndhorn Elves",
+        "name": "Brotherhood Regalia (ACR) 71",
         "count": 1
       },
       {
-        "name": "Ignoble Hierarch",
+        "name": "Buster Sword (FIN) 255",
         "count": 1
       },
       {
-        "name": "Living Twister",
+        "name": "Caves of Koilos (TDC) 348",
         "count": 1
       },
       {
-        "name": "Llanowar Elves",
+        "name": "Chromatic Star (BRR) 74",
         "count": 1
       },
       {
-        "name": "Lotus Cobra",
+        "name": "Chthonian Nightmare (MH3) 83",
         "count": 1
       },
       {
-        "name": "Moraug, Fury of Akoum",
+        "name": "Cloud, Midgar Mercenary (FIN) 375",
         "count": 1
       },
       {
-        "name": "Nesting Dragon",
+        "name": "Codex Shredder (CMR) 304",
         "count": 1
       },
       {
-        "name": "Ob Nixilis, the Fallen",
+        "name": "Command Tower (TDC) 107",
         "count": 1
       },
       {
-        "name": "Radha, Heart of Keld",
+        "name": "Damn (DRC) 89",
         "count": 1
       },
       {
-        "name": "Rampaging Baloths",
+        "name": "Dauthi Voidwalker (MH2) 397",
         "count": 1
       },
       {
-        "name": "Rootpath Purifier",
+        "name": "Eagles of the North (LTR) 7",
         "count": 1
       },
       {
-        "name": "Rubblehulk",
+        "name": "Enlightened Tutor (DMR) 6",
         "count": 1
       },
       {
-        "name": "Scute Mob",
+        "name": "Entomb (DMR) 82",
         "count": 1
       },
       {
-        "name": "Scute Swarm",
+        "name": "Esper Sentinel (MH2) 328 *F*",
         "count": 1
       },
       {
-        "name": "Solemn Simulacrum",
+        "name": "Fabled Passage (BLB) 252",
         "count": 1
       },
       {
-        "name": "Tannuk, Memorial Ensign",
+        "name": "Fishing Gear (FIC) 461",
         "count": 1
       },
       {
-        "name": "Terror of the Peaks",
+        "name": "Flooded Strand (MH3) 220",
         "count": 1
       },
       {
-        "name": "Titania, Protector of Argoth",
+        "name": "Forge Anew (SLD) 7002",
         "count": 1
       },
       {
-        "name": "Vorinclex, Monstrous Raider",
+        "name": "Galadriel's Dismissal (LTC) 500",
         "count": 1
       },
       {
-        "name": "Zendikar Incarnate",
+        "name": "Gandalf the White (LTR) 19",
         "count": 1
       },
       {
-        "name": "Bala Ged Recovery",
+        "name": "Glasswing Grace // Age-Graced Chapel (MH3) 254",
         "count": 1
       },
       {
-        "name": "Cultivate",
+        "name": "Godless Shrine (EOE) 254",
         "count": 1
       },
       {
-        "name": "Finale of Devastation",
+        "name": "Grand Abolisher (CMM) 625",
         "count": 1
       },
       {
-        "name": "Lavalanche",
+        "name": "Gravebreaker Lamia (SLD) 1643",
         "count": 1
       },
       {
-        "name": "Migration Path",
+        "name": "Hammer of Nazahn (CMM) 388",
         "count": 1
       },
       {
-        "name": "Ruinous Path",
+        "name": "High Market (AFC) 246",
         "count": 1
       },
       {
-        "name": "Savage Twister",
+        "name": "Inkmoth Nexus (MBS) 145",
         "count": 1
       },
       {
-        "name": "Splendid Reclamation",
+        "name": "Inventors' Fair (PLST) KLD-247",
         "count": 1
       },
       {
-        "name": "Stitch Together",
+        "name": "Ishgard, the Holy See // Faith & Grief (FIN) 310",
         "count": 1
       },
       {
-        "name": "Torment of Hailfire",
+        "name": "Karmic Guide (VOC) 90",
         "count": 1
       },
       {
-        "name": "Verdant Mastery",
+        "name": "Key to the City (C21) 248",
         "count": 1
       },
       {
-        "name": "Assassin's Trophy",
+        "name": "Lightning Greaves (FIC) 349",
         "count": 1
       },
       {
-        "name": "Crop Rotation",
+        "name": "Loran of the Third Path (FCA) 24",
         "count": 1
       },
       {
-        "name": "Dark Ritual",
+        "name": "Lotus Bloom (TSR) 411 *F*",
         "count": 1
       },
       {
-        "name": "Harrow",
+        "name": "Lotus Petal (PLST) TMP-294",
         "count": 1
       },
       {
-        "name": "Heroic Intervention",
+        "name": "Lurrus of the Dream-Den (IKO) 355",
         "count": 1
       },
       {
-        "name": "Putrefy",
+        "name": "Marsh Flats (MH2) 248",
         "count": 1
       },
       {
-        "name": "Red Elemental Blast",
+        "name": "Mask of Memory (FIC) 350",
         "count": 1
       },
       {
-        "name": "Windgrace's Judgment",
+        "name": "Midgar, City of Mako // Reactor Raid (FIN) 286",
         "count": 1
       },
       {
-        "name": "Blackblade Reforged",
+        "name": "Mind Stone (FIC) 353",
         "count": 1
       },
       {
-        "name": "Conduit of Worlds",
+        "name": "Mishra's Bauble (PLST) IMA-221",
         "count": 1
       },
       {
-        "name": "Sol Ring",
+        "name": "Mother of Runes (SLD) 299",
         "count": 1
       },
       {
-        "name": "Thaumatic Compass",
+        "name": "Mystic Forge (M3C) 302",
         "count": 1
       },
       {
-        "name": "Guardian Project",
+        "name": "Nihil Spellbomb (SCD) 270",
         "count": 1
       },
       {
-        "name": "Rhythm of the Wild",
+        "name": "Orzhov Signet (SLD) 294",
         "count": 1
       },
       {
-        "name": "The Meathook Massacre",
+        "name": "Phyrexia's Core (C21) 309",
         "count": 1
       },
       {
-        "name": "Arch of Orazca",
+        "name": "Phyrexian Altar (2X2) 311",
         "count": 1
       },
       {
-        "name": "Blighted Woodland",
+        "name": "Plaguecrafter (SLD) 1116",
         "count": 1
       },
       {
-        "name": "Blightstep Pathway",
-        "count": 1
-      },
-      {
-        "name": "Blood Crypt",
-        "count": 1
-      },
-      {
-        "name": "Boseiju, Who Endures",
-        "count": 1
-      },
-      {
-        "name": "Command Beacon",
-        "count": 1
-      },
-      {
-        "name": "Command Tower",
-        "count": 1
-      },
-      {
-        "name": "Cragcrown Pathway",
-        "count": 1
-      },
-      {
-        "name": "Darkbore Pathway",
-        "count": 1
-      },
-      {
-        "name": "Deathcap Glade",
-        "count": 1
-      },
-      {
-        "name": "Fabled Passage",
-        "count": 1
-      },
-      {
-        "name": "Field of the Dead",
-        "count": 1
-      },
-      {
-        "name": "Forest",
+        "name": "Plains (TDM) 277",
         "count": 2
       },
       {
-        "name": "Golgari Rot Farm",
+        "name": "Polluted Delta (MH3) 224",
         "count": 1
       },
       {
-        "name": "Gruul Turf",
+        "name": "Puresteel Paladin (SLD) 1352",
         "count": 1
       },
       {
-        "name": "Lotus Field",
+        "name": "Revival // Revenge (RVR) 241",
         "count": 1
       },
       {
-        "name": "Misty Rainforest",
+        "name": "Rogue's Passage (OTC) 313",
         "count": 1
       },
       {
-        "name": "Mountain",
+        "name": "Salvaging Station (5DN) 148",
+        "count": 1
+      },
+      {
+        "name": "Secluded Steppe (J25) 774",
+        "count": 1
+      },
+      {
+        "name": "Selfless Savior (SLD) 732",
+        "count": 1
+      },
+      {
+        "name": "Sevinne's Reclamation (MH3) 267",
+        "count": 1
+      },
+      {
+        "name": "Shadowy Backstreet (MKM) 268",
+        "count": 1
+      },
+      {
+        "name": "Sigarda's Aid (SLD) 1727",
+        "count": 1
+      },
+      {
+        "name": "Silent Clearing (MH1) 246",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp (SLD) 1112",
+        "count": 1
+      },
+      {
+        "name": "Skyclave Apparition (BLC) 154",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (FIC) 358",
+        "count": 1
+      },
+      {
+        "name": "Sram, Senior Edificer (SOC) 176",
+        "count": 1
+      },
+      {
+        "name": "Steelshaper's Gift (CMM) 59",
+        "count": 1
+      },
+      {
+        "name": "Stoneforge Mystic (PGPX) 2016 *F*",
+        "count": 1
+      },
+      {
+        "name": "Sun Titan (SLC) 2010",
+        "count": 1
+      },
+      {
+        "name": "Swamp (TDM) 281",
         "count": 2
       },
       {
-        "name": "Myriad Landscape",
+        "name": "Swiftfoot Boots (SLD) 606 *F*",
         "count": 1
       },
       {
-        "name": "Overgrown Tomb",
+        "name": "Sword of Feast and Famine (J14) 6 *F*",
         "count": 1
       },
       {
-        "name": "Polluted Delta",
+        "name": "Sword of Fire and Ice (G11) 2 *F*",
         "count": 1
       },
       {
-        "name": "Rakdos Carnarium",
+        "name": "Sword of Forge and Frontier (ONE) 244",
         "count": 1
       },
       {
-        "name": "Rockfall Vale",
+        "name": "Swords to Plowshares (SLP) 20",
         "count": 1
       },
       {
-        "name": "Savage Lands",
+        "name": "Takenuma, Abandoned Mire (NEO) 278",
         "count": 1
       },
       {
-        "name": "Scalding Tarn",
+        "name": "Talisman of Hierarchy (TDC) 331",
         "count": 1
       },
       {
-        "name": "Snow-Covered Forest",
-        "count": 2
-      },
-      {
-        "name": "Snow-Covered Mountain",
-        "count": 2
-      },
-      {
-        "name": "Snow-Covered Swamp",
-        "count": 2
-      },
-      {
-        "name": "Stomping Ground",
+        "name": "Tezzeret, Cruel Captain (EOE) 2",
         "count": 1
       },
       {
-        "name": "Swamp",
-        "count": 2
-      },
-      {
-        "name": "Thespian's Stage",
+        "name": "Trading Post (LTC) 288",
         "count": 1
       },
       {
-        "name": "Twilight Mire",
+        "name": "Tymna the Weaver (FCA) 18",
         "count": 1
       },
       {
-        "name": "Undergrowth Stadium",
+        "name": "Umezawa's Jitte (SLD) 1865",
         "count": 1
       },
       {
-        "name": "Verdant Catacombs",
+        "name": "Unmarked Grave (MH2) 106",
         "count": 1
       },
       {
-        "name": "Woodland Cemetery",
+        "name": "Urborg, Tomb of Yawgmoth (TSR) 287",
         "count": 1
       },
       {
-        "name": "Yavimaya, Cradle of Growth",
+        "name": "Urza's Saga (MH2) 259",
         "count": 1
       },
       {
-        "name": "Ziatora's Proving Ground",
+        "name": "Vault of Champions (CMM) 436",
+        "count": 1
+      },
+      {
+        "name": "Vault of the Archangel (TDC) 410",
+        "count": 1
+      },
+      {
+        "name": "Vault of Whispers (J25) 780",
+        "count": 1
+      },
+      {
+        "name": "Warren Soultrader (MH3) 110",
+        "count": 1
+      },
+      {
+        "name": "Welding Jar (MRD) 274",
         "count": 1
       }
     ]
