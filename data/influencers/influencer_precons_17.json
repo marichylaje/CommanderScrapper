@@ -1,0 +1,397 @@
+[
+  {
+  "name": "🪓Magda’s Labor Camp 🔨| Bracket 5",
+  "commander": "Magda, Brazen Outlaw",
+  "influencerName": "KingsWay Collectibles",
+  "socialNetworks": [
+    {
+      "instagram": "@kingswaycollects",
+      "tiktok": null,
+      "youtube": null
+    }
+  ],
+  "deckDescription": {
+    "en": "",
+    "es": "",
+    "it": "",
+    "de": "",
+    "ja": "",
+    "pt": "",
+    "fr": ""
+  },
+  "cards": [
+    {
+      "name": "Abrade",
+      "count": 1
+    },
+    {
+      "name": "Adaptive Automaton",
+      "count": 1
+    },
+    {
+      "name": "Agatha's Soul Cauldron",
+      "count": 1
+    },
+    {
+      "name": "Ancient Tomb",
+      "count": 1
+    },
+    {
+      "name": "Arcane Signet",
+      "count": 1
+    },
+    {
+      "name": "Arena of Glory",
+      "count": 1
+    },
+    {
+      "name": "Axgard Cavalry",
+      "count": 1
+    },
+    {
+      "name": "Barkform Harvester",
+      "count": 1
+    },
+    {
+      "name": "Battered Golem",
+      "count": 1
+    },
+    {
+      "name": "Bloodfire Dwarf",
+      "count": 1
+    },
+    {
+      "name": "Bottle-Cap Blast",
+      "count": 1
+    },
+    {
+      "name": "Cavern of Souls",
+      "count": 1
+    },
+    {
+      "name": "Chaos Warp",
+      "count": 1
+    },
+    {
+      "name": "Chrome Mox",
+      "count": 1
+    },
+    {
+      "name": "Clock of Omens",
+      "count": 1
+    },
+    {
+      "name": "Clown Car",
+      "count": 1
+    },
+    {
+      "name": "Command Beacon",
+      "count": 1
+    },
+    {
+      "name": "Damping Sphere",
+      "count": 1
+    },
+    {
+      "name": "Deflecting Swat",
+      "count": 1
+    },
+    {
+      "name": "Disruptor Flute",
+      "count": 1
+    },
+    {
+      "name": "Dragon-Cursed Halls",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Armorer",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Bloodboiler",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Grunt",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Scorcher",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Trader",
+      "count": 1
+    },
+    {
+      "name": "Dwarven Warriors",
+      "count": 1
+    },
+    {
+      "name": "Enslaved Dwarf",
+      "count": 1
+    },
+    {
+      "name": "Fíli and Kíli, Joyous",
+      "count": 1
+    },
+    {
+      "name": "Firdoch Core",
+      "count": 1
+    },
+    {
+      "name": "Flywheel Racer",
+      "count": 1
+    },
+    {
+      "name": "Galvanic Blast",
+      "count": 1
+    },
+    {
+      "name": "Gemstone Caverns",
+      "count": 1
+    },
+    {
+      "name": "God-Pharaoh's Statue",
+      "count": 1
+    },
+    {
+      "name": "Gogo, Mysterious Mime",
+      "count": 1
+    },
+    {
+      "name": "Grafdigger's Cage",
+      "count": 1
+    },
+    {
+      "name": "Great Furnace",
+      "count": 1
+    },
+    {
+      "name": "Hammerheim",
+      "count": 1
+    },
+    {
+      "name": "High-Speed Hoverbike",
+      "count": 1
+    },
+    {
+      "name": "Holdout Settlement",
+      "count": 1
+    },
+    {
+      "name": "Jeska's Will",
+      "count": 1
+    },
+    {
+      "name": "Kavaron, Memorial World",
+      "count": 1
+    },
+    {
+      "name": "Knuckles the Echidna",
+      "count": 1
+    },
+    {
+      "name": "Liberated Dwarf",
+      "count": 1
+    },
+    {
+      "name": "Lifecraft Engine",
+      "count": 1
+    },
+    {
+      "name": "Lightning Bolt",
+      "count": 1
+    },
+    {
+      "name": "Liquimetal Torque",
+      "count": 1
+    },
+    {
+      "name": "Lotus Petal",
+      "count": 1
+    },
+    {
+      "name": "Mana Vault",
+      "count": 1
+    },
+    {
+      "name": "Maskwood Nexus",
+      "count": 1
+    },
+    {
+      "name": "Metallic Mimic",
+      "count": 1
+    },
+    {
+      "name": "Meteor Sword",
+      "count": 1
+    },
+    {
+      "name": "Mountain",
+      "count": 7
+    },
+    {
+      "name": "Mox Amber",
+      "count": 1
+    },
+    {
+      "name": "Mox Opal",
+      "count": 1
+    },
+    {
+      "name": "Mutavault",
+      "count": 1
+    },
+    {
+      "name": "Null Rod",
+      "count": 1
+    },
+    {
+      "name": "Óin the Brave",
+      "count": 1
+    },
+    {
+      "name": "Peter Parker's Camera",
+      "count": 1
+    },
+    {
+      "name": "Portal to Phyrexia",
+      "count": 1
+    },
+    {
+      "name": "Professional Face-Breaker",
+      "count": 1
+    },
+    {
+      "name": "Pyroblast",
+      "count": 1
+    },
+    {
+      "name": "Ragavan, Nimble Pilferer",
+      "count": 1
+    },
+    {
+      "name": "Red Elemental Blast",
+      "count": 1
+    },
+    {
+      "name": "Redirect Lightning",
+      "count": 1
+    },
+    {
+      "name": "Return the Favor",
+      "count": 1
+    },
+    {
+      "name": "Roaming Throne",
+      "count": 1
+    },
+    {
+      "name": "Rug of Smothering",
+      "count": 1
+    },
+    {
+      "name": "Sculpting Steel",
+      "count": 1
+    },
+    {
+      "name": "Shinka, the Bloodsoaked Keep",
+      "count": 1
+    },
+    {
+      "name": "Siege Smash",
+      "count": 1
+    },
+    {
+      "name": "Simian Spirit Guide",
+      "count": 1
+    },
+    {
+      "name": "Smuggler's Copter",
+      "count": 1
+    },
+    {
+      "name": "Sokenzan, Crucible of Defiance",
+      "count": 1
+    },
+    {
+      "name": "Sol Ring",
+      "count": 1
+    },
+    {
+      "name": "Spark Mage",
+      "count": 1
+    },
+    {
+      "name": "Springleaf Drum",
+      "count": 1
+    },
+    {
+      "name": "Stalactite Dagger",
+      "count": 1
+    },
+    {
+      "name": "Sudden Shock",
+      "count": 1
+    },
+    {
+      "name": "Survivors' Encampment",
+      "count": 1
+    },
+    {
+      "name": "Talon Gates of Madara",
+      "count": 1
+    },
+    {
+      "name": "Tezzeret, Cruel Captain",
+      "count": 1
+    },
+    {
+      "name": "Three Tree Mascot",
+      "count": 1
+    },
+    {
+      "name": "Torpor Orb",
+      "count": 1
+    },
+    {
+      "name": "Treasure Vault",
+      "count": 1
+    },
+    {
+      "name": "Twinshot Sniper",
+      "count": 1
+    },
+    {
+      "name": "Universal Automaton",
+      "count": 1
+    },
+    {
+      "name": "Unlicensed Hearse",
+      "count": 1
+    },
+    {
+      "name": "Untimely Malfunction",
+      "count": 1
+    },
+    {
+      "name": "Urza's Saga",
+      "count": 1
+    },
+    {
+      "name": "Vexing Bauble",
+      "count": 1
+    },
+    {
+      "name": "Volatile Fault",
+      "count": 1
+    },
+    {
+      "name": "Xorn",
+      "count": 1
+    }
+  ]
+}
+]
