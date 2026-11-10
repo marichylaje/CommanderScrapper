@@ -9,6 +9,7 @@
     "reduce": "npx tsx src/scryfallReducer.ts",
     "prices": "npx tsx src/generatePrices.ts",
     "splitInfluencer": "npx tsx src/splitInfluencerPrecons.ts",
+    "splitInfluencerOld": "npx tsx src/splitInfluencerPreconsOld.ts",
     "generateInfluencerAll": "npx tsx src/generateInfluencerPreconsAll.ts ./data/Book.xlsx --out ./data/influencer_precons_all.json --tabs Moxfield,Archidekt,Others",
     "splitCommander": "npx tsx src/splitCommanderPrecons.ts",
     "typeSchema": "npx tsx src/typesense/createTypesenseSchema.ts",
