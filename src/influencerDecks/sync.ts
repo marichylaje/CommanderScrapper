@@ -19,6 +19,9 @@ export type SyncOptions = {
   excludeHandlesByTab?: Partial<Record<SheetTab, string[]>>;
   // build everything but do not write outFile
   dryRun?: boolean;
+  // Descriptions to reuse when outFile has no entry for a deck (e.g. outFile was deleted after the
+  // last run); keyed by descriptionKey(influencerName, deckName)
+  fallbackDescriptions?: Map<string, DeckDescription>;
   log?: (msg: string) => void;
 };
 
@@ -50,6 +53,9 @@ const tabOf = (d: InfluencerDeck): SheetTab => d.source.sheetTab ?? LEGACY_TAB[d
 const emptyDescription = () =>
   Object.fromEntries(DESCRIPTION_LANGS.map((l) => [l, ''])) as DeckDescription;
 const hasDescription = (d: DeckDescription | undefined) => !!d && Object.values(d).some((v) => v);
+
+export const descriptionKey = (influencerName: string, deckName: string) =>
+  `${influencerName.trim().toLowerCase()}|${deckName.trim().toLowerCase()}`;
 
 function loadExisting(outFile: string): InfluencerDeck[] {
   if (!fs.existsSync(outFile)) return [];
@@ -142,15 +148,16 @@ export async function syncInfluencerDecks(options: SyncOptions): Promise<SyncRep
         if (total !== 100) warn(`${where}: ${label}: suma ${total} cartas (con commander)`);
 
         const previous = existingByKey.get(key);
+        const reusable = hasDescription(previous?.deckDescription)
+          ? previous!.deckDescription
+          : options.fallbackDescriptions?.get(descriptionKey(row.influencerName, fetched.name));
         const deck: InfluencerDeck = {
           name: fetched.name,
           commander: commanders[0]?.name ?? '',
           ...(commanders[1] ? { partner: commanders[1].name } : {}),
           influencerName: row.influencerName,
           socialNetworks: row.socialNetworks,
-          deckDescription: hasDescription(previous?.deckDescription)
-            ? previous!.deckDescription
-            : emptyDescription(),
+          deckDescription: reusable ?? emptyDescription(),
           cards,
           source: {
             platform: link.provider.platform,

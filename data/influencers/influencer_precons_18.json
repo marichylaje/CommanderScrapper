@@ -1,5 +1,372 @@
 [
   {
+    "name": "NOCTIS (Adictos)",
+    "commander": "Noctis, Prince of Lucis (FIN) 235",
+    "influencerName": "Commander United",
+    "socialNetworks": [
+      {
+        "instagram": "@commanderunited",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Aetherflux Reservoir (KLD) 192",
+        "count": 1
+      },
+      {
+        "name": "Akroma's Will (FCA) 21",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking (PIP) 209",
+        "count": 1
+      },
+      {
+        "name": "Arcane Denial (PLST) OTC-89",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet (PLST) OTC-252",
+        "count": 1
+      },
+      {
+        "name": "Ardyn, the Usurper (FIN) 89",
+        "count": 1
+      },
+      {
+        "name": "Baleful Strix (FIC) 318",
+        "count": 1
+      },
+      {
+        "name": "Bleachbone Verge (DFT) 250",
+        "count": 1
+      },
+      {
+        "name": "Buster Sword (FIN) 255",
+        "count": 1
+      },
+      {
+        "name": "Chalice of the Void (TSR) 390",
+        "count": 1
+      },
+      {
+        "name": "Cloud, Midgar Mercenary (FIN) 10",
+        "count": 1
+      },
+      {
+        "name": "Command Tower (FIC) 382",
+        "count": 1
+      },
+      {
+        "name": "Counterspell (FCA) 4",
+        "count": 1
+      },
+      {
+        "name": "Crystal Skull, Isu Spyglass (ACR) 15",
+        "count": 1
+      },
+      {
+        "name": "Cyclonic Rift (SLD) 1869",
+        "count": 1
+      },
+      {
+        "name": "Damn (SLD) 1870 *F*",
+        "count": 1
+      },
+      {
+        "name": "Darksteel Citadel (PLST) C14-290",
+        "count": 1
+      },
+      {
+        "name": "Deadly Dispute (CLB) 124",
+        "count": 1
+      },
+      {
+        "name": "Dispatch (FIC) 241",
+        "count": 1
+      },
+      {
+        "name": "Emry, Lurker of the Loch (ELD) 43",
+        "count": 1
+      },
+      {
+        "name": "Esper Sentinel (MH2) 12",
+        "count": 1
+      },
+      {
+        "name": "Etherium Sculptor (DDU) 37",
+        "count": 1
+      },
+      {
+        "name": "Exotic Orchard (LCC) 329",
+        "count": 1
+      },
+      {
+        "name": "Fabricate (M10) 52",
+        "count": 1
+      },
+      {
+        "name": "Farewell (NEO) 13",
+        "count": 1
+      },
+      {
+        "name": "Fellwar Stone (ONC) 130",
+        "count": 1
+      },
+      {
+        "name": "Flooded Strand (MH3) 220",
+        "count": 1
+      },
+      {
+        "name": "Floodfarm Verge (DSK) 259",
+        "count": 1
+      },
+      {
+        "name": "Forensic Gadgeteer (MKM) 57",
+        "count": 1
+      },
+      {
+        "name": "Forge Anew (SLD) 7002 *F*",
+        "count": 1
+      },
+      {
+        "name": "From Father to Son (FIN) 20",
+        "count": 1
+      },
+      {
+        "name": "Gloomlake Verge (DSK) 260",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine (RNA) 248",
+        "count": 1
+      },
+      {
+        "name": "Hallowed Fountain (RNA) 251",
+        "count": 1
+      },
+      {
+        "name": "Hex Parasite (NPH) 137",
+        "count": 1
+      },
+      {
+        "name": "Insomnia, Crown City (FIN) 282",
+        "count": 1
+      },
+      {
+        "name": "Instant Ramen (FIN) 259",
+        "count": 1
+      },
+      {
+        "name": "Inventors' Fair (KLD) 247",
+        "count": 1
+      },
+      {
+        "name": "Island (FIN) 299",
+        "count": 5
+      },
+      {
+        "name": "Liberator, Urza's Battlethopter (PBRO) 237p",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats (MH2) 248",
+        "count": 1
+      },
+      {
+        "name": "Mishra's Bauble (BRR) 34",
+        "count": 1
+      },
+      {
+        "name": "Moonsilver Key (MID) 255",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool (CLB) 357",
+        "count": 1
+      },
+      {
+        "name": "O'aka, Traveling Merchant (FIC) 144",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City (NEO) 271",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile (ACR) 81",
+        "count": 1
+      },
+      {
+        "name": "Plains (FIN) 296",
+        "count": 5
+      },
+      {
+        "name": "Polluted Delta (MH3) 224",
+        "count": 1
+      },
+      {
+        "name": "Praetor's Grasp (SLD) 1861",
+        "count": 1
+      },
+      {
+        "name": "Raffine's Tower (SNC) 254",
+        "count": 1
+      },
+      {
+        "name": "Ring of the Lucii (FIN) 269",
+        "count": 1
+      },
+      {
+        "name": "Sea of Clouds (BBD) 84",
+        "count": 1
+      },
+      {
+        "name": "Shorikai, Genesis Engine (NEC) 4",
+        "count": 1
+      },
+      {
+        "name": "Sidequest: Catch a Fish // Cooking Campsite (FIN) 31",
+        "count": 1
+      },
+      {
+        "name": "Simulacrum Synthesizer (BIG) 6",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe (RNA) 22",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (M3C) 305",
+        "count": 1
+      },
+      {
+        "name": "Soul Diviner (WAR) 218",
+        "count": 1
+      },
+      {
+        "name": "Spellskite (MM2) 230",
+        "count": 1
+      },
+      {
+        "name": "Squall, SeeD Mercenary (FIN) 243",
+        "count": 1
+      },
+      {
+        "name": "Starting Town (FIN) 289",
+        "count": 1
+      },
+      {
+        "name": "Steelshaper's Gift (CMM) 629",
+        "count": 1
+      },
+      {
+        "name": "Sunbeam Spellbomb (MRD) 250",
+        "count": 1
+      },
+      {
+        "name": "Surestrike Trident (DST) 147",
+        "count": 1
+      },
+      {
+        "name": "Swamp (FIN) 302",
+        "count": 5
+      },
+      {
+        "name": "Sword of Fire and Ice (DST) 148",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Animist (ORI) 240",
+        "count": 2
+      },
+      {
+        "name": "Swords to Plowshares (LCC) 137",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Dominance (PIP) 246",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Hierarchy (FIC) 365",
+        "count": 1
+      },
+      {
+        "name": "Talisman of Progress (PIP) 249",
+        "count": 1
+      },
+      {
+        "name": "Teferi's Protection (C17) 8",
+        "count": 1
+      },
+      {
+        "name": "The Regalia (FIN) 267",
+        "count": 1
+      },
+      {
+        "name": "Thought Monitor (MKC) 121",
+        "count": 1
+      },
+      {
+        "name": "Trouble in Pairs (MKC) 15",
+        "count": 1
+      },
+      {
+        "name": "Urza's Bauble (5ED) 406",
+        "count": 1
+      },
+      {
+        "name": "Urza's Saga (MH2) 259",
+        "count": 1
+      },
+      {
+        "name": "Varragoth, Bloodsky Sire (FCA) 37",
+        "count": 1
+      },
+      {
+        "name": "Vault of Champions (CMR) 360",
+        "count": 1
+      },
+      {
+        "name": "Vexing Bauble (MH3) 212",
+        "count": 1
+      },
+      {
+        "name": "Void Rend (FIC) 331",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave (RVR) 291",
+        "count": 1
+      },
+      {
+        "name": "Wayfarer's Bauble (CMM) 983",
+        "count": 1
+      },
+      {
+        "name": "Welding Jar (MRD) 274",
+        "count": 1
+      },
+      {
+        "name": "World Map (FIN) 270",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "COMADREJA BOOM",
     "commander": "The Infamous Cruelclaw (BLB) 219",
     "influencerName": "Commander United",
@@ -1431,373 +1798,6 @@
       },
       {
         "name": "Yavimaya, Cradle of Growth (MH2) 261",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "TIVIT 100€",
-    "commander": "Tivit, Seller of Secrets (NCC) 10",
-    "influencerName": "Commander United",
-    "socialNetworks": [
-      {
-        "instagram": "@commanderunited",
-        "tiktok": null,
-        "youtube": null
-      }
-    ],
-    "deckDescription": {
-      "en": "",
-      "es": "",
-      "it": "",
-      "de": "",
-      "ja": "",
-      "pt": "",
-      "fr": ""
-    },
-    "cards": [
-      {
-        "name": "Academy Manufactor (MH2) 219",
-        "count": 1
-      },
-      {
-        "name": "An Offer You Can't Refuse (FDN) 160",
-        "count": 1
-      },
-      {
-        "name": "Angel's Grace (TSP) 3",
-        "count": 1
-      },
-      {
-        "name": "Another Round (OTJ) 1",
-        "count": 1
-      },
-      {
-        "name": "Arcane Sanctum (DRC) 146",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet (WHO) 239",
-        "count": 1
-      },
-      {
-        "name": "Archaeomancer (UMA) 45",
-        "count": 1
-      },
-      {
-        "name": "Archivist of Oghma (PLST) CLB-4",
-        "count": 1
-      },
-      {
-        "name": "Archway of Innovation (MH3) 214",
-        "count": 1
-      },
-      {
-        "name": "Ash Barrens (WHO) 257",
-        "count": 1
-      },
-      {
-        "name": "Auton Soldier (WHO) 353",
-        "count": 1
-      },
-      {
-        "name": "Black Market Connections (ACR) 87",
-        "count": 1
-      },
-      {
-        "name": "Blind Obedience (RVR) 9",
-        "count": 1
-      },
-      {
-        "name": "Bolas's Citadel (WAR) 79",
-        "count": 1
-      },
-      {
-        "name": "Brainstorm (ICE) 61",
-        "count": 1
-      },
-      {
-        "name": "Collector's Vault (WOE) 244",
-        "count": 1
-      },
-      {
-        "name": "Command Tower (WHO) 264",
-        "count": 1
-      },
-      {
-        "name": "Concealed Courtyard (OTJ) 268",
-        "count": 1
-      },
-      {
-        "name": "Conjurer's Closet (INR) 441",
-        "count": 1
-      },
-      {
-        "name": "Dark Ritual (TMP) 118",
-        "count": 1
-      },
-      {
-        "name": "Darkwater Catacombs (WHO) 269",
-        "count": 1
-      },
-      {
-        "name": "Deadeye Navigator (INR) 492 *F*",
-        "count": 1
-      },
-      {
-        "name": "Deadly Dispute (CLB) 124",
-        "count": 1
-      },
-      {
-        "name": "Debt to the Deathless (RVR) 176",
-        "count": 1
-      },
-      {
-        "name": "Delay (FUT) 35",
-        "count": 1
-      },
-      {
-        "name": "Dimir Signet (DRC) 129",
-        "count": 1
-      },
-      {
-        "name": "Displacer Kitten (CLB) 63",
-        "count": 1
-      },
-      {
-        "name": "Dovin's Veto (WAR) 193",
-        "count": 1
-      },
-      {
-        "name": "Drowned Catacomb (M11) 224",
-        "count": 1
-      },
-      {
-        "name": "Eerie Interlude (SOI) 16",
-        "count": 1
-      },
-      {
-        "name": "Ephemerate (MH1) 7",
-        "count": 1
-      },
-      {
-        "name": "Essence Flux (INR) 64",
-        "count": 1
-      },
-      {
-        "name": "Everflowing Chalice (M3C) 291",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard (WHO) 276",
-        "count": 1
-      },
-      {
-        "name": "Expropriate (PLST) CN2-30",
-        "count": 1
-      },
-      {
-        "name": "Fracture (STX) 188",
-        "count": 1
-      },
-      {
-        "name": "Frantic Search (WOC) 93",
-        "count": 1
-      },
-      {
-        "name": "Gandalf the White (LTR) 19",
-        "count": 1
-      },
-      {
-        "name": "Glacial Fortress (M11) 225",
-        "count": 1
-      },
-      {
-        "name": "Grand Abolisher (M12) 19",
-        "count": 1
-      },
-      {
-        "name": "Grand Arbiter Augustin IV (2X2) 221",
-        "count": 1
-      },
-      {
-        "name": "Hullbreaker Horror (WOC) 95",
-        "count": 1
-      },
-      {
-        "name": "Illusion of Choice (CN2) 31",
-        "count": 1
-      },
-      {
-        "name": "Into the Flood Maw (BLB) 52",
-        "count": 1
-      },
-      {
-        "name": "Island (DFT) 280",
-        "count": 5
-      },
-      {
-        "name": "Karn, the Great Creator (WAR) 1",
-        "count": 1
-      },
-      {
-        "name": "Long River's Pull (BLB) 58",
-        "count": 1
-      },
-      {
-        "name": "Lotho, Corrupt Shirriff (LTR) 213",
-        "count": 1
-      },
-      {
-        "name": "Marionette Apprentice (MH3) 100",
-        "count": 1
-      },
-      {
-        "name": "Marionette Master (KLD) 90",
-        "count": 1
-      },
-      {
-        "name": "Mirkwood Bats (LTR) 95",
-        "count": 1
-      },
-      {
-        "name": "Monumental Henge (MH3) 222",
-        "count": 1
-      },
-      {
-        "name": "Mystic Remora (ICE) 87",
-        "count": 1
-      },
-      {
-        "name": "Negate (MOM) 68",
-        "count": 1
-      },
-      {
-        "name": "Notion Thief (ZNC) 96",
-        "count": 1
-      },
-      {
-        "name": "Orzhov Signet (DRC) 134",
-        "count": 1
-      },
-      {
-        "name": "Panharmonicon (KLD) 226",
-        "count": 1
-      },
-      {
-        "name": "Path to Exile (ACR) 81",
-        "count": 1
-      },
-      {
-        "name": "Plains (DFT) 277",
-        "count": 5
-      },
-      {
-        "name": "Plea for Power (CNS) 24",
-        "count": 1
-      },
-      {
-        "name": "Port of Karfell (MKC) 280",
-        "count": 1
-      },
-      {
-        "name": "Prairie Stream (WHO) 295",
-        "count": 1
-      },
-      {
-        "name": "Quantum Misalignment (WHO) 52",
-        "count": 1
-      },
-      {
-        "name": "Radiant Lotus (DFT) 240",
-        "count": 1
-      },
-      {
-        "name": "Reliquary Tower (CON) 143",
-        "count": 1
-      },
-      {
-        "name": "River of Tears (WHO) 297",
-        "count": 1
-      },
-      {
-        "name": "Scheming Symmetry (M20) 113",
-        "count": 1
-      },
-      {
-        "name": "Sink into Stupor // Soporific Springs (MH3) 241",
-        "count": 1
-      },
-      {
-        "name": "Skycloud Expanse (WHO) 306",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring (CMM) 410",
-        "count": 1
-      },
-      {
-        "name": "Split Up (DSK) 32",
-        "count": 1
-      },
-      {
-        "name": "Strionic Resonator (M14) 224",
-        "count": 1
-      },
-      {
-        "name": "Swamp (DFT) 283",
-        "count": 6
-      },
-      {
-        "name": "Swiftfoot Boots (C13) 263",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares (DMR) 31",
-        "count": 1
-      },
-      {
-        "name": "Tainted Isle (DSC) 303",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Dominance (MRD) 253",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Hierarchy (DRC) 142",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Progress (MRD) 256",
-        "count": 1
-      },
-      {
-        "name": "Time Sieve (ARB) 31",
-        "count": 1
-      },
-      {
-        "name": "Toxic Deluge (MH3) 277",
-        "count": 1
-      },
-      {
-        "name": "Trap the Trespassers (LTC) 25",
-        "count": 1
-      },
-      {
-        "name": "Tribute Mage (MH1) 73",
-        "count": 1
-      },
-      {
-        "name": "Urza, Lord High Artificer (DMR) 71",
-        "count": 1
-      },
-      {
-        "name": "Volatile Stormdrake (MH3) 79",
-        "count": 1
-      },
-      {
-        "name": "Wash Away (VOW) 87",
         "count": 1
       }
     ]

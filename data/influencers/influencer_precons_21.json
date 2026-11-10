@@ -1,5 +1,380 @@
 [
   {
+    "name": "Ketramose",
+    "commander": "Ketramose, the New Dawn (DFT) 209",
+    "influencerName": "Phyrexian Dadbod",
+    "socialNetworks": [
+      {
+        "instagram": "@phyrexian_dadbod",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Abyssal Harvester (FDN) 54",
+        "count": 1
+      },
+      {
+        "name": "Angel of the Ruins (BLC) 134",
+        "count": 1
+      },
+      {
+        "name": "Anguished Unmaking (LTC) 265",
+        "count": 1
+      },
+      {
+        "name": "Archfiend of Depravity (E01) 31",
+        "count": 1
+      },
+      {
+        "name": "Ash Barrens (DRC) 147",
+        "count": 1
+      },
+      {
+        "name": "Ashes to Ashes (4ED) 119",
+        "count": 1
+      },
+      {
+        "name": "Astarion's Thirst (CLB) 570 *F*",
+        "count": 1
+      },
+      {
+        "name": "Bag of Holding (CLB) 299",
+        "count": 1
+      },
+      {
+        "name": "Barren Moor (DSC) 262",
+        "count": 1
+      },
+      {
+        "name": "Basilica Screecher (CLU) 105",
+        "count": 1
+      },
+      {
+        "name": "Blind Obedience (RVR) 9",
+        "count": 1
+      },
+      {
+        "name": "Blood Artist (J22) 117",
+        "count": 1
+      },
+      {
+        "name": "Bloodletter of Aclazotz (LCI) 92",
+        "count": 1
+      },
+      {
+        "name": "Blot Out (MAT) 12",
+        "count": 1
+      },
+      {
+        "name": "Boggart Trawler // Boggart Bog (MH3) 243",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog (DSC) 265",
+        "count": 1
+      },
+      {
+        "name": "Caves of Koilos (DSC) 268",
+        "count": 1
+      },
+      {
+        "name": "Charming Prince (ELD) 8",
+        "count": 1
+      },
+      {
+        "name": "Command Tower (M3C) 331",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere (DRC) 125",
+        "count": 1
+      },
+      {
+        "name": "Conjurer's Closet (INR) 441",
+        "count": 1
+      },
+      {
+        "name": "Crabomination (MH3) 85",
+        "count": 1
+      },
+      {
+        "name": "Cremate (INV) 96",
+        "count": 1
+      },
+      {
+        "name": "Crypt Ghast (RVR) 70",
+        "count": 1
+      },
+      {
+        "name": "Culling the Weak (EXO) 55",
+        "count": 1
+      },
+      {
+        "name": "Dauthi Voidwalker (PLST) MH2-81",
+        "count": 1
+      },
+      {
+        "name": "Deadly Rollick (SLD) 1754 *F*",
+        "count": 1
+      },
+      {
+        "name": "Demonic Counsel (DSK) 92",
+        "count": 1
+      },
+      {
+        "name": "Despark (DRC) 115",
+        "count": 1
+      },
+      {
+        "name": "Egon, God of Death // Throne of Death (KHM) 92",
+        "count": 1
+      },
+      {
+        "name": "Ephemerate (MH1) 7",
+        "count": 1
+      },
+      {
+        "name": "Erase (KTK) 9",
+        "count": 1
+      },
+      {
+        "name": "Exorcise (DSK) 8",
+        "count": 1
+      },
+      {
+        "name": "Farewell (M3C) 170",
+        "count": 1
+      },
+      {
+        "name": "Force of Despair (SLD) 1936 *F*",
+        "count": 1
+      },
+      {
+        "name": "Ghostway (RVR) 19",
+        "count": 1
+      },
+      {
+        "name": "Gift of Estates (C14) 73",
+        "count": 1
+      },
+      {
+        "name": "Godless Shrine (RVR) 277",
+        "count": 1
+      },
+      {
+        "name": "Grasp of Fate (C15) 3",
+        "count": 1
+      },
+      {
+        "name": "Gravestorm (PHUK) 37",
+        "count": 1
+      },
+      {
+        "name": "Gray Merchant of Asphodel (C14) 146",
+        "count": 1
+      },
+      {
+        "name": "Hagra Mauling // Hagra Broodpit (ZNR) 106",
+        "count": 1
+      },
+      {
+        "name": "Harvester of Souls (E01) 34",
+        "count": 1
+      },
+      {
+        "name": "Isolated Chapel (DRC) 162",
+        "count": 1
+      },
+      {
+        "name": "Kabira Takedown // Kabira Plateau (ZNR) 19",
+        "count": 1
+      },
+      {
+        "name": "Kingpin's Pet (GTC) 173",
+        "count": 1
+      },
+      {
+        "name": "Liesa, Forgotten Archangel (INR) 243",
+        "count": 1
+      },
+      {
+        "name": "Long Road Home (BBD) 96",
+        "count": 1
+      },
+      {
+        "name": "Lotho, Corrupt Shirriff (LTR) 213",
+        "count": 1
+      },
+      {
+        "name": "Loxodon Warhammer (ONC) 135",
+        "count": 1
+      },
+      {
+        "name": "Malakir Rebirth // Malakir Mire (ZNR) 111",
+        "count": 1
+      },
+      {
+        "name": "Malicious Eclipse (LCI) 111",
+        "count": 1
+      },
+      {
+        "name": "Neglected Manor (DSK) 264",
+        "count": 1
+      },
+      {
+        "name": "Ob Nixilis, Unshackled (2X2) 84",
+        "count": 1
+      },
+      {
+        "name": "Opal Palace (CMM) 422",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Basilica (DRC) 164",
+        "count": 1
+      },
+      {
+        "name": "Orzhov Signet (DSC) 249",
+        "count": 1
+      },
+      {
+        "name": "Otherworldly Journey (MM2) 30",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile (OTP) 6",
+        "count": 1
+      },
+      {
+        "name": "Plains (DFT) 277",
+        "count": 4
+      },
+      {
+        "name": "Razorgrass Ambush // Razorgrass Field (MH3) 238",
+        "count": 1
+      },
+      {
+        "name": "Relic of Progenitus (BRC) 157",
+        "count": 1
+      },
+      {
+        "name": "Revoke Existence (DDI) 26",
+        "count": 1
+      },
+      {
+        "name": "Saw in Half (UNF) 88",
+        "count": 1
+      },
+      {
+        "name": "Scavenger Grounds (OTC) 316",
+        "count": 1
+      },
+      {
+        "name": "Secluded Steppe (C14) 310",
+        "count": 1
+      },
+      {
+        "name": "Sejiri Shelter // Sejiri Glacier (ZNR) 37",
+        "count": 1
+      },
+      {
+        "name": "Shay Cormac (ACR) 153",
+        "count": 1
+      },
+      {
+        "name": "Sheltered by Ghosts (DSK) 30",
+        "count": 1
+      },
+      {
+        "name": "Shred Memory (RAV) 105",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (M3C) 305",
+        "count": 1
+      },
+      {
+        "name": "Solemn Simulacrum (FDN) 729 *F*",
+        "count": 1
+      },
+      {
+        "name": "Surgical Extraction (OTP) 19",
+        "count": 1
+      },
+      {
+        "name": "Swamp (ZNR) 274",
+        "count": 9
+      },
+      {
+        "name": "Swiftfoot Boots (FDN) 258",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares (DRC) 37",
+        "count": 1
+      },
+      {
+        "name": "Tainted Field (CMM) 1039",
+        "count": 1
+      },
+      {
+        "name": "Tainted Strike (SOM) 80",
+        "count": 1
+      },
+      {
+        "name": "Temple of Silence (DRC) 178",
+        "count": 1
+      },
+      {
+        "name": "The Meathook Massacre (INR) 122",
+        "count": 1
+      },
+      {
+        "name": "Thought Vessel (DSC) 256",
+        "count": 1
+      },
+      {
+        "name": "Tormod's Crypt (MB2) 235",
+        "count": 1
+      },
+      {
+        "name": "Troll of Khazad-dûm (LTR) 111",
+        "count": 1
+      },
+      {
+        "name": "Unexplained Absence (MKC) 17",
+        "count": 1
+      },
+      {
+        "name": "Vanishing Verse (STX) 244 *F*",
+        "count": 1
+      },
+      {
+        "name": "Vito, Thorn of the Dusk Rose (M21) 127",
+        "count": 1
+      },
+      {
+        "name": "Witch Enchanter // Witch-Blessed Meadow (MH3) 239",
+        "count": 1
+      },
+      {
+        "name": "Withered Wretch (HOP) 45",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "Xenagos",
     "commander": "Xenagos, God of Revels (SLD) 2061 *F*",
     "influencerName": "Phyrexian Dadbod",

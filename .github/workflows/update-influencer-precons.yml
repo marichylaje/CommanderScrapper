@@ -1,0 +1,55 @@
+name: Update Influencer Precons
+
+on:
+  schedule:
+    # Every Monday at 04:00 UTC
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+# Same group as the data pipeline: both commit to main, so they must not run at the same time
+concurrency:
+  group: commander-data-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-influencer-precons:
+    name: Regenerate data/influencers from data/Book.xlsx
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      # Excel -> influencer_precons_all.json -> influencer_precons_standardized.json -> data/influencers/*.json
+      # --cleanup deletes the two big intermediate files; --min-decks-ratio aborts without touching
+      # data/influencers if a site blocked the downloads and too many decks would disappear.
+      - name: Generar precons de influencers
+        run: npm run generateInfluencerAll -- --cleanup --allow-failed-decks --min-decks-ratio 0.9
+
+      # Safety net in case the generation step failed before its own cleanup
+      - name: Eliminar archivos grandes (no commitear)
+        if: always()
+        run: |
+          rm -f data/influencer_precons_all.json data/influencer_precons_standardized.json
+
+      - name: Auto-commit de los chunks de influencers
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore: update influencer precons"
+          branch: main
+          commit_user_name: "commander-bot"
+          commit_user_email: "commander-bot@users.noreply.github.com"
+          file_pattern: "data/influencers/*.json"

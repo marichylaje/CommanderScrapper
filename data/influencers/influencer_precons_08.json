@@ -1,5 +1,368 @@
 [
   {
+    "name": "Slimefoot shredding his Sap-Friends",
+    "commander": "Slimefoot, the Stowaway (SLD) 1138",
+    "influencerName": "Amisia MtG - Ostfriesland",
+    "socialNetworks": [
+      {
+        "instagram": "@amisia_mtg",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Arcane Signet (SLD) 1492★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Ashnod's Altar (BRR) 67",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy (2X2) 372",
+        "count": 1
+      },
+      {
+        "name": "Bayou (3ED) 283",
+        "count": 1
+      },
+      {
+        "name": "Birds of Paradise (SLD) 1675 *F*",
+        "count": 1
+      },
+      {
+        "name": "Blasphemous Edict (FDN) 459",
+        "count": 1
+      },
+      {
+        "name": "Blood Artist (2X2) 352 *F*",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog (SLD) 1532★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Bolas's Citadel (PLG21) 3 *F*",
+        "count": 1
+      },
+      {
+        "name": "Cabal Coffers (MH2) 301",
+        "count": 1
+      },
+      {
+        "name": "Caravan Vigil (ISD) 173",
+        "count": 1
+      },
+      {
+        "name": "Chatterfang, Squirrel General (MH2) 151",
+        "count": 1
+      },
+      {
+        "name": "Command Tower (SLD) 1496★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Cryptolith Rite (SOI) 200",
+        "count": 1
+      },
+      {
+        "name": "Culling Ritual (OTC) 219",
+        "count": 1
+      },
+      {
+        "name": "Darkbore Pathway // Slitherbore Pathway (SLU) 17 *F*",
+        "count": 1
+      },
+      {
+        "name": "Deadly Dispute (OTC) 131",
+        "count": 1
+      },
+      {
+        "name": "Elves of Deep Shadow (RAV) 161",
+        "count": 1
+      },
+      {
+        "name": "Elvish Mystic (M15) 173",
+        "count": 1
+      },
+      {
+        "name": "Enduring Vitality (DSK) 176 *F*",
+        "count": 1
+      },
+      {
+        "name": "Farseek (M13) 170",
+        "count": 1
+      },
+      {
+        "name": "Feed the Swarm (ZNR) 102",
+        "count": 1
+      },
+      {
+        "name": "Finale of Devastation (SLD) 2680 *F*",
+        "count": 1
+      },
+      {
+        "name": "Forest (ONE) 369 *F*",
+        "count": 9
+      },
+      {
+        "name": "Fungal Plots (DOM) 160",
+        "count": 1
+      },
+      {
+        "name": "Fyndhorn Elves (CMR) 228",
+        "count": 1
+      },
+      {
+        "name": "Gemstone Caverns (PLST) TSP-274",
+        "count": 1
+      },
+      {
+        "name": "Ghost Vacuum (DSK) 248",
+        "count": 1
+      },
+      {
+        "name": "Golgari Charm (RTR) 164",
+        "count": 1
+      },
+      {
+        "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun (XLN) 191",
+        "count": 1
+      },
+      {
+        "name": "Heroic Intervention (WHO) 233",
+        "count": 1
+      },
+      {
+        "name": "Jade Mage (SCD) 193",
+        "count": 1
+      },
+      {
+        "name": "Keen Sense (TSR) 213",
+        "count": 1
+      },
+      {
+        "name": "Krav, the Unredeemed (BBD) 4",
+        "count": 1
+      },
+      {
+        "name": "Lich-Knights' Conquest (WOE) 380 *F*",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Elves (SLD) 7167 *F*",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Wastes (M15) 244",
+        "count": 1
+      },
+      {
+        "name": "Marionette Apprentice (MH3) 100",
+        "count": 1
+      },
+      {
+        "name": "Marsh Flats (MM3) 239",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Bats (LTR) 421 *F*",
+        "count": 1
+      },
+      {
+        "name": "Nature's Claim (FCA) 47",
+        "count": 1
+      },
+      {
+        "name": "Nature's Lore (CLB) 244",
+        "count": 1
+      },
+      {
+        "name": "Necrogenesis (MM2) 181",
+        "count": 1
+      },
+      {
+        "name": "Oracle of Mul Daya (JMP) 415",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb (RTR) 243",
+        "count": 1
+      },
+      {
+        "name": "Parallel Lives (P22) 3 *F*",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Tower (SLD) 208",
+        "count": 1
+      },
+      {
+        "name": "Pick Your Poison (MKM) 170",
+        "count": 1
+      },
+      {
+        "name": "Pitiless Plunderer (RIX) 81",
+        "count": 1
+      },
+      {
+        "name": "Plumb the Forbidden (STX) 81",
+        "count": 1
+      },
+      {
+        "name": "Rampant Growth (2X2) 371",
+        "count": 1
+      },
+      {
+        "name": "Reflecting Pool (SLD) 1535★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower (SLD) 1536★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Sakura-Tribe Elder (PLG24) 1 *F*",
+        "count": 1
+      },
+      {
+        "name": "Saproling Burst (NEM) 113",
+        "count": 1
+      },
+      {
+        "name": "Seedborn Muse (BBD) 212",
+        "count": 1
+      },
+      {
+        "name": "Skullclamp (PLST) C17-222",
+        "count": 1
+      },
+      {
+        "name": "Smothering Abomination (BFZ) 99",
+        "count": 1
+      },
+      {
+        "name": "Snake Umbra (WOC) 133",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (SLD) 1494★ *F*",
+        "count": 1
+      },
+      {
+        "name": "Species Specialist (C20) 47",
+        "count": 1
+      },
+      {
+        "name": "Springleaf Parade (ECC) 39",
+        "count": 1
+      },
+      {
+        "name": "Spymaster's Vault (MH3) 230",
+        "count": 1
+      },
+      {
+        "name": "Swamp (ONE) 367 *F*",
+        "count": 7
+      },
+      {
+        "name": "Sylvan Library (SLD) 2058",
+        "count": 1
+      },
+      {
+        "name": "Tendershoot Dryad (RIX) 147",
+        "count": 1
+      },
+      {
+        "name": "The Meathook Massacre (PMID) 112p",
+        "count": 1
+      },
+      {
+        "name": "Three Visits (CMR) 261",
+        "count": 1
+      },
+      {
+        "name": "Toxic Deluge (MSC) 161",
+        "count": 1
+      },
+      {
+        "name": "Umbral Collar Zealot (EOE) 123",
+        "count": 1
+      },
+      {
+        "name": "Underground Mortuary (MKM) 271",
+        "count": 1
+      },
+      {
+        "name": "Undergrowth Stadium (CMR) 714",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth (M15) 248",
+        "count": 1
+      },
+      {
+        "name": "Utopia Mycon (TSR) 244",
+        "count": 1
+      },
+      {
+        "name": "Vengeful Bloodwitch (FDN) 325",
+        "count": 1
+      },
+      {
+        "name": "Verdant Catacombs (MH2) 260",
+        "count": 1
+      },
+      {
+        "name": "Verdant Embrace (AFC) 173",
+        "count": 1
+      },
+      {
+        "name": "Viscera Seer (CMR) 158",
+        "count": 1
+      },
+      {
+        "name": "Warren Soultrader (MH3) 332",
+        "count": 1
+      },
+      {
+        "name": "Wastewood Verge (DFT) 268",
+        "count": 1
+      },
+      {
+        "name": "Withering Curse (PSOS) 105p",
+        "count": 1
+      },
+      {
+        "name": "Woodland Cemetery (DOM) 248",
+        "count": 1
+      },
+      {
+        "name": "Worldly Tutor (6ED) 269",
+        "count": 1
+      },
+      {
+        "name": "Yavimaya, Cradle of Growth (MH2) 261",
+        "count": 1
+      },
+      {
+        "name": "Zulaport Cutthroat (BFZ) 126",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "RAMP CITY!!!",
     "commander": "Lord Windgrace (C18) 43 *F*",
     "influencerName": "Mike",
@@ -1447,381 +1810,6 @@
       },
       {
         "name": "Zurgo Stormrender (TDC) 10",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "A whisper in the marsh",
-    "commander": "Nethroi, Apex of Death (DMC) 163",
-    "influencerName": "Chris",
-    "socialNetworks": [
-      {
-        "instagram": "@chrizzlymtg",
-        "tiktok": null,
-        "youtube": null
-      }
-    ],
-    "deckDescription": {
-      "en": "",
-      "es": "",
-      "it": "",
-      "de": "",
-      "ja": "",
-      "pt": "",
-      "fr": ""
-    },
-    "cards": [
-      {
-        "name": "Arcane Signet (LCC) 299",
-        "count": 1
-      },
-      {
-        "name": "Assassin's Trophy (ACR) 166",
-        "count": 1
-      },
-      {
-        "name": "Auspicious Starrix (IKO) 144",
-        "count": 1
-      },
-      {
-        "name": "Bane of Progress (FIC) 299",
-        "count": 1
-      },
-      {
-        "name": "Blossoming Sands (DFT) 252",
-        "count": 1
-      },
-      {
-        "name": "Boneyard Lurker (IKO) 178",
-        "count": 1
-      },
-      {
-        "name": "Buried Alive (MH3) 273",
-        "count": 1
-      },
-      {
-        "name": "Call of the Death-Dweller (IKO) 78",
-        "count": 1
-      },
-      {
-        "name": "Canopy Vista (FIC) 378",
-        "count": 1
-      },
-      {
-        "name": "Chittering Harvester (IKO) 80",
-        "count": 1
-      },
-      {
-        "name": "Command Tower (PLST) C21-284",
-        "count": 1
-      },
-      {
-        "name": "Concealed Courtyard (OTJ) 268",
-        "count": 1
-      },
-      {
-        "name": "Corpse Churn (IKO) 81",
-        "count": 1
-      },
-      {
-        "name": "Cubwarden (IKO) 7",
-        "count": 1
-      },
-      {
-        "name": "Culling Ritual (OTC) 219",
-        "count": 1
-      },
-      {
-        "name": "Cultivate (PW23) 6 *F*",
-        "count": 1
-      },
-      {
-        "name": "Damn (DRC) 89",
-        "count": 1
-      },
-      {
-        "name": "Deadbridge Chant (M3C) 258",
-        "count": 1
-      },
-      {
-        "name": "Death's Oasis (IKO) 182",
-        "count": 1
-      },
-      {
-        "name": "Dirge Bat (IKO) 84",
-        "count": 1
-      },
-      {
-        "name": "Dirge of Dread (A25) 86",
-        "count": 1
-      },
-      {
-        "name": "Eerie Ultimatum (IKO) 184",
-        "count": 1
-      },
-      {
-        "name": "Evolving Wilds (BRO) 261",
-        "count": 1
-      },
-      {
-        "name": "Exotic Orchard (MKC) 260",
-        "count": 1
-      },
-      {
-        "name": "Extinction Event (IKO) 88",
-        "count": 1
-      },
-      {
-        "name": "Faeburrow Elder (ELD) 190",
-        "count": 1
-      },
-      {
-        "name": "Fertilid (JMP) 398",
-        "count": 1
-      },
-      {
-        "name": "Fiend Artisan (IKO) 220",
-        "count": 1
-      },
-      {
-        "name": "Forest (TDM) 285",
-        "count": 5
-      },
-      {
-        "name": "Forlorn Flats (OTJ) 258",
-        "count": 1
-      },
-      {
-        "name": "Gemrazer (IKO) 155",
-        "count": 1
-      },
-      {
-        "name": "Glowstone Recluse (IKO) 156",
-        "count": 1
-      },
-      {
-        "name": "Golgari Guildgate (GRN) 249",
-        "count": 1
-      },
-      {
-        "name": "Graypelt Refuge (DDP) 32",
-        "count": 1
-      },
-      {
-        "name": "Grisly Salvage (RTR) 165",
-        "count": 1
-      },
-      {
-        "name": "Hermit Druid (INR) 202",
-        "count": 1
-      },
-      {
-        "name": "Honest Rutstein (OTJ) 207",
-        "count": 1
-      },
-      {
-        "name": "Indatha Crystal (IKO) 235",
-        "count": 1
-      },
-      {
-        "name": "Indatha Triome (IKO) 248",
-        "count": 1
-      },
-      {
-        "name": "Insatiable Hemophage (IKO) 93",
-        "count": 1
-      },
-      {
-        "name": "Jungle Hollow (DFT) 256",
-        "count": 1
-      },
-      {
-        "name": "Kaheera, the Orphanguard (IKO) 224",
-        "count": 1
-      },
-      {
-        "name": "Karador, Ghost Chieftain (CMM) 342",
-        "count": 1
-      },
-      {
-        "name": "Krosan Verge (MOC) 412",
-        "count": 1
-      },
-      {
-        "name": "Llanowar Wastes (PLST) OTC-305",
-        "count": 1
-      },
-      {
-        "name": "Luminous Broodmoth (FIC) 246",
-        "count": 1
-      },
-      {
-        "name": "Lurrus of the Dream-Den (MUL) 51",
-        "count": 1
-      },
-      {
-        "name": "Migratory Greathorn (IKO) 165",
-        "count": 1
-      },
-      {
-        "name": "Mindleecher (C20) 44",
-        "count": 1
-      },
-      {
-        "name": "Mogis's Marauder (THS) 97",
-        "count": 1
-      },
-      {
-        "name": "Mulch (VOW) 210",
-        "count": 1
-      },
-      {
-        "name": "Mythos of Nethroi (IKO) 97",
-        "count": 1
-      },
-      {
-        "name": "Nature's Lore (DMR) 170",
-        "count": 1
-      },
-      {
-        "name": "Necropanther (IKO) 196",
-        "count": 1
-      },
-      {
-        "name": "Nyx Weaver (TDC) 298",
-        "count": 1
-      },
-      {
-        "name": "Odric, Lunarch Marshal (INR) 36",
-        "count": 1
-      },
-      {
-        "name": "Pacifism (EMA) 23",
-        "count": 1
-      },
-      {
-        "name": "Path to Exile (ACR) 81",
-        "count": 1
-      },
-      {
-        "name": "Perennation (TDM) 212",
-        "count": 1
-      },
-      {
-        "name": "Perpetual Timepiece (KLD) 227",
-        "count": 1
-      },
-      {
-        "name": "Phantom Nishoba (DMR) 193",
-        "count": 1
-      },
-      {
-        "name": "Plains (PLST) WOE-267",
-        "count": 3
-      },
-      {
-        "name": "Rampant Growth (8ED) 274",
-        "count": 1
-      },
-      {
-        "name": "Ramunap Excavator (OTC) 202",
-        "count": 1
-      },
-      {
-        "name": "Ripples of Undeath (MH3) 107",
-        "count": 1
-      },
-      {
-        "name": "Sandsteppe Citadel (TDM) 266",
-        "count": 1
-      },
-      {
-        "name": "Satyr Wayfinder (ZNC) 81",
-        "count": 1
-      },
-      {
-        "name": "Sawtooth Thresher (5DN) 149",
-        "count": 1
-      },
-      {
-        "name": "Scoured Barrens (DFT) 263",
-        "count": 1
-      },
-      {
-        "name": "Scourge of the Skyclaves (ZNR) 122",
-        "count": 1
-      },
-      {
-        "name": "Shattered Sanctum (TDC) 391",
-        "count": 1
-      },
-      {
-        "name": "Shifting Woodland (MH3) 228",
-        "count": 1
-      },
-      {
-        "name": "Sigarda, Host of Herons (INR) 434",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring (NCC) 379",
-        "count": 1
-      },
-      {
-        "name": "Stitcher's Supplier (FIC) 287",
-        "count": 1
-      },
-      {
-        "name": "Swamp (M14) 241",
-        "count": 6
-      },
-      {
-        "name": "Terramorphic Expanse (UMA) 252",
-        "count": 1
-      },
-      {
-        "name": "The Necrobloom (MH3) 194",
-        "count": 1
-      },
-      {
-        "name": "Thriving Heath (J22) 824",
-        "count": 1
-      },
-      {
-        "name": "Toxic Deluge (MKC) 142",
-        "count": 1
-      },
-      {
-        "name": "Tranquil Expanse (C18) 289",
-        "count": 1
-      },
-      {
-        "name": "Trostani, Three Whispers (MKM) 238",
-        "count": 1
-      },
-      {
-        "name": "Unearth (A25) 113",
-        "count": 1
-      },
-      {
-        "name": "Unmarked Grave (MH2) 106",
-        "count": 1
-      },
-      {
-        "name": "Vulpikeet (IKO) 37",
-        "count": 1
-      },
-      {
-        "name": "Winding Way (PLST) MH1-193",
-        "count": 1
-      },
-      {
-        "name": "World Shaper (RIX) 151",
-        "count": 1
-      },
-      {
-        "name": "Zetalpa, Primal Dawn (TDC) 142",
         "count": 1
       }
     ]

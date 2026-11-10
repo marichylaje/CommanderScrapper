@@ -1,5 +1,324 @@
 [
   {
+    "name": "mono angels",
+    "commander": "Giada, Font of Hope (FDN) 141 *F*",
+    "influencerName": "oldskool",
+    "socialNetworks": [
+      {
+        "instagram": "@mtgartworks",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Akroma's Will (SOA) 131 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angel of Destiny (PZNR) 2p *F*",
+        "count": 1
+      },
+      {
+        "name": "Angel of Finality (FDN) 136 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angel of Jubilation (AVR) 2 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angel of the Ruins (FIC) 229 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angel of Vitality (PLST) M20-4 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angelic Accord (IMA) 7 *F*",
+        "count": 1
+      },
+      {
+        "name": "Angelic Field Marshal (CMM) 13 *F*",
+        "count": 1
+      },
+      {
+        "name": "Arcane Signet (FIC) 333 *F*",
+        "count": 1
+      },
+      {
+        "name": "Archaeomancer's Map (FIC) 230",
+        "count": 1
+      },
+      {
+        "name": "Archangel of Thune (2XM) 5 *F*",
+        "count": 1
+      },
+      {
+        "name": "Archangel of Tithes (ORI) 4 *F*",
+        "count": 1
+      },
+      {
+        "name": "Austere Command (NCC) 193",
+        "count": 1
+      },
+      {
+        "name": "Authority of the Consuls (KLD) 5 *F*",
+        "count": 1
+      },
+      {
+        "name": "Avacyn, Angel of Hope (PRM) 82864 *F*",
+        "count": 1
+      },
+      {
+        "name": "Baneslayer Angel (M21) 6 *F*",
+        "count": 1
+      },
+      {
+        "name": "Battle Angels of Tyr (PCLB) 9p *F*",
+        "count": 1
+      },
+      {
+        "name": "Bishop of Wings (M20) 8 *F*",
+        "count": 1
+      },
+      {
+        "name": "Bonders' Enclave (EOS) 4 *F*",
+        "count": 1
+      },
+      {
+        "name": "Brave the Elements (P11) 2",
+        "count": 1
+      },
+      {
+        "name": "Bruna, the Fading Light (INR) 14",
+        "count": 1
+      },
+      {
+        "name": "Cavern of Souls (LCI) 269 *F*",
+        "count": 1
+      },
+      {
+        "name": "Court of Grace (CMR) 16",
+        "count": 1
+      },
+      {
+        "name": "Emeria Shepherd (BFZ) 22",
+        "count": 1
+      },
+      {
+        "name": "Emeria, the Sky Ruin (SLD) 1291 *F*",
+        "count": 1
+      },
+      {
+        "name": "Entreat the Angels (C18) 67",
+        "count": 1
+      },
+      {
+        "name": "Exemplar of Light (FDN) 366 *F*",
+        "count": 1
+      },
+      {
+        "name": "Farewell (FIC) 242 *F*",
+        "count": 1
+      },
+      {
+        "name": "Firemane Commando (MOC) 73",
+        "count": 1
+      },
+      {
+        "name": "Flare of Fortitude (MH3) 26",
+        "count": 1
+      },
+      {
+        "name": "Flawless Maneuver (CMM) 692 *F*",
+        "count": 1
+      },
+      {
+        "name": "Folk Hero (CLB) 650 *F*",
+        "count": 1
+      },
+      {
+        "name": "Generous Gift (LCC) 128",
+        "count": 1
+      },
+      {
+        "name": "Gisela, the Broken Blade (EMN) 28",
+        "count": 1
+      },
+      {
+        "name": "Herald of War (AVR) 24 *F*",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn (MOC) 360",
+        "count": 1
+      },
+      {
+        "name": "Inspiring Overseer (SNC) 18",
+        "count": 1
+      },
+      {
+        "name": "Land Tax (2XM) 20 *F*",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves (PLST) C19-217",
+        "count": 1
+      },
+      {
+        "name": "Linvala, Keeper of Silence (MM3) 13",
+        "count": 1
+      },
+      {
+        "name": "Luminarch Ascension (ZEN) 25 *F*",
+        "count": 1
+      },
+      {
+        "name": "Lyra Dawnbringer (DMR) 13",
+        "count": 1
+      },
+      {
+        "name": "Metropolis Reformer (MAT) 4",
+        "count": 1
+      },
+      {
+        "name": "Minas Tirith (LTR) 420 *F*",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape (CMM) 660 *F*",
+        "count": 1
+      },
+      {
+        "name": "Nykthos, Shrine to Nyx (THS) 223 *F*",
+        "count": 1
+      },
+      {
+        "name": "Oketra's Monument (AKH) 233",
+        "count": 1
+      },
+      {
+        "name": "Path of Ancestry (SLD) 914 *F*",
+        "count": 1
+      },
+      {
+        "name": "Path to Exile (FIC) 248 *F*",
+        "count": 1
+      },
+      {
+        "name": "Pearl Medallion (MH3) 347 *F*",
+        "count": 1
+      },
+      {
+        "name": "Plains (HOB) 318 *F*",
+        "count": 26
+      },
+      {
+        "name": "Resplendent Angel (M19) 34",
+        "count": 1
+      },
+      {
+        "name": "Righteous Valkyrie (J22) 234",
+        "count": 1
+      },
+      {
+        "name": "Segovian Angel (MH1) 25 *F*",
+        "count": 1
+      },
+      {
+        "name": "Sephara, Sky's Blade (M20) 36",
+        "count": 1
+      },
+      {
+        "name": "Seraph Sanctuary (AVR) 228 *F*",
+        "count": 1
+      },
+      {
+        "name": "Serra the Benevolent (MB2) 17",
+        "count": 1
+      },
+      {
+        "name": "Serra's Emissary (MH2) 30",
+        "count": 1
+      },
+      {
+        "name": "Smothering Tithe (WOT) 67 *F*",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (LTC) 408z *F*",
+        "count": 1
+      },
+      {
+        "name": "Starnheim Aspirant (PLST) KHM-380",
+        "count": 1
+      },
+      {
+        "name": "Stroke of Midnight (FCA) 26 *F*",
+        "count": 1
+      },
+      {
+        "name": "Swiftfoot Boots (FIC) 361 *F*",
+        "count": 1
+      },
+      {
+        "name": "Sword of the Animist (FIC) 362 *F*",
+        "count": 1
+      },
+      {
+        "name": "Swords to Plowshares (TDC) 134",
+        "count": 1
+      },
+      {
+        "name": "Teferi's Protection (STA) 74 *E*",
+        "count": 1
+      },
+      {
+        "name": "The Book of Exalted Deeds (AFR) 4",
+        "count": 1
+      },
+      {
+        "name": "Thraben Watcher (PLST) MH2-34",
+        "count": 1
+      },
+      {
+        "name": "Urza's Incubator (MH3) 297 *F*",
+        "count": 1
+      },
+      {
+        "name": "Valkyrie Harbinger (KHM) 374",
+        "count": 1
+      },
+      {
+        "name": "Vanquisher's Banner (LTC) 289",
+        "count": 1
+      },
+      {
+        "name": "War Room (PCMR) 361p *F*",
+        "count": 1
+      },
+      {
+        "name": "Wrath of God (DMR) 37",
+        "count": 1
+      },
+      {
+        "name": "Youthful Valkyrie (FDN) 149",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "Etali",
     "commander": "Etali, Primal Conqueror // Etali, Primal Sickness (MOM) 298",
     "influencerName": "Card Craft Chronicle",
@@ -1540,401 +1859,6 @@
       },
       {
         "name": "Yeva, Nature's Herald (M13) 197",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "The Flying Dutchman",
-    "commander": "Skeleton Ship (ME2) 197",
-    "influencerName": "Mana_forge",
-    "socialNetworks": [
-      {
-        "instagram": "@mana_forge",
-        "tiktok": "@mana_forge",
-        "youtube": "https://www.youtube.com/channel/UCIN7gTYJoztg8oPUJSz7-Nw/videos"
-      }
-    ],
-    "deckDescription": {
-      "en": "",
-      "es": "",
-      "it": "",
-      "de": "",
-      "ja": "",
-      "pt": "",
-      "fr": ""
-    },
-    "cards": [
-      {
-        "name": "Arcane Signet (ELD) 331",
-        "count": 1
-      },
-      {
-        "name": "Black Market (PLST) C17-98",
-        "count": 1
-      },
-      {
-        "name": "Black Sun's Zenith (MKC) 126",
-        "count": 1
-      },
-      {
-        "name": "Blighted Agent (NPH) 29",
-        "count": 1
-      },
-      {
-        "name": "Blowfly Infestation (SHM) 58",
-        "count": 1
-      },
-      {
-        "name": "Bojuka Bog (PLST) C18-238",
-        "count": 1
-      },
-      {
-        "name": "Bubbling Muck (PLST) UDS-54",
-        "count": 1
-      },
-      {
-        "name": "Cabal Coffers (MB2) 106",
-        "count": 1
-      },
-      {
-        "name": "Choked Estuary (MIC) 169",
-        "count": 1
-      },
-      {
-        "name": "Clever Conjurer (AFR) 51",
-        "count": 1
-      },
-      {
-        "name": "Commander's Sphere (C20) 240",
-        "count": 1
-      },
-      {
-        "name": "Contagion Clasp (ONC) 129",
-        "count": 1
-      },
-      {
-        "name": "Contagion Engine (OTP) 61",
-        "count": 1
-      },
-      {
-        "name": "Contaminated Aquifer (FIC) 383",
-        "count": 1
-      },
-      {
-        "name": "Contentious Plan (WAR) 46",
-        "count": 1
-      },
-      {
-        "name": "Counterspell (PLST) A25-50",
-        "count": 1
-      },
-      {
-        "name": "Crumbling Ashes (EVE) 35",
-        "count": 1
-      },
-      {
-        "name": "Crypt Ghast (GTC) 61",
-        "count": 1
-      },
-      {
-        "name": "Dark Ritual (TMP) 118",
-        "count": 1
-      },
-      {
-        "name": "Darkslick Shores (ONE) 250",
-        "count": 1
-      },
-      {
-        "name": "Darkwater Catacombs (C19) 238",
-        "count": 1
-      },
-      {
-        "name": "Deadly Rollick (SLD) 1754",
-        "count": 1
-      },
-      {
-        "name": "Demonic Tutor (PLST) DDC-49",
-        "count": 1
-      },
-      {
-        "name": "Dimir Signet (NCC) 365",
-        "count": 1
-      },
-      {
-        "name": "Dreadship Reef (PLST) CM2-247",
-        "count": 1
-      },
-      {
-        "name": "Dreamtide Whale (MH3) 59",
-        "count": 1
-      },
-      {
-        "name": "Drown in Ichor (ONE) 91",
-        "count": 1
-      },
-      {
-        "name": "Experimental Augury (ONE) 49",
-        "count": 1
-      },
-      {
-        "name": "Fetid Pools (WHO) 277",
-        "count": 1
-      },
-      {
-        "name": "Freed from the Real (PLST) SOK-38",
-        "count": 1
-      },
-      {
-        "name": "Grave Betrayal (RTR) 67",
-        "count": 1
-      },
-      {
-        "name": "Grim Affliction (PLST) MM2-84",
-        "count": 1
-      },
-      {
-        "name": "High Tide (DMR) 286",
-        "count": 1
-      },
-      {
-        "name": "Horobi, Death's Wail (MUL) 14",
-        "count": 1
-      },
-      {
-        "name": "Ichor Rats (SOM) 67",
-        "count": 1
-      },
-      {
-        "name": "Incremental Blight (PLST) HOP-32",
-        "count": 1
-      },
-      {
-        "name": "Inexorable Tide (FIC) 265",
-        "count": 1
-      },
-      {
-        "name": "Intruder Alarm (WOT) 21",
-        "count": 1
-      },
-      {
-        "name": "Ioreth of the Healing House (LTR) 56",
-        "count": 1
-      },
-      {
-        "name": "Island (FDN) 275",
-        "count": 4
-      },
-      {
-        "name": "Isochron Scepter (2XM) 264",
-        "count": 1
-      },
-      {
-        "name": "Jwar Isle Refuge (C17) 258",
-        "count": 1
-      },
-      {
-        "name": "Karn's Bastion (MOC) 409",
-        "count": 1
-      },
-      {
-        "name": "Lightning Greaves (PLST) C19-217",
-        "count": 1
-      },
-      {
-        "name": "Lonely Sandbar (MH1) 242",
-        "count": 1
-      },
-      {
-        "name": "Lulu, Stern Guardian (FIC) 38",
-        "count": 1
-      },
-      {
-        "name": "Maha, Its Feathers Night (BLB) 100",
-        "count": 1
-      },
-      {
-        "name": "Massacre Girl, Known Killer (MKM) 344",
-        "count": 1
-      },
-      {
-        "name": "Minamo, School at Water's Edge (CHK) 279",
-        "count": 1
-      },
-      {
-        "name": "Mind Stone (PLST) C18-210",
-        "count": 1
-      },
-      {
-        "name": "Morphic Pool (CLB) 357",
-        "count": 1
-      },
-      {
-        "name": "Myriad Landscape (C21) 304",
-        "count": 1
-      },
-      {
-        "name": "Mystic Remora (DMR) 288",
-        "count": 1
-      },
-      {
-        "name": "Mystic Sanctuary (MKC) 277",
-        "count": 1
-      },
-      {
-        "name": "Necroskitter (MM2) 88",
-        "count": 1
-      },
-      {
-        "name": "Negate (M20) 69",
-        "count": 1
-      },
-      {
-        "name": "Nest of Scarabs (AKH) 101",
-        "count": 1
-      },
-      {
-        "name": "Otawara, Soaring City (NEO) 271",
-        "count": 1
-      },
-      {
-        "name": "Persistent Constrictor (DSC) 22",
-        "count": 1
-      },
-      {
-        "name": "Phyrexian Arena (PLST) CN2-144",
-        "count": 1
-      },
-      {
-        "name": "Prologue to Phyresis (ONE) 65",
-        "count": 1
-      },
-      {
-        "name": "Propaganda (FIC) 268",
-        "count": 1
-      },
-      {
-        "name": "Refocus (FRF) 47",
-        "count": 1
-      },
-      {
-        "name": "Reliquary Tower (PLST) M19-254",
-        "count": 1
-      },
-      {
-        "name": "Restless Reef (LCI) 282",
-        "count": 1
-      },
-      {
-        "name": "Rhystic Study (PLST) PCY-45",
-        "count": 1
-      },
-      {
-        "name": "River of Tears (IMA) 246",
-        "count": 1
-      },
-      {
-        "name": "Rogue's Passage (UMA) 250",
-        "count": 1
-      },
-      {
-        "name": "Scheming Aspirant (ONE) 107",
-        "count": 1
-      },
-      {
-        "name": "Sign in Blood (M10) 112",
-        "count": 1
-      },
-      {
-        "name": "Skithiryx, the Blight Dragon (2XM) 107",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring (PLST) C18-222",
-        "count": 1
-      },
-      {
-        "name": "Spawning Pool (10E) 358",
-        "count": 1
-      },
-      {
-        "name": "Splendid Agony (AKH) 109",
-        "count": 1
-      },
-      {
-        "name": "Steady Progress (PLST) MM2-58",
-        "count": 1
-      },
-      {
-        "name": "Sting, the Glinting Dagger (LTR) 250",
-        "count": 1
-      },
-      {
-        "name": "Swamp (TDM) 281",
-        "count": 4
-      },
-      {
-        "name": "Swiftfoot Boots (CM2) 223",
-        "count": 1
-      },
-      {
-        "name": "Tekuthal, Inquiry Dominus (ONE) 71",
-        "count": 1
-      },
-      {
-        "name": "Temple of the False God (PLST) C18-285",
-        "count": 1
-      },
-      {
-        "name": "Terramorphic Expanse (CM2) 273",
-        "count": 1
-      },
-      {
-        "name": "Tezzeret's Gambit (NPH) 47",
-        "count": 1
-      },
-      {
-        "name": "Thornbite Staff (MB2) 99",
-        "count": 1
-      },
-      {
-        "name": "Thrummingbird (PLST) CM2-52",
-        "count": 1
-      },
-      {
-        "name": "Toxrill, the Corrosive (VOW) 321",
-        "count": 1
-      },
-      {
-        "name": "Tragic Slip (EMA) 109",
-        "count": 1
-      },
-      {
-        "name": "Urborg, Tomb of Yawgmoth (UMA) 254",
-        "count": 1
-      },
-      {
-        "name": "Vampiric Tutor (CMR) 156",
-        "count": 1
-      },
-      {
-        "name": "Viral Drake (PLST) NPH-49",
-        "count": 1
-      },
-      {
-        "name": "Virulent Wound (MBS) 57",
-        "count": 1
-      },
-      {
-        "name": "Voidwing Hybrid (ONE) 221",
-        "count": 1
-      },
-      {
-        "name": "Watery Grave (GTC) 249",
-        "count": 1
-      },
-      {
-        "name": "Yawgmoth, Thran Physician (FCA) 11",
         "count": 1
       }
     ]

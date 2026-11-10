@@ -1,5 +1,400 @@
 [
   {
+    "name": "The Flying Dutchman",
+    "commander": "Skeleton Ship (ME2) 197",
+    "influencerName": "Mana_forge",
+    "socialNetworks": [
+      {
+        "instagram": "@mana_forge",
+        "tiktok": "@mana_forge",
+        "youtube": "https://www.youtube.com/channel/UCIN7gTYJoztg8oPUJSz7-Nw/videos"
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Arcane Signet (ELD) 331",
+        "count": 1
+      },
+      {
+        "name": "Black Market (PLST) C17-98",
+        "count": 1
+      },
+      {
+        "name": "Black Sun's Zenith (MKC) 126",
+        "count": 1
+      },
+      {
+        "name": "Blighted Agent (NPH) 29",
+        "count": 1
+      },
+      {
+        "name": "Blowfly Infestation (SHM) 58",
+        "count": 1
+      },
+      {
+        "name": "Bojuka Bog (PLST) C18-238",
+        "count": 1
+      },
+      {
+        "name": "Bubbling Muck (PLST) UDS-54",
+        "count": 1
+      },
+      {
+        "name": "Cabal Coffers (MB2) 106",
+        "count": 1
+      },
+      {
+        "name": "Choked Estuary (MIC) 169",
+        "count": 1
+      },
+      {
+        "name": "Clever Conjurer (AFR) 51",
+        "count": 1
+      },
+      {
+        "name": "Commander's Sphere (C20) 240",
+        "count": 1
+      },
+      {
+        "name": "Contagion Clasp (ONC) 129",
+        "count": 1
+      },
+      {
+        "name": "Contagion Engine (OTP) 61",
+        "count": 1
+      },
+      {
+        "name": "Contaminated Aquifer (FIC) 383",
+        "count": 1
+      },
+      {
+        "name": "Contentious Plan (WAR) 46",
+        "count": 1
+      },
+      {
+        "name": "Counterspell (PLST) A25-50",
+        "count": 1
+      },
+      {
+        "name": "Crumbling Ashes (EVE) 35",
+        "count": 1
+      },
+      {
+        "name": "Crypt Ghast (GTC) 61",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual (TMP) 118",
+        "count": 1
+      },
+      {
+        "name": "Darkslick Shores (ONE) 250",
+        "count": 1
+      },
+      {
+        "name": "Darkwater Catacombs (C19) 238",
+        "count": 1
+      },
+      {
+        "name": "Deadly Rollick (SLD) 1754",
+        "count": 1
+      },
+      {
+        "name": "Demonic Tutor (PLST) DDC-49",
+        "count": 1
+      },
+      {
+        "name": "Dimir Signet (NCC) 365",
+        "count": 1
+      },
+      {
+        "name": "Dreadship Reef (PLST) CM2-247",
+        "count": 1
+      },
+      {
+        "name": "Dreamtide Whale (MH3) 59",
+        "count": 1
+      },
+      {
+        "name": "Drown in Ichor (ONE) 91",
+        "count": 1
+      },
+      {
+        "name": "Experimental Augury (ONE) 49",
+        "count": 1
+      },
+      {
+        "name": "Fetid Pools (WHO) 277",
+        "count": 1
+      },
+      {
+        "name": "Freed from the Real (PLST) SOK-38",
+        "count": 1
+      },
+      {
+        "name": "Grave Betrayal (RTR) 67",
+        "count": 1
+      },
+      {
+        "name": "Grim Affliction (PLST) MM2-84",
+        "count": 1
+      },
+      {
+        "name": "High Tide (DMR) 286",
+        "count": 1
+      },
+      {
+        "name": "Horobi, Death's Wail (MUL) 14",
+        "count": 1
+      },
+      {
+        "name": "Ichor Rats (SOM) 67",
+        "count": 1
+      },
+      {
+        "name": "Incremental Blight (PLST) HOP-32",
+        "count": 1
+      },
+      {
+        "name": "Inexorable Tide (FIC) 265",
+        "count": 1
+      },
+      {
+        "name": "Intruder Alarm (WOT) 21",
+        "count": 1
+      },
+      {
+        "name": "Ioreth of the Healing House (LTR) 56",
+        "count": 1
+      },
+      {
+        "name": "Island (FDN) 275",
+        "count": 4
+      },
+      {
+        "name": "Isochron Scepter (2XM) 264",
+        "count": 1
+      },
+      {
+        "name": "Jwar Isle Refuge (C17) 258",
+        "count": 1
+      },
+      {
+        "name": "Karn's Bastion (MOC) 409",
+        "count": 1
+      },
+      {
+        "name": "Lightning Greaves (PLST) C19-217",
+        "count": 1
+      },
+      {
+        "name": "Lonely Sandbar (MH1) 242",
+        "count": 1
+      },
+      {
+        "name": "Lulu, Stern Guardian (FIC) 38",
+        "count": 1
+      },
+      {
+        "name": "Maha, Its Feathers Night (BLB) 100",
+        "count": 1
+      },
+      {
+        "name": "Massacre Girl, Known Killer (MKM) 344",
+        "count": 1
+      },
+      {
+        "name": "Minamo, School at Water's Edge (CHK) 279",
+        "count": 1
+      },
+      {
+        "name": "Mind Stone (PLST) C18-210",
+        "count": 1
+      },
+      {
+        "name": "Morphic Pool (CLB) 357",
+        "count": 1
+      },
+      {
+        "name": "Myriad Landscape (C21) 304",
+        "count": 1
+      },
+      {
+        "name": "Mystic Remora (DMR) 288",
+        "count": 1
+      },
+      {
+        "name": "Mystic Sanctuary (MKC) 277",
+        "count": 1
+      },
+      {
+        "name": "Necroskitter (MM2) 88",
+        "count": 1
+      },
+      {
+        "name": "Negate (M20) 69",
+        "count": 1
+      },
+      {
+        "name": "Nest of Scarabs (AKH) 101",
+        "count": 1
+      },
+      {
+        "name": "Otawara, Soaring City (NEO) 271",
+        "count": 1
+      },
+      {
+        "name": "Persistent Constrictor (DSC) 22",
+        "count": 1
+      },
+      {
+        "name": "Phyrexian Arena (PLST) CN2-144",
+        "count": 1
+      },
+      {
+        "name": "Prologue to Phyresis (ONE) 65",
+        "count": 1
+      },
+      {
+        "name": "Propaganda (FIC) 268",
+        "count": 1
+      },
+      {
+        "name": "Refocus (FRF) 47",
+        "count": 1
+      },
+      {
+        "name": "Reliquary Tower (PLST) M19-254",
+        "count": 1
+      },
+      {
+        "name": "Restless Reef (LCI) 282",
+        "count": 1
+      },
+      {
+        "name": "Rhystic Study (PLST) PCY-45",
+        "count": 1
+      },
+      {
+        "name": "River of Tears (IMA) 246",
+        "count": 1
+      },
+      {
+        "name": "Rogue's Passage (UMA) 250",
+        "count": 1
+      },
+      {
+        "name": "Scheming Aspirant (ONE) 107",
+        "count": 1
+      },
+      {
+        "name": "Sign in Blood (M10) 112",
+        "count": 1
+      },
+      {
+        "name": "Skithiryx, the Blight Dragon (2XM) 107",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (PLST) C18-222",
+        "count": 1
+      },
+      {
+        "name": "Spawning Pool (10E) 358",
+        "count": 1
+      },
+      {
+        "name": "Splendid Agony (AKH) 109",
+        "count": 1
+      },
+      {
+        "name": "Steady Progress (PLST) MM2-58",
+        "count": 1
+      },
+      {
+        "name": "Sting, the Glinting Dagger (LTR) 250",
+        "count": 1
+      },
+      {
+        "name": "Swamp (TDM) 281",
+        "count": 4
+      },
+      {
+        "name": "Swiftfoot Boots (CM2) 223",
+        "count": 1
+      },
+      {
+        "name": "Tekuthal, Inquiry Dominus (ONE) 71",
+        "count": 1
+      },
+      {
+        "name": "Temple of the False God (PLST) C18-285",
+        "count": 1
+      },
+      {
+        "name": "Terramorphic Expanse (CM2) 273",
+        "count": 1
+      },
+      {
+        "name": "Tezzeret's Gambit (NPH) 47",
+        "count": 1
+      },
+      {
+        "name": "Thornbite Staff (MB2) 99",
+        "count": 1
+      },
+      {
+        "name": "Thrummingbird (PLST) CM2-52",
+        "count": 1
+      },
+      {
+        "name": "Toxrill, the Corrosive (VOW) 321",
+        "count": 1
+      },
+      {
+        "name": "Tragic Slip (EMA) 109",
+        "count": 1
+      },
+      {
+        "name": "Urborg, Tomb of Yawgmoth (UMA) 254",
+        "count": 1
+      },
+      {
+        "name": "Vampiric Tutor (CMR) 156",
+        "count": 1
+      },
+      {
+        "name": "Viral Drake (PLST) NPH-49",
+        "count": 1
+      },
+      {
+        "name": "Virulent Wound (MBS) 57",
+        "count": 1
+      },
+      {
+        "name": "Voidwing Hybrid (ONE) 221",
+        "count": 1
+      },
+      {
+        "name": "Watery Grave (GTC) 249",
+        "count": 1
+      },
+      {
+        "name": "Yawgmoth, Thran Physician (FCA) 11",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "violent nature i prevail",
     "commander": "Black Waltz No. 3 (FIN) 478",
     "influencerName": "Mana_forge",
@@ -1183,417 +1578,6 @@
       },
       {
         "name": "Vault of Whispers (BRC) 211",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "Squall Seed Mercenary",
-    "commander": "Squall, SeeD Mercenary (FIN) 547 *F*",
-    "influencerName": "Alex Kessler",
-    "socialNetworks": [
-      {
-        "instagram": "@kesswylie",
-        "tiktok": "@kesswylie",
-        "youtube": "https://youtube.com/@kesswylie?si=SsnViTZgcvObol-S"
-      }
-    ],
-    "deckDescription": {
-      "en": "",
-      "es": "",
-      "it": "",
-      "de": "",
-      "ja": "",
-      "pt": "",
-      "fr": ""
-    },
-    "cards": [
-      {
-        "name": "Access Tunnel (TDC) 337",
-        "count": 1
-      },
-      {
-        "name": "Accursed Marauder (MH3) 80",
-        "count": 1
-      },
-      {
-        "name": "Ancient Den (BRC) 172",
-        "count": 1
-      },
-      {
-        "name": "Animate Dead (PD3) 16 *F*",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet (FIC) 334",
-        "count": 1
-      },
-      {
-        "name": "Arid Mesa (MH2) 244",
-        "count": 1
-      },
-      {
-        "name": "Ashnod's Altar (CMM) 368",
-        "count": 1
-      },
-      {
-        "name": "Bleachbone Verge (DFT) 250",
-        "count": 1
-      },
-      {
-        "name": "Bloodstained Mire (MH3) 216",
-        "count": 1
-      },
-      {
-        "name": "Brightclimb Pathway // Grimclimb Pathway (PLST) ZNR-259",
-        "count": 1
-      },
-      {
-        "name": "Brotherhood Regalia (ACR) 71",
-        "count": 1
-      },
-      {
-        "name": "Buster Sword (FIN) 255",
-        "count": 1
-      },
-      {
-        "name": "Caves of Koilos (TDC) 348",
-        "count": 1
-      },
-      {
-        "name": "Chromatic Star (BRR) 74",
-        "count": 1
-      },
-      {
-        "name": "Chthonian Nightmare (MH3) 83",
-        "count": 1
-      },
-      {
-        "name": "Cloud, Midgar Mercenary (FIN) 375",
-        "count": 1
-      },
-      {
-        "name": "Codex Shredder (CMR) 304",
-        "count": 1
-      },
-      {
-        "name": "Command Tower (TDC) 107",
-        "count": 1
-      },
-      {
-        "name": "Damn (DRC) 89",
-        "count": 1
-      },
-      {
-        "name": "Dauthi Voidwalker (MH2) 397",
-        "count": 1
-      },
-      {
-        "name": "Eagles of the North (LTR) 7",
-        "count": 1
-      },
-      {
-        "name": "Enlightened Tutor (DMR) 6",
-        "count": 1
-      },
-      {
-        "name": "Entomb (DMR) 82",
-        "count": 1
-      },
-      {
-        "name": "Esper Sentinel (MH2) 328 *F*",
-        "count": 1
-      },
-      {
-        "name": "Fabled Passage (BLB) 252",
-        "count": 1
-      },
-      {
-        "name": "Fishing Gear (FIC) 461",
-        "count": 1
-      },
-      {
-        "name": "Flooded Strand (MH3) 220",
-        "count": 1
-      },
-      {
-        "name": "Forge Anew (SLD) 7002",
-        "count": 1
-      },
-      {
-        "name": "Galadriel's Dismissal (LTC) 500",
-        "count": 1
-      },
-      {
-        "name": "Gandalf the White (LTR) 19",
-        "count": 1
-      },
-      {
-        "name": "Glasswing Grace // Age-Graced Chapel (MH3) 254",
-        "count": 1
-      },
-      {
-        "name": "Godless Shrine (EOE) 254",
-        "count": 1
-      },
-      {
-        "name": "Grand Abolisher (CMM) 625",
-        "count": 1
-      },
-      {
-        "name": "Gravebreaker Lamia (SLD) 1643",
-        "count": 1
-      },
-      {
-        "name": "Hammer of Nazahn (CMM) 388",
-        "count": 1
-      },
-      {
-        "name": "High Market (AFC) 246",
-        "count": 1
-      },
-      {
-        "name": "Inkmoth Nexus (MBS) 145",
-        "count": 1
-      },
-      {
-        "name": "Inventors' Fair (PLST) KLD-247",
-        "count": 1
-      },
-      {
-        "name": "Ishgard, the Holy See // Faith & Grief (FIN) 310",
-        "count": 1
-      },
-      {
-        "name": "Karmic Guide (VOC) 90",
-        "count": 1
-      },
-      {
-        "name": "Key to the City (C21) 248",
-        "count": 1
-      },
-      {
-        "name": "Lightning Greaves (FIC) 349",
-        "count": 1
-      },
-      {
-        "name": "Loran of the Third Path (FCA) 24",
-        "count": 1
-      },
-      {
-        "name": "Lotus Bloom (TSR) 411 *F*",
-        "count": 1
-      },
-      {
-        "name": "Lotus Petal (PLST) TMP-294",
-        "count": 1
-      },
-      {
-        "name": "Lurrus of the Dream-Den (IKO) 355",
-        "count": 1
-      },
-      {
-        "name": "Marsh Flats (MH2) 248",
-        "count": 1
-      },
-      {
-        "name": "Mask of Memory (FIC) 350",
-        "count": 1
-      },
-      {
-        "name": "Midgar, City of Mako // Reactor Raid (FIN) 286",
-        "count": 1
-      },
-      {
-        "name": "Mind Stone (FIC) 353",
-        "count": 1
-      },
-      {
-        "name": "Mishra's Bauble (PLST) IMA-221",
-        "count": 1
-      },
-      {
-        "name": "Mother of Runes (SLD) 299",
-        "count": 1
-      },
-      {
-        "name": "Mystic Forge (M3C) 302",
-        "count": 1
-      },
-      {
-        "name": "Nihil Spellbomb (SCD) 270",
-        "count": 1
-      },
-      {
-        "name": "Orzhov Signet (SLD) 294",
-        "count": 1
-      },
-      {
-        "name": "Phyrexia's Core (C21) 309",
-        "count": 1
-      },
-      {
-        "name": "Phyrexian Altar (2X2) 311",
-        "count": 1
-      },
-      {
-        "name": "Plaguecrafter (SLD) 1116",
-        "count": 1
-      },
-      {
-        "name": "Plains (TDM) 277",
-        "count": 2
-      },
-      {
-        "name": "Polluted Delta (MH3) 224",
-        "count": 1
-      },
-      {
-        "name": "Puresteel Paladin (SLD) 1352",
-        "count": 1
-      },
-      {
-        "name": "Revival // Revenge (RVR) 241",
-        "count": 1
-      },
-      {
-        "name": "Rogue's Passage (OTC) 313",
-        "count": 1
-      },
-      {
-        "name": "Salvaging Station (5DN) 148",
-        "count": 1
-      },
-      {
-        "name": "Secluded Steppe (J25) 774",
-        "count": 1
-      },
-      {
-        "name": "Selfless Savior (SLD) 732",
-        "count": 1
-      },
-      {
-        "name": "Sevinne's Reclamation (MH3) 267",
-        "count": 1
-      },
-      {
-        "name": "Shadowy Backstreet (MKM) 268",
-        "count": 1
-      },
-      {
-        "name": "Sigarda's Aid (SLD) 1727",
-        "count": 1
-      },
-      {
-        "name": "Silent Clearing (MH1) 246",
-        "count": 1
-      },
-      {
-        "name": "Skullclamp (SLD) 1112",
-        "count": 1
-      },
-      {
-        "name": "Skyclave Apparition (BLC) 154",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring (FIC) 358",
-        "count": 1
-      },
-      {
-        "name": "Sram, Senior Edificer (SOC) 176",
-        "count": 1
-      },
-      {
-        "name": "Steelshaper's Gift (CMM) 59",
-        "count": 1
-      },
-      {
-        "name": "Stoneforge Mystic (PGPX) 2016 *F*",
-        "count": 1
-      },
-      {
-        "name": "Sun Titan (SLC) 2010",
-        "count": 1
-      },
-      {
-        "name": "Swamp (TDM) 281",
-        "count": 2
-      },
-      {
-        "name": "Swiftfoot Boots (SLD) 606 *F*",
-        "count": 1
-      },
-      {
-        "name": "Sword of Feast and Famine (J14) 6 *F*",
-        "count": 1
-      },
-      {
-        "name": "Sword of Fire and Ice (G11) 2 *F*",
-        "count": 1
-      },
-      {
-        "name": "Sword of Forge and Frontier (ONE) 244",
-        "count": 1
-      },
-      {
-        "name": "Swords to Plowshares (SLP) 20",
-        "count": 1
-      },
-      {
-        "name": "Takenuma, Abandoned Mire (NEO) 278",
-        "count": 1
-      },
-      {
-        "name": "Talisman of Hierarchy (TDC) 331",
-        "count": 1
-      },
-      {
-        "name": "Tezzeret, Cruel Captain (EOE) 2",
-        "count": 1
-      },
-      {
-        "name": "Trading Post (LTC) 288",
-        "count": 1
-      },
-      {
-        "name": "Tymna the Weaver (FCA) 18",
-        "count": 1
-      },
-      {
-        "name": "Umezawa's Jitte (SLD) 1865",
-        "count": 1
-      },
-      {
-        "name": "Unmarked Grave (MH2) 106",
-        "count": 1
-      },
-      {
-        "name": "Urborg, Tomb of Yawgmoth (TSR) 287",
-        "count": 1
-      },
-      {
-        "name": "Urza's Saga (MH2) 259",
-        "count": 1
-      },
-      {
-        "name": "Vault of Champions (CMM) 436",
-        "count": 1
-      },
-      {
-        "name": "Vault of the Archangel (TDC) 410",
-        "count": 1
-      },
-      {
-        "name": "Vault of Whispers (J25) 780",
-        "count": 1
-      },
-      {
-        "name": "Warren Soultrader (MH3) 110",
-        "count": 1
-      },
-      {
-        "name": "Welding Jar (MRD) 274",
         "count": 1
       }
     ]

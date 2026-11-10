@@ -1,5 +1,348 @@
 [
   {
+    "name": "Elf Party",
+    "commander": "Lathril, Blade of the Elves (FDN) 349",
+    "influencerName": "Joshua Torres",
+    "socialNetworks": [
+      {
+        "instagram": "@rakdos_lord_of_riots_torres",
+        "tiktok": null,
+        "youtube": null
+      }
+    ],
+    "deckDescription": {
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
+    },
+    "cards": [
+      {
+        "name": "Arcane Signet (TDC) 105",
+        "count": 1
+      },
+      {
+        "name": "Assassin's Trophy (ACR) 95",
+        "count": 1
+      },
+      {
+        "name": "Banner of Kinship (FDN) 127",
+        "count": 1
+      },
+      {
+        "name": "Circle of Dreams Druid (AFR) 176",
+        "count": 1
+      },
+      {
+        "name": "Command Tower (TDC) 107",
+        "count": 1
+      },
+      {
+        "name": "Craterhoof Behemoth (TDM) 138",
+        "count": 1
+      },
+      {
+        "name": "Dark Ritual (MB2) 179",
+        "count": 1
+      },
+      {
+        "name": "Darkbore Pathway // Slitherbore Pathway (KHM) 254",
+        "count": 1
+      },
+      {
+        "name": "Deathcap Glade (INR) 275",
+        "count": 1
+      },
+      {
+        "name": "Deathrite Shaman (MB2) 81",
+        "count": 1
+      },
+      {
+        "name": "Dionus, Elvish Archdruid (J25) 52",
+        "count": 1
+      },
+      {
+        "name": "Doubling Season (FDN) 216",
+        "count": 1
+      },
+      {
+        "name": "Dwynen, Gilt-Leaf Daen (FDN) 217",
+        "count": 1
+      },
+      {
+        "name": "Eladamri, Lord of Leaves (TMP) 224",
+        "count": 1
+      },
+      {
+        "name": "Elderfang Ritualist (KHM) 385",
+        "count": 1
+      },
+      {
+        "name": "Elven Ambush (GN3) 92",
+        "count": 1
+      },
+      {
+        "name": "Ezuri, Renegade Leader (PLST) C14-195",
+        "count": 1
+      },
+      {
+        "name": "Fauna Shaman (BRO) 179",
+        "count": 1
+      },
+      {
+        "name": "Fog (PLST) EMA-167",
+        "count": 1
+      },
+      {
+        "name": "Forest (TDM) 285",
+        "count": 11
+      },
+      {
+        "name": "Galadhrim Brigade (LTC) 502",
+        "count": 1
+      },
+      {
+        "name": "Genesis Wave (FDN) 221",
+        "count": 1
+      },
+      {
+        "name": "Gilt-Leaf Palace (PLST) LRW-268",
+        "count": 1
+      },
+      {
+        "name": "Gladehart Cavalry (DDU) 11",
+        "count": 1
+      },
+      {
+        "name": "Golgari Charm (PLST) GK1-62",
+        "count": 1
+      },
+      {
+        "name": "Golgari Guildgate (CLU) 235",
+        "count": 1
+      },
+      {
+        "name": "Golgari Rot Farm (TDC) 368",
+        "count": 1
+      },
+      {
+        "name": "Golgari Signet (DSC) 246",
+        "count": 1
+      },
+      {
+        "name": "Greenbelt Guardian (DFT) 164",
+        "count": 1
+      },
+      {
+        "name": "Harald, King of Skemfar (KHM) 212",
+        "count": 1
+      },
+      {
+        "name": "Hardened Scales (PIP) 200",
+        "count": 1
+      },
+      {
+        "name": "Haunting Voyage (KHM) 296",
+        "count": 1
+      },
+      {
+        "name": "Herald's Horn (FIC) 228 *F*",
+        "count": 1
+      },
+      {
+        "name": "Hollowmurk Siege (TDM) 192",
+        "count": 1
+      },
+      {
+        "name": "Imperious Perfect (J22) 677",
+        "count": 1
+      },
+      {
+        "name": "Incremental Growth (KTK) 138",
+        "count": 1
+      },
+      {
+        "name": "Inspiring Call (FDN) 226",
+        "count": 1
+      },
+      {
+        "name": "Jaheira, Friend of the Forest (CLB) 237",
+        "count": 1
+      },
+      {
+        "name": "Jaheira's Respite (CLB) 238",
+        "count": 1
+      },
+      {
+        "name": "Jungle Hollow (TDM) 258",
+        "count": 1
+      },
+      {
+        "name": "Krosan Grip (C21) 198",
+        "count": 1
+      },
+      {
+        "name": "Legolas, Master Archer (LTR) 173",
+        "count": 1
+      },
+      {
+        "name": "Llanowar Elves (J25) 149",
+        "count": 1
+      },
+      {
+        "name": "Marwyn, the Nurturer (J25) 687",
+        "count": 1
+      },
+      {
+        "name": "Masked Admirers (KHC) 69",
+        "count": 1
+      },
+      {
+        "name": "Mirkwood Channeler (LTR) 828",
+        "count": 1
+      },
+      {
+        "name": "Mortuary Mire (PIP) 272",
+        "count": 1
+      },
+      {
+        "name": "Overgrown Tomb (RVR) 283",
+        "count": 1
+      },
+      {
+        "name": "Patchwork Banner (BLB) 247",
+        "count": 1
+      },
+      {
+        "name": "Pelt Collector (GRN) 141",
+        "count": 1
+      },
+      {
+        "name": "Poison-Tip Archer (BLC) 256",
+        "count": 1
+      },
+      {
+        "name": "Primal Vigor (PLST) C13-162",
+        "count": 1
+      },
+      {
+        "name": "Questing Beast (PLST) ELD-171",
+        "count": 1
+      },
+      {
+        "name": "Realmwalker (LCC) 250",
+        "count": 1
+      },
+      {
+        "name": "Reclamation Sage (FDN) 231",
+        "count": 1
+      },
+      {
+        "name": "Shaman of the Pack (KHC) 92",
+        "count": 1
+      },
+      {
+        "name": "Skemfar Elderhall (KHM) 268",
+        "count": 1
+      },
+      {
+        "name": "Snakeskin Veil (TDM) 159",
+        "count": 1
+      },
+      {
+        "name": "Sol Ring (TDC) 106",
+        "count": 1
+      },
+      {
+        "name": "Storm the Seedcore (MOM) 206",
+        "count": 1
+      },
+      {
+        "name": "Struggle for Skemfar (KHM) 196",
+        "count": 1
+      },
+      {
+        "name": "Swamp (TDM) 281",
+        "count": 10
+      },
+      {
+        "name": "Talara's Battalion (DDU) 24",
+        "count": 1
+      },
+      {
+        "name": "The World Spell (DMU) 189",
+        "count": 1
+      },
+      {
+        "name": "Thorn Lieutenant (M19) 203",
+        "count": 1
+      },
+      {
+        "name": "Thornweald Archer (J25) 724",
+        "count": 1
+      },
+      {
+        "name": "Timberwatch Elf (KHC) 76",
+        "count": 1
+      },
+      {
+        "name": "Tyvar Kell (J25) 734",
+        "count": 1
+      },
+      {
+        "name": "Tyvar the Bellicose (MAT) 48",
+        "count": 1
+      },
+      {
+        "name": "Tyvar, Jubilant Brawler (ONE) 344",
+        "count": 1
+      },
+      {
+        "name": "Tyvar, the Pummeler (DSK) 202",
+        "count": 1
+      },
+      {
+        "name": "Unclaimed Territory (LCC) 366",
+        "count": 1
+      },
+      {
+        "name": "Vanquisher's Banner (LCC) 316",
+        "count": 1
+      },
+      {
+        "name": "Vorinclex // The Grand Evolution (MOM) 213",
+        "count": 1
+      },
+      {
+        "name": "Vorinclex, Voice of Hunger (PLST) NPH-127",
+        "count": 1
+      },
+      {
+        "name": "Wastewood Verge (DFT) 268",
+        "count": 1
+      },
+      {
+        "name": "Wildborn Preserver (J22) 738",
+        "count": 1
+      },
+      {
+        "name": "Witherbloom Command (STX) 248",
+        "count": 1
+      },
+      {
+        "name": "Woodland Cemetery (TDC) 412",
+        "count": 1
+      },
+      {
+        "name": "Yeva, Nature's Herald (RVR) 162",
+        "count": 1
+      }
+    ]
+  },
+  {
     "name": "🎞️ Shadowheart, Dark Justiciar // Acolyte of Bahamut (3)",
     "commander": "Shadowheart, Dark Justiciar (SLD) 2483 *F*",
     "partner": "Acolyte of Bahamut (CLB) 513 *E*",
@@ -1441,369 +1784,6 @@
       },
       {
         "name": "Wild Ricochet (SCD) 169",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "name": "It's Wolfing time",
-    "commander": "Tovolar, Dire Overlord // Tovolar, the Midnight Scourge (SLD) 1612",
-    "influencerName": "Captain Cavedad",
-    "socialNetworks": [
-      {
-        "instagram": "@cptcavedad.mtg",
-        "tiktok": null,
-        "youtube": null
-      }
-    ],
-    "deckDescription": {
-      "en": "",
-      "es": "",
-      "it": "",
-      "de": "",
-      "ja": "",
-      "pt": "",
-      "fr": ""
-    },
-    "cards": [
-      {
-        "name": "Aeronaut's Wings (BRO) 231",
-        "count": 1
-      },
-      {
-        "name": "Arcane Signet (BLC) 127",
-        "count": 1
-      },
-      {
-        "name": "Arlinn Kord // Arlinn, Embraced by the Moon (INR) 324",
-        "count": 1
-      },
-      {
-        "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury (MID) 211",
-        "count": 1
-      },
-      {
-        "name": "Arlinn, Voice of the Pack (WAR) 150",
-        "count": 1
-      },
-      {
-        "name": "Avabruck Caretaker // Hollowhenge Huntmaster (SLD) 1608",
-        "count": 1
-      },
-      {
-        "name": "Beastmaster Ascension (SLD) 1609",
-        "count": 1
-      },
-      {
-        "name": "Bird Admirer // Wing Shredder (MID) 298",
-        "count": 1
-      },
-      {
-        "name": "Bounding Wolf (MID) 170",
-        "count": 1
-      },
-      {
-        "name": "Bramble Armor (VOW) 188",
-        "count": 1
-      },
-      {
-        "name": "Bristling Backwoods (OTJ) 253",
-        "count": 1
-      },
-      {
-        "name": "Burly Breaker // Dire-Strain Demolisher (MID) 299",
-        "count": 1
-      },
-      {
-        "name": "Castle Embereth (ONC) 150",
-        "count": 1
-      },
-      {
-        "name": "Castle Garenbrig (ELD) 240",
-        "count": 1
-      },
-      {
-        "name": "Cathedral of War (M13) 221",
-        "count": 1
-      },
-      {
-        "name": "Cinder Glade (BLC) 299",
-        "count": 1
-      },
-      {
-        "name": "Cliffhaven Kitesail (ZNR) 243",
-        "count": 1
-      },
-      {
-        "name": "Cloud Key (TSR) 265",
-        "count": 1
-      },
-      {
-        "name": "Command Tower (BLC) 130",
-        "count": 1
-      },
-      {
-        "name": "Copperline Gorge (BLC) 301",
-        "count": 1
-      },
-      {
-        "name": "Decimate (OTC) 220",
-        "count": 1
-      },
-      {
-        "name": "Defend the Celestus (MID) 182",
-        "count": 1
-      },
-      {
-        "name": "Dire-Strain Rampage (MID) 219",
-        "count": 1
-      },
-      {
-        "name": "Duel for Dominance (MID) 184",
-        "count": 1
-      },
-      {
-        "name": "Fires of Yavimaya (SCD) 228",
-        "count": 1
-      },
-      {
-        "name": "Forest (BLB) 377",
-        "count": 8
-      },
-      {
-        "name": "Full Moon's Rise (ISD) 180",
-        "count": 1
-      },
-      {
-        "name": "Game Trail (MKC) 264",
-        "count": 1
-      },
-      {
-        "name": "Gruul Turf (BLC) 310",
-        "count": 1
-      },
-      {
-        "name": "Guttural Response (DDS) 56",
-        "count": 1
-      },
-      {
-        "name": "Harvesttide Infiltrator // Harvesttide Assailant (MID) 293",
-        "count": 1
-      },
-      {
-        "name": "Highland Weald (CSP) 147",
-        "count": 1
-      },
-      {
-        "name": "Hollowhenge Overlord (VOC) 36",
-        "count": 1
-      },
-      {
-        "name": "Hound Tamer // Untamed Pup (MID) 302",
-        "count": 1
-      },
-      {
-        "name": "Howl of the Hunt (MID) 188",
-        "count": 1
-      },
-      {
-        "name": "Howl of the Night Pack (SLD) 1610",
-        "count": 1
-      },
-      {
-        "name": "Howling Moon (VOW) 204",
-        "count": 1
-      },
-      {
-        "name": "Howlpack Piper // Wildsong Howler (VOW) 205",
-        "count": 1
-      },
-      {
-        "name": "Howlpack Resurgence (SOI) 211",
-        "count": 1
-      },
-      {
-        "name": "Immerwolf (SLD) 809",
-        "count": 1
-      },
-      {
-        "name": "Journey to the Lost City (CLB) 681",
-        "count": 1
-      },
-      {
-        "name": "Kazandu Refuge (C19) 256",
-        "count": 1
-      },
-      {
-        "name": "Kessig Naturalist // Lord of the Ulvenwald (MID) 310",
-        "count": 1
-      },
-      {
-        "name": "Kessig Wolf Run (M3C) 352",
-        "count": 1
-      },
-      {
-        "name": "Lace with Moonglove (CN2) 184",
-        "count": 1
-      },
-      {
-        "name": "Lay of the Land (CN2) 185",
-        "count": 1
-      },
-      {
-        "name": "Leaping Ambush (WOE) 177",
-        "count": 1
-      },
-      {
-        "name": "Lunar Frenzy (MID) 147",
-        "count": 1
-      },
-      {
-        "name": "Mantle of the Wolf (THB) 178",
-        "count": 1
-      },
-      {
-        "name": "Mishra's Command (BRO) 141",
-        "count": 1
-      },
-      {
-        "name": "Moonlight Hunt (SOI) 219",
-        "count": 1
-      },
-      {
-        "name": "Moonrager's Slash (MID) 148",
-        "count": 1
-      },
-      {
-        "name": "Mossfire Valley (MKC) 274",
-        "count": 1
-      },
-      {
-        "name": "Mountain (BLB) 375",
-        "count": 8
-      },
-      {
-        "name": "Outland Liberator // Frenzied Trapbreaker (MID) 303",
-        "count": 1
-      },
-      {
-        "name": "Primal Adversary (MID) 194",
-        "count": 1
-      },
-      {
-        "name": "Raging Ravine (BLC) 324",
-        "count": 1
-      },
-      {
-        "name": "Raised by Wolves (BNG) 135",
-        "count": 1
-      },
-      {
-        "name": "Reckless Stormseeker // Storm-Charged Slasher (MID) 294",
-        "count": 1
-      },
-      {
-        "name": "Return to Nature (MOC) 309",
-        "count": 1
-      },
-      {
-        "name": "Rhythm of the Wild (RVR) 217",
-        "count": 1
-      },
-      {
-        "name": "Rockfall Vale (MID) 266",
-        "count": 1
-      },
-      {
-        "name": "Rootbound Crag (BLC) 326",
-        "count": 1
-      },
-      {
-        "name": "Rosethorn Halberd (ELD) 175",
-        "count": 1
-      },
-      {
-        "name": "Rugged Highlands (TDM) 265 *F*",
-        "count": 1
-      },
-      {
-        "name": "Sage of Ancient Lore // Werewolf of Ancient Hunger (SOI) 225",
-        "count": 1
-      },
-      {
-        "name": "Second Harvest (SLD) 1611",
-        "count": 1
-      },
-      {
-        "name": "Sheltered Thicket (OTC) 319",
-        "count": 1
-      },
-      {
-        "name": "Sol Ring (BLC) 129",
-        "count": 1
-      },
-      {
-        "name": "Spellrune Painter // Spellrune Howler (MID) 295",
-        "count": 1
-      },
-      {
-        "name": "Stolen Vitality (MID) 161",
-        "count": 1
-      },
-      {
-        "name": "Stomping Ground (EOE) 258 *F*",
-        "count": 1
-      },
-      {
-        "name": "Temple of Abandon (MKC) 301",
-        "count": 1
-      },
-      {
-        "name": "The Celestus (MID) 252",
-        "count": 1
-      },
-      {
-        "name": "Thornspire Verge (DSK) 270",
-        "count": 1
-      },
-      {
-        "name": "Tireless Hauler // Dire-Strain Brawler (MID) 305",
-        "count": 1
-      },
-      {
-        "name": "Tovolar's Huntmaster // Tovolar's Packleader (MID) 306",
-        "count": 1
-      },
-      {
-        "name": "Unnatural Growth (BLC) 245",
-        "count": 1
-      },
-      {
-        "name": "Unnatural Moonrise (MID) 247",
-        "count": 1
-      },
-      {
-        "name": "Village Watch // Village Reavers (MID) 297",
-        "count": 1
-      },
-      {
-        "name": "Virtue of Strength // Garenbrig Growth (WOE) 197",
-        "count": 1
-      },
-      {
-        "name": "Weaver of Blossoms // Blossom-Clad Werewolf (VOW) 226",
-        "count": 1
-      },
-      {
-        "name": "Wolf Strike (VOW) 228",
-        "count": 1
-      },
-      {
-        "name": "Wolfir Silverheart (AVR) 206",
-        "count": 1
-      },
-      {
-        "name": "Wolfkin Outcast // Wedding Crasher (VOW) 229",
         "count": 1
       }
     ]
