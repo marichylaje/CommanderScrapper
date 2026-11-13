@@ -11,6 +11,7 @@ export type FrontendDeck = {
   socialNetworks: InfluencerDeck['socialNetworks'];
   deckDescription: DeckDescription;
   cards: { name: string; count: number }[];
+  sideboard: { name: string; count: number }[];
 };
 
 const FINISH_TAG: Record<CardPrinting['finish'], string> = { normal: '', foil: '*F*', etched: '*E*' };
@@ -47,6 +48,7 @@ export function standardizeDeck(deck: InfluencerDeck): FrontendDeck {
     deckDescription: deck.deckDescription,
     // MODIFICADO: Llamamos a formatCardLine sin pasarle c.count para que no incluya el número al principio del nombre
     cards: deck.cards.map((c) => ({ name: formatCardLine(c), count: c.count })),
+    sideboard: (deck.sideboard ?? []).map((c) => ({ name: formatCardLine(c), count: c.count })),
   };
 }
 

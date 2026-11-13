@@ -1,9 +1,12 @@
 import type { Card, CommanderRef, DeckProvider } from '../types.js';
 import { decodeHtml, httpGetText, mergeCards, toFinish } from '../utils.js';
 
-// ManaBox "boardCategory" values seen in its public deck pages
+// ManaBox "boardCategory" enum (from its deck page bundle): commander 0, oathbreaker 1,
+// signatureSpell 2, mainboard 3, sideboard 4, maybeboard 5
 const BOARD_COMMANDER = 0;
 const BOARD_MAIN = 3;
+const BOARD_SIDEBOARD = 4;
+const BOARD_NAMES: Record<number, string> = { 1: 'oathbreaker', 2: 'signatureSpell', 5: 'maybeboard' };
 
 const SCRYFALL_ID = /scryfall\.io\/[a-z_]+\/(?:front|back)\/[0-9a-f]\/[0-9a-f]\/([0-9a-f-]{36})/i;
 
@@ -40,6 +43,7 @@ export const manaboxProvider: DeckProvider = {
 
     const commanders: CommanderRef[] = [];
     const cards: Card[] = [];
+    const sideboard: Card[] = [];
     const skipped = new Map<number, number>();
 
     for (const c of deck.cards ?? []) {
@@ -53,17 +57,22 @@ export const manaboxProvider: DeckProvider = {
         commanders.push({ name: c.name, ...printing });
       } else if (c.boardCategory === BOARD_MAIN) {
         cards.push({ name: c.name, count: c.quantity, ...printing });
+      } else if (c.boardCategory === BOARD_SIDEBOARD) {
+        sideboard.push({ name: c.name, count: c.quantity, ...printing });
       } else {
         skipped.set(c.boardCategory, (skipped.get(c.boardCategory) ?? 0) + c.quantity);
       }
     }
-    for (const [category, count] of skipped) warnings.push(`boardCategory ${category} tiene ${count} cartas (no incluidas)`);
+    for (const [category, count] of skipped) {
+      warnings.push(`${BOARD_NAMES[category] ?? `boardCategory ${category}`} tiene ${count} cartas (no incluidas)`);
+    }
 
     return {
       name: String(deck.name).trim(),
       format: typeof deck.format === 'string' ? deck.format.toLowerCase() : undefined,
       commanders,
       cards: mergeCards(cards),
+      sideboard: mergeCards(sideboard),
       warnings,
     };
   },

@@ -31,6 +31,7 @@ export const aetherhubProvider: DeckProvider = {
     const headings = [...visual.matchAll(/<h5>\s*([^<]*?)\s*<\/h5>/g)];
     const commanderRaw: RawCard[] = [];
     const mainRaw: RawCard[] = [];
+    const sideboardRaw: RawCard[] = [];
     const skipped: string[] = [];
 
     headings.forEach((h, i) => {
@@ -42,14 +43,15 @@ export const aetherhubProvider: DeckProvider = {
 
       if (/^commander/i.test(kind ?? '')) commanderRaw.push(...raw);
       else if (/^main/i.test(kind ?? '')) mainRaw.push(...raw);
+      else if (/^sideboard/i.test(kind ?? '')) sideboardRaw.push(...raw);
       else skipped.push(`${h[1]}`);
-      if (declared && /^(commander|main)/i.test(kind ?? '') && raw.length !== Number(declared)) {
+      if (declared && /^(commander|main|sideboard)/i.test(kind ?? '') && raw.length !== Number(declared)) {
         warnings.push(`"${h[1]}" declara ${declared} cartas pero se leyeron ${raw.length}`);
       }
     });
     for (const s of skipped) warnings.push(`sección "${s}" no incluida`);
 
-    const allRaw = [...commanderRaw, ...mainRaw];
+    const allRaw = [...commanderRaw, ...mainRaw, ...sideboardRaw];
     const resolved = await resolvePrintings(allRaw);
     const withIds = allRaw.map((r, i) => ({
       name: r.name,
@@ -63,9 +65,18 @@ export const aetherhubProvider: DeckProvider = {
       warnings.push(`${missing.length} cartas sin scryfallId: ${[...new Set(missing.map((c) => c.name))].join(', ')}`);
     }
 
+    const mainEnd = commanderRaw.length + mainRaw.length;
     const commanders: CommanderRef[] = withIds.slice(0, commanderRaw.length);
-    const cards: Card[] = withIds.slice(commanderRaw.length).map((c) => ({ ...c, count: 1 }));
+    const cards: Card[] = withIds.slice(commanderRaw.length, mainEnd).map((c) => ({ ...c, count: 1 }));
+    const sideboard: Card[] = withIds.slice(mainEnd).map((c) => ({ ...c, count: 1 }));
 
-    return { name, format: format?.toLowerCase(), commanders, cards: mergeCards(cards), warnings };
+    return {
+      name,
+      format: format?.toLowerCase(),
+      commanders,
+      cards: mergeCards(cards),
+      sideboard: mergeCards(sideboard),
+      warnings,
+    };
   },
 };

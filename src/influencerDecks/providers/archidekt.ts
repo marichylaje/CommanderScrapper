@@ -5,7 +5,8 @@ const COMMANDER_FORMAT_ID = 3;
 // Users create their own commander categories ("Commanders 1.", "Commanders 2."...); the ones
 // flagged as not part of the deck are alternates and are skipped.
 const COMMANDER_CATEGORY = /^commanders?\b/i;
-const HIDDEN_CATEGORY = /^(sideboard|maybeboard|tokens & extras)$/i;
+const HIDDEN_CATEGORY = /^(maybeboard|tokens & extras)$/i;
+const SIDEBOARD_CATEGORY = /^sideboard$/i;
 
 // Archidekt stores descriptions as Quill deltas: {"ops":[{"insert":"text\n"}]}
 function descriptionText(raw: unknown): string | undefined {
@@ -42,6 +43,7 @@ export const archidektProvider: DeckProvider = {
 
     const commanders: CommanderRef[] = [];
     const cards: Card[] = [];
+    const sideboard: Card[] = [];
     const skipped = new Map<string, number>();
 
     for (const entry of deck.cards ?? []) {
@@ -56,6 +58,10 @@ export const archidektProvider: DeckProvider = {
 
       if (categories.some((c) => COMMANDER_CATEGORY.test(c) && !excluded.has(c))) {
         commanders.push({ name, ...printing });
+        continue;
+      }
+      if (categories.some((c) => SIDEBOARD_CATEGORY.test(c))) {
+        sideboard.push({ name, count: entry.quantity, ...printing });
         continue;
       }
       const hidden = categories.find((c) => excluded.has(c) || HIDDEN_CATEGORY.test(c));
@@ -74,6 +80,7 @@ export const archidektProvider: DeckProvider = {
       format: deck.deckFormat === COMMANDER_FORMAT_ID ? 'commander' : `archidekt-format-${deck.deckFormat}`,
       commanders,
       cards: mergeCards(cards),
+      sideboard: mergeCards(sideboard),
       warnings,
     };
   },

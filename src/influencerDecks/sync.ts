@@ -159,6 +159,7 @@ export async function syncInfluencerDecks(options: SyncOptions): Promise<SyncRep
           socialNetworks: row.socialNetworks,
           deckDescription: reusable ?? emptyDescription(),
           cards,
+          sideboard: fetched.sideboard,
           source: {
             platform: link.provider.platform,
             deckId: link.id,

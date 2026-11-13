@@ -26,6 +26,8 @@ export type InfluencerDeck = {
   socialNetworks: { instagram: string | null; tiktok: string | null; youtube: string | null }[];
   deckDescription: DeckDescription;
   cards: Card[];
+  // optional only for decks generated before sideboards were supported
+  sideboard?: Card[];
   source: {
     platform: Platform;
     deckId: string;
@@ -44,6 +46,7 @@ export type FetchedDeck = {
   format?: string;
   commanders: CommanderRef[];
   cards: Card[];
+  sideboard: Card[];
   warnings: string[];
 };
 

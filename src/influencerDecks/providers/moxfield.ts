@@ -29,16 +29,17 @@ export const moxfieldProvider: DeckProvider = {
     const mainIdx = commanders.findIndex((c) => c.scryfallId === deck.main?.scryfall_id);
     if (mainIdx > 0) commanders.unshift(...commanders.splice(mainIdx, 1));
 
-    const cards: Card[] = (Object.values(deck.boards?.mainboard?.cards ?? {}) as any[]).map((e) => ({
-      name: e.card.name,
-      count: e.quantity,
-      set: e.card.set,
-      collectorNumber: String(e.card.cn),
-      scryfallId: e.card.scryfall_id,
-      finish: toFinish(e.finish),
-    }));
+    const readBoard = (board: string): Card[] =>
+      (Object.values(deck.boards?.[board]?.cards ?? {}) as any[]).map((e) => ({
+        name: e.card.name,
+        count: e.quantity,
+        set: e.card.set,
+        collectorNumber: String(e.card.cn),
+        scryfallId: e.card.scryfall_id,
+        finish: toFinish(e.finish),
+      }));
 
-    for (const board of ['sideboard', 'maybeboard', 'companions']) {
+    for (const board of ['maybeboard', 'companions']) {
       if (deck.boards?.[board]?.count) warnings.push(`${board} tiene ${deck.boards[board].count} cartas (no incluidas)`);
     }
 
@@ -47,7 +48,8 @@ export const moxfieldProvider: DeckProvider = {
       description: typeof deck.description === 'string' ? deck.description.trim() : undefined,
       format: deck.format,
       commanders,
-      cards: mergeCards(cards),
+      cards: mergeCards(readBoard('mainboard')),
+      sideboard: mergeCards(readBoard('sideboard')),
       warnings,
     };
   },
