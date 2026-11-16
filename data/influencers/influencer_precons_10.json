@@ -414,7 +414,7 @@
   {
     "name": "Hakebeil",
     "commander": "Hakbal of the Surging Soul (LCC) 19",
-    "influencerName": "Jule MTG",
+    "influencerName": "Magie_craft_generator",
     "socialNetworks": [
       {
         "instagram": "@magie_craft_generator",
@@ -423,13 +423,13 @@
       }
     ],
     "deckDescription": {
-      "en": "A Simic Merfolk tribal deck built around Hakbal of the Surging Soul, focusing on swarm tactics, +1/+1 counter synergies, and card draw from combat damage. It leverages merfolk lords, unblockable threats, and ramp to flood the board while maintaining a steady stream of resources.",
-      "es": "Mazo tribal Simic de tritones centrado en Hakbal of the Surging Soul, que se enfoca en tácticas de enjambre, sinergias con contadores +1/+1 y robo de cartas por daño de combate. Aprovecha señores tritón, amenazas imbloqueables y aceleración para inundar la mesa mientras mantiene un flujo constante de recursos.",
-      "it": "Mazzo tribale Simic di tritoni incentrato su Hakbal of the Surging Soul, focalizzato su tattiche di sciame, sinergie con segnalini +1/+1 e pesca di carte tramite danni da combattimento. Sfrutta signori tritone, minacce imbloccabili e accelerazione per inondare il campo mantenendo un costante flusso di risorse.",
-      "de": "Ein Simic-Volksstamm-Deck um Hakbal of the Surging Soul, das auf Schwarmtaktiken, +1/+1-Marken-Synergien und Kartenziehen durch Kampfschaden setzt. Nutzt Meervolksherrscher, unblockbare Bedrohungen und Ramp, um das Feld zu fluten und stetig Ressourcen zu generieren.",
-      "ja": "《Hakbal of the Surging Soul》を中心としたシミックのマーフォーク部族デッキ。群れ戦術、+1/+1カウンターのシナジー、戦闘ダメージによるドローに重点を置く。マーフォークのロードやアンブロッカブルな脅威、ランプを活かし、盤面を埋め尽くしながら安定したリソースを確保する。",
-      "pt": "Deck tribal Simic de sereianos centrado em Hakbal of the Surging Soul, focado em táticas de enxame, sinergias com marcadores +1/+1 e compra de cartas a partir de dano de combate. Aproveita lordes sereianos, ameaças imbloqueáveis e ramp para inundar o campo mantendo um fluxo constante de recursos.",
-      "fr": "Deck tribal Simic de sirènes centré sur Hakbal of the Surging Soul, axé sur les tactiques d'essaim, les synergies avec les marqueurs +1/+1 et la pioche via les dégâts de combat. Il exploite les seigneurs triton, les menaces imblocables et l'accélération pour inonder le champ tout en conservant un flux constant de ressources."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
@@ -738,7 +738,7 @@
   {
     "name": "x-spells",
     "commander": "Zaxara, the Exemplary (DMC) 176",
-    "influencerName": "Jule MTG",
+    "influencerName": "Magie_craft_generator",
     "socialNetworks": [
       {
         "instagram": "@magie_craft_generator",
@@ -747,13 +747,13 @@
       }
     ],
     "deckDescription": {
-      "en": "A Sultai Hydra tribal deck led by Zaxara, the Exemplary, focusing on massive X-spell creatures and scaling threats. It leverages Zaxara's mana generation to cast huge Hydras, doubling counters with cards like Doubling Season and Branching Evolution, and overwhelming opponents with exponential growth and value.",
-      "es": "Mazo tribal Sultai de hidras liderado por Zaxara, the Exemplary, centrado en criaturas y hechizos X de gran tamaño. Aprovecha la generación de maná de Zaxara para lanzar hidras enormes, duplicando contadores con cartas como Doubling Season y Branching Evolution, y superando a los oponentes con un crecimiento y valor exponenciales.",
-      "it": "Mazzo tribale Sultai di idre guidato da Zaxara, the Exemplary, focalizzato su creature e magie X gigantesche. Sfrutta la generazione di mana di Zaxara per lanciare idre enormi, raddoppiando i segnalini con carte come Doubling Season e Branching Evolution, e travolgendo gli avversari con crescita e valore esponenziali.",
-      "de": "Ein Sultai-Hydra-Tribal-Deck unter der Führung von Zaxara, the Exemplary, das sich auf massive X-Zauber-Kreaturen und skalierende Bedrohungen konzentriert. Nutzt Zaxaras Manaerzeugung, um riesige Hydras zu wirken, verdoppelt Marken mit Karten wie Doubling Season und Branching Evolution und überrennt Gegner mit exponentiellem Wachstum und Wert.",
-      "ja": "《Zaxara, the Exemplary》を指揮官とするスゥルタイのハイドラ部族デッキ。巨大なX呪文クリーチャーと成長する脅威に焦点を当てる。Zaxaraのマナ生成を活かして巨大なハイドラを展開し、《Doubling Season》や《Branching Evolution》でカウンターを倍増させ、指数関数的な成長とリソースで相手を圧倒する。",
-      "pt": "Deck tribal Sultai de hidras liderado por Zaxara, the Exemplary, focado em criaturas e mágicas X massivas. Aproveita a geração de mana de Zaxara para conjurar hidras enormes, dobrando marcadores com cartas como Doubling Season e Branching Evolution, e esmagando os oponentes com crescimento e valor exponenciais.",
-      "fr": "Deck tribal Sultaï d'hydres dirigé par Zaxara, the Exemplary, axé sur les créatures et sorts X massifs. Il exploite la génération de mana de Zaxara pour lancer d'énormes hydres, doublant les marqueurs avec des cartes comme Doubling Season et Branching Evolution, et submergeant les adversaires par une croissance et une valeur exponentielles."
+      "en": "",
+      "es": "",
+      "it": "",
+      "de": "",
+      "ja": "",
+      "pt": "",
+      "fr": ""
     },
     "cards": [
       {
@@ -1094,7 +1094,7 @@
   {
     "name": "landfall",
     "commander": "Omnath, Locus of Creation (ZNR) 232",
-    "influencerName": "Jule MTG",
+    "influencerName": "Magie_craft_generator",
     "socialNetworks": [
       {
         "instagram": "@magie_craft_generator",
