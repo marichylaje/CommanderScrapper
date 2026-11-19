@@ -129,6 +129,9 @@ hasta pasar estas pruebas.
 - `POST /api/cards/visual-match-direct`
 - `POST /api/cards/visual-rerank`
 
-El endpoint offline prioriza `OFFLINE_DB_MANIFEST_V2_URL`, luego
-`OFFLINE_DB_MANIFEST_URL`, y finalmente manifiestos locales con URLs de descarga.
+El endpoint offline prioriza `OFFLINE_DB_MANIFEST_V2_URL` (para fijar una versión), luego
+`offline-db/latest.json` de Blob (o `OFFLINE_DB_LATEST_URL`) y finalmente el manifiesto local
+con URLs. Solo sirve manifiestos de esquema 2 con `entry_version` 2 y los tres hashes
+(`art_crop`, `normal`, `center_12_18_76_58`); `OFFLINE_DB_MANIFEST_URL` (esquema 1) se ignora.
+Si el Scanner muestra «Catálogo no disponible», comprobar que el endpoint devuelve el `version` esperado.
 El manifiesto generado localmente no es publicable hasta que tenga URLs para los siete buckets.
