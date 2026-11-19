@@ -12,32 +12,30 @@ const printing: OfflineEntry = {
   id: 'printing-ja', oracle_id: 'oracle-1', name: '稲妻', set: 'mh3',
   cn: '0142a', lang: 'ja', artUrl: 'https://example.com/art.jpg',
   phash: 'fedcba9876543210', phashAlt: '89abcdef01234567',
+  phashCenter: '0123456789abcdef',
 };
 
-test('emits the exact app wire layout, including UTF-8 bytes and both unsigned hash halves', () => {
+test('emits the final app wire layout with three unsigned hashes', () => {
   const { buffer } = encodeOfflineDb([printing]);
   assert.equal(buffer.subarray(0, 6).toString(), 'TCGDB1');
-  assert.equal(buffer.subarray(6, 24).toString('hex'), '020001000000070000001800000044000000');
+  assert.equal(buffer.subarray(6, 24).toString('hex'), '02000100000007000000180000004c000000');
   assert.deepEqual(Array.from({ length: 7 }, (_, index) => buffer.readUInt32LE(24 + index * 4)), [0, 1, 2, 3, 4, 5, 6]);
-  assert.equal(buffer.subarray(52, 68).toString('hex'), '98badcfe10325476efcdab8967452301');
-  const nameLength = 68 + 2 + printing.id.length + 2 + printing.oracle_id.length;
+  assert.equal(buffer.subarray(52, 76).toString('hex'), '98badcfe10325476efcdab896745230167452301efcdab89');
+  const nameLength = 76 + 2 + printing.id.length + 2 + printing.oracle_id.length;
   assert.equal(buffer.readUInt16LE(nameLength), Buffer.byteLength(printing.name));
   assert.deepEqual(decodeOfflineDb(buffer).entries, [printing]);
 });
 
-test('reads an existing DeckBuilder v1 bucket and emits v2 even for an empty bucket', async () => {
+test('rejects obsolete records and emits the final format even for an empty bucket', async () => {
   const legacy = gunzipSync(await readFile(join('data', 'offline', 'cards-W.bin.gz')));
-  const { version, entries } = decodeOfflineDb(legacy);
-  assert.equal(version, 1);
-  assert.ok(entries.length > 1000);
-  assert.deepEqual(entries[0], {
-    id: '540f3ddf-7512-42a0-ba22-b58453747346', oracle_id: '8ae3562f-28b7-4462-96ed-be0cf7052ccc',
-    name: 'Kor Outfitter', set: 'gn3', cn: '14', lang: 'en',
-    artUrl: 'https://cards.scryfall.io/art_crop/front/5/4/540f3ddf-7512-42a0-ba22-b58453747346.jpg?1673301333',
-    phash: 'cdf9220c3871e69c', phashAlt: 'cdf9220c3871e69c',
-  });
+  assert.throws(() => decodeOfflineDb(legacy), /Unsupported TCGDB1 version/);
   assert.deepEqual(decodeOfflineDb(encodeOfflineDb([]).buffer), { version: 2, entries: [] });
-  assert.equal(decodeOfflineDb(encodeOfflineDb([{ ...printing, phashAlt: undefined }]).buffer).entries[0]?.phashAlt, printing.phash);
+  const current = encodeOfflineDb([printing]).buffer;
+  const v2 = Buffer.concat([current.subarray(0, 68), current.subarray(76)]);
+  v2.writeUInt16LE(2, 6);
+  v2.writeUInt32LE(68, 20);
+  assert.throws(() => decodeOfflineDb(v2), /offsets/);
+  assert.throws(() => encodeOfflineDb([{ ...printing, phashCenter: undefined }]), /Missing full-card or center/);
 });
 
 test('rejects legacy 16-byte offsets, invalid indexes, truncation and missing identity', () => {
@@ -65,7 +63,8 @@ test('validates all seven manifest buckets and rejects mismatched bytes or count
     })));
     const manifest = {
       schema: 2, version: 'test-v2', generated_at: '2026-11-19T13:00:00.000Z',
-      source_updated: '2026-11-19T12:00:00.000Z', generator: { entry_version: 2 }, buckets,
+      source_updated: '2026-11-19T12:00:00.000Z',
+      generator: { entry_version: 2, crop_hashes: ['art_crop', 'normal', 'center_12_18_76_58'] }, buckets,
     };
     const save = () => writeFile(manifestPath, JSON.stringify(manifest));
     await save();

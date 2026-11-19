@@ -10,6 +10,7 @@ const utf8 = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
 export type OfflineEntry = Record<(typeof FIELDS)[number], string> & {
   phash: string;
   phashAlt?: string;
+  phashCenter?: string;
 };
 
 function assertIdentity(entry: Pick<OfflineEntry, (typeof FIELDS)[number]>) {
@@ -27,7 +28,7 @@ function writeHash(buffer: Buffer, offset: number, hash: string) {
 }
 
 export function encodeOfflineDb(entries: readonly OfflineEntry[]) {
-  const stride = 44;
+  const stride = 52;
   const indices = new Map<string, number>();
   const strings: Buffer[] = [];
   let stringBytes = 0;
@@ -60,7 +61,11 @@ export function encodeOfflineDb(entries: readonly OfflineEntry[]) {
       buffer.writeUInt32LE(pointer, base + column * 4);
     }
     writeHash(buffer, base + 28, entry.phash);
-    writeHash(buffer, base + 36, entry.phashAlt ?? entry.phash);
+    if (!entry.phashAlt || !entry.phashCenter) {
+      throw new Error(`Missing full-card or center pHash (${entry.id})`);
+    }
+    writeHash(buffer, base + 36, entry.phashAlt);
+    writeHash(buffer, base + 44, entry.phashCenter);
   }
   let cursor = stringsOffset;
   for (const bytes of strings) {
@@ -76,8 +81,8 @@ export function decodeOfflineDb(buffer: Buffer) {
     throw new Error('Invalid TCGDB1 header or bucket size');
   }
   const version = buffer.readUInt16LE(6);
-  if (version !== 1 && version !== 2) throw new Error(`Unsupported TCGDB1 version ${version}`);
-  const stride = version === 1 ? 36 : 44;
+  if (version !== ENTRY_VERSION) throw new Error(`Unsupported TCGDB1 version ${version}`);
+  const stride = 52;
   const count = buffer.readUInt32LE(8);
   const stringCount = buffer.readUInt32LE(12);
   const entriesOffset = buffer.readUInt32LE(16);
@@ -111,7 +116,8 @@ export function decodeOfflineDb(buffer: Buffer) {
     const entry = {
       id: field(0), oracle_id: field(1), name: field(2), set: field(3),
       cn: field(4), lang: field(5), artUrl: field(6),
-      phash: readHash(base + 28), phashAlt: readHash(base + (version === 2 ? 36 : 28)),
+      phash: readHash(base + 28), phashAlt: readHash(base + 36),
+      phashCenter: readHash(base + 44),
     };
     assertIdentity(entry);
     entries.push(entry);

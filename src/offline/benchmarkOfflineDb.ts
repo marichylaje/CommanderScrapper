@@ -3,7 +3,7 @@ import { join, resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { fetch } from 'undici';
 
-import { computePHash } from './phash.js';
+import { cameraRegionHashes } from './cardRegionHashes.js';
 import { decodeOfflineDb, type OfflineEntry } from './binaryDb.js';
 
 const OFFLINE_DIR = join(process.cwd(), 'data', 'offline');
@@ -73,7 +73,13 @@ async function loadDataset(datasetPath: string): Promise<BenchmarkDataset> {
 
 async function loadImageBuffer(imagePath: string) {
   if (/^https?:\/\//i.test(imagePath)) {
-    const response = await fetch(imagePath, { signal: AbortSignal.timeout(20_000) });
+    const response = await fetch(imagePath, {
+      signal: AbortSignal.timeout(20_000),
+      headers: {
+        'User-Agent': 'DeckBuilder/1.1 (+https://github.com/marichylaje/MTGCommanderDeckBuilder)',
+        Accept: 'image/*',
+      },
+    });
     if (!response.ok) {
       throw new Error(`Failed to fetch ${imagePath}: ${response.status}`);
     }
@@ -84,27 +90,14 @@ async function loadImageBuffer(imagePath: string) {
   return readFile(resolvedPath);
 }
 
-function scoreCandidate(queryHash: string, entry: OfflineEntry) {
-  const primaryDistance = hammingDistance(queryHash, entry.phash);
-  const alternateDistance = entry.phashAlt ? hammingDistance(queryHash, entry.phashAlt) : primaryDistance;
-  const distance = Math.min(primaryDistance, alternateDistance);
+function scoreCandidate(query: Awaited<ReturnType<typeof cameraRegionHashes>>, entry: OfflineEntry) {
+  const distance = Math.min(
+    hammingDistance(query.art, entry.phash),
+    hammingDistance(query.artWide, entry.phash),
+    entry.phashAlt ? hammingDistance(query.full, entry.phashAlt) : 64,
+    entry.phashCenter ? hammingDistance(query.center, entry.phashCenter) : 64,
+  );
   return Math.max(0, 1 - distance / 64);
-}
-
-function scoreOcrHint(entry: OfflineEntry, ocr?: BenchmarkSample['ocr']) {
-  if (!ocr) return 0;
-
-  let boost = 0;
-  if (ocr.setCode && normalizeKey(ocr.setCode) === normalizeKey(entry.set)) {
-    boost += 0.06;
-  }
-  if (ocr.collectorNumber && normalizeKey(ocr.collectorNumber) === normalizeKey(entry.cn)) {
-    boost += 0.08;
-  }
-  if (ocr.name && normalizeKey(ocr.name) === normalizeKey(entry.name)) {
-    boost += 0.08;
-  }
-  return boost;
 }
 
 async function main() {
@@ -128,7 +121,7 @@ async function main() {
   for (const sample of dataset.samples) {
     const startedAt = Date.now();
     const imageBuffer = await loadImageBuffer(sample.imagePath);
-    const queryHash = await computePHash(imageBuffer);
+    const query = await cameraRegionHashes(imageBuffer);
 
     const candidateBuckets = sample.bucket && bucketEntries.has(sample.bucket)
       ? [bucketEntries.get(sample.bucket)!]
@@ -137,12 +130,19 @@ async function main() {
     const scored = candidateBuckets
       .flatMap((entries) => entries)
       .map((entry) => ({
-        confidence: scoreCandidate(queryHash, entry) + scoreOcrHint(entry, sample.ocr),
+        confidence: scoreCandidate(query, entry),
         entry,
       }))
       .sort((left, right) => right.confidence - left.confidence);
 
-    const best = scored[0];
+    const winner = scored[0];
+    const best = winner && sample.ocr?.setCode && sample.ocr?.collectorNumber
+      ? scored.find(({ entry, confidence }) =>
+        entry.oracle_id === winner.entry.oracle_id && winner.confidence - confidence <= 2 / 64 &&
+        normalizeKey(entry.set) === normalizeKey(sample.ocr?.setCode) &&
+        normalizeKey(entry.cn).replace(/^0+(?=\d)/, '') ===
+          normalizeKey(sample.ocr?.collectorNumber).replace(/^0+(?=\d)/, '')) ?? winner
+      : winner;
     const expected = sample.expectedId ?? sample.expectedOracleId ?? '';
     const hit = Boolean(best) && (sample.expectedId
       ? best.entry.id === sample.expectedId

@@ -55,10 +55,17 @@ npm run restartFly
 ### Scanner offline (backend)
 
 El generador produce `TCGDB1` v2 para los lectores de DeckBuilder: cabecera de
-24 bytes, filas de 44 bytes con siete índices de texto (`id`, `oracle_id`,
-nombre, set, número, idioma y URL), dos pHashes de 64 bits y cadenas UTF-8
+24 bytes, filas de 52 bytes con siete índices de texto (`id`, `oracle_id`,
+nombre, set, número, idioma y URL), tres pHashes de 64 bits (arte, carta completa
+y centro) y cadenas UTF-8
 precedidas por su longitud `u16` little-endian. Cada ejecución genera una
 versión nueva, siete buckets gzip y `data/offline/manifest.v2.json`.
+Los antiguos buckets de 36/44 bytes no son compatibles: regenerar y publicar
+el catálogo antes de usar la app nueva. El centro corresponde a `x=12%`,
+`y=18%`, `ancho=76%`, `alto=58%` de la carta completa normalizada a 320×448.
+Una impresión sin URL de imagen completa se omite y se informa en el log; si
+existe una URL pero falla la descarga tras los reintentos, se interrumpe la
+generación para no publicar silenciosamente un catálogo incompleto.
 
 ```powershell
 npm run build
@@ -95,11 +102,11 @@ npm run validateOfflineDb -- --manifest "https://commander-scrapper.vercel.app/a
 Confirmar en una instalación limpia: abrir Scanner con red, esperar la carga,
 escanear varias cartas y revisar set/número/idioma. Después cerrar el proceso,
 activar modo avión y volver a abrir y escanear sin borrar datos. Probar también
-una instalación con `20260527`: aceptar la actualización y repetir en frío.
+una instalación con un catálogo anterior: descargar el catálogo nuevo y repetir en frío.
 Una instalación limpia sin descargas no debe poder escanear offline. Conservar
-la URL anterior para rollback: volver a configurarla, redesplegar y comprobar
-el endpoint tras vencer su caché. No borrar los blobs anteriores hasta pasar
-estas pruebas.
+una URL alternativa únicamente si apunta al mismo formato de 52 bytes; un
+catálogo anterior no funciona con esta app. No borrar los blobs anteriores
+hasta pasar estas pruebas.
 
 ### Otros scripts útiles
 

@@ -9,6 +9,7 @@ import sharp from 'sharp';
 import { bucketFromCard, type ColorBucket } from './colorBuckets.js';
 import { encodeOfflineDb, ENTRY_VERSION, type OfflineEntry } from './binaryDb.js';
 import { computePHash } from './phash.js';
+import { cardRegionHashes } from './cardRegionHashes.js';
 import { BUCKETS, createBucketInfo, type OfflineManifest } from './offlineManifest.js';
 
 const { values } = parseArgs({ options: {
@@ -18,7 +19,9 @@ const { values } = parseArgs({ options: {
 } });
 const DATA_PATH = resolve(values.input);
 const OUTPUT_DIR = resolve(values.out);
-const CONCURRENCY = 16;
+const CONCURRENCY = 8;
+const IMAGE_REQUEST_INTERVAL_MS = 100;
+let nextImageRequestAt = 0;
 
 type CardData = {
   card_faces?: Array<{ image_uris?: { art_crop?: string; normal?: string } }>;
@@ -39,13 +42,31 @@ type ReducedDataset = {
 };
 
 async function fetchBuffer(url: string) {
-  try {
-    const response = await fetch(url, { signal: AbortSignal.timeout(15_000) });
-    if (!response.ok) return null;
-    return Buffer.from(await response.arrayBuffer());
-  } catch {
-    return null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const now = Date.now();
+    const start = Math.max(now, nextImageRequestAt);
+    nextImageRequestAt = start + IMAGE_REQUEST_INTERVAL_MS;
+    if (start > now) await new Promise((resolve) => setTimeout(resolve, start - now));
+    try {
+      const response = await fetch(url, {
+        signal: AbortSignal.timeout(25_000),
+        headers: {
+          'User-Agent': 'DeckBuilder/1.1 (+https://github.com/marichylaje/MTGCommanderDeckBuilder)',
+          Accept: 'image/*',
+        },
+      });
+      if (response.ok) return Buffer.from(await response.arrayBuffer());
+      if (response.status !== 429 && response.status < 500) {
+        console.warn(`Image HTTP ${response.status}: ${url}`);
+        return null;
+      }
+      console.warn(`Image HTTP ${response.status}, attempt ${attempt}/3: ${url}`);
+    } catch (error) {
+      console.warn(`Image download failed, attempt ${attempt}/3: ${url}`, error);
+    }
+    if (attempt < 3) await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
   }
+  return null;
 }
 
 async function loadDataset(): Promise<ReducedDataset> {
@@ -108,16 +129,24 @@ async function processCard(
     return null;
   }
 
-  const [artBuffer, normalBuffer] = await Promise.all([
+  const [artBuffer, fetchedNormal] = await Promise.all([
     artUrl ? fetchBuffer(artUrl) : Promise.resolve(null),
     normalUrl && normalUrl !== artUrl ? fetchBuffer(normalUrl) : Promise.resolve(null),
   ]);
+  const normalBuffer = normalUrl === artUrl ? artBuffer : fetchedNormal;
+  if (normalUrl && !normalBuffer) {
+    throw new Error(`Cannot build complete catalog: failed to download full-card image for ${id}`);
+  }
 
-  const resolvedPrimary = artBuffer ?? normalBuffer;
-  if (!resolvedPrimary) return null;
+  if (!normalBuffer) {
+    console.warn('Skipping printing without full-card image:', id);
+    return null;
+  }
 
-  const phash = await computePHash(await normalizeArtCrop(resolvedPrimary));
-  const phashAlt = normalBuffer ? await computePHash(normalBuffer) : phash;
+  const fallbackArt = artBuffer ?? await sharp(normalBuffer).rotate().resize(320, 448, { fit: 'fill' })
+    .extract({ left: 16, top: 40, width: 288, height: 215 }).png().toBuffer();
+  const phash = await computePHash(await normalizeArtCrop(fallbackArt));
+  const { phashAlt, phashCenter } = await cardRegionHashes(normalBuffer);
 
   return {
     bucket: bucketFromCard(card),
@@ -130,6 +159,7 @@ async function processCard(
       oracle_id: oracleId,
       phash,
       phashAlt,
+      phashCenter,
       set,
     },
   };
@@ -208,7 +238,7 @@ async function main() {
     source_updated: dataset.last_updated,
     version,
     generator: {
-      crop_hashes: ['art_crop', 'normal'],
+      crop_hashes: ['art_crop', 'normal', 'center_12_18_76_58'],
       entry_version: ENTRY_VERSION,
       visual_buckets: false,
     },

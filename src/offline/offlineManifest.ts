@@ -40,6 +40,9 @@ export async function validateCatalog(location: string, expectedVersion?: string
   if (manifest?.schema !== 2 || typeof manifest.version !== 'string' ||
       !/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,80}$/.test(manifest.version) ||
       manifest.generator?.entry_version !== ENTRY_VERSION ||
+      !Array.isArray(manifest.generator?.crop_hashes) ||
+      !['art_crop', 'normal', 'center_12_18_76_58'].every((name) =>
+        manifest.generator.crop_hashes.includes(name)) ||
       !Number.isFinite(Date.parse(manifest.generated_at)) ||
       !Number.isFinite(Date.parse(manifest.source_updated)) ||
       !manifest.buckets || Object.keys(manifest.buckets).length !== BUCKETS.length) {
