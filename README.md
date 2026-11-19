@@ -43,6 +43,11 @@ npm run importCollection
 npm run restartFly
 ```
 
+`npm run prices` genera dos archivos que consume la app desde GitHub raw:
+
+- `data/reduced-prices.json`: precio por `oracle_id`; `eur` es el `low` de Cardmarket de la impresión representativa cuando existe.
+- `data/printing-prices.json`: `{ version: 1, prices: { "set/collector_number": [eurLowCents, eurLowFoilCents, usdCents, usdFoilCents, finishes] } }`. `finishes` es una máscara (1 normal, 2 foil, 4 etched). El `low` sale del price guide público de Cardmarket cruzado por `cardmarket_id`; sin ese dato se usa el precio de Scryfall. La clave no incluye el idioma. El job diario de GitHub Actions lo commitea junto a `reduced-prices.json`.
+
 ### Cambio de schema en Typesense
 
 ```bash

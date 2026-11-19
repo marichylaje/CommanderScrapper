@@ -47,7 +47,7 @@ jobs:
 
       - name: Preflight Scryfall metadata (oracle_cards)
         run: |
-          node -e "(async () => { const res = await fetch('https://api.scryfall.com/bulk-data', { headers: { 'User-Agent': 'CommanderScrapper/1.0 (CI preflight)', 'Accept': 'application/json' } }); if (!res.ok) throw new Error('Scryfall metadata HTTP ' + res.status); const body = await res.json(); const oracle = (body.data || []).find((x) => x.type === 'oracle_cards'); const url = oracle?.jsonl_download_uri || oracle?.download_uri; if (!url) throw new Error('No jsonl_download_uri/download_uri for oracle_cards'); console.log('Scryfall oracle_cards URL OK:', url); })().catch((e) => { console.error(e); process.exit(1); });"
+          node -e "(async () => { const res = await fetch('https://api.scryfall.com/bulk-data', { headers: { 'User-Agent': 'CommanderScrapper/1.0 (CI preflight)', 'Accept': 'application/json' } }); if (!res.ok) throw new Error('Scryfall metadata HTTP ' + res.status); const body = await res.json(); for (const type of ['oracle_cards', 'default_cards']) { const item = (body.data || []).find((x) => x.type === type); const url = item?.jsonl_download_uri || item?.download_uri; if (!url) throw new Error('No jsonl_download_uri/download_uri for ' + type); console.log('Scryfall ' + type + ' URL OK:', url); } })().catch((e) => { console.error(e); process.exit(1); });"
 
       - name: Ejecutar actualización de precios de Scryfall
         run: |
@@ -72,7 +72,7 @@ jobs:
           branch: main
           commit_user_name: "commander-bot"
           commit_user_email: "commander-bot@users.noreply.github.com"
-          file_pattern: "data/reduced-prices.json"
+          file_pattern: "data/reduced-prices.json data/printing-prices.json"
           # 2. 🌟 ESTA ES LA CLAVE: Si hay commits nuevos en remoto, los integra primero en el historial
           push_options: '--force-with-lease'
 

@@ -9,13 +9,22 @@ import { Readable } from 'node:stream';
 
 const SCRYFALL_BULK_INFO_URL = 'https://api.scryfall.com/bulk-data';
 const OUTPUT_FILE = './data/reduced-prices.json';
+const PRINTING_OUTPUT_FILE = './data/printing-prices.json';
+const CARDMARKET_GUIDE_URL =
+  'https://downloads.s3.cardmarket.com/productCatalog/priceGuide/price_guide_1.json';
 const SCRYFALL_HEADERS = {
   'User-Agent': 'CommanderScrapper/1.0 (MTG Commander Deck Builder app; contact via GitHub)',
   Accept: 'application/json',
 };
 
 interface ScryfallCard {
+  id?: string;
   oracle_id: string;
+  cardmarket_id?: number | null;
+  set?: string;
+  collector_number?: string;
+  finishes?: string[];
+  digital?: boolean;
   prices: {
     usd: string | null;
     eur: string | null;
@@ -23,6 +32,12 @@ interface ScryfallCard {
     eur_foil?: string | null;
   };
 }
+
+type CardmarketLow = { low: number | null; lowFoil: number | null };
+type CardmarketGuide = Map<number, CardmarketLow>;
+
+// [eurLowCents, eurLowFoilCents, usdCents, usdFoilCents, finishes (1 nonfoil, 2 foil, 4 etched)]
+type PrintingPrice = [number | null, number | null, number | null, number | null, number];
 
 interface ReducedPrice {
   id: string;
@@ -62,15 +77,15 @@ async function fetchWithRetry(url: string, init: UndiciRequestInit, attempts = 3
   throw lastError instanceof Error ? lastError : new Error('Error desconocido al hacer fetch');
 }
 
-function pickBulkUrl(item: ScryfallBulkMetaItem): string {
+function pickBulkUrl(item: ScryfallBulkMetaItem, type: string): string {
   const candidate = item.jsonl_download_uri ?? item.download_uri;
   if (!candidate || typeof candidate !== 'string') {
-    throw new Error('❌ Scryfall no entregó una URL de descarga utilizable para oracle_cards.');
+    throw new Error(`❌ Scryfall no entregó una URL de descarga utilizable para ${type}.`);
   }
   return candidate;
 }
 
-async function getBulkDownloadUrl(): Promise<string> {
+async function getBulkDownloadUrl(type: 'default_cards' | 'oracle_cards'): Promise<string> {
   const res = await fetchWithRetry(SCRYFALL_BULK_INFO_URL, {
     headers: SCRYFALL_HEADERS,
     signal: AbortSignal.timeout(30_000),
@@ -82,10 +97,10 @@ async function getBulkDownloadUrl(): Promise<string> {
   }
 
   // "oracle_cards" contiene una fila por cada carta única por nombre (evita duplicados de reimpresiones)
-  const oracleCardsBulk = body.data.find((item) => item.type === 'oracle_cards');
+  const bulk = body.data.find((item) => item.type === type);
   
-  if (!oracleCardsBulk) throw new Error('❌ No se encontró el tipo de datos "oracle_cards" en Scryfall');
-  return pickBulkUrl(oracleCardsBulk);
+  if (!bulk) throw new Error(`❌ No se encontró el tipo de datos "${type}" en Scryfall`);
+  return pickBulkUrl(bulk, type);
 }
 
 function maybeParseNumber(price: string | null | undefined): number | null {
@@ -94,11 +109,34 @@ function maybeParseNumber(price: string | null | undefined): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-function mapPrice(card: ScryfallCard): ReducedPrice | null {
+function positivePrice(value: unknown): number | null {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
+}
+
+const toCents = (value: number | null) => (value === null ? null : Math.round(value * 100));
+
+// El `low` de Cardmarket no está en Scryfall; se cruza por cardmarket_id (idProduct).
+async function loadCardmarketGuide(): Promise<CardmarketGuide> {
+  const res = await fetchWithRetry(CARDMARKET_GUIDE_URL, { signal: AbortSignal.timeout(120_000) });
+  const body = (await res.json()) as {
+    priceGuides?: Array<Record<string, number | null> & { idProduct: number }>;
+  };
+  if (!Array.isArray(body.priceGuides) || body.priceGuides.length < 1000) {
+    throw new Error('❌ Price guide de Cardmarket inválido o incompleto.');
+  }
+  const guide: CardmarketGuide = new Map();
+  for (const row of body.priceGuides) {
+    guide.set(row.idProduct, { low: positivePrice(row.low), lowFoil: positivePrice(row['low-foil']) });
+  }
+  return guide;
+}
+
+function mapPrice(card: ScryfallCard, guide: CardmarketGuide): ReducedPrice | null {
   if (!card.oracle_id) return null;
 
   const usdPrice = maybeParseNumber(card.prices?.usd);
-  const eurPrice = maybeParseNumber(card.prices?.eur);
+  const cardmarket = card.cardmarket_id ? guide.get(card.cardmarket_id) : undefined;
+  const eurPrice = cardmarket?.low ?? maybeParseNumber(card.prices?.eur);
 
   if (usdPrice === null && eurPrice === null) {
     return null;
@@ -111,7 +149,26 @@ function mapPrice(card: ScryfallCard): ReducedPrice | null {
   };
 }
 
-async function parseJsonlGzFromResponse(res: UndiciResponse): Promise<ReducedPrice[]> {
+function finishBits(card: ScryfallCard): number {
+  const finishes = card.finishes ?? [];
+  return (finishes.includes('nonfoil') ? 1 : 0) | (finishes.includes('foil') ? 2 : 0) |
+    (finishes.includes('etched') ? 4 : 0);
+}
+
+function mapPrintingPrice(card: ScryfallCard, guide: CardmarketGuide): PrintingPrice | null {
+  if (card.digital || !card.set || !card.collector_number) return null;
+  const cardmarket = card.cardmarket_id ? guide.get(card.cardmarket_id) : undefined;
+  const entry: PrintingPrice = [
+    toCents(cardmarket?.low ?? maybeParseNumber(card.prices?.eur)),
+    toCents(cardmarket?.lowFoil ?? maybeParseNumber(card.prices?.eur_foil)),
+    toCents(maybeParseNumber(card.prices?.usd)),
+    toCents(maybeParseNumber(card.prices?.usd_foil)),
+    finishBits(card),
+  ];
+  return entry.slice(0, 4).some((value) => value !== null) || entry[4] === 2 ? entry : null;
+}
+
+async function streamBulkCards(res: UndiciResponse, onCard: (card: ScryfallCard) => void): Promise<void> {
   if (!res.body) {
     throw new Error('❌ La respuesta de Scryfall no contiene body para stream.');
   }
@@ -123,15 +180,12 @@ async function parseJsonlGzFromResponse(res: UndiciResponse): Promise<ReducedPri
     crlfDelay: Infinity,
   });
 
-  const reducedPrices: ReducedPrice[] = [];
   let processed = 0;
 
   for await (const line of lineReader) {
     if (!line || !line.trim()) continue;
     try {
-      const card = JSON.parse(line) as ScryfallCard;
-      const mapped = mapPrice(card);
-      if (mapped) reducedPrices.push(mapped);
+      onCard(JSON.parse(line) as ScryfallCard);
       processed++;
       if (processed % 100_000 === 0) {
         console.log(`⚙️ Procesadas ${processed.toLocaleString()} cartas...`);
@@ -140,41 +194,57 @@ async function parseJsonlGzFromResponse(res: UndiciResponse): Promise<ReducedPri
       // Ignoramos líneas corruptas puntuales para no tumbar todo el proceso
     }
   }
+}
 
-  return reducedPrices;
+async function downloadBulk(type: 'default_cards' | 'oracle_cards'): Promise<UndiciResponse> {
+  const downloadUrl = await getBulkDownloadUrl(type);
+  if (!downloadUrl.endsWith('.jsonl.gz')) {
+    throw new Error(`❌ Scryfall ${type} no ofrece JSONL comprimido: ${downloadUrl}`);
+  }
+  console.log(`📥 Descargando ${type} desde: ${downloadUrl}`);
+  return fetchWithRetry(downloadUrl, { headers: SCRYFALL_HEADERS, signal: AbortSignal.timeout(300_000) });
 }
 
 async function main() {
   try {
-    console.log('🔍 Solicitando URL del último Bulk Data a Scryfall...');
-    const downloadUrl = await getBulkDownloadUrl();
-    
-    console.log(`📥 Descargando e interpretando Bulk Data desde: ${downloadUrl}`);
-    const res = await fetchWithRetry(downloadUrl, {
-      headers: SCRYFALL_HEADERS,
-      signal: AbortSignal.timeout(120_000),
+    console.log('💶 Descargando price guide de Cardmarket (low)...');
+    const guide = await loadCardmarketGuide();
+    console.log(`✅ ${guide.size.toLocaleString()} productos de Cardmarket cargados.`);
+
+    const reducedPrices: ReducedPrice[] = [];
+    await streamBulkCards(await downloadBulk('oracle_cards'), (card) => {
+      const mapped = mapPrice(card, guide);
+      if (mapped) reducedPrices.push(mapped);
     });
 
-    let reducedPrices: ReducedPrice[];
-    if (downloadUrl.endsWith('.jsonl.gz')) {
-      console.log('🧩 Formato detectado: JSONL comprimido (.jsonl.gz). Parseando por stream...');
-      reducedPrices = await parseJsonlGzFromResponse(res);
-    } else {
-      console.log('🧩 Formato detectado: JSON array clásico. Parseando en memoria...');
-      const cards = (await res.json()) as ScryfallCard[];
-      console.log(`⚙️ Procesando ${cards.length} cartas de Scryfall...`);
-      reducedPrices = cards
-        .map(mapPrice)
-        .filter((value): value is ReducedPrice => value !== null);
+    // Cardmarket usa el mismo producto para todos los idiomas: la clave es idioma-independiente.
+    const printings: Record<string, PrintingPrice> = {};
+    await streamBulkCards(await downloadBulk('default_cards'), (card) => {
+      const entry = mapPrintingPrice(card, guide);
+      const key = `${card.set}/${card.collector_number}`;
+      if (entry && !printings[key]) printings[key] = entry;
+    });
+
+    if (reducedPrices.length < 1000 || Object.keys(printings).length < 1000) {
+      throw new Error('❌ Dataset de precios sospechosamente pequeño; no se sobrescribe.');
     }
+    const sortedPrintings = Object.fromEntries(
+      Object.entries(printings).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)),
+    );
 
     // Asegurar directorio de salida
     fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(reducedPrices, null, 2), 'utf8');
+    fs.writeFileSync(
+      PRINTING_OUTPUT_FILE,
+      JSON.stringify({ version: 1, source: 'cardmarket-low+scryfall', prices: sortedPrintings }),
+      'utf8',
+    );
 
     console.log(`\n✅ Proceso completado con éxito.`);
     console.log(`📊 Total de cartas con precios reales: ${reducedPrices.length}`);
-    console.log(`💾 Archivo actualizado listo para el Frontend en: ${OUTPUT_FILE}`);
+    console.log(`📊 Impresiones con precio: ${Object.keys(sortedPrintings).length}`);
+    console.log(`💾 Archivos listos para el Frontend: ${OUTPUT_FILE}, ${PRINTING_OUTPUT_FILE}`);
   } catch (err) {
     console.error('❌ Error catastrófico procesando precios de Scryfall:', err);
     process.exit(1);
