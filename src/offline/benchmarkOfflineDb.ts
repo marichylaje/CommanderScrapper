@@ -143,11 +143,13 @@ async function main() {
       .sort((left, right) => right.confidence - left.confidence);
 
     const best = scored[0];
-    const expectedOracleId = sample.expectedOracleId ?? sample.expectedId ?? '';
-    const hit = Boolean(best) && best.entry.oracle_id === expectedOracleId;
+    const expected = sample.expectedId ?? sample.expectedOracleId ?? '';
+    const hit = Boolean(best) && (sample.expectedId
+      ? best.entry.id === sample.expectedId
+      : best.entry.oracle_id === sample.expectedOracleId);
 
     results.push({
-      expected: expectedOracleId,
+      expected,
       hit,
       latencyMs: Date.now() - startedAt,
       topConfidence: best?.confidence ?? 0,

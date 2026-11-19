@@ -56,7 +56,7 @@ jobs:
           set -euo pipefail
           for attempt in 1 2 3; do
             echo "Intento $attempt/3: npm run reduce"
-            if npm run reduce; then
+            if npm run reduce -- --force; then
               exit 0
             fi
             if [ "$attempt" -lt 3 ]; then
@@ -87,7 +87,7 @@ jobs:
 
       - name: Upload offline DB to Vercel Blob
         if: steps.freshness.outputs.needs_update == 'true'
-        run: npm run uploadOfflineDb
+        run: npm run uploadOfflineDb -- --promote-latest
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 

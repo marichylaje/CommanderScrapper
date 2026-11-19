@@ -1,17 +1,24 @@
 import { access, readFile, writeFile, mkdir } from 'node:fs/promises';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { randomUUID } from 'node:crypto';
+import { parseArgs } from 'node:util';
 import { gzipSync } from 'node:zlib';
 import { fetch } from 'undici';
 import sharp from 'sharp';
 
 import { bucketFromCard, type ColorBucket } from './colorBuckets.js';
-import { encodeOfflineDb, type OfflineEntry } from './binaryDb.js';
+import { encodeOfflineDb, ENTRY_VERSION, type OfflineEntry } from './binaryDb.js';
 import { computePHash } from './phash.js';
+import { BUCKETS, createBucketInfo, type OfflineManifest } from './offlineManifest.js';
 
-const DATA_PATH = join(process.cwd(), 'data', 'scryfall-reduced.json');
-const OUTPUT_DIR = join(process.cwd(), 'data', 'offline');
+const { values } = parseArgs({ options: {
+  input: { type: 'string', default: join('data', 'scryfall-reduced.json') },
+  out: { type: 'string', default: join('data', 'offline') },
+  'assume-english': { type: 'boolean', default: false },
+} });
+const DATA_PATH = resolve(values.input);
+const OUTPUT_DIR = resolve(values.out);
 const CONCURRENCY = 16;
-const MANIFEST_VERSION = 2;
 
 type CardData = {
   card_faces?: Array<{ image_uris?: { art_crop?: string; normal?: string } }>;
@@ -29,19 +36,6 @@ type CardData = {
 type ReducedDataset = {
   cards: CardData[];
   last_updated: string;
-};
-
-type Manifest = {
-  buckets: Record<ColorBucket, { count: number; file: string; url?: string }>;
-  generated_at: string;
-  generator: {
-    crop_hashes: string[];
-    entry_version: number;
-    visual_buckets: boolean;
-  };
-  schema: number;
-  source_updated: string;
-  version: string;
 };
 
 async function fetchBuffer(url: string) {
@@ -100,8 +94,10 @@ async function processCard(
   const name = normalizeMetadataString(card.name);
   const oracleId = normalizeMetadataString(card.oracle_id);
   const set = normalizeMetadataString(card.set);
+  const id = normalizeMetadataString(card.id);
+  const lang = normalizeMetadataString(card.lang) || (values['assume-english'] ? 'en' : '');
 
-  if (!collectorNumber || !name || !oracleId || !set) {
+  if (!collectorNumber || !name || !oracleId || !set || !id || !lang) {
     console.warn('⚠️ Skipping card with incomplete offline DB metadata:', {
       collectorNumber,
       id: card.id,
@@ -112,24 +108,23 @@ async function processCard(
     return null;
   }
 
-  const [primaryBuffer, artBuffer, normalBuffer] = await Promise.all([
-    fetchBuffer(sourceUrl),
-    artUrl && artUrl !== sourceUrl ? fetchBuffer(artUrl) : Promise.resolve(null),
-    normalUrl && normalUrl !== sourceUrl ? fetchBuffer(normalUrl) : Promise.resolve(null),
+  const [artBuffer, normalBuffer] = await Promise.all([
+    artUrl ? fetchBuffer(artUrl) : Promise.resolve(null),
+    normalUrl && normalUrl !== artUrl ? fetchBuffer(normalUrl) : Promise.resolve(null),
   ]);
 
-  const resolvedPrimary = primaryBuffer ?? artBuffer ?? normalBuffer;
+  const resolvedPrimary = artBuffer ?? normalBuffer;
   if (!resolvedPrimary) return null;
 
-  const resolvedArt = artBuffer ?? resolvedPrimary;
-  const resolvedNormal = normalBuffer ?? resolvedPrimary;
-
-  const phash = await computePHash(await normalizeArtCrop(resolvedArt));
-  const phashAlt = await computePHash(resolvedNormal);
+  const phash = await computePHash(await normalizeArtCrop(resolvedPrimary));
+  const phashAlt = normalBuffer ? await computePHash(normalBuffer) : phash;
 
   return {
     bucket: bucketFromCard(card),
     entry: {
+      id,
+      lang,
+      artUrl: artBuffer ? artUrl ?? '' : normalUrl ?? '',
       cn: collectorNumber,
       name,
       oracle_id: oracleId,
@@ -160,8 +155,16 @@ async function runWithConcurrency<T, R>(
 }
 
 async function main() {
-  console.log('📖 Loading scryfall-reduced.json...');
+  console.log(`Loading ${DATA_PATH}`);
   const dataset = await loadDataset();
+  if (!Array.isArray(dataset.cards) || !dataset.cards.length || !Number.isFinite(Date.parse(dataset.last_updated))) {
+    throw new Error('Expected a non-empty dataset with cards and last_updated');
+  }
+  const missingLanguage = dataset.cards.filter((card) => !normalizeMetadataString(card.lang)).length;
+  if (missingLanguage && !values['assume-english']) {
+    throw new Error(`${missingLanguage} printings lack lang. Regenerate the reduced dataset or use --assume-english only for a verified English-only source.`);
+  }
+  if (missingLanguage) console.warn(`Assigning en to ${missingLanguage} printings missing lang (explicit --assume-english).`);
   console.log(`✅ Loaded ${dataset.cards.length} cards (updated: ${dataset.last_updated})`);
 
   const buckets: Record<ColorBucket, OfflineEntry[]> = {
@@ -197,43 +200,35 @@ async function main() {
 
   await mkdir(OUTPUT_DIR, { recursive: true });
 
-  let entryVersion = 1;
-  const manifest: Manifest = {
-    schema: MANIFEST_VERSION,
-    generated_at: new Date().toISOString(),
+  const generatedAt = new Date().toISOString();
+  const version = `${generatedAt.replace(/\D/g, '')}-${randomUUID().slice(0, 8)}`;
+  const manifest: OfflineManifest = {
+    schema: 2,
+    generated_at: generatedAt,
     source_updated: dataset.last_updated,
-    version: new Date().toISOString().slice(0, 10).replace(/-/g, ''),
+    version,
     generator: {
       crop_hashes: ['art_crop', 'normal'],
-      entry_version: entryVersion,
-      visual_buckets: true,
+      entry_version: ENTRY_VERSION,
+      visual_buckets: false,
     },
-    buckets: {
-      W: { count: buckets.W.length, file: 'cards-W.bin.gz' },
-      U: { count: buckets.U.length, file: 'cards-U.bin.gz' },
-      B: { count: buckets.B.length, file: 'cards-B.bin.gz' },
-      R: { count: buckets.R.length, file: 'cards-R.bin.gz' },
-      G: { count: buckets.G.length, file: 'cards-G.bin.gz' },
-      C: { count: buckets.C.length, file: 'cards-C.bin.gz' },
-      M: { count: buckets.M.length, file: 'cards-M.bin.gz' },
-    },
+    buckets: {},
   };
 
-  for (const bucket of Object.keys(buckets) as ColorBucket[]) {
+  if (!BUCKETS.some((bucket) => buckets[bucket].length)) throw new Error('No usable printings generated');
+  for (const bucket of BUCKETS) {
     const encoded = encodeOfflineDb(buckets[bucket]);
-    entryVersion = Math.max(entryVersion, encoded.version);
     const gzipped = gzipSync(encoded.buffer, { level: 9 });
-    const outputPath = join(OUTPUT_DIR, manifest.buckets[bucket].file);
+    const file = `cards-${bucket}.${version}.bin.gz`;
+    manifest.buckets[bucket] = createBucketInfo(file, buckets[bucket].length, gzipped);
+    const outputPath = join(OUTPUT_DIR, file);
     await writeFile(outputPath, gzipped);
     console.log(`✅ Wrote ${bucket} bucket (${buckets[bucket].length} cards)`);
   }
 
-  manifest.generator.entry_version = entryVersion;
-
   const manifestJson = JSON.stringify(manifest, null, 2);
-  await writeFile(join(OUTPUT_DIR, 'manifest.json'), manifestJson);
   await writeFile(join(OUTPUT_DIR, 'manifest.v2.json'), manifestJson);
-  console.log('✅ Manifest written to data/offline/manifest.json and manifest.v2.json');
+  console.log(`Manifest ${version} written to ${OUTPUT_DIR} (${done - skipped}/${done} printings)`);
 }
 
 main().catch((err) => {

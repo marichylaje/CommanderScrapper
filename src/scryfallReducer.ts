@@ -280,6 +280,7 @@ function reduceCard(card: ReducedCard) {
     games: card.games,
     id: card.id,
     image_uris: card.image_uris,
+    lang: card.lang,
     keywords: card.keywords,
     oracle_id: card.oracle_id,
     oracle_text: card.oracle_text,
@@ -321,7 +322,7 @@ async function main(): Promise<void> {
       localUpdated = readJson<{ updated_at: string }>(UPDATED_TRACKER).updated_at;
     }
 
-    if (remoteUpdated === localUpdated) {
+    if (remoteUpdated === localUpdated && !process.argv.includes('--force') && fileExists(REDUCED_JSON_FILE)) {
       console.log('🟢 Ya tienes la última versión del bulk de Scryfall. Nada que hacer.');
       return;
     }

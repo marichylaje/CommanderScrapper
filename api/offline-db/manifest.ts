@@ -12,6 +12,17 @@ const MANIFEST_URLS = [
   process.env.OFFLINE_DB_MANIFEST_URL,
 ].filter((value): value is string => Boolean(value));
 
+function isServableManifest(value: unknown): boolean {
+  if (!value || typeof value !== 'object') return false;
+  const { schema, version, buckets } = value as {
+    schema?: number; version?: string; buckets?: Record<string, { url?: string }>;
+  };
+  return (schema === 1 || schema === 2) && typeof version === 'string' && version.length > 0 &&
+    ['W', 'U', 'B', 'R', 'G', 'C', 'M'].every((key) =>
+      typeof buckets?.[key]?.url === 'string' && buckets[key].url.startsWith('https://'),
+    );
+}
+
 async function fetchManifest() {
   for (const manifestUrl of MANIFEST_URLS) {
     try {
@@ -19,7 +30,9 @@ async function fetchManifest() {
       if (!response.ok) {
         continue;
       }
-      return await response.json();
+      const manifest: unknown = await response.json();
+      if (isServableManifest(manifest)) return manifest;
+      console.warn('Skipping offline manifest without downloadable buckets');
     } catch {
       // Try the next source.
     }
@@ -32,7 +45,8 @@ async function readLocalManifest() {
     try {
       await access(manifestPath);
       const raw = await readFile(manifestPath, 'utf-8');
-      return JSON.parse(raw);
+      const manifest: unknown = JSON.parse(raw);
+      if (isServableManifest(manifest)) return manifest;
     } catch {
       // Try the next local file.
     }
@@ -66,6 +80,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: 'Manifest unavailable' });
   }
 }
-
 
 

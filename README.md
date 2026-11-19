@@ -54,11 +54,52 @@ npm run restartFly
 
 ### Scanner offline (backend)
 
-```bash
+El generador produce `TCGDB1` v2 para los lectores de DeckBuilder: cabecera de
+24 bytes, filas de 44 bytes con siete índices de texto (`id`, `oracle_id`,
+nombre, set, número, idioma y URL), dos pHashes de 64 bits y cadenas UTF-8
+precedidas por su longitud `u16` little-endian. Cada ejecución genera una
+versión nueva, siete buckets gzip y `data/offline/manifest.v2.json`.
+
+```powershell
+npm run build
+npm run testOfflineDb
+npm run reduce -- --force
 npm run buildOfflineDb
-npm run benchmarkOfflineDb
+npm run validateOfflineDb
 npm run uploadOfflineDb
 ```
+
+Usar Node.js 22 y configurar `BLOB_READ_WRITE_TOKEN` en el entorno antes de
+subir. `reduce -- --force` conserva `lang` de Scryfall incluso si su fecha no
+cambió. Para un dataset antiguo verificado como **solo inglés**, se puede usar
+`npm run buildOfflineDb -- --assume-english` en lugar de regenerarlo; no usarlo
+para una fuente multilingüe. `default_cards` no es un inventario de todos los
+idiomas; el generador admite `--input <archivo>` con `{ last_updated, cards }`
+si se prepara otra fuente de impresiones. Opcionalmente usar
+`npm run benchmarkOfflineDb -- <dataset-real>` para medir aciertos; la muestra
+del repositorio no valida precisión.
+
+La subida valida los bytes antes de escribir en Blob y vuelve a comprobar los
+siete buckets por HTTPS. Por defecto solo sube una versión candidata, sin
+modificar `offline-db/latest.json`. Guardar la URL `Versioned manifest` y el
+valor `version` de la salida. Configurar `OFFLINE_DB_MANIFEST_V2_URL` en el
+entorno Vercel elegido con esa URL y redesplegar. Probar primero en Preview o
+en un entorno de prueba. `--promote-latest` es opt-in para mover el alias
+estable y lo usa el workflow programado; si producción apunta a ese alias,
+coordinar o pausar el workflow durante la primera publicación.
+
+```powershell
+npm run validateOfflineDb -- --manifest "https://commander-scrapper.vercel.app/api/offline-db/manifest" --version "<version-generada>"
+```
+
+Confirmar en una instalación limpia: abrir Scanner con red, esperar la carga,
+escanear varias cartas y revisar set/número/idioma. Después cerrar el proceso,
+activar modo avión y volver a abrir y escanear sin borrar datos. Probar también
+una instalación con `20260527`: aceptar la actualización y repetir en frío.
+Una instalación limpia sin descargas no debe poder escanear offline. Conservar
+la URL anterior para rollback: volver a configurarla, redesplegar y comprobar
+el endpoint tras vencer su caché. No borrar los blobs anteriores hasta pasar
+estas pruebas.
 
 ### Otros scripts útiles
 
@@ -81,4 +122,6 @@ npm run uploadOfflineDb
 - `POST /api/cards/visual-match-direct`
 - `POST /api/cards/visual-rerank`
 
-El manifest offline sirve `manifest.v2.json` con fallback a `manifest.json`.
+El endpoint offline prioriza `OFFLINE_DB_MANIFEST_V2_URL`, luego
+`OFFLINE_DB_MANIFEST_URL`, y finalmente manifiestos locales con URLs de descarga.
+El manifiesto generado localmente no es publicable hasta que tenga URLs para los siete buckets.
