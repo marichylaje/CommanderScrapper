@@ -25,13 +25,20 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run testOfflineDb
+      - run: bash scripts/testPreparePaperPrints.sh
       - run: bash scripts/preparePaperPrints.sh
-      - uses: actions/cache@v4
+      - name: Identify compatible hash snapshots
+        id: namespace
+        env:
+          SIGNATURE: ${{ hashFiles('src/offline/phash.ts', 'src/offline/cardRegionHashes.ts', 'src/offline/contract.ts', 'src/offline/buildOfflineDb.ts', 'src/offline/binaryDb.ts', 'src/offline/colorBuckets.ts', 'package-lock.json') }}
+        run: echo "prefix=offline-v3-${RUNNER_OS}-${RUNNER_ARCH}-${SIGNATURE}-" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        id: restore
         with:
           path: data/hashes-v3.sqlite
-          key: offline-v3-${{ runner.os }}-${{ hashFiles('src/offline/phash.ts', 'src/offline/cardRegionHashes.ts', 'src/offline/contract.ts', 'package-lock.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: |
-            offline-v3-${{ runner.os }}-${{ hashFiles('src/offline/phash.ts', 'src/offline/cardRegionHashes.ts', 'src/offline/contract.ts', 'package-lock.json') }}-
+          # Snapshots are immutable. Prefix matching restores the newest compatible checkpoint.
+          key: ${{ steps.namespace.outputs.prefix }}lookup
+          restore-keys: ${{ steps.namespace.outputs.prefix }}
       - name: Build or checkpoint (rerun to continue)
         id: build
         run: |
@@ -45,6 +52,16 @@ jobs:
           else
             exit "$status"
           fi
+      - name: Identify completed SQLite snapshot
+        id: snapshot
+        run: |
+          test -s data/hashes-v3.sqlite
+          echo "digest=$(sha256sum data/hashes-v3.sqlite | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/save@v4
+        if: steps.restore.outputs.cache-matched-key != format('{0}{1}', steps.namespace.outputs.prefix, steps.snapshot.outputs.digest)
+        with:
+          path: data/hashes-v3.sqlite
+          key: ${{ steps.namespace.outputs.prefix }}${{ steps.snapshot.outputs.digest }}
       - if: steps.build.outputs.complete == 'true'
         run: npm run validateOfflineDb
       - if: steps.build.outputs.complete == 'true'

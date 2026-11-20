@@ -85,7 +85,10 @@ supera la mediana superior. El benchmark compara regiones correspondientes y usa
 
 **Cobertura.** No usar `npm run reduce` ni `scryfall-reduced.json` para un catálogo
 completo: agrupan por oráculo y pueden perder Secret Lair y otras ilustraciones.
-`preparePaperPrints.sh` lee el array `all_cards` por streaming, conserva cada ID
+`preparePaperPrints.sh` lee `all_cards` por streaming: prefiere `jsonl_download_uri`
+(JSONL gzip) y admite `download_uri` para un array JSON. Requiere Bash, curl, gzip
+y jq 1.7+. Si no hay URL HTTPS válida o el archivo está truncado, falla sin
+reemplazar la entrada preparada. Conserva cada ID
 de impresión cuyo `games` contiene `paper`, incluidos idiomas y variantes, y escribe
 JSONL con su fecha de origen. No se agrupa por `oracle_id`; duplicar un ID de
 impresión es un error. Se indexa solo la cara frontal. Faltas de `normal` o de
@@ -110,7 +113,10 @@ reserva 90 min para hashes dentro de 180 min totales. Al agotar el presupuesto
 (código 75) termina el lote en curso sin publicar ni sustituir el manifiesto.
 Relanzar para continuar: SQLite conserva hashes por URL completa, no imágenes,
 y los metadatos se leen de nuevo para el snapshot actual. Si expira la caché de
-Actions se recalcula; invalidar la caché local si cambian los hashes o el contenido
+Actions se recalcula. Cada ejecución restaura el último snapshot SQLite compatible
+con el SO, arquitectura y firma del generador; tras un checkpoint o build completo
+guarda los cambios bajo el SHA-256 del archivo cerrado. Así un rerun no queda
+anclado al primer checkpoint inmutable. Invalidar la caché local si cambian los hashes o el contenido
 en una URL inmutable. El input JSONL se lee por lotes; las filas compactas para
 los siete buckets sí deben caber en memoria (4 GiB de heap en CI). Un bucket
 descomprimido de más de 64 MiB **falla**, no se trunca. `--input archivo.json`
@@ -120,8 +126,7 @@ exclusivamente inglesa. Medir precisión con `npm run benchmarkOfflineDb -- <dat
 la muestra vacía del repo no constituye una evaluación.
 
 **Publicación coordinada.** El workflow de fingerprints ya no publica catálogos
-offline. Los clientes antiguos conservan `/api/offline-db/manifest`, sus variables
-v2 y `offline-db/latest.json`. Nunca apuntarlos a v3. Para v3, `npm run uploadOfflineDb`
+offline. Solo se publica y sirve el esquema 3. `npm run uploadOfflineDb`
 con `BLOB_READ_WRITE_TOKEN` valida localmente, sube una candidata versionada y verifica
 por HTTPS los siete buckets (SHA-256, versión, conteos e identidad); por defecto
 no mueve ningún alias. Guardar la URL y `version`. Fijar `OFFLINE_DB_MANIFEST_V3_URL`
@@ -132,13 +137,12 @@ Sin pin, lee `OFFLINE_DB_LATEST_V3_URL` o `offline-db/latest-v3.json`.
 npm run validateOfflineDb -- --manifest "https://<preview>/api/offline-db/manifest-v3" --version "<version-generada>"
 ```
 
-Probar descarga limpia, actualización desde v2, impresión alternativa, reinicio
-sin red y que el cliente anterior aún recibe v2. Solo tras verificar, promover
+Probar descarga limpia, actualización entre dos catálogos del esquema actual,
+impresión alternativa y reinicio sin red. Solo tras verificar, promover
 con `npm run uploadOfflineDb -- --promote-latest` sobre los mismos archivos
 locales (o elegir `promote` en el workflow para promover su build verificado).
 Validar la versión en el endpoint de producción antes de liberar la app v3.
-Para rollback, fijar la URL de la última **v3** conocida y conservar sus blobs;
-no devolver una v2 al nuevo cliente.
+Para rollback, fijar la URL de un catálogo validado del mismo esquema y conservar sus blobs.
 
 ### Otros scripts útiles
 
@@ -152,7 +156,6 @@ no devolver una v2 al nuevo cliente.
 ## Endpoints API relevantes
 
 - `POST /api/scanner/telemetry`
-- `GET /api/offline-db/manifest`
 - `GET /api/offline-db/manifest-v3`
 - `/api/cards`
 - `POST /api/cards/search`
@@ -162,9 +165,5 @@ no devolver una v2 al nuevo cliente.
 - `POST /api/cards/visual-match-direct`
 - `POST /api/cards/visual-rerank`
 
-El endpoint offline **v2** prioriza `OFFLINE_DB_MANIFEST_V2_URL` (para fijar una versión), luego
-`offline-db/latest.json` de Blob (o `OFFLINE_DB_LATEST_URL`) y finalmente el manifiesto local
-con URLs. Solo sirve manifiestos de esquema 2 con `entry_version` 2 y los tres hashes
-(`art_crop`, `normal`, `center_12_18_76_58`); `OFFLINE_DB_MANIFEST_URL` (esquema 1) se ignora.
 Si el Scanner muestra «Catálogo no disponible», comprobar que el endpoint devuelve el `version` esperado.
 El manifiesto generado localmente no es publicable hasta que tenga URLs para los siete buckets.

@@ -14,8 +14,7 @@ test('v3 endpoint reads only the v3 alias and fails closed on legacy or reordere
     return Response.json(manifest);
   });
   const env = process.env;
-  process.env = { ...env, OFFLINE_DB_MANIFEST_V3_URL: '', OFFLINE_DB_LATEST_V3_URL: '',
-    OFFLINE_DB_LATEST_URL: 'https://legacy.test/latest.json' };
+  process.env = { ...env, OFFLINE_DB_MANIFEST_V3_URL: '', OFFLINE_DB_LATEST_V3_URL: '' };
   t.after(() => { process.env = env; });
   let status: number | undefined;
   const res = {
@@ -25,6 +24,9 @@ test('v3 endpoint reads only the v3 alias and fails closed on legacy or reordere
   assert.deepEqual(await get(), manifest);
   assert.equal(status, 200);
   assert.ok(url.endsWith('/offline-db/latest-v3.json'));
+  process.env.OFFLINE_DB_MANIFEST_V3_URL = 'https://example.test/verified-candidate';
+  assert.deepEqual(await get(), manifest);
+  assert.equal(url, process.env.OFFLINE_DB_MANIFEST_V3_URL);
   manifest.schema = 2;
   await get();
   assert.equal(status, 503);

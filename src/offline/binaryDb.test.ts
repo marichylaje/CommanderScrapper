@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, rm, writeFile } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { gunzipSync, gzipSync } from 'node:zlib';
+import { gzipSync } from 'node:zlib';
 
 import { decodeOfflineDb, encodeOfflineDb, type OfflineEntry } from './binaryDb.js';
 import { BUCKETS, createBucketInfo, validateCatalog } from './offlineManifest.js';
@@ -26,8 +26,9 @@ test('emits a 24-byte header and five hi/lo unsigned hashes in the 68-byte row',
   assert.deepEqual(decodeOfflineDb(buffer).entries, [printing]);
 });
 
-test('rejects obsolete records and emits the final format even for an empty bucket', async () => {
-  const legacy = gunzipSync(await readFile(join('data', 'offline', 'cards-W.bin.gz')));
+test('rejects obsolete records and emits the final format even for an empty bucket', () => {
+  const legacy = encodeOfflineDb([]).buffer;
+  legacy.writeUInt16LE(1, 6);
   assert.throws(() => decodeOfflineDb(legacy), /Unsupported TCGDB1 version/);
   assert.deepEqual(decodeOfflineDb(encodeOfflineDb([]).buffer), { version: 3, entries: [] });
   const current = encodeOfflineDb([printing]).buffer;
