@@ -69,7 +69,7 @@ test('streams alternate paper prints, preserves languages and reuses cached v3 h
 test('does not publish a partial catalog when a full-card download fails', async () => {
   const dir = join(process.cwd(), `tcgdb-failed-download-${randomUUID()}`);
   await mkdir(dir);
-  const server = createServer((_req, res) => { res.writeHead(404); res.end(); });
+  const server = createServer((_req, res) => { res.writeHead(503); res.end(); });
   try {
     await new Promise<void>((done) => server.listen(0, '127.0.0.1', done));
     const address = server.address();
@@ -86,6 +86,42 @@ test('does not publish a partial catalog when a full-card download fails', async
       '--input', input, '--out', dir,
     ], { cwd: process.cwd(), timeout: 30000 }), /failed to download full-card image/);
     await assert.rejects(readFile(join(dir, 'manifest.v3.json')), /ENOENT/);
+  } finally {
+    await new Promise<void>((done, fail) => server.close((error) => error ? fail(error) : done()));
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test('skips printings whose full-card image no longer exists', async () => {
+  const dir = join(process.cwd(), `tcgdb-missing-image-${randomUUID()}`);
+  await mkdir(dir);
+  const raw = Buffer.alloc(320 * 448 * 3);
+  for (let i = 0; i < raw.length; i++) raw[i] = (i * 13 + Math.floor(i / 960) * 29) % 256;
+  const image = await sharp(raw, { raw: { width: 320, height: 448, channels: 3 } }).png().toBuffer();
+  const server = createServer((req, res) => {
+    res.writeHead(req.url === '/card.png' ? 200 : 404, { 'Content-Type': 'image/png' });
+    res.end(image);
+  });
+  try {
+    await new Promise<void>((done) => server.listen(0, '127.0.0.1', done));
+    const address = server.address();
+    assert.ok(address && typeof address !== 'string');
+    const base = `http://127.0.0.1:${address.port}`;
+    const input = join(dir, 'input.json');
+    const card = { oracle_id: 'oracle', name: 'Example', set: 'sld', collector_number: '1', lang: 'en', colors: ['W'] };
+    await writeFile(input, JSON.stringify({
+      last_updated: '2026-01-01T00:00:00Z',
+      cards: [
+        { ...card, id: 'present', image_uris: { normal: `${base}/card.png` } },
+        { ...card, id: 'missing', image_uris: { normal: `${base}/missing.png` } },
+      ],
+    }));
+    await promisify(execFile)(process.execPath, [
+      resolve('node_modules', 'tsx', 'dist', 'cli.mjs'), 'src/offline/buildOfflineDb.ts',
+      '--input', input, '--out', dir,
+    ], { cwd: process.cwd(), timeout: 30000 });
+    const validated = await validateCatalog(join(dir, 'manifest.v3.json'));
+    assert.equal(validated.printingCount, 1);
   } finally {
     await new Promise<void>((done, fail) => server.close((error) => error ? fail(error) : done()));
     await rm(dir, { recursive: true, force: true });
