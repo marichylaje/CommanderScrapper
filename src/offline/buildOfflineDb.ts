@@ -63,6 +63,10 @@ async function fetchBuffer(url: string) {
       });
       if (response.ok) return Buffer.from(await response.arrayBuffer());
       await response.body?.cancel();
+      if (response.status === 404 || response.status === 410) {
+        console.warn(`Image HTTP ${response.status}: ${url}`);
+        return 'missing';
+      }
       if (response.status !== 429 && response.status < 500) {
         console.warn(`Image HTTP ${response.status}: ${url}`);
         return null;
@@ -162,6 +166,11 @@ async function processCard(
   let hashes = cache?.get(normalUrl);
   if (!hashes) {
     const normalBuffer = await fetchBuffer(normalUrl);
+    if (normalBuffer === 'missing') {
+      // Scryfall bulk data can list images that no longer exist; they can't be scanned anyway.
+      console.warn(`⚠️ Skipping printing ${id}: full-card image no longer exists (404/410)`);
+      return null;
+    }
     if (!normalBuffer) throw new Error(`Cannot build complete catalog: failed to download full-card image for ${id}`);
     hashes = await cardRegionHashes(normalBuffer);
     cache?.put(normalUrl, hashes);
