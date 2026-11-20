@@ -96,6 +96,18 @@ identidad se omiten y se cuentan; si falta el idioma con imagen utilizable o fal
 la descarga de una URL presente, el build falla. Imágenes compartidas no permiten
 distinguir siempre idioma o impresión solo por visión.
 
+**`oracle_id` vacío.** Las cartas reversibles (p. ej. `Mechtitan // Mechtitan` en
+`sld`) pueden traer `oracle_id` solo en `card_faces[]`; `paperPrints.jq` lo toma de
+la raíz o de las caras 0/1. Si aun así falta, `buildOfflineDb.ts` lo resuelve en
+orden: caras del registro, otro registro del volcado con el mismo
+`(set, collector_number)` (se ignoran claves ambiguas) y, con `--resolve-oracle-ids`
+(activo en el workflow), `GET /cards/{id}` de Scryfall (`--scryfall-api` para
+sustituir la base; 100 ms entre peticiones, `Retry-After` en 429, 3 intentos).
+Los resultados, incluidos los 404 definitivos, se guardan en la tabla
+`oracle_ids_v3` de la caché SQLite y no se vuelven a consultar. Un fallo
+transitorio desactiva las consultas el resto de la ejecución sin cachearse, y la
+carta se omite con aviso.
+
 ```bash
 # Node 22.13+; la preparación usa Bash, curl y jq 1.7+
 npm run build

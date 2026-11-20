@@ -48,7 +48,7 @@ jobs:
         run: |
           status=0
           npm run buildOfflineDb -- --source-updated "$(cat data/paper-prints.updated)" \
-            --cache data/hashes-v3.sqlite --budget-minutes 90 || status=$?
+            --cache data/hashes-v3.sqlite --budget-minutes 90 --resolve-oracle-ids || status=$?
           if [[ $status == 75 ]]; then
             echo "Checkpoint only; rerun workflow to continue. No publication." >> "$GITHUB_STEP_SUMMARY"
           elif [[ $status == 0 ]]; then

@@ -66,6 +66,64 @@ test('streams alternate paper prints, preserves languages and reuses cached v3 h
   }
 });
 
+test('recovers missing oracle IDs from faces, the dump and Scryfall, caching lookups across reruns', async () => {
+  const dir = join(process.cwd(), `tcgdb-oracle-${randomUUID()}`);
+  await mkdir(dir);
+  const raw = Buffer.alloc(320 * 448 * 3);
+  for (let i = 0; i < raw.length; i++) raw[i] = (i * 13 + Math.floor(i / 960) * 29) % 256;
+  const image = await sharp(raw, { raw: { width: 320, height: 448, channels: 3 } }).png().toBuffer();
+  const lookups: string[] = [];
+  const server = createServer((req, res) => {
+    if (req.url?.startsWith('/cards/')) {
+      const id = req.url.slice('/cards/'.length);
+      lookups.push(id);
+      res.writeHead(id === 'api-card' ? 200 : 404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(id === 'api-card' ? { id, card_faces: [{ oracle_id: 'api-oracle' }] } : {}));
+      return;
+    }
+    res.writeHead(200, { 'Content-Type': 'image/png' });
+    res.end(image);
+  });
+  try {
+    await new Promise<void>((done) => server.listen(0, '127.0.0.1', done));
+    const address = server.address();
+    assert.ok(address && typeof address !== 'string');
+    const base = `http://127.0.0.1:${address.port}`;
+    const card = { name: 'Chandra Nalaar // Chandra Nalaar', set: 'sld', lang: 'en', games: ['paper'],
+      image_uris: { normal: `${base}/card.png` } };
+    const input = join(dir, 'input.jsonl');
+    await writeFile(input, [
+      { ...card, id: 'face-card', collector_number: '1', card_faces: [{ oracle_id: 'face-oracle' }] },
+      { ...card, id: 'known', collector_number: '2', oracle_id: 'dump-oracle' },
+      { ...card, id: 'dump-card', collector_number: '2', lang: 'ja' },
+      { ...card, id: 'api-card', collector_number: '3' },
+      { ...card, id: 'unknown', collector_number: '4' },
+    ].map((c) => JSON.stringify(c)).join('\n'));
+    const args = [
+      resolve('node_modules', 'tsx', 'dist', 'cli.mjs'), 'src/offline/buildOfflineDb.ts',
+      '--input', input, '--out', dir, '--source-updated', '2026-01-01T00:00:00Z',
+      '--cache', join(dir, 'cache.sqlite'), '--resolve-oracle-ids', '--scryfall-api', base,
+    ];
+    const run = () => promisify(execFile)(process.execPath, args, { timeout: 30000 });
+    const readOracles = async () => {
+      const validated = await validateCatalog(join(dir, 'manifest.v3.json'));
+      const entries = (await Promise.all(validated.verified.map(async ({ info }) =>
+        decodeOfflineDb(gunzipSync(await readFile(join(dir, info.file)))).entries))).flat();
+      return Object.fromEntries(entries.map((entry) => [entry.id, entry.oracle_id]));
+    };
+    const expected = { 'face-card': 'face-oracle', known: 'dump-oracle', 'dump-card': 'dump-oracle', 'api-card': 'api-oracle' };
+    await run();
+    assert.deepEqual(await readOracles(), expected);
+    assert.deepEqual(lookups.sort(), ['api-card', 'unknown']);
+    await run();
+    assert.deepEqual(await readOracles(), expected);
+    assert.equal(lookups.length, 2);
+  } finally {
+    await new Promise<void>((done, fail) => server.close((error) => error ? fail(error) : done()));
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 test('does not publish a partial catalog when a full-card download fails', async () => {
   const dir = join(process.cwd(), `tcgdb-failed-download-${randomUUID()}`);
   await mkdir(dir);

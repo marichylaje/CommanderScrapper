@@ -18,12 +18,12 @@ stamp=2026-11-19T22:23:18.305+00:00
 metadata() {
   printf '{"type":"all_cards","updated_at":"%s",%s}\n' "$stamp" "$1" > meta
 }
-printf '%s\n' '{"id":"sld","games":["paper"],"lang":"ja","card_faces":[{"image_uris":{"normal":"front"}}]}' \
+printf '%s\n' '{"id":"sld","games":["paper"],"lang":"ja","card_faces":[{"image_uris":{"normal":"front"},"oracle_id":"face-oracle"}]}' \
   '{"id":"digital","games":["arena"]}' '{"id":"missing-games"}' > cards
 gzip -c cards > bulk
 metadata '"jsonl_download_uri":"https://example.test/prints"'
 bash scripts/preparePaperPrints.sh
-jq -bes 'length == 1 and .[0].id == "sld" and .[0].image_uris.normal == "front"' data/paper-prints.jsonl >/dev/null
+jq -bes 'length == 1 and .[0].id == "sld" and .[0].image_uris.normal == "front" and .[0].oracle_id == "face-oracle"' data/paper-prints.jsonl >/dev/null
 test "$(cat data/paper-prints.updated)" = "$stamp"
 cp data/paper-prints.jsonl expected
 jq -bs . cards > bulk
