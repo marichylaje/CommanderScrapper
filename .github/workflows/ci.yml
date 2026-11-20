@@ -30,6 +30,8 @@ jobs:
       - name: Check streaming all_cards projection
         run: |
           source='[{"id":"a","oracle_id":"o","games":["paper"]},{"id":"b","oracle_id":"o","games":["paper"],"card_faces":[{"image_uris":{"normal":"u"}}]},{"id":"c","games":["arena"]}]'
-          jq -nMc --stream --stream-errors -f scripts/paperPrints.jq <<<"$source" |
+          filter='include "paperPrints"; fromstream(1 | truncate_stream(inputs |
+            if (.[0] | type) == "string" then error(.[0]) else . end)) | paper_print'
+          jq -nMc --stream --stream-errors -L scripts "$filter" <<<"$source" |
             jq -se 'map(.id) == ["a","b"] and .[1].image_uris.normal == "u"'
-          if jq -nMc --stream --stream-errors -f scripts/paperPrints.jq <<<"${source%]}"; then exit 1; fi
+          if jq -nMc --stream --stream-errors -L scripts "$filter" <<<"${source%]}"; then exit 1; fi
