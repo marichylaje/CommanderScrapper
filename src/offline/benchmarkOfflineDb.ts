@@ -3,7 +3,9 @@ import { join, resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { fetch } from 'undici';
 
-import { cameraRegionHashes } from './cardRegionHashes.js';
+import { cardRegionHashes } from './cardRegionHashes.js';
+import { LOCAL_MANIFEST } from './offlineManifest.js';
+import { regionDistance } from './regionDistance.js';
 import { decodeOfflineDb, type OfflineEntry } from './binaryDb.js';
 
 const OFFLINE_DIR = join(process.cwd(), 'data', 'offline');
@@ -30,34 +32,12 @@ type OfflineManifest = {
   version?: string;
 };
 
-function hammingDistance(left: string, right: string) {
-  const maxLength = Math.max(left.length, right.length);
-  let distance = 0;
-
-  for (let index = 0; index < maxLength; index += 1) {
-    const leftNibble = Number.parseInt(left[index] ?? '0', 16);
-    const rightNibble = Number.parseInt(right[index] ?? '0', 16);
-    distance += ((leftNibble ^ rightNibble).toString(2).match(/1/g) || []).length;
-  }
-
-  return distance;
-}
-
 function normalizeKey(value?: string) {
   return (value ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
 async function loadManifest(): Promise<OfflineManifest> {
-  const paths = [join(OFFLINE_DIR, 'manifest.v2.json'), join(OFFLINE_DIR, 'manifest.json')];
-  for (const manifestPath of paths) {
-    try {
-      const raw = await readFile(manifestPath, 'utf-8');
-      return JSON.parse(raw) as OfflineManifest;
-    } catch {
-      // Try the next manifest file.
-    }
-  }
-  throw new Error('Offline manifest not found. Run buildOfflineDb first.');
+  return JSON.parse(await readFile(LOCAL_MANIFEST, 'utf8')) as OfflineManifest;
 }
 
 async function loadBucketEntries(fileName: string): Promise<OfflineEntry[]> {
@@ -90,16 +70,6 @@ async function loadImageBuffer(imagePath: string) {
   return readFile(resolvedPath);
 }
 
-function scoreCandidate(query: Awaited<ReturnType<typeof cameraRegionHashes>>, entry: OfflineEntry) {
-  const distance = Math.min(
-    hammingDistance(query.art, entry.phash),
-    hammingDistance(query.artWide, entry.phash),
-    entry.phashAlt ? hammingDistance(query.full, entry.phashAlt) : 64,
-    entry.phashCenter ? hammingDistance(query.center, entry.phashCenter) : 64,
-  );
-  return Math.max(0, 1 - distance / 64);
-}
-
 async function main() {
   const datasetPath = process.argv[2] ? resolve(process.argv[2]) : DEFAULT_DATASET;
   const manifest = await loadManifest();
@@ -121,7 +91,7 @@ async function main() {
   for (const sample of dataset.samples) {
     const startedAt = Date.now();
     const imageBuffer = await loadImageBuffer(sample.imagePath);
-    const query = await cameraRegionHashes(imageBuffer);
+    const query = await cardRegionHashes(imageBuffer);
 
     const candidateBuckets = sample.bucket && bucketEntries.has(sample.bucket)
       ? [bucketEntries.get(sample.bucket)!]
@@ -130,7 +100,7 @@ async function main() {
     const scored = candidateBuckets
       .flatMap((entries) => entries)
       .map((entry) => ({
-        confidence: scoreCandidate(query, entry),
+        confidence: 1 - regionDistance(query, entry) / 64,
         entry,
       }))
       .sort((left, right) => right.confidence - left.confidence);

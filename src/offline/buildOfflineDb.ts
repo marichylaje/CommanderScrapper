@@ -1,19 +1,24 @@
-import { access, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
+import { createReadStream } from 'node:fs';
+import { createInterface } from 'node:readline';
+import { DatabaseSync } from 'node:sqlite';
 import { join, resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { parseArgs } from 'node:util';
 import { gzipSync } from 'node:zlib';
 import { fetch } from 'undici';
-import sharp from 'sharp';
 
 import { bucketFromCard, type ColorBucket } from './colorBuckets.js';
-import { encodeOfflineDb, ENTRY_VERSION, type OfflineEntry } from './binaryDb.js';
-import { computePHash } from './phash.js';
+import { encodeOfflineDb, type OfflineEntry } from './binaryDb.js';
+import { CROP_HASHES, ENTRY_VERSION, type RegionHashes } from './contract.js';
 import { cardRegionHashes } from './cardRegionHashes.js';
 import { BUCKETS, createBucketInfo, type OfflineManifest } from './offlineManifest.js';
 
 const { values } = parseArgs({ options: {
-  input: { type: 'string', default: join('data', 'scryfall-reduced.json') },
+  input: { type: 'string', default: join('data', 'paper-prints.jsonl') },
+  'source-updated': { type: 'string' },
+  cache: { type: 'string' },
+  'budget-minutes': { type: 'string' },
   out: { type: 'string', default: join('data', 'offline') },
   'assume-english': { type: 'boolean', default: false },
 } });
@@ -24,6 +29,7 @@ const IMAGE_REQUEST_INTERVAL_MS = 100;
 let nextImageRequestAt = 0;
 
 type CardData = {
+  games?: string[];
   card_faces?: Array<{ image_uris?: { art_crop?: string; normal?: string } }>;
   collector_number: string;
   colors?: string[];
@@ -56,6 +62,7 @@ async function fetchBuffer(url: string) {
         },
       });
       if (response.ok) return Buffer.from(await response.arrayBuffer());
+      await response.body?.cancel();
       if (response.status !== 429 && response.status < 500) {
         console.warn(`Image HTTP ${response.status}: ${url}`);
         return null;
@@ -69,10 +76,25 @@ async function fetchBuffer(url: string) {
   return null;
 }
 
-async function loadDataset(): Promise<ReducedDataset> {
-  await access(DATA_PATH);
+async function* readPrintings() {
+  const stream = createReadStream(DATA_PATH, { encoding: 'utf8' });
+  const lines = createInterface({ input: stream, crlfDelay: Infinity });
+  try {
+    for await (const line of lines) if (line.trim()) yield JSON.parse(line) as CardData;
+  } finally {
+    lines.close();
+    stream.destroy();
+  }
+}
+
+async function loadDataset() {
+  if (DATA_PATH.endsWith('.jsonl')) {
+    return { cards: readPrintings(), last_updated: values['source-updated'] ?? '' };
+  }
   const raw = await readFile(DATA_PATH, 'utf-8');
-  return JSON.parse(raw) as ReducedDataset;
+  const data = JSON.parse(raw) as ReducedDataset;
+  if (!Array.isArray(data.cards)) throw new Error('Expected { cards, last_updated } or paper-print JSONL');
+  return data;
 }
 
 function getImageUrls(card: CardData): { artUrl?: string; normalUrl?: string } {
@@ -95,21 +117,28 @@ function normalizeMetadataString(value: unknown) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
-async function normalizeArtCrop(buffer: Buffer) {
-  return sharp(buffer)
-    .rotate()
-    .removeAlpha()
-    .resize(320, 230, { fit: 'fill' })
-    .jpeg()
-    .toBuffer();
+function openCache(path: string) {
+  const db = new DatabaseSync(path);
+  db.exec('CREATE TABLE IF NOT EXISTS hashes_v3 (url TEXT PRIMARY KEY, hashes TEXT NOT NULL)');
+  const lookup = db.prepare('SELECT hashes FROM hashes_v3 WHERE url = ?');
+  const store = db.prepare('INSERT OR REPLACE INTO hashes_v3 VALUES (?, ?)');
+  return {
+    get(url: string) {
+      const row = lookup.get(url);
+      return row && JSON.parse(String(row.hashes)) as RegionHashes;
+    },
+    put(url: string, hashes: RegionHashes) { store.run(url, JSON.stringify(hashes)); },
+    close() { db.close(); },
+  };
 }
 
 async function processCard(
   card: CardData,
+  cache?: ReturnType<typeof openCache>,
 ): Promise<{ bucket: ColorBucket; entry: OfflineEntry } | null> {
+  if (card.games && !card.games.includes('paper')) return null;
   const { artUrl, normalUrl } = getImageUrls(card);
-  const sourceUrl = artUrl ?? normalUrl;
-  if (!sourceUrl) return null;
+  if (!normalUrl) return null;
 
   const collectorNumber = normalizeMetadataString(card.collector_number);
   const name = normalizeMetadataString(card.name);
@@ -118,7 +147,8 @@ async function processCard(
   const id = normalizeMetadataString(card.id);
   const lang = normalizeMetadataString(card.lang) || (values['assume-english'] ? 'en' : '');
 
-  if (!collectorNumber || !name || !oracleId || !set || !id || !lang) {
+  if (!lang) throw new Error(`Missing lang for ${id}; use --assume-english only for a verified English source`);
+  if (!collectorNumber || !name || !oracleId || !set || !id) {
     console.warn('⚠️ Skipping card with incomplete offline DB metadata:', {
       collectorNumber,
       id: card.id,
@@ -129,73 +159,39 @@ async function processCard(
     return null;
   }
 
-  const [artBuffer, fetchedNormal] = await Promise.all([
-    artUrl ? fetchBuffer(artUrl) : Promise.resolve(null),
-    normalUrl && normalUrl !== artUrl ? fetchBuffer(normalUrl) : Promise.resolve(null),
-  ]);
-  const normalBuffer = normalUrl === artUrl ? artBuffer : fetchedNormal;
-  if (normalUrl && !normalBuffer) {
-    throw new Error(`Cannot build complete catalog: failed to download full-card image for ${id}`);
+  let hashes = cache?.get(normalUrl);
+  if (!hashes) {
+    const normalBuffer = await fetchBuffer(normalUrl);
+    if (!normalBuffer) throw new Error(`Cannot build complete catalog: failed to download full-card image for ${id}`);
+    hashes = await cardRegionHashes(normalBuffer);
+    cache?.put(normalUrl, hashes);
   }
-
-  if (!normalBuffer) {
-    console.warn('Skipping printing without full-card image:', id);
-    return null;
-  }
-
-  const fallbackArt = artBuffer ?? await sharp(normalBuffer).rotate().resize(320, 448, { fit: 'fill' })
-    .extract({ left: 16, top: 40, width: 288, height: 215 }).png().toBuffer();
-  const phash = await computePHash(await normalizeArtCrop(fallbackArt));
-  const { phashAlt, phashCenter } = await cardRegionHashes(normalBuffer);
 
   return {
     bucket: bucketFromCard(card),
     entry: {
       id,
       lang,
-      artUrl: artBuffer ? artUrl ?? '' : normalUrl ?? '',
+      artUrl: artUrl ?? normalUrl,
       cn: collectorNumber,
       name,
       oracle_id: oracleId,
-      phash,
-      phashAlt,
-      phashCenter,
+      ...hashes,
       set,
     },
   };
 }
 
-async function runWithConcurrency<T, R>(
-  items: T[],
-  concurrency: number,
-  fn: (item: T, index: number) => Promise<R | null>,
-): Promise<(R | null)[]> {
-  const results: (R | null)[] = new Array(items.length).fill(null);
-  let index = 0;
-
-  async function worker() {
-    while (index < items.length) {
-      const i = index++;
-      results[i] = await fn(items[i]!, i);
-    }
-  }
-
-  await Promise.all(Array.from({ length: concurrency }, () => worker()));
-  return results;
-}
-
 async function main() {
   console.log(`Loading ${DATA_PATH}`);
   const dataset = await loadDataset();
-  if (!Array.isArray(dataset.cards) || !dataset.cards.length || !Number.isFinite(Date.parse(dataset.last_updated))) {
-    throw new Error('Expected a non-empty dataset with cards and last_updated');
+  if (!Number.isFinite(Date.parse(dataset.last_updated))) {
+    throw new Error('Expected source timestamp (pass --source-updated for JSONL)');
   }
-  const missingLanguage = dataset.cards.filter((card) => !normalizeMetadataString(card.lang)).length;
-  if (missingLanguage && !values['assume-english']) {
-    throw new Error(`${missingLanguage} printings lack lang. Regenerate the reduced dataset or use --assume-english only for a verified English-only source.`);
+  const budget = Number(values['budget-minutes'] ?? Infinity);
+  if (!(budget > 0) || (values['budget-minutes'] && !values.cache)) {
+    throw new Error('--budget-minutes requires a positive budget and --cache');
   }
-  if (missingLanguage) console.warn(`Assigning en to ${missingLanguage} printings missing lang (explicit --assume-english).`);
-  console.log(`✅ Loaded ${dataset.cards.length} cards (updated: ${dataset.last_updated})`);
 
   const buckets: Record<ColorBucket, OfflineEntry[]> = {
     W: [],
@@ -209,23 +205,33 @@ async function main() {
 
   let done = 0;
   let skipped = 0;
-  const start = Date.now();
-
-  const results = await runWithConcurrency(dataset.cards, CONCURRENCY, async (card) => {
-    const result = await processCard(card);
-    done += 1;
-    if (!result) skipped += 1;
-    if (done % 500 === 0 || done === dataset.cards.length) {
-      const elapsed = ((Date.now() - start) / 1000).toFixed(0);
-      const pct = ((done / dataset.cards.length) * 100).toFixed(1);
-      console.log(`  [${pct}%] ${done}/${dataset.cards.length} — ${skipped} skipped — ${elapsed}s elapsed`);
+  const deadline = Date.now() + budget * 60_000;
+  const cache = values.cache ? openCache(values.cache) : undefined;
+  const ids = new Set<string>();
+  const batch: CardData[] = [];
+  async function flush() {
+    for (const result of await Promise.all(batch.splice(0).map((card) => processCard(card, cache)))) {
+      done++;
+      if (!result) { skipped++; continue; }
+      if (ids.has(result.entry.id)) throw new Error(`Duplicate printing ID: ${result.entry.id}`);
+      ids.add(result.entry.id);
+      buckets[result.bucket].push(result.entry);
     }
-    return result;
-  });
-
-  for (const result of results) {
-    if (!result) continue;
-    buckets[result.bucket].push(result.entry);
+    if (done % 1000 === 0) console.log(`${done} input records processed, ${skipped} skipped`);
+  }
+  try {
+    for await (const card of dataset.cards) {
+      if (Date.now() >= deadline) {
+        console.log(`Budget reached after ${done} records; hashes checkpointed. No manifest written.`);
+        process.exitCode = 75;
+        return;
+      }
+      batch.push(card);
+      if (batch.length === CONCURRENCY) await flush();
+    }
+    if (batch.length) await flush();
+  } finally {
+    cache?.close();
   }
 
   await mkdir(OUTPUT_DIR, { recursive: true });
@@ -233,12 +239,12 @@ async function main() {
   const generatedAt = new Date().toISOString();
   const version = `${generatedAt.replace(/\D/g, '')}-${randomUUID().slice(0, 8)}`;
   const manifest: OfflineManifest = {
-    schema: 2,
+    schema: 3,
     generated_at: generatedAt,
     source_updated: dataset.last_updated,
     version,
     generator: {
-      crop_hashes: ['art_crop', 'normal', 'center_12_18_76_58'],
+      crop_hashes: CROP_HASHES,
       entry_version: ENTRY_VERSION,
       visual_buckets: false,
     },
@@ -257,7 +263,9 @@ async function main() {
   }
 
   const manifestJson = JSON.stringify(manifest, null, 2);
-  await writeFile(join(OUTPUT_DIR, 'manifest.v2.json'), manifestJson);
+  const manifestPath = join(OUTPUT_DIR, 'manifest.v3.json');
+  await writeFile(`${manifestPath}.${version}`, manifestJson);
+  await rename(`${manifestPath}.${version}`, manifestPath);
   console.log(`Manifest ${version} written to ${OUTPUT_DIR} (${done - skipped}/${done} printings)`);
 }
 

@@ -1,17 +1,14 @@
 import { TextDecoder } from 'node:util';
+import { ENTRY_VERSION, HASH_FIELDS, type RegionHashes } from './contract.js';
 
 const MAGIC = 'TCGDB1';
 const HEADER_SIZE = 24;
-export const ENTRY_VERSION = 2;
+const STRIDE = 68;
 export const MAX_BUCKET_BYTES = 64 * 1024 * 1024;
 const FIELDS = ['id', 'oracle_id', 'name', 'set', 'cn', 'lang', 'artUrl'] as const;
 const utf8 = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
 
-export type OfflineEntry = Record<(typeof FIELDS)[number], string> & {
-  phash: string;
-  phashAlt?: string;
-  phashCenter?: string;
-};
+export type OfflineEntry = Record<(typeof FIELDS)[number], string> & RegionHashes;
 
 function assertIdentity(entry: Pick<OfflineEntry, (typeof FIELDS)[number]>) {
   for (const field of FIELDS) {
@@ -28,7 +25,6 @@ function writeHash(buffer: Buffer, offset: number, hash: string) {
 }
 
 export function encodeOfflineDb(entries: readonly OfflineEntry[]) {
-  const stride = 52;
   const indices = new Map<string, number>();
   const strings: Buffer[] = [];
   let stringBytes = 0;
@@ -44,7 +40,7 @@ export function encodeOfflineDb(entries: readonly OfflineEntry[]) {
       stringBytes += 2 + bytes.length;
     }
   }
-  const stringsOffset = HEADER_SIZE + entries.length * stride;
+  const stringsOffset = HEADER_SIZE + entries.length * STRIDE;
   if (stringsOffset + stringBytes > MAX_BUCKET_BYTES) throw new Error('Offline bucket exceeds Android size limit');
   const buffer = Buffer.alloc(stringsOffset + stringBytes);
   buffer.write(MAGIC, 0, 'ascii');
@@ -54,18 +50,15 @@ export function encodeOfflineDb(entries: readonly OfflineEntry[]) {
   buffer.writeUInt32LE(HEADER_SIZE, 16);
   buffer.writeUInt32LE(stringsOffset, 20);
   for (const [index, entry] of entries.entries()) {
-    const base = HEADER_SIZE + index * stride;
+    const base = HEADER_SIZE + index * STRIDE;
     for (const [column, field] of FIELDS.entries()) {
       const pointer = indices.get(entry[field]);
       if (pointer === undefined) throw new Error(`Missing string index for ${field}`);
       buffer.writeUInt32LE(pointer, base + column * 4);
     }
-    writeHash(buffer, base + 28, entry.phash);
-    if (!entry.phashAlt || !entry.phashCenter) {
-      throw new Error(`Missing full-card or center pHash (${entry.id})`);
+    for (const [i, field] of HASH_FIELDS.entries()) {
+      writeHash(buffer, base + 28 + i * 8, entry[field]);
     }
-    writeHash(buffer, base + 36, entry.phashAlt);
-    writeHash(buffer, base + 44, entry.phashCenter);
   }
   let cursor = stringsOffset;
   for (const bytes of strings) {
@@ -82,12 +75,11 @@ export function decodeOfflineDb(buffer: Buffer) {
   }
   const version = buffer.readUInt16LE(6);
   if (version !== ENTRY_VERSION) throw new Error(`Unsupported TCGDB1 version ${version}`);
-  const stride = 52;
   const count = buffer.readUInt32LE(8);
   const stringCount = buffer.readUInt32LE(12);
   const entriesOffset = buffer.readUInt32LE(16);
   const stringsOffset = buffer.readUInt32LE(20);
-  if (entriesOffset !== HEADER_SIZE || stringsOffset !== entriesOffset + count * stride ||
+  if (entriesOffset !== HEADER_SIZE || stringsOffset !== entriesOffset + count * STRIDE ||
       stringsOffset > buffer.length || stringCount > (buffer.length - stringsOffset) / 2) {
     throw new Error('Invalid TCGDB1 offsets or counts');
   }
@@ -107,7 +99,7 @@ export function decodeOfflineDb(buffer: Buffer) {
     buffer.readUInt32LE(base + 4).toString(16).padStart(8, '0');
   const entries: OfflineEntry[] = [];
   for (let index = 0; index < count; index += 1) {
-    const base = entriesOffset + index * stride;
+    const base = entriesOffset + index * STRIDE;
     const field = (column: number) => {
       const value = strings[buffer.readUInt32LE(base + column * 4)];
       if (value === undefined) throw new Error(`Invalid string index at entry ${index}, field ${column}`);
@@ -117,7 +109,7 @@ export function decodeOfflineDb(buffer: Buffer) {
       id: field(0), oracle_id: field(1), name: field(2), set: field(3),
       cn: field(4), lang: field(5), artUrl: field(6),
       phash: readHash(base + 28), phashAlt: readHash(base + 36),
-      phashCenter: readHash(base + 44),
+      phashCenter: readHash(base + 44), phashLeft: readHash(base + 52), phashRight: readHash(base + 60),
     };
     assertIdentity(entry);
     entries.push(entry);

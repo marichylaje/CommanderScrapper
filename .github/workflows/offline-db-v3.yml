@@ -1,0 +1,53 @@
+name: Build offline paper catalog v3
+on:
+  workflow_dispatch:
+    inputs:
+      promote:
+        description: Promote verified candidate to latest-v3.json
+        type: boolean
+        default: false
+
+concurrency:
+  group: offline-db-v3
+  cancel-in-progress: false
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run testOfflineDb
+      - run: bash scripts/preparePaperPrints.sh
+      - uses: actions/cache@v4
+        with:
+          path: data/hashes-v3.sqlite
+          key: offline-v3-${{ runner.os }}-${{ hashFiles('src/offline/phash.ts', 'src/offline/cardRegionHashes.ts', 'src/offline/contract.ts', 'package-lock.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            offline-v3-${{ runner.os }}-${{ hashFiles('src/offline/phash.ts', 'src/offline/cardRegionHashes.ts', 'src/offline/contract.ts', 'package-lock.json') }}-
+      - name: Build or checkpoint (rerun to continue)
+        id: build
+        run: |
+          status=0
+          npm run buildOfflineDb -- --source-updated "$(cat data/paper-prints.updated)" \
+            --cache data/hashes-v3.sqlite --budget-minutes 90 || status=$?
+          if [[ $status == 75 ]]; then
+            echo "Checkpoint only; rerun workflow to continue. No publication." >> "$GITHUB_STEP_SUMMARY"
+          elif [[ $status == 0 ]]; then
+            echo "complete=true" >> "$GITHUB_OUTPUT"
+          else
+            exit "$status"
+          fi
+      - if: steps.build.outputs.complete == 'true'
+        run: npm run validateOfflineDb
+      - if: steps.build.outputs.complete == 'true'
+        run: npm run uploadOfflineDb -- ${{ inputs.promote && '--promote-latest' || '' }}
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}

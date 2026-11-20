@@ -1,30 +1,16 @@
 import sharp from 'sharp';
 import { computePHash } from './phash.js';
+import type { RegionHashes } from './contract.js';
 
-async function normalizeCard(normalBuffer: Buffer) {
-  return sharp(normalBuffer).rotate().removeAlpha()
-    .resize(320, 448, { fit: 'fill' }).png().toBuffer();
-}
-
-async function regionHash(normalized: Buffer, left: number, top: number, width: number, height: number) {
-  const region = await sharp(normalized).extract({ left, top, width, height }).png().toBuffer();
-  return computePHash(region);
-}
-
-export async function cardRegionHashes(normalBuffer: Buffer) {
-  const normalized = await normalizeCard(normalBuffer);
-  return {
-    phashAlt: await computePHash(normalized),
-    phashCenter: await regionHash(normalized, 38, 81, 243, 260),
-  };
-}
-
-export async function cameraRegionHashes(cardBuffer: Buffer) {
-  const normalized = await normalizeCard(cardBuffer);
-  return {
-    art: await regionHash(normalized, 16, 40, 288, 215),
-    artWide: await regionHash(normalized, 26, 31, 269, 287),
-    full: await computePHash(normalized),
-    center: await regionHash(normalized, 38, 81, 243, 260),
-  };
+export async function cardRegionHashes(fullCard: Buffer): Promise<RegionHashes> {
+  const { data, info } = await sharp(fullCard).rotate().removeAlpha().toColourspace('srgb')
+    .resize(320, 448, { fit: 'fill' }).raw().toBuffer({ resolveWithObject: true });
+  const image = () => sharp(data, { raw: info });
+  const region = (left: number, top: number, width: number, height: number) =>
+    computePHash(image().extract({ left, top, width, height }));
+  const [phash, phashAlt, phashCenter, phashLeft, phashRight] = await Promise.all([
+    region(16, 40, 288, 215), computePHash(image()), region(38, 81, 243, 260),
+    region(32, 90, 128, 180), region(160, 90, 128, 180),
+  ]);
+  return { phash, phashAlt, phashCenter, phashLeft, phashRight };
 }

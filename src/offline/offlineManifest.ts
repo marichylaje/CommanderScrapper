@@ -3,18 +3,19 @@ import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { unzipSync } from 'node:zlib';
 
-import { decodeOfflineDb, ENTRY_VERSION, MAX_BUCKET_BYTES } from './binaryDb.js';
+import { decodeOfflineDb, MAX_BUCKET_BYTES } from './binaryDb.js';
+import { CROP_HASHES, ENTRY_VERSION, hasV3Hashes } from './contract.js';
 import type { ColorBucket } from './colorBuckets.js';
 
 export const BUCKETS: ColorBucket[] = ['W', 'U', 'B', 'R', 'G', 'C', 'M'];
-export const LOCAL_MANIFEST = join('data', 'offline', 'manifest.v2.json');
+export const LOCAL_MANIFEST = join('data', 'offline', 'manifest.v3.json');
 type BucketInfo = { count: number; file: string; sha256: string; url?: string };
 export type OfflineManifest = {
-  schema: 2;
+  schema: 3;
   version: string;
   generated_at: string;
   source_updated: string;
-  generator: { crop_hashes: string[]; entry_version: number; visual_buckets: boolean };
+  generator: { crop_hashes: typeof CROP_HASHES; entry_version: typeof ENTRY_VERSION; visual_buckets: boolean };
   buckets: Partial<Record<ColorBucket, BucketInfo>>;
 };
 
@@ -37,16 +38,14 @@ export async function validateCatalog(location: string, expectedVersion?: string
   const remote = /^https?:\/\//i.test(location);
   const source = remote ? await download(location) : await readFile(location);
   const manifest: OfflineManifest = JSON.parse(source.toString('utf8'));
-  if (manifest?.schema !== 2 || typeof manifest.version !== 'string' ||
+  if (manifest?.schema !== 3 || typeof manifest.version !== 'string' ||
       !/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,80}$/.test(manifest.version) ||
       manifest.generator?.entry_version !== ENTRY_VERSION ||
-      !Array.isArray(manifest.generator?.crop_hashes) ||
-      !['art_crop', 'normal', 'center_12_18_76_58'].every((name) =>
-        manifest.generator.crop_hashes.includes(name)) ||
+      !hasV3Hashes(manifest.generator.crop_hashes) ||
       !Number.isFinite(Date.parse(manifest.generated_at)) ||
       !Number.isFinite(Date.parse(manifest.source_updated)) ||
       !manifest.buckets || Object.keys(manifest.buckets).length !== BUCKETS.length) {
-    throw new Error('Invalid v2 offline manifest');
+    throw new Error('Invalid v3 offline manifest');
   }
   if (expectedVersion && manifest.version !== expectedVersion) {
     throw new Error(`Expected catalog ${expectedVersion}; endpoint returned ${manifest.version}`);

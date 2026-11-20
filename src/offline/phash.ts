@@ -46,15 +46,34 @@ function median(values: number[]) {
   return sorted[mid] ?? 0;
 }
 
-export async function computePHash(buffer: Buffer): Promise<string> {
-  const { data } = await sharp(buffer)
-    .rotate()
+export function preprocessGray(data: Uint8Array) {
+  if (data.length !== HASH_SIZE ** 2) throw new Error('Expected 32x32 grayscale pixels');
+  const horizontal = new Uint16Array(data.length);
+  const blurred = new Array<number>(data.length);
+  const last = HASH_SIZE - 1;
+  for (let y = 0; y <= last; y++) {
+    for (let x = 0; x <= last; x++) {
+      const i = y * HASH_SIZE + x;
+      horizontal[i] = data[x ? i - 1 : i] + 2 * data[i] + data[x < last ? i + 1 : i];
+    }
+  }
+  for (let i = 0; i < data.length; i++) {
+    blurred[i] = Math.round((horizontal[i < HASH_SIZE ? i : i - HASH_SIZE] + 2 * horizontal[i] +
+      horizontal[i < last * HASH_SIZE ? i + HASH_SIZE : i]) / 16);
+  }
+  const sorted = [...blurred].sort((a, b) => a - b);
+  return blurred.map((v) => Math.min(sorted[972], Math.max(sorted[51], v)));
+}
+
+export async function computePHash(source: Buffer | sharp.Sharp): Promise<string> {
+  const image = Buffer.isBuffer(source) ? sharp(source).rotate() : source;
+  const { data } = await image.removeAlpha()
     .greyscale()
     .resize(HASH_SIZE, HASH_SIZE, { fit: 'fill' })
     .raw()
     .toBuffer({ resolveWithObject: true });
 
-  const pixels = Array.from(data, (value) => value);
+  const pixels = preprocessGray(data);
   const dct = dct2d(pixels, HASH_SIZE, SMALL_SIZE);
 
   const coefficients: number[] = [];

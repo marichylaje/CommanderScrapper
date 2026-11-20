@@ -59,59 +59,86 @@ npm run restartFly
 
 ### Scanner offline (backend)
 
-El generador produce `TCGDB1` v2 para los lectores de DeckBuilder: cabecera de
-24 bytes, filas de 52 bytes con siete índices de texto (`id`, `oracle_id`,
-nombre, set, número, idioma y URL), tres pHashes de 64 bits (arte, carta completa
-y centro) y cadenas UTF-8
-precedidas por su longitud `u16` little-endian. Cada ejecución genera una
-versión nueva, siete buckets gzip y `data/offline/manifest.v2.json`.
-Los antiguos buckets de 36/44 bytes no son compatibles: regenerar y publicar
-el catálogo antes de usar la app nueva. El centro corresponde a `x=12%`,
-`y=18%`, `ancho=76%`, `alto=58%` de la carta completa normalizada a 320×448.
-Una impresión sin URL de imagen completa se omite y se informa en el log; si
-existe una URL pero falla la descarga tras los reintentos, se interrumpe la
-generación para no publicar silenciosamente un catálogo incompleto.
+**Contrato v3.** Siete buckets gzip, `data/offline/manifest.v3.json`, `schema: 3`,
+`entry_version: 3` y `crop_hashes: ["art","normal","center","left","right"]` (orden exacto).
+Cabecera de 24 bytes: `TCGDB1`, versión `u16`, número de filas, número de cadenas,
+offset de filas y offset de cadenas (`u32`, little-endian). Cada fila de **68 bytes**
+empieza con siete índices `u32` (`id`, `oracle_id`, `name`, `set`, `cn`, `lang`, `artUrl`).
+La tabla de cadenas usa longitud en bytes `u16` + UTF-8. Cada hash se guarda
+como dos `u32` LE: **primero la mitad alta, después la baja**.
 
-```powershell
+| Offset en fila | Campo | Región `(x, y, ancho, alto)` |
+|---:|---|---|
+| 28 | `phash` | `(16,40,288,215)` |
+| 36 | `phashAlt` | carta completa `(0,0,320,448)` |
+| 44 | `phashCenter` | `(38,81,243,260)` |
+| 52 | `phashLeft` | `(32,90,128,180)` |
+| 60 | `phashRight` | `(160,90,128,180)` |
+
+Las cinco regiones vienen de la misma imagen `normal`, orientada y redimensionada
+a 320×448; `art_crop` es solo metadato. Cada región pasa a gris 32×32. El filtro
+3×3 `[1,2,1]` separable replica bordes y redondea una sola vez tras dividir por 16.
+Se limita cada valor al intervalo de los valores filtrados ordenados `[51,972]`
+(índices desde cero). Se mantiene la DCT: bloque 8×8 con DC, orden `u,v`, bit 1 si
+supera la mediana superior. El benchmark compara regiones correspondientes y usa
+`floor((suma de las tres menores distancias Hamming + 1)/3)`.
+
+**Cobertura.** No usar `npm run reduce` ni `scryfall-reduced.json` para un catálogo
+completo: agrupan por oráculo y pueden perder Secret Lair y otras ilustraciones.
+`preparePaperPrints.sh` lee el array `all_cards` por streaming, conserva cada ID
+de impresión cuyo `games` contiene `paper`, incluidos idiomas y variantes, y escribe
+JSONL con su fecha de origen. No se agrupa por `oracle_id`; duplicar un ID de
+impresión es un error. Se indexa solo la cara frontal. Faltas de `normal` o de
+identidad se omiten y se cuentan; si falta el idioma con imagen utilizable o falla
+la descarga de una URL presente, el build falla. Imágenes compartidas no permiten
+distinguir siempre idioma o impresión solo por visión.
+
+```bash
+# Node 22.13+; la preparación usa Bash, curl y jq 1.7+
 npm run build
 npm run testOfflineDb
-npm run reduce -- --force
-npm run buildOfflineDb
+bash scripts/preparePaperPrints.sh
+npm run buildOfflineDb -- --source-updated "$(cat data/paper-prints.updated)" --cache data/hashes-v3.sqlite --budget-minutes 90
 npm run validateOfflineDb
-npm run uploadOfflineDb
 ```
 
-Usar Node.js 22 y configurar `BLOB_READ_WRITE_TOKEN` en el entorno antes de
-subir. `reduce -- --force` conserva `lang` de Scryfall incluso si su fecha no
-cambió. Para un dataset antiguo verificado como **solo inglés**, se puede usar
-`npm run buildOfflineDb -- --assume-english` en lugar de regenerarlo; no usarlo
-para una fuente multilingüe. `default_cards` no es un inventario de todos los
-idiomas; el generador admite `--input <archivo>` con `{ last_updated, cards }`
-si se prepara otra fuente de impresiones. Opcionalmente usar
-`npm run benchmarkOfflineDb -- <dataset-real>` para medir aciertos; la muestra
-del repositorio no valida precisión.
+**Límites operativos.** Un máximo de 8 cartas simultáneas, inicios de petición
+separados por 100 ms (≤36 000/h; menos con latencia y reintentos), hasta 3
+intentos y 25 s por petición. Un catálogo frío requiere múltiples ejecuciones;
+no hay límite artificial de impresiones. El workflow manual `offline-db-v3`
+reserva 90 min para hashes dentro de 180 min totales. Al agotar el presupuesto
+(código 75) termina el lote en curso sin publicar ni sustituir el manifiesto.
+Relanzar para continuar: SQLite conserva hashes por URL completa, no imágenes,
+y los metadatos se leen de nuevo para el snapshot actual. Si expira la caché de
+Actions se recalcula; invalidar la caché local si cambian los hashes o el contenido
+en una URL inmutable. El input JSONL se lee por lotes; las filas compactas para
+los siete buckets sí deben caber en memoria (4 GiB de heap en CI). Un bucket
+descomprimido de más de 64 MiB **falla**, no se trunca. `--input archivo.json`
+admite `{ last_updated, cards }` para fixtures pequeños de papel; su cobertura es
+la del archivo. `--assume-english` solo para una fuente antigua verificada como
+exclusivamente inglesa. Medir precisión con `npm run benchmarkOfflineDb -- <dataset-real>`;
+la muestra vacía del repo no constituye una evaluación.
 
-La subida valida los bytes antes de escribir en Blob y vuelve a comprobar los
-siete buckets por HTTPS. Por defecto solo sube una versión candidata, sin
-modificar `offline-db/latest.json`. Guardar la URL `Versioned manifest` y el
-valor `version` de la salida. Configurar `OFFLINE_DB_MANIFEST_V2_URL` en el
-entorno Vercel elegido con esa URL y redesplegar. Probar primero en Preview o
-en un entorno de prueba. `--promote-latest` es opt-in para mover el alias
-estable y lo usa el workflow programado; si producción apunta a ese alias,
-coordinar o pausar el workflow durante la primera publicación.
+**Publicación coordinada.** El workflow de fingerprints ya no publica catálogos
+offline. Los clientes antiguos conservan `/api/offline-db/manifest`, sus variables
+v2 y `offline-db/latest.json`. Nunca apuntarlos a v3. Para v3, `npm run uploadOfflineDb`
+con `BLOB_READ_WRITE_TOKEN` valida localmente, sube una candidata versionada y verifica
+por HTTPS los siete buckets (SHA-256, versión, conteos e identidad); por defecto
+no mueve ningún alias. Guardar la URL y `version`. Fijar `OFFLINE_DB_MANIFEST_V3_URL`
+en Preview a esa candidata; el nuevo endpoint devuelve 503 si la fuente no es válida.
+Sin pin, lee `OFFLINE_DB_LATEST_V3_URL` o `offline-db/latest-v3.json`.
 
 ```powershell
-npm run validateOfflineDb -- --manifest "https://commander-scrapper.vercel.app/api/offline-db/manifest" --version "<version-generada>"
+npm run validateOfflineDb -- --manifest "https://<preview>/api/offline-db/manifest-v3" --version "<version-generada>"
 ```
 
-Confirmar en una instalación limpia: abrir Scanner con red, esperar la carga,
-escanear varias cartas y revisar set/número/idioma. Después cerrar el proceso,
-activar modo avión y volver a abrir y escanear sin borrar datos. Probar también
-una instalación con un catálogo anterior: descargar el catálogo nuevo y repetir en frío.
-Una instalación limpia sin descargas no debe poder escanear offline. Conservar
-una URL alternativa únicamente si apunta al mismo formato de 52 bytes; un
-catálogo anterior no funciona con esta app. No borrar los blobs anteriores
-hasta pasar estas pruebas.
+Probar descarga limpia, actualización desde v2, impresión alternativa, reinicio
+sin red y que el cliente anterior aún recibe v2. Solo tras verificar, promover
+con `npm run uploadOfflineDb -- --promote-latest` sobre los mismos archivos
+locales (o elegir `promote` en el workflow para promover su build verificado).
+Validar la versión en el endpoint de producción antes de liberar la app v3.
+Para rollback, fijar la URL de la última **v3** conocida y conservar sus blobs;
+no devolver una v2 al nuevo cliente.
 
 ### Otros scripts útiles
 
@@ -126,6 +153,7 @@ hasta pasar estas pruebas.
 
 - `POST /api/scanner/telemetry`
 - `GET /api/offline-db/manifest`
+- `GET /api/offline-db/manifest-v3`
 - `/api/cards`
 - `POST /api/cards/search`
 - `/api/cards/prints`
@@ -134,7 +162,7 @@ hasta pasar estas pruebas.
 - `POST /api/cards/visual-match-direct`
 - `POST /api/cards/visual-rerank`
 
-El endpoint offline prioriza `OFFLINE_DB_MANIFEST_V2_URL` (para fijar una versión), luego
+El endpoint offline **v2** prioriza `OFFLINE_DB_MANIFEST_V2_URL` (para fijar una versión), luego
 `offline-db/latest.json` de Blob (o `OFFLINE_DB_LATEST_URL`) y finalmente el manifiesto local
 con URLs. Solo sirve manifiestos de esquema 2 con `entry_version` 2 y los tres hashes
 (`art_crop`, `normal`, `center_12_18_76_58`); `OFFLINE_DB_MANIFEST_URL` (esquema 1) se ignora.

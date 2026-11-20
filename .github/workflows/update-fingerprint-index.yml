@@ -1,4 +1,4 @@
-name: Update Fingerprint Index & Offline DB
+name: Update Fingerprint Index
 
 on:
   schedule:
@@ -70,24 +70,6 @@ jobs:
       - name: Upload scryfall-reduced.json to Vercel Blob
         if: steps.freshness.outputs.needs_update == 'true'
         run: node scripts/uploadScryfallReduced.mjs
-        env:
-          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
-
-      - name: Build offline DB (color-bucketed binary pHash DB)
-        if: steps.freshness.outputs.needs_update == 'true'
-        run: npm run buildOfflineDb
-        env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
-
-      - name: Benchmark offline DB
-        if: steps.freshness.outputs.needs_update == 'true'
-        run: npm run benchmarkOfflineDb
-        env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
-
-      - name: Upload offline DB to Vercel Blob
-        if: steps.freshness.outputs.needs_update == 'true'
-        run: npm run uploadOfflineDb -- --promote-latest
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 

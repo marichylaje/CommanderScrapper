@@ -12,7 +12,7 @@ try {
   const { manifest, verified, printingCount } = await validateCatalog(values.manifest);
   const token = process.env.BLOB_READ_WRITE_TOKEN;
   if (!token) throw new Error('BLOB_READ_WRITE_TOKEN is not set');
-  const prefix = `offline-db/${manifest.version}`;
+  const prefix = `offline-db/v3/${manifest.version}`;
   console.log(`Validated ${printingCount} printings before upload`);
 
   for (const { bucket, info, bytes } of verified) {
@@ -24,7 +24,7 @@ try {
     console.log(`Uploaded ${bucket}: ${info.count} printings`);
   }
   const json = JSON.stringify(manifest, null, 2);
-  const manifestBlob = await put(`${prefix}/manifest.v2.json`, json, {
+  const manifestBlob = await put(`${prefix}/manifest.v3.json`, json, {
     access: 'public', addRandomSuffix: true,
     contentType: 'application/json', token,
   });
@@ -32,7 +32,7 @@ try {
   await validateCatalog(manifestBlob.url, manifest.version);
   console.log(`Validated remote catalog ${manifest.version}`);
   if (values['promote-latest']) {
-    const latest = await put('offline-db/latest.json', json, {
+    const latest = await put('offline-db/latest-v3.json', json, {
       access: 'public', addRandomSuffix: false, cacheControlMaxAge: 60,
       contentType: 'application/json', token,
     });
